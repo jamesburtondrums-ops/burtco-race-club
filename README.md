@@ -1,17 +1,19 @@
 # BURTCO Race Club
 
-Prototype charity race-night web app.
+Realtime charity race-night web app.
 
 ## Views
-- `/?host=1` — host/controller
-- `/` — projector/main screen
-- `/?play=1` — mobile player app
+- `/?host=1&session=DEMO01` host/controller
+- `/?session=DEMO01` projector
+- `/?play=1&session=DEMO01` mobile player
 
-## Current prototype
-Persistent player ID, lobby, race cards, virtual bets, host-controlled lock/start/result, automatic settlement and profit leaderboard. Player identity survives phone lock, refresh and temporary disconnect via local storage.
+## Setup
+1. Create a Supabase project.
+2. Run `supabase/schema.sql` in its SQL editor.
+3. Copy `.env.example` to `.env` and add the project URL and anon key.
+4. `npm install && npm run dev`
 
-## Next production step
-Replace browser-local prototype state with a server-authoritative realtime database/WebSocket service so separate devices share state reliably. Add supplied race footage and bind each video to runner count/result.
+Player identity is a persistent random device token in localStorage; race state, bets, profit and leaderboard live in the database. Phone sleep/network loss therefore does not remove the player. Realtime subscriptions plus a fallback refresh keep devices synchronized.
 
-## Run
-`npm install && npm run dev`
+## Footage
+Race video support is the next media layer. Each supplied video will be mapped to race number, runner count and known winner.
