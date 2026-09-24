@@ -1,0 +1,7 @@
+create extension if not exists pgcrypto;
+create table if not exists games(id uuid primary key default gen_random_uuid(),code text unique not null,race int not null default 1,phase text not null default 'lobby',created_at timestamptz default now());
+create table if not exists players(id uuid primary key default gen_random_uuid(),game_id uuid references games(id) on delete cascade,device_id text not null,name text not null,profit numeric not null default 0,created_at timestamptz default now(),unique(game_id,device_id));
+create table if not exists bets(id uuid primary key default gen_random_uuid(),game_id uuid references games(id) on delete cascade,player_id uuid references players(id) on delete cascade,race int not null,horse int not null,stake numeric not null,created_at timestamptz default now(),unique(player_id,race));
+alter table games enable row level security;alter table players enable row level security;alter table bets enable row level security;
+create policy "race night games" on games for all using(true) with check(true);create policy "race night players" on players for all using(true) with check(true);create policy "race night bets" on bets for all using(true) with check(true);
+alter publication supabase_realtime add table games;alter publication supabase_realtime add table players;alter publication supabase_realtime add table bets;
