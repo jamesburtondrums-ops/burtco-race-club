@@ -1,1 +1,18 @@
-{"name":"burtco-race-club","version":"0.2.0","private":true,"scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","preview":"vite preview"},"dependencies":{"@supabase/supabase-js":"latest","vite":"latest","react":"latest","react-dom":"latest","qrcode":"latest"},"devDependencies":{}}
+{
+  "name": "burtco-race-club",
+  "version": "0.2.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "qrcode": "latest"
+  },
+  "devDependencies": {}
+}
