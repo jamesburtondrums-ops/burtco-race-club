@@ -1,11 +1,12 @@
 {
   "name": "burtco-race-club",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@supabase/supabase-js": "latest",
@@ -14,5 +15,7 @@
     "react-dom": "latest",
     "qrcode": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
 }
