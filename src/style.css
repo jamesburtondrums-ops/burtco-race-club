@@ -6,3 +6,5 @@
 .hostOverlay{position:fixed;right:18px;bottom:18px;z-index:1000;display:flex;gap:8px;opacity:.18;transition:opacity .2s}
 .hostOverlay:hover,.hostOverlay:focus-within{opacity:1}
 .hostOverlay button{font-size:13px;padding:10px 14px}
+
+.hostPrimary{display:grid;gap:12px;margin-top:28px}.hostPrimary button{min-height:54px}.hostPrimary .bettingAction{font-size:22px;min-height:72px}.hostPrimary .startAction{font-size:24px;min-height:78px}.hostTools{margin-top:22px;border-top:1px solid #ffffff18;padding-top:16px}.hostTools summary{cursor:pointer;font-weight:800;letter-spacing:1px;opacity:.7;padding:10px 0}.hostTools .back{text-align:center}.hostControl h2{margin-bottom:16px}
