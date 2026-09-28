@@ -10,3 +10,24 @@
 .hostPrimary{display:grid;gap:12px;margin-top:28px}.hostPrimary button{min-height:54px}.hostPrimary .bettingAction{font-size:22px;min-height:72px}.hostPrimary .startAction{font-size:24px;min-height:78px}.hostTools{margin-top:22px;border-top:1px solid #ffffff18;padding-top:16px}.hostTools summary{cursor:pointer;font-weight:800;letter-spacing:1px;opacity:.7;padding:10px 0}.hostTools .back{text-align:center}.hostControl h2{margin-bottom:16px}
 
 .videoStartStatus,.videoPlayFallback{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:20;background:#07120ee8;border:1px solid #ffffff30;border-radius:18px;padding:24px 32px;text-align:center}.videoPlayFallback button{font-size:22px;padding:18px 30px}.videoStartStatus{font-weight:800;letter-spacing:2px}
+
+/* Mobile player optimisation */
+@media(max-width:600px){
+  .phone{max-width:none;width:100%;min-height:100dvh;padding:14px 12px 28px}
+  .phone header{margin-bottom:18px;padding-bottom:12px;gap:8px;flex-wrap:wrap}
+  .phone header b{font-size:18px}.phone header span{font-size:12px}.phone header i{margin-left:auto;font-size:10px}
+  .phone .eyebrow{font-size:11px;letter-spacing:2px}
+  .phone h1{font-size:29px;line-height:1.05;margin:10px 0 14px}
+  .phone .status{display:block;text-align:center;font-size:17px;padding:12px;margin:10px 0}
+  .phone>p{font-size:15px;margin:10px 0 14px}
+  .phone .pick{gap:7px;margin:14px 0}
+  .phone .pick button{width:100%;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;padding:13px 11px;font-size:16px;border-radius:11px;min-height:66px}
+  .phone .pick button>b{font-size:21px}.phone .pick button>span{font-size:17px;font-weight:900}
+  .phone .pick button small{grid-column:2/4;font-size:11px;opacity:.65;margin-top:3px;white-space:normal}
+  .phone label{display:block;font-weight:800;margin-top:13px;font-size:14px}
+  .phone select,.phone input{font-size:18px;padding:14px;margin:6px 0 10px;min-height:52px}
+  .phone>button,.phone .card+label~button{width:100%;min-height:58px;font-size:18px}
+  .phone .card{padding:15px;border-radius:14px;margin:14px 0}.phone .card h3{margin-top:0}
+  .phone .row{gap:8px;font-size:13px}.phone .row span{white-space:nowrap}
+  .phone .ok{font-size:13px;margin:8px 0}
+}
