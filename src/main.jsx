@@ -13,10 +13,40 @@ function Player(){const[s,load]=useGame(),[pid]=useState(()=>{let x=localStorage
 function RaceSetup(){const[s,load]=useGame(),[saving,setSaving]=useState(false);async function save(rv,patch){setSaving(true);await sb.from('race_videos').update(patch).eq('race',rv.race);await load();setSaving(false)}function edit(rv){let race_name=prompt('Race name',rv.race_name||rv.title||'Race '+rv.race);if(race_name===null)return;let sponsor_name=prompt('Race sponsor',rv.sponsor_name||'');if(sponsor_name===null)return;let storage_path=prompt('Video filename',rv.storage_path||'');if(storage_path===null)return;let runner_count=Number(prompt('Runner count',rv.runner_count||8));if(!runner_count)return;save(rv,{race_name,sponsor_name,storage_path,runner_count})}async function moveVideo(rv,dir){let other=(s.videos||[]).find(x=>x.race===rv.race+dir);if(!other)return;setSaving(true);let a=rv.storage_path,b=other.storage_path;await sb.from('race_videos').update({storage_path:b}).eq('race',rv.race);await sb.from('race_videos').update({storage_path:a}).eq('race',other.race);await load();setSaving(false)}function result(rv){let winner=Number(prompt('1st place horse number',rv.winner||''));if(!winner)return;let second_place=rv.race===8?null:Number(prompt('2nd place horse number',rv.second_place||''))||null;let third_place=rv.race===8?null:Number(prompt('3rd place horse number',rv.third_place||''))||null;save(rv,{winner,second_place,third_place})}function horses(rv){let arr=[...(rv.horse_names||[])],count=rv.runner_count||8;for(let i=0;i<count;i++){let n=prompt('Horse '+(i+1)+' name / sponsor',arr[i]||'Horse '+(i+1));if(n===null)return;arr[i]=n}save(rv,{horse_names:arr})}return <main><Header/><div className="setupHead"><div><span className="eyebrow">HOST ADMIN</span><h1>Race Setup</h1><p>Review the race order, video assignment, sponsorship, runners and finishing positions before the event.</p></div><a className="back" href={'/host'}>Back to race control</a></div>{saving&&<div className="status">SAVING…</div>}<div className="setupGrid">{(s.videos||[]).map(rv=><section className={'card setupCard '+(rv.race===8?'headline':'')} key={rv.race}><div className="setupTitle"><div><span className="eyebrow">{rv.race===8?'HEADLINE AUCTION':'STANDARD RACE'}</span><h2>Race {rv.race} · {rv.race_name||rv.title}</h2></div><b>{rv.runner_count} runners</b></div><dl><div><dt>Video</dt><dd>{rv.storage_path}</dd></div><div><dt>Sponsor</dt><dd>{rv.sponsor_name||'Available to sponsor'}</dd></div></dl><div className="miniHorses">{Array.from({length:rv.runner_count||8},(_,i)=><span key={i}><b>#{i+1}</b> {(rv.horse_names||[])[i]||'Horse '+(i+1)}</span>)}</div><div className="setupActions"><button disabled={rv.race===1} onClick={()=>moveVideo(rv,-1)}>Video ↑</button><button disabled={rv.race===8} onClick={()=>moveVideo(rv,1)}>Video ↓</button><button onClick={()=>edit(rv)}>Edit race</button><button onClick={()=>horses(rv)}>Edit horses</button><button onClick={()=>result(rv)}>Set result</button></div></section>)}</div></main>}
 function SponsorShop(){
   const [stock,setStock]=useState({horse_available:56,race_available:4});
+  const [horseQty,setHorseQtyState]=useState(1);
+  const [horseEntries,setHorseEntries]=useState([{owner_name:'',horse_name:''}]);
+  const [horseFormOpen,setHorseFormOpen]=useState(false);
+  const [horseBusy,setHorseBusy]=useState(false);
+  const [horseError,setHorseError]=useState('');
   useEffect(()=>{sb?.rpc('sponsorship_availability').then(({data})=>{if(data?.[0])setStock(data[0])})},[]);
   const horseLeft=Math.max(0,stock.horse_available??56);
   const raceLeft=Math.max(0,stock.race_available??4);
   const success=new URLSearchParams(location.search).get('payment')==='success';
+
+  function setHorseQty(value){
+    const max=Math.max(1,horseLeft);
+    const n=Math.max(1,Math.min(max,Number(value)||1));
+    setHorseQtyState(n);
+    setHorseEntries(prev=>Array.from({length:n},(_,i)=>prev[i]||{owner_name:'',horse_name:''}));
+    setHorseError('');
+  }
+  function updateHorse(i,key,value){
+    setHorseEntries(prev=>prev.map((x,n)=>n===i?{...x,[key]:value}:x));
+  }
+  function openHorseForm(){
+    setHorseFormOpen(true);
+    setHorseError('');
+    setTimeout(()=>document.getElementById('horse-details')?.scrollIntoView({behavior:'smooth',block:'start'}),40);
+  }
+  async function horseCheckout(){
+    const clean=horseEntries.map(x=>({owner_name:x.owner_name.trim(),horse_name:x.horse_name.trim()}));
+    if(clean.some(x=>!x.owner_name||!x.horse_name)){setHorseError('Please enter an owner name and horse name for every sponsorship.');return}
+    setHorseBusy(true);setHorseError('');
+    const {data,error}=await sb.rpc('create_horse_sponsorship_draft',{p_entries:clean});
+    if(error||!data?.checkout_url){setHorseError(error?.message||'Unable to start checkout. Please try again.');setHorseBusy(false);return}
+    location.href=data.checkout_url;
+  }
+
   return <main className="sponsorShop sponsorV2">
     <section className="shopHero">
       <span className="shopKicker">CHARITY RACE NIGHT</span>
@@ -32,9 +62,17 @@ function SponsorShop(){
           <div className="shopPrice"><strong>£5</strong><small>per horse</small></div>
         </div>
         <div className="shopAvailability"><b>{horseLeft}</b><span>of 56 remaining</span></div>
-        <p>Choose the horse name yourself at checkout. You can sponsor more than one horse if you want.</p>
-        <div className="shopIncludes"><span>✓ Your name recorded</span><span>✓ Your horse name</span><span>✓ Multiple sponsorships allowed</span></div>
-        {horseLeft?<a className="shopCta horseCta" href="https://buy.stripe.com/28EaEZdkT8yf8g76eV3AY01">Sponsor a horse <span>→</span></a>:<button className="shopCta" disabled>Sold out</button>}
+        <p>Choose how many horses you want to sponsor, then name the owner and horse for every sponsorship.</p>
+        <div className="horseQtyRow">
+          <span>How many horses?</span>
+          <div className="horseQtyControl">
+            <button type="button" onClick={()=>setHorseQty(horseQty-1)} disabled={horseQty<=1}>−</button>
+            <input aria-label="Horse sponsorship quantity" type="number" min="1" max={horseLeft||1} value={horseQty} onChange={e=>setHorseQty(e.target.value)}/>
+            <button type="button" onClick={()=>setHorseQty(horseQty+1)} disabled={horseQty>=horseLeft}>+</button>
+          </div>
+        </div>
+        <div className="shopTotal"><span>{horseQty} × £5</span><strong>£{horseQty*5}</strong></div>
+        {horseLeft?<button className="shopCta horseCta" type="button" onClick={openHorseForm}>Enter horse details <span>→</span></button>:<button className="shopCta" disabled>Sold out</button>}
       </article>
 
       <article className="shopCard featured">
@@ -49,6 +87,28 @@ function SponsorShop(){
       </article>
     </section>
 
+    {horseFormOpen&&horseLeft>0&&<section className="horseDetailsPanel" id="horse-details">
+      <div className="horseDetailsHead">
+        <div><span className="shopLabel">HORSE SPONSORSHIP DETAILS</span><h2>Name each sponsorship</h2></div>
+        <strong>£{horseQty*5}</strong>
+      </div>
+      <p className="horseDetailsIntro">Every horse needs its own owner name and horse name before payment can continue.</p>
+      <div className="horseEntries">
+        {horseEntries.map((entry,i)=><div className="horseEntryCard" key={i}>
+          <div className="horseEntryNumber">{i+1}</div>
+          <div className="horseEntryFields">
+            <label>Owner name<input required value={entry.owner_name} onChange={e=>updateHorse(i,'owner_name',e.target.value)} placeholder={"Owner name for horse "+(i+1)}/></label>
+            <label>Horse name<input required value={entry.horse_name} onChange={e=>updateHorse(i,'horse_name',e.target.value)} placeholder={"Horse name "+(i+1)}/></label>
+          </div>
+        </div>)}
+      </div>
+      {horseError&&<div className="horseFormError">{horseError}</div>}
+      <div className="horseCheckoutBar">
+        <div><span>{horseQty} horse{horseQty===1?'':'s'}</span><strong>£{horseQty*5}</strong></div>
+        <button className="shopCta horseCta" type="button" onClick={horseCheckout} disabled={horseBusy}>{horseBusy?'Preparing checkout…':<>Continue to secure payment <span>→</span></>}</button>
+      </div>
+    </section>}
+
     <section className="shopTrust">
       <span>Secure checkout by Stripe</span>
       <span>Availability updates after successful payment</span>
@@ -56,5 +116,25 @@ function SponsorShop(){
     </section>
   </main>
 }
-function SponsorAdmin(){const q=new URLSearchParams(location.search),key=q.get('key')||'',[rows,setRows]=useState([]),[err,setErr]=useState(''),[loading,setLoading]=useState(true);useEffect(()=>{if(!key){setErr('Admin access key required');setLoading(false);return}sb.rpc('sponsorship_admin_orders',{p_key:key}).then(({data,error})=>{if(error)setErr('Access denied');else setRows(data||[]);setLoading(false)})},[key]);function csv(){const esc=v=>'"'+String(v??'').replaceAll('"','""')+'"',head=['Date','Type','Customer','Email','Quantity','Horse names','Amount','Status','Stripe session'],lines=[head,...rows.map(r=>[new Date(r.created_at).toLocaleString(),r.kind,r.customer_name,r.email,r.quantity,(r.horse_names||[]).join(', '),'£'+(r.amount_pence/100).toFixed(2),r.payment_status,r.stripe_session_id])];const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([lines.map(x=>x.map(esc).join(',')).join('\n')],{type:'text/csv'}));a.download='race-night-paid-sponsorships.csv';a.click()}return <main className="sponsorShop"><section className="sponsorHero"><span className="eyebrow">PRIVATE ADMIN</span><h1>Sponsorship Admin</h1><p>Successful Stripe payments only.</p></section><section className="sponsorForm adminPanel">{loading?<p>Loading…</p>:err?<p>{err}</p>:<><div className="adminSummary"><b>{rows.length} paid orders</b><b>£{(rows.reduce((n,r)=>n+r.amount_pence,0)/100).toFixed(2)} collected</b><button onClick={csv}>DOWNLOAD CSV</button></div><div className="adminTable">{rows.length?rows.map(r=><article key={r.id}><strong>{r.customer_name}</strong><span>{r.kind==='horse'?'Horse':'Race'} × {r.quantity}</span><span>{r.email}</span>{r.kind==='horse'&&<span>{(r.horse_names||[]).join(', ')}</span>}<b>£{(r.amount_pence/100).toFixed(2)}</b><small>{new Date(r.created_at).toLocaleString()}</small></article>):<p>No successful online sponsorship payments yet.</p>}</div></>}</section></main>}
+
+function SponsorAdmin(){
+  const q=new URLSearchParams(location.search),key=q.get('key')||'';
+  const [rows,setRows]=useState([]),[err,setErr]=useState(''),[loading,setLoading]=useState(true);
+  useEffect(()=>{if(!key){setErr('Admin access key required');setLoading(false);return}sb.rpc('sponsorship_admin_orders_v2',{p_key:key}).then(({data,error})=>{if(error)setErr('Access denied');else setRows(data||[]);setLoading(false)})},[key]);
+  function csv(){
+    const esc=v=>'"'+String(v??'').replaceAll('"','""')+'"';
+    const head=['Date','Type','Owner / Sponsor','Email','Horse name','Amount','Status','Stripe session'];
+    const data=[];
+    rows.forEach(r=>{
+      if(r.kind==='horse'&&(r.horse_entries||[]).length){
+        r.horse_entries.forEach(e=>data.push([new Date(r.created_at).toLocaleString(),'Horse',e.owner_name,r.email,e.horse_name,'£5.00',r.payment_status,r.stripe_session_id]));
+      }else{
+        data.push([new Date(r.created_at).toLocaleString(),r.kind==='horse'?'Horse':'Race',r.customer_name,r.email,(r.horse_names||[]).join(', '),'£'+(r.amount_pence/100).toFixed(2),r.payment_status,r.stripe_session_id]);
+      }
+    });
+    const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([[head,...data].map(x=>x.map(esc).join(',')).join('\n')],{type:'text/csv'}));a.download='race-night-paid-sponsorships.csv';a.click();
+  }
+  return <main className="sponsorShop"><section className="sponsorHero"><span className="eyebrow">PRIVATE ADMIN</span><h1>Sponsorship Admin</h1><p>Successful Stripe payments only.</p></section><section className="sponsorForm adminPanel">{loading?<p>Loading…</p>:err?<p>{err}</p>:<><div className="adminSummary"><b>{rows.length} paid orders</b><b>£{(rows.reduce((n,r)=>n+r.amount_pence,0)/100).toFixed(2)} collected</b><button onClick={csv}>DOWNLOAD CSV</button></div><div className="adminTable">{rows.length?rows.map(r=><article key={r.id}><strong>{r.customer_name}</strong><span>{r.kind==='horse'?'Horse':'Race'} × {r.quantity}</span><span>{r.email}</span>{r.kind==='horse'&&(r.horse_entries||[]).length?<div className="adminHorseList">{r.horse_entries.map((e,i)=><span key={i}><b>{e.owner_name}</b> — {e.horse_name}</span>)}</div>:r.kind==='horse'&&<span>{(r.horse_names||[]).join(', ')}</span>}<b>£{(r.amount_pence/100).toFixed(2)}</b><small>{new Date(r.created_at).toLocaleString()}</small></article>):<p>No successful online sponsorship payments yet.</p>}</div></>}</section></main>
+}
+
 function App(){let q=new URLSearchParams(location.search),p=location.pathname;return p==='/sponsor-admin'?<SponsorAdmin/>:p==='/sponsor'?<SponsorShop/>:q.has('setup')||p==='/setup'?<RaceSetup/>:q.has('host')||p==='/host'?<Host/>:q.has('play')||p==='/play'?<Player/>:<Screen/>}createRoot(document.getElementById('root')).render(<App/>);
