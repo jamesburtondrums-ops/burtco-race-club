@@ -58,7 +58,7 @@ function SponsorShop(){
     <section className="shopGrid">
       <article className="shopCard">
         <div className="shopCardHead">
-          <div><span className="shopLabel">HORSE SPONSORSHIP</span><h2>Back a horse</h2></div>
+          <div><h2>Sponsor a horse</h2></div>
           <div className="shopPrice"><strong>£5</strong><small>per horse</small></div>
         </div>
         <div className="shopAvailability"><b>{horseLeft}</b><span>of 56 remaining</span></div>
@@ -77,7 +77,7 @@ function SponsorShop(){
 
       <article className="shopCard featured">
         <div className="shopCardHead">
-          <div><span className="shopLabel">RACE SPONSORSHIP</span><h2>Sponsor a race</h2></div>
+          <div><h2>Sponsor a race</h2></div>
           <div className="shopPrice"><strong>£50</strong><small>per race</small></div>
         </div>
         <div className="shopAvailability"><b>{raceLeft}</b><span>of 8 remaining</span></div>
