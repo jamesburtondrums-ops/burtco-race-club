@@ -61,3 +61,20 @@ button:hover{transform:translateY(-2px);box-shadow:0 10px 24px #a46d1c35}button:
 }
 
 .sponsorShop{min-height:100vh;background:#f7f2e7;color:#18392b;padding-bottom:70px}.sponsorHero{max-width:850px;margin:0 auto;padding:72px 24px 30px;text-align:center}.sponsorHero h1{font-size:clamp(42px,7vw,82px);line-height:.95;margin:12px 0 20px}.sponsorHero p{font-size:19px;max-width:650px;margin:auto}.sponsorChoices{max-width:800px;margin:20px auto;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 20px}.sponsorChoices button{background:#fff;border:2px solid transparent;border-radius:22px;padding:25px;text-align:left;display:grid;gap:8px;color:#18392b}.sponsorChoices button.selected{border-color:#b8953f;box-shadow:0 10px 35px #0001}.sponsorChoices strong{font-size:34px}.sponsorChoices span{opacity:.7}.sponsorForm{max-width:620px;margin:28px auto;background:#fff;border-radius:26px;padding:32px;box-shadow:0 18px 50px #00000012}.sponsorForm label{display:grid;gap:7px;margin:18px 0;font-weight:700}.sponsorForm input{font:inherit;padding:14px 16px;border:1px solid #d8d1c2;border-radius:12px;background:#fff}.horseNameFields{border-top:1px solid #eee3d1;margin-top:24px;padding-top:10px}.sponsorTotal{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #eee3d1;margin-top:24px;padding:24px 0;font-size:22px}.sponsorTotal b{font-size:34px}.sponsorPay{width:100%;font-size:17px;padding:17px}.sponsorForm>small{display:block;text-align:center;margin-top:12px;opacity:.65}@media(max-width:650px){.sponsorChoices{grid-template-columns:1fr}.sponsorHero{padding-top:45px}.sponsorForm{margin:20px 12px;padding:22px}.sponsorHero h1{font-size:46px}}
+
+/* Premium sponsorship checkout buttons */
+.sponsorTicket .sponsorPay{
+display:flex;align-items:center;justify-content:center;min-height:58px;margin-top:14px;padding:16px 22px;
+border:1px solid rgba(255,255,255,.22);border-radius:16px;
+background:linear-gradient(135deg,#18392b 0%,#24543f 100%);
+color:#fff!important;text-decoration:none!important;font-weight:900;letter-spacing:.055em;font-size:15px;
+box-shadow:0 10px 22px rgba(24,57,43,.18),inset 0 1px rgba(255,255,255,.15);
+transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;
+}
+.sponsorTicket .sponsorPay::after{content:"→";margin-left:12px;font-size:21px;line-height:1;transition:transform .16s ease}
+.sponsorTicket .sponsorPay:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(24,57,43,.24);filter:brightness(1.05)}
+.sponsorTicket .sponsorPay:hover::after{transform:translateX(3px)}
+.sponsorTicket .sponsorPay:active{transform:translateY(0);box-shadow:0 7px 15px rgba(24,57,43,.18)}
+.sponsorTicket:nth-child(2) .sponsorPay{background:linear-gradient(135deg,#9a792d 0%,#c09a43 100%);box-shadow:0 10px 22px rgba(154,121,45,.2),inset 0 1px rgba(255,255,255,.2)}
+.sponsorTicket:nth-child(2) .sponsorPay:hover{box-shadow:0 14px 28px rgba(154,121,45,.28)}
+@media(max-width:650px){.sponsorTicket .sponsorPay{min-height:60px;border-radius:15px;font-size:14px;padding:16px 18px}}
