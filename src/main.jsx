@@ -18,7 +18,32 @@ function SponsorShop(){
   const [horseFormOpen,setHorseFormOpen]=useState(false);
   const [horseBusy,setHorseBusy]=useState(false);
   const [horseError,setHorseError]=useState('');
-  useEffect(()=>{sb?.rpc('sponsorship_availability').then(({data})=>{if(data?.[0])setStock(data[0])})},[]);
+  useEffect(()=>{
+    if(!sb)return;
+    let alive=true;
+    const refresh=async()=>{
+      const {data}=await sb.from('sponsorship_public_state').select('horse_available,race_available').eq('id','live').maybeSingle();
+      if(alive&&data)setStock(data);
+    };
+    refresh();
+    const channel=sb.channel('sponsorship-live-stock')
+      .on('postgres_changes',{event:'*',schema:'public',table:'sponsorship_public_state',filter:'id=eq.live'},payload=>{
+        if(payload.new?.id==='live')setStock({
+          horse_available:payload.new.horse_available,
+          race_available:payload.new.race_available
+        });
+      })
+      .subscribe();
+    const poll=setInterval(refresh,3000);
+    const onVisible=()=>{if(document.visibilityState==='visible')refresh()};
+    document.addEventListener('visibilitychange',onVisible);
+    return ()=>{
+      alive=false;
+      clearInterval(poll);
+      document.removeEventListener('visibilitychange',onVisible);
+      sb.removeChannel(channel);
+    };
+  },[]);
   const horseLeft=Math.max(0,stock.horse_available??56);
   const raceLeft=Math.max(0,stock.race_available??4);
   const success=new URLSearchParams(location.search).get('payment')==='success';
