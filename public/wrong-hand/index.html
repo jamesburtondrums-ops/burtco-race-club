@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173c28">
+<title>WRONG HAND! — BURTCO Pub Games</title>
+<style>
+:root{font-family:'Trebuchet MS',Arial,sans-serif;background:#f7f1df;color:#17261f;--green:#173c28;--deep:#10231a;--gold:#f2c75c;--gold2:#e8a93b;--paper:#fffdf8;--muted:#607267;--line:#173c2825}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,#fff7d6 0,transparent 34%),linear-gradient(160deg,#f8f1dc,#e7f1df 55%,#f8e8cf);color:#17261f;background-attachment:fixed;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(circle,#173c28 1px,transparent 1px);background-size:24px 24px}
+button,input,select{font:inherit}button{background:linear-gradient(135deg,var(--gold),var(--gold2));border:0;border-radius:12px;padding:15px;font-weight:800;font-size:16px;color:#07120e;cursor:pointer;box-shadow:0 7px 18px #a46d1c25;transition:transform .16s ease,box-shadow .16s ease}button:hover{transform:translateY(-2px);box-shadow:0 10px 24px #a46d1c35}button:active{transform:scale(.98)}button:disabled{opacity:.42;cursor:not-allowed;transform:none;box-shadow:none}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:var(--green)}p{line-height:1.55}.hidden{display:none!important}
+main{min-height:100vh;padding:28px;max-width:1200px;margin:auto;position:relative}
+header{display:flex;gap:12px;align-items:center;border-bottom:1px solid #173c2830;padding-bottom:18px;margin-bottom:26px;flex-wrap:wrap}
+header b{font-family:Georgia,serif;font-style:italic;font-size:25px;color:var(--green);letter-spacing:3px}header span{color:#456252;opacity:.85;letter-spacing:2px}header i{margin-left:auto;font-size:12px;font-style:normal;color:#8a6120;font-weight:900;letter-spacing:1px}
+.card{background:#fffdf8e8;border:1px solid #173c2824;border-radius:20px;padding:28px;box-shadow:0 14px 40px #173c2814;backdrop-filter:blur(8px)}
+.eyebrow{letter-spacing:3px;font-size:12px;color:#8a6120;font-weight:900;text-transform:uppercase}.status{display:inline-block;background:var(--gold);color:#07120e;padding:8px 12px;border-radius:30px;font-weight:800;box-shadow:0 5px 18px #b78d2630}
+.grid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}.stack{display:grid;gap:16px}.buttons{display:grid;gap:10px;margin-top:22px}.row,.leader{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid #173c2818}.row:last-child,.leader:last-child{border-bottom:0}
+.hero{padding:10px 0 4px}.hero h1{font-size:clamp(50px,8vw,92px);line-height:.86;margin:10px 0 16px;letter-spacing:-4px}.hero p{font-size:20px;max-width:720px;color:#456252}.hero strong{color:var(--green)}
+.modebar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}.modebar button{background:#fffdf8;color:var(--green);border:1px solid var(--line);box-shadow:none;padding:10px 13px;font-size:13px}.modebar button.active{background:var(--green);color:#fff}
+.lobbyTeams{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}.teamChip{padding:12px 13px;background:#fff;border:1px solid var(--line);border-radius:12px;font-weight:800;display:flex;align-items:center;justify-content:space-between}.dot{width:9px;height:9px;border-radius:50%;background:#5c9d6d;box-shadow:0 0 0 4px #5c9d6d20}
+.qr{width:210px;max-width:100%;aspect-ratio:1;background:#fff;border:10px solid #fff;border-radius:18px;margin:14px auto;display:grid;grid-template-columns:repeat(11,1fr);gap:3px;box-shadow:0 8px 24px #173c2816}.qr i{background:var(--green);display:block}.qr i.off{background:#fff}
+.code{font-family:monospace;font-size:24px;font-weight:900;letter-spacing:4px;color:var(--green);text-align:center}
+.ruleHero{text-align:center;padding:24px 0}.ruleHero h1{font-size:clamp(48px,8vw,86px);line-height:.92;margin:8px 0 12px}.ruleHero p{font-size:20px;color:#456252;max-width:700px;margin:0 auto}.ruleGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}.rule{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;min-height:190px}.ruleNum{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;border:3px solid var(--gold);font-weight:900;font-size:19px;margin-bottom:14px}.rule h3{font-size:21px;margin:0 0 8px}.rule p{margin:0;color:#607267;font-size:14px}.wrongHand{background:var(--green);color:#fff;border-radius:20px;padding:20px;margin-top:14px;text-align:center;border:2px solid var(--gold)}.wrongHand strong{font-family:Georgia,serif;font-size:clamp(24px,4vw,42px);display:block;color:#ffe6a6}.wrongHand span{display:block;margin-top:5px;color:#e8efe9}
+.hostRound{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(270px,.7fr);gap:18px}.timer{font-family:Georgia,serif;font-size:74px;line-height:1;color:var(--green);font-weight:900;text-align:center}.timerLabel{text-align:center;color:#607267;font-size:12px;letter-spacing:2px;text-transform:uppercase}.artistBox{padding:22px;background:var(--green);color:#fff;border-radius:18px;border:1px solid #ffffff20}.artistBox h2{color:#fff;font-size:34px;margin:6px 0}.artistBox p{color:#dfeae3}.secret{margin-top:14px;padding:16px;background:#0d1d16;border:1px solid #ffffff1e;border-radius:14px;color:#ffe5a1;font-family:Georgia,serif;font-size:30px;font-weight:900;text-align:center;letter-spacing:1px}
+.buzzPanel{text-align:center;padding:30px}.buzzPanel h2{font-size:38px;margin:8px 0}.buzzWaiting{font-size:20px;color:#607267}.buzzWinner{font-family:Georgia,serif;font-size:clamp(34px,6vw,62px);color:var(--green);font-weight:900;margin:14px 0}.hostActions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hostActions .wrong{background:#fff;color:#8c352f;border:1px solid #8c352f44;box-shadow:none}.hostActions .correct{background:linear-gradient(135deg,#2d6747,#173c28);color:#fff;box-shadow:0 7px 18px #173c282d}
+.scoreGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.score{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.score small{color:#6c7c72}.score strong{display:block;font-family:Georgia,serif;font-size:28px;color:var(--green);margin-top:4px}.score.artist{border-color:#c69c3c;background:#fff7df}
+.phone{max-width:520px;margin:auto;min-height:calc(100vh - 56px)}.phone header{margin-bottom:18px}.phone h1{font-size:38px;line-height:1.02;margin:10px 0 14px}.phone .card{padding:20px}.phone select{width:100%;padding:15px;margin:8px 0 14px;border-radius:12px;border:1px solid var(--line);background:#fff;color:#17261f;font-size:17px}
+.phoneStatus{text-align:center;margin:14px 0;color:#456252;font-weight:800}.buzzerWrap{display:grid;place-items:center;padding:18px 0}.buzzer{width:min(300px,76vw);aspect-ratio:1;border-radius:50%;font-size:44px;letter-spacing:1px;color:#fff;background:radial-gradient(circle at 38% 30%,#e95650,#b52825 60%,#791815);border:12px solid #f6e5bd;box-shadow:0 18px 30px #7c181a33,inset 0 -18px 0 #73191655,0 0 0 5px #173c28}.buzzer:active{transform:translateY(9px) scale(.98);box-shadow:0 6px 18px #7c181a33,inset 0 -8px 0 #73191655,0 0 0 5px #173c28}.buzzer:disabled{filter:grayscale(.75);opacity:.45}
+.artistWord{background:var(--green);color:#fff;border-radius:20px;padding:26px;text-align:center;margin:18px 0}.artistWord small{letter-spacing:2px;text-transform:uppercase;color:#d5e2d9}.artistWord strong{display:block;font-family:Georgia,serif;color:#ffe4a0;font-size:clamp(42px,10vw,70px);margin-top:12px;word-break:break-word}.handBadge{display:inline-block;background:#f2c75c;color:#17261f;border-radius:999px;padding:10px 14px;font-weight:900;margin-top:10px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#10231a;color:#fff;padding:12px 16px;border-radius:999px;box-shadow:0 10px 30px #0003;z-index:99;font-weight:800;max-width:calc(100% - 28px);text-align:center}
+.footerNote{text-align:center;color:#6c7c72;font-size:12px;margin-top:18px}
+@media(max-width:850px){.grid,.hostRound{grid-template-columns:1fr}.ruleGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.scoreGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){main{padding:12px 12px 24px}.hero h1{font-size:54px;letter-spacing:-2px}.hero p{font-size:17px}.grid{gap:12px}.card{padding:18px;border-radius:16px}.ruleGrid{grid-template-columns:1fr}.rule{min-height:0}.ruleHero{padding:10px 0}.ruleHero h1{font-size:46px}.hostActions{grid-template-columns:1fr}.lobbyTeams{grid-template-columns:1fr}.scoreGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.phone{max-width:none;width:100%;min-height:100vh;padding:0}.phone header{background:#173c28;color:#fff;border-radius:0 0 18px 18px;margin:-12px -12px 16px;padding:15px 14px}.phone header b{color:#ffe29a}.phone header span{color:#fff}.modebar{overflow:auto;flex-wrap:nowrap;padding-bottom:4px}.modebar button{white-space:nowrap}}
+</style>
+</head>
+<body>
+<main id="app">
+  <header>
+    <b>BURTCO</b><span>PUB GAMES</span><i>WRONG HAND!</i>
+  </header>
+
+  <div id="demoModes" class="modebar">
+    <button data-mode="host" class="active">Host Screen</button>
+    <button data-mode="team">Team Device</button>
+    <button data-mode="artist">Artist Device</button>
+    <button data-mode="projector">Big Screen</button>
+  </div>
+
+  <section id="lobby" class="screen">
+    <div class="hero">
+      <span class="eyebrow">A BURTCO PUB GAME</span>
+      <h1>WRONG<br>HAND!</h1>
+      <p>One artist. One secret word. Eight teams racing to buzz first — while the artist attempts to draw with their <strong>less dominant hand.</strong></p>
+    </div>
+    <div class="grid" style="margin-top:20px">
+      <div class="card">
+        <span class="eyebrow">GAME LOBBY</span>
+        <h2 style="font-size:34px;margin:8px 0">Teams joined</h2>
+        <div id="lobbyTeams" class="lobbyTeams"></div>
+      </div>
+      <div class="card" style="text-align:center">
+        <span class="eyebrow">JOIN THIS GAME</span>
+        <div class="qr" id="qr"></div>
+        <div class="code">WRONG01</div>
+        <p style="color:#607267;margin-bottom:0">One phone or tablet per team.</p>
+      </div>
+    </div>
+    <div id="hostLobbyActions" class="buttons" style="max-width:520px;margin:20px auto 0">
+      <button id="startGame">Start Game &amp; Show How To Play</button>
+    </div>
+  </section>
+
+  <section id="rules" class="screen hidden">
+    <div class="ruleHero">
+      <span class="eyebrow">BEFORE ROUND ONE</span>
+      <h1>HOW TO PLAY</h1>
+      <p>This screen appears on the host display and every team device before the first round begins.</p>
+    </div>
+    <div class="ruleGrid">
+      <div class="rule"><div class="ruleNum">1</div><h3>Pick an Artist</h3><p>Each round one team nominates an Artist. The Artist privately receives the secret word.</p></div>
+      <div class="rule"><div class="ruleNum">2</div><h3>Wrong Hand Only</h3><p>The Artist must draw the word using their less dominant hand. No cheating.</p></div>
+      <div class="rule"><div class="ruleNum">3</div><h3>Buzz First</h3><p>Every other team has one buzzer device. Think you know the word? Hit BUZZ and shout your answer.</p></div>
+      <div class="rule"><div class="ruleNum">4</div><h3>Score Points</h3><p>Correct guess: +10. Artist's team: +5. A wrong answer reopens the buzzers for everyone else.</p></div>
+    </div>
+    <div class="wrongHand"><strong>THE CATCH: LESS DOMINANT HAND ONLY.</strong><span>No letters. No numbers. No talking. No mouthing. No gestures.</span></div>
+    <div id="rulesHostAction" class="buttons" style="max-width:520px;margin:18px auto 0"><button id="beginRound1">Everybody ready — Start Round 1</button></div>
+    <div id="rulesPlayerWait" class="card hidden" style="max-width:620px;margin:18px auto 0;text-align:center"><span class="status">RULES LOADED</span><h3 style="margin:16px 0 6px">Wait for the host</h3><p style="margin:0">Round 1 will appear automatically when the host begins.</p></div>
+  </section>
+
+  <section id="hostRound" class="screen hidden">
+    <div class="hostRound">
+      <div class="stack">
+        <div class="card">
+          <span class="eyebrow">ROUND <span id="roundNo">1</span></span>
+          <div class="artistBox" style="margin-top:10px">
+            <span class="eyebrow" style="color:#dfc57f">CURRENT ARTIST</span>
+            <h2 id="artistTeam">Team 1 Artist</h2>
+            <p>Their team buzzer is locked this round.</p>
+            <div class="secret">Secret word hidden from host screen</div>
+          </div>
+        </div>
+        <div class="card buzzPanel">
+          <span class="eyebrow">BUZZER</span>
+          <div id="buzzWaiting" class="buzzWaiting">Waiting for a team to buzz…</div>
+          <div id="buzzWinner" class="buzzWinner hidden">TEAM 3!</div>
+          <div id="hostJudge" class="hostActions hidden">
+            <button class="correct" id="correctGuess">Correct +10</button>
+            <button class="wrong" id="wrongGuess">Wrong — Reopen Buzzers</button>
+          </div>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="timerLabel">Time remaining</div>
+          <div class="timer" id="timer">60</div>
+          <div class="buttons">
+            <button id="startTimer">Start Drawing</button>
+            <button id="nextRound">Next Round</button>
+          </div>
+        </div>
+        <div class="card">
+          <span class="eyebrow">LIVE SCORES</span>
+          <div id="scoreGrid" class="scoreGrid" style="margin-top:12px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="teamRound" class="screen hidden phone">
+    <div class="card">
+      <span class="eyebrow">TEAM DEVICE</span>
+      <h1 id="teamTitle">TEAM 2</h1>
+      <label for="teamSelect"><b>This device belongs to</b></label>
+      <select id="teamSelect"></select>
+      <div id="teamStatus" class="phoneStatus">Waiting for the host to start drawing…</div>
+      <div class="buzzerWrap"><button id="buzzer" class="buzzer" disabled>BUZZ!</button></div>
+      <p class="footerNote">Only one device is needed per team. First registered buzz wins the attempt.</p>
+    </div>
+  </section>
+
+  <section id="artistRound" class="screen hidden phone">
+    <div class="card">
+      <span class="eyebrow">PRIVATE ARTIST SCREEN</span>
+      <h1>YOU'RE DRAWING!</h1>
+      <p id="artistDeviceTeam">You are drawing for Team 1.</p>
+      <div class="artistWord"><small>Your secret word</small><strong id="secretWord">PINEAPPLE</strong></div>
+      <span class="handBadge">✋ LESS DOMINANT HAND</span>
+      <div class="stack" style="margin-top:18px">
+        <div class="row"><b>No letters</b><span>✕</span></div>
+        <div class="row"><b>No numbers</b><span>✕</span></div>
+        <div class="row"><b>No talking / gestures</b><span>✕</span></div>
+        <div class="row"><b>Just draw terribly</b><span>✓</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projectorRound" class="screen hidden">
+    <div class="hero" style="text-align:center">
+      <span class="eyebrow">ROUND <span id="projectorRoundNo">1</span></span>
+      <h1 style="max-width:none">DRAW!</h1>
+      <p style="margin-left:auto;margin-right:auto"><strong id="projectorArtist">Team 1</strong> is drawing with the wrong hand. Buzz when you know it.</p>
+      <div class="timer" id="projectorTimer" style="color:#ffe39a;margin-top:24px">60</div>
+    </div>
+    <div class="card" style="margin-top:18px;text-align:center">
+      <span class="eyebrow">FIRST BUZZ</span>
+      <div id="projectorBuzz" class="buzzWinner">WAITING…</div>
+    </div>
+  </section>
+
+  <div id="toast" class="toast hidden" aria-live="polite"></div>
+</main>
+
+<script>
+(function(){
+  var root=document.getElementById('app');
+  var teams=Array.from({length:8},function(_,i){return {name:'Team '+(i+1),score:0};});
+  var words=['PINEAPPLE','WHEELBARROW','PENGUIN','TOOTHBRUSH','VOLCANO','GIRAFFE','HELICOPTER','POPCORN','MERMAID','SHOPPING TROLLEY','SNOWMAN','ROLLERCOASTER'];
+  var state={phase:'lobby',round:1,artist:0,team:1,time:60,running:false,buzzed:null,word:words[0]};
+  var ticker=null;
+  var mode='host';
+
+  function qs(name){return new URLSearchParams(location.search).get(name);}
+  if(qs('play')) mode='team'; else if(qs('artist')) mode='artist'; else if(qs('screen')) mode='projector'; else if(qs('host')) mode='host';
+
+  function makeQR(){
+    var q=document.getElementById('qr'); var seed=[1,1,1,1,0,1,0,1,1,1,1,1,0,0,1,1,0,1,1,0,0,1,1,0,1,1,1,1,0,1,1,0,1,1,1,0,0,1,0,1,0,1,0,1,1,1,0,1,1,0,1,0,0,1,1,1,1,0,1,0,1,0,1,1,0,1,1,1,0,0,1,0,1,1,0,1,1,0,1,0,1,1,1,1,0,0,1,0,1,1,1,0,1,0,1,0,1,1,0,1,1,1,1,0,1,0,1,1,1,1,1,1,0,1,1,1,1,1];
+    q.innerHTML=seed.map(function(v){return '<i class="'+(v?'':'off')+'"></i>';}).join('');
+  }
+  function renderLobbyTeams(){
+    document.getElementById('lobbyTeams').innerHTML=teams.map(function(t){return '<div class="teamChip"><span>'+t.name+'</span><i class="dot"></i></div>';}).join('');
+  }
+  function renderScores(){
+    var html=teams.map(function(t,i){return '<div class="score '+(i===state.artist?'artist':'')+'"><small>'+t.name+(i===state.artist?' · ARTIST':'')+'</small><strong>'+t.score+'</strong></div>';}).join('');
+    document.getElementById('scoreGrid').innerHTML=html;
+  }
+  function renderTeamSelect(){
+    var s=document.getElementById('teamSelect');
+    s.innerHTML=teams.map(function(t,i){return '<option value="'+i+'">'+t.name+'</option>';}).join('');
+    s.value=String(state.team);
+  }
+  function showToast(msg){
+    var t=document.getElementById('toast');t.textContent=msg;t.classList.remove('hidden');clearTimeout(t._hide);t._hide=setTimeout(function(){t.classList.add('hidden');},1800);
+  }
+  function setMode(newMode){
+    mode=newMode;
+    document.querySelectorAll('#demoModes button').forEach(function(b){b.classList.toggle('active',b.dataset.mode===mode);});
+    render();
+  }
+  function stopTimer(){if(ticker){clearInterval(ticker);ticker=null;}}
+  function startClock(){
+    if(state.running)return;
+    state.running=true; state.time=60; state.buzzed=null; stopTimer();
+    ticker=setInterval(function(){
+      state.time=Math.max(0,state.time-1);
+      if(state.time===0){state.running=false;stopTimer();showToast('TIME! No correct answer.');}
+      render();
+    },1000);
+    render();
+  }
+  function nextRound(){
+    stopTimer();state.round++;state.artist=(state.artist+1)%teams.length;state.word=words[(state.round-1)%words.length];state.time=60;state.running=false;state.buzzed=null;render();
+  }
+  function phaseScreen(){
+    document.querySelectorAll('.screen').forEach(function(el){el.classList.add('hidden');});
+    if(state.phase==='lobby'){document.getElementById('lobby').classList.remove('hidden');return;}
+    if(state.phase==='rules'){document.getElementById('rules').classList.remove('hidden');return;}
+    if(mode==='host')document.getElementById('hostRound').classList.remove('hidden');
+    if(mode==='team')document.getElementById('teamRound').classList.remove('hidden');
+    if(mode==='artist')document.getElementById('artistRound').classList.remove('hidden');
+    if(mode==='projector')document.getElementById('projectorRound').classList.remove('hidden');
+  }
+  function render(){
+    phaseScreen();
+    document.getElementById('hostLobbyActions').classList.toggle('hidden',mode!=='host');
+    document.getElementById('rulesHostAction').classList.toggle('hidden',mode!=='host');
+    document.getElementById('rulesPlayerWait').classList.toggle('hidden',mode==='host');
+
+    document.getElementById('roundNo').textContent=state.round;
+    document.getElementById('projectorRoundNo').textContent=state.round;
+    document.getElementById('artistTeam').textContent=teams[state.artist].name+' Artist';
+    document.getElementById('projectorArtist').textContent=teams[state.artist].name;
+    document.getElementById('artistDeviceTeam').textContent='You are drawing for '+teams[state.artist].name+'.';
+    document.getElementById('secretWord').textContent=state.word;
+    document.getElementById('timer').textContent=state.time;
+    document.getElementById('projectorTimer').textContent=state.time;
+
+    var buzzName=state.buzzed===null?null:teams[state.buzzed].name;
+    document.getElementById('buzzWaiting').classList.toggle('hidden',!!buzzName);
+    document.getElementById('buzzWinner').classList.toggle('hidden',!buzzName);
+    document.getElementById('hostJudge').classList.toggle('hidden',!buzzName);
+    if(buzzName)document.getElementById('buzzWinner').textContent=buzzName.toUpperCase()+'!';
+    document.getElementById('projectorBuzz').textContent=buzzName?buzzName.toUpperCase()+'!':'WAITING…';
+
+    var team=state.team;
+    document.getElementById('teamTitle').textContent=teams[team].name.toUpperCase();
+    var isArtist=team===state.artist;
+    var locked=state.buzzed!==null;
+    var buzzer=document.getElementById('buzzer');
+    buzzer.disabled=!state.running||locked||isArtist;
+    var status='Waiting for the host to start drawing…';
+    if(isArtist)status='Your team is drawing — your buzzer is locked.';
+    else if(state.running&&!locked)status='BUZZERS OPEN — hit it when you know the word!';
+    else if(state.running&&locked)status='Buzzer locked while the host checks the answer.';
+    else if(state.time===0)status='Time is up.';
+    document.getElementById('teamStatus').textContent=status;
+    document.getElementById('startTimer').textContent=state.running?'Drawing in progress…':'Start Drawing';
+    document.getElementById('startTimer').disabled=state.running;
+    renderScores();
+  }
+
+  document.getElementById('demoModes').addEventListener('click',function(e){var b=e.target.closest('button[data-mode]');if(b)setMode(b.dataset.mode);});
+  document.getElementById('startGame').addEventListener('click',function(){state.phase='rules';render();});
+  document.getElementById('beginRound1').addEventListener('click',function(){state.phase='round';render();showToast('Round 1 ready. Artist can view their secret word.');});
+  document.getElementById('startTimer').addEventListener('click',startClock);
+  document.getElementById('nextRound').addEventListener('click',nextRound);
+  document.getElementById('teamSelect').addEventListener('change',function(e){state.team=Number(e.target.value);render();});
+  document.getElementById('buzzer').addEventListener('click',function(){
+    if(!state.running||state.buzzed!==null||state.team===state.artist)return;
+    state.buzzed=state.team;render();showToast(teams[state.team].name+' buzzed first!');
+  });
+  document.getElementById('wrongGuess').addEventListener('click',function(){state.buzzed=null;render();showToast('Wrong answer — buzzers reopened.');});
+  document.getElementById('correctGuess').addEventListener('click',function(){
+    if(state.buzzed===null)return;
+    teams[state.buzzed].score+=10;teams[state.artist].score+=5;state.running=false;stopTimer();
+    showToast(teams[state.buzzed].name+' correct! +10 · Artist team +5');render();
+  });
+
+  makeQR();renderLobbyTeams();renderTeamSelect();render();
+})();
+</script>
+</body>
+</html>
