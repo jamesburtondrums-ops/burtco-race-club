@@ -1,11 +1,14 @@
-name: Racing data refresh
+name: Racing Intelligence live refresh
 on:
   workflow_dispatch:
   schedule:
     - cron: "15 5 * * *"
-    - cron: "0 9-20/2 * * *"
+    - cron: "*/15 7-22 * * *"
 permissions:
   contents: write
+concurrency:
+  group: racing-intelligence-data
+  cancel-in-progress: true
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -16,16 +19,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Refresh validated racing data
+      - name: Pull every GB + IRE race and runner
         env:
-          RACING_FEED_URL: ${{ secrets.RACING_FEED_URL }}
-          RACING_FEED_TOKEN: ${{ secrets.RACING_FEED_TOKEN }}
+          RACING_API_USERNAME: ${{ secrets.RACING_API_USERNAME }}
+          RACING_API_PASSWORD: ${{ secrets.RACING_API_PASSWORD }}
+          RACING_API_PLAN: ${{ vars.RACING_API_PLAN || 'standard' }}
         run: node scripts/refresh-data.mjs
-      - name: Commit genuine changes
+      - name: Commit validated changes
         run: |
-          if git diff --quiet data/races.json; then exit 0; fi
-          git config user.name "racing-data-bot"
+          if git diff --quiet data/races.json; then
+            echo "No racing data changes."
+            exit 0
+          fi
+          git config user.name "racing-intelligence-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/races.json
-          git commit -m "Refresh racing data"
+          git commit -m "Refresh all GB and IRE racing data"
           git push origin HEAD:racing-intelligence
