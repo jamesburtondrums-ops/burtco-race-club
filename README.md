@@ -1,19 +1,49 @@
-# BURTCO Race Club
+# FormSignal — Racing Intelligence
 
-Realtime charity race-night web app.
+Standalone racing research prototype built on the `racing-intelligence` branch. The existing Race Night app on `main` is untouched.
 
-## Views
-- `/?host=1&session=DEMO01` host/controller
-- `/?session=DEMO01` projector
-- `/?play=1&session=DEMO01` mobile player
+## What is implemented
 
-## Setup
-1. Create a Supabase project.
-2. Run `supabase/schema.sql` in its SQL editor.
-3. Copy `.env.example` to `.env` and add the project URL and anon key.
-4. `npm install && npm run dev`
+- Today's meeting/race dashboard
+- Market Intelligence signal cards
+- Transparent evidence scorecards
+- Verified Fact vs Model View separation
+- Course/distance, handicap, progression, pedigree and race-fit signals
+- Race drill-downs
+- Tracker
+- Source/freshness screen
+- Feed-ready data adapter
+- Scheduled GitHub Actions refresh workflow
+- Graceful fallback: no feed = no invented values
 
-Player identity is a persistent random device token in localStorage; race state, bets, profit and leaderboard live in the database. Phone sleep/network loss therefore does not remove the player. Realtime subscriptions plus a fallback refresh keep devices synchronized.
+## Automatic refresh
 
-## Footage
-Race video support is the next media layer. Each supplied video will be mapped to race number, runner count and known winner.
+The workflow `.github/workflows/racing-refresh.yml` runs a morning refresh and hourly daytime refreshes.
+
+It expects:
+- `RACING_DATA_API_URL` — an approved/licensed endpoint returning normalized JSON
+- `RACING_DATA_API_TOKEN` — optional bearer token
+
+If no feed is configured, the job leaves the verified demo dataset untouched.
+
+The adapter intentionally does **not** scrape Racing Post or ATR. They remain cross-check references unless automated use is explicitly permitted.
+
+## Normalized feed contract
+
+At minimum, the endpoint must return:
+
+```json
+{
+  "meta": {
+    "snapshot": "7 Oct 2026",
+    "market_connected": false
+  },
+  "meetings": []
+}
+```
+
+It may also replace `signals`, `deep_races`, `tracker`, and `sources`.
+
+## Production next step
+
+Connect licensed racecard + pedigree data, sectional/tracking data, and a live odds/exchange feed. Then calculate model fair odds and value gaps from calibrated historical models instead of demo labels.
