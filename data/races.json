@@ -1,43 +1,31 @@
 {
   "snapshotDate": "2026-10-07",
-  "verifiedAt": "2026-10-07T14:27:00+01:00",
-  "mode": "VERIFIED DEMO SNAPSHOT",
+  "verifiedAt": "2026-10-07T15:39:00+01:00",
+  "mode": "LIVE WEB RESEARCH SNAPSHOT",
   "sources": [
     {
-      "name": "BHA",
-      "status": "reference",
-      "role": "Fixture / official validation",
-      "detail": "Official validation layer when connected."
-    },
-    {
-      "name": "Weatherbys",
-      "status": "not-connected",
-      "role": "Racecard / pedigree / results feed",
-      "detail": "Preferred licensed production feed."
-    },
-    {
-      "name": "TPD",
-      "status": "not-connected",
-      "role": "Sectionals / pace / tracking",
-      "detail": "Required for hidden-run and pace upgrades."
-    },
-    {
-      "name": "Odds / Exchange",
-      "status": "not-connected",
-      "role": "Live market / traded volume",
-      "detail": "Required for value gap, steam and liquidity."
-    },
-    {
       "name": "Racing Post",
-      "status": "cross-check",
-      "role": "Human cross-check only",
-      "detail": "Not scraped as a production dependency."
+      "status": "researched-live",
+      "role": "OR / TS / RPR / race conditions / betting forecasts",
+      "detail": "Used for today's one-off research snapshot, not as an automated feed."
     },
     {
-      "name": "At The Races",
+      "name": "Sporting Life",
+      "status": "researched-live",
+      "role": "Live odds / Timeform race comments / handicap context",
+      "detail": "Used to cross-check prices, last-winning-mark and hidden-run clues."
+    },
+    {
+      "name": "Racing Post non-runners",
+      "status": "researched-live",
+      "role": "Going / weather / non-runners",
+      "detail": "Used to remove or flag current non-runners."
+    },
+    {
+      "name": "Racing TV",
       "status": "cross-check",
-      "role": "Human cross-check only",
-      "detail": "Not scraped as a production dependency."
+      "role": "Irish racecard / OR cross-check",
+      "detail": "Used as an additional current-card verification source."
     }
   ],
   "meetings": [
@@ -374,5 +362,250 @@
         }
       ]
     }
-  ]
+  ],
+  "liveCoverage": {
+    "meetings": 5,
+    "races": 38,
+    "scope": "All UK & Ireland meetings on 7 October 2026",
+    "method": "One-off live web research; no racing API"
+  },
+  "liveScan": [
+    {
+      "horse": "Caragio",
+      "course": "Kempton",
+      "time": "17:00",
+      "grade": "A",
+      "or": 69,
+      "ts": 71,
+      "rpr": 85,
+      "odds": "7/4",
+      "tags": [
+        "C&D WINNER",
+        "RPR +16 vs OR",
+        "TS ABOVE OR"
+      ],
+      "reason": "Course-and-distance winner with two good recent efforts. Racing Post shows OR 69, TS 71 and RPR 85; the RPR is 16 lb higher than the handicap mark. Strong profile, though the current 7/4 price is much shorter than the earlier 3/1 forecast.",
+      "source": "Racing Post + Sporting Life"
+    },
+    {
+      "horse": "Timely Affair",
+      "course": "Kempton",
+      "time": "17:00",
+      "grade": "B+",
+      "or": 68,
+      "ts": 65,
+      "rpr": 84,
+      "odds": "5/1",
+      "tags": [
+        "D WINNER",
+        "RPR +16 vs OR",
+        "HEADGEAR/RETURN TO AW"
+      ],
+      "reason": "RPR sits 16 lb above OR and Sporting Life expects improvement back on all-weather with cheekpieces restored. More attractive price than Caragio if the race setup suits.",
+      "source": "Racing Post + Sporting Life"
+    },
+    {
+      "horse": "Double Red",
+      "course": "Nottingham",
+      "time": "16:29",
+      "grade": "A",
+      "or": 72,
+      "ts": 80,
+      "rpr": 87,
+      "odds": "15/2",
+      "tags": [
+        "C&D",
+        "BACK TO LAST WINNING MARK",
+        "TS +8 vs OR"
+      ],
+      "reason": "Back on his last winning mark, with C&D evidence. Racing Post has TS 80 and RPR 87 against OR 72. Slow-start tendency is the main risk.",
+      "source": "Racing Post + Sporting Life"
+    },
+    {
+      "horse": "Sigliosa",
+      "course": "Nottingham",
+      "time": "16:29",
+      "grade": "B+",
+      "or": 74,
+      "ts": 65,
+      "rpr": 84,
+      "odds": "8/1",
+      "tags": [
+        "TRAVELLED BETTER THAN RESULT",
+        "FRESH PROFILE",
+        "RPR +10 vs OR"
+      ],
+      "reason": "Sporting Life says he travelled as if ahead of his rating at Chester and prefers him in this race. RPR is 10 lb above OR; still lightly exposed for this yard.",
+      "source": "Racing Post + Sporting Life"
+    },
+    {
+      "horse": "Duke's Command",
+      "course": "Nottingham",
+      "time": "15:29",
+      "grade": "A",
+      "or": 87,
+      "ts": 74,
+      "rpr": 95,
+      "odds": "6/1",
+      "tags": [
+        "5LB BELOW LAST WIN",
+        "RETURN TO FORM",
+        "RPR +8 vs OR"
+      ],
+      "reason": "Runs from a mark 5 lb below his last winning one and returned to form at Southwell. Both Sporting Life and Racing Post analysis put him high on the shortlist.",
+      "source": "Racing Post + Sporting Life"
+    },
+    {
+      "horse": "Golden Harvest",
+      "course": "Nottingham",
+      "time": "17:05",
+      "grade": "B+",
+      "or": 52,
+      "ts": null,
+      "rpr": null,
+      "odds": "9/1",
+      "tags": [
+        "HIDDEN RUN",
+        "LIGHTLY RACED",
+        "2LB LOWER"
+      ],
+      "reason": "Lightly raced and had an interrupted passage last time; Sporting Life's detailed preview also highlights prior trouble in running and believes he is developing mentally. Current live price around 9/1.",
+      "source": "Sporting Life"
+    },
+    {
+      "horse": "The Love Machine",
+      "course": "Navan",
+      "time": "15:15",
+      "grade": "A",
+      "or": 48,
+      "ts": null,
+      "rpr": null,
+      "odds": "4/1",
+      "tags": [
+        "13LB BELOW C&D WIN",
+        "TARGET-RACE PROFILE",
+        "RECENT GAMBLE"
+      ],
+      "reason": "Won on this card last year from a mark 13 lb higher, then narrowly failed to land a gamble here last month. Still looks well handicapped despite a 6 lb rise and has strong course/date targeting evidence.",
+      "source": "Racing Post + Sporting Life"
+    },
+    {
+      "horse": "Rosato",
+      "course": "Navan",
+      "time": "15:15",
+      "grade": "B+",
+      "or": 56,
+      "ts": 63,
+      "rpr": 62,
+      "odds": "9/2",
+      "tags": [
+        "2 FROM 3 AT TRACK",
+        "4LB BELOW LAST WIN",
+        "TS +7 vs OR"
+      ],
+      "reason": "Two wins from three at Navan and now 4 lb below her last winning mark. TS 63 versus OR 56 adds a useful speed angle, though the losing run is a counter-signal.",
+      "source": "Racing Post + Sporting Life"
+    },
+    {
+      "horse": "Asdana",
+      "course": "Navan",
+      "time": "15:15",
+      "grade": "B",
+      "or": 57,
+      "ts": 49,
+      "rpr": 62,
+      "odds": "14/1",
+      "tags": [
+        "POTENTIALLY WELL TREATED",
+        "5LB CLAIM"
+      ],
+      "reason": "Sporting Life describes her as potentially well treated even on this season's form. Patrick McGettigan takes 5 lb off; recent form is weak enough to keep confidence below the top tier.",
+      "source": "Racing Post + Sporting Life"
+    },
+    {
+      "horse": "Credit Forgedd It",
+      "course": "Kempton",
+      "time": "19:00",
+      "grade": "B+",
+      "or": 58,
+      "ts": 72,
+      "rpr": 76,
+      "odds": "16/1 forecast",
+      "tags": [
+        "TS +14 vs OR",
+        "RPR +18 vs OR",
+        "PRICE ANGLE"
+      ],
+      "reason": "One of the biggest raw rating gaps found: TS 72 and RPR 76 against OR 58. The recent finishing position is a concern, but the ratings/price combination makes him a genuine value-watch profile rather than an obvious favourite.",
+      "source": "Racing Post"
+    },
+    {
+      "horse": "Last Flight",
+      "course": "Kempton",
+      "time": "20:00",
+      "grade": "B+",
+      "or": 61,
+      "ts": 59,
+      "rpr": 73,
+      "odds": "3/1 forecast",
+      "tags": [
+        "PROGRESSIVE",
+        "RPR +12 vs OR",
+        "CLASS TEST"
+      ],
+      "reason": "Arrives off two wins with RPR 73 against OR 61. The rise in class and longer trip are genuine unknowns, so this is progressive rather than a pure well-handicapped signal.",
+      "source": "Racing Post"
+    },
+    {
+      "horse": "Step Back In Time",
+      "course": "Navan",
+      "time": "15:15",
+      "grade": "C+",
+      "or": 42,
+      "ts": null,
+      "rpr": null,
+      "odds": "20/1",
+      "tags": [
+        "9LB BELOW 2025 RACE WIN",
+        "4-TIME NAVAN WINNER",
+        "FORM RISK"
+      ],
+      "reason": "Won this exact race last year and is 9 lb lower now, with four Navan wins overall. Current season form is poor, so this is a classic target-race/handicap signal with serious counter-evidence.",
+      "source": "Sporting Life"
+    }
+  ],
+  "nonRunners": {
+    "Kempton": [
+      "Nezeeh 17:00",
+      "Kaboom 17:30",
+      "Work Like Hell 17:30",
+      "Baba Ganoush 18:30",
+      "Elvetham 19:30"
+    ],
+    "Navan": [
+      "Glen Breeze 15:15",
+      "The Cosy Corner 15:15",
+      "Gaineamh Min 15:15",
+      "Selosse 15:45",
+      "The Boogeyman 15:45",
+      "All Is Bright 16:48",
+      "Miss Crinshawn 17:18"
+    ],
+    "Nottingham": [
+      "Marhaba The Champ 16:29",
+      "Porth Eilian 16:29",
+      "Hope And Joy 17:05",
+      "The Feminine Urge 17:05"
+    ],
+    "Sedgefield": [
+      "Present Fair 14:20",
+      "Just Keeps Rolling 14:20"
+    ],
+    "Worcester": [
+      "Affection 14:35",
+      "Wet Sail 15:05",
+      "King's Affinity 15:35",
+      "Estate Planning 16:05"
+    ]
+  }
 }
