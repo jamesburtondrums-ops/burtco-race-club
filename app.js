@@ -1,70 +1,17 @@
-let DATA=null;let activeCourse=null;let filter='all';
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
-async function boot(){
-  try{const r=await fetch('./data/racing.json',{cache:'no-store'});DATA=await r.json();renderAll()}
-  catch(e){$('#health').textContent='Data load failed';console.error(e)}
-}
-function renderAll(){
-  $('#snapshot').textContent=DATA.meta.snapshot;
-  $('#updated').textContent=new Date(DATA.meta.updated_at).toLocaleString('en-GB',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
-  $('#mode').textContent=DATA.meta.mode;
-  $('#market').textContent=DATA.meta.market_connected?'Connected':'Not connected';
-  $('#health').textContent=DATA.meta.market_connected?'Feeds connected':'Verified demo mode';
-  activeCourse=activeCourse||DATA.meetings[0].course;
-  renderSignals();renderTabs();renderRaces();renderTracker();renderSources();
-}
-function renderSignals(){
-  const q=$('#search').value.trim().toLowerCase();
-  const arr=DATA.signals.filter(s=>{
-    const hay=[s.horse,s.course,s.race,s.trainer,s.jockey,...s.badges].join(' ').toLowerCase();
-    return (!q||hay.includes(q))&&(filter==='all'||s.grade===filter||s.discipline===filter);
-  });
-  $('#signals').innerHTML=arr.map(s=>`
-    <article class="signal" data-race="${esc(s.race_id)}">
-      <div class="signal-top"><span class="pill ${s.market==='Not connected'?'off':'pos'}">${esc(s.market)}</span><span class="grade">${esc(s.grade)}</span></div>
-      <h3>${esc(s.horse)}</h3><div class="race-ref">${esc(s.course)} ${esc(s.time)} · ${esc(s.race)}</div>
-      <div class="badges">${s.badges.map(b=>`<span class="pill pos">${esc(b)}</span>`).join('')}</div>
-      <p>${esc(s.summary)}</p>
-      <div class="bars">${Object.entries(s.scorecard).slice(0,4).map(([k,v])=>`<div class="bar"><span>${esc(k)}</span><div class="track"><div class="fill" style="width:${v.score}%"></div></div><b>${esc(v.label)}</b></div>`).join('')}</div>
-    </article>`).join('')||'<p>No runners match the current filter.</p>';
-  $$('.signal').forEach(x=>x.onclick=()=>openRace(x.dataset.race));
-}
-function renderTabs(){
-  $('#tabs').innerHTML=DATA.meetings.map(m=>`<button class="tab ${m.course===activeCourse?'active':''}" data-course="${esc(m.course)}">${esc(m.course)} <small>· ${m.races.length}</small></button>`).join('');
-  $$('.tab').forEach(b=>b.onclick=()=>{activeCourse=b.dataset.course;renderTabs();renderRaces()});
-}
-function renderRaces(){
-  const m=DATA.meetings.find(x=>x.course===activeCourse); if(!m)return;
-  $('#races').innerHTML=m.races.map(r=>`<article class="race ${r.deep?'hot':''}" ${r.deep?`data-race="${esc(r.id)}"`:''}><time>${esc(r.time)}</time><small>${esc(r.name||r.type)}</small>${r.deep?'<div class="intelligence">INTELLIGENCE AVAILABLE →</div>':'<div class="intelligence" style="color:#999">CARD INDEXED</div>'}</article>`).join('');
-  $$('.race.hot').forEach(x=>x.onclick=()=>openRace(x.dataset.race));
-}
-function renderTracker(){
-  $('#tracker').innerHTML=DATA.tracker.map(t=>`<div class="tracker-item"><strong>${esc(t.horse)}</strong><span>${esc(t.reason)}</span><span class="pill warn">${esc(t.trigger)}</span></div>`).join('');
-}
-function renderSources(){
-  $('#sources').innerHTML=DATA.sources.map(s=>`<div class="source"><div><b>${esc(s.name)}</b><br><small>${esc(s.purpose)}</small></div><span class="pill ${s.status==='connected'?'pos':s.status==='reference'?'warn':'off'}">${esc(s.status)}</span></div>`).join('');
-}
-function openRace(id){
-  const race=DATA.deep_races[id]; if(!race)return;
-  $('#raceBody').innerHTML=`
-    <span class="kicker">${esc(race.course)} · ${esc(race.time)}</span>
-    <h2>${esc(race.name)}</h2>
-    <p class="note">${esc(race.conditions)}</p>
-    <div class="fact-model">
-      <div><h4>VERIFIED FACT</h4><p>${esc(race.verified_fact)}</p></div>
-      <div><h4>MODEL VIEW</h4><p>${esc(race.model_view)}</p></div>
-    </div>
-    <h3>Signal matrix</h3><div class="matrix">${Object.entries(race.matrix).map(([k,v])=>`<div><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('')}</div>
-    <h3>Runners</h3>
-    <div style="overflow:auto"><table class="runner-table"><thead><tr><th>Horse</th><th>Age/Wt</th><th>OR</th><th>Draw</th><th>Jockey / Trainer</th><th>Evidence</th></tr></thead><tbody>
-    ${race.runners.map(r=>`<tr><td><b>${esc(r.horse)}</b></td><td>${esc(r.age_weight)}</td><td>${esc(r.or||'—')}</td><td>${esc(r.draw||'—')}</td><td>${esc(r.jockey)}<br><small>${esc(r.trainer)}</small></td><td>${esc(r.note)}</td></tr>`).join('')}
-    </tbody></table></div>
-    <div class="fact-model"><div><h4>MARKET EVIDENCE</h4><p>${esc(race.market)}</p></div><div><h4>RISKS / MISSING DATA</h4><p>${esc(race.risks)}</p></div></div>`;
-  $('#raceDialog').showModal();
-}
-$('#search').addEventListener('input',renderSignals);
-$$('.chip').forEach(b=>b.onclick=()=>{$$('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');filter=b.dataset.filter;renderSignals()});
-$('#sourcesBtn').onclick=()=>$('#sourcesDialog').showModal();
-$$('[data-close]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.close).close());
-boot();
+const $=s=>document.querySelector(s),state={data:null,view:"dashboard",meeting:"All",tracked:JSON.parse(localStorage.getItem("ri-tracker")||"[]"),modal:null};
+const pill=(t,x)=>`<span class="pill ${t}"><span class="dot"></span>${x}</span>`;
+async function load(){const r=await fetch("./data/races.json?"+Date.now());state.data=await r.json();render()}
+function nav(){const a=[["dashboard","Today"],["races","Races"],["market","Market"],["tracker","Tracker"],["sources","Sources"]];return `<div class="nav">${a.map(([v,t])=>`<button class="${state.view===v?"active":""}" data-view="${v}">${t}</button>`).join("")}</div><div class="mobile-nav">${a.map(([v,t])=>`<button class="${state.view===v?"active":""}" data-view="${v}">${t}</button>`).join("")}</div>`}
+function top(){const a=[];state.data.races.forEach(r=>r.runners.forEach(x=>{if(x.grade==="A")a.push({...x,course:r.course,time:r.time,raceId:r.id})}));return a.map(x=>`<div class="signal-card"><span class="grade">${x.grade}</span><div class="label">${x.model||x.tags[0]}</div><h4>${x.horse}</h4><div class="meta">${x.course} ${x.time}</div><div class="signal-list">${x.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div><button class="view-btn" style="margin-top:12px" data-horse="${x.horse}">Why this horse?</button></div>`).join("")}
+function meetings(){let ms=state.data.meetings;if(state.meeting!=="All")ms=ms.filter(m=>m.course===state.meeting);return ms.map(m=>`<div class="panel"><div class="section-head" style="margin:0 0 12px"><div><h3>${m.course}</h3><p>${m.code}</p></div></div><div class="race-grid">${m.times.map(t=>{const r=state.data.races.find(x=>x.course===m.course&&x.time===t);return `<button class="race-card" ${r?`data-race="${r.id}"`:""}><div class="race-time">${t}</div><h4>${r?r.name:"Racecard slot"}</h4><div class="meta">${r?r.conditions:"Full runner data requires connected feed"}</div><div class="deep">${r?"DEEP ANALYSIS →":"DATA FEED SLOT"}</div></button>`}).join("")}</div></div>`).join("")}
+function dashboard(){const d=state.data;return `<section class="hero"><div class="hero-main"><div class="eyebrow">Market + form intelligence</div><h2>Find the chance the finishing position and raw price can miss.</h2><p>Handicap context, race suitability, course and distance, jockey/trainer clues, pedigree and market movement when connected.</p></div><div class="status-panel"><div>${pill("fact","VERIFIED SNAPSHOT")}</div><div class="status-row"><span>Date</span><strong>${d.snapshotDate}</strong></div><div class="status-row"><span>Mode</span><strong>${d.mode}</strong></div><div class="status-row"><span>Odds feed</span><strong>Not connected</strong></div><div class="status-row"><span>Sectionals</span><strong>Not connected</strong></div></div></section><div class="section-head"><div><h3>Strongest evidence-backed signals</h3><p>Grades are evidence strength, not win probabilities.</p></div>${pill("model","MODEL VIEW")}</div><div class="cards">${top()}</div><div class="section-head"><div><h3>Today's racing</h3><p>Verified meeting times, with selected races deeply modelled.</p></div></div><div class="meeting-tabs">${["All",...d.meetings.map(m=>m.course)].map(m=>`<button class="${state.meeting===m?"active":""}" data-meeting="${m}">${m}</button>`).join("")}</div>${meetings()}`}
+function races(){return `<div class="section-head"><div><h3>Race analysis</h3><p>Runner-by-runner verified facts and signals.</p></div></div>${state.data.races.map(r=>`<div class="panel"><div class="section-head" style="margin:0 0 12px"><div><h3>${r.course} ${r.time}</h3><p>${r.name} · ${r.conditions}</p></div><button class="view-btn" data-race="${r.id}">Open</button></div><div class="table-wrap"><table><thead><tr><th>Horse</th><th>OR</th><th>Jockey</th><th>Trainer</th><th>Signals</th><th>Grade</th></tr></thead><tbody>${r.runners.map(x=>`<tr><td class="horse">${x.horse}</td><td>${x.or}</td><td>${x.jockey}</td><td>${x.trainer}</td><td>${x.tags.join(" · ")}</td><td><strong>${x.grade}</strong></td></tr>`).join("")}</tbody></table></div></div>`).join("")}`}
+function market(){return `<section class="hero"><div class="hero-main"><div class="eyebrow">Target & market engine</div><h2>Strong signals require a confluence, not a gamble story.</h2><p>Top grades need multiple independent positives. Market shortening alone cannot create an A-grade selection.</p></div><div class="status-panel"><div class="status-row"><span>Live odds</span><strong>Not connected</strong></div><div class="status-row"><span>Exchange liquidity</span><strong>Not connected</strong></div><div class="status-row"><span>Value claims</span><strong>Suppressed</strong></div></div></section><div class="section-head"><div><h3>Signal families</h3></div></div><div class="cards">${["Market + Form Confluence","Well Handicapped","Target Race Profile","Course Specialist","Jockey Booking","Hidden Last-Time-Out Run","Unexposed / Pedigree","Late Market Support","Price Too Short","False Gamble Risk","Insufficient Data / No Edge"].map((x,i)=>`<div class="signal-card"><div class="label">Signal ${i+1}</div><h4>${x}</h4><div class="meta">Only active when required evidence exists.</div></div>`).join("")}</div><div class="section-head"><div><h3>Backtesting</h3><p>No historical performance metrics are invented.</p></div></div><div class="panel"><div class="alert"><strong>Awaiting historical dataset</strong><br><span class="meta">Planned: strike rate, A/E, BSP/SP ROI where licensed, sample size, price bands, drawdown and calibration.</span></div></div>`}
+function tracker(){const all=[];state.data.races.forEach(r=>r.runners.forEach(x=>all.push({...x,course:r.course,time:r.time})));const show=state.tracked.length?all.filter(x=>state.tracked.includes(x.horse)):all.filter(x=>["Top Scholar","Usaylah","Now The Eagle","Last Flight"].includes(x.horse));return `<div class="section-head"><div><h3>Tracker</h3><p>Save horses for future target conditions.</p></div></div><div class="panel">${show.map(x=>`<div class="tracker-row"><div><div class="horse">${x.horse}</div><div class="meta">${x.course} ${x.time} · ${x.model||x.tags[0]}</div></div><button class="track-btn ${state.tracked.includes(x.horse)?"saved":""}" data-track="${x.horse}">${state.tracked.includes(x.horse)?"Tracked":"Track"}</button></div>`).join("")}</div>`}
+function sources(){return `<div class="section-head"><div><h3>Accuracy & sources</h3><p>Missing feeds stay missing rather than becoming guessed data.</p></div></div><div class="source-grid">${state.data.sources.map(s=>`<div class="source-card"><h4>${s.name}</h4>${pill(s.status==="not-connected"?"missing":"fact",s.status.toUpperCase())}<p><strong>${s.role}</strong><br>${s.detail}</p></div>`).join("")}</div><div class="section-head"><div><h3>Automatic refresh</h3></div></div><div class="panel"><div class="status-row"><span>Morning refresh</span><strong>Configured</strong></div><div class="status-row"><span>Intraday refresh</span><strong>Configured</strong></div><div class="status-row"><span>Feed credentials</span><strong>Not connected</strong></div><div class="status-row"><span>Fallback</span><strong>Preserve last valid data</strong></div></div>`}
+function horseModal(h){const r=state.data.races.find(r=>r.runners.some(x=>x.horse===h)),x=r.runners.find(x=>x.horse===h);return `<div class="panel"><div class="eyebrow" style="color:#6a765f">VERIFIED FACT</div><h3>${x.horse} <span class="grade">${x.grade}</span></h3><p>${x.fact}</p><div class="signal-list">${x.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div></div><div class="panel"><div class="eyebrow" style="color:#8a6a2a">MODEL VIEW</div><h3>${x.model||"Evidence profile"}</h3><p class="meta">No value claim is made without a calibrated model and live price. Sectional/pace upgrades are not invented when those feeds are missing.</p></div>`}
+function raceModal(id){const r=state.data.races.find(x=>x.id===id);return `<div class="panel"><h3>${r.course} ${r.time}</h3><p class="meta">${r.name} · ${r.conditions}</p></div><div class="table-wrap"><table><thead><tr><th>Horse</th><th>Jockey</th><th>Trainer</th><th>OR</th><th>Signals</th><th></th></tr></thead><tbody>${r.runners.map(x=>`<tr><td class="horse">${x.horse}</td><td>${x.jockey}</td><td>${x.trainer}</td><td>${x.or}</td><td>${x.tags.join(" · ")}</td><td><button class="view-btn" data-horse="${x.horse}">Why?</button></td></tr>`).join("")}</tbody></table></div>`}
+function modal(){if(!state.modal)return"";const body=state.modal.horse?horseModal(state.modal.horse):raceModal(state.modal.raceId);return `<div class="modal"><div class="modal-card"><div class="modal-head"><strong>Race intelligence</strong><button class="close" data-close>×</button></div><div class="modal-body">${body}</div></div></div>`}
+function render(){const body=state.view==="dashboard"?dashboard():state.view==="races"?races():state.view==="market"?market():state.view==="tracker"?tracker():sources();document.querySelector("#app").innerHTML=`<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Evidence-led race analysis</small></div></div>${nav()}<div class="search"><input placeholder="Horse, jockey, trainer…"></div></div></header><main class="main">${body}<div class="footer-note">Research prototype. VERIFIED FACT, MODEL VIEW and missing data remain separate. Live odds, sectionals and historical statistics are never fabricated.</div></main>${modal()}`;bind()}
+function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render();scrollTo(0,0)});document.querySelectorAll("[data-meeting]").forEach(b=>b.onclick=()=>{state.meeting=b.dataset.meeting;render()});document.querySelectorAll("[data-race]").forEach(b=>b.onclick=()=>{state.modal={raceId:b.dataset.race};render()});document.querySelectorAll("[data-horse]").forEach(b=>b.onclick=e=>{e.stopPropagation();state.modal={horse:b.dataset.horse};render()});document.querySelectorAll("[data-close]").forEach(b=>b.onclick=()=>{state.modal=null;render()});document.querySelectorAll("[data-track]").forEach(b=>b.onclick=()=>{const h=b.dataset.track;state.tracked=state.tracked.includes(h)?state.tracked.filter(x=>x!==h):[...state.tracked,h];localStorage.setItem("ri-tracker",JSON.stringify(state.tracked));render()})}
+load();

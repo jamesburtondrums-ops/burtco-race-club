@@ -2,13 +2,12 @@ name: Racing data refresh
 on:
   workflow_dispatch:
   schedule:
-    - cron: "5 5 * * *"
-    - cron: "15 10-21 * * *"
+    - cron: "15 5 * * *"
+    - cron: "0 9-20/2 * * *"
 permissions:
   contents: write
 jobs:
   refresh:
-    if: github.ref == 'refs/heads/racing-intelligence' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,20 +15,17 @@ jobs:
           ref: racing-intelligence
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
-      - name: Pull and validate racing data
+          node-version: 22
+      - name: Refresh validated racing data
         env:
-          RACING_DATA_API_URL: ${{ secrets.RACING_DATA_API_URL }}
-          RACING_DATA_API_TOKEN: ${{ secrets.RACING_DATA_API_TOKEN }}
-        run: node scripts/update-data.mjs
-      - name: Commit real data changes
+          RACING_FEED_URL: ${{ secrets.RACING_FEED_URL }}
+          RACING_FEED_TOKEN: ${{ secrets.RACING_FEED_TOKEN }}
+        run: node scripts/refresh-data.mjs
+      - name: Commit genuine changes
         run: |
-          if git diff --quiet; then
-            echo "No data changes"
-            exit 0
-          fi
-          git config user.name "formsignal-data-bot"
+          if git diff --quiet data/races.json; then exit 0; fi
+          git config user.name "racing-data-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/racing.json
-          git commit -m "Auto-refresh racing data"
+          git add data/races.json
+          git commit -m "Refresh racing data"
           git push origin HEAD:racing-intelligence

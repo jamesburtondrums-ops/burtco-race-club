@@ -1,0 +1,378 @@
+{
+  "snapshotDate": "2026-10-07",
+  "verifiedAt": "2026-10-07T14:27:00+01:00",
+  "mode": "VERIFIED DEMO SNAPSHOT",
+  "sources": [
+    {
+      "name": "BHA",
+      "status": "reference",
+      "role": "Fixture / official validation",
+      "detail": "Official validation layer when connected."
+    },
+    {
+      "name": "Weatherbys",
+      "status": "not-connected",
+      "role": "Racecard / pedigree / results feed",
+      "detail": "Preferred licensed production feed."
+    },
+    {
+      "name": "TPD",
+      "status": "not-connected",
+      "role": "Sectionals / pace / tracking",
+      "detail": "Required for hidden-run and pace upgrades."
+    },
+    {
+      "name": "Odds / Exchange",
+      "status": "not-connected",
+      "role": "Live market / traded volume",
+      "detail": "Required for value gap, steam and liquidity."
+    },
+    {
+      "name": "Racing Post",
+      "status": "cross-check",
+      "role": "Human cross-check only",
+      "detail": "Not scraped as a production dependency."
+    },
+    {
+      "name": "At The Races",
+      "status": "cross-check",
+      "role": "Human cross-check only",
+      "detail": "Not scraped as a production dependency."
+    }
+  ],
+  "meetings": [
+    {
+      "course": "Worcester",
+      "code": "Jumps",
+      "times": [
+        "13:05",
+        "13:35",
+        "14:05",
+        "14:35",
+        "15:05",
+        "15:35",
+        "16:05",
+        "16:35"
+      ]
+    },
+    {
+      "course": "Nottingham",
+      "code": "Flat",
+      "times": [
+        "13:29",
+        "13:59",
+        "14:29",
+        "14:59",
+        "15:29",
+        "15:59",
+        "16:29",
+        "17:05"
+      ]
+    },
+    {
+      "course": "Navan",
+      "code": "Flat",
+      "times": [
+        "13:45",
+        "14:15",
+        "14:45",
+        "15:15",
+        "15:45",
+        "16:15",
+        "16:48",
+        "17:18"
+      ]
+    },
+    {
+      "course": "Sedgefield",
+      "code": "Jumps",
+      "times": [
+        "13:50",
+        "14:20",
+        "14:50",
+        "15:20",
+        "15:50",
+        "16:20"
+      ]
+    },
+    {
+      "course": "Kempton",
+      "code": "Flat / AW",
+      "times": [
+        "17:00",
+        "17:30",
+        "18:00",
+        "18:30",
+        "19:00",
+        "19:30",
+        "20:00",
+        "20:30"
+      ]
+    }
+  ],
+  "races": [
+    {
+      "id": "not-1429",
+      "course": "Nottingham",
+      "time": "14:29",
+      "name": "British EBF Future Stayers Oath Novice Stakes",
+      "conditions": "2yo · 1m 75y · Turf · Good, good to soft in places · 5 runners",
+      "runners": [
+        {
+          "horse": "Caldo",
+          "draw": 3,
+          "jockey": "David Probert",
+          "trainer": "Andrew Balding",
+          "age": 2,
+          "weight": "9-7",
+          "or": "—",
+          "fact": "Seventh of eight at Sandown on debut.",
+          "tags": [
+            "Race experience"
+          ],
+          "grade": "B"
+        },
+        {
+          "horse": "Hoshi",
+          "draw": 2,
+          "jockey": "Charles Bishop",
+          "trainer": "Alan King",
+          "age": 2,
+          "weight": "9-7",
+          "or": "—",
+          "fact": "Fourth at Salisbury on latest run.",
+          "tags": [
+            "Race experience"
+          ],
+          "grade": "B"
+        },
+        {
+          "horse": "Prince Of Petra",
+          "draw": 5,
+          "jockey": "Ray Dawson",
+          "trainer": "Roger Varian",
+          "age": 2,
+          "weight": "9-7",
+          "or": "—",
+          "fact": "Debutant; €65,000 yearling; siblings include Maltese Cross.",
+          "tags": [
+            "UNEXPOSED / PEDIGREE"
+          ],
+          "grade": "B+"
+        },
+        {
+          "horse": "Top Scholar",
+          "draw": 1,
+          "jockey": "Tom Marquand",
+          "trainer": "William Haggas",
+          "age": 2,
+          "weight": "9-7",
+          "or": "—",
+          "fact": "Debutant; Frankel colt; sibling to five winners.",
+          "tags": [
+            "UNEXPOSED / PEDIGREE",
+            "JOCKEY BOOKING"
+          ],
+          "grade": "B+",
+          "model": "Pedigree / Connections Danger"
+        },
+        {
+          "horse": "Gainful",
+          "draw": 4,
+          "jockey": "Rossa Ryan",
+          "trainer": "Ralph Beckett",
+          "age": 2,
+          "weight": "9-2",
+          "or": "—",
+          "fact": "Third of seven at Newmarket on debut; best of the newcomers.",
+          "tags": [
+            "FORM ANCHOR"
+          ],
+          "grade": "A",
+          "model": "Strongest verified race experience"
+        }
+      ]
+    },
+    {
+      "id": "kem-1700",
+      "course": "Kempton",
+      "time": "17:00",
+      "name": "Apprentice Handicap",
+      "conditions": "4yo+ · 7f · Polytrack · Standard to slow · 9 runners",
+      "runners": [
+        {
+          "horse": "Silver Trumpet",
+          "draw": 1,
+          "jockey": "Oliver Carmichael (3)",
+          "trainer": "Eve Johnson Houghton",
+          "age": 5,
+          "weight": "10-0",
+          "or": 75,
+          "fact": "C&D winner; narrowly beaten at Epsom ten days earlier.",
+          "tags": [
+            "COURSE SPECIALIST",
+            "JOCKEY CLAIM"
+          ],
+          "grade": "B+"
+        },
+        {
+          "horse": "Caragio",
+          "draw": 3,
+          "jockey": "Taryn Langley",
+          "trainer": "Adam Kirby",
+          "age": 6,
+          "weight": "9-8",
+          "or": 69,
+          "fact": "C&D winner; good efforts on last two starts.",
+          "tags": [
+            "COURSE SPECIALIST",
+            "HANDICAP WATCH"
+          ],
+          "grade": "A",
+          "model": "Course / Handicap Signal"
+        }
+      ]
+    },
+    {
+      "id": "kem-1800",
+      "course": "Kempton",
+      "time": "18:00",
+      "name": "Maiden Fillies' Stakes",
+      "conditions": "2yo fillies · 7f · Polytrack · Standard to slow · 12 runners",
+      "runners": [
+        {
+          "horse": "Jumeirah Pearl",
+          "jockey": "Marco Ghiani",
+          "trainer": "Ismail Mohammed & Jose Santos",
+          "age": 2,
+          "weight": "9-2",
+          "or": "—",
+          "fact": "Debutant; sister to dual Kempton C&D winner Lord Britain.",
+          "tags": [
+            "UNEXPOSED / PEDIGREE"
+          ],
+          "grade": "B+"
+        },
+        {
+          "horse": "Perpetually",
+          "jockey": "Lewis Edmunds",
+          "trainer": "Harry Charlton",
+          "age": 2,
+          "weight": "9-2",
+          "or": "—",
+          "fact": "Debutant; half-sister to winners including Time Lock; dam won on debut at Kempton.",
+          "tags": [
+            "UNEXPOSED / PEDIGREE"
+          ],
+          "grade": "B+"
+        },
+        {
+          "horse": "Tenshi",
+          "jockey": "Jack Mitchell",
+          "trainer": "Roger Varian",
+          "age": 2,
+          "weight": "9-2",
+          "or": "—",
+          "fact": "150,000gns yearling; half-sister to five winners.",
+          "tags": [
+            "UNEXPOSED / PEDIGREE"
+          ],
+          "grade": "B+"
+        },
+        {
+          "horse": "Usaylah",
+          "jockey": "Oisin Murphy",
+          "trainer": "John & Thady Gosden",
+          "age": 2,
+          "weight": "9-2",
+          "or": "—",
+          "fact": "Debutant; Zarak filly out of Group 3 winner Oscula.",
+          "tags": [
+            "UNEXPOSED / PEDIGREE",
+            "JOCKEY BOOKING"
+          ],
+          "grade": "A",
+          "model": "Pedigree / Connections Flag"
+        }
+      ]
+    },
+    {
+      "id": "kem-2000",
+      "course": "Kempton",
+      "time": "20:00",
+      "name": "London Stayers Series Qualifier",
+      "conditions": "3yo+ · 1m 7f 218y · Polytrack · Standard to slow · 9 runners",
+      "runners": [
+        {
+          "horse": "Luan",
+          "jockey": "Billy Loughnane",
+          "trainer": "Nick Scholfield",
+          "age": 4,
+          "weight": "9-13",
+          "or": 67,
+          "fact": "Won 1m4f Wolverhampton last month; 2m stamina unproven.",
+          "tags": [
+            "STAMINA QUESTION"
+          ],
+          "grade": "B+"
+        },
+        {
+          "horse": "Now The Eagle",
+          "jockey": "Jack Dace (5)",
+          "trainer": "Luke Dace",
+          "age": 4,
+          "weight": "9-12",
+          "or": 66,
+          "fact": "Kempton C&D figures 1-2-2.",
+          "tags": [
+            "COURSE SPECIALIST",
+            "JOCKEY CLAIM"
+          ],
+          "grade": "A",
+          "model": "Course Specialist"
+        },
+        {
+          "horse": "Vilaine Verlaine",
+          "jockey": "Dougie Costello",
+          "trainer": "Mark Usher",
+          "age": 4,
+          "weight": "9-12",
+          "or": 66,
+          "fact": "Second over this C&D two starts ago.",
+          "tags": [
+            "C&D REBOUND"
+          ],
+          "grade": "B+"
+        },
+        {
+          "horse": "Desert Belle",
+          "jockey": "Luke Morris",
+          "trainer": "Sir Mark Prescott",
+          "age": 3,
+          "weight": "9-7",
+          "or": 69,
+          "fact": "1m4f novice winner and consistent in handicaps.",
+          "tags": [
+            "CONSISTENT PROFILE"
+          ],
+          "grade": "B+"
+        },
+        {
+          "horse": "Last Flight",
+          "jockey": "Daniel Muscutt",
+          "trainer": "James Horton",
+          "age": 3,
+          "weight": "8-13",
+          "or": 61,
+          "fact": "Won two of three for current yard; up 4lb and steps up in class.",
+          "tags": [
+            "UNEXPOSED IMPROVER",
+            "CLASS TEST"
+          ],
+          "grade": "A",
+          "model": "Progressive / Class Test"
+        }
+      ]
+    }
+  ]
+}
