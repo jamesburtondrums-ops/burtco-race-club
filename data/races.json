@@ -8,11 +8,11 @@
     "scope": "GB + Ireland thoroughbred meetings"
   },
   "gradingSystem": {
-    "PRIME": "Highest-conviction selection. Specially highlighted and sits above the star scale.",
-    "STRONG": "Strong win case, but not quite PRIME.",
-    "VALUE": "Price appears bigger than the evidence deserves.",
-    "SPECULATIVE": "Credible angle with material uncertainty.",
-    "WATCH": "Interesting profile, not a selection."
+    "PRIME": "Calibrated high-confidence win selection. Requires >=50% fused probability plus market/top-two and evidence safeguards.",
+    "STRONG": "Replaced by star confidence bands under V4.",
+    "VALUE": "Suspended as a recommendation label until the value model is independently calibrated.",
+    "SPECULATIVE": "Use only as PRICE WATCH; never as high win confidence.",
+    "WATCH": "Interesting but below the confidence threshold or missing critical evidence."
   },
   "meetings": [
     {
@@ -433,8 +433,9 @@
     }
   ],
   "scoringModel": {
-    "version": "1.1",
-    "purpose": "Win-evidence confidence, not value or predicted probability",
+    "version": "4.0",
+    "legacy": true,
+    "note": "Today’s displayed picks were researched before V4 was finalised. They must be rerun through V4 before any can be called PRIME.",
     "components": [
       {
         "key": "recentForm",
@@ -472,40 +473,7 @@
         "max": 5
       }
     ],
-    "riskPenalty": {
-      "min": -20,
-      "max": 0
-    },
-    "primeRule": "Score >= 82, data quality = 5/5, at least four independent strong evidence groups, and risk penalty no worse than -6.",
-    "starBands": [
-      {
-        "stars": 5,
-        "min": 76,
-        "max": 81
-      },
-      {
-        "stars": 4,
-        "min": 68,
-        "max": 75
-      },
-      {
-        "stars": 3,
-        "min": 58,
-        "max": 67
-      },
-      {
-        "stars": 2,
-        "min": 48,
-        "max": 57
-      },
-      {
-        "stars": 1,
-        "min": 0,
-        "max": 47
-      }
-    ],
-    "legacy": true,
-    "note": "Current 8 October snapshot was created under v1.1. New research passes must use scoringFrameworkV2; PRIME is not valid under v2 until critical trainer/targeting/pedigree checks are complete."
+    "primeRule": "Fused win probability >=50%; market rank 1-2; >=90% critical checks complete; at least five independent positive evidence groups; no major red flag. For newcomers, pedigree checks are mandatory."
   },
   "scoringFrameworkV2": {
     "version": "2.0",
@@ -1063,5 +1031,220 @@
       "Record every no-bet as well as every selection to prevent hindsight filtering.",
       "Freeze all features at a timestamp before the off to prevent data leakage."
     ]
+  },
+  "systemV4": {
+    "version": "4.0",
+    "status": "ACTIVE METHODOLOGY — live selections require fresh V4 research",
+    "backtest": {
+      "races": 10000,
+      "runners": 67898,
+      "trainRaces": 7184,
+      "unseenTestRaces": 2795,
+      "validMarketTestRaces": 1629,
+      "chronologyViolations": 0,
+      "favourite": {
+        "strikeRate": 36.2,
+        "roi": -8.7
+      },
+      "fusion": {
+        "strikeRate": 37.4,
+        "roi": -3.8,
+        "brier": 0.0913,
+        "logLoss": 0.308
+      },
+      "prime50": {
+        "races": 215,
+        "strikeRate": 69.3,
+        "roi": 6.3
+      },
+      "prime55": {
+        "races": 158,
+        "strikeRate": 71.5,
+        "roi": 5.4
+      },
+      "note": "ROI uses only complete SP books with 101%-140% overround. Incomplete archived betting books are excluded."
+    },
+    "philosophy": [
+      "Estimate WIN CHANCE first; assess PRICE separately.",
+      "Use the current market as a prior, not as the answer.",
+      "Only use information knowable before the race.",
+      "Targeting means observable placement evidence; never infer deliberate non-trying.",
+      "A falling handicap mark is not automatically positive. Large falls require proof that ability remains.",
+      "Missing critical data reduces confidence and can block PRIME."
+    ],
+    "probabilityEngine": {
+      "description": "Market prior + independent pre-race evidence, calibrated by race type.",
+      "evidenceGroups": [
+        {
+          "name": "Retained ability",
+          "weight": "Very high",
+          "checks": [
+            "Previous RPR relative to today's OR",
+            "Best recent RPR/TS",
+            "Recent finishing effort and comments",
+            "Performance trend",
+            "Strength of form line"
+          ],
+          "research": "Previous RPR 5lb+ above current OR: A/E 1.08 on clean market sample."
+        },
+        {
+          "name": "Current form",
+          "weight": "High",
+          "checks": [
+            "Last 3-5 runs",
+            "Days since run",
+            "Improving/declining profile",
+            "Hidden trouble",
+            "Running to form rather than bare finishing position"
+          ]
+        },
+        {
+          "name": "Race suitability",
+          "weight": "High",
+          "checks": [
+            "Trip",
+            "Going",
+            "Surface",
+            "Course configuration",
+            "Field size",
+            "Class",
+            "Pace",
+            "Draw"
+          ]
+        },
+        {
+          "name": "Trainer placement",
+          "weight": "High",
+          "checks": [
+            "Trainer course strike rate",
+            "Trainer record in race type/class",
+            "Alternative entries",
+            "Return to suitable conditions",
+            "Race value",
+            "Turnaround/layoff pattern"
+          ],
+          "research": "Trainer course >=15%: A/E 1.05. Trainer 14-day form alone did not add value."
+        },
+        {
+          "name": "Owner/connection placement",
+          "weight": "Medium-high",
+          "checks": [
+            "Owner course record",
+            "Owner-trainer record",
+            "Owner race-type record",
+            "Multiple runners",
+            "Stable rider allocation"
+          ],
+          "research": "Owner course >=15%: A/E 1.07; owner-trainer >=15%: A/E 1.04."
+        },
+        {
+          "name": "Jockey signal",
+          "weight": "Medium-high",
+          "checks": [
+            "Positive rider upgrade",
+            "Trainer-jockey record",
+            "Horse-jockey record",
+            "Claim",
+            "Unusual/meaningful booking"
+          ],
+          "research": "Target-race return + jockey upgrade: A/E 1.22 in 92 clean-market runners; promising but smaller sample."
+        },
+        {
+          "name": "Handicap position",
+          "weight": "Conditional",
+          "checks": [
+            "Current OR vs last winning OR",
+            "OR vs retained performance",
+            "Band eligibility",
+            "Weight/claim",
+            "Class movement"
+          ],
+          "research": "Being 5lb+ below an old winning mark underperformed market expectation. A mark drop only counts positively when retained ability is independently proven."
+        },
+        {
+          "name": "Target-race pattern",
+          "weight": "Conditional",
+          "checks": [
+            "Same course/time of year",
+            "Return to winning conditions",
+            "Same meeting/race pattern",
+            "Course specialist evidence"
+          ],
+          "research": "Same course/time-of-year prior win: A/E 1.03; useful as supporting evidence, not standalone proof."
+        },
+        {
+          "name": "Market confirmation",
+          "weight": "Very high for confidence",
+          "checks": [
+            "Overround-adjusted implied probability",
+            "Market rank",
+            "Late support/drift",
+            "Consensus",
+            "Liquidity where available"
+          ],
+          "research": "Fusion model at >=50% probability and market top-two: 69.3% winners in 215 unseen clean-market races."
+        },
+        {
+          "name": "Pedigree / unexposed",
+          "weight": "High only when sparse form",
+          "checks": [
+            "Sire progeny trip/ground/surface",
+            "Dam own record",
+            "Sibling/progeny record",
+            "Damsire",
+            "Trainer newcomer profile",
+            "Sales/breeze-up evidence"
+          ],
+          "research": "Used as a prior for newcomers; confidence is capped if family evidence is incomplete."
+        }
+      ]
+    },
+    "grades": {
+      "PRIME": {
+        "rule": "Fused win probability >=50%; market rank 1-2; >=90% critical checks complete; at least five independent positive evidence groups; no major red flag. For newcomers, pedigree checks are mandatory.",
+        "observed": "69.3% winners at >=50% in the clean unseen sample; 71.5% at >=55%.",
+        "display": "Special gold PRIME card"
+      },
+      "five": {
+        "rule": "40-49.9% fused win probability with critical data complete.",
+        "observed": "40-50% calibration band won 43.1%.",
+        "display": "★★★★★"
+      },
+      "four": {
+        "rule": "30-39.9% fused win probability.",
+        "observed": "30-40% calibration band won 36.6%.",
+        "display": "★★★★☆"
+      },
+      "three": {
+        "rule": "25-29.9% fused win probability.",
+        "observed": "25-30% calibration band won 28.4%.",
+        "display": "★★★☆☆"
+      },
+      "two": {
+        "rule": "20-24.9% fused win probability.",
+        "observed": "20-25% calibration band won 22.0%.",
+        "display": "★★☆☆☆"
+      },
+      "one": {
+        "rule": "Below 20%, or insufficient/contradictory evidence.",
+        "observed": "Low-confidence / watch territory.",
+        "display": "★☆☆☆☆"
+      }
+    },
+    "hardBlocks": [
+      "Unresolved non-runner/jockey/going status",
+      "Critical trainer/placement checks missing",
+      "Major trip/ground/surface doubt not compensated by evidence",
+      "Strong recent regression with no retained-ability evidence",
+      "Large mark fall treated as the main positive without current performance proof",
+      "For newcomers: sire/dam/sibling suitability not researched",
+      "Material late drift with no plausible explanation when market evidence is required"
+    ],
+    "pricePolicy": {
+      "status": "CAUTIOUS",
+      "rule": "Do not label a horse VALUE solely because model probability exceeds market implied probability.",
+      "reason": "The simple value overlay lost 20.9% ROI on the clean unseen market sample, so it is not validated.",
+      "currentUse": "Show fair-price estimate and PRICE OK / TOO SHORT / PRICE WATCH only. Do not increase win stars because a horse is a big price."
+    }
   }
 }
