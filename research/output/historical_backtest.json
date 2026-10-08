@@ -76,11 +76,32 @@
     "handicap_start_no",
     "trainer14",
     "trainer30",
+    "trainer_base_sr",
+    "trainer14_vs_base",
+    "trainer30_vs_base",
     "trainer_course_sr",
     "trainer_type_sr",
+    "trainer_handicap_sr",
+    "trainer_course_handicap_sr",
+    "trainer_course_class_sr",
+    "trainer_course_grade_sr",
+    "trainer_value_band_sr",
     "jockey14",
     "jockey_upgrade",
     "trainer_jockey_sr",
+    "horse_jockey_win_sr",
+    "horse_jockey_place_sr",
+    "preferred_style",
+    "course_style_sr",
+    "projected_leaders",
+    "pace_fit",
+    "going_place_rate",
+    "going_avg_rpr_minus_or",
+    "class_win_rate",
+    "grade_win_rate",
+    "current_race_value_log",
+    "value_change_log",
+    "grade_change",
     "owner_trainer_sr",
     "owner_course_sr",
     "owner_type_sr",
@@ -93,8 +114,8 @@
   ],
   "test": {
     "form_only": {
-      "strike_rate": 0.30161001788908764,
-      "roi": -0.08783972217673881,
+      "strike_rate": 0.3116279069767442,
+      "roi": -0.06362769349878004,
       "bets": 2795
     },
     "market_favourite": {
@@ -103,17 +124,17 @@
       "bets": 1629
     },
     "fusion": {
-      "strike_rate": 0.3738489871086556,
-      "roi": -0.03818605921736679,
+      "strike_rate": 0.37323511356660527,
+      "roi": -0.043035660199564514,
       "bets": 1629,
-      "brier": 0.09132274382001039,
-      "log_loss": 0.30801941085531276
+      "brier": 0.09118169366812331,
+      "log_loss": 0.3076650905032918
     },
     "value": {
-      "threshold_ratio": 1.15,
-      "bets": 4447,
-      "strike_rate": 0.06903530469979761,
-      "roi": -0.20924593358818683
+      "threshold_ratio": 1.5,
+      "bets": 2873,
+      "strike_rate": 0.05186216498433693,
+      "roi": -0.23401206636500752
     }
   },
   "signal_lifts": [
@@ -158,6 +179,14 @@
       "roi": -0.12746379273224914
     },
     {
+      "signal": "trainer course grade SR >=15%",
+      "runners": 2992,
+      "wins": 551,
+      "strike_rate": 0.18415775401069517,
+      "ae": 1.0563165546347182,
+      "roi": -0.098166927027221
+    },
+    {
       "signal": "ability + placement",
       "runners": 633,
       "wins": 139,
@@ -182,12 +211,60 @@
       "roi": -0.07043106523321828
     },
     {
+      "signal": "trainer course class SR >=15%",
+      "runners": 1991,
+      "wins": 363,
+      "strike_rate": 0.18232044198895028,
+      "ae": 1.0430020154565565,
+      "roi": -0.18965022644078383
+    },
+    {
+      "signal": "dropping race value >=25%",
+      "runners": 1318,
+      "wins": 243,
+      "strike_rate": 0.18437025796661607,
+      "ae": 1.0425368816890401,
+      "roi": -0.04493706512674636
+    },
+    {
+      "signal": "horse-jockey win SR >=20%",
+      "runners": 1586,
+      "wins": 270,
+      "strike_rate": 0.17023959646910466,
+      "ae": 1.0286857116251302,
+      "roi": -0.1318821556053587
+    },
+    {
       "signal": "same course / same time-of-year prior win",
       "runners": 777,
       "wins": 148,
       "strike_rate": 0.19047619047619047,
       "ae": 1.027675079841016,
       "roi": -0.10400367900367898
+    },
+    {
+      "signal": "horse-jockey place SR >=50%",
+      "runners": 1696,
+      "wins": 304,
+      "strike_rate": 0.1792452830188679,
+      "ae": 1.0252827762376235,
+      "roi": -0.08737043060451086
+    },
+    {
+      "signal": "trainer course handicap/non-handicap SR >=15%",
+      "runners": 3223,
+      "wins": 579,
+      "strike_rate": 0.1796462922742786,
+      "ae": 1.0243078333722624,
+      "roi": -0.13996960825226404
+    },
+    {
+      "signal": "positive pace fit",
+      "runners": 2735,
+      "wins": 412,
+      "strike_rate": 0.1506398537477148,
+      "ae": 1.023891700833564,
+      "roi": -0.1479659607100193
     },
     {
       "signal": "return to prior winning conditions",
@@ -222,6 +299,14 @@
       "roi": -0.1288029469687285
     },
     {
+      "signal": "same-grade win rate >0",
+      "runners": 3731,
+      "wins": 562,
+      "strike_rate": 0.15062985794693112,
+      "ae": 1.0148328644699165,
+      "roi": -0.19326471051209723
+    },
+    {
       "signal": "distance win rate >0",
       "runners": 3643,
       "wins": 555,
@@ -244,6 +329,38 @@
       "strike_rate": 0.1664425016812374,
       "ae": 0.9956576718626552,
       "roi": -0.17832517963990718
+    },
+    {
+      "signal": "same-class win rate >0",
+      "runners": 2203,
+      "wins": 343,
+      "strike_rate": 0.15569677712210622,
+      "ae": 0.994609581158433,
+      "roi": -0.18099051929056462
+    },
+    {
+      "signal": "proven going place rate >=50%",
+      "runners": 4201,
+      "wins": 688,
+      "strike_rate": 0.1637705308259938,
+      "ae": 0.9946014519455953,
+      "roi": -0.17112731710089477
+    },
+    {
+      "signal": "rising race value >=25%",
+      "runners": 5247,
+      "wins": 610,
+      "strike_rate": 0.1162569087097389,
+      "ae": 0.988592781341938,
+      "roi": -0.18929193754808393
+    },
+    {
+      "signal": "trainer value-band SR >=15%",
+      "runners": 5600,
+      "wins": 842,
+      "strike_rate": 0.15035714285714286,
+      "ae": 0.986117204359396,
+      "roi": -0.2168792780632066
     },
     {
       "signal": "class drop >=1",
@@ -294,12 +411,28 @@
       "roi": -0.2014839236599046
     },
     {
+      "signal": "stable 14d form +10pp above baseline",
+      "runners": 1034,
+      "wins": 137,
+      "strike_rate": 0.13249516441005801,
+      "ae": 0.9258561377285222,
+      "roi": -0.3179710897312445
+    },
+    {
       "signal": "0-3lb below last winning OR",
       "runners": 584,
       "wins": 66,
       "strike_rate": 0.11301369863013698,
       "ae": 0.9253083510585092,
       "roi": -0.26707164601000216
+    },
+    {
+      "signal": "stable 14d form +5pp above baseline",
+      "runners": 2353,
+      "wins": 318,
+      "strike_rate": 0.13514662133446664,
+      "ae": 0.9128369405421102,
+      "roi": -0.29639935901091874
     },
     {
       "signal": "9lb+ below last winning OR",
@@ -329,212 +462,212 @@
   "confidence_gates": [
     {
       "min_probability": 0.18,
-      "races": 1561,
-      "wins": 597,
-      "strike_rate": 0.38244714926329276,
-      "roi": -0.03423345534812547
+      "races": 1559,
+      "wins": 595,
+      "strike_rate": 0.3816549069916613,
+      "roi": -0.03926988911594415
     },
     {
       "min_probability": 0.2,
-      "races": 1500,
-      "wins": 582,
-      "strike_rate": 0.388,
-      "roi": -0.04208117142117135
+      "races": 1487,
+      "wins": 575,
+      "strike_rate": 0.386684599865501,
+      "roi": -0.055405799460944115
     },
     {
       "min_probability": 0.22,
-      "races": 1419,
-      "wins": 567,
-      "strike_rate": 0.39957716701902746,
-      "roi": -0.03195096814547126
+      "races": 1418,
+      "wins": 560,
+      "strike_rate": 0.39492242595204513,
+      "roi": -0.05374124856494394
     },
     {
       "min_probability": 0.25,
-      "races": 1257,
-      "wins": 528,
-      "strike_rate": 0.4200477326968974,
-      "roi": -0.030446903048335014
+      "races": 1235,
+      "wins": 523,
+      "strike_rate": 0.4234817813765182,
+      "roi": -0.029950140727468856
     },
     {
       "min_probability": 0.28,
-      "races": 1072,
-      "wins": 472,
-      "strike_rate": 0.44029850746268656,
-      "roi": -0.0514739649860918
+      "races": 1055,
+      "wins": 476,
+      "strike_rate": 0.45118483412322274,
+      "roi": -0.02356722634921688
     },
     {
       "min_probability": 0.3,
-      "races": 978,
-      "wins": 449,
-      "strike_rate": 0.4591002044989775,
-      "roi": -0.03536648650145586
+      "races": 957,
+      "wins": 450,
+      "strike_rate": 0.4702194357366771,
+      "roi": -0.012971184742344582
     },
     {
       "min_probability": 0.35,
-      "races": 769,
-      "wins": 378,
-      "strike_rate": 0.49154746423927176,
-      "roi": -0.037468691545414635
+      "races": 754,
+      "wins": 374,
+      "strike_rate": 0.4960212201591512,
+      "roi": -0.03423531007748522
     },
     {
       "min_probability": 0.4,
-      "races": 547,
-      "wins": 292,
-      "strike_rate": 0.5338208409506399,
-      "roi": -0.033729044670543634
+      "races": 539,
+      "wins": 291,
+      "strike_rate": 0.5398886827458256,
+      "roi": -0.0248435928120529
     },
     {
       "min_probability": 0.45,
-      "races": 319,
-      "wins": 198,
-      "strike_rate": 0.6206896551724138,
-      "roi": 0.01904930318723418
+      "races": 303,
+      "wins": 190,
+      "strike_rate": 0.6270627062706271,
+      "roi": 0.017914992964497754
     },
     {
       "min_probability": 0.5,
-      "races": 215,
-      "wins": 149,
-      "strike_rate": 0.6930232558139535,
-      "roi": 0.06271416696998099
+      "races": 212,
+      "wins": 146,
+      "strike_rate": 0.6886792452830188,
+      "roi": 0.05273718158152115
     },
     {
       "min_probability": 0.55,
-      "races": 158,
-      "wins": 113,
-      "strike_rate": 0.7151898734177216,
-      "roi": 0.053650649631662245
+      "races": 148,
+      "wins": 106,
+      "strike_rate": 0.7162162162162162,
+      "roi": 0.04689700314700314
     },
     {
       "min_probability": 0.6,
-      "races": 91,
-      "wins": 64,
-      "strike_rate": 0.7032967032967034,
-      "roi": -0.03123625458790297
+      "races": 88,
+      "wins": 66,
+      "strike_rate": 0.75,
+      "roi": 0.02959297646797636
     }
   ],
   "prime_gates": [
     {
       "gate": "P>=45%, market favourite",
-      "races": 319,
-      "wins": 198,
-      "strike_rate": 0.6206896551724138,
-      "roi": 0.01904930318723418
+      "races": 302,
+      "wins": 190,
+      "strike_rate": 0.6291390728476821,
+      "roi": 0.02128557241140025
     },
     {
       "gate": "P>=50%, market favourite",
-      "races": 215,
-      "wins": 149,
-      "strike_rate": 0.6930232558139535,
-      "roi": 0.06271416696998099
+      "races": 212,
+      "wins": 146,
+      "strike_rate": 0.6886792452830188,
+      "roi": 0.05273718158152115
     },
     {
       "gate": "P>=55%, market favourite",
-      "races": 158,
-      "wins": 113,
-      "strike_rate": 0.7151898734177216,
-      "roi": 0.053650649631662245
+      "races": 148,
+      "wins": 106,
+      "strike_rate": 0.7162162162162162,
+      "roi": 0.04689700314700314
     },
     {
       "gate": "P>=50%, >=2 aiming groups",
-      "races": 94,
-      "wins": 59,
-      "strike_rate": 0.6276595744680851,
-      "roi": -0.03678044768470314
+      "races": 91,
+      "wins": 58,
+      "strike_rate": 0.6373626373626373,
+      "roi": -0.025172477095554112
     },
     {
       "gate": "P>=50%, favourite, >=2 aiming groups",
-      "races": 94,
-      "wins": 59,
-      "strike_rate": 0.6276595744680851,
-      "roi": -0.03678044768470314
+      "races": 91,
+      "wins": 58,
+      "strike_rate": 0.6373626373626373,
+      "roi": -0.025172477095554112
     },
     {
       "gate": "P>=55%, >=2 aiming groups",
-      "races": 71,
-      "wins": 48,
-      "strike_rate": 0.676056338028169,
-      "roi": -0.006441719469888671
+      "races": 67,
+      "wins": 46,
+      "strike_rate": 0.6865671641791045,
+      "roi": 3.1891822934013944e-06
     },
     {
       "gate": "P>=50%, >=3 aiming groups",
-      "races": 28,
+      "races": 27,
       "wins": 20,
-      "strike_rate": 0.7142857142857143,
-      "roi": 0.14069779426922288
+      "strike_rate": 0.7407407407407407,
+      "roi": 0.18575169686280824
     }
   ],
   "accuracy_gates": [
     {
       "gate": "P>=50 favourite",
-      "races": 215,
-      "wins": 149,
-      "strike_rate": 0.6930232558139535,
-      "roi": 0.06271416696998099,
-      "avg_model_probability": 0.6059418670460003
+      "races": 212,
+      "wins": 146,
+      "strike_rate": 0.6886792452830188,
+      "roi": 0.05273718158152115,
+      "avg_model_probability": 0.5993761102655194
     },
     {
       "gate": "P>=55 favourite",
-      "races": 158,
-      "wins": 113,
-      "strike_rate": 0.7151898734177216,
-      "roi": 0.053650649631662245,
-      "avg_model_probability": 0.6342982526743557
+      "races": 148,
+      "wins": 106,
+      "strike_rate": 0.7162162162162162,
+      "roi": 0.04689700314700314,
+      "avg_model_probability": 0.6301410309734219
     },
     {
       "gate": "P>=60 favourite",
-      "races": 91,
-      "wins": 64,
-      "strike_rate": 0.7032967032967034,
-      "roi": -0.03123625458790297,
-      "avg_model_probability": 0.6798798116100937
+      "races": 88,
+      "wins": 66,
+      "strike_rate": 0.75,
+      "roi": 0.02959297646797636,
+      "avg_model_probability": 0.6707046493663587
     },
     {
       "gate": "P>=50 favourite + retained ability",
-      "races": 47,
-      "wins": 30,
-      "strike_rate": 0.6382978723404256,
-      "roi": 0.045849422445167355,
-      "avg_model_probability": 0.5972450214887053
+      "races": 44,
+      "wins": 29,
+      "strike_rate": 0.6590909090909091,
+      "roi": 0.0734245552427372,
+      "avg_model_probability": 0.5895217865640481
     },
     {
       "gate": "P>=55 favourite + retained ability",
-      "races": 30,
-      "wins": 20,
-      "strike_rate": 0.6666666666666666,
-      "roi": 0.006881266881266867,
-      "avg_model_probability": 0.6415132474454696
+      "races": 26,
+      "wins": 17,
+      "strike_rate": 0.6538461538461539,
+      "roi": -0.0189831535985382,
+      "avg_model_probability": 0.6324758618977864
     },
     {
       "gate": "P>=50 favourite + 2 aiming groups",
-      "races": 94,
-      "wins": 59,
-      "strike_rate": 0.6276595744680851,
-      "roi": -0.03678044768470314,
-      "avg_model_probability": 0.6150894809269887
+      "races": 91,
+      "wins": 58,
+      "strike_rate": 0.6373626373626373,
+      "roi": -0.025172477095554112,
+      "avg_model_probability": 0.608280773867334
     },
     {
       "gate": "P>=55 favourite + 2 aiming groups",
-      "races": 71,
-      "wins": 48,
-      "strike_rate": 0.676056338028169,
-      "roi": -0.006441719469888671,
-      "avg_model_probability": 0.6441604101125218
+      "races": 67,
+      "wins": 46,
+      "strike_rate": 0.6865671641791045,
+      "roi": 3.1891822934013944e-06,
+      "avg_model_probability": 0.6364907516065555
     },
     {
       "gate": "P>=50 favourite + course/connection evidence",
-      "races": 149,
+      "races": 147,
       "wins": 104,
-      "strike_rate": 0.697986577181208,
-      "roi": 0.06502727324874971,
-      "avg_model_probability": 0.6102115827580284
+      "strike_rate": 0.7074829931972789,
+      "roi": 0.0779301386444244,
+      "avg_model_probability": 0.6040339019468105
     },
     {
       "gate": "P>=50 favourite + target return",
-      "races": 90,
-      "wins": 61,
-      "strike_rate": 0.6777777777777778,
-      "roi": 0.027103038936372236,
-      "avg_model_probability": 0.6133942713618655
+      "races": 88,
+      "wins": 60,
+      "strike_rate": 0.6818181818181818,
+      "roi": 0.029612956487956508,
+      "avg_model_probability": 0.6084509656860562
     },
     {
       "gate": "P>=50 favourite + jockey upgrade",
@@ -542,65 +675,65 @@
       "wins": 15,
       "strike_rate": 0.6,
       "roi": -0.07992363192363186,
-      "avg_model_probability": 0.5959869932850509
+      "avg_model_probability": 0.5864699965440556
     },
     {
       "gate": "P>=50 favourite, not nursery/hurdle",
-      "races": 203,
-      "wins": 140,
-      "strike_rate": 0.6896551724137931,
-      "roi": 0.05845255729492182,
-      "avg_model_probability": 0.6057356433360943
+      "races": 199,
+      "wins": 136,
+      "strike_rate": 0.6834170854271356,
+      "roi": 0.043028169485455924,
+      "avg_model_probability": 0.5992389024865162
     },
     {
       "gate": "P>=55 favourite, not nursery/hurdle",
-      "races": 151,
-      "wins": 107,
-      "strike_rate": 0.7086092715231788,
-      "roi": 0.04553504993902339,
-      "avg_model_probability": 0.633053008319296
+      "races": 139,
+      "wins": 98,
+      "strike_rate": 0.7050359712230215,
+      "roi": 0.028703211257168106,
+      "avg_model_probability": 0.6299388400183971
     },
     {
       "gate": "P>=50 favourite, maiden/novice only",
-      "races": 102,
-      "wins": 74,
-      "strike_rate": 0.7254901960784313,
-      "roi": 0.08176434132316487,
-      "avg_model_probability": 0.619278280709554
+      "races": 101,
+      "wins": 72,
+      "strike_rate": 0.7128712871287128,
+      "roi": 0.058119136089433115,
+      "avg_model_probability": 0.6144556525875025
     },
     {
       "gate": "P>=50 favourite, handicap only",
-      "races": 34,
-      "wins": 22,
-      "strike_rate": 0.6470588235294118,
-      "roi": 0.1059019411960589,
-      "avg_model_probability": 0.5701371377149226
+      "races": 30,
+      "wins": 19,
+      "strike_rate": 0.6333333333333333,
+      "roi": 0.06194139194139202,
+      "avg_model_probability": 0.5648238858562041
     }
   ],
   "segments": [
     {
       "segment": "handicap",
       "races": 734,
-      "strike_rate": 0.3215258855585831,
-      "roi": 0.006397984395259668
+      "strike_rate": 0.3119891008174387,
+      "roi": -0.03278230624960862
     },
     {
       "segment": "nursery",
       "races": 74,
-      "strike_rate": 0.25675675675675674,
-      "roi": -0.26362953862953864
+      "strike_rate": 0.2702702702702703,
+      "roi": -0.19898989898989905
     },
     {
       "segment": "maiden",
       "races": 192,
-      "strike_rate": 0.4375,
-      "roi": -0.027389147311022228
+      "strike_rate": 0.4479166666666667,
+      "roi": 0.005032727688977741
     },
     {
       "segment": "novice",
       "races": 220,
-      "strike_rate": 0.5,
-      "roi": -0.004568676273221813
+      "strike_rate": 0.5181818181818182,
+      "roi": 0.052704050999505564
     },
     {
       "segment": "chase",
@@ -617,96 +750,96 @@
     {
       "segment": "other",
       "races": 307,
-      "strike_rate": 0.3811074918566775,
-      "roi": -0.11357852607038275
+      "strike_rate": 0.3778501628664495,
+      "roi": -0.1225361807935098
     }
   ],
   "calibration": [
     {
       "band": "(-0.001, 0.15]",
-      "n": 13,
-      "avg_model": 0.14024256894171513,
-      "win_rate": 0.15384615384615385,
-      "roi": -0.038461538461538464
+      "n": 9,
+      "avg_model": 0.13641632262039624,
+      "win_rate": 0.0,
+      "roi": -1.0
     },
     {
       "band": "(0.15, 0.2]",
-      "n": 110,
-      "avg_model": 0.18117339086916331,
-      "win_rate": 0.20909090909090908,
-      "roi": 0.0015151515151515583
+      "n": 122,
+      "avg_model": 0.18219135296736466,
+      "win_rate": 0.22950819672131148,
+      "roi": 0.10245901639344263
     },
     {
       "band": "(0.2, 0.25]",
-      "n": 245,
-      "avg_model": 0.2279226004063635,
-      "win_rate": 0.22040816326530613,
-      "roi": -0.10959183673469373
+      "n": 256,
+      "avg_model": 0.22901737588053417,
+      "win_rate": 0.203125,
+      "roi": -0.1929687499999999
     },
     {
       "band": "(0.25, 0.3]",
-      "n": 282,
-      "avg_model": 0.2727080488196538,
-      "win_rate": 0.28368794326241137,
-      "roi": -0.009515366430260061
+      "n": 284,
+      "avg_model": 0.2730553956360417,
+      "win_rate": 0.2711267605633803,
+      "roi": -0.049442488262910665
     },
     {
       "band": "(0.3, 0.4]",
-      "n": 432,
-      "avg_model": 0.3512644771349939,
-      "win_rate": 0.36574074074074076,
-      "roi": -0.032149621212121185
+      "n": 419,
+      "avg_model": 0.35179949773314095,
+      "win_rate": 0.3818615751789976,
+      "roi": 0.007702321544803559
     },
     {
       "band": "(0.4, 0.5]",
-      "n": 332,
-      "avg_model": 0.4374894333238866,
-      "win_rate": 0.4307228915662651,
-      "roi": -0.0961847389558233
+      "n": 327,
+      "avg_model": 0.43531371332061874,
+      "win_rate": 0.4434250764525994,
+      "roi": -0.07514060862684725
     },
     {
       "band": "(0.5, 1.0]",
-      "n": 215,
-      "avg_model": 0.6059418670460003,
-      "win_rate": 0.6930232558139535,
-      "roi": 0.06271416696998099
+      "n": 212,
+      "avg_model": 0.5993761102655194,
+      "win_rate": 0.6886792452830188,
+      "roi": 0.05273718158152115
     }
   ],
   "agreement": [
     {
       "segment": "fusion pick = market favourite",
-      "bets": 1513,
-      "wins": 572,
-      "strike_rate": 0.3780568407138136,
-      "roi": -0.05719107102781912
+      "bets": 1503,
+      "wins": 573,
+      "strike_rate": 0.3812375249500998,
+      "roi": -0.04931032854186548
     },
     {
       "segment": "fusion pick = market second choice",
-      "bets": 103,
-      "wins": 34,
-      "strike_rate": 0.3300970873786408,
-      "roi": 0.23373786407766994
+      "bets": 111,
+      "wins": 30,
+      "strike_rate": 0.2702702702702703,
+      "roi": -0.0069819819819819055
     },
     {
       "segment": "form-only pick = market favourite",
-      "bets": 758,
-      "wins": 319,
-      "strike_rate": 0.420844327176781,
-      "roi": -0.038829253420282456
+      "bets": 781,
+      "wins": 339,
+      "strike_rate": 0.43405889884763127,
+      "roi": -0.011843166081322444
     },
     {
       "segment": "form-only pick in market top2",
-      "bets": 1148,
-      "wins": 394,
-      "strike_rate": 0.343205574912892,
-      "roi": -0.11143226546972193
+      "bets": 1163,
+      "wins": 423,
+      "strike_rate": 0.36371453138435084,
+      "roi": -0.06272529037791286
     },
     {
       "segment": "form-only pick outside market top2",
-      "bets": 481,
-      "wins": 69,
-      "strike_rate": 0.14345114345114346,
-      "roi": -0.03153153153153145
+      "bets": 466,
+      "wins": 64,
+      "strike_rate": 0.13733905579399142,
+      "roi": -0.06587982832618011
     }
   ],
   "price_audit": {
