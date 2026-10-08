@@ -1,0 +1,50 @@
+name: Racing Intelligence Live Refresh
+
+on:
+  schedule:
+    - cron: '2-57/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: racing-intelligence-live-refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Check out Racing Intelligence
+        uses: actions/checkout@v4
+        with:
+          ref: racing-intelligence
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Refresh live odds and results
+        run: node scripts/update-racing-live.mjs
+        env:
+          RACING_API_USERNAME: ${{ secrets.RACING_API_USERNAME }}
+          RACING_API_PASSWORD: ${{ secrets.RACING_API_PASSWORD }}
+          RACING_DATA_API_URL: ${{ secrets.RACING_DATA_API_URL }}
+          RACING_DATA_API_TOKEN: ${{ secrets.RACING_DATA_API_TOKEN }}
+
+      - name: Commit changed race data
+        shell: bash
+        run: |
+          if git diff --quiet -- data/races.json; then
+            echo "No racing data changes."
+            exit 0
+          fi
+          git config user.name "racing-intelligence-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/races.json
+          git commit -m "Auto-refresh Racing Intelligence odds and results"
+          git push origin HEAD:racing-intelligence
