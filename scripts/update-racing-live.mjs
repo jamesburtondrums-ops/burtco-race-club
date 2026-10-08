@@ -151,9 +151,12 @@ for (const { selection } of selections) {
     const runner = runnersOf(resultRace).find(r => sameHorse(horseNameOf(r), selection.horse));
     const nextResult = resultForRunner(runner);
     if (nextResult) {
-      const before = JSON.stringify(selection.result || null);
-      selection.result = { ...nextResult, source: feedName };
-      if (JSON.stringify(selection.result) !== before) resultChanges++;
+      const before = JSON.stringify({position:selection.result?.position??null,status:selection.result?.status??null,sp:selection.result?.sp??null});
+      const after = JSON.stringify({position:nextResult.position??null,status:nextResult.status??null,sp:nextResult.sp??null});
+      if (before !== after) {
+        selection.result = { ...nextResult, source: feedName };
+        resultChanges++;
+      }
     }
   }
 }
