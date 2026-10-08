@@ -35,16 +35,19 @@
       "winStake": 10,
       "placeStake": 0,
       "selectionOdds": "10/11–11/10",
-      "settlementOdds": null,
+      "settlementOdds": "4/7",
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
       "result": {
         "position": 1,
-        "status": "User reported",
-        "source": "User-reported winner; SP/official status not yet independently verified",
-        "updatedAt": "2026-10-08T17:51:00+01:00"
-      }
+        "status": "Weighed in",
+        "sp": "4/7",
+        "source": "Racing Post full results",
+        "sourceUrl": "https://www.racingpost.com/results/3/ayr/2026-10-08/928508/",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 5
     },
     {
       "id": "2026-10-08|market rasen|14:31|port glen one|win",
@@ -102,16 +105,19 @@
       "winStake": 10,
       "placeStake": 0,
       "selectionOdds": "5/4–11/8",
-      "settlementOdds": null,
+      "settlementOdds": "10/11",
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
       "result": {
         "position": 2,
-        "status": "User reported",
-        "source": "User-reported second place; independent result confirmation pending",
-        "updatedAt": "2026-10-08T17:04:13.127Z"
-      }
+        "status": "Weighed in",
+        "sp": "10/11",
+        "source": "Sporting Life full results",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/market-rasen/942381/book-boxing-day-at-the-races-today-handicap-hurdle",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 5
     },
     {
       "id": "2026-10-08|bath|15:15|brilliant star|win",
@@ -237,16 +243,19 @@
       "winStake": 10,
       "placeStake": 0,
       "selectionOdds": "~11/10–5/4",
-      "settlementOdds": null,
+      "settlementOdds": "1/1",
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
       "result": {
         "position": 1,
-        "status": "User reported",
-        "source": "User-reported winner; SP/official status not yet independently verified",
-        "updatedAt": "2026-10-08T17:51:00+01:00"
-      }
+        "status": "Weighed in",
+        "sp": "1/1",
+        "source": "Sporting Life full results",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942157/waterford-greenway-beginners-chase",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 12
     },
     {
       "id": "2026-10-08|southwell|18:00|kaito|win",
@@ -258,11 +267,19 @@
       "winStake": 10,
       "placeStake": 0,
       "selectionOdds": "9/4",
-      "settlementOdds": null,
+      "settlementOdds": "6/5",
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "6/5",
+        "source": "Racing TV full results",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-08/southwell/1800",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 12
     },
     {
       "id": "2026-10-08|southwell|16:25|roxa love|win",
@@ -339,12 +356,19 @@
       "winStake": 5,
       "placeStake": 5,
       "selectionOdds": "12/1–14/1",
-      "settlementOdds": null,
+      "settlementOdds": "10/1",
       "ewFraction": 0.25,
       "placesPaid": 3,
       "terms": "14-runner handicap; attractive each-way shape",
-      "result": null,
-      "runnerCount": 14
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "10/1",
+        "source": "Racing TV full results",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-08/ayr/1638",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 13
     },
     {
       "id": "2026-10-08|tramore|15:55|ray gun|each-way",
@@ -449,10 +473,11 @@
       "terms": "13-runner beginners chase; check bookmaker place terms",
       "result": {
         "status": "NR",
-        "source": "User-reported non-runner; independent confirmation pending",
-        "updatedAt": "2026-10-08T17:04:37.370Z"
+        "source": "Sporting Life full results (independently verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942157/waterford-greenway-beginners-chase",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
       },
-      "runnerCount": 13
+      "runnerCount": 12
     },
     {
       "id": "2026-10-08|thurles|17:20|pampar lady|each-way",
@@ -464,11 +489,19 @@
       "winStake": 5,
       "placeStake": 5,
       "selectionOdds": "20/1 forecast",
-      "settlementOdds": null,
+      "settlementOdds": "33/1",
       "ewFraction": 0.25,
-      "placesPaid": null,
+      "placesPaid": 3,
       "terms": "Large-field handicap; take only if 20/1+ remains available",
-      "result": null
+      "result": {
+        "position": 11,
+        "status": "Weighed in",
+        "sp": "33/1",
+        "source": "Racing Post full results",
+        "sourceUrl": "https://www.racingpost.com/results/198/thurles/2026-10-08/930164/",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 13
     },
     {
       "id": "2026-10-08|bath|15:50|time to spare|each-way",
@@ -504,5 +537,13 @@
     "checkedAt": "2026-10-08T16:38:00+01:00",
     "verifiedSelections": 8,
     "source": "Sporting Life Full Results"
+  },
+  "lastManualResultSearch": {
+    "checkedAt": "2026-10-08T20:45:00+01:00",
+    "verifiedUpdates": 7,
+    "awaiting": [
+      "War Howl",
+      "Eagle Storm"
+    ]
   }
 }
