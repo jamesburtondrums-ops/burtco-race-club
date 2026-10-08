@@ -91,7 +91,7 @@ function systemV4(){
  <div class="section-head"><div><h3>Race-type rules</h3></div></div>
  <div class="source-grid">${Object.entries(s.accuracyMode.raceTypeRules).map(([k,v])=>`<div class="source-card"><h4>${k.toUpperCase()}</h4><p>${v}</p></div>`).join("")}</div>
  <div class="section-head"><div><h3>Evidence groups</h3><p>Independent evidence is more important than stacking correlated statistics.</p></div></div>
- <div class="panel check-list">${(s.contextModel?.factors||s.probabilityEngine.evidenceGroups).map(g=>`<div class="check-group"><div class="check-title"><b>${g.name}</b><strong>${g.role||g.weight||""}</strong></div><ul>${(g.checks||[]).map(x=>`<li>${x}</li>`).join("")}</ul>${g.evidence||g.research?`<p class="meta"><strong>Backtest:</strong> ${g.evidence||g.research}</p>`:""}</div>`).join("")}</div>
+ <div class="panel check-list">${(s.contextModel?.factors||[]).map(g=>`<div class="check-group"><div class="check-title"><b>${g}</b><strong>V4.2 INPUT</strong></div></div>`).join("")}</div>
  <div class="section-head"><div><h3>Hard PRIME blocks</h3></div></div><div class="panel"><ul class="protocol-list">${s.hardBlocks.map(x=>`<li>${x}</li>`).join("")}</ul></div>
  <div class="section-head"><div><h3>Price / ROI policy</h3></div></div><div class="panel"><div class="alert"><strong>${s.pricePolicy.status}</strong><br><span class="meta">${s.pricePolicy.reason} ${s.pricePolicy.currentUse}</span></div></div>`;
 }
@@ -102,15 +102,15 @@ function grading(){
  <div class="section-head"><div><h3>Win-confidence scoring</h3><p>Stars are calculated, not manually assigned.</p></div></div><div class="panel"><div class="star-legend"><b>★★★★★</b><span>76–81/100 (PRIME begins at 82 with extra safeguards)</span><b>★★★★☆</b><span>68–75/100</span><b>★★★☆☆</b><span>58–67/100</span><b>★★☆☆☆</b><span>48–57/100</span><b>★☆☆☆☆</b><span>0–47/100</span></div></div>`;
 }
 function checks(){
- const f=state.data.scoringFrameworkV2;
- const model=(title,rows)=>`<div class="section-head"><div><h3>${title}</h3><p>Maximum 100 points before risk deductions.</p></div></div><div class="panel check-list">${rows.map(r=>`<div class="check-group"><div class="check-title"><b>${r.label}</b><strong>${r.max} pts</strong></div><ul>${r.checks.map(c=>`<li>${c}</li>`).join("")}</ul></div>`).join("")}</div>`;
- return `<section class="hero"><div class="hero-main"><div class="eyebrow">SCORING FRAMEWORK V2.0</div><h2>No confident selection without the full evidence chain.</h2><p>Established runners and newcomers are scored differently. Missing critical evidence reduces confidence and can block PRIME completely.</p></div><div class="status-panel"><div class="status-row"><span>Established model</span><strong>100 pts</strong></div><div class="status-row"><span>Newcomer model</span><strong>100 pts</strong></div><div class="status-row"><span>Risk deductions</span><strong>Up to -25</strong></div><div class="status-row"><span>PRIME coverage</span><strong>≥90%</strong></div></div></section>
- ${model("Established runners",f.establishedModel)}
- ${model("Newcomers / lightly raced horses",f.newcomerModel)}
- <div class="section-head"><div><h3>Critical checks</h3><p>PRIME is blocked until these are complete.</p></div></div>
- <div class="source-grid"><div class="source-card"><h4>Established</h4><ul>${f.criticalChecksEstablished.map(x=>`<li>${x}</li>`).join("")}</ul></div><div class="source-card"><h4>Newcomer / lightly raced</h4><ul>${f.criticalChecksNewcomer.map(x=>`<li>${x}</li>`).join("")}</ul></div></div>
- <div class="section-head"><div><h3>Daily research protocol</h3></div></div><div class="panel"><ol class="protocol-list">${state.data.dailyResearchProtocol.map(x=>`<li>${x}</li>`).join("")}</ol></div>
- <div class="section-head"><div><h3>Decision gates</h3></div></div><div class="panel decision-gates">${Object.entries(f.decisionGates).map(([k,v])=>`<div><b>${k.toUpperCase()}</b><span>${v}</span></div>`).join("")}</div>`;
+ const s=state.data.systemV4, rules=s.contextModel?.liveRules||{};
+ return `<section class="hero"><div class="hero-main"><div class="eyebrow">V4.2 FULL RACE CHECK</div><h2>Every selection is built from race context, not a single ratings number.</h2><p>Class, grade and prize value are checked separately, alongside trainer placement, partnership, pace, conditions, handicap position and the live market.</p></div><div class="status-panel"><div class="status-row"><span>Historical races</span><strong>${s.backtest.races.toLocaleString()}</strong></div><div class="status-row"><span>Context factors</span><strong>${s.contextModel.factors.length}</strong></div><div class="status-row"><span>55% benchmark</span><strong>${s.backtest.prime55.strikeRate}%</strong></div></div></section>
+ <div class="section-head"><div><h3>Factors checked on every relevant runner</h3></div></div>
+ <div class="panel check-list">${s.contextModel.factors.map((x,i)=>`<div class="check-group"><div class="check-title"><b>${x}</b><strong>${String(i+1).padStart(2,"0")}</strong></div></div>`).join("")}</div>
+ <div class="section-head"><div><h3>How the context is interpreted</h3></div></div>
+ <div class="source-grid">${Object.entries(rules).map(([k,v])=>`<div class="source-card"><h4>${k.replace(/([A-Z])/g," $1").toUpperCase()}</h4><p>${v}</p></div>`).join("")}</div>
+ <div class="section-head"><div><h3>Best validated interactions</h3><p>These are supporting context, not automatic bets.</p></div></div>
+ <div class="table-wrap"><table><thead><tr><th>Factor</th><th>Condition</th><th>Sample</th><th>Winners</th><th>Strike</th></tr></thead><tbody>${(s.contextModel.latestInteractionAudit||[]).map(x=>`<tr><td class="horse">${x.factor}</td><td>${x.condition}</td><td>${x.races}</td><td>${x.wins}</td><td><strong>${x.strikeRate}%</strong></td></tr>`).join("")}</tbody></table></div>
+ <div class="section-head"><div><h3>Hard blocks</h3></div></div><div class="panel"><ul class="protocol-list">${s.hardBlocks.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;
 }
 function backtest(){
  const b=state.data.pilotBacktest,m=b.metrics,v3=state.data.confidenceMethodV3;
