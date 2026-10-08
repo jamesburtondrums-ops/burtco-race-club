@@ -28,6 +28,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Verify profit tracker and settlement rules
+        run: node tests/racing-tracker.test.mjs
+
       - name: Refresh live odds and results
         run: node scripts/update-racing-live.mjs
         env:
