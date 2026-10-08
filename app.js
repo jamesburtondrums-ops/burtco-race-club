@@ -221,11 +221,11 @@ function liveStatus(){
  return '<div class="live-connection '+(connected?'live-connected':'live-disconnected')+'" role="status">'+note+'</div>';
 }
 
-function nav(){return [["today","Today"],["midshots","Mid Shots 10/1–18/1"],["longshots","Longshots 20/1+"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
+function nav(){return [["today","Today"],["midshots","Mid Shots 10/1–18/1"],["longshots","Longshots 20/1+"],["history","Results history"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
 function filters(){const x=["ALL","PRIME","★★★★★","★★★★☆","★★★☆☆","WATCH"];return '<div class="meeting-tabs">'+x.map(f=>'<button data-filter="'+f+'" class="'+(state.filter===f?'active':'')+'">'+f+'</button>').join("")+'</div>'}
 function resultBadge(x){const r=resultInfo(x);return r?'<span class="result-badge '+r.cls+'">'+r.text+'</span>':''}
 function summaryBadges(x,type){
- if(type==="main"){const p=probabilityOf(x);return '<span class="selection-tier '+(primeOf(x)?'prime':'')+'">'+confidenceLabel(x)+'</span>'+(p!==null?'<span class="probability">'+Number(p).toFixed(1)+'%</span>':'')}
+ if(type==="main"){const p=probabilityOf(x);return (x.restoredFromPreviousVersion?'<span class="selection-tier restored">EARLIER PICK</span>':'')+'<span class="selection-tier '+(primeOf(x)?'prime':'')+'">'+confidenceLabel(x)+'</span>'+(p!==null?'<span class="probability">'+Number(p).toFixed(1)+'%</span>':'')}
  if(type==="mid")return '<span class="selection-tier mid">'+(x.view||"MID-SHOT")+'</span>';
  return '<span class="selection-tier long">'+(x.placeView||"E/W")+'</span>';
 }
@@ -273,10 +273,36 @@ function today(){
 }
 function midshots(){const d=state.data,ms=d.midshotsToday||[];return '<section class="page-intro mid-intro"><div><div class="eyebrow">10/1–18/1 WIN + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> candidates</span><span><b>10/1–18/1</b> price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No mid-shot selections currently qualify.")}
 function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section class="page-intro long-intro"><div><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ls.length+'</b> candidates</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No longshots currently qualify.")}
+function history(){
+ const entries=[...(state.ledger?.entries||[])].sort((a,b)=>String(b.date||'')===String(a.date||'')?
+  timeValue(a.time)-timeValue(b.time):String(b.date||'').localeCompare(String(a.date||'')));
+ const outcomes=entries.filter(e=>e.result);
+ const earlier=entries.filter(e=>e.restoredFromPreviousVersion).length;
+ const settled=entries.filter(e=>!['open','unpriced'].includes(settlement(e).status)).length;
+ const intro='<section class="page-intro history-intro"><div><div class="eyebrow">PERSISTENT PAPER BET HISTORY</div><h2>Results history</h2><p>Previous selections and results stay here when the daily racecard changes. Tap any horse to review its recorded stake, odds and payout.</p></div><div class="quick-stats"><span><b>'+entries.length+'</b> bets</span><span><b>'+outcomes.length+'</b> results</span><span><b>'+earlier+'</b> recovered</span><span><b>'+settled+'</b> settled</span></div></section>';
+ const rows=entries.map(e=>{
+  const result=e.result||null,position=positionOf(e),outcome=settlement(e),stake=Number(e.winStake||0)+Number(e.placeStake||0);
+  const done=!['open','unpriced'].includes(outcome.status),pl=outcome.returnAmount-stake;
+  const label=position?ordinal(position)+(String(result?.status||'').includes('User reported')?' · reported':''):result?.status?String(result.status):'Pending';
+  const extra=e.restoredFromPreviousVersion?'<span class="selection-tier restored">RECOVERED</span>':'';
+  return '<details class="history-record"><summary><span class="history-time">'+escapeHtml(e.date||'')+' <b>'+escapeHtml(e.time||'')+'</b></span>'+
+   '<span class="history-horse"><strong>'+escapeHtml(e.horse)+'</strong><small>'+escapeHtml(e.course||'')+' · '+(e.betType==='win'?'£10 win':'£5 each way')+'</small></span>'+
+   '<span class="history-position '+(position===1?'history-won':result?'history-finished':'history-pending')+'">'+escapeHtml(label)+'</span>'+
+   '<span class="history-pl '+(done?(pl>=0?'tracker-positive':'tracker-negative'):'')+'">'+(done?signMoney(pl):'Pending')+'</span><span class="history-arrow">⌄</span></summary>'+
+   '<div class="history-details">'+extra+'<div>Recorded price <b>'+escapeHtml(e.selectionOdds||'—')+'</b></div>'+
+   '<div>Starting price <b>'+escapeHtml(e.settlementOdds||result?.sp||'Not confirmed')+'</b></div>'+
+   '<div>Stake <b>'+money(stake)+'</b></div>'+
+   '<div>Return <b>'+(done?money(outcome.returnAmount):'Pending confirmation')+'</b></div>'+
+   (result?.source?'<p>Result source: '+escapeHtml(result.source)+'</p>':'')+
+   (result?.sourceUrl?'<a href="'+escapeHtml(result.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Verify published result ↗</a>':'')+'</div></details>';
+ }).join('');
+ return intro+'<div class="history-list">'+(rows||'<div class="panel">No recorded bets yet.</div>')+'</div>';
+}
+
 function sources(){return '<div class="section-head"><div><h3>Sources</h3><p>Current research and cross-check sources.</p></div></div><div class="source-grid">'+(state.data.sources||[]).map(s=>'<div class="source-card"><h4>'+s.name+'</h4><p><strong>'+s.status+'</strong><br>'+s.role+'</p></div>').join("")+'</div>'}
 function rememberOpen(){state.openKeys=new Set([...document.querySelectorAll('.selection-row[open]')].map(x=>x.dataset.key))}
 function restoreOpen(){(state.openKeys||new Set()).forEach(k=>{const el=[...document.querySelectorAll('.selection-row')].find(x=>x.dataset.key===k);if(el)el.open=true})}
-function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+liveStatus()+searchPanel()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
+function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():state.view==="history"?history():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+liveStatus()+searchPanel()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
 function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()});document.querySelector("[data-refresh-results]")?.addEventListener("click",refreshResults)}
 function knownResultSignature(){
  if(!state.data||!state.ledger)return '';
@@ -311,13 +337,39 @@ async function refreshResults(){
   render();
  }
 }
+function preservePublishedHistory(incoming,previous){
+ if(!previous||incoming?.snapshotDate!==previous?.snapshotDate)return incoming;
+ const key=x=>[x.horse,x.course,x.time].join('|').toLowerCase();
+ for(const group of ['todaySelections','midshotsToday','longshotsToday']){
+  const next=incoming[group]||[],old=previous[group]||[],known=new Map(next.map(x=>[key(x),x]));
+  for(const prior of old){
+   const match=known.get(key(prior));
+   if(!match){next.push(prior);known.set(key(prior),prior)}
+   else if(prior.result&&!match.result)match.result=prior.result;
+  }
+  incoming[group]=next;
+ }
+ return incoming;
+}
+function preserveLedgerHistory(incoming,previous){
+ if(!previous)return incoming;
+ incoming.entries=incoming.entries||[];
+ const byId=new Map(incoming.entries.map(e=>[e.id,e]));
+ for(const old of previous.entries||[]){
+  const match=byId.get(old.id);
+  if(!match){incoming.entries.push(old);byId.set(old.id,old)}
+  else if(old.result&&!match.result)match.result=old.result;
+ }
+ return incoming;
+}
+
 async function load(initial=false){
  try{
   const [r,l]=await Promise.all([fetch("./data/races.json?"+Date.now(),{cache:"no-store"}),fetch("./data/bet-ledger.json?"+Date.now(),{cache:"no-store"})]);
   if(!r.ok||!l.ok)throw new Error("Unable to load betting records");
   const [raceText,ledgerText]=await Promise.all([r.text(),l.text()]);
   const serial=raceText+ledgerText;
-  if(initial||serial!==state.serial){state.serial=serial;state.data=JSON.parse(raceText);state.ledger=JSON.parse(ledgerText);applyLiveResults();applyWebConfirmations();render()}
+  if(initial||serial!==state.serial){state.serial=serial;state.data=preservePublishedHistory(JSON.parse(raceText),state.data);state.ledger=preserveLedgerHistory(JSON.parse(ledgerText),state.ledger);applyLiveResults();applyWebConfirmations();render()}
   return true;
  }catch(e){
   if(initial)document.querySelector("#app").innerHTML='<main class="main"><div class="panel">Unable to load racing data or tracker.</div></main>';
