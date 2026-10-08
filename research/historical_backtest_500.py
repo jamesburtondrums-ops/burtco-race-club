@@ -296,9 +296,11 @@ def finalize_race(rows, collected, start_collect, max_races):
     if not day: return False
     sps=[parse_sp(r.get("sp") or r.get("odds")) for r in rows]
     inv=np.array([1/x if np.isfinite(x) and x>1 else np.nan for x in sps],dtype=float)
-    if np.isfinite(inv).sum()>=2:
-        denom=np.nansum(inv); probs=inv/denom
-        ranks=np.argsort(np.argsort(np.where(np.isfinite(sps),sps,9999)))+1
+    denom=np.nansum(inv) if np.isfinite(inv).sum() else np.nan
+    market_valid=bool(np.isfinite(inv).sum()==len(rows) and np.isfinite(denom) and 1.01<=denom<=1.40)
+    if market_valid:
+        probs=inv/denom
+        ranks=np.argsort(np.argsort(sps))+1
     else:
         probs=np.full(len(rows),np.nan); ranks=np.full(len(rows),np.nan)
     field=len(rows)
@@ -309,7 +311,7 @@ def finalize_race(rows, collected, start_collect, max_races):
             pos=pint(r.get("pos") or r.get("position"))
             rr.append({"race_id":race_key(r),"date":day.isoformat(),"course":r.get("course",""),"race_name":r.get("race_name") or r.get("title") or "",
                        "race_type":race_type(r),"horse":r.get("horse") or r.get("horsename") or "",
-                       "sp":sps[i],"won":int(pos==1),**f})
+                       "sp":sps[i],"won":int(pos==1),"market_valid":int(market_valid),"market_overround":float(denom) if np.isfinite(denom) else np.nan,**f})
         if sum(x["won"] for x in rr)==1 and len(rr)>=3:
             collected.append(rr)
     for r in rows: update_states(r,day)
@@ -369,17 +371,19 @@ cut=int(len(ids)*0.72)
 train_ids=set(ids[:cut]); test_ids=set(ids[cut:])
 train=df[df.race_id.isin(train_ids)].copy(); test=df[df.race_id.isin(test_ids)].copy()
 
-def fit_model(cols):
-    X=train[cols].replace([np.inf,-np.inf],np.nan)
-    y=train.won
-    w=1/train.field_size.clip(lower=1)
+def fit_model(cols, frame):
+    X=frame[cols].replace([np.inf,-np.inf],np.nan)
+    y=frame.won
+    w=1/frame.field_size.clip(lower=1)
     model=HistGradientBoostingClassifier(max_iter=180,learning_rate=.06,max_leaf_nodes=15,l2_regularization=1.2,
                                           min_samples_leaf=35,random_state=42)
     model.fit(X,y,sample_weight=w)
     return model
 
-form_model=fit_model(features)
-fusion_model=fit_model(market_features)
+train_market=train[train.market_valid==1].copy()
+test_market=test[test.market_valid==1].copy()
+form_model=fit_model(features,train)
+fusion_model=fit_model(market_features,train_market)
 
 def race_eval(model, cols, frame, value_threshold=None):
     f=frame.copy()
@@ -388,18 +392,18 @@ def race_eval(model, cols, frame, value_threshold=None):
     f["p_model"]=f.groupby("race_id")["p_raw"].transform(lambda s:s/s.sum() if s.sum()>0 else np.repeat(1/len(s),len(s)))
     picks=f.loc[f.groupby("race_id")["p_model"].idxmax()].copy()
     acc=picks.won.mean()
-    valid=picks[np.isfinite(picks.sp)]
+    valid=picks[(picks.market_valid==1)&np.isfinite(picks.sp)]
     roi=((valid.won*valid.sp).sum()-len(valid))/len(valid) if len(valid) else np.nan
     return f,picks,acc,roi
 
 form_all,form_picks,form_acc,form_roi=race_eval(form_model,features,test)
-fusion_all,fusion_picks,fusion_acc,fusion_roi=race_eval(fusion_model,market_features,test)
-fav=test[np.isfinite(test.sp)].loc[test[np.isfinite(test.sp)].groupby("race_id")["sp"].idxmin()]
+fusion_all,fusion_picks,fusion_acc,fusion_roi=race_eval(fusion_model,market_features,test_market)
+fav=test_market[np.isfinite(test_market.sp)].loc[test_market[np.isfinite(test_market.sp)].groupby("race_id")["sp"].idxmin()]
 fav_acc=fav.won.mean(); fav_roi=((fav.won*fav.sp).sum()-len(fav))/len(fav)
 
 # Tune value threshold on training with form-only model versus market fair probability
-tr_raw=form_model.predict_proba(train[features].replace([np.inf,-np.inf],np.nan))[:,1]
-train2=train.copy(); train2["p_raw"]=tr_raw
+tr_raw=form_model.predict_proba(train_market[features].replace([np.inf,-np.inf],np.nan))[:,1]
+train2=train_market.copy(); train2["p_raw"]=tr_raw
 train2["p_model"]=train2.groupby("race_id")["p_raw"].transform(lambda s:s/s.sum() if s.sum()>0 else np.repeat(1/len(s),len(s)))
 best_t=None; best_score=-999
 for t in [1.05,1.10,1.15,1.20,1.25,1.30,1.40,1.50]:
@@ -410,7 +414,7 @@ for t in [1.05,1.10,1.15,1.20,1.25,1.30,1.40,1.50]:
     if score>best_score: best_score=score; best_t=t
 if best_t is None: best_t=1.20
 
-value=test.copy()
+value=test_market.copy()
 raw=form_model.predict_proba(value[features].replace([np.inf,-np.inf],np.nan))[:,1]
 value["p_raw"]=raw
 value["p_model"]=value.groupby("race_id")["p_raw"].transform(lambda s:s/s.sum() if s.sum()>0 else np.repeat(1/len(s),len(s)))
@@ -437,25 +441,26 @@ def signal_stats(frame, name, mask):
             "ae":float(actual/exp) if exp>0 else None,"roi":float(roi) if np.isfinite(roi) else None}
 
 signals=[]
+signal_frame=test_market
 tests={
- "2lb+ below last winning OR": test.lbs_below_last_win_or>=2,
- "5lb+ below last winning OR": test.lbs_below_last_win_or>=5,
- "return to prior winning conditions": test.return_to_win_conditions>=1,
- "same course / same time-of-year prior win": test.same_course_month_win>=1,
- "class drop >=1": test.class_drop>=1,
- "trainer 14d strike rate >=15%": test.trainer14>=.15,
- "trainer course strike rate >=15%": test.trainer_course_sr>=.15,
- "trainer race-type strike rate >=15%": test.trainer_type_sr>=.15,
- "positive jockey upgrade": test.jockey_upgrade>=.05,
- "first/second handicap start": (test.handicap_start_no>0)&(test.handicap_start_no<=2),
- "targeting combo (3+ placement signals)": test.targeting_combo>=1,
- "previous RPR 5lb+ above current OR": test.prev_rpr_minus_or>=5,
- "best recent TS 5lb+ above OR": test.best_ts3_minus_or>=5,
- "course win rate >0": test.course_win_rate>0,
- "distance win rate >0": test.dist_win_rate>0,
+ "2lb+ below last winning OR": signal_frame.lbs_below_last_win_or>=2,
+ "5lb+ below last winning OR": signal_frame.lbs_below_last_win_or>=5,
+ "return to prior winning conditions": signal_frame.return_to_win_conditions>=1,
+ "same course / same time-of-year prior win": signal_frame.same_course_month_win>=1,
+ "class drop >=1": signal_frame.class_drop>=1,
+ "trainer 14d strike rate >=15%": signal_frame.trainer14>=.15,
+ "trainer course strike rate >=15%": signal_frame.trainer_course_sr>=.15,
+ "trainer race-type strike rate >=15%": signal_frame.trainer_type_sr>=.15,
+ "positive jockey upgrade": signal_frame.jockey_upgrade>=.05,
+ "first/second handicap start": (signal_frame.handicap_start_no>0)&(signal_frame.handicap_start_no<=2),
+ "targeting combo (3+ placement signals)": signal_frame.targeting_combo>=1,
+ "previous RPR 5lb+ above current OR": signal_frame.prev_rpr_minus_or>=5,
+ "best recent TS 5lb+ above OR": signal_frame.best_ts3_minus_or>=5,
+ "course win rate >0": signal_frame.course_win_rate>0,
+ "distance win rate >0": signal_frame.dist_win_rate>0,
 }
 for n,m in tests.items():
-    x=signal_stats(test,n,m)
+    x=signal_stats(signal_frame,n,m)
     if x: signals.append(x)
 signals.sort(key=lambda x:(x["ae"] if x["ae"] is not None else -9),reverse=True)
 
@@ -480,14 +485,15 @@ for seg in ["handicap","nursery","maiden","novice","chase","hurdle","other"]:
 
 # model/market agreement diagnostics on the same unseen races
 agreement=[]
-for label, mask in {
-    "fusion pick = market favourite": fusion_picks.market_rank==1,
-    "fusion pick = market second choice": fusion_picks.market_rank==2,
-    "form-only pick = market favourite": form_picks.market_rank==1,
-    "form-only pick in market top2": form_picks.market_rank<=2,
-    "form-only pick outside market top2": form_picks.market_rank>2,
-}.items():
-    g=(fusion_picks if label.startswith("fusion") else form_picks)[mask]
+form_picks_valid=form_picks[form_picks.market_valid==1].copy()
+for label, source, mask in [
+    ("fusion pick = market favourite", fusion_picks, fusion_picks.market_rank==1),
+    ("fusion pick = market second choice", fusion_picks, fusion_picks.market_rank==2),
+    ("form-only pick = market favourite", form_picks_valid, form_picks_valid.market_rank==1),
+    ("form-only pick in market top2", form_picks_valid, form_picks_valid.market_rank<=2),
+    ("form-only pick outside market top2", form_picks_valid, form_picks_valid.market_rank>2),
+]:
+    g=source[mask]
     if len(g):
         valid=g[np.isfinite(g.sp)]
         agreement.append({"segment":label,"bets":len(g),"wins":int(g.won.sum()),"strike_rate":float(g.won.mean()),
@@ -499,7 +505,8 @@ for rid,g in test.groupby("race_id"):
     inv=(1/g.sp.replace([np.inf,-np.inf],np.nan)).dropna()
     if len(inv)>=3: ov.append(float(inv.sum()))
 price_audit={
-    "races_with_prices":len(ov),
+    "races_with_any_prices":len(ov),
+    "valid_complete_market_races":int(test_market.race_id.nunique()),
     "mean_overround":float(np.mean(ov)) if ov else None,
     "median_overround":float(np.median(ov)) if ov else None,
     "underround_pct":float(np.mean(np.array(ov)<1)) if ov else None,
@@ -513,8 +520,8 @@ for month,g in fav2.groupby("month"):
                         "roi":float(((g.won*g.sp).sum()-len(g))/len(g))})
 
 # approximate probability metrics over all runners after normalization
-y=test.won.to_numpy()
-p=fusion_all.set_index(test.index).loc[test.index,"p_model"].clip(1e-6,1-1e-6).to_numpy()
+y=test_market.won.to_numpy()
+p=fusion_all.set_index(test_market.index).loc[test_market.index,"p_model"].clip(1e-6,1-1e-6).to_numpy()
 brier=float(np.mean((p-y)**2))
 ll=float(-np.mean(y*np.log(p)+(1-y)*np.log(1-p)))
 
@@ -525,6 +532,7 @@ summary={
                "sample_first":races[0][0]["date"] if races else None,"sample_last":races[-1][0]["date"] if races else None},
  "train_races":len(train_ids),
  "test_races":len(test_ids),
+ "valid_market_test_races":int(test_market.race_id.nunique()),
  "runners_total":len(df),
  "features":features,
  "test":{
