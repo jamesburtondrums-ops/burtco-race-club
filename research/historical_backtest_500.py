@@ -310,11 +310,22 @@ reader=norm_fields(csv.DictReader(fh))
 print("columns", reader.fieldnames)
 provenance["columns"]=reader.fieldnames
 
-COLLECT_FROM = datetime(2023,1,1).date()
-MAX_RACES = 3200
+COLLECT_FROM = datetime(2022,1,1).date()
+MAX_RACES = 10000
 races=[]
 current_key=None; current=[]
+last_seen_date=None
+date_order_violations=0
+first_seen_date=None
+last_dataset_date=None
 for idx,r in enumerate(reader,1):
+    rd=parse_date(r.get("date"))
+    if rd:
+        if first_seen_date is None: first_seen_date=rd
+        if last_seen_date is not None and rd < last_seen_date:
+            date_order_violations += 1
+        last_seen_date=rd
+        last_dataset_date=rd
     if (r.get("date") or "").lower()=="date": continue
     k=race_key(r)
     if current_key is None: current_key=k
@@ -326,7 +337,9 @@ if current and len(races)<MAX_RACES: finalize_race(current,races,COLLECT_FROM,MA
 fh.close()
 if len(races)<500:
     raise RuntimeError(f"Only {len(races)} eligible races collected; need >=500")
-print("collected races",len(races))
+if date_order_violations:
+    raise RuntimeError(f"Source is not chronological: {date_order_violations} date-order violations. Refusing leakage-prone backtest.")
+print("collected races",len(races),"dataset dates",first_seen_date,last_dataset_date)
 
 flat=[x for race in races for x in race]
 df=pd.DataFrame(flat)
@@ -463,6 +476,8 @@ ll=float(-np.mean(y*np.log(p)+(1-y)*np.log(1-p)))
 summary={
  "provenance":provenance,
  "races_total":len(races),
+ "date_audit":{"first_seen":str(first_seen_date),"last_seen":str(last_dataset_date),"order_violations":date_order_violations,
+               "sample_first":races[0][0]["date"] if races else None,"sample_last":races[-1][0]["date"] if races else None},
  "train_races":len(train_ids),
  "test_races":len(test_ids),
  "runners_total":len(df),
