@@ -1,4 +1,4 @@
-const state={data:null,ledger:null,live:null,liveSerial:"",view:"today",filter:"ALL",serial:""};
+const state={data:null,ledger:null,live:null,liveSerial:"",view:"today",filter:"ALL",serial:"",refreshing:false,refreshMessage:"",refreshCheckedAt:null};
 const val=v=>v===undefined||v===null||v===""?"—":v;
 const contextOf=x=>x.v42||x.v41||null;
 const probabilityOf=x=>contextOf(x)?.winProbability??null;
@@ -133,6 +133,8 @@ function tracker(){
  const rate=v=>v===null?'—':v.toFixed(1)+'%';
  return '<section class="tracker-panel" aria-label="Live paper betting profit and strike rate">'+
  '<div class="tracker-heading"><div><strong>Profit & strike-rate tracker</strong><span class="tracker-kicker">£1,000 starting bank · £10 win or £5 each-way · '+entries.length+' selections recorded</span></div><span class="tracker-live-label">'+(state.live?.connected?'Live result checks active':'Web-verified results · automatic updates not active')+'</span></div>'+
+ '<div class="tracker-toolbar"><button type="button" data-refresh-results class="refresh-results-btn" '+(state.refreshing?'disabled aria-busy="true"':'')+'>'+(state.refreshing?'Checking results…':'↻ Refresh race results')+'</button><a class="tracker-source-link" href="https://www.sportinglife.com/racing/fast-results" target="_blank" rel="noopener noreferrer">Sporting Life fast results ↗</a></div>'+
+ '<p class="tracker-refresh-message" aria-live="polite" role="status">'+(state.refreshMessage||'Refresh checks for newly published results; the public source link opens separately.')+'</p>'+
  '<div class="tracker-stats">'+
  '<div><span>Available bank</span><strong>'+money(bank)+'</strong><small>After all stakes and credited returns</small></div>'+
  '<div><span>Settled profit / loss</span><strong class="'+(stats.profit>=0?'tracker-positive':'tracker-negative')+'">'+signMoney(stats.profit)+'</strong><small>'+stats.settled+' settled · '+(roi===null?'—':rate(roi))+' return on settled stakes</small></div>'+
@@ -208,7 +210,37 @@ function sources(){return '<div class="section-head"><div><h3>Sources</h3><p>Cur
 function rememberOpen(){state.openKeys=new Set([...document.querySelectorAll('.selection-row[open]')].map(x=>x.dataset.key))}
 function restoreOpen(){(state.openKeys||new Set()).forEach(k=>{const el=[...document.querySelectorAll('.selection-row')].find(x=>x.dataset.key===k);if(el)el.open=true})}
 function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+liveStatus()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
-function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()})}
+function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()});document.querySelector("[data-refresh-results]")?.addEventListener("click",refreshResults)}
+function knownResultSignature(){
+ if(!state.data||!state.ledger)return '';
+ const picks=['todaySelections','midshotsToday','longshotsToday'].flatMap(group=>(state.data[group]||[]).map(x=>[group,x.horse,x.course,x.time,x.result?.position??'',x.result?.status??'',x.result?.sp??'',x.runnerCount??'']));
+ const ledgerResults=(state.ledger.entries||[]).map(e=>[e.id,e.result?.position??'',e.result?.status??'',e.result?.sp??'',e.settlementOdds??'',e.runnerCount??'']);
+ return JSON.stringify([picks,ledgerResults]);
+}
+function checkedTime(){
+ return new Date().toLocaleTimeString('en-GB',{timeZone:'Europe/London',hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}
+async function refreshResults(){
+ if(state.refreshing)return;
+ state.refreshing=true;
+ state.refreshMessage='Checking published selections and results…';
+ const before=knownResultSignature();
+ render();
+ let fileOk=false,liveOk=false;
+ try{
+  fileOk=await load(false);
+  liveOk=await loadLive();
+ }finally{
+  const newResults=knownResultSignature()!==before;
+  state.refreshCheckedAt=new Date().toISOString();
+  state.refreshing=false;
+  if(newResults)state.refreshMessage='Updated at '+checkedTime()+': results or settlement details changed. Bank and strike rates recalculated.';
+  else if(!fileOk)state.refreshMessage='Unable to reload published results. Please check your connection and try again.';
+  else if(state.live?.connected && liveOk)state.refreshMessage='Checked at '+checkedTime()+': no new confirmed results available.';
+  else state.refreshMessage='Checked at '+checkedTime()+': no newer published results. Live feed is not connected; check Sporting Life for the latest results.';
+  render();
+ }
+}
 async function load(initial=false){
  try{
   const [r,l]=await Promise.all([fetch("./data/races.json?"+Date.now(),{cache:"no-store"}),fetch("./data/bet-ledger.json?"+Date.now(),{cache:"no-store"})]);
@@ -216,21 +248,30 @@ async function load(initial=false){
   const [raceText,ledgerText]=await Promise.all([r.text(),l.text()]);
   const serial=raceText+ledgerText;
   if(initial||serial!==state.serial){state.serial=serial;state.data=JSON.parse(raceText);state.ledger=JSON.parse(ledgerText);applyLiveResults();render()}
- }catch(e){if(initial)document.querySelector("#app").innerHTML='<main class="main"><div class="panel">Unable to load racing data or tracker.</div></main>';else console.error(e)}
+  return true;
+ }catch(e){
+  if(initial)document.querySelector("#app").innerHTML='<main class="main"><div class="panel">Unable to load racing data or tracker.</div></main>';
+  else console.error(e);
+  return false;
+ }
 }
 async function loadLive(){
  try{
   const response=await fetch('./api/live-results',{cache:'no-store'});
-  if(!response.ok)return;
+  if(!response.ok)throw new Error("Results endpoint unavailable: "+response.status);
   const payload=await response.json();
   const serial=JSON.stringify(payload);
   if(serial!==state.liveSerial){
    state.liveSerial=serial;state.live=payload;applyLiveResults();
    if(state.data)render();
   }
- }catch(err){console.warn('Live results connection unavailable',err)}
+  return payload.connected===true;
+ }catch(err){
+  console.warn('Live results connection unavailable',err);
+  state.live={connected:false,reason:'Could not contact the results source'};
+  return false;
+ }
 }
 load(true).then(loadLive);
-setInterval(()=>{if(!document.hidden){load(false).then(loadLive)}},15000);
-document.addEventListener('visibilitychange',()=>{if(!document.hidden){load(false).then(loadLive)}});
-
+setInterval(()=>{if(!document.hidden&&!state.refreshing){load(false).then(loadLive)}},15000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!state.refreshing){load(false).then(loadLive)}});
