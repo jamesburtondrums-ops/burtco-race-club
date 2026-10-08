@@ -155,6 +155,9 @@ jockey_events=defaultdict(deque)
 trainer_course=defaultdict(lambda:[0,0])
 trainer_type=defaultdict(lambda:[0,0])
 tj_combo=defaultdict(lambda:[0,0])
+owner_trainer=defaultdict(lambda:[0,0])
+owner_course=defaultdict(lambda:[0,0])
+owner_type=defaultdict(lambda:[0,0])
 sire_dist=defaultdict(lambda:[0,0])
 sire_going=defaultdict(lambda:[0,0])
 dam_dist=defaultdict(lambda:[0,0])
@@ -178,6 +181,7 @@ def feature_row(r, day, field_size, market_prob=np.nan, market_rank=np.nan):
     horse=clean_name(r.get("horse") or r.get("horsename"))
     trainer=clean_name(r.get("trainer"))
     jockey=clean_name(r.get("jockey"))
+    owner=clean_name(r.get("owner"))
     course=clean_name(r.get("course"))
     rt=race_type(r)
     dist=dist_furlongs(r.get("dist") or r.get("distance"))
@@ -238,6 +242,10 @@ def feature_row(r, day, field_size, market_prob=np.nan, market_rank=np.nan):
       "jockey14":jockey14,
       "jockey_upgrade":jockey14-prev_jockey14 if np.isfinite(jockey14) and np.isfinite(prev_jockey14) else np.nan,
       "trainer_jockey_sr":rate(tj_combo[(trainer,jockey)]) if trainer and jockey else np.nan,
+      "owner_trainer_sr":rate(owner_trainer[(owner,trainer)]) if owner and trainer else np.nan,
+      "owner_course_sr":rate(owner_course[(owner,course)]) if owner else np.nan,
+      "owner_type_sr":rate(owner_type[(owner,rt)]) if owner else np.nan,
+      "headgear_change":float(bool((r.get("hg") or "").strip()) and bool(last) and (r.get("hg") or "").strip() != (last.get("hg") or "")),
       "sire_dist_sr":rate(sire_dist[(sire,d_bucket)]) if sire and np.isfinite(d_bucket) else np.nan,
       "sire_going_sr":rate(sire_going[(sire,going)]) if sire and going!="unknown" else np.nan,
       "dam_dist_sr":rate(dam_dist[(dam,d_bucket)]) if dam and np.isfinite(d_bucket) else np.nan,
@@ -257,19 +265,21 @@ def feature_row(r, day, field_size, market_prob=np.nan, market_rank=np.nan):
 
 def update_states(r, day):
     horse=clean_name(r.get("horse") or r.get("horsename")); trainer=clean_name(r.get("trainer"))
-    jockey=clean_name(r.get("jockey")); course=clean_name(r.get("course")); rt=race_type(r)
+    jockey=clean_name(r.get("jockey")); course=clean_name(r.get("course")); rt=race_type(r); owner=clean_name(r.get("owner"))
     pos=pint(r.get("pos") or r.get("position")); win=pos==1; place=0<pos<=3
     dist=dist_furlongs(r.get("dist") or r.get("distance")); going=going_cat(r.get("going"))
     cur_or=fnum(r.get("or") or r.get("official_rating")); rpr=fnum(r.get("rpr")); ts=fnum(r.get("ts") or r.get("topspeed"))
     cl=class_num(r); sire=clean_name(r.get("sire")); dam=clean_name(r.get("dam"))
     horse_hist[horse].append({"date":day,"course":course,"dist":dist,"going":going,"or":cur_or,
-                             "rpr":rpr,"ts":ts,"class":cl,"pos":pos,"win":win,"place":place,"jockey":jockey})
+                             "rpr":rpr,"ts":ts,"class":cl,"pos":pos,"win":win,"place":place,"jockey":jockey,"hg":(r.get("hg") or "").strip()})
     if rt in ("handicap","nursery"): horse_handicap_starts[horse]+=1
     if trainer:
         trainer_events[trainer].append((day,win)); trainer_course[(trainer,course)][0]+=1; trainer_course[(trainer,course)][1]+=int(win)
         trainer_type[(trainer,rt)][0]+=1; trainer_type[(trainer,rt)][1]+=int(win)
     if jockey: jockey_events[jockey].append((day,win))
     if trainer and jockey: tj_combo[(trainer,jockey)][0]+=1; tj_combo[(trainer,jockey)][1]+=int(win)
+    if owner and trainer: owner_trainer[(owner,trainer)][0]+=1; owner_trainer[(owner,trainer)][1]+=int(win)
+    if owner: owner_course[(owner,course)][0]+=1; owner_course[(owner,course)][1]+=int(win); owner_type[(owner,rt)][0]+=1; owner_type[(owner,rt)][1]+=int(win)
     d_bucket=round(dist/2)*2 if np.isfinite(dist) else np.nan
     if sire and np.isfinite(d_bucket):
         sire_dist[(sire,d_bucket)][0]+=1; sire_dist[(sire,d_bucket)][1]+=int(win)
@@ -348,6 +358,7 @@ features=[c for c in [
  "lbs_below_last_win_or","prev_rpr_minus_or","best_rpr3_minus_or","best_ts3_minus_or","course_win_rate","dist_win_rate",
  "going_win_rate","cd_place_rate","class_drop","same_course_month_win","return_to_win_conditions","handicap_start_no",
  "trainer14","trainer30","trainer_course_sr","trainer_type_sr","jockey14","jockey_upgrade","trainer_jockey_sr",
+ "owner_trainer_sr","owner_course_sr","owner_type_sr","headgear_change",
  "sire_dist_sr","sire_going_sr","dam_dist_sr","dam_going_sr","targeting_combo"
 ] if c in df.columns]
 market_features=features+["market_prob","market_rank"]
@@ -450,7 +461,7 @@ signals.sort(key=lambda x:(x["ae"] if x["ae"] is not None else -9),reverse=True)
 
 # Confidence gate study from fusion predicted probability + market rank
 gate_rows=[]
-for pthr in [.18,.20,.22,.25,.28,.30,.35]:
+for pthr in [.18,.20,.22,.25,.28,.30,.35,.40,.45,.50,.55,.60]:
     g=fusion_picks[(fusion_picks.p_model>=pthr)&(fusion_picks.market_rank<=2)]
     if len(g)<20: continue
     valid=g[np.isfinite(g.sp)]
@@ -466,6 +477,40 @@ for seg in ["handicap","nursery","maiden","novice","chase","hurdle","other"]:
         valid=g[np.isfinite(g.sp)]
         segments.append({"segment":seg,"races":len(g),"strike_rate":float(g.won.mean()),
                          "roi":float(((valid.won*valid.sp).sum()-len(valid))/len(valid)) if len(valid) else None})
+
+# model/market agreement diagnostics on the same unseen races
+agreement=[]
+for label, mask in {
+    "fusion pick = market favourite": fusion_picks.market_rank==1,
+    "fusion pick = market second choice": fusion_picks.market_rank==2,
+    "form-only pick = market favourite": form_picks.market_rank==1,
+    "form-only pick in market top2": form_picks.market_rank<=2,
+    "form-only pick outside market top2": form_picks.market_rank>2,
+}.items():
+    g=(fusion_picks if label.startswith("fusion") else form_picks)[mask]
+    if len(g):
+        valid=g[np.isfinite(g.sp)]
+        agreement.append({"segment":label,"bets":len(g),"wins":int(g.won.sum()),"strike_rate":float(g.won.mean()),
+                          "roi":float(((valid.won*valid.sp).sum()-len(valid))/len(valid)) if len(valid) else None})
+
+# market price audit: SP overround and favourite performance by month
+ov=[]
+for rid,g in test.groupby("race_id"):
+    inv=(1/g.sp.replace([np.inf,-np.inf],np.nan)).dropna()
+    if len(inv)>=3: ov.append(float(inv.sum()))
+price_audit={
+    "races_with_prices":len(ov),
+    "mean_overround":float(np.mean(ov)) if ov else None,
+    "median_overround":float(np.median(ov)) if ov else None,
+    "underround_pct":float(np.mean(np.array(ov)<1)) if ov else None,
+    "over_150_pct":float(np.mean(np.array(ov)>1.5)) if ov else None,
+}
+monthly=[]
+fav2=fav.copy(); fav2["month"]=fav2.date.str.slice(0,7)
+for month,g in fav2.groupby("month"):
+    if len(g)>=50:
+        monthly.append({"month":month,"bets":len(g),"strike_rate":float(g.won.mean()),
+                        "roi":float(((g.won*g.sp).sum()-len(g))/len(g))})
 
 # approximate probability metrics over all runners after normalization
 y=test.won.to_numpy()
@@ -493,6 +538,9 @@ summary={
  "confidence_gates":gate_rows,
  "segments":segments,
  "calibration":cal,
+ "agreement":agreement,
+ "price_audit":price_audit,
+ "favourite_monthly":monthly,
  "methodology":{
    "leakage_control":"All horse/trainer/jockey/pedigree features are calculated only from runs occurring before each tested race. Current-race RPR/TS are never used as inputs.",
    "targeting_interpretation":"Observable placement profile only. It does not infer deliberate non-trying or handicap manipulation.",
