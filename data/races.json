@@ -1,11 +1,12 @@
 {
   "snapshotDate": "2026-10-08",
-  "verifiedAt": "2026-10-08T07:58:00+01:00",
-  "mode": "LIVE WEB SELECTIONS",
+  "verifiedAt": "2026-10-08T12:39:00+01:00",
+  "mode": "V4.1 LIVE RECHECK",
   "coverage": {
     "meetings": 6,
     "races": 45,
-    "scope": "GB + Ireland thoroughbred meetings"
+    "scope": "GB + Ireland thoroughbred meetings",
+    "recheckedSelections": 12
   },
   "gradingSystem": {
     "PRIME": "Accuracy Mode: >=55% fused win probability plus favourite status, dominance margin and full safeguards.",
@@ -73,18 +74,18 @@
       "horse": "Duchess Anne",
       "course": "Thurles",
       "time": "15:01",
-      "tier": "PRIME",
+      "tier": "WATCH",
       "winStars": null,
       "or": 43,
       "ts": 55,
       "rpr": 63,
-      "odds": "~5/2",
+      "odds": "5/2",
       "tags": [
         "RPR +20 VS OR",
         "TS +12 VS OR",
         "FRONT-RUNNING ANGLE"
       ],
-      "reason": "Career-best narrow second at Punchestown, ideally drawn to attack again, and both TS/RPR sit materially above her OR. This is the cleanest low-grade handicap ratings confluence on the scan.",
+      "reason": "Clear favourite with strong recent second, positive-riding profile and a useful ratings edge, but a 17-runner low-grade handicap is too unpredictable for PRIME.",
       "risk": "Still a maiden and a front-running setup can leave her vulnerable late.",
       "source": "Racing Post",
       "scoreComponents": {
@@ -97,25 +98,43 @@
         "dataQuality": 5,
         "riskPenalty": -4,
         "notes": "Excellent OR/TS/RPR gap, last-start second, low draw and 7lb claim. Maiden status is the main restraint."
+      },
+      "v41": {
+        "winProbability": 33,
+        "marketRank": 1,
+        "leadOverSecond": 10.4,
+        "criticalCoverage": 94,
+        "positiveGroups": 6,
+        "aimingGroups": 2,
+        "retainedAbility": true,
+        "lateMarketConfirmed": true,
+        "racePredictability": 61,
+        "raceType": "handicap",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE OK",
+        "market": "5/2 favourite",
+        "summary": "Clear favourite with strong recent second, positive-riding profile and a useful ratings edge, but a 17-runner low-grade handicap is too unpredictable for PRIME."
       }
     },
     {
       "horse": "Spot On Soph",
       "course": "Market Rasen",
       "time": "16:16",
-      "tier": "PRIME",
+      "tier": "WATCH",
       "winStars": null,
       "or": 104,
       "ts": 82,
       "rpr": 108,
-      "odds": "2/1",
+      "odds": "2/1–5/2",
       "tags": [
         "HAT-TRICK BID",
         "SAME MARK",
         "7LB CLAIM",
         "COURSE WINNER"
       ],
-      "reason": "Won two straight, is effectively helped by Rebecca Hitchen's 7lb claim, races from the same mark and is proven at the track. The most complete jumps win profile on the shortlist.",
+      "reason": "Best current win profile among the original list: two straight wins, same mark, 7lb claimer 2-2 on her, course evidence and yard operating strongly. Step up to nearly 3m and the sub-8pp market/model separation stop PRIME.",
       "risk": "Steps up in trip and carries top weight before the claim.",
       "source": "Sporting Life",
       "scoreComponents": {
@@ -128,13 +147,31 @@
         "dataQuality": 5,
         "riskPenalty": -3,
         "notes": "Two consecutive wins, same mark, 7lb claim and course form outweigh a modest ratings edge."
+      },
+      "v41": {
+        "winProbability": 40.5,
+        "marketRank": 1,
+        "leadOverSecond": 6.5,
+        "criticalCoverage": 96,
+        "positiveGroups": 7,
+        "aimingGroups": 2,
+        "retainedAbility": true,
+        "lateMarketConfirmed": true,
+        "racePredictability": 76,
+        "raceType": "hurdle",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE OK",
+        "market": "2/1–5/2 favourite",
+        "summary": "Best current win profile among the original list: two straight wins, same mark, 7lb claimer 2-2 on her, course evidence and yard operating strongly. Step up to nearly 3m and the sub-8pp market/model separation stop PRIME."
       }
     },
     {
       "horse": "Fram Castle",
       "course": "Bath",
       "time": "13:30",
-      "tier": "STRONG",
+      "tier": "WATCH",
       "winStars": 4,
       "or": 55,
       "ts": 39,
@@ -145,7 +182,7 @@
         "RPR +10 VS OR",
         "5LB CLAIM"
       ],
-      "reason": "Could effectively be chasing a Bath hat-trick but for a void race last time. Strong course evidence and RPR 10lb above OR.",
+      "reason": "Course winner and clear market leader, with recent winning form and a useful claim. The step from 1m6f/1m7f territory to 2m1f plus a 13-runner handicap keeps race predictability below the PRIME gate.",
       "risk": "Steps up to 2m1f and the market has already found him.",
       "source": "Racing Post / Timeform",
       "scoreComponents": {
@@ -158,24 +195,42 @@
         "dataQuality": 5,
         "riskPenalty": -5,
         "notes": "Course form and RPR edge are strong; longer trip prevents top-tier confidence."
+      },
+      "v41": {
+        "winProbability": 34,
+        "marketRank": 1,
+        "leadOverSecond": 9,
+        "criticalCoverage": 93,
+        "positiveGroups": 6,
+        "aimingGroups": 2,
+        "retainedAbility": true,
+        "lateMarketConfirmed": true,
+        "racePredictability": 66,
+        "raceType": "handicap",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE OK",
+        "market": "9/4 favourite",
+        "summary": "Course winner and clear market leader, with recent winning form and a useful claim. The step from 1m6f/1m7f territory to 2m1f plus a 13-runner handicap keeps race predictability below the PRIME gate."
       }
     },
     {
       "horse": "Sea Mirage",
       "course": "Ayr",
       "time": "14:20",
-      "tier": "STRONG",
+      "tier": "WATCH",
       "winStars": 4,
       "or": 74,
       "ts": 74,
       "rpr": 78,
-      "odds": "10/11 forecast",
+      "odds": "15/8 second behind Caturra Rock",
       "tags": [
         "SLOW-GROUND PROVEN",
         "TS = OR",
         "RPR +4"
       ],
-      "reason": "Second in a good nursery last time and proven on slow ground, a major positive on Ayr's heavy going. Solid ratings with strong race suitability.",
+      "reason": "Proven soft-ground form and solid ratings, but the market has Caturra Rock clearly ahead. V4.1 will not call a non-favourite PRIME.",
       "risk": "Short price and Caturra Rock is a credible danger.",
       "source": "Racing Post",
       "scoreComponents": {
@@ -188,24 +243,42 @@
         "dataQuality": 5,
         "riskPenalty": -4,
         "notes": "Strong current form and proven slow-ground suitability; ratings themselves are only fair."
+      },
+      "v41": {
+        "winProbability": 31.5,
+        "marketRank": 2,
+        "leadOverSecond": -9.5,
+        "criticalCoverage": 95,
+        "positiveGroups": 6,
+        "aimingGroups": 1,
+        "retainedAbility": true,
+        "lateMarketConfirmed": true,
+        "racePredictability": 79,
+        "raceType": "novice",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE OK",
+        "market": "15/8 second favourite behind Caturra Rock",
+        "summary": "Proven soft-ground form and solid ratings, but the market has Caturra Rock clearly ahead. V4.1 will not call a non-favourite PRIME."
       }
     },
     {
       "horse": "Glen Echo",
       "course": "Thurles",
       "time": "15:36",
-      "tier": "STRONG",
+      "tier": "WATCH",
       "winStars": 4,
       "or": 60,
       "ts": 58,
       "rpr": 60,
-      "odds": "13/8 forecast",
+      "odds": "2/1–9/4",
       "tags": [
         "BEST RECENT FORM",
         "FORM WORKING OUT",
         "DRAW 1"
       ],
-      "reason": "By far the best recent form in the race according to the card, with suitable trip/ground and stall 1. More of a form-strength pick than a ratings-edge pick.",
+      "reason": "Strong current-form pick: improving handicap form, suitable trip/ground, stall 1 and a clear market lead. The 14-runner 0-60 handicap remains too noisy for PRIME.",
       "risk": "No ratings edge over OR and the market is already short.",
       "source": "Racing Post",
       "scoreComponents": {
@@ -218,13 +291,31 @@
         "dataQuality": 5,
         "riskPenalty": -5,
         "notes": "Best-form/conditions selection, not a ratings-edge selection. Yard form is a restraint."
+      },
+      "v41": {
+        "winProbability": 37,
+        "marketRank": 1,
+        "leadOverSecond": 13,
+        "criticalCoverage": 96,
+        "positiveGroups": 7,
+        "aimingGroups": 2,
+        "retainedAbility": true,
+        "lateMarketConfirmed": true,
+        "racePredictability": 68,
+        "raceType": "handicap",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE OK",
+        "market": "2/1–9/4 favourite",
+        "summary": "Strong current-form pick: improving handicap form, suitable trip/ground, stall 1 and a clear market lead. The 14-runner 0-60 handicap remains too noisy for PRIME."
       }
     },
     {
       "horse": "Blissful Bonita",
       "course": "Thurles",
       "time": "17:20",
-      "tier": "STRONG",
+      "tier": "WATCH",
       "winStars": 4,
       "or": 64,
       "ts": 67,
@@ -235,7 +326,7 @@
         "STEP-UP IN TRIP",
         "TS/RPR ABOVE OR"
       ],
-      "reason": "Best effort yet at Navan and shaped as though even more of a stamina test would suit. Bottomweight, and both TS/RPR sit above her mark.",
+      "reason": "Now favourite, with bottom weight, improving profile and evidence that the longer trip should help. Seventeen runners and an unproven 2m trip keep confidence well below PRIME.",
       "risk": "Unproven at this exact two-mile trip.",
       "source": "Racing Post / Timeform",
       "scoreComponents": {
@@ -248,24 +339,42 @@
         "dataQuality": 5,
         "riskPenalty": -5,
         "notes": "Recent improvement, bottomweight and likely stamina upside; exact trip remains unproven."
+      },
+      "v41": {
+        "winProbability": 32,
+        "marketRank": 1,
+        "leadOverSecond": 8.5,
+        "criticalCoverage": 94,
+        "positiveGroups": 6,
+        "aimingGroups": 1,
+        "retainedAbility": true,
+        "lateMarketConfirmed": true,
+        "racePredictability": 59,
+        "raceType": "handicap",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE OK",
+        "market": "5/2 favourite",
+        "summary": "Now favourite, with bottom weight, improving profile and evidence that the longer trip should help. Seventeen runners and an unproven 2m trip keep confidence well below PRIME."
       }
     },
     {
       "horse": "Tap Dancer",
       "course": "Ayr",
       "time": "13:45",
-      "tier": "VALUE",
+      "tier": "WATCH",
       "winStars": 3,
       "or": 50,
       "ts": 66,
       "rpr": 72,
-      "odds": "~10/1 forecast",
+      "odds": "about 12/1",
       "tags": [
         "TS +16 VS OR",
         "RPR +22 VS OR",
         "HEAVY-GROUND WINNER"
       ],
-      "reason": "One of the biggest raw ratings gaps on the card. Returns to a longer trip and has won on heavy ground, making the double-digit price interesting.",
+      "reason": "Heavy-ground win and old TS/RPR figures remain interesting, but recent form and the market do not confirm the angle. V4.1 sharply downgrades this profile.",
       "risk": "Only one career win and recent form is not strong enough for a higher win-confidence score.",
       "source": "Racing Post",
       "scoreComponents": {
@@ -278,24 +387,42 @@
         "dataQuality": 5,
         "riskPenalty": -8,
         "notes": "Huge TS/RPR edge and heavy-ground suitability, but only modest recent winning evidence."
+      },
+      "v41": {
+        "winProbability": 10,
+        "marketRank": 7,
+        "leadOverSecond": -20,
+        "criticalCoverage": 92,
+        "positiveGroups": 4,
+        "aimingGroups": 1,
+        "retainedAbility": false,
+        "lateMarketConfirmed": false,
+        "racePredictability": 57,
+        "raceType": "handicap",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": true,
+        "priceLabel": "PRICE WATCH",
+        "market": "about 12/1",
+        "summary": "Heavy-ground win and old TS/RPR figures remain interesting, but recent form and the market do not confirm the angle. V4.1 sharply downgrades this profile."
       }
     },
     {
       "horse": "Lady Of Clover",
       "course": "Southwell",
       "time": "17:00",
-      "tier": "VALUE",
+      "tier": "WATCH",
       "winStars": 4,
       "or": 59,
       "ts": 60,
       "rpr": 69,
-      "odds": "~7/2–7/1",
+      "odds": "around 7/2, behind Edwardtheninth",
       "tags": [
         "RPR +10 VS OR",
         "STAMINA PROVEN",
         "YARD FORM"
       ],
-      "reason": "Form 143143, already placed over 2m here and has no stamina concerns. Her evidence is stronger than a typical mid-single-figure chance.",
+      "reason": "Consistent, proven on the surface and coming back from a solid course third. Edwardtheninth remains the stronger market horse, so this is a credible contender rather than a top-confidence pick.",
       "risk": "Edwardtheninth has stronger obvious C&D winning form.",
       "source": "HorseRacing.net / Oddschecker",
       "scoreComponents": {
@@ -308,25 +435,43 @@
         "dataQuality": 5,
         "riskPenalty": -4,
         "notes": "Consistent profile, proven stamina and solid rating edge; lacks a dominant standout factor."
+      },
+      "v41": {
+        "winProbability": 24,
+        "marketRank": 2,
+        "leadOverSecond": -6.5,
+        "criticalCoverage": 95,
+        "positiveGroups": 6,
+        "aimingGroups": 1,
+        "retainedAbility": true,
+        "lateMarketConfirmed": true,
+        "racePredictability": 67,
+        "raceType": "handicap",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE OK",
+        "market": "around 7/2, behind Edwardtheninth",
+        "summary": "Consistent, proven on the surface and coming back from a solid course third. Edwardtheninth remains the stronger market horse, so this is a credible contender rather than a top-confidence pick."
       }
     },
     {
       "horse": "Have You A Minute",
       "course": "Southwell",
       "time": "19:30",
-      "tier": "VALUE",
+      "tier": "WATCH",
       "winStars": 4,
       "or": 51,
       "ts": 65,
       "rpr": 80,
-      "odds": "~10/1 forecast",
+      "odds": "about 10/1",
       "tags": [
         "RPR +29 VS OR",
         "TS +14 VS OR",
         "C&D",
         "JOCKEY BOOKING"
       ],
-      "reason": "The largest ratings-versus-OR gap on the shortlist. C&D proven and the Saffie Osborne booking adds another positive.",
+      "reason": "The OR51/TS65/RPR80 relationship and C&D evidence still stand out, but the market is not confirming a high win chance in a 14-runner handicap. Strong ratings angle, low win-confidence selection.",
       "risk": "Needs to turn strong ratings into a win; current price snapshot is forecast-led rather than a firm exchange market.",
       "source": "Racing Post",
       "scoreComponents": {
@@ -339,24 +484,42 @@
         "dataQuality": 5,
         "riskPenalty": -6,
         "notes": "Massive OR/TS/RPR gap plus C&D evidence; enough recent form to make the ratings credible."
+      },
+      "v41": {
+        "winProbability": 14,
+        "marketRank": 6,
+        "leadOverSecond": -18,
+        "criticalCoverage": 93,
+        "positiveGroups": 5,
+        "aimingGroups": 2,
+        "retainedAbility": true,
+        "lateMarketConfirmed": false,
+        "racePredictability": 55,
+        "raceType": "handicap",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE WATCH",
+        "market": "about 10/1",
+        "summary": "The OR51/TS65/RPR80 relationship and C&D evidence still stand out, but the market is not confirming a high win chance in a 14-runner handicap. Strong ratings angle, low win-confidence selection."
       }
     },
     {
       "horse": "Billyb",
       "course": "Southwell",
       "time": "20:30",
-      "tier": "VALUE",
+      "tier": "WATCH",
       "winStars": 4,
       "or": 82,
       "ts": null,
       "rpr": 92,
-      "odds": "~5/1",
+      "odds": "9/2–11/2, behind Nostrum and Not That Guy",
       "tags": [
         "RPR +10 VS OR",
         "2X COURSE WINNER",
         "HIDDEN LATEST RUN"
       ],
-      "reason": "Dual Southwell winner and latest second came after waiting for a gap. RPR sits 10lb above OR and the price is materially bigger than the favourite.",
+      "reason": "Course form and the latest hidden-run second remain positives, but two stronger market rivals and the drop to 7f prevent a high-confidence grade.",
       "risk": "Drops back to 7f and Nostrum retains obvious handicapping scope.",
       "source": "Racing Post / HorseRacing.net",
       "scoreComponents": {
@@ -369,24 +532,42 @@
         "dataQuality": 5,
         "riskPenalty": -5,
         "notes": "Dual course winner, hidden latest run and RPR edge; drop back to 7f is the main concern."
+      },
+      "v41": {
+        "winProbability": 18.5,
+        "marketRank": 3,
+        "leadOverSecond": -18,
+        "criticalCoverage": 95,
+        "positiveGroups": 6,
+        "aimingGroups": 1,
+        "retainedAbility": true,
+        "lateMarketConfirmed": true,
+        "racePredictability": 64,
+        "raceType": "handicap",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE OK",
+        "market": "9/2–11/2, behind Nostrum and Not That Guy",
+        "summary": "Course form and the latest hidden-run second remain positives, but two stronger market rivals and the drop to 7f prevent a high-confidence grade."
       }
     },
     {
       "horse": "Tasmanian Girl",
       "course": "Tramore",
       "time": "14:45",
-      "tier": "SPECULATIVE",
+      "tier": "WATCH",
       "winStars": 2,
       "or": 77,
       "ts": 90,
       "rpr": 97,
-      "odds": "~13/2",
+      "odds": "about 7/1",
       "tags": [
         "TS +13 VS OR",
         "RPR +20 VS OR",
         "7LB CLAIM"
       ],
-      "reason": "The raw ratings are much stronger than OR77 and the 7lb claim adds appeal. A genuine bigger-price angle rather than a high-confidence win pick.",
+      "reason": "Bottom weight and ratings are interesting, but poor recent form plus a competitive hurdle and stronger market rivals make this a watch only under Accuracy Mode.",
       "risk": "Recent form is weak, so the ratings need to translate much better than the last few finishing positions.",
       "source": "Racing Post / HorseRacing.net",
       "scoreComponents": {
@@ -399,6 +580,24 @@
         "dataQuality": 5,
         "riskPenalty": -12,
         "notes": "Excellent raw ratings and 7lb claim, but poor recent form forces a low win-confidence score."
+      },
+      "v41": {
+        "winProbability": 11,
+        "marketRank": 4,
+        "leadOverSecond": -22,
+        "criticalCoverage": 92,
+        "positiveGroups": 4,
+        "aimingGroups": 1,
+        "retainedAbility": false,
+        "lateMarketConfirmed": true,
+        "racePredictability": 54,
+        "raceType": "hurdle",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": true,
+        "priceLabel": "PRICE WATCH",
+        "market": "about 7/1",
+        "summary": "Bottom weight and ratings are interesting, but poor recent form plus a competitive hurdle and stronger market rivals make this a watch only under Accuracy Mode."
       }
     },
     {
@@ -410,13 +609,13 @@
       "or": 64,
       "ts": null,
       "rpr": 68,
-      "odds": "Market watch",
+      "odds": "13/8–11/4 after substantial support",
       "tags": [
         "HANDICAP DEBUT",
         "GELDED",
         "UP TO 1M"
       ],
-      "reason": "Quiet qualifying runs for a yard capable of improving horses when they enter handicaps. Gelded, up in trip and making nursery debut.",
+      "reason": "The market move is the strongest signal on the card: a quiet qualifying profile, gelded, up to 1m and now strongly backed for handicap debut. But this is exactly the unexposed nursery type V4.1 treats as high uncertainty, so confidence is capped.",
       "risk": "No proven handicap or speed edge yet; this is placement inference rather than hard ratings evidence.",
       "source": "Sporting Life / Racing Post",
       "scoreComponents": {
@@ -429,13 +628,31 @@
         "dataQuality": 4,
         "riskPenalty": -12,
         "notes": "Interesting nursery-placement angle, but very little hard performance evidence."
+      },
+      "v41": {
+        "winProbability": 41.5,
+        "marketRank": 1,
+        "leadOverSecond": 12.5,
+        "criticalCoverage": 88,
+        "positiveGroups": 5,
+        "aimingGroups": 2,
+        "retainedAbility": false,
+        "lateMarketConfirmed": true,
+        "racePredictability": 49,
+        "raceType": "nursery",
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "majorRedFlag": false,
+        "priceLabel": "PRICE WATCH",
+        "market": "13/8–11/4 favourite after substantial support",
+        "summary": "The market move is the strongest signal on the card: a quiet qualifying profile, gelded, up to 1m and now strongly backed for handicap debut. But this is exactly the unexposed nursery type V4.1 treats as high uncertainty, so confidence is capped."
       }
     }
   ],
   "scoringModel": {
     "version": "4.1",
-    "legacy": true,
-    "note": "Existing 8 October cards pre-date V4.1 Accuracy Mode. Their old stars/tiers are suppressed until freshly researched.",
+    "legacy": false,
+    "note": "All 12 original 8 October selections were rechecked under V4.1 at 12:39 BST using current public racecards and market information.",
     "components": [
       {
         "key": "recentForm",
@@ -1201,8 +1418,8 @@
     },
     "grades": {
       "PRIME": {
-        "rule": ">=55% fused win probability; market favourite; >=8pp clear of second-ranked horse; >=90% critical checks; >=5 independent positive groups; no major red flag. Handicaps additionally require retained ability and >=2 aiming groups.",
-        "observed": "In the audited unseen test, the >=55% confidence gate won 71.5% (158 races). This is a historical benchmark, not a guarantee.",
+        "rule": ">=55% fused win probability; market favourite; clear model dominance; >=90% critical checks; high race predictability; late-market confirmation; no major red flag. Aiming/retained-ability signals influence probability but are not mandatory hard gates.",
+        "observed": "P>=55% favourite: 71.5% winners (113/158) in the clean unseen sample. P>=50% maiden/novice favourites: 72.5% (74/102), a useful race-type signal but smaller subset.",
         "display": "Special gold PRIME card"
       },
       "five": {
@@ -1264,11 +1481,12 @@
         "minLeadOverSecondPctPoints": 8,
         "minCriticalCoveragePct": 90,
         "minIndependentPositiveGroups": 5,
-        "retainedAbilityRequiredForHandicaps": true,
-        "minAimingGroupsForHandicaps": 2,
+        "retainedAbilityRequiredForHandicaps": false,
+        "minAimingGroupsForHandicaps": null,
         "noMajorRedFlags": true,
         "lateMarketConfirmationRequired": true,
-        "pedigreeRequiredForNewcomers": true
+        "pedigreeRequiredForNewcomers": true,
+        "researchCorrection": "Aiming and retained-ability signals remain model inputs, not mandatory PRIME gates: in the clean backtest, forcing them as hard gates reduced strike rate."
       },
       "raceTypeRules": {
         "novice": "Normal V4.1 gate; these were among the most predictable historical segments.",
@@ -1332,6 +1550,39 @@
         ],
         "note": "A bigger price never increases stars or PRIME status."
       }
+    },
+    "latestAccuracyAudit": {
+      "p50Favourite": {
+        "races": 215,
+        "wins": 149,
+        "strikeRate": 69.3
+      },
+      "p55Favourite": {
+        "races": 158,
+        "wins": 113,
+        "strikeRate": 71.5
+      },
+      "p60Favourite": {
+        "races": 91,
+        "wins": 64,
+        "strikeRate": 70.3
+      },
+      "p50FavouriteCourseConnection": {
+        "races": 149,
+        "wins": 104,
+        "strikeRate": 69.8
+      },
+      "p55FavouriteTwoAimingGroups": {
+        "races": 71,
+        "wins": 48,
+        "strikeRate": 67.6
+      },
+      "p50FavouriteMaidenNovice": {
+        "races": 102,
+        "wins": 74,
+        "strikeRate": 72.5
+      },
+      "conclusion": "Do not make aiming-group count or retained-ability a hard gate. Use them to move probability. Selectivity is driven primarily by calibrated probability, market rank and race type."
     }
   }
 }
