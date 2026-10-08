@@ -298,3 +298,35 @@
  .tracker-stats strong{font-size:18px}
  .tracker-stats>div{padding:10px 8px}
 }
+
+
+/* Paper Lucky 15: distinct mobile-friendly ticket */
+.l15-panel{background:#fffdf8;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.l15-heading{display:flex;align-items:start;justify-content:space-between;gap:14px}
+.l15-heading h2{font:700 30px "Playfair Display",serif;color:var(--green);margin:5px 0 8px}
+.l15-heading p{font-size:13px;line-height:1.5;color:var(--muted);margin:0}
+.l15-heading>b{font-size:24px;font-weight:800;color:var(--green);white-space:nowrap}
+.l15-combinations{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:20px 0}
+.l15-combinations span{padding:10px;background:#eaf0eb;color:var(--green);border-radius:9px;text-align:center;font-size:12px;font-weight:700}
+.l15-note{font-size:11px;line-height:1.65;color:var(--muted);margin:13px 0}
+.l15-leg{display:grid;grid-template-columns:30px minmax(0,1fr) 92px;align-items:center;gap:13px;padding:14px 4px;border-top:1px solid var(--line)}
+.l15-leg>b{width:28px;height:28px;display:grid;place-items:center;background:var(--green);color:white;border-radius:50%;font-size:11px}
+.l15-leg>div{min-width:0}
+.l15-leg strong{display:block;color:var(--ink);font-size:14px}
+.l15-leg small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.l15-leg>div:last-child{text-align:right}
+.l15-outcome{border-radius:10px;background:#f3efe4;padding:14px;color:var(--green);font-weight:700;font-size:12px;margin:14px 0}
+.l15-shortcut{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin:-8px 0 16px;background:#eaf0eb;border:1px solid #c8d6ca;border-radius:12px;padding:11px 15px;font-weight:700;color:var(--green);font-size:12px}
+.l15-shortcut button{border:0;background:var(--green);color:white;border-radius:8px;padding:9px 13px;min-height:40px;font-weight:700;font-size:12px}
+@media(max-width:650px){
+ .l15-panel{padding:15px}
+ .l15-heading{gap:9px}
+ .l15-heading h2{font-size:24px}
+ .l15-heading>b{font-size:19px}
+ .l15-combinations{grid-template-columns:repeat(2,1fr);margin:16px 0}
+ .l15-leg{grid-template-columns:26px minmax(0,1fr) 70px;gap:8px}
+ .l15-leg strong{font-size:12px;overflow-wrap:anywhere}
+ .l15-leg small{font-size:10px;line-height:1.35}
+ .l15-shortcut{margin:-5px 0 12px}
+ .l15-shortcut button{width:100%}
+}
