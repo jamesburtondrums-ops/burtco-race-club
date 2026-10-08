@@ -106,7 +106,12 @@
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 2,
+        "status": "User reported",
+        "source": "User-reported second place; independent result confirmation pending",
+        "updatedAt": "2026-10-08T17:04:13.127Z"
+      }
     },
     {
       "id": "2026-10-08|bath|15:15|brilliant star|win",
