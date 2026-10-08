@@ -60,8 +60,9 @@ assert.ok(appElement.innerHTML.includes('sportinglife.com/racing/fast-results'),
 assert.ok(appElement.innerHTML.includes('£'+bank.toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2})),'Bankroll display matches ledger');
 if(racing.snapshotDate==='2026-10-09'){
  assert.equal(racing.todaySelections.length,2,'Small Friday win shortlist');
- assert.equal(racing.midshotsToday.length,2,'Small Friday midshot shortlist');
+ assert.equal(racing.midshotsToday.length,1,'Only one higher-confidence Friday midshot');
  assert.equal(racing.longshotsToday.length,1,'One Friday longshot');
+ assert.equal(ledger.entries.filter(e=>e.date==='2026-10-09').length,4,'Four Friday paper singles');
  assert.equal((racing.racecardLinks||[]).length,6,'Friday runner cards available');
  app.state.view='lucky15';app.render();
  assert.match(appElement.innerHTML,/Flann Sunna/,'Friday Lucky15 displayed');
