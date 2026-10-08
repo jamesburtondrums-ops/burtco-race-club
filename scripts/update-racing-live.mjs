@@ -191,7 +191,7 @@ for (const { group, selection } of selections) {
   }
 }
 if (ledgerChanges) {
-  await fs.writeFile(ledgerFile, JSON.stringify(ledger, null, 2) + '\\n');
+  await fs.writeFile(ledgerFile, JSON.stringify(ledger, null, 2) + '\n');
   console.log('Paper betting ledger updated: ' + ledgerChanges + ' changes');
 }
 
