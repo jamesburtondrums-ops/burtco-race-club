@@ -1,4 +1,4 @@
-const state={data:null,ledger:null,view:"today",filter:"ALL",serial:""};
+const state={data:null,ledger:null,live:null,liveSerial:"",view:"today",filter:"ALL",serial:""};
 const val=v=>v===undefined||v===null||v===""?"—":v;
 const contextOf=x=>x.v42||x.v41||null;
 const probabilityOf=x=>contextOf(x)?.winProbability??null;
@@ -58,6 +58,25 @@ function settlement(e){
  const placeWin=pos<=places;
  const placeReturn=placeWin?e.placeStake*(1+(odds-1)*0.25):0;
  return {status:pos===1?'won':placeWin?'placed':'lost',returnAmount:(pos===1?e.winStake*odds:0)+placeReturn};
+}
+function applyLiveResults(){
+ if(!state.data||!state.ledger||!state.live?.connected||state.live.date!==state.data.snapshotDate)return;
+ const updates=state.live.updates||[];
+ const groups=['todaySelections','midshotsToday','longshotsToday'];
+ for(const group of groups)for(const pick of state.data[group]||[]){
+   const update=updates.find(u=>u.horse===pick.horse&&u.course===pick.course&&u.time===pick.time);
+   if(!update)continue;
+   pick.result={...pick.result,...update.result,source:state.live.source,updatedAt:state.live.checkedAt};
+   if(Number(update.runnerCount)>0)pick.runnerCount=Number(update.runnerCount);
+   const type=group==='todaySelections'?'win':'each-way';
+   const id=[state.data.snapshotDate,pick.course,pick.time,pick.horse,type].join('|').toLowerCase();
+   const entry=state.ledger.entries.find(e=>e.id===id);
+   if(entry){
+     entry.result={...entry.result,...pick.result};
+     if(pick.result.sp)entry.settlementOdds=pick.result.sp;
+     if(pick.runnerCount){entry.runnerCount=pick.runnerCount;entry.placesPaid=pick.runnerCount<=4?1:pick.runnerCount<=7?2:3;}
+   }
+ }
 }
 function tracker(){
  const ledger=state.ledger;if(!ledger)return '';
@@ -139,9 +158,22 @@ async function load(initial=false){
   if(!r.ok||!l.ok)throw new Error("Unable to load betting records");
   const [raceText,ledgerText]=await Promise.all([r.text(),l.text()]);
   const serial=raceText+ledgerText;
-  if(initial||serial!==state.serial){state.serial=serial;state.data=JSON.parse(raceText);state.ledger=JSON.parse(ledgerText);render()}
+  if(initial||serial!==state.serial){state.serial=serial;state.data=JSON.parse(raceText);state.ledger=JSON.parse(ledgerText);applyLiveResults();render()}
  }catch(e){if(initial)document.querySelector("#app").innerHTML='<main class="main"><div class="panel">Unable to load racing data or tracker.</div></main>';else console.error(e)}
 }
-load(true);
-setInterval(()=>{if(!document.hidden)load(false)},15000);
-document.addEventListener('visibilitychange',()=>{if(!document.hidden)load(false)});
+async function loadLive(){
+ try{
+  const response=await fetch('./api/live-results',{cache:'no-store'});
+  if(!response.ok)return;
+  const payload=await response.json();
+  const serial=JSON.stringify(payload);
+  if(serial!==state.liveSerial){
+   state.liveSerial=serial;state.live=payload;applyLiveResults();
+   if(state.data)render();
+  }
+ }catch(err){console.warn('Live results connection unavailable',err)}
+}
+load(true).then(loadLive);
+setInterval(()=>{if(!document.hidden){load(false).then(loadLive)}},15000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){load(false).then(loadLive)}});
+
