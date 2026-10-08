@@ -6,10 +6,10 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 
 | Method | Bets | Strike rate | ROI at SP |
 |---|---:|---:|---:|
-| Form/placement model (no market) | 2795 | 30.8% | -7.6% |
+| Form/placement model (no market) | 2795 | 30.8% | -7.4% |
 | SP favourite baseline | 1629 | 36.2% | -8.7% |
-| Fusion: market + independent evidence | 1629 | 37.0% | -5.2% |
-| Value overlay (all qualifying runners) | 2886 | 5.2% | -24.4% |
+| Fusion: market + independent evidence | 1629 | 37.4% | -3.8% |
+| Value overlay (all qualifying runners) | 2904 | 4.9% | -26.2% |
 
 ## Targeting / placement signal lift
 
@@ -17,6 +17,7 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 |---|---:|---:|---:|---:|
 | 2-3lb below last winning OR | 186 | 12.9% | 1.26 | +20.0% |
 | target race + jockey upgrade | 92 | 21.7% | 1.22 | +15.3% |
+| horse-jockey RPR uplift +3lb | 1256 | 17.7% | 1.12 | -7.1% |
 | ability + placement + market top3 | 440 | 28.6% | 1.09 | -3.7% |
 | previous RPR 5lb+ above current OR | 1851 | 17.5% | 1.08 | -6.3% |
 | owner course strike rate >=15% | 1937 | 17.5% | 1.07 | -12.7% |
@@ -26,6 +27,8 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 | owner-trainer strike rate >=15% | 3437 | 17.8% | 1.04 | -7.0% |
 | trainer course class SR >=15% | 1991 | 18.2% | 1.04 | -19.0% |
 | dropping race value >=25% | 1318 | 18.4% | 1.04 | -4.5% |
+| trainer RTF +5lb recent | 1167 | 16.7% | 1.04 | -23.2% |
+| jockey RTF +3lb recent | 2096 | 15.3% | 1.04 | -23.6% |
 | horse-jockey win SR >=20% | 1586 | 17.0% | 1.03 | -13.2% |
 | same course / same time-of-year prior win | 777 | 19.0% | 1.03 | -10.4% |
 | horse-jockey place SR >=50% | 1696 | 17.9% | 1.03 | -8.7% |
@@ -44,11 +47,13 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 | owner race-type strike rate >=15% | 2974 | 16.6% | 1.00 | -17.8% |
 | same-class win rate >0 | 2203 | 15.6% | 0.99 | -18.1% |
 | proven going place rate >=50% | 4201 | 16.4% | 0.99 | -17.1% |
+| trainer RTF +3lb recent | 2272 | 15.6% | 0.99 | -27.0% |
 | rising race value >=25% | 5247 | 11.6% | 0.99 | -18.9% |
 | trainer value-band SR >=15% | 5600 | 15.0% | 0.99 | -21.7% |
 | class drop >=1 | 1538 | 13.8% | 0.98 | -23.8% |
 | course win rate >0 | 1627 | 15.8% | 0.98 | -16.7% |
 | headgear change | 1552 | 9.3% | 0.98 | -27.1% |
+| trainer RTF +3lb vs baseline | 1929 | 14.0% | 0.97 | -31.2% |
 | first/second handicap start | 1279 | 10.5% | 0.95 | -14.0% |
 | 4-8lb below last winning OR | 249 | 9.6% | 0.94 | -23.7% |
 | targeting combo (3+ placement signals) | 841 | 16.2% | 0.94 | -20.1% |
@@ -63,18 +68,18 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 
 | Min model P | Races | Win% | ROI |
 |---|---:|---:|---:|
-| 18% | 1547 | 37.8% | -5.5% |
-| 20% | 1487 | 38.3% | -6.4% |
-| 22% | 1418 | 38.9% | -7.4% |
-| 25% | 1258 | 41.5% | -4.6% |
-| 28% | 1085 | 44.6% | -2.1% |
-| 30% | 989 | 45.7% | -3.3% |
-| 35% | 768 | 48.7% | -4.6% |
-| 40% | 546 | 53.3% | -3.4% |
-| 45% | 314 | 62.7% | +2.7% |
-| 50% | 217 | 67.7% | +3.9% |
-| 55% | 158 | 71.5% | +5.3% |
-| 60% | 90 | 74.4% | +2.0% |
+| 18% | 1569 | 38.1% | -3.5% |
+| 20% | 1498 | 38.6% | -5.1% |
+| 22% | 1418 | 39.7% | -4.4% |
+| 25% | 1254 | 42.1% | -2.8% |
+| 28% | 1062 | 44.4% | -4.5% |
+| 30% | 961 | 46.5% | -2.4% |
+| 35% | 758 | 48.5% | -6.1% |
+| 40% | 531 | 53.7% | -3.5% |
+| 45% | 307 | 63.2% | +2.7% |
+| 50% | 212 | 68.4% | +4.2% |
+| 55% | 157 | 72.0% | +6.0% |
+| 60% | 92 | 71.7% | -1.0% |
 
 ## Key integrity rule
 The targeting variables are observable placement patterns (mark, class, course/trip return, trainer patterns). They are **not evidence that connections deliberately ran a horse to lower its mark**.
