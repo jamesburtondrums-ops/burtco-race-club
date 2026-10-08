@@ -4,7 +4,7 @@ const file = new URL('../data/races.json', import.meta.url);
 const data = JSON.parse(await fs.readFile(file, 'utf8'));
 const now = new Date().toISOString();
 
-const groups = ['todaySelections', 'midshotsToday', 'longshotsToday'];
+const groups = ['todaySelections', 'midshotsToday', 'longshotsToday', 'lucky15Only'];
 const selections = groups.flatMap(group => (data[group] || []).map(selection => ({ group, selection })));
 
 const normal = value => String(value || '')
@@ -210,6 +210,8 @@ const ledgerFile = new URL('../data/bet-ledger.json', import.meta.url);
 const ledger = JSON.parse(await fs.readFile(ledgerFile, 'utf8'));
 let ledgerChanges = 0;
 for (const { group, selection } of selections) {
+  // Lucky15-only runners are a leg of a combination, never standalone £10 bets.
+  if (group === 'lucky15Only') continue;
   const betType = group === 'todaySelections' ? 'win' : 'each-way';
   const id = [data.snapshotDate, selection.course, selection.time, selection.horse, betType].join('|').toLowerCase();
   let entry = ledger.entries.find(e => e.id === id);
@@ -240,6 +242,18 @@ for (const { group, selection } of selections) {
   if (!entry.settlementOdds && nextResult?.sp) {
     entry.settlementOdds = nextResult.sp;
     ledgerChanges++;
+  }
+}
+// Save combination leg outcomes independently, so tickets survive tomorrow's racecard refresh.
+for (const ticket of ledger.lucky15Tickets || []) {
+  for (const leg of ticket.legs || []) {
+    const selection = selections.find(({ selection: s }) => data.snapshotDate === ticket.date &&
+      sameHorse(s.horse, leg.horse) && sameCourse(s.course, leg.course) && s.time === leg.time)?.selection;
+    if (!selection) continue;
+    if (selection.result && !leg.result) {leg.result = selection.result; ledgerChanges++;}
+    if (selection.result?.sp && !leg.settlementOdds) {leg.settlementOdds = selection.result.sp; ledgerChanges++;}
+    const count = Number(selection.runnerCount) || null;
+    if (count && count !== leg.runnerCount) {leg.runnerCount = count; ledgerChanges++;}
   }
 }
 if (ledgerChanges) {
