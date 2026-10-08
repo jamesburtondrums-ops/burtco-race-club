@@ -167,3 +167,5 @@
 @media(max-width:560px){.tracker-heading{flex-direction:column;gap:3px}.tracker-stats strong{font-size:21px}.tracker-stats>div{padding:10px 9px}}
 
 .bet-line{display:flex;align-items:center;flex-wrap:wrap;gap:7px 16px;padding:11px 12px;margin-top:11px;border-radius:10px;background:#eaf0eb;color:#234e3c;font-size:11px}.bet-line span{color:#4b6056}
+
+.source-shortcut{display:flex;flex-wrap:wrap;align-items:center;gap:7px 12px;padding:10px 14px;margin:0 0 18px;border:1px solid var(--line);border-radius:12px;background:#f7f5ef;font-size:12px}.source-shortcut span{font-weight:700}.source-shortcut a{color:#246347;font-weight:700;text-decoration:underline}.source-shortcut small{color:var(--muted)}
