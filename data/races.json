@@ -985,7 +985,7 @@
       }
     }
   ],
-  "longshotsUpdatedAt": "2026-10-08T13:48:00+01:00",
+  "longshotsUpdatedAt": "2026-10-08T13:59:00+01:00",
   "longshotsPolicy": {
     "publicNote": "Only runners available or forecast at 20/1+ qualify. Each-way appeal is about the chance of outrunning the price and reaching the places; it is separate from the main win-confidence selections.",
     "minOdds": "20/1",
@@ -1049,24 +1049,6 @@
       "source": "Racing Post / Sporting Life"
     },
     {
-      "horse": "Tatum",
-      "course": "Thurles",
-      "time": "17:20",
-      "odds": "25/1 forecast",
-      "ewStars": 3,
-      "placeView": "SPECULATIVE E/W",
-      "terms": "Large-field handicap; take only at 20/1+",
-      "tags": [
-        "RECENT WIN IN FORM",
-        "RPR 74 VS OR 68",
-        "BEN COEN",
-        "NOEL MEADE"
-      ],
-      "reason": "She has a recent win in the six-run form sequence and an RPR74 versus OR68. Noel Meade and Ben Coen are a credible combination, and the price is large enough for the earlier winning form to matter if the step up in trip revives her.",
-      "risk": "Her last two runs were poor and she is not an obvious proven two-mile Flat stayer.",
-      "source": "Racing Post / Sporting Life"
-    },
-    {
       "horse": "Time To Spare",
       "course": "Bath",
       "time": "15:50",
@@ -1083,25 +1065,6 @@
       "reason": "A debutant with a pedigree that makes today's mile plausible: by Without Parole, out of a dam who won around a mile, and a half-brother won from 6f to roughly 7½f. Draw 2 is useful and the 25/1 price allows for the obvious lack of race experience.",
       "risk": "Jonathan Portman's yard was 0-16 with 2yo newcomers this season in the available pre-race data, so this is pedigree-led rather than trainer-debut confidence.",
       "source": "Timeform / Saturday Racing / Sporting Life"
-    },
-    {
-      "horse": "Just Another Eagle",
-      "course": "Thurles",
-      "time": "15:36",
-      "odds": "20/1+ target",
-      "ewStars": 3,
-      "placeView": "RATINGS E/W ANGLE",
-      "terms": "Only qualifies if 20/1+ is available",
-      "tags": [
-        "OR 44",
-        "TS 45",
-        "RPR 61",
-        "7LB CLAIM",
-        "RPR +17 VS OR"
-      ],
-      "reason": "The headline attraction is the ratings gap: RPR61 against OR44, with a further 7lb claim. That is the sort of well-treated-looking profile worth monitoring at outsider prices when a horse returns from a break.",
-      "risk": "Recent form is poor and the 110-day absence means this is much more speculative than Eagle Storm or King Gris.",
-      "source": "Racing Post"
     }
   ]
 }
