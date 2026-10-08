@@ -175,7 +175,9 @@ for (const { group, selection } of selections) {
       placeStake: betType === 'win' ? 0 : 5,
       selectionOdds: selection.oddsAtSelection || selection.odds,
       settlementOdds: selection.result?.sp || null,
-      ewFraction: null, placesPaid: null, terms: selection.terms || null,
+      ewFraction: betType === 'each-way' ? 0.25 : null,
+      runnerCount: Number(selection.runnerCount || selection.runners || selection.fieldSize) || null,
+      placesPaid: betType === 'each-way' && Number(selection.runnerCount || selection.runners || selection.fieldSize) ? (Number(selection.runnerCount || selection.runners || selection.fieldSize) <= 4 ? 1 : Number(selection.runnerCount || selection.runners || selection.fieldSize) <= 7 ? 2 : 3) : null, terms: selection.terms || null,
       result: selection.result || null };
     ledger.entries.push(entry);
     ledgerChanges++;
