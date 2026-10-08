@@ -161,6 +161,40 @@ for (const { selection } of selections) {
   }
 }
 
+// Persist the first recorded price/stake for each selection independently of live odds.
+const ledgerFile = new URL('../data/bet-ledger.json', import.meta.url);
+const ledger = JSON.parse(await fs.readFile(ledgerFile, 'utf8'));
+let ledgerChanges = 0;
+for (const { group, selection } of selections) {
+  const betType = group === 'todaySelections' ? 'win' : 'each-way';
+  const id = [data.snapshotDate, selection.course, selection.time, selection.horse, betType].join('|').toLowerCase();
+  let entry = ledger.entries.find(e => e.id === id);
+  if (!entry) {
+    entry = { id, date: data.snapshotDate, course: selection.course, time: selection.time,
+      horse: selection.horse, betType, winStake: betType === 'win' ? 10 : 5,
+      placeStake: betType === 'win' ? 0 : 5,
+      selectionOdds: selection.oddsAtSelection || selection.odds,
+      settlementOdds: selection.result?.sp || null,
+      ewFraction: null, placesPaid: null, terms: selection.terms || null,
+      result: selection.result || null };
+    ledger.entries.push(entry);
+    ledgerChanges++;
+  }
+  const nextResult = selection.result || null;
+  if (JSON.stringify(entry.result) !== JSON.stringify(nextResult) && nextResult) {
+    entry.result = nextResult;
+    ledgerChanges++;
+  }
+  if (!entry.settlementOdds && nextResult?.sp) {
+    entry.settlementOdds = nextResult.sp;
+    ledgerChanges++;
+  }
+}
+if (ledgerChanges) {
+  await fs.writeFile(ledgerFile, JSON.stringify(ledger, null, 2) + '\\n');
+  console.log('Paper betting ledger updated: ' + ledgerChanges + ' changes');
+}
+
 if (!oddsChanges && !resultChanges) {
   console.log(`Live refresh checked via ${feedName}: no odds or result changes.`);
   process.exit(0);
