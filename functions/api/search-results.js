@@ -23,6 +23,13 @@ function parseRSS(xml){
 function sourceOf(url){
  try{const host=new URL(url).hostname.toLowerCase().replace(/^www\./,'');return SOURCES.find(([domain])=>host===domain||host.endsWith('.'+domain))?.[1]||null}catch{return null}
 }
+function isResultsPage(url){
+ try {
+  const path=new URL(url).pathname.toLowerCase();
+  if (/\/(racecards?|tips?|news|meeting|live-show|previews?)\//.test(path)) return false;
+  return /\/(?:results?|fast-results)\//.test(path);
+ } catch {return false}
+}
 function dateInResult(x,date){
  const text=(x.title+' '+x.description+' '+x.url).toLowerCase();
  const [y,m,d]=date.split('-');
@@ -56,7 +63,7 @@ async function queryWeb(pick,date){
   const xml=await response.text();
   if(!/<rss[\s>]/i.test(xml))throw Error('Search provider returned no RSS feed');
   const hits=parseRSS(xml).filter(hit=>{
-    if(!sourceOf(hit.url)||!dateInResult(hit,date))return false;
+    if(!sourceOf(hit.url)||!isResultsPage(hit.url)||!dateInResult(hit,date))return false;
     const text=normal(hit.title+' '+hit.description+' '+new URL(hit.url).pathname.replace(/[\/-]/g,' '));
     return text.includes(normal(pick.horse))&&text.includes(normal(pick.course));
   }).slice(0,5).map(hit=>({
