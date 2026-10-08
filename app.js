@@ -94,7 +94,7 @@ function systemV4(){
  <div class="section-head"><div><h3>Race-type rules</h3></div></div>
  <div class="source-grid">${Object.entries(s.accuracyMode.raceTypeRules).map(([k,v])=>`<div class="source-card"><h4>${k.toUpperCase()}</h4><p>${v}</p></div>`).join("")}</div>
  <div class="section-head"><div><h3>Evidence groups</h3><p>Independent evidence is more important than stacking correlated statistics.</p></div></div>
- <div class="panel check-list">${s.probabilityEngine.evidenceGroups.map(g=>`<div class="check-group"><div class="check-title"><b>${g.name}</b><strong>${g.weight}</strong></div><ul>${g.checks.map(x=>`<li>${x}</li>`).join("")}</ul>${g.research?`<p class="meta"><strong>Backtest:</strong> ${g.research}</p>`:""}</div>`).join("")}</div>
+ <div class="panel check-list">${(s.contextModel?.factors||s.probabilityEngine.evidenceGroups).map(g=>`<div class="check-group"><div class="check-title"><b>${g.name}</b><strong>${g.role||g.weight||""}</strong></div><ul>${(g.checks||[]).map(x=>`<li>${x}</li>`).join("")}</ul>${g.evidence||g.research?`<p class="meta"><strong>Backtest:</strong> ${g.evidence||g.research}</p>`:""}</div>`).join("")}</div>
  <div class="section-head"><div><h3>Hard PRIME blocks</h3></div></div><div class="panel"><ul class="protocol-list">${s.hardBlocks.map(x=>`<li>${x}</li>`).join("")}</ul></div>
  <div class="section-head"><div><h3>Price / ROI policy</h3></div></div><div class="panel"><div class="alert"><strong>${s.pricePolicy.status}</strong><br><span class="meta">${s.pricePolicy.reason} ${s.pricePolicy.currentUse}</span></div></div>`;
 }
