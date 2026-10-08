@@ -1,4 +1,4 @@
-const state={data:null,ledger:null,live:null,liveSerial:"",view:"today",filter:"ALL",serial:"",refreshing:false,refreshMessage:"",refreshCheckedAt:null};
+const state={data:null,ledger:null,live:null,liveSerial:"",view:"today",filter:"ALL",serial:"",refreshing:false,refreshMessage:"",refreshCheckedAt:null,search:null,searchError:"",webConfirmed:{},searchCheckedAt:null};
 const val=v=>v===undefined||v===null||v===""?"—":v;
 const contextOf=x=>x.v42||x.v41||null;
 const probabilityOf=x=>contextOf(x)?.winProbability??null;
@@ -118,6 +118,73 @@ function applyLiveResults(){
    }
  }
 }
+
+const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const webKey=(date,course,time,horse)=>[date,course,time,horse].join('|').toLowerCase();
+function applyWebConfirmations(){
+ if(!state.data||!state.ledger)return;
+ for(const group of ['todaySelections','midshotsToday','longshotsToday'])
+  for(const pick of state.data[group]||[]){
+   if(pick.result?.position)continue;
+   const confirmed=state.webConfirmed[webKey(state.data.snapshotDate,pick.course,pick.time,pick.horse)];
+   if(!confirmed||!Number(confirmed.position))continue;
+   pick.result={position:confirmed.position,status:'Weighed in',source:confirmed.source,
+    sourceUrl:confirmed.verifiedUrls?.[0]||'',updatedAt:confirmed.checkedAt};
+   const type=group==='todaySelections'?'win':'each-way';
+   const betId=[state.data.snapshotDate,pick.course,pick.time,pick.horse,type].join('|').toLowerCase();
+   const entry=state.ledger.entries.find(e=>e.id===betId);
+   if(entry&&!entry.result?.position)entry.result={...pick.result};
+  }
+}
+function rememberWebResults(){
+ try{if(typeof localStorage!=='undefined')
+  localStorage.setItem('racing-verified-web-results-v1',JSON.stringify(state.webConfirmed));
+ }catch(e){console.warn('Browser storage unavailable',e)}
+}
+function searchPanel(){
+ if(!state.search&&!state.searchError)return '';
+ const results=state.search?.results||[];
+ const hits=results.reduce((n,p)=>n+p.hits.length,0);
+ const matched=results.filter(p=>p.confirmed).length;
+ const errors=results.filter(p=>!p.checked).length;
+ const head='<section class="web-search-panel"><div class="web-search-heading"><div><h3>Web results search</h3><p>'+
+  (state.searchError?escapeHtml(state.searchError):'Searched '+results.length+' unfinished selections across indexed results from Sporting Life, Racing TV, At The Races, Sky Sports and other publishers. '+hits+' relevant links found; '+matched+' independently corroborated. '+(errors?'Search unavailable for '+errors+' selections.':''))+
+  '</p></div><span>'+escapeHtml(state.search?.checkedAt?new Date(state.search.checkedAt).toLocaleTimeString('en-GB',{timeZone:'Europe/London'}):'')+'</span></div>';
+ return head+(results.length?
+  '<div class="web-search-list">'+results.map(p=>{
+   const query='"'+p.horse+'" '+p.course+' '+p.date+' racing result';
+   const searchLink='https://www.google.com/search?q='+encodeURIComponent(query);
+   const label=p.confirmed?'<span class="web-search-verified">Confirmed from multiple sources</span>':
+    p.hits.length?'<span class="web-search-review">Review result</span>':'<span class="web-search-missing">No matching indexed page yet</span>';
+   return '<details class="web-search-row" '+(p.confirmed?'open':'')+'><summary><b>'+escapeHtml(p.horse)+'</b><span>'+escapeHtml(p.course)+' · '+escapeHtml(p.time||'')+'</span>'+label+'</summary><div class="web-search-hits">'+
+    (p.hits.length?p.hits.map(hit=>'<div class="web-search-hit"><a href="'+escapeHtml(hit.url)+'" rel="noopener noreferrer" target="_blank">'+escapeHtml(hit.source)+' ↗</a><p>'+escapeHtml(hit.title)+(hit.position?' · '+hit.position+' place':'')+'</p><small>'+escapeHtml(hit.snippet)+'</small></div>').join(''):'<p>No matching web results found in this search. This is not a confirmed losing result.</p>')+
+    '<a class="web-search-google" href="'+escapeHtml(searchLink)+'" target="_blank" rel="noopener noreferrer">Search other websites for '+escapeHtml(p.horse)+' ↗</a>'+
+    '</div></details>';
+  }).join('')+'</div>':'')+
+ '<p class="web-search-caution">The tracker changes only when two separate racing publishers explicitly agree on a finishing position. Other web results are provided for verification. Searches are on demand; this is not an official results feed.</p></section>';
+}
+async function searchRaceResults(){
+ try{
+  const res=await fetch('./api/search-results?checked='+Date.now(),{cache:'no-store'});
+  if(!res.ok)throw Error('Search service returned HTTP '+res.status);
+  const payload=await res.json();
+  if(!payload.ok)throw Error(payload.error||'Unable to search public results');
+  state.search=payload;state.searchError='';state.searchCheckedAt=payload.checkedAt;
+  if(payload.date===state.data?.snapshotDate){
+   for(const record of payload.results||[]){
+    if(!record.confirmed)continue;
+    const key=webKey(payload.date,record.course,record.time,record.horse);
+    if(!state.webConfirmed[key])state.webConfirmed[key]={...record.confirmed,checkedAt:payload.checkedAt};
+   }
+   rememberWebResults();applyWebConfirmations();
+  }
+  return true;
+ }catch(error){
+  state.searchError='Web search unavailable: '+(error?.message||String(error));
+  state.search=null;return false;
+ }
+}
+
 function tracker(){
  const ledger=state.ledger;
  if(!ledger)return '';
@@ -209,7 +276,7 @@ function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section
 function sources(){return '<div class="section-head"><div><h3>Sources</h3><p>Current research and cross-check sources.</p></div></div><div class="source-grid">'+(state.data.sources||[]).map(s=>'<div class="source-card"><h4>'+s.name+'</h4><p><strong>'+s.status+'</strong><br>'+s.role+'</p></div>').join("")+'</div>'}
 function rememberOpen(){state.openKeys=new Set([...document.querySelectorAll('.selection-row[open]')].map(x=>x.dataset.key))}
 function restoreOpen(){(state.openKeys||new Set()).forEach(k=>{const el=[...document.querySelectorAll('.selection-row')].find(x=>x.dataset.key===k);if(el)el.open=true})}
-function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+liveStatus()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
+function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+liveStatus()+searchPanel()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
 function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()});document.querySelector("[data-refresh-results]")?.addEventListener("click",refreshResults)}
 function knownResultSignature(){
  if(!state.data||!state.ledger)return '';
@@ -223,19 +290,22 @@ function checkedTime(){
 async function refreshResults(){
  if(state.refreshing)return;
  state.refreshing=true;
- state.refreshMessage='Checking published selections and results…';
+ state.refreshMessage='Searching the web for fresh race results and checking the betting ledger…';
  const before=knownResultSignature();
  render();
  let fileOk=false,liveOk=false;
  try{
   fileOk=await load(false);
   liveOk=await loadLive();
+  await searchRaceResults();
  }finally{
   const newResults=knownResultSignature()!==before;
   state.refreshCheckedAt=new Date().toISOString();
   state.refreshing=false;
   if(newResults)state.refreshMessage='Updated at '+checkedTime()+': results or settlement details changed. Bank and strike rates recalculated.';
   else if(!fileOk)state.refreshMessage='Unable to reload published results. Please check your connection and try again.';
+  else if(state.search?.ok)state.refreshMessage='Searched '+state.search.searchCount+' outstanding horses at '+checkedTime()+'. '+state.search.confirmedCount+' results independently corroborated; open Web results search below to inspect sources.';
+  else if(state.searchError)state.refreshMessage='Checked published results, but external web search could not complete. '+state.searchError;
   else if(state.live?.connected && liveOk)state.refreshMessage='Checked at '+checkedTime()+': no new confirmed results available.';
   else state.refreshMessage='Checked at '+checkedTime()+': no newer published results. Live feed is not connected; check Sporting Life for the latest results.';
   render();
@@ -247,7 +317,7 @@ async function load(initial=false){
   if(!r.ok||!l.ok)throw new Error("Unable to load betting records");
   const [raceText,ledgerText]=await Promise.all([r.text(),l.text()]);
   const serial=raceText+ledgerText;
-  if(initial||serial!==state.serial){state.serial=serial;state.data=JSON.parse(raceText);state.ledger=JSON.parse(ledgerText);applyLiveResults();render()}
+  if(initial||serial!==state.serial){state.serial=serial;state.data=JSON.parse(raceText);state.ledger=JSON.parse(ledgerText);applyLiveResults();applyWebConfirmations();render()}
   return true;
  }catch(e){
   if(initial)document.querySelector("#app").innerHTML='<main class="main"><div class="panel">Unable to load racing data or tracker.</div></main>';
@@ -272,6 +342,7 @@ async function loadLive(){
   return false;
  }
 }
+try{if(typeof localStorage!=='undefined')state.webConfirmed=JSON.parse(localStorage.getItem('racing-verified-web-results-v1')||'{}')}catch(e){state.webConfirmed={}}
 load(true).then(loadLive);
 setInterval(()=>{if(!document.hidden&&!state.refreshing){load(false).then(loadLive)}},15000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!state.refreshing){load(false).then(loadLive)}});
