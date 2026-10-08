@@ -44,3 +44,30 @@ BHA and IHRB remain official handicap-rating references. The interface keeps pro
 - TPD adapter: sectionals, position, excess ground and pace upgrades
 
 Racing Post and ATR are not used as brittle/restricted production scrapers.
+
+
+## Near-live race results (Cloudflare Pages)
+
+The frontend requests `/api/live-results` every 15 seconds while the tab is visible.
+The Cloudflare Pages Function caches authorised API responses for 30 seconds,
+then returns **only the runners selected on this site** with their finishing
+positions, starting prices (if the API tier supplies SP), and field sizes.
+A connected live result immediately updates the visible paper-bet tracker.
+The permanent JSON ledger is synchronised by the five-minute GitHub workflow
+using the same Pages endpoint if GitHub does not have separate API credentials.
+
+**Activation (required):**
+1. Register/subscribe at The Racing API: https://www.theracingapi.com/
+2. In Cloudflare: Workers & Pages -> racing-intelligence -> Settings -> Variables and Secrets.
+3. Add production **secret** variables `RACING_API_USERNAME` and
+   `RACING_API_PASSWORD` from The Racing API account (not the website login).
+4. Redeploy the production branch `racing-intelligence`.
+5. Visit `https://racing-intelligence.pages.dev/api/live-results` and check
+   for `"connected":true`; a `"connected":false` response includes a reason.
+
+No secret is embedded in client JavaScript or committed to GitHub.
+Free-tier results provide places/finishes; SP or live market odds need a tier
+that includes them. The Racing API source data currently updates every five
+minutes, and GitHub scheduled workflows can be delayed. The site checks more
+frequently to display new results as soon as they become available.
+Sporting Life is a manual verification link only; scraping is not enabled.
