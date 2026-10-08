@@ -41,10 +41,17 @@
       "comment"
     ]
   },
-  "races_total": 3200,
-  "train_races": 2304,
-  "test_races": 896,
-  "runners_total": 21948,
+  "races_total": 10000,
+  "date_audit": {
+    "first_seen": "2015-01-01",
+    "last_seen": "2022-10-22",
+    "order_violations": 0,
+    "sample_first": "2022-01-01",
+    "sample_last": "2022-10-22"
+  },
+  "train_races": 7184,
+  "test_races": 2795,
+  "runners_total": 67898,
   "features": [
     "field_size",
     "starts_prior",
@@ -81,289 +88,295 @@
   ],
   "test": {
     "form_only": {
-      "strike_rate": 0.28236607142857145,
-      "roi": 0.19781919043092222,
-      "bets": 896
+      "strike_rate": 0.3005366726296959,
+      "roi": 0.17597881840083346,
+      "bets": 2795
     },
     "market_favourite": {
-      "strike_rate": 0.35307262569832404,
-      "roi": 0.060006301891776755,
-      "bets": 895
+      "strike_rate": 0.37190970978144033,
+      "roi": 0.13542694377162307,
+      "bets": 2791
     },
     "fusion": {
-      "strike_rate": 0.36049107142857145,
-      "roi": 0.0999868334644872,
-      "bets": 896,
-      "brier": 0.10715629629616269,
-      "log_loss": 0.3522028513048272
+      "strike_rate": 0.3685152057245081,
+      "roi": 0.1266493190202869,
+      "bets": 2795,
+      "brier": 0.10605485174702882,
+      "log_loss": 0.34843309132710204
     },
     "value": {
       "threshold_ratio": 1.5,
-      "bets": 1550,
-      "strike_rate": 0.07419354838709677,
-      "roi": 0.1940537634408602
+      "bets": 4837,
+      "strike_rate": 0.07111846185652264,
+      "roi": 0.26855488939425265
     }
   },
   "signal_lifts": [
     {
       "signal": "positive jockey upgrade",
-      "runners": 775,
-      "wins": 130,
-      "strike_rate": 0.16774193548387098,
-      "ae": 1.0797443300764624,
-      "roi": 0.07007082165146673
-    },
-    {
-      "signal": "targeting combo (3+ placement signals)",
-      "runners": 453,
-      "wins": 88,
-      "strike_rate": 0.19426048565121412,
-      "ae": 1.0446544999827574,
-      "roi": 0.10237633043924431
-    },
-    {
-      "signal": "previous RPR 5lb+ above current OR",
-      "runners": 850,
-      "wins": 166,
-      "strike_rate": 0.1952941176470588,
-      "ae": 1.0445679889123691,
-      "roi": 0.1137503999268704
-    },
-    {
-      "signal": "distance win rate >0",
-      "runners": 1653,
-      "wins": 299,
-      "strike_rate": 0.1808832425892317,
-      "ae": 1.0367353444728644,
-      "roi": 0.1870838368796626
-    },
-    {
-      "signal": "class drop >=1",
-      "runners": 805,
-      "wins": 137,
-      "strike_rate": 0.1701863354037267,
-      "ae": 1.0263501308496292,
-      "roi": 0.10438432340606257
-    },
-    {
-      "signal": "return to prior winning conditions",
-      "runners": 1474,
-      "wins": 256,
-      "strike_rate": 0.17367706919945725,
-      "ae": 1.0225580351138672,
-      "roi": 0.1513075713296203
-    },
-    {
-      "signal": "course win rate >0",
-      "runners": 807,
-      "wins": 149,
-      "strike_rate": 0.18463444857496902,
-      "ae": 1.018418552903571,
-      "roi": 0.17788052509242108
-    },
-    {
-      "signal": "5lb+ below last winning OR",
-      "runners": 232,
-      "wins": 29,
-      "strike_rate": 0.125,
-      "ae": 1.0102088587516225,
-      "roi": 0.1344109195402299
-    },
-    {
-      "signal": "trainer course strike rate >=15%",
-      "runners": 1291,
-      "wins": 256,
-      "strike_rate": 0.19829589465530598,
-      "ae": 0.9806641536243884,
-      "roi": 0.055050377155334514
+      "runners": 2574,
+      "wins": 412,
+      "strike_rate": 0.16006216006216006,
+      "ae": 1.0653547770882053,
+      "roi": 0.1557615833276799
     },
     {
       "signal": "same course / same time-of-year prior win",
-      "runners": 372,
-      "wins": 75,
-      "strike_rate": 0.20161290322580644,
-      "ae": 0.9762715188011319,
-      "roi": 0.11071224922031381
+      "runners": 1132,
+      "wins": 242,
+      "strike_rate": 0.2137809187279152,
+      "ae": 1.0404559111532325,
+      "roi": 0.23481385859919437
     },
     {
-      "signal": "first/second handicap start",
-      "runners": 755,
-      "wins": 103,
-      "strike_rate": 0.13642384105960265,
-      "ae": 0.9668408940734668,
-      "roi": -0.047725265904073964
+      "signal": "previous RPR 5lb+ above current OR",
+      "runners": 2919,
+      "wins": 569,
+      "strike_rate": 0.19492977046933882,
+      "ae": 1.0305893608332752,
+      "roi": 0.1359305364803823
     },
     {
-      "signal": "trainer race-type strike rate >=15%",
-      "runners": 1087,
-      "wins": 228,
-      "strike_rate": 0.20975160993560257,
-      "ae": 0.960801287627864,
-      "roi": -0.04222311088686433
+      "signal": "trainer course strike rate >=15%",
+      "runners": 4461,
+      "wins": 892,
+      "strike_rate": 0.19995516700291416,
+      "ae": 1.0286147999528394,
+      "roi": 0.06486681954590394
     },
     {
       "signal": "2lb+ below last winning OR",
-      "runners": 396,
-      "wins": 48,
-      "strike_rate": 0.12121212121212122,
-      "ae": 0.9455330866141768,
-      "roi": 0.04863215488215486
+      "runners": 1047,
+      "wins": 131,
+      "strike_rate": 0.1251193887297039,
+      "ae": 1.0151350467137332,
+      "roi": 0.12400750581266326
+    },
+    {
+      "signal": "trainer race-type strike rate >=15%",
+      "runners": 3645,
+      "wins": 766,
+      "strike_rate": 0.2101508916323731,
+      "ae": 1.0104624022098811,
+      "roi": 0.02631533499180558
+    },
+    {
+      "signal": "first/second handicap start",
+      "runners": 1873,
+      "wins": 249,
+      "strike_rate": 0.13294180459156432,
+      "ae": 1.0006557305746215,
+      "roi": 0.13006929298974168
+    },
+    {
+      "signal": "return to prior winning conditions",
+      "runners": 4860,
+      "wins": 820,
+      "strike_rate": 0.16872427983539096,
+      "ae": 0.9889963359323714,
+      "roi": 0.05425747907526784
+    },
+    {
+      "signal": "class drop >=1",
+      "runners": 2303,
+      "wins": 372,
+      "strike_rate": 0.16152844116369952,
+      "ae": 0.9889314564620385,
+      "roi": 0.03122022475040287
     },
     {
       "signal": "trainer 14d strike rate >=15%",
-      "runners": 1477,
-      "wins": 255,
-      "strike_rate": 0.17264725795531483,
-      "ae": 0.9382743096783255,
-      "roi": -0.0869031517643569
+      "runners": 4592,
+      "wins": 816,
+      "strike_rate": 0.17770034843205576,
+      "ae": 0.9833858061722809,
+      "roi": -0.014223934056214513
+    },
+    {
+      "signal": "5lb+ below last winning OR",
+      "runners": 616,
+      "wins": 74,
+      "strike_rate": 0.12012987012987013,
+      "ae": 0.9824146123018889,
+      "roi": -0.02048201167519338
+    },
+    {
+      "signal": "distance win rate >0",
+      "runners": 5513,
+      "wins": 939,
+      "strike_rate": 0.17032468710321058,
+      "ae": 0.978854927348928,
+      "roi": 0.038877789179967134
+    },
+    {
+      "signal": "course win rate >0",
+      "runners": 2493,
+      "wins": 441,
+      "strike_rate": 0.17689530685920576,
+      "ae": 0.9608018550359051,
+      "roi": 0.08248785577305424
+    },
+    {
+      "signal": "targeting combo (3+ placement signals)",
+      "runners": 1283,
+      "wins": 225,
+      "strike_rate": 0.17537022603273578,
+      "ae": 0.9183446738130535,
+      "roi": -0.01636672195908363
     },
     {
       "signal": "best recent TS 5lb+ above OR",
-      "runners": 59,
-      "wins": 8,
-      "strike_rate": 0.13559322033898305,
-      "ae": 0.8345507532146313,
-      "roi": 0.04533898305084741
+      "runners": 189,
+      "wins": 20,
+      "strike_rate": 0.10582010582010581,
+      "ae": 0.8242277032239431,
+      "roi": -0.10274055750246225
     }
   ],
   "confidence_gates": [
     {
       "min_probability": 0.18,
-      "races": 831,
-      "wins": 314,
-      "strike_rate": 0.3778580024067389,
-      "roi": 0.13548521775056072
+      "races": 2646,
+      "wins": 998,
+      "strike_rate": 0.37717309145880573,
+      "roi": 0.1277279919626857
     },
     {
       "min_probability": 0.2,
-      "races": 801,
-      "wins": 305,
-      "strike_rate": 0.3807740324594257,
-      "roi": 0.11898237530260006
+      "races": 2544,
+      "wins": 981,
+      "strike_rate": 0.3856132075471698,
+      "roi": 0.13920398325469077
     },
     {
       "min_probability": 0.22,
-      "races": 751,
-      "wins": 295,
-      "strike_rate": 0.39280958721704395,
-      "roi": 0.13311790850073138
+      "races": 2398,
+      "wins": 948,
+      "strike_rate": 0.39532944120100083,
+      "roi": 0.15054973591879336
     },
     {
       "min_probability": 0.25,
-      "races": 690,
-      "wins": 280,
-      "strike_rate": 0.4057971014492754,
-      "roi": 0.15005538543582028
+      "races": 2181,
+      "wins": 897,
+      "strike_rate": 0.41127922971114167,
+      "roi": 0.16921592544701214
     },
     {
       "min_probability": 0.28,
-      "races": 621,
-      "wins": 267,
-      "strike_rate": 0.42995169082125606,
-      "roi": 0.19804865692546866
+      "races": 1917,
+      "wins": 835,
+      "strike_rate": 0.43557642149191445,
+      "roi": 0.20391754480956334
     },
     {
       "min_probability": 0.3,
-      "races": 569,
-      "wins": 256,
-      "strike_rate": 0.44991212653778556,
-      "roi": 0.23972738597079535
+      "races": 1745,
+      "wins": 782,
+      "strike_rate": 0.4481375358166189,
+      "roi": 0.21691113661887296
     },
     {
       "min_probability": 0.35,
-      "races": 448,
-      "wins": 227,
-      "strike_rate": 0.5066964285714286,
-      "roi": 0.3310545945869607
+      "races": 1274,
+      "wins": 612,
+      "strike_rate": 0.4803767660910518,
+      "roi": 0.23607530094186285
     }
   ],
   "segments": [
     {
       "segment": "handicap",
-      "races": 494,
-      "strike_rate": 0.33805668016194335,
-      "roi": 0.2501569337095652
+      "races": 1434,
+      "strike_rate": 0.33403068340306835,
+      "roi": 0.23892263594146432
+    },
+    {
+      "segment": "nursery",
+      "races": 122,
+      "strike_rate": 0.2459016393442623,
+      "roi": -0.16742010266600424
     },
     {
       "segment": "maiden",
-      "races": 112,
-      "strike_rate": 0.48214285714285715,
-      "roi": 0.0909714045874761
+      "races": 271,
+      "strike_rate": 0.43911439114391143,
+      "roi": 0.039499420218977295
     },
     {
       "segment": "novice",
-      "races": 106,
-      "strike_rate": 0.32075471698113206,
-      "roi": -0.2107530964842284
+      "races": 297,
+      "strike_rate": 0.5084175084175084,
+      "roi": 0.13164356219911774
     },
     {
       "segment": "chase",
-      "races": 27,
-      "strike_rate": 0.3333333333333333,
-      "roi": -0.403057128057128
+      "races": 51,
+      "strike_rate": 0.43137254901960786,
+      "roi": 0.04472727272727283
     },
     {
       "segment": "hurdle",
-      "races": 25,
-      "strike_rate": 0.52,
-      "roi": 0.20600000000000007
+      "races": 64,
+      "strike_rate": 0.3125,
+      "roi": -0.28753407086740407
     },
     {
       "segment": "other",
-      "races": 106,
-      "strike_rate": 0.3584905660377358,
-      "roi": -0.08948773448773444
+      "races": 517,
+      "strike_rate": 0.3713733075435203,
+      "roi": -0.0029201364999031066
     }
   ],
   "calibration": [
     {
       "band": "(-0.001, 0.15]",
-      "n": 9,
-      "avg_model": 0.1397308554150975,
-      "win_rate": 0.0,
-      "roi": -1.0
+      "n": 31,
+      "avg_model": 0.12963261935571763,
+      "win_rate": 0.1935483870967742,
+      "roi": 0.058064516129032163
     },
     {
       "band": "(0.15, 0.2]",
-      "n": 69,
-      "avg_model": 0.17870404862651015,
-      "win_rate": 0.2028985507246377,
-      "roi": 0.08236714975845395
+      "n": 196,
+      "avg_model": 0.17978769440080913,
+      "win_rate": 0.20408163265306123,
+      "roi": 0.019982993197278864
     },
     {
       "band": "(0.2, 0.25]",
-      "n": 119,
-      "avg_model": 0.2245417690990511,
-      "win_rate": 0.21008403361344538,
-      "roi": -0.1364145658263304
+      "n": 373,
+      "avg_model": 0.22473502364106826,
+      "win_rate": 0.23056300268096513,
+      "roi": -0.03753369272237184
     },
     {
       "band": "(0.25, 0.3]",
-      "n": 126,
-      "avg_model": 0.2751044327803177,
-      "win_rate": 0.1984126984126984,
-      "roi": -0.2949333333333334
+      "n": 446,
+      "avg_model": 0.2744889396545644,
+      "win_rate": 0.257847533632287,
+      "roi": -0.03713318284424364
     },
     {
       "band": "(0.3, 0.4]",
-      "n": 235,
-      "avg_model": 0.3483763552267378,
-      "win_rate": 0.3617021276595745,
-      "roi": 0.1892530873381939
+      "n": 820,
+      "avg_model": 0.3457001182997883,
+      "win_rate": 0.374390243902439,
+      "roi": 0.14675628233555066
     },
     {
       "band": "(0.4, 0.5]",
-      "n": 220,
-      "avg_model": 0.4472969344295651,
-      "win_rate": 0.4681818181818182,
-      "roi": 0.2828705763933039
+      "n": 524,
+      "avg_model": 0.43918996226176216,
+      "win_rate": 0.4255725190839695,
+      "roi": 0.25756071218857496
     },
     {
       "band": "(0.5, 1.0]",
-      "n": 118,
-      "avg_model": 0.6011845015838917,
-      "win_rate": 0.6016949152542372,
-      "roi": 0.3321939007320362
+      "n": 405,
+      "avg_model": 0.588704558504178,
+      "win_rate": 0.6246913580246913,
+      "roi": 0.3029826387604165
     }
   ],
   "methodology": {

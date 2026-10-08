@@ -1,47 +1,47 @@
 # 500+ Race Historical Backtest
 
-Analysed **3,200 races / 21,948 runners** with a chronological train/test split.
+Analysed **10,000 races / 67,898 runners** with a chronological train/test split.
 
 ## Unseen-test performance
 
 | Method | Bets | Strike rate | ROI at SP |
 |---|---:|---:|---:|
-| Form/placement model (no market) | 896 | 28.2% | +19.8% |
-| SP favourite baseline | 895 | 35.3% | +6.0% |
-| Fusion: market + independent evidence | 896 | 36.0% | +10.0% |
-| Value overlay (all qualifying runners) | 1550 | 7.4% | +19.4% |
+| Form/placement model (no market) | 2795 | 30.1% | +17.6% |
+| SP favourite baseline | 2791 | 37.2% | +13.5% |
+| Fusion: market + independent evidence | 2795 | 36.9% | +12.7% |
+| Value overlay (all qualifying runners) | 4837 | 7.1% | +26.9% |
 
 ## Targeting / placement signal lift
 
 | Signal | Runners | Win% | A/E | ROI |
 |---|---:|---:|---:|---:|
-| positive jockey upgrade | 775 | 16.8% | 1.08 | +7.0% |
-| targeting combo (3+ placement signals) | 453 | 19.4% | 1.04 | +10.2% |
-| previous RPR 5lb+ above current OR | 850 | 19.5% | 1.04 | +11.4% |
-| distance win rate >0 | 1653 | 18.1% | 1.04 | +18.7% |
-| class drop >=1 | 805 | 17.0% | 1.03 | +10.4% |
-| return to prior winning conditions | 1474 | 17.4% | 1.02 | +15.1% |
-| course win rate >0 | 807 | 18.5% | 1.02 | +17.8% |
-| 5lb+ below last winning OR | 232 | 12.5% | 1.01 | +13.4% |
-| trainer course strike rate >=15% | 1291 | 19.8% | 0.98 | +5.5% |
-| same course / same time-of-year prior win | 372 | 20.2% | 0.98 | +11.1% |
-| first/second handicap start | 755 | 13.6% | 0.97 | -4.8% |
-| trainer race-type strike rate >=15% | 1087 | 21.0% | 0.96 | -4.2% |
-| 2lb+ below last winning OR | 396 | 12.1% | 0.95 | +4.9% |
-| trainer 14d strike rate >=15% | 1477 | 17.3% | 0.94 | -8.7% |
-| best recent TS 5lb+ above OR | 59 | 13.6% | 0.83 | +4.5% |
+| positive jockey upgrade | 2574 | 16.0% | 1.07 | +15.6% |
+| same course / same time-of-year prior win | 1132 | 21.4% | 1.04 | +23.5% |
+| previous RPR 5lb+ above current OR | 2919 | 19.5% | 1.03 | +13.6% |
+| trainer course strike rate >=15% | 4461 | 20.0% | 1.03 | +6.5% |
+| 2lb+ below last winning OR | 1047 | 12.5% | 1.02 | +12.4% |
+| trainer race-type strike rate >=15% | 3645 | 21.0% | 1.01 | +2.6% |
+| first/second handicap start | 1873 | 13.3% | 1.00 | +13.0% |
+| return to prior winning conditions | 4860 | 16.9% | 0.99 | +5.4% |
+| class drop >=1 | 2303 | 16.2% | 0.99 | +3.1% |
+| trainer 14d strike rate >=15% | 4592 | 17.8% | 0.98 | -1.4% |
+| 5lb+ below last winning OR | 616 | 12.0% | 0.98 | -2.0% |
+| distance win rate >0 | 5513 | 17.0% | 0.98 | +3.9% |
+| course win rate >0 | 2493 | 17.7% | 0.96 | +8.2% |
+| targeting combo (3+ placement signals) | 1283 | 17.5% | 0.92 | -1.6% |
+| best recent TS 5lb+ above OR | 189 | 10.6% | 0.82 | -10.3% |
 
 ## Confidence gates
 
 | Min model P | Races | Win% | ROI |
 |---|---:|---:|---:|
-| 18% | 831 | 37.8% | +13.5% |
-| 20% | 801 | 38.1% | +11.9% |
-| 22% | 751 | 39.3% | +13.3% |
-| 25% | 690 | 40.6% | +15.0% |
-| 28% | 621 | 43.0% | +19.8% |
-| 30% | 569 | 45.0% | +24.0% |
-| 35% | 448 | 50.7% | +33.1% |
+| 18% | 2646 | 37.7% | +12.8% |
+| 20% | 2544 | 38.6% | +13.9% |
+| 22% | 2398 | 39.5% | +15.1% |
+| 25% | 2181 | 41.1% | +16.9% |
+| 28% | 1917 | 43.6% | +20.4% |
+| 30% | 1745 | 44.8% | +21.7% |
+| 35% | 1274 | 48.0% | +23.6% |
 
 ## Key integrity rule
 The targeting variables are observable placement patterns (mark, class, course/trip return, trainer patterns). They are **not evidence that connections deliberately ran a horse to lower its mark**.
