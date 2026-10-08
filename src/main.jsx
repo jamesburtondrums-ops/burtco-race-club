@@ -155,22 +155,71 @@ function SponsorShop(){
 
 function SponsorAdmin(){
   const q=new URLSearchParams(location.search),key=q.get('key')||'';
-  const [rows,setRows]=useState([]),[err,setErr]=useState(''),[loading,setLoading]=useState(true);
-  useEffect(()=>{if(!key){setErr('Admin access key required');setLoading(false);return}sb.rpc('sponsorship_admin_orders_v2',{p_key:key}).then(({data,error})=>{if(error)setErr('Access denied');else setRows(data||[]);setLoading(false)})},[key]);
+  const [rows,setRows]=useState([]),[err,setErr]=useState(''),[loading,setLoading]=useState(true),[saving,setSaving]=useState(false),[stock,setStock]=useState({horse_available:0,race_available:0});
+  const [cashType,setCashType]=useState('horse'),[cashName,setCashName]=useState(''),[cashEmail,setCashEmail]=useState(''),[cashQty,setCashQty]=useState(1),[cashEntries,setCashEntries]=useState([{owner_name:'',horse_name:''}]),[cashAmount,setCashAmount]=useState('5'),[cashNotes,setCashNotes]=useState('');
+  async function refresh(){
+    if(!key){setErr('Admin access key required');setLoading(false);return}
+    const [{data,error},{data:availability}]=await Promise.all([sb.rpc('sponsorship_admin_orders_v3',{p_key:key}),sb.rpc('sponsorship_availability')]);
+    if(error)setErr('Access denied');else{setRows(data||[]);setErr('')}
+    if(availability?.[0])setStock(availability[0]);
+    setLoading(false);
+  }
+  useEffect(()=>{refresh()},[key]);
+  function setQty(v){
+    const max=Math.max(1,stock.horse_available||56),n=Math.max(1,Math.min(max,Number(v)||1));
+    setCashQty(n);
+    setCashEntries(prev=>Array.from({length:n},(_,i)=>prev[i]||{owner_name:'',horse_name:''}));
+    if(cashType==='horse')setCashAmount(String(n*5));
+  }
+  function setType(v){
+    setCashType(v);
+    if(v==='race'){setCashQty(1);setCashEntries([{owner_name:'',horse_name:''}]);setCashAmount('50')}
+    else{setCashQty(1);setCashEntries([{owner_name:'',horse_name:''}]);setCashAmount('5')}
+  }
+  function updateEntry(i,k,v){setCashEntries(prev=>prev.map((x,n)=>n===i?{...x,[k]:v}:x))}
+  async function addCash(){
+    if(!cashName.trim())return alert('Enter the sponsor / purchaser name.');
+    let entries=cashType==='horse'?cashEntries.map(x=>({owner_name:x.owner_name.trim(),horse_name:x.horse_name.trim()})):[];
+    if(cashType==='horse'&&entries.some(x=>!x.owner_name||!x.horse_name))return alert('Enter an owner and horse name for every horse.');
+    const pounds=Number(cashAmount);
+    if(!Number.isFinite(pounds)||pounds<0)return alert('Enter a valid cash amount.');
+    setSaving(true);
+    const {error}=await sb.rpc('admin_add_cash_sponsorship',{
+      p_key:key,p_kind:cashType,p_customer_name:cashName.trim(),p_email:cashEmail.trim(),
+      p_entries:entries,p_amount_pence:Math.round(pounds*100),p_notes:cashNotes.trim()
+    });
+    setSaving(false);
+    if(error)return alert(error.message);
+    setCashName('');setCashEmail('');setCashNotes('');setCashQty(1);setCashEntries([{owner_name:'',horse_name:''}]);setCashAmount(cashType==='race'?'50':'5');
+    await refresh();
+  }
   function csv(){
     const esc=v=>'"'+String(v??'').replaceAll('"','""')+'"';
-    const head=['Date','Type','Owner / Sponsor','Email','Horse name','Amount','Status','Stripe session'];
+    const head=['Date','Type','Owner / Sponsor','Email','Horse name','Amount','Payment method','Status','Notes','Stripe session'];
     const data=[];
     rows.forEach(r=>{
       if(r.kind==='horse'&&(r.horse_entries||[]).length){
-        r.horse_entries.forEach(e=>data.push([new Date(r.created_at).toLocaleString(),'Horse',e.owner_name,r.email,e.horse_name,'£5.00',r.payment_status,r.stripe_session_id]));
+        const each=r.quantity?Number(r.amount_pence||0)/r.quantity:0;
+        r.horse_entries.forEach(e=>data.push([new Date(r.created_at).toLocaleString(),'Horse',e.owner_name,r.email,e.horse_name,'£'+(each/100).toFixed(2),r.payment_method||'stripe',r.payment_status,r.admin_notes||'',r.stripe_session_id||'']));
       }else{
-        data.push([new Date(r.created_at).toLocaleString(),r.kind==='horse'?'Horse':'Race',r.customer_name,r.email,(r.horse_names||[]).join(', '),'£'+(r.amount_pence/100).toFixed(2),r.payment_status,r.stripe_session_id]);
+        data.push([new Date(r.created_at).toLocaleString(),r.kind==='horse'?'Horse':'Race',r.customer_name,r.email,(r.horse_names||[]).join(', '),'£'+(r.amount_pence/100).toFixed(2),r.payment_method||'stripe',r.payment_status,r.admin_notes||'',r.stripe_session_id||'']);
       }
     });
     const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([[head,...data].map(x=>x.map(esc).join(',')).join('\n')],{type:'text/csv'}));a.download='race-night-paid-sponsorships.csv';a.click();
   }
-  return <main className="sponsorShop"><section className="sponsorHero"><span className="eyebrow">PRIVATE ADMIN</span><h1>Sponsorship Admin</h1><p>Successful Stripe payments only.</p></section><section className="sponsorForm adminPanel">{loading?<p>Loading…</p>:err?<p>{err}</p>:<><div className="adminSummary"><b>{rows.length} paid orders</b><b>£{(rows.reduce((n,r)=>n+r.amount_pence,0)/100).toFixed(2)} collected</b><button onClick={csv}>DOWNLOAD CSV</button></div><div className="adminTable">{rows.length?rows.map(r=><article key={r.id}><strong>{r.customer_name}</strong><span>{r.kind==='horse'?'Horse':'Race'} × {r.quantity}</span><span>{r.email}</span>{r.kind==='horse'&&(r.horse_entries||[]).length?<div className="adminHorseList">{r.horse_entries.map((e,i)=><span key={i}><b>{e.owner_name}</b> — {e.horse_name}</span>)}</div>:r.kind==='horse'&&<span>{(r.horse_names||[]).join(', ')}</span>}<b>£{(r.amount_pence/100).toFixed(2)}</b><small>{new Date(r.created_at).toLocaleString()}</small></article>):<p>No successful online sponsorship payments yet.</p>}</div></>}</section></main>
+  const cashTotal=rows.filter(r=>r.payment_method==='cash').reduce((n,r)=>n+Number(r.amount_pence||0),0),stripeTotal=rows.filter(r=>r.payment_method!=='cash').reduce((n,r)=>n+Number(r.amount_pence||0),0);
+  return <main className="sponsorShop"><section className="sponsorHero"><span className="eyebrow">PRIVATE ADMIN</span><h1>Sponsorship Admin</h1><p>Track Stripe and cash sponsorship purchases in one place.</p></section><section className="sponsorForm adminPanel">{loading?<p>Loading…</p>:err?<p>{err}</p>:<>
+    <div className="adminSummary"><b>{rows.length} paid orders</b><b>£{((cashTotal+stripeTotal)/100).toFixed(2)} collected</b><span>Stripe £{(stripeTotal/100).toFixed(2)}</span><span>Cash £{(cashTotal/100).toFixed(2)}</span><button onClick={csv}>DOWNLOAD CSV</button></div>
+    <section className="cashSponsorBox">
+      <div className="cashSponsorHead"><div><span className="eyebrow">MANUAL SALE</span><h2>Add cash sponsorship</h2></div><div className="cashStock"><b>{stock.horse_available}</b> horses · <b>{stock.race_available}</b> races left</div></div>
+      <div className="cashTypeButtons"><button className={cashType==='horse'?'selected':''} onClick={()=>setType('horse')}>Horse · £5</button><button className={cashType==='race'?'selected':''} onClick={()=>setType('race')}>Race · £50</button></div>
+      <label>Sponsor / purchaser name<input value={cashName} onChange={e=>setCashName(e.target.value)} placeholder="Name or business"/></label>
+      <label>Email <small>optional</small><input value={cashEmail} onChange={e=>setCashEmail(e.target.value)} placeholder="Optional"/></label>
+      {cashType==='horse'&&<><label>Number of horses<input type="number" min="1" max={Math.max(1,stock.horse_available)} value={cashQty} onChange={e=>setQty(e.target.value)}/></label><div className="cashHorseEntries">{cashEntries.map((entry,i)=><div className="cashHorseRow" key={i}><b>Horse {i+1}</b><input value={entry.owner_name} onChange={e=>updateEntry(i,'owner_name',e.target.value)} placeholder="Owner name"/><input value={entry.horse_name} onChange={e=>updateEntry(i,'horse_name',e.target.value)} placeholder="Horse name"/></div>)}</div></>}
+      <div className="cashFormGrid"><label>Cash received (£)<input type="number" min="0" step="0.01" value={cashAmount} onChange={e=>setCashAmount(e.target.value)}/></label><label>Notes <small>optional</small><input value={cashNotes} onChange={e=>setCashNotes(e.target.value)} placeholder="e.g. paid at bar"/></label></div>
+      <button className="cashAddButton" onClick={addCash} disabled={saving||(cashType==='race'&&stock.race_available<1)||(cashType==='horse'&&stock.horse_available<1)}>{saving?'ADDING…':'ADD CASH SPONSORSHIP'}</button>
+    </section>
+    <div className="adminTable">{rows.length?rows.map(r=><article key={r.id}><div className="adminOrderTitle"><strong>{r.customer_name}</strong><em className={r.payment_method==='cash'?'cashBadge':'stripeBadge'}>{r.payment_method==='cash'?'CASH':'STRIPE'}</em></div><span>{r.kind==='horse'?'Horse':'Race'} × {r.quantity}</span><span>{r.email||'No email'}</span>{r.kind==='horse'&&(r.horse_entries||[]).length?<div className="adminHorseList">{r.horse_entries.map((e,i)=><span key={i}><b>{e.owner_name}</b> — {e.horse_name}</span>)}</div>:r.kind==='horse'&&<span>{(r.horse_names||[]).join(', ')}</span>}<b>£{(r.amount_pence/100).toFixed(2)}</b>{r.admin_notes&&<small>{r.admin_notes}</small>}<small>{new Date(r.created_at).toLocaleString()}</small></article>):<p>No paid sponsorships yet.</p>}</div>
+  </>}</section></main>
 }
-
 function App(){let q=new URLSearchParams(location.search),p=location.pathname,h=location.hostname;return h==='sponsor.burtco.co.uk'&&p==='/'?<SponsorShop/>:p==='/sponsor-admin'?<SponsorAdmin/>:p==='/sponsor'?<SponsorShop/>:q.has('setup')||p==='/setup'?<RaceSetup/>:q.has('host')||p==='/host'?<Host/>:q.has('play')||p==='/play'?<Player/>:<Screen/>}createRoot(document.getElementById('root')).render(<App/>);
