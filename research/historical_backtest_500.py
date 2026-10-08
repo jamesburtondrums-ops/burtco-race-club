@@ -458,6 +458,7 @@ tests={
  "best recent TS 5lb+ above OR": signal_frame.best_ts3_minus_or>=5,
  "course win rate >0": signal_frame.course_win_rate>0,
  "distance win rate >0": signal_frame.dist_win_rate>0,
+ "2-3lb below last winning OR": (signal_frame.lbs_below_last_win_or>=2)&(signal_frame.lbs_below_last_win_or<=3),
  "0-3lb below last winning OR": (signal_frame.lbs_below_last_win_or>=0)&(signal_frame.lbs_below_last_win_or<=3),
  "4-8lb below last winning OR": (signal_frame.lbs_below_last_win_or>=4)&(signal_frame.lbs_below_last_win_or<=8),
  "9lb+ below last winning OR": signal_frame.lbs_below_last_win_or>=9,
@@ -482,6 +483,32 @@ for pthr in [.18,.20,.22,.25,.28,.30,.35,.40,.45,.50,.55,.60]:
     valid=g[np.isfinite(g.sp)]
     gate_rows.append({"min_probability":pthr,"races":len(g),"wins":int(g.won.sum()),"strike_rate":float(g.won.mean()),
                       "roi":float(((valid.won*valid.sp).sum()-len(valid))/len(valid)) if len(valid) else None})
+
+# high-accuracy PRIME gate study: model probability + independent aiming groups
+fp=fusion_picks.copy()
+fp["aim_retained_ability"]=((fp.prev_rpr_minus_or>=5)|(fp.best_rpr3_minus_or>=5)).astype(int)
+fp["aim_target_return"]=((fp.same_course_month_win>=1)|(fp.return_to_win_conditions>=1)).astype(int)
+fp["aim_course_connections"]=((fp.trainer_course_sr>=.15)|(fp.owner_course_sr>=.15)).astype(int)
+fp["aim_booking"]=(fp.jockey_upgrade>=.05).astype(int)
+fp["aim_mark_sweetspot"]=((fp.lbs_below_last_win_or>=2)&(fp.lbs_below_last_win_or<=3)).astype(int)
+fp["aim_groups"]=fp[["aim_retained_ability","aim_target_return","aim_course_connections","aim_booking","aim_mark_sweetspot"]].sum(axis=1)
+
+prime_gate_defs=[
+ ("P>=45%, market favourite", (fp.p_model>=.45)&(fp.market_rank==1)),
+ ("P>=50%, market favourite", (fp.p_model>=.50)&(fp.market_rank==1)),
+ ("P>=55%, market favourite", (fp.p_model>=.55)&(fp.market_rank==1)),
+ ("P>=50%, >=2 aiming groups", (fp.p_model>=.50)&(fp.aim_groups>=2)),
+ ("P>=50%, favourite, >=2 aiming groups", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.aim_groups>=2)),
+ ("P>=55%, >=2 aiming groups", (fp.p_model>=.55)&(fp.aim_groups>=2)),
+ ("P>=50%, >=3 aiming groups", (fp.p_model>=.50)&(fp.aim_groups>=3)),
+]
+prime_gates=[]
+for label,mask in prime_gate_defs:
+    g=fp[mask]
+    if len(g)>=20:
+        valid=g[np.isfinite(g.sp)]
+        prime_gates.append({"gate":label,"races":len(g),"wins":int(g.won.sum()),"strike_rate":float(g.won.mean()),
+                            "roi":float(((valid.won*valid.sp).sum()-len(valid))/len(valid)) if len(valid) else None})
 
 # segment results
 segments=[]
@@ -554,6 +581,7 @@ summary={
  },
  "signal_lifts":signals,
  "confidence_gates":gate_rows,
+ "prime_gates":prime_gates,
  "segments":segments,
  "calibration":cal,
  "agreement":agreement,
