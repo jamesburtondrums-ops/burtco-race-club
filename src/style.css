@@ -389,3 +389,13 @@ transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;
  .auctionLotCard b{font-size:12px}.auctionLotCard span{font-size:10px}
  .auctionPhone .auctionImage,.auctionPhone .auctionFallback{height:220px}
 }
+
+/* Sponsorship admin cash entry */
+.cashSponsorBox{margin:24px 0 30px;padding:22px;border:1px solid #18392b26;border-radius:20px;background:#f9f5e9}
+.cashSponsorHead{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:16px}.cashSponsorHead h2{margin:5px 0 0}.cashStock{font-size:14px;background:#fff;padding:10px 12px;border-radius:12px;white-space:nowrap}
+.cashTypeButtons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.cashTypeButtons button{background:#fff;color:#18392b;border:1px solid #18392b24;box-shadow:none}.cashTypeButtons button.selected{background:#18392b;color:#fff}
+.cashHorseEntries{display:grid;gap:10px;margin:10px 0 16px}.cashHorseRow{display:grid;grid-template-columns:90px 1fr 1fr;gap:8px;align-items:center;background:#fff;padding:10px;border-radius:12px;border:1px solid #18392b18}.cashHorseRow input{margin:0}
+.cashFormGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.cashAddButton{width:100%;margin-top:12px;min-height:56px}
+.adminOrderTitle{display:flex;align-items:center;justify-content:space-between;gap:12px}.adminOrderTitle em{font-style:normal;font-size:11px;font-weight:900;letter-spacing:1px;padding:6px 9px;border-radius:999px}.cashBadge{background:#dff0d8;color:#24543f}.stripeBadge{background:#eee8ff;color:#5b45a1}
+.adminSummary span{font-size:13px;opacity:.75}
+@media(max-width:650px){.cashSponsorHead{display:block}.cashStock{display:inline-block;margin-top:10px}.cashHorseRow{grid-template-columns:1fr}.cashFormGrid{grid-template-columns:1fr}.cashTypeButtons{grid-template-columns:1fr 1fr}}
