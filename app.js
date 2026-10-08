@@ -42,63 +42,6 @@ function today(){
  ${others.length?`<div class="section-head"><div><h3>Other selections</h3><p>Stars represent confidence in the data for win purposes — not value.</p></div></div><div class="pick-grid">${others.map(card).join("")}</div>`:""}
  `;
 }
-function systemV4(){
- const s=state.data.systemV4;
- const gradeRows=[s.grades.PRIME,s.grades.five,s.grades.four,s.grades.three,s.grades.two,s.grades.one];
- return `<section class="hero"><div class="hero-main"><div class="eyebrow">SYSTEM V4.2 CONTEXT MODEL · 10,000-RACE BACKTEST</div><h2>Context now refines probability instead of blocking good selections with rigid rules.</h2><p>The model combines ability and market probability with class/grade/value placement, trainer context, stable run-to-form, horse-jockey partnership, pace, going and targeting.</p></div><div class="status-panel"><div class="status-row"><span>Historical races</span><strong>${s.backtest.races.toLocaleString()}</strong></div><div class="status-row"><span>Unseen test races</span><strong>${s.backtest.unseenTestRaces.toLocaleString()}</strong></div><div class="status-row"><span>Clean market races</span><strong>${s.backtest.validMarketTestRaces.toLocaleString()}</strong></div><div class="status-row"><span>55% gate benchmark</span><strong>${s.backtest.prime55.strikeRate}%</strong></div></div></section>
- <div class="section-head"><div><h3>Confidence ladder</h3><p>Observed historical calibration is shown beside each rule.</p></div></div>
- <div class="panel grading-panel">
-   <div class="grade-rule prime-rule"><b>PRIME</b><span>${s.grades.PRIME.rule}<br><small>${s.grades.PRIME.observed}</small></span></div>
-   <div class="grade-rule"><b>★★★★★</b><span>${s.grades.five.rule}<br><small>${s.grades.five.observed}</small></span></div>
-   <div class="grade-rule"><b>★★★★☆</b><span>${s.grades.four.rule}<br><small>${s.grades.four.observed}</small></span></div>
-   <div class="grade-rule"><b>★★★☆☆</b><span>${s.grades.three.rule}<br><small>${s.grades.three.observed}</small></span></div>
-   <div class="grade-rule"><b>★★☆☆☆</b><span>${s.grades.two.rule}<br><small>${s.grades.two.observed}</small></span></div>
-   <div class="grade-rule"><b>★☆☆☆☆</b><span>${s.grades.one.rule}</span></div>
- </div>
- <div class="section-head"><div><h3>Dynamic PRIME routes</h3><p>V4.2 changes the threshold only where the historical test supports it.</p></div></div>
- <div class="panel decision-gates">
-   <div><b>General</b><span>Favourite at ≥55% model probability. Historical unseen benchmark: 72.0% winners.</span></div>
-   <div><b>Maiden / Novice</b><span>Favourite at ≥50% when unexposed and pedigree/context checks are complete. Benchmark: 71.4%.</span></div>
-   <div><b>Course + Class</b><span>At ≥55%, a trainer ≥15% at this course in this class lifted the historical win rate to 78.3%.</span></div>
-   <div><b>Course + Grade</b><span>At ≥55%, a trainer ≥15% at this course in this grade produced 74.0% winners.</span></div>
-   <div><b>Nursery / Hurdle</b><span>Use greater caution; normally seek ~60% or unusually strong contextual agreement.</span></div>
-   <div><b>No hard lead rule</b><span>Model lead, pace, aiming counts and draw now influence probability rather than automatically blocking a selection.</span></div>
- </div>
- <div class="section-head"><div><h3>Race-type rules</h3></div></div>
- <div class="source-grid">${Object.entries(s.accuracyMode.raceTypeRules).map(([k,v])=>`<div class="source-card"><h4>${k.toUpperCase()}</h4><p>${v}</p></div>`).join("")}</div>
- <div class="section-head"><div><h3>Evidence groups</h3><p>Independent evidence is more important than stacking correlated statistics.</p></div></div>
- <div class="panel check-list">${(s.contextModel?.factors||[]).map(g=>`<div class="check-group"><div class="check-title"><b>${g}</b><strong>V4.2 INPUT</strong></div></div>`).join("")}</div>
- <div class="section-head"><div><h3>Hard PRIME blocks</h3></div></div><div class="panel"><ul class="protocol-list">${s.hardBlocks.map(x=>`<li>${x}</li>`).join("")}</ul></div>
- <div class="section-head"><div><h3>Price / ROI policy</h3></div></div><div class="panel"><div class="alert"><strong>${s.pricePolicy.status}</strong><br><span class="meta">${s.pricePolicy.reason} ${s.pricePolicy.currentUse}</span></div></div>`;
-}
-function grading(){
- const g=state.data.gradingSystem;
- return `<div class="section-head"><div><h3>Grading system</h3><p>Chance and price are deliberately separated.</p></div></div>
- <div class="panel grading-panel"><div class="grade-rule prime-rule"><b>PRIME</b><span>${g.PRIME}<br><small>${state.data.scoringModel.primeRule}</small></span></div><div class="grade-rule"><b>STRONG</b><span>${g.STRONG}</span></div><div class="grade-rule"><b>VALUE</b><span>${g.VALUE}</span></div><div class="grade-rule"><b>SPECULATIVE</b><span>${g.SPECULATIVE}</span></div><div class="grade-rule"><b>WATCH</b><span>${g.WATCH}</span></div></div>
- <div class="section-head"><div><h3>Win-confidence scoring</h3><p>Stars are calculated, not manually assigned.</p></div></div><div class="panel"><div class="star-legend"><b>★★★★★</b><span>76–81/100 (PRIME begins at 82 with extra safeguards)</span><b>★★★★☆</b><span>68–75/100</span><b>★★★☆☆</b><span>58–67/100</span><b>★★☆☆☆</b><span>48–57/100</span><b>★☆☆☆☆</b><span>0–47/100</span></div></div>`;
-}
-function checks(){
- const s=state.data.systemV4, rules=s.contextModel?.liveRules||{};
- return `<section class="hero"><div class="hero-main"><div class="eyebrow">V4.2 FULL RACE CHECK</div><h2>Every selection is built from race context, not a single ratings number.</h2><p>Class, grade and prize value are checked separately, alongside trainer placement, partnership, pace, conditions, handicap position and the live market.</p></div><div class="status-panel"><div class="status-row"><span>Historical races</span><strong>${s.backtest.races.toLocaleString()}</strong></div><div class="status-row"><span>Context factors</span><strong>${s.contextModel.factors.length}</strong></div><div class="status-row"><span>55% benchmark</span><strong>${s.backtest.prime55.strikeRate}%</strong></div></div></section>
- <div class="section-head"><div><h3>Factors checked on every relevant runner</h3></div></div>
- <div class="panel check-list">${s.contextModel.factors.map((x,i)=>`<div class="check-group"><div class="check-title"><b>${x}</b><strong>${String(i+1).padStart(2,"0")}</strong></div></div>`).join("")}</div>
- <div class="section-head"><div><h3>How the context is interpreted</h3></div></div>
- <div class="source-grid">${Object.entries(rules).map(([k,v])=>`<div class="source-card"><h4>${k.replace(/([A-Z])/g," $1").toUpperCase()}</h4><p>${v}</p></div>`).join("")}</div>
- <div class="section-head"><div><h3>Best validated interactions</h3><p>These are supporting context, not automatic bets.</p></div></div>
- <div class="table-wrap"><table><thead><tr><th>Factor</th><th>Condition</th><th>Sample</th><th>Winners</th><th>Strike</th></tr></thead><tbody>${(s.contextModel.latestInteractionAudit||[]).map(x=>`<tr><td class="horse">${x.factor}</td><td>${x.condition}</td><td>${x.races}</td><td>${x.wins}</td><td><strong>${x.strikeRate}%</strong></td></tr>`).join("")}</tbody></table></div>
- <div class="section-head"><div><h3>Hard blocks</h3></div></div><div class="panel"><ul class="protocol-list">${s.hardBlocks.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;
-}
-function backtest(){
- const b=state.data.pilotBacktest,m=b.metrics,v3=state.data.confidenceMethodV3;
- const metric=(title,x)=>`<div class="signal-card"><div class="label">${title}</div><h4>${x.wins}/${x.bets} winners</h4><div class="status-row"><span>Strike rate</span><strong>${x.strikeRate}%</strong></div><div class="status-row"><span>ROI at ISP</span><strong>${x.roi>0?"+":""}${x.roi}%</strong></div></div>`;
- return `<section class="hero"><div class="hero-main"><div class="eyebrow">HISTORICAL PILOT</div><h2>Use old races to test the confidence logic before trusting it live.</h2><p>${b.warning}</p></div><div class="status-panel"><div class="status-row"><span>Sample</span><strong>12 races</strong></div><div class="status-row"><span>Best accuracy subset</span><strong>Model + market agreement</strong></div><div class="status-row"><span>Status</span><strong>${v3.status}</strong></div></div></section>
- <div class="section-head"><div><h3>Pilot results</h3><p>The unusually high ROI shows why this sample must not be extrapolated.</p></div></div>
- <div class="cards">${metric("Blind model pick",m.blindModel)}${metric("Favourite baseline",m.favouriteBaseline)}${metric("Model + market agreement",m.modelMarketAgreement)}${metric("Hard evidence + shortening",m.hardEvidencePlusShortening)}</div>
- <div class="section-head"><div><h3>Race-by-race</h3></div></div><div class="table-wrap"><table><thead><tr><th>Race</th><th>Pick</th><th>Forecast</th><th>SP</th><th>Result</th><th>Market</th></tr></thead><tbody>${b.races.map(r=>`<tr><td>${r.race}</td><td class="horse">${r.pick}</td><td>${r.forecast}</td><td>${r.sp}</td><td><strong>${r.result}</strong></td><td>${r.marketAgreement?"Model + market agree":r.shortened?"Shortened":"Drifted"}</td></tr>`).join("")}</tbody></table></div>
- <div class="section-head"><div><h3>Confidence method V3</h3><p>Market prior + independent evidence, with VALUE handled separately.</p></div></div>
- <div class="source-grid"><div class="source-card"><h4>Accuracy lane</h4><ul>${v3.accuracyLane.map(x=>`<li>${x}</li>`).join("")}</ul></div><div class="source-card"><h4>Value lane</h4><ul>${v3.valueLane.map(x=>`<li>${x}</li>`).join("")}</ul></div></div>
- <div class="section-head"><div><h3>Before we call it calibrated</h3></div></div><div class="panel"><ol class="protocol-list">${v3.calibrationPlan.map(x=>`<li>${x}</li>`).join("")}</ol></div>`;
-}
 function longshots(){
  const d=state.data, ls=d.longshotsToday||[];
  return `<section class="hero longshot-hero"><div class="hero-main"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Big-price runners with a credible route into the places.</h2><p>${d.longshotsPolicy.publicNote}</p></div><div class="status-panel"><div class="status-row"><span>Minimum price</span><strong>${d.longshotsPolicy.minOdds}</strong></div><div class="status-row"><span>Candidates</span><strong>${ls.length}</strong></div><div class="status-row"><span>Updated</span><strong>13:48 BST</strong></div></div></section>
