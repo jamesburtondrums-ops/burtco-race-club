@@ -252,10 +252,11 @@
       "placeStake": 5,
       "selectionOdds": "14/1",
       "settlementOdds": null,
-      "ewFraction": null,
-      "placesPaid": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
       "terms": "12-runner Class 4 handicap; each-way terms vary",
-      "result": null
+      "result": null,
+      "runnerCount": 12
     },
     {
       "id": "2026-10-08|ayr|16:05|monsieur kodi|each-way",
@@ -268,10 +269,11 @@
       "placeStake": 5,
       "selectionOdds": "18/1",
       "settlementOdds": null,
-      "ewFraction": null,
-      "placesPaid": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
       "terms": "10 runners; check bookmaker each-way terms",
-      "result": null
+      "result": null,
+      "runnerCount": 10
     },
     {
       "id": "2026-10-08|ayr|16:38|toralou|each-way",
@@ -284,10 +286,11 @@
       "placeStake": 5,
       "selectionOdds": "12/1–14/1",
       "settlementOdds": null,
-      "ewFraction": null,
-      "placesPaid": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
       "terms": "14-runner handicap; attractive each-way shape",
-      "result": null
+      "result": null,
+      "runnerCount": 14
     },
     {
       "id": "2026-10-08|tramore|15:55|ray gun|each-way",
@@ -300,10 +303,11 @@
       "placeStake": 5,
       "selectionOdds": "12/1–16/1",
       "settlementOdds": null,
-      "ewFraction": null,
-      "placesPaid": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
       "terms": "8 runners; standard place terms usually 3 places only if bookmaker offers",
-      "result": null
+      "result": null,
+      "runnerCount": 8
     },
     {
       "id": "2026-10-08|market rasen|15:06|cap ricochet|each-way",
@@ -316,8 +320,8 @@
       "placeStake": 5,
       "selectionOdds": "10/1",
       "settlementOdds": "10/1",
-      "ewFraction": null,
-      "placesPaid": null,
+      "ewFraction": 0.25,
+      "placesPaid": 2,
       "terms": "6 runners; each-way terms may be only 2 places",
       "result": {
         "position": 1,
@@ -325,7 +329,8 @@
         "sp": "10/1",
         "source": "The Sun Racing",
         "updatedAt": "2026-10-08T15:35:00+01:00"
-      }
+      },
+      "runnerCount": 6
     },
     {
       "id": "2026-10-08|market rasen|16:16|mistral blue|each-way",
@@ -338,10 +343,11 @@
       "placeStake": 5,
       "selectionOdds": "10/1–11/1 best",
       "settlementOdds": null,
-      "ewFraction": null,
-      "placesPaid": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
       "terms": "8 runners; 3-place each-way market available",
-      "result": null
+      "result": null,
+      "runnerCount": 8
     },
     {
       "id": "2026-10-08|southwell|20:00|eagle storm|each-way",
@@ -354,7 +360,7 @@
       "placeStake": 5,
       "selectionOdds": "20/1–28/1",
       "settlementOdds": null,
-      "ewFraction": null,
+      "ewFraction": 0.25,
       "placesPaid": null,
       "terms": "Typical market: 1/5 odds, 3 places",
       "result": null
@@ -370,10 +376,11 @@
       "placeStake": 5,
       "selectionOdds": "20/1",
       "settlementOdds": null,
-      "ewFraction": null,
-      "placesPaid": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
       "terms": "13-runner beginners chase; check bookmaker place terms",
-      "result": null
+      "result": null,
+      "runnerCount": 13
     },
     {
       "id": "2026-10-08|thurles|17:20|pampar lady|each-way",
@@ -386,7 +393,7 @@
       "placeStake": 5,
       "selectionOdds": "20/1 forecast",
       "settlementOdds": null,
-      "ewFraction": null,
+      "ewFraction": 0.25,
       "placesPaid": null,
       "terms": "Large-field handicap; take only if 20/1+ remains available",
       "result": null
@@ -402,10 +409,15 @@
       "placeStake": 5,
       "selectionOdds": "66/1",
       "settlementOdds": null,
-      "ewFraction": null,
-      "placesPaid": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
       "terms": "14-runner novice; check live each-way terms",
-      "result": null
+      "result": null,
+      "runnerCount": 14
     }
-  ]
+  ],
+  "placePolicy": {
+    "fraction": 0.25,
+    "rule": "Four or fewer runners: 1 place; five to seven: 2 places; eight or more: 3 places"
+  }
 }
