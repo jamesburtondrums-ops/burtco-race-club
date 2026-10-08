@@ -985,7 +985,7 @@
       }
     }
   ],
-  "longshotsUpdatedAt": "2026-10-08T13:59:00+01:00",
+  "longshotsUpdatedAt": "2026-10-08T14:02:00+01:00",
   "longshotsPolicy": {
     "publicNote": "Only runners available or forecast at 20/1+ qualify. Each-way appeal is about the chance of outrunning the price and reaching the places; it is separate from the main win-confidence selections.",
     "minOdds": "20/1",
@@ -1065,6 +1065,24 @@
       "reason": "A debutant with a pedigree that makes today's mile plausible: by Without Parole, out of a dam who won around a mile, and a half-brother won from 6f to roughly 7½f. Draw 2 is useful and the 25/1 price allows for the obvious lack of race experience.",
       "risk": "Jonathan Portman's yard was 0-16 with 2yo newcomers this season in the available pre-race data, so this is pedigree-led rather than trainer-debut confidence.",
       "source": "Timeform / Saturday Racing / Sporting Life"
+    },
+    {
+      "horse": "Maeveontime",
+      "course": "Southwell",
+      "time": "20:00",
+      "odds": "22/1–25/1",
+      "ewStars": 3,
+      "placeView": "PEDIGREE E/W ANGLE",
+      "terms": "1/5 odds, 3 places widely available",
+      "tags": [
+        "26,000GNS YEARLING",
+        "HALF-SISTER TO 6 WINNERS",
+        "SUPREMACY FILLY",
+        "3-PLACE RACE"
+      ],
+      "reason": "A newcomer rather than a exposed no-hoper: she is a 26,000gns yearling and a half-sister to six winners. At 22/1–25/1 in a race dominated by Dorigo, the appeal is that a competent debut can put her into the minor places without needing to beat the favourite.",
+      "risk": "No racecourse evidence yet, so this remains market-and-pedigree led and should be treated below Eagle Storm on each-way confidence.",
+      "source": "HorseRacing.net / Sporting Life"
     }
   ]
 }
