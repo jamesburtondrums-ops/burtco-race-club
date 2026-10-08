@@ -158,14 +158,19 @@ for (const { selection } of selections) {
   }
 }
 
+if (!oddsChanges && !resultChanges) {
+  console.log(`Live refresh checked via ${feedName}: no odds or result changes.`);
+  process.exit(0);
+}
+
 data.liveFeed = {
   provider: feedName,
   refreshedAt: now,
   oddsChanges,
   resultChanges
 };
-data.resultsUpdatedAt = resultChanges ? now : (data.resultsUpdatedAt || null);
-data.oddsUpdatedAt = now;
+if (resultChanges) data.resultsUpdatedAt = now;
+if (oddsChanges) data.oddsUpdatedAt = now;
 
 await fs.writeFile(file, JSON.stringify(data, null, 2) + '\n');
 console.log(`Live refresh complete via ${feedName}: ${oddsChanges} odds changes, ${resultChanges} result changes.`);
