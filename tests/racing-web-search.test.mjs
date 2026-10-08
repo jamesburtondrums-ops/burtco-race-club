@@ -13,7 +13,7 @@ let mockRss=rss([first,second,forecast]);
 const context=vm.createContext({URL,Request,Response,AbortController,setTimeout,clearTimeout,console,
  fetch:async url=>({ok:true,text:async()=>mockRss})});
 const search=vm.runInContext(src+';onRequestGet',context);
-const env={ASSETS:{fetch:async()=>({ok:true,json:async()=>({snapshotDate:races.snapshotDate,todaySelections:[selected]})})}};
+const env={ASSETS:{fetch:async()=>({ok:true,json:async()=>({snapshotDate:'2026-10-08',todaySelections:[selected]})})}};
 const invoke=async()=>{
  const res=await search({request:new Request('https://racing-intelligence.pages.dev/api/search-results?horse=Aighear'),env});
  return res.json();
