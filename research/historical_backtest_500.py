@@ -184,6 +184,11 @@ def rate(stats):
 horse_hist=defaultdict(lambda: deque(maxlen=12))
 trainer_events=defaultdict(deque)
 jockey_events=defaultdict(deque)
+trainer_rtf_events=defaultdict(deque)
+jockey_rtf_events=defaultdict(deque)
+trainer_rtf_all=defaultdict(lambda:[0,0.0])
+jockey_rtf_all=defaultdict(lambda:[0,0.0])
+horse_jockey_rpr=defaultdict(lambda:[0,0.0])
 trainer_course=defaultdict(lambda:[0,0])
 trainer_type=defaultdict(lambda:[0,0])
 tj_combo=defaultdict(lambda:[0,0])
@@ -216,6 +221,18 @@ def recent_rate(events, who, day, days):
 def rate_place(stats):
     n,w,p=stats
     return (w/n if n>=3 else np.nan, p/n if n>=3 else np.nan)
+
+
+def recent_avg_metric(events, who, day, days):
+    q=events[who]
+    cutoff=day-timedelta(days=60)
+    while q and q[0][0]<cutoff: q.popleft()
+    vals=[x for d,x in q if d>=day-timedelta(days=days) and np.isfinite(x)]
+    return float(np.mean(vals)) if len(vals)>=5 else np.nan
+
+def avg_metric(stats, min_n=5):
+    n,total=stats
+    return total/n if n>=min_n else np.nan
 
 def hist_rate(hist, predicate, wins=False):
     arr=[h for h in hist if predicate(h)]
@@ -264,6 +281,11 @@ def feature_row(r, day, field_size, current_race_value=np.nan, current_grade=10,
     jockey14=recent_rate(jockey_events,jockey,day,14) if jockey else np.nan
     prev_jockey14=recent_rate(jockey_events,last_jockey,day,14) if last_jockey else np.nan
     trainer_base=rate(trainer_all[trainer]) if trainer else np.nan
+    trainer_rtf_base=avg_metric(trainer_rtf_all[trainer]) if trainer else np.nan
+    trainer_rtf14=recent_avg_metric(trainer_rtf_events,trainer,day,14) if trainer else np.nan
+    trainer_rtf30=recent_avg_metric(trainer_rtf_events,trainer,day,30) if trainer else np.nan
+    jockey_rtf30=recent_avg_metric(jockey_rtf_events,jockey,day,30) if jockey else np.nan
+    hj_rpr_uplift=avg_metric(horse_jockey_rpr[(horse,jockey)],3) if horse and jockey else np.nan
     trainer14_now=recent_rate(trainer_events,trainer,day,14) if trainer else np.nan
     trainer30_now=recent_rate(trainer_events,trainer,day,30) if trainer else np.nan
     hj_win,hj_place=rate_place(horse_jockey[(horse,jockey)]) if horse and jockey else (np.nan,np.nan)
@@ -303,6 +325,11 @@ def feature_row(r, day, field_size, current_race_value=np.nan, current_grade=10,
       "trainer_base_sr":trainer_base,
       "trainer14_vs_base":trainer14_now-trainer_base if np.isfinite(trainer14_now) and np.isfinite(trainer_base) else np.nan,
       "trainer30_vs_base":trainer30_now-trainer_base if np.isfinite(trainer30_now) and np.isfinite(trainer_base) else np.nan,
+      "trainer_rtf14":trainer_rtf14,
+      "trainer_rtf30":trainer_rtf30,
+      "trainer_rtf14_vs_base":trainer_rtf14-trainer_rtf_base if np.isfinite(trainer_rtf14) and np.isfinite(trainer_rtf_base) else np.nan,
+      "jockey_rtf30":jockey_rtf30,
+      "horse_jockey_rpr_uplift":hj_rpr_uplift,
       "trainer_course_sr":rate(trainer_course[(trainer,course)]) if trainer else np.nan,
       "trainer_type_sr":rate(trainer_type[(trainer,rt)]) if trainer else np.nan,
       "trainer_handicap_sr":rate(trainer_handicap[(trainer,current_is_handicap)]) if trainer else np.nan,
@@ -358,6 +385,9 @@ def update_states(r, day, current_race_value=np.nan, current_grade=10):
     dist=dist_furlongs(r.get("dist") or r.get("distance")); going=going_cat(r.get("going"))
     cur_or=fnum(r.get("or") or r.get("official_rating")); rpr=fnum(r.get("rpr")); ts=fnum(r.get("ts") or r.get("topspeed"))
     cl=class_num(r); sire=clean_name(r.get("sire")); dam=clean_name(r.get("dam"))
+    prior_rprs=[h["rpr"] for h in list(horse_hist[horse])[-3:] if np.isfinite(h.get("rpr",np.nan))]
+    expected_rpr=float(np.mean(prior_rprs)) if len(prior_rprs)>=2 else np.nan
+    rpr_delta=rpr-expected_rpr if np.isfinite(rpr) and np.isfinite(expected_rpr) else np.nan
     style=run_style_from_comment(r.get("comment"))
     is_hcap=int(rt in ("handicap","nursery"))
     vb=value_band(current_race_value)
@@ -378,7 +408,14 @@ def update_states(r, day, current_race_value=np.nan, current_grade=10):
             trainer_course_class[(trainer,course,cl)][0]+=1; trainer_course_class[(trainer,course,cl)][1]+=int(win)
         trainer_course_grade[(trainer,course,current_grade)][0]+=1; trainer_course_grade[(trainer,course,current_grade)][1]+=int(win)
         trainer_value_band[(trainer,vb)][0]+=1; trainer_value_band[(trainer,vb)][1]+=int(win)
-    if jockey: jockey_events[jockey].append((day,win))
+    if trainer and np.isfinite(rpr_delta):
+        trainer_rtf_events[trainer].append((day,rpr_delta)); trainer_rtf_all[trainer][0]+=1; trainer_rtf_all[trainer][1]+=float(rpr_delta)
+    if jockey:
+        jockey_events[jockey].append((day,win))
+        if np.isfinite(rpr_delta):
+            jockey_rtf_events[jockey].append((day,rpr_delta)); jockey_rtf_all[jockey][0]+=1; jockey_rtf_all[jockey][1]+=float(rpr_delta)
+    if horse and jockey and np.isfinite(rpr_delta):
+        horse_jockey_rpr[(horse,jockey)][0]+=1; horse_jockey_rpr[(horse,jockey)][1]+=float(rpr_delta)
     if horse and jockey:
         horse_jockey[(horse,jockey)][0]+=1; horse_jockey[(horse,jockey)][1]+=int(win); horse_jockey[(horse,jockey)][2]+=int(place)
     if trainer and jockey: tj_combo[(trainer,jockey)][0]+=1; tj_combo[(trainer,jockey)][1]+=int(win)
@@ -490,6 +527,7 @@ features=[c for c in [
  "lbs_below_last_win_or","prev_rpr_minus_or","best_rpr3_minus_or","best_ts3_minus_or","course_win_rate","dist_win_rate",
  "going_win_rate","cd_place_rate","class_drop","same_course_month_win","return_to_win_conditions","handicap_start_no",
  "trainer14","trainer30","trainer_base_sr","trainer14_vs_base","trainer30_vs_base",
+ "trainer_rtf14","trainer_rtf30","trainer_rtf14_vs_base","jockey_rtf30","horse_jockey_rpr_uplift",
  "trainer_course_sr","trainer_type_sr","trainer_handicap_sr","trainer_course_handicap_sr","trainer_course_class_sr","trainer_course_grade_sr","trainer_value_band_sr",
  "jockey14","jockey_upgrade","trainer_jockey_sr","horse_jockey_win_sr","horse_jockey_place_sr",
  "preferred_style","course_style_sr","projected_leaders","pace_fit","draw_percentile","draw_bias_sr",
@@ -617,6 +655,11 @@ tests={
  "same-grade win rate >0": signal_frame.grade_win_rate>0,
  "dropping race value >=25%": signal_frame.value_change_log<=math.log(.75),
  "rising race value >=25%": signal_frame.value_change_log>=math.log(1.25),
+ "trainer RTF +3lb recent": signal_frame.trainer_rtf14>=3,
+ "trainer RTF +5lb recent": signal_frame.trainer_rtf14>=5,
+ "trainer RTF +3lb vs baseline": signal_frame.trainer_rtf14_vs_base>=3,
+ "jockey RTF +3lb recent": signal_frame.jockey_rtf30>=3,
+ "horse-jockey RPR uplift +3lb": signal_frame.horse_jockey_rpr_uplift>=3,
  "historically favourable draw tertile": signal_frame.draw_bias_sr>=.15,
  "clear market shape gap >=10pp": signal_frame.market_gap_top2>=.10,
  "clear market shape gap >=15pp": signal_frame.market_gap_top2>=.15,
@@ -687,6 +730,9 @@ acc_defs += [
  ("P>=55 favourite + positive pace fit", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.pace_fit>=.6)),
  ("P>=55 favourite + value drop >=25%", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.value_change_log<=math.log(.75))),
  ("P>=55 favourite + draw bias", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.draw_bias_sr>=.15)),
+ ("P>=55 favourite + trainer RTF +3lb", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.trainer_rtf14>=3)),
+ ("P>=50 favourite + trainer RTF +3lb", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.trainer_rtf14>=3)),
+ ("P>=55 favourite + horse-jockey RPR uplift", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.horse_jockey_rpr_uplift>=3)),
  ("P>=50 favourite + market gap >=10pp", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.market_gap_top2>=.10)),
  ("P>=50 favourite + market gap >=15pp", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.market_gap_top2>=.15)),
  ("P>=55 favourite + market gap >=10pp", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.market_gap_top2>=.10)),
