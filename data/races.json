@@ -377,7 +377,16 @@
         ],
         "isPrime": false,
         "stars": 5
-      }
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "13/8",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/thurles/942170/killinan-handicap",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 5
     },
     {
       "horse": "Ratemenow",
@@ -597,7 +606,16 @@
         ],
         "isPrime": false,
         "stars": 5
-      }
+      },
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "11/8",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/ayr/942393/san-miguel-handicap",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 10
     },
     {
       "horse": "Tutu Twist",
@@ -819,7 +837,16 @@
         ],
         "isPrime": false,
         "stars": 4
-      }
+      },
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "7/4",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/market-rasen/942380/market-rasen-racecourse-caravan-park-mares-handicap-hurdle",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 8
     },
     {
       "horse": "Rattledelatch",
@@ -1017,7 +1044,16 @@
         ],
         "isPrime": false,
         "stars": 4
-      }
+      },
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "5/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/southwell/942855/follow-attheraces-on-instagram-nursery",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 7
     }
   ],
   "longshotsUpdatedAt": "2026-10-08T14:04:00+01:00",
@@ -1099,7 +1135,16 @@
       ],
       "reason": "A debutant with a pedigree that makes today's mile plausible: by Without Parole, out of a dam who won around a mile, and a half-brother won from 6f to roughly 7½f. Draw 2 is useful and the 25/1 price allows for the obvious lack of race experience.",
       "risk": "Jonathan Portman's yard was 0-16 with 2yo newcomers this season in the available pre-race data, so this is pedigree-led rather than trainer-debut confidence.",
-      "source": "Timeform / Saturday Racing / Sporting Life"
+      "source": "Timeform / Saturday Racing / Sporting Life",
+      "result": {
+        "position": 13,
+        "status": "Weighed in",
+        "sp": "200/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/bath/942386/seat-unique-ebf-restricted-novice-stakes-gbbgbbplus-race",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 13
     }
   ],
   "midshotsUpdatedAt": "2026-10-08T14:04:00+01:00",
@@ -1147,7 +1192,16 @@
       ],
       "reason": "A proven 7f horse who was better than the bare sixth at Carlisle after being set plenty to do. Warren Fentiman's 3lb claim helps and the price has drifted to the top of the mid-shot range despite his course/distance credentials.",
       "risk": "Heavy ground is a stronger test than the latest run and Empirestateofmind is a powerful favourite.",
-      "source": "Sporting Life / Oddschecker"
+      "source": "Sporting Life / Oddschecker",
+      "result": {
+        "position": 9,
+        "status": "Weighed in",
+        "sp": "66/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/ayr/942393/san-miguel-handicap",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 10
     },
     {
       "horse": "Toralou",
@@ -1184,7 +1238,16 @@
       ],
       "reason": "A fair Flat winner now down the weights over hurdles, with blinkers reapplied. The live price ranges from about 12/1 to 16/1, giving a much better risk/reward profile than the short end of this race if the headgear sparks a return to his Flat-level ability.",
       "risk": "His hurdle form for the current yard has been weak and recent stable form is not a positive.",
-      "source": "Timeform / Sporting Life"
+      "source": "Timeform / Sporting Life",
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "6/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942155/tramore-racecourse-on-instagram-handicap-hurdle",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 7
     },
     {
       "horse": "Cap Ricochet",
@@ -1228,8 +1291,24 @@
       ],
       "reason": "She beat Parikarma by 4½ lengths over roughly three miles on good ground in June and is back on that winning mark. RPR108 against OR97 leaves a healthy ratings cushion, while today's trip/ground are close to the conditions of that success.",
       "risk": "She folded badly last time and some bookmakers are shorter than 10/1, so she only belongs here if 10/1+ remains available.",
-      "source": "HorseRacing.net / Racing TV / Oddschecker"
+      "source": "HorseRacing.net / Racing TV / Oddschecker",
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "9/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/market-rasen/942380/market-rasen-racecourse-caravan-park-mares-handicap-hurdle",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 8
     }
   ],
-  "resultsUpdatedAt": "2026-10-08T15:35:00+01:00"
+  "resultsUpdatedAt": "2026-10-08T16:38:00+01:00",
+  "resultVerification": {
+    "method": "Public result pages manually checked",
+    "source": "Sporting Life",
+    "checkedAt": "2026-10-08T16:38:00+01:00",
+    "verifiedResultsAdded": 8,
+    "liveAutomatic": false
+  }
 }
