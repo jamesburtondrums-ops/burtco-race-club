@@ -1,0 +1,1412 @@
+{
+  "snapshotDate": "2026-10-08",
+  "verifiedAt": "2026-10-08T13:35:00+01:00",
+  "mode": "V4.2 LIVE CONTEXT REANALYSIS",
+  "coverage": {
+    "meetings": 6,
+    "races": 45,
+    "scope": "All GB + Ireland thoroughbred cards reviewed; selections below are remaining races from the 13:35 BST refresh.",
+    "refreshedAt": "13:35 BST",
+    "recheckedSelections": 13
+  },
+  "meetings": [
+    {
+      "course": "Bath",
+      "code": "Flat",
+      "races": 8
+    },
+    {
+      "course": "Ayr",
+      "code": "Flat",
+      "races": 7
+    },
+    {
+      "course": "Market Rasen",
+      "code": "Jumps",
+      "races": 6
+    },
+    {
+      "course": "Southwell",
+      "code": "AW",
+      "races": 9
+    },
+    {
+      "course": "Thurles",
+      "code": "Flat",
+      "races": 8
+    },
+    {
+      "course": "Tramore",
+      "code": "Jumps",
+      "races": 7
+    }
+  ],
+  "sources": [
+    {
+      "name": "Racing Post",
+      "status": "live",
+      "role": "Racecards, OR/TS/RPR, class/grade, race value, verdicts and non-runners"
+    },
+    {
+      "name": "Racing TV",
+      "status": "live",
+      "role": "Odds, pace/draw views and independent card cross-check"
+    },
+    {
+      "name": "Timeform",
+      "status": "live",
+      "role": "Current odds, form interpretation and race-context cross-check"
+    },
+    {
+      "name": "Sporting Life",
+      "status": "live",
+      "role": "Race comments, trainer/jockey context and live-show market"
+    },
+    {
+      "name": "HorseRacing.net",
+      "status": "live",
+      "role": "Odds comparison, course/distance/ground context and race summaries"
+    }
+  ],
+  "todaySelections": [
+    {
+      "horse": "Whitewinewednesday",
+      "course": "Market Rasen",
+      "time": "15:06",
+      "tier": "WATCH",
+      "or": 95,
+      "ts": null,
+      "rpr": null,
+      "odds": "4/7–1/3",
+      "tags": [
+        "SMALL FIELD",
+        "WON 9D AGO",
+        "SAME OR 95",
+        "POINT WINNER",
+        "P W MULLINS AGAIN"
+      ],
+      "reason": "The strongest pure win-chance profile on the remaining British jumps cards: recent winner off today's mark, proven point background for the switch to fences, same winning rider and a six-runner race with a very clear market hierarchy.",
+      "risk": "First chase under Rules and first run for Dan Skelton; the price already reflects much of the edge.",
+      "source": "Racing TV / Sporting Life / HorseRacing.net",
+      "v42": {
+        "winProbability": 65.5,
+        "marketRank": 1,
+        "criticalCoverage": 96,
+        "racePredictability": 88,
+        "raceType": "handicap",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "TOO SHORT",
+        "contextSummary": "Recent ability, placement and market all agree. Small field reduces race uncertainty.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "STRONG",
+            "detail": "Narrow Sedgefield winner 9 days ago"
+          },
+          {
+            "name": "Handicap",
+            "status": "STRONG",
+            "detail": "Runs from the same OR95; reported 2lb well in"
+          },
+          {
+            "name": "Trainer / placement",
+            "status": "POSITIVE",
+            "detail": "Moved to Dan Skelton after the win"
+          },
+          {
+            "name": "Jockey partnership",
+            "status": "STRONG",
+            "detail": "P W Mullins keeps the ride after winning on her"
+          },
+          {
+            "name": "Running style / pace",
+            "status": "POSITIVE",
+            "detail": "Can race prominently; six-runner setup limits traffic"
+          },
+          {
+            "name": "Course / going / trip",
+            "status": "POSITIVE",
+            "detail": "Good ground; trip close to latest win; point win supports fences"
+          },
+          {
+            "name": "Class / value",
+            "status": "NEUTRAL+",
+            "detail": "Class 5 novice handicap chase; £3,697 winner prize"
+          },
+          {
+            "name": "Market",
+            "status": "VERY STRONG",
+            "detail": "Clear favourite around 4/7"
+          }
+        ],
+        "isPrime": true,
+        "stars": null
+      },
+      "result": {
+        "position": 5,
+        "status": "Weighed in",
+        "sp": "5/6",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
+      }
+    },
+    {
+      "horse": "Aighear",
+      "course": "Ayr",
+      "time": "17:13",
+      "tier": "WATCH",
+      "or": 55,
+      "ts": 54,
+      "rpr": 75,
+      "odds": "10/11–11/10",
+      "tags": [
+        "LAST YEAR'S WINNER",
+        "9L C&D WIN 9D AGO",
+        "HEAVY GROUND",
+        "RPR +20 VS OR",
+        "SAME JOCKEY"
+      ],
+      "reason": "The best contextual target-race profile today. She won this race last year, bolted up over the course in heavy ground nine days ago, remains well treated under a 4lb penalty and retains Paul Mulrennan.",
+      "risk": "She is an eight-year-old in a handicap and the recent 9l win is already fully visible to the market.",
+      "source": "Racing Post / Sporting Life / HorseRacing.net",
+      "v42": {
+        "winProbability": 59,
+        "marketRank": 1,
+        "criticalCoverage": 98,
+        "racePredictability": 92,
+        "raceType": "handicap",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "Exceptional course/going/seasonal targeting evidence with current form proving the ability remains.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "VERY STRONG",
+            "detail": "Won here by 9 lengths nine days ago"
+          },
+          {
+            "name": "Retained ability",
+            "status": "VERY STRONG",
+            "detail": "RPR75 from OR55; future OR indicated +2"
+          },
+          {
+            "name": "Targeting",
+            "status": "VERY STRONG",
+            "detail": "Won this exact race last year"
+          },
+          {
+            "name": "Going / course",
+            "status": "VERY STRONG",
+            "detail": "Proven Ayr C&D and heavy-ground specialist"
+          },
+          {
+            "name": "Jockey partnership",
+            "status": "STRONG",
+            "detail": "Paul Mulrennan retained after latest success"
+          },
+          {
+            "name": "Class / value",
+            "status": "POSITIVE",
+            "detail": "Class 6, five runners, £3,664 winner prize"
+          },
+          {
+            "name": "Race shape",
+            "status": "STRONG",
+            "detail": "Only five runners"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "Clear favourite around Evens"
+          }
+        ],
+        "isPrime": true,
+        "stars": null
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "4/7",
+        "source": "Racing Post full results",
+        "sourceUrl": "https://www.racingpost.com/results/3/ayr/2026-10-08/928508/",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 5
+    },
+    {
+      "horse": "Port Glen One",
+      "course": "Market Rasen",
+      "time": "14:31",
+      "tier": "WATCH",
+      "or": null,
+      "ts": null,
+      "rpr": null,
+      "odds": "8/11",
+      "tags": [
+        "3 RUNNERS",
+        "POINT WINNER",
+        "NOVICE ROUTE",
+        "TWISTON-DAVIES"
+      ],
+      "reason": "A high-predictability three-runner novice. He won his only Irish point and now debuts over hurdles for Nigel & Willy Twiston-Davies with Sam Twiston-Davies riding.",
+      "risk": "No Rules form yet and Who's Glen has actual hurdle experience; this PRIME rests more on race structure, market and unexposed potential than hard ratings.",
+      "source": "Racing TV",
+      "v42": {
+        "winProbability": 57,
+        "marketRank": 1,
+        "criticalCoverage": 90,
+        "racePredictability": 94,
+        "raceType": "novice",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": true,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "Three-runner novice is historically more predictable; point win and strong connections support the market prior.",
+        "contextFactors": [
+          {
+            "name": "Experience",
+            "status": "POSITIVE",
+            "detail": "Winning Irish point debut"
+          },
+          {
+            "name": "Trainer / jockey",
+            "status": "STRONG",
+            "detail": "N & W Twiston-Davies / Sam Twiston-Davies"
+          },
+          {
+            "name": "Race type",
+            "status": "STRONG",
+            "detail": "Three-runner Class 4 novice hurdle"
+          },
+          {
+            "name": "Class / value",
+            "status": "POSITIVE",
+            "detail": "Class 4, £5,446 to winner"
+          },
+          {
+            "name": "Pace / field",
+            "status": "STRONG",
+            "detail": "Three runners; limited tactical complexity"
+          },
+          {
+            "name": "Pedigree / unexposed",
+            "status": "POSITIVE",
+            "detail": "Blue Bresil; point evidence supports stamina"
+          },
+          {
+            "name": "Market",
+            "status": "VERY STRONG",
+            "detail": "8/11 favourite"
+          }
+        ],
+        "isPrime": true,
+        "stars": null
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "8/11",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
+      }
+    },
+    {
+      "horse": "The Austrian",
+      "course": "Thurles",
+      "time": "16:11",
+      "tier": "WATCH",
+      "or": 89,
+      "ts": 75,
+      "rpr": 92,
+      "odds": "~5/4–15/8",
+      "tags": [
+        "5 RUNNERS",
+        "MAIDEN WINNER",
+        "LISTED-RACE POTENTIAL",
+        "RPR 92"
+      ],
+      "reason": "Progressive three-year-old entering handicaps after a comfortable maiden win. Jessica Harrington has indicated potential for Listed company, and today's five-runner €20,000 handicap is a logical next placement.",
+      "risk": "Top weight on handicap debut and Cladach is a credible rival.",
+      "source": "Racing Post",
+      "v42": {
+        "winProbability": 49.5,
+        "marketRank": 1,
+        "criticalCoverage": 93,
+        "racePredictability": 82,
+        "raceType": "handicap",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "Class/upside and small-field placement are strong; handicap uncertainty keeps probability just below PRIME.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "STRONG",
+            "detail": "Form 721; comfortable maiden winner last time"
+          },
+          {
+            "name": "Class / grade",
+            "status": "STRONG",
+            "detail": "Connections have mentioned future Listed races"
+          },
+          {
+            "name": "Race value",
+            "status": "POSITIVE",
+            "detail": "€20,000 guaranteed; €11,780 first prize"
+          },
+          {
+            "name": "Field size",
+            "status": "STRONG",
+            "detail": "Only five runners"
+          },
+          {
+            "name": "Handicap",
+            "status": "UNCERTAIN",
+            "detail": "First handicap from OR89 and top weight"
+          },
+          {
+            "name": "Going / trip",
+            "status": "POSITIVE",
+            "detail": "1m4½f on good to yielding"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "Favourite with credible opposition"
+          }
+        ],
+        "isPrime": false,
+        "stars": 5
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "13/8",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/thurles/942170/killinan-handicap",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 5
+    },
+    {
+      "horse": "Ratemenow",
+      "course": "Market Rasen",
+      "time": "16:48",
+      "tier": "WATCH",
+      "or": 96,
+      "ts": 92,
+      "rpr": 98,
+      "odds": "5/4–11/8",
+      "tags": [
+        "5 RUNNERS",
+        "HANDICAP DEBUT 2ND",
+        "MARKET SUPPORT",
+        "RPR 98"
+      ],
+      "reason": "A clean small-field contender: strongly supported when second on handicap debut and the most solid recent form in a five-runner Class 5. The current market again makes him a clear favourite.",
+      "risk": "208-day absence and the Susan Corbett yard is not an obvious current-form positive.",
+      "source": "Racing TV / Sporting Life / HorseRacing.net",
+      "v42": {
+        "winProbability": 48.5,
+        "marketRank": 1,
+        "criticalCoverage": 94,
+        "racePredictability": 85,
+        "raceType": "handicap",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "Small field, market and prior handicap promise are strong; layoff/stable context prevents PRIME.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "STRONG",
+            "detail": "3½l second on handicap debut"
+          },
+          {
+            "name": "Ratings",
+            "status": "POSITIVE",
+            "detail": "OR96 / TS92 / RPR98"
+          },
+          {
+            "name": "Field / pace",
+            "status": "STRONG",
+            "detail": "Five runners reduces uncertainty"
+          },
+          {
+            "name": "Trainer form",
+            "status": "NEUTRAL-",
+            "detail": "No strong current-yard uplift identified"
+          },
+          {
+            "name": "Layoff",
+            "status": "RISK",
+            "detail": "208 days since last run"
+          },
+          {
+            "name": "Class / value",
+            "status": "NEUTRAL+",
+            "detail": "Class 5, £3,565 to winner"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "5/4–11/8 favourite"
+          }
+        ],
+        "isPrime": false,
+        "stars": 5
+      },
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "10/11",
+        "source": "Sporting Life full results",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/market-rasen/942381/book-boxing-day-at-the-races-today-handicap-hurdle",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 5
+    },
+    {
+      "horse": "Brilliant Star",
+      "course": "Bath",
+      "time": "15:15",
+      "tier": "WATCH",
+      "or": 102,
+      "ts": 98,
+      "rpr": 111,
+      "odds": "11/8–6/4",
+      "tags": [
+        "LISTED",
+        "GROUP 2 FORM",
+        "RPR 111",
+        "STAMINA UPSIDE"
+      ],
+      "reason": "Her Ribblesdale fourth gives her stronger class evidence than most of this field and the move to 1m6f should suit. The Gosden placement into a valuable Listed race is logical for a filly with black-type potential.",
+      "risk": "Twelve runners in a £70,000 Listed race create much more opposition quality than the raw favourite price suggests; Racing Post prefers Pierian.",
+      "source": "Racing Post / HorseRacing.net",
+      "v42": {
+        "winProbability": 46.5,
+        "marketRank": 1,
+        "criticalCoverage": 95,
+        "racePredictability": 73,
+        "raceType": "other",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "High-class prior form and race-value fit are strong, but this is a deep black-type race.",
+        "contextFactors": [
+          {
+            "name": "Class / grade",
+            "status": "VERY STRONG",
+            "detail": "Fourth in Group 2 Ribblesdale; now Listed"
+          },
+          {
+            "name": "Race value",
+            "status": "HIGH",
+            "detail": "£70,000 guaranteed / £39,697 first prize"
+          },
+          {
+            "name": "Ratings",
+            "status": "STRONG",
+            "detail": "OR102 / TS98 / RPR111"
+          },
+          {
+            "name": "Trip",
+            "status": "POSITIVE",
+            "detail": "Longer 1m6f expected to suit"
+          },
+          {
+            "name": "Trainer",
+            "status": "STRONG",
+            "detail": "John & Thady Gosden"
+          },
+          {
+            "name": "Field strength",
+            "status": "RISK",
+            "detail": "Deep Listed field"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "Favourite around 11/8–6/4"
+          }
+        ],
+        "isPrime": false,
+        "stars": 5
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "11/8",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
+      }
+    },
+    {
+      "horse": "Empirestateofmind",
+      "course": "Ayr",
+      "time": "16:05",
+      "tier": "WATCH",
+      "or": 71,
+      "ts": 74,
+      "rpr": 85,
+      "odds": "13/8–15/8",
+      "tags": [
+        "HEAVY WINNER",
+        "UNPENALISED",
+        "COURSE FORM",
+        "RPR +14 VS OR"
+      ],
+      "reason": "One of the strongest handicap-context horses: two wins from his last three, a comfortable Ayr heavy-ground win nine days ago, and he escapes a penalty.",
+      "risk": "Ten-runner handicap with multiple credible rivals; shorter 7f compared with the latest 1m win.",
+      "source": "Timeform / Sporting Life / HorseRacing.net",
+      "v42": {
+        "winProbability": 46,
+        "marketRank": 1,
+        "criticalCoverage": 97,
+        "racePredictability": 70,
+        "raceType": "handicap",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "Thriving current form + heavy-ground/course suitability + no penalty gives a strong contextual edge.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "VERY STRONG",
+            "detail": "Two wins from last three"
+          },
+          {
+            "name": "Handicap",
+            "status": "VERY STRONG",
+            "detail": "Escapes a penalty for latest apprentice-race win"
+          },
+          {
+            "name": "Going / course",
+            "status": "VERY STRONG",
+            "detail": "Won here on heavy nine days ago"
+          },
+          {
+            "name": "Ratings",
+            "status": "STRONG",
+            "detail": "OR71 / TS74 / RPR85"
+          },
+          {
+            "name": "Trainer / jockey",
+            "status": "POSITIVE",
+            "detail": "John & Sean Quinn / Jason Hart"
+          },
+          {
+            "name": "Trip",
+            "status": "QUESTION",
+            "detail": "Drops from 1m to 7f50y"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "Clear 13/8–15/8 favourite"
+          }
+        ],
+        "isPrime": false,
+        "stars": 5
+      },
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "11/8",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/ayr/942393/san-miguel-handicap",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 10
+    },
+    {
+      "horse": "Tutu Twist",
+      "course": "Tramore",
+      "time": "15:20",
+      "tier": "WATCH",
+      "or": null,
+      "ts": 74,
+      "rpr": 109,
+      "odds": "6/4–7/4",
+      "tags": [
+        "MAIDEN HURDLE",
+        "RPR 109",
+        "CLEAR OF REST LTO",
+        "DE BROMHEAD"
+      ],
+      "reason": "She went like the best horse at the weights when second at Kilbeggan and was clear of the remainder, so the current form is stronger than the bare finishing position.",
+      "risk": "Ronnie's Rascal owns the stronger headline ratings while Blue Trix adds another serious rival.",
+      "source": "Racing Post / Timeform / HorseRacing.net",
+      "v42": {
+        "winProbability": 42,
+        "marketRank": 1,
+        "criticalCoverage": 94,
+        "racePredictability": 72,
+        "raceType": "maiden",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "Strong latest-run interpretation, but competing ratings strength prevents a high probability.",
+        "contextFactors": [
+          {
+            "name": "Recent run",
+            "status": "STRONG",
+            "detail": "Second at Kilbeggan; clear of rest"
+          },
+          {
+            "name": "Ratings",
+            "status": "POSITIVE",
+            "detail": "TS74 / RPR109"
+          },
+          {
+            "name": "Trainer / jockey",
+            "status": "STRONG",
+            "detail": "Henry de Bromhead / Darragh O'Keeffe"
+          },
+          {
+            "name": "Class / value",
+            "status": "POSITIVE",
+            "detail": "€16,000 EBF mares maiden hurdle"
+          },
+          {
+            "name": "Going / trip",
+            "status": "POSITIVE",
+            "detail": "2m4f73y on yielding/soft-in-places"
+          },
+          {
+            "name": "Opposition",
+            "status": "RISK",
+            "detail": "Ronnie's Rascal RPR126; Blue Trix credible"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "6/4–7/4 favourite"
+          }
+        ],
+        "isPrime": false,
+        "stars": 4
+      },
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "11/10",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
+      }
+    },
+    {
+      "horse": "Llem's",
+      "course": "Tramore",
+      "time": "14:10",
+      "tier": "WATCH",
+      "or": null,
+      "ts": 44,
+      "rpr": 99,
+      "odds": "13/8",
+      "tags": [
+        "ELLIOTT / KENNEDY",
+        "WEAK MAIDEN",
+        "RPR 99",
+        "9 RUNNERS"
+      ],
+      "reason": "Gordon Elliott and Jack Kennedy are the standout connections in a weak maiden and the Punchestown effort showed promise.",
+      "risk": "284-day absence and a fall on the latest start; Asthelightdeclines is close enough in the market to keep uncertainty high.",
+      "source": "Racing Post / Racing TV / Oddschecker",
+      "v42": {
+        "winProbability": 41,
+        "marketRank": 1,
+        "criticalCoverage": 93,
+        "racePredictability": 68,
+        "raceType": "maiden",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "Top connections and weak-race placement help, but layoff/fall history and market competition cap confidence.",
+        "contextFactors": [
+          {
+            "name": "Trainer / jockey",
+            "status": "VERY STRONG",
+            "detail": "Gordon Elliott / Jack Kennedy"
+          },
+          {
+            "name": "Race placement",
+            "status": "STRONG",
+            "detail": "Weaker maiden than prior Punchestown assignment"
+          },
+          {
+            "name": "Ratings",
+            "status": "POSITIVE",
+            "detail": "RPR99 from limited hurdle evidence"
+          },
+          {
+            "name": "Layoff",
+            "status": "RISK",
+            "detail": "284 days"
+          },
+          {
+            "name": "Jumping",
+            "status": "RISK",
+            "detail": "Fell on latest start"
+          },
+          {
+            "name": "Market",
+            "status": "POSITIVE",
+            "detail": "13/8 favourite; Asthelightdeclines 9/4"
+          }
+        ],
+        "isPrime": false,
+        "stars": 4
+      },
+      "result": {
+        "position": 4,
+        "status": "Weighed in",
+        "sp": "4/5 F",
+        "source": "HorseRacing.net",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
+      }
+    },
+    {
+      "horse": "Spot On Soph",
+      "course": "Market Rasen",
+      "time": "16:16",
+      "tier": "WATCH",
+      "or": 104,
+      "ts": 82,
+      "rpr": 108,
+      "odds": "2/1",
+      "tags": [
+        "2-2 WITH CLAIMING RIDER",
+        "HAT-TRICK",
+        "COURSE WINNER",
+        "SAME MARK"
+      ],
+      "reason": "A strong horse-jockey partnership case: Rebecca Hitchen is 2-for-2 on her, the mare has won twice in succession and remains on the same mark.",
+      "risk": "Step up to almost 3m and an eight-runner handicap make this much less deterministic than the recent thin Southwell race.",
+      "source": "Sporting Life",
+      "v42": {
+        "winProbability": 41,
+        "marketRank": 1,
+        "criticalCoverage": 97,
+        "racePredictability": 72,
+        "raceType": "hurdle",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "Partnership and current form score highly, but trip change and handicap nature cap the probability.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "VERY STRONG",
+            "detail": "Two consecutive wins"
+          },
+          {
+            "name": "Horse-jockey",
+            "status": "VERY STRONG",
+            "detail": "Rebecca Hitchen 2-for-2 on the mare"
+          },
+          {
+            "name": "Handicap",
+            "status": "POSITIVE",
+            "detail": "Same mark with 7lb claim"
+          },
+          {
+            "name": "Course",
+            "status": "POSITIVE",
+            "detail": "Course winner"
+          },
+          {
+            "name": "Stable form",
+            "status": "STRONG",
+            "detail": "Yard noted at 28% jumps strike since July"
+          },
+          {
+            "name": "Trip",
+            "status": "RISK",
+            "detail": "Steps up to almost 3m"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "2/1 favourite"
+          }
+        ],
+        "isPrime": false,
+        "stars": 4
+      },
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "7/4",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/market-rasen/942380/market-rasen-racecourse-caravan-park-mares-handicap-hurdle",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 8
+    },
+    {
+      "horse": "Rattledelatch",
+      "course": "Tramore",
+      "time": "17:05",
+      "tier": "WATCH",
+      "or": null,
+      "ts": 102,
+      "rpr": 129,
+      "odds": "~11/10–5/4",
+      "tags": [
+        "BEST CHASE FORM",
+        "COURSE 2ND",
+        "RPR 129",
+        "13 RUNNERS"
+      ],
+      "reason": "He brings the best established chase evidence, including a course second and a solid Listowel fourth. That experience matters in a beginners chase where several rivals are unproven over fences.",
+      "risk": "Thirteen runners add incident risk and Racing Post prefers the improving chase debutant Calm Flight Ahead.",
+      "source": "Racing Post",
+      "v42": {
+        "winProbability": 40.5,
+        "marketRank": 1,
+        "criticalCoverage": 94,
+        "racePredictability": 64,
+        "raceType": "chase",
+        "lateMarketConfirmed": true,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE OK",
+        "contextSummary": "Established chase form is a major positive, but field size and unexposed-rival risk are substantial.",
+        "contextFactors": [
+          {
+            "name": "Chase experience",
+            "status": "VERY STRONG",
+            "detail": "Best existing chase form in the field"
+          },
+          {
+            "name": "Course",
+            "status": "STRONG",
+            "detail": "Second here in August"
+          },
+          {
+            "name": "Ratings",
+            "status": "STRONG",
+            "detail": "TS102 / RPR129"
+          },
+          {
+            "name": "Field size",
+            "status": "RISK",
+            "detail": "13-runner beginners chase"
+          },
+          {
+            "name": "Opposition",
+            "status": "RISK",
+            "detail": "Calm Flight Ahead improving on chase debut"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "Around 11/10–5/4"
+          }
+        ],
+        "isPrime": false,
+        "stars": 4
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "1/1",
+        "source": "Sporting Life full results",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942157/waterford-greenway-beginners-chase",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 12
+    },
+    {
+      "horse": "Kaito",
+      "course": "Southwell",
+      "time": "18:00",
+      "tier": "WATCH",
+      "or": 64,
+      "ts": null,
+      "rpr": 68,
+      "odds": "9/4",
+      "tags": [
+        "NURSERY DEBUT",
+        "GELDED",
+        "UP TO 1M",
+        "BOUGHEY"
+      ],
+      "reason": "The placement pattern remains interesting: quiet qualifying runs, gelded, up to a mile and now entering a 0-65 nursery.",
+      "risk": "The price has eased from the earlier plunge, and our historical nursery segment is one of the least predictable.",
+      "source": "Racing Post / Racing TV",
+      "v42": {
+        "winProbability": 39,
+        "marketRank": 1,
+        "criticalCoverage": 91,
+        "racePredictability": 55,
+        "raceType": "nursery",
+        "lateMarketConfirmed": false,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE WATCH",
+        "contextSummary": "Placement/market intent is interesting but nursery uncertainty and sparse performance evidence dominate.",
+        "contextFactors": [
+          {
+            "name": "Placement",
+            "status": "STRONG",
+            "detail": "Handicap debut after three quiet qualifiers"
+          },
+          {
+            "name": "Equipment",
+            "status": "POSITIVE",
+            "detail": "Gelded before nursery debut"
+          },
+          {
+            "name": "Trip",
+            "status": "POSITIVE",
+            "detail": "Steps up to 1m13y"
+          },
+          {
+            "name": "Trainer",
+            "status": "POSITIVE",
+            "detail": "George Boughey"
+          },
+          {
+            "name": "Race type",
+            "status": "RISK",
+            "detail": "Nurseries were among the hardest historical segments"
+          },
+          {
+            "name": "Market",
+            "status": "MIXED",
+            "detail": "9/4 favourite but eased from earlier support"
+          }
+        ],
+        "isPrime": false,
+        "stars": 4
+      },
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "6/5",
+        "source": "Racing TV full results",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-08/southwell/1800",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 12
+    },
+    {
+      "horse": "Roxa Love",
+      "course": "Southwell",
+      "time": "16:25",
+      "tier": "WATCH",
+      "or": null,
+      "ts": null,
+      "rpr": null,
+      "odds": "~11/4",
+      "tags": [
+        "FORM 311",
+        "NURSERY DEBUT",
+        "BOUGHEY / EGAN",
+        "TAPETA WINNER"
+      ],
+      "reason": "Progressive 2yo who improved to win twice and has already handled an artificial surface. She is a logical nursery improver for George Boughey and David Egan.",
+      "risk": "Her price has drifted from around 15/8 and nursery debut adds uncertainty.",
+      "source": "Timeform / HorseRacing.net / Racing Post",
+      "v42": {
+        "winProbability": 35.5,
+        "marketRank": 1,
+        "criticalCoverage": 91,
+        "racePredictability": 61,
+        "raceType": "nursery",
+        "lateMarketConfirmed": false,
+        "majorRedFlag": false,
+        "newcomer": false,
+        "pedigreeComplete": true,
+        "priceLabel": "PRICE WATCH",
+        "contextSummary": "Progression and AW suitability are positive; market drift and nursery uncertainty reduce confidence.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "VERY STRONG",
+            "detail": "Form 311; two successive wins"
+          },
+          {
+            "name": "Surface",
+            "status": "STRONG",
+            "detail": "Won at Wolverhampton on latest start"
+          },
+          {
+            "name": "Trainer / jockey",
+            "status": "STRONG",
+            "detail": "George Boughey / David Egan"
+          },
+          {
+            "name": "Class / value",
+            "status": "POSITIVE",
+            "detail": "Class 4 nursery, £5,234 first prize"
+          },
+          {
+            "name": "Race type",
+            "status": "RISK",
+            "detail": "Nursery debut"
+          },
+          {
+            "name": "Market",
+            "status": "MIXED",
+            "detail": "Still favourite but drifted to around 11/4"
+          }
+        ],
+        "isPrime": false,
+        "stars": 4
+      },
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "5/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/southwell/942855/follow-attheraces-on-instagram-nursery",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 7
+    }
+  ],
+  "longshotsUpdatedAt": "2026-10-08T14:04:00+01:00",
+  "longshotsPolicy": {
+    "publicNote": "Only runners available or forecast at 20/1+ qualify. Each-way appeal is about the chance of outrunning the price and reaching the places; it is separate from the main win-confidence selections.",
+    "minOdds": "20/1",
+    "priceRule": "If the price contracts below 20/1, the horse no longer qualifies for this tab."
+  },
+  "longshotsToday": [
+    {
+      "horse": "Eagle Storm",
+      "course": "Southwell",
+      "time": "20:00",
+      "odds": "20/1–28/1",
+      "ewStars": 4,
+      "placeView": "STRONG E/W CASE",
+      "terms": "Typical market: 1/5 odds, 3 places",
+      "tags": [
+        "FORM 8-3",
+        "RPR 66",
+        "TS 49",
+        "LOW WEIGHT",
+        "DRAW 3"
+      ],
+      "reason": "Improved from eighth to third at Wolverhampton and now gets 8st13lb from a low draw. Her RPR66 puts her much closer to the experienced second tier of this maiden than a 20/1+ quote suggests, while Jennie Candlish is operating well enough to make the profile credible.",
+      "risk": "Dorigo sets a very high standard and Eagle Storm was well held by the first two last time; this is primarily a place-value case.",
+      "source": "Racing Post / HorseRacing.net / Coral",
+      "result": {
+        "position": 6,
+        "status": "User reported",
+        "source": "User-reported finish; official confirmation pending",
+        "updatedAt": "2026-10-08T19:48:42.152Z"
+      }
+    },
+    {
+      "horse": "King Gris",
+      "course": "Tramore",
+      "time": "17:05",
+      "odds": "20/1",
+      "ewStars": 4,
+      "placeView": "STRONG E/W CASE",
+      "terms": "13-runner beginners chase; check bookmaker place terms",
+      "tags": [
+        "ELLIOTT / KENNEDY",
+        "OR 90",
+        "TS 82",
+        "RPR 89",
+        "DISTANCE WINNER"
+      ],
+      "reason": "A Gordon Elliott runner ridden by Jack Kennedy at 20/1 deserves more respect than the bare recent form suggests. He has an OR90/TS82/RPR89 base and a prior distance win, giving him established ability in a race containing several runners with very limited chase evidence.",
+      "risk": "Recent form 5-5-7-0 is weak and he has to prove the switch to fences unlocks improvement.",
+      "source": "Racing Post / Sporting Life",
+      "result": {
+        "status": "NR",
+        "source": "Sporting Life full results (independently verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942157/waterford-greenway-beginners-chase",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 12
+    },
+    {
+      "horse": "Pampar Lady",
+      "course": "Thurles",
+      "time": "17:20",
+      "odds": "20/1 forecast",
+      "ewStars": 4,
+      "placeView": "E/W TARGET",
+      "terms": "Large-field handicap; take only if 20/1+ remains available",
+      "tags": [
+        "HCAP DEBUT",
+        "RPR 75 VS OR 69",
+        "3LB CLAIM",
+        "GAVIN CROMWELL"
+      ],
+      "reason": "First handicap, a 3lb claim and RPR75 against OR69 create an unexposed handicap profile at a big price. Gavin Cromwell is exactly the type of trainer whose placement deserves attention when a horse changes race conditions or code.",
+      "risk": "TS31 is weak and her recent 2-8-0 form leaves plenty to prove at two miles.",
+      "source": "Racing Post / Sporting Life",
+      "result": {
+        "position": 11,
+        "status": "Weighed in",
+        "sp": "33/1",
+        "source": "Racing Post full results",
+        "sourceUrl": "https://www.racingpost.com/results/198/thurles/2026-10-08/930164/",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 13
+    },
+    {
+      "horse": "Time To Spare",
+      "course": "Bath",
+      "time": "15:50",
+      "odds": "66/1",
+      "ewStars": 3,
+      "placeView": "PEDIGREE E/W ANGLE",
+      "terms": "14-runner novice; check live each-way terms",
+      "tags": [
+        "WITHOUT PAROLE",
+        "DAM 1M WINNER",
+        "HALF-BROTHER 6F–7.4F WINNER",
+        "DRAW 2"
+      ],
+      "reason": "A debutant with a pedigree that makes today's mile plausible: by Without Parole, out of a dam who won around a mile, and a half-brother won from 6f to roughly 7½f. Draw 2 is useful and the 25/1 price allows for the obvious lack of race experience.",
+      "risk": "Jonathan Portman's yard was 0-16 with 2yo newcomers this season in the available pre-race data, so this is pedigree-led rather than trainer-debut confidence.",
+      "source": "Timeform / Saturday Racing / Sporting Life",
+      "result": {
+        "position": 13,
+        "status": "Weighed in",
+        "sp": "200/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/bath/942386/seat-unique-ebf-restricted-novice-stakes-gbbgbbplus-race",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 13
+    }
+  ],
+  "midshotsUpdatedAt": "2026-10-08T14:04:00+01:00",
+  "midshotsPolicy": {
+    "publicNote": "10/1–18/1 runners with a credible win route and enough place appeal for each-way protection. This band is more win-focused than the 20/1+ longshots page.",
+    "minOdds": "10/1",
+    "maxOdds": "18/1",
+    "priceRule": "Only keep a horse here while a best available price remains between 10/1 and 18/1."
+  },
+  "midshotsToday": [
+    {
+      "horse": "War Howl",
+      "course": "Southwell",
+      "time": "20:30",
+      "odds": "14/1",
+      "midStars": 5,
+      "view": "BEST MID-SHOT",
+      "terms": "12-runner Class 4 handicap; each-way terms vary",
+      "tags": [
+        "OR 67",
+        "TS 62",
+        "RPR 91",
+        "RECENT 3RD",
+        "LOW WEIGHT",
+        "DRAW 2"
+      ],
+      "reason": "The strongest ratings-versus-price profile in this band. RPR91 sits 24lb above OR67, his last two runs have been much better than the earlier form for Ben Haslam, and he was third at Newcastle last time. Low weight and stall 2 add to a live 7f handicap profile.",
+      "risk": "This is a deeper Class 4 than his latest run and Nostrum/Not That Guy set a much stronger market standard.",
+      "source": "Racing Post / Sporting Life / Oddschecker",
+      "result": {
+        "position": 11,
+        "status": "User reported",
+        "source": "User-reported finish; official confirmation pending",
+        "updatedAt": "2026-10-08T19:48:42.153Z"
+      }
+    },
+    {
+      "horse": "Monsieur Kodi",
+      "course": "Ayr",
+      "time": "16:05",
+      "odds": "18/1",
+      "midStars": 4,
+      "view": "WIN + E/W APPEAL",
+      "terms": "10 runners; check bookmaker each-way terms",
+      "tags": [
+        "COURSE WINNER",
+        "DISTANCE WINNER",
+        "GOOD RECENT RUN",
+        "3LB CLAIM",
+        "HEAVY-GROUND TEST"
+      ],
+      "reason": "A proven 7f horse who was better than the bare sixth at Carlisle after being set plenty to do. Warren Fentiman's 3lb claim helps and the price has drifted to the top of the mid-shot range despite his course/distance credentials.",
+      "risk": "Heavy ground is a stronger test than the latest run and Empirestateofmind is a powerful favourite.",
+      "source": "Sporting Life / Oddschecker",
+      "result": {
+        "position": 9,
+        "status": "Weighed in",
+        "sp": "66/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/ayr/942393/san-miguel-handicap",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 10
+    },
+    {
+      "horse": "Toralou",
+      "course": "Ayr",
+      "time": "16:38",
+      "odds": "12/1–14/1",
+      "midStars": 4,
+      "view": "STRONG E/W / WIN CHANCE",
+      "terms": "14-runner handicap; attractive each-way shape",
+      "tags": [
+        "HIGHER-GRADE 2ND",
+        "MARK DROPPING",
+        "3LB CLAIM",
+        "SOFT-GROUND FORM",
+        "1M WINNER"
+      ],
+      "reason": "She was runner-up in a higher grade over a mile on soft ground in June and has continued to fall in the weights. Back on turf with a useful 3lb claimer, the current 12/1–14/1 quote is much shorter than the old forecast but still offers a plausible win and place route.",
+      "risk": "Her recent form is inconsistent and she needs to bounce back from a moderate Newcastle run.",
+      "source": "Sporting Life / Oddschecker",
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "10/1",
+        "source": "Racing TV full results",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-08/ayr/1638",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 13
+    },
+    {
+      "horse": "Ray Gun",
+      "course": "Tramore",
+      "time": "15:55",
+      "odds": "12/1–16/1",
+      "midStars": 3,
+      "view": "SPECULATIVE WIN / E/W",
+      "terms": "8 runners; standard place terms usually 3 places only if bookmaker offers",
+      "tags": [
+        "BLINKERS BACK ON",
+        "FLAT WINNER",
+        "FALLING HURDLE MARK",
+        "PRICE SUPPORT"
+      ],
+      "reason": "A fair Flat winner now down the weights over hurdles, with blinkers reapplied. The live price ranges from about 12/1 to 16/1, giving a much better risk/reward profile than the short end of this race if the headgear sparks a return to his Flat-level ability.",
+      "risk": "His hurdle form for the current yard has been weak and recent stable form is not a positive.",
+      "source": "Timeform / Sporting Life",
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "6/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942155/tramore-racecourse-on-instagram-handicap-hurdle",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 7
+    },
+    {
+      "horse": "Cap Ricochet",
+      "course": "Market Rasen",
+      "time": "15:06",
+      "odds": "10/1",
+      "midStars": 3,
+      "view": "CHASE-DEBUT ANGLE",
+      "terms": "6 runners; each-way terms may be only 2 places",
+      "tags": [
+        "BRIAN HUGHES",
+        "CHASE DEBUT",
+        "LOWER OR 83",
+        "LIGHTLY RACED"
+      ],
+      "reason": "Brian Hughes is booked for the chase debut of a lightly raced five-year-old who once finished second in a junior hurdle. He gets 13lb from the top pair and is Sporting Life's third choice behind the two obvious principals.",
+      "risk": "No chase evidence and his handicap-hurdle form last season was poor; the race also has limited each-way places.",
+      "source": "Sporting Life / Racing TV",
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "10/1",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
+      }
+    },
+    {
+      "horse": "Mistral Blue",
+      "course": "Market Rasen",
+      "time": "16:16",
+      "odds": "10/1–11/1 best",
+      "midStars": 4,
+      "view": "RATINGS + COURSE/TRIP VALUE",
+      "terms": "8 runners; 3-place each-way market available",
+      "tags": [
+        "RPR 108",
+        "OR 97",
+        "TS 92",
+        "3M WINNER",
+        "BACK ON WINNING MARK"
+      ],
+      "reason": "She beat Parikarma by 4½ lengths over roughly three miles on good ground in June and is back on that winning mark. RPR108 against OR97 leaves a healthy ratings cushion, while today's trip/ground are close to the conditions of that success.",
+      "risk": "She folded badly last time and some bookmakers are shorter than 10/1, so she only belongs here if 10/1+ remains available.",
+      "source": "HorseRacing.net / Racing TV / Oddschecker",
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "9/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/market-rasen/942380/market-rasen-racecourse-caravan-park-mares-handicap-hurdle",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 8
+    }
+  ],
+  "resultsUpdatedAt": "2026-10-08T20:45:00+01:00",
+  "resultVerification": {
+    "method": "Public result pages manually checked",
+    "source": "Sporting Life",
+    "checkedAt": "2026-10-08T16:38:00+01:00",
+    "verifiedResultsAdded": 8,
+    "liveAutomatic": false
+  },
+  "selectionPolicy": {
+    "scope": "Latest selection snapshot only. Results from current selections are retained across refreshes."
+  },
+  "lastManualResultSearch": {
+    "checkedAt": "2026-10-08T20:45:00+01:00",
+    "sources": [
+      "Racing Post",
+      "Racing TV",
+      "Sporting Life"
+    ],
+    "verifiedUpdates": 7,
+    "awaiting": [
+      {
+        "horse": "War Howl",
+        "course": "Southwell",
+        "time": "20:30"
+      },
+      {
+        "horse": "Eagle Storm",
+        "course": "Southwell",
+        "time": "20:00"
+      }
+    ],
+    "comment": "Results were checked via public race result pages; entries outside confirmed results left pending"
+  }
+}
