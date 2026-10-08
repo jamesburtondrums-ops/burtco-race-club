@@ -2,36 +2,12 @@ const state={data:null,view:"today",filter:"ALL"};
 const val=v=>v===undefined||v===null||v===""?"—":v;
 const contextOf=x=>x.v42||x.v41||null;
 const probabilityOf=x=>contextOf(x)?.winProbability??null;
-const leadOf=x=>contextOf(x)?.leadOverSecond??null;
-const confidenceLabel=x=>{
- const p=probabilityOf(x);
- if(p===null)return "RECHECK";
- if(primeOf(x))return "PRIME";
- if(p>=45)return "★★★★★";
- if(p>=35)return "★★★★☆";
- if(p>=27.5)return "★★★☆☆";
- if(p>=20)return "★★☆☆☆";
- return "★☆☆☆☆";
-};
-const primeOf=x=>{
- const q=x.v42; if(!q)return false;
- const rt=(q.raceType||"").toLowerCase();
- const threshold=["maiden","novice"].includes(rt)?50:["nursery","hurdle"].includes(rt)?60:55;
- return q.winProbability>=threshold &&
-   q.marketRank===1 &&
-   (q.criticalCoverage??0)>=85 &&
-   !q.majorRedFlag &&
-   q.lateMarketConfirmed===true &&
-   (!q.newcomer || q.pedigreeComplete===true);
-};
-const starsOf=x=>{
- const p=probabilityOf(x);
- if(p===null)return 0;
- return p>=45?5:p>=35?4:p>=27.5?3:p>=20?2:1;
-};
+const primeOf=x=>contextOf(x)?.isPrime===true;
+const starsOf=x=>contextOf(x)?.stars??0;
+const confidenceLabel=x=>primeOf(x)?"PRIME":starsOf(x)?Array.from({length:5},(_,i)=>i<starsOf(x)?"★":"☆").join(""):"WATCH";
 const stars=n=>'<span class="stars">'+Array.from({length:5},(_,i)=>i<n?'★':'☆').join('')+'</span>';
 async function load(){const r=await fetch("./data/races.json?"+Date.now());state.data=await r.json();render()}
-function nav(){return [["today","Today"],["system","V4.2 System"],["checks","All checks"],["backtest","Backtest"],["sources","Sources"]].map(([v,t])=>`<button class="${state.view===v?"active":""}" data-view="${v}">${t}</button>`).join("")}
+function nav(){return [["today","Today"],["longshots","Longshots 20/1+"],["sources","Sources"]].map(([v,t])=>`<button class="${state.view===v?"active":""}" data-view="${v}">${t}</button>`).join("")}
 function filters(){const x=["ALL","PRIME","★★★★★","★★★★☆","★★★☆☆","WATCH"];return `<div class="meeting-tabs">${x.map(f=>`<button data-filter="${f}" class="${state.filter===f?"active":""}">${f}</button>`).join("")}</div>`}
 function card(x){
  const prime=primeOf(x), winStars=starsOf(x), p=probabilityOf(x), q=contextOf(x), label=confidenceLabel(x);
@@ -59,7 +35,7 @@ function today(){
  });
  const primes=picks.filter(primeOf);
  const others=picks.filter(x=>!primeOf(x));
- return `${d.scoringModel?.legacy?'<div class="panel" style="border-left:4px solid #a88026"><strong>V4.2 CONTEXT RECHECK</strong><p class="meta" style="margin-top:5px">These cards pre-date V4.1 Accuracy Mode. Their previous PRIME/stars are suppressed. A fresh grade now requires calibrated probability, favourite status, model dominance, race predictability, aiming/connection checks and late-market confirmation.</p></div>':''}<section class="hero"><div class="hero-main"><div class="eyebrow">8 OCTOBER 2026 · GB + IRE</div><h2>Today's remaining selections — fully rebuilt with the V4.2 Context Model.</h2><p>V4.2 blends market probability with form, class/grade, race value, trainer/course context, horse-jockey partnership, pace, going, draw and targeting. PRIME is reserved for the strongest combined cases; stars cover the rest.</p></div>
+ return `${d.scoringModel?.legacy?'<div class="panel" style="border-left:4px solid #a88026"><strong>V4.2 CONTEXT RECHECK</strong><p class="meta" style="margin-top:5px">These cards pre-date V4.1 Accuracy Mode. Their previous PRIME/stars are suppressed. A fresh grade now requires calibrated probability, favourite status, model dominance, race predictability, aiming/connection checks and late-market confirmation.</p></div>':''}<section class="hero"><div class="hero-main"><div class="eyebrow">8 OCTOBER 2026 · GB + IRE</div><h2>Today's strongest remaining selections.</h2><p>PRIME highlights the strongest overall win cases. The remaining stars show relative win confidence from the available evidence.</p></div>
  <div class="status-panel"><div class="status-row"><span>Meetings scanned</span><strong>${d.coverage.meetings}</strong></div><div class="status-row"><span>Races scanned</span><strong>${d.coverage.races}</strong></div><div class="status-row"><span>Selections rechecked</span><strong>${d.todaySelections.length}</strong></div><div class="status-row"><span>PRIME picks</span><strong>${d.todaySelections.filter(primeOf).length}</strong></div></div></section>
  ${filters()}
  ${primes.length?`<div class="section-head prime-section-title"><div><h3>PRIME</h3><p>Highest-conviction win profiles.</p></div></div><div class="prime-grid">${primes.map(card).join("")}</div>`:""}
@@ -123,7 +99,21 @@ function backtest(){
  <div class="source-grid"><div class="source-card"><h4>Accuracy lane</h4><ul>${v3.accuracyLane.map(x=>`<li>${x}</li>`).join("")}</ul></div><div class="source-card"><h4>Value lane</h4><ul>${v3.valueLane.map(x=>`<li>${x}</li>`).join("")}</ul></div></div>
  <div class="section-head"><div><h3>Before we call it calibrated</h3></div></div><div class="panel"><ol class="protocol-list">${v3.calibrationPlan.map(x=>`<li>${x}</li>`).join("")}</ol></div>`;
 }
+function longshots(){
+ const d=state.data, ls=d.longshotsToday||[];
+ return `<section class="hero longshot-hero"><div class="hero-main"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Big-price runners with a credible route into the places.</h2><p>${d.longshotsPolicy.publicNote}</p></div><div class="status-panel"><div class="status-row"><span>Minimum price</span><strong>${d.longshotsPolicy.minOdds}</strong></div><div class="status-row"><span>Candidates</span><strong>${ls.length}</strong></div><div class="status-row"><span>Updated</span><strong>13:48 BST</strong></div></div></section>
+ <div class="longshot-note">${d.longshotsPolicy.priceRule}</div>
+ <div class="pick-grid">${ls.map(x=>`<article class="pick-card longshot-card">
+   <div class="longshot-banner"><span>E/W APPEAL</span>${stars(x.ewStars)}</div>
+   <div class="pick-head"><div><span class="tier value">20/1+</span><h3>${x.horse}</h3><p>${x.course} · ${x.time}</p></div><strong class="price">${x.odds}</strong></div>
+   <div class="ew-view"><strong>${x.placeView}</strong><small>${x.terms}</small></div>
+   <div class="signal-list">${(x.tags||[]).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+   <div class="pick-copy"><strong>Why it can outrun the price</strong><p>${x.reason}</p></div>
+   <div class="pick-risk"><strong>Risk</strong><p>${x.risk}</p></div>
+   <div class="source-line">Source: ${x.source}</div>
+ </article>`).join("")}</div>`;
+}
 function sources(){return `<div class="section-head"><div><h3>Sources</h3><p>Live web research snapshot.</p></div></div><div class="source-grid">${state.data.sources.map(s=>`<div class="source-card"><h4>${s.name}</h4><p><strong>${s.status}</strong><br>${s.role}</p></div>`).join("")}</div>`}
-function render(){const body=state.view==="today"?today():state.view==="system"?systemV4():state.view==="checks"?checks():state.view==="backtest"?backtest():sources();document.querySelector("#app").innerHTML=`<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">${nav()}</div></div></header><main class="main">${body}<div class="footer-note">System V4.2 Context Model: probability is adjusted by class/grade/value placement, trainer context, stable run-to-form, horse-jockey partnership, pace, conditions and targeting. Historical strike rates are benchmarks, not guarantees.</div></main>`;bind()}
+function render(){const body=state.view==="today"?today():state.view==="longshots"?longshots():sources();document.querySelector("#app").innerHTML=`<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">${nav()}</div></div></header><main class="main">${body}<div class="footer-note">Selections are evidence-based estimates, not guarantees. Longshots only qualify at 20/1 or bigger and are assessed primarily for each-way/place appeal.</div></main>`;bind()}
 function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()})}
 load();
