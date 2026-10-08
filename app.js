@@ -41,24 +41,63 @@ function positionOf(e){
 function settlement(e){
  const r=e.result;
  if(!r)return {status:'open',returnAmount:0};
- const status=String(r.status||'');
- if(/\bnr\b|non.?runner|withdrawn|void|abandon|cancel/i.test(status))return {status:'void',returnAmount:e.winStake+e.placeStake};
+ const status=String(r.status||'').trim();
+ const stake=Number(e.winStake||0)+Number(e.placeStake||0);
+ if (/^(NR|NON.RUNNER|WITHDRAWN|SCRATCHED|VOID|ABANDONED|CANCELLED)$/i.test(status) ||
+   /non.?runner|withdrawn|void|abandon|cancel/i.test(status))
+   return {status:'void',returnAmount:stake};
  const pos=positionOf(e);
- if(pos===null){if(/fell|pulled.?up|unseated|refused|brought.?down|disqualified|not.?finished|\bdnf\b/i.test(status))return {status:'lost',returnAmount:0};return {status:'open',returnAmount:0};}
- if(pos>1&&e.betType==='win')return {status:'lost',returnAmount:0};
- const odds=decimalOdds(e.settlementOdds)||decimalOdds(e.selectionOdds);
- if(e.betType==='win'){
-   if(pos>1)return {status:'lost',returnAmount:0};
-   return odds?{status:'won',returnAmount:e.winStake*odds}:{status:'unpriced',returnAmount:0};
+ if(pos===null){
+   if(/^(F|PU|UR|BD|RO|RR|REF|DSQ|DNF|DISQ|UNPLACED)$/i.test(status) ||
+      /fell|pulled.?up|unseated|refused|brought.?down|disqualified|not.?finished/i.test(status))
+     return {status:'lost',returnAmount:0};
+   return {status:'open',returnAmount:0};
  }
- const runnerCount=Number(e.runnerCount);
- const places=runnerCount>0?(runnerCount<=4?1:runnerCount<=7?2:3):Number(e.placesPaid)||null;
- if(pos>1&&places!==null&&pos>places)return {status:'lost',returnAmount:0};
- if(!odds||!places)return {status:'unpriced',returnAmount:0};
- const placeWin=pos<=places;
- const placeReturn=placeWin?e.placeStake*(1+(odds-1)*0.25):0;
- return {status:pos===1?'won':placeWin?'placed':'lost',returnAmount:(pos===1?e.winStake*odds:0)+placeReturn};
+ if(e.betType==='win' && pos!==1)return {status:'lost',returnAmount:0};
+ const count=Number(e.runnerCount);
+ const places=count>0?(count<=4?1:count<=7?2:3):(Number(e.placesPaid)||null);
+ if(e.betType==='each-way' && (places!==null?pos>places:pos>3))
+   return {status:'lost',returnAmount:0};
+ const odds=decimalOdds(e.settlementOdds)||decimalOdds(e.selectionOdds);
+ if(!odds)return {status:'unpriced',returnAmount:0};
+ if(e.betType==='win')return {status:'won',returnAmount:Number(e.winStake)*odds};
+ if(!places)return {status:'unpriced',returnAmount:0};
+ const placed=pos<=places;
+ const placeReturn=placed*Number(e.placeStake)*(1+(odds-1)*0.25);
+ const winReturn=pos===1?Number(e.winStake)*odds:0;
+ return {status:pos===1?'won':placed?'placed':'lost',returnAmount:winReturn+placeReturn};
 }
+function isFinisher(e){
+ if(positionOf(e)!==null)return true;
+ const status=String(e.result?.status||'');
+ return /^(F|PU|UR|BD|RO|RR|REF|DSQ|DNF|DISQ|UNPLACED)$/i.test(status) ||
+   /fell|pulled.?up|unseated|refused|brought.?down|disqualified|not.?finished/i.test(status);
+}
+function trackerStats(entries){
+ let totalStake=0,openStake=0,settledStake=0,totalReturn=0;
+ let settled=0,winCount=0,known=0,ewPlaced=0,ewKnown=0,voided=0;
+ let todayKnown=0,todayWins=0;
+ const today=new Date().toLocaleDateString('en-CA',{timeZone:'Europe/London'});
+ for(const e of entries){
+  const stake=Number(e.winStake||0)+Number(e.placeStake||0);
+  totalStake+=stake;
+  const outcome=settlement(e);
+  if(outcome.status==='open'||outcome.status==='unpriced'){openStake+=stake}
+  else{settled++;settledStake+=stake;totalReturn+=outcome.returnAmount;if(outcome.status==='void')voided++}
+  if(isFinisher(e)){
+    known++;
+    if(positionOf(e)===1)winCount++;
+    if(e.date===today){todayKnown++;if(positionOf(e)===1)todayWins++;}
+    if(e.betType==='each-way'){
+      const n=Number(e.runnerCount),places=n>0?(n<=4?1:n<=7?2:3):Number(e.placesPaid)||null;
+      if(places){ewKnown++;if(positionOf(e)!==null && positionOf(e)<=places)ewPlaced++;}
+    }
+  }
+ }
+ return {totalStake,openStake,settledStake,totalReturn,settled,winCount,known,ewPlaced,ewKnown,voided,todayKnown,todayWins,profit:totalReturn-settledStake};
+}
+function signMoney(n){return (n<0?'-':'+')+money(Math.abs(n));}
+
 function applyLiveResults(){
  if(!state.data||!state.ledger||!state.live?.connected||state.live.date!==state.data.snapshotDate)return;
  const updates=state.live.updates||[];
@@ -79,20 +118,35 @@ function applyLiveResults(){
  }
 }
 function tracker(){
- const ledger=state.ledger;if(!ledger)return '';
- const entries=ledger.entries||[];const starting=Number(ledger.startingBank)||1000;
- let stakes=0,returns=0,settledStake=0,winners=0,finished=0,pending=0,settledCount=0;
- for(const e of entries){const stake=Number(e.winStake||0)+Number(e.placeStake||0);stakes+=stake;const s=settlement(e);if(s.status==='open'||s.status==='unpriced'){pending+=stake;}else{settledStake+=stake;returns+=s.returnAmount;settledCount++;}
- if(positionOf(e)!==null){finished++;if(positionOf(e)===1)winners++;}
- }
- const balance=starting-stakes+returns;
- const profit=returns-settledStake;
- return '<section class="tracker-panel" aria-label="Paper betting profit tracker"><div class="tracker-heading"><strong>Profit & Strike Rate Tracker</strong><span>Paper betting · '+entries.length+' selections · £10 win / £5 E/W (£10 total)</span></div><div class="tracker-stats">'+
- '<div><span>Bank balance</span><strong>'+money(balance)+'</strong></div>'+
- '<div><span>Settled P/L</span><strong class="'+(profit>=0?'tracker-positive':'tracker-negative')+'">'+(profit>=0?'+':'')+money(profit)+'</strong></div>'+
- '<div><span>Win strike rate</span><strong>'+(finished?(winners/finished*100).toFixed(1)+'%':'—')+'</strong><small>'+winners+' winners / '+finished+' known finishes</small></div>'+
- '<div><span>Open / unpriced stakes</span><strong>'+money(pending)+'</strong><small>'+settledCount+' fully settled bets</small></div>'+
- '</div><p class="tracker-footnote">Starting bank '+money(starting)+' · Total stakes '+money(stakes)+' · Settled returns '+money(returns)+'. Balance includes deductions for open bets; settled P/L excludes them. Win strike rate counts known race finishes, including E/W selections. Each-way pays ¼ odds: 1 place for 1–4 runners, 2 for 5–7, and 3 for 8+. Missing field sizes or prices are not estimated.</p></section>';
+ const ledger=state.ledger;
+ if(!ledger)return '';
+ const entries=ledger.entries||[];
+ const stats=trackerStats(entries);
+ const starting=Number(ledger.startingBank??1000);
+ const bank=starting-stats.totalStake+stats.totalReturn;
+ const settledBank=starting+stats.profit;
+ const roi=stats.settledStake>0?stats.profit/stats.settledStake*100:null;
+ const winRate=stats.known?stats.winCount/stats.known*100:null;
+ const ewRate=stats.ewKnown?stats.ewPlaced/stats.ewKnown*100:null;
+ const today=stats.todayKnown?stats.todayWins+'/'+stats.todayKnown+' ('+(stats.todayWins/stats.todayKnown*100).toFixed(1)+'%)':'Awaiting finished races';
+ const rate=v=>v===null?'—':v.toFixed(1)+'%';
+ return '<section class="tracker-panel" aria-label="Live paper betting profit and strike rate">'+
+ '<div class="tracker-heading"><div><strong>Profit & strike-rate tracker</strong><span class="tracker-kicker">£1,000 starting bank · £10 win or £5 each-way · '+entries.length+' selections recorded</span></div><span class="tracker-live-label">'+(state.live?.connected?'Live result checks active':'Last recorded results · feed not connected')+'</span></div>'+
+ '<div class="tracker-stats">'+
+ '<div><span>Available bank</span><strong>'+money(bank)+'</strong><small>After all stakes and credited returns</small></div>'+
+ '<div><span>Settled profit / loss</span><strong class="'+(stats.profit>=0?'tracker-positive':'tracker-negative')+'">'+signMoney(stats.profit)+'</strong><small>'+stats.settled+' settled · '+(roi===null?'—':rate(roi))+' return on settled stakes</small></div>'+
+ '<div><span>Win strike rate</span><strong>'+rate(winRate)+'</strong><small>'+stats.winCount+' winners from '+stats.known+' known outcomes</small></div>'+
+ '<div><span>Each-way place rate</span><strong>'+rate(ewRate)+'</strong><small>'+stats.ewPlaced+' placed from '+stats.ewKnown+' known E/W outcomes</small></div>'+
+ '</div><div class="tracker-bottom"><div><span>Running bank after settled bets:</span> <b>'+money(settledBank)+'</b></div><div><span>Outstanding / unpriced stakes:</span> <b>'+money(stats.openStake)+'</b></div><div><span>Today's strike rate:</span> <b>'+today+'</b></div></div>'+
+ '<p class="tracker-footnote">Total stakes '+money(stats.totalStake)+' · Credited returns '+money(stats.totalReturn)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Paper trading only.</p>'+
+ '</section>';
+}
+function liveStatus(){
+ const l=state.live,connected=l?.connected===true;
+ const checked=connected&&l.checkedAt?new Date(l.checkedAt).toLocaleTimeString('en-GB',{timeZone:'Europe/London',hour:'2-digit',minute:'2-digit',second:'2-digit'}):null;
+ const note=connected?'Results feed connected · Last check '+checked+' · New finishing positions update the tracker automatically':
+   'Automatic results offline · '+(l?.reason||'API connection not confirmed')+' · Historical confirmed results remain in your tracker';
+ return '<div class="live-connection '+(connected?'live-connected':'live-disconnected')+'" role="status">'+note+'</div>';
 }
 
 function nav(){return [["today","Today"],["midshots","Mid Shots 10/1–18/1"],["longshots","Longshots 20/1+"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
@@ -150,7 +204,7 @@ function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section
 function sources(){return '<div class="section-head"><div><h3>Sources</h3><p>Current research and cross-check sources.</p></div></div><div class="source-grid">'+(state.data.sources||[]).map(s=>'<div class="source-card"><h4>'+s.name+'</h4><p><strong>'+s.status+'</strong><br>'+s.role+'</p></div>').join("")+'</div>'}
 function rememberOpen(){state.openKeys=new Set([...document.querySelectorAll('.selection-row[open]')].map(x=>x.dataset.key))}
 function restoreOpen(){(state.openKeys||new Set()).forEach(k=>{const el=[...document.querySelectorAll('.selection-row')].find(x=>x.dataset.key===k);if(el)el.open=true})}
-function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Live racing feed has not updated this dataset. Prices may be stale until a licensed feed is connected and its scheduled refresh succeeds. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
+function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+liveStatus()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Live racing feed has not updated this dataset. Prices may be stale until a licensed feed is connected and its scheduled refresh succeeds. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
 function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()})}
 async function load(initial=false){
  try{
