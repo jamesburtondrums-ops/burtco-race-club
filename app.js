@@ -1,7 +1,7 @@
 const state={data:null,view:"today",filter:"ALL"};
 const val=v=>v===undefined||v===null||v===""?"—":v;
 const scoreOf=x=>{const c=x.scoreComponents||{};return Math.max(0,Math.min(100,(c.recentForm||0)+(c.ratings||0)+(c.conditions||0)+(c.handicap||0)+(c.courseTrip||0)+(c.connections||0)+(c.dataQuality||0)+(c.riskPenalty||0)))};
-const primeOf=x=>{const c=x.scoreComponents||{}, strong=[c.recentForm>=18,c.ratings>=18,c.conditions>=11,c.handicap>=11,c.courseTrip>=8,c.connections>=4].filter(Boolean).length;return scoreOf(x)>=82&&c.dataQuality===5&&strong>=4&&(c.riskPenalty||0)>=-6};
+const primeOf=x=>{if(state.data?.scoringModel?.legacy)return false;const c=x.scoreComponents||{}, strong=[c.recentForm>=18,c.ratings>=18,c.conditions>=11,c.handicap>=11,c.courseTrip>=8,c.connections>=4].filter(Boolean).length;return scoreOf(x)>=82&&c.dataQuality===5&&strong>=4&&(c.riskPenalty||0)>=-6};
 const starsOf=x=>{const s=scoreOf(x);return s>=76?5:s>=68?4:s>=58?3:s>=48?2:1};
 const stars=n=>'<span class="stars">'+Array.from({length:5},(_,i)=>i<n?'★':'☆').join('')+'</span>';
 async function load(){const r=await fetch("./data/races.json?"+Date.now());state.data=await r.json();render()}
@@ -25,7 +25,7 @@ function today(){
  const picks=d.todaySelections.filter(x=>state.filter==="ALL"||x.tier===state.filter);
  const primes=picks.filter(primeOf);
  const others=picks.filter(x=>!primeOf(x));
- return `<section class="hero"><div class="hero-main"><div class="eyebrow">8 OCTOBER 2026 · GB + IRE</div><h2>Today's win selections, separated by confidence and value.</h2><p>PRIME is reserved for the strongest complete win profiles. Every other pick carries a star score for win confidence, independent of whether the price represents value.</p></div>
+ return `${d.scoringModel?.legacy?'<div class="panel" style="border-left:4px solid #a88026"><strong>V2 RECHECK REQUIRED</strong><p class="meta" style="margin-top:5px">These selections were created under scoring model v1.1. They remain visible for reference, but PRIME is blocked until trainer form, trainer course/race-type record, race targeting and all other V2 critical checks have been completed.</p></div>':''}<section class="hero"><div class="hero-main"><div class="eyebrow">8 OCTOBER 2026 · GB + IRE</div><h2>Today's win selections, separated by confidence and value.</h2><p>PRIME is reserved for the strongest complete win profiles. Every other pick carries a star score for win confidence, independent of whether the price represents value.</p></div>
  <div class="status-panel"><div class="status-row"><span>Meetings scanned</span><strong>${d.coverage.meetings}</strong></div><div class="status-row"><span>Races scanned</span><strong>${d.coverage.races}</strong></div><div class="status-row"><span>Selections</span><strong>${d.todaySelections.length}</strong></div><div class="status-row"><span>PRIME picks</span><strong>${d.todaySelections.filter(primeOf).length}</strong></div></div></section>
  ${filters()}
  ${primes.length?`<div class="section-head prime-section-title"><div><h3>PRIME</h3><p>Highest-conviction win profiles.</p></div></div><div class="prime-grid">${primes.map(card).join("")}</div>`:""}
