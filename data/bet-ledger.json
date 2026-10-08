@@ -39,7 +39,12 @@
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 1,
+        "status": "User reported",
+        "source": "User-reported winner; SP/official status not yet independently verified",
+        "updatedAt": "2026-10-08T17:51:00+01:00"
+      }
     },
     {
       "id": "2026-10-08|market rasen|14:31|port glen one|win",
@@ -231,7 +236,12 @@
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 1,
+        "status": "User reported",
+        "source": "User-reported winner; SP/official status not yet independently verified",
+        "updatedAt": "2026-10-08T17:51:00+01:00"
+      }
     },
     {
       "id": "2026-10-08|southwell|18:00|kaito|win",
@@ -474,6 +484,188 @@
         "updatedAt": "2026-10-08T16:38:00+01:00"
       },
       "runnerCount": 13
+    },
+    {
+      "id": "2026-10-08|thurles|15:01|duchess anne|win",
+      "date": "2026-10-08",
+      "course": "Thurles",
+      "time": "15:01",
+      "horse": "Duchess Anne",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "5/2",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": null,
+      "restoredFromPreviousVersion": true
+    },
+    {
+      "id": "2026-10-08|bath|13:30|fram castle|win",
+      "date": "2026-10-08",
+      "course": "Bath",
+      "time": "13:30",
+      "horse": "Fram Castle",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "9/4",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": null,
+      "restoredFromPreviousVersion": true
+    },
+    {
+      "id": "2026-10-08|ayr|14:20|sea mirage|win",
+      "date": "2026-10-08",
+      "course": "Ayr",
+      "time": "14:20",
+      "horse": "Sea Mirage",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "15/8 second behind Caturra Rock",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": null,
+      "restoredFromPreviousVersion": true
+    },
+    {
+      "id": "2026-10-08|thurles|15:36|glen echo|win",
+      "date": "2026-10-08",
+      "course": "Thurles",
+      "time": "15:36",
+      "horse": "Glen Echo",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "2/1–9/4",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": null,
+      "restoredFromPreviousVersion": true
+    },
+    {
+      "id": "2026-10-08|thurles|17:20|blissful bonita|win",
+      "date": "2026-10-08",
+      "course": "Thurles",
+      "time": "17:20",
+      "horse": "Blissful Bonita",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "5/2",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": {
+        "position": 1,
+        "status": "User reported",
+        "source": "User-reported winner; SP/official status not yet independently verified",
+        "updatedAt": "2026-10-08T17:51:00+01:00"
+      },
+      "restoredFromPreviousVersion": true
+    },
+    {
+      "id": "2026-10-08|ayr|13:45|tap dancer|win",
+      "date": "2026-10-08",
+      "course": "Ayr",
+      "time": "13:45",
+      "horse": "Tap Dancer",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "about 12/1",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": null,
+      "restoredFromPreviousVersion": true
+    },
+    {
+      "id": "2026-10-08|southwell|17:00|lady of clover|win",
+      "date": "2026-10-08",
+      "course": "Southwell",
+      "time": "17:00",
+      "horse": "Lady Of Clover",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "around 7/2, behind Edwardtheninth",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": null,
+      "restoredFromPreviousVersion": true
+    },
+    {
+      "id": "2026-10-08|southwell|19:30|have you a minute|win",
+      "date": "2026-10-08",
+      "course": "Southwell",
+      "time": "19:30",
+      "horse": "Have You A Minute",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "about 10/1",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": null,
+      "restoredFromPreviousVersion": true
+    },
+    {
+      "id": "2026-10-08|southwell|20:30|billyb|win",
+      "date": "2026-10-08",
+      "course": "Southwell",
+      "time": "20:30",
+      "horse": "Billyb",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "9/2–11/2, behind Nostrum and Not That Guy",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": null,
+      "restoredFromPreviousVersion": true
+    },
+    {
+      "id": "2026-10-08|tramore|14:45|tasmanian girl|win",
+      "date": "2026-10-08",
+      "course": "Tramore",
+      "time": "14:45",
+      "horse": "Tasmanian Girl",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "about 7/1",
+      "settlementOdds": "5/1",
+      "ewFraction": null,
+      "placesPaid": null,
+      "terms": null,
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "5/1",
+        "source": "Sporting Life published results",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942153/ardmore-handicap-hurdle-0-100",
+        "updatedAt": "2026-10-08T17:51:00+01:00"
+      },
+      "restoredFromPreviousVersion": true
     }
   ],
   "placePolicy": {
@@ -485,5 +677,13 @@
     "checkedAt": "2026-10-08T16:38:00+01:00",
     "verifiedSelections": 8,
     "source": "Sporting Life Full Results"
+  },
+  "restorationInfo": {
+    "recoveredAt": "2026-10-08T17:51:00+01:00",
+    "originalSnapshot": "2026-10-08T12:39:00+01:00",
+    "originalCommit": "f6753c3c90a781068b36674b90cd574f741f7984",
+    "restoredCount": 10,
+    "reason": "Preserve earlier published selections and results through racecard refreshes",
+    "note": "Earlier listed horses reinstated. User-reported winners are recorded as provisional; bookmaker SPs not guessed."
   }
 }
