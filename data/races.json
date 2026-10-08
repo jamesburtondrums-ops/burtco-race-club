@@ -985,7 +985,7 @@
       }
     }
   ],
-  "longshotsUpdatedAt": "2026-10-08T14:02:00+01:00",
+  "longshotsUpdatedAt": "2026-10-08T14:04:00+01:00",
   "longshotsPolicy": {
     "publicNote": "Only runners available or forecast at 20/1+ qualify. Each-way appeal is about the chance of outrunning the price and reaching the places; it is separate from the main win-confidence selections.",
     "minOdds": "20/1",
@@ -996,7 +996,7 @@
       "horse": "Eagle Storm",
       "course": "Southwell",
       "time": "20:00",
-      "odds": "20/1–22/1",
+      "odds": "20/1–28/1",
       "ewStars": 4,
       "placeView": "STRONG E/W CASE",
       "terms": "Typical market: 1/5 odds, 3 places",
@@ -1052,7 +1052,7 @@
       "horse": "Time To Spare",
       "course": "Bath",
       "time": "15:50",
-      "odds": "25/1",
+      "odds": "66/1",
       "ewStars": 3,
       "placeView": "PEDIGREE E/W ANGLE",
       "terms": "14-runner novice; check live each-way terms",
@@ -1065,24 +1065,128 @@
       "reason": "A debutant with a pedigree that makes today's mile plausible: by Without Parole, out of a dam who won around a mile, and a half-brother won from 6f to roughly 7½f. Draw 2 is useful and the 25/1 price allows for the obvious lack of race experience.",
       "risk": "Jonathan Portman's yard was 0-16 with 2yo newcomers this season in the available pre-race data, so this is pedigree-led rather than trainer-debut confidence.",
       "source": "Timeform / Saturday Racing / Sporting Life"
+    }
+  ],
+  "midshotsUpdatedAt": "2026-10-08T14:04:00+01:00",
+  "midshotsPolicy": {
+    "publicNote": "10/1–18/1 runners with a credible win route and enough place appeal for each-way protection. This band is more win-focused than the 20/1+ longshots page.",
+    "minOdds": "10/1",
+    "maxOdds": "18/1",
+    "priceRule": "Only keep a horse here while a best available price remains between 10/1 and 18/1."
+  },
+  "midshotsToday": [
+    {
+      "horse": "War Howl",
+      "course": "Southwell",
+      "time": "20:30",
+      "odds": "14/1",
+      "midStars": 5,
+      "view": "BEST MID-SHOT",
+      "terms": "12-runner Class 4 handicap; each-way terms vary",
+      "tags": [
+        "OR 67",
+        "TS 62",
+        "RPR 91",
+        "RECENT 3RD",
+        "LOW WEIGHT",
+        "DRAW 2"
+      ],
+      "reason": "The strongest ratings-versus-price profile in this band. RPR91 sits 24lb above OR67, his last two runs have been much better than the earlier form for Ben Haslam, and he was third at Newcastle last time. Low weight and stall 2 add to a live 7f handicap profile.",
+      "risk": "This is a deeper Class 4 than his latest run and Nostrum/Not That Guy set a much stronger market standard.",
+      "source": "Racing Post / Sporting Life / Oddschecker"
     },
     {
-      "horse": "Maeveontime",
-      "course": "Southwell",
-      "time": "20:00",
-      "odds": "22/1–25/1",
-      "ewStars": 3,
-      "placeView": "PEDIGREE E/W ANGLE",
-      "terms": "1/5 odds, 3 places widely available",
+      "horse": "Monsieur Kodi",
+      "course": "Ayr",
+      "time": "16:05",
+      "odds": "18/1",
+      "midStars": 4,
+      "view": "WIN + E/W APPEAL",
+      "terms": "10 runners; check bookmaker each-way terms",
       "tags": [
-        "26,000GNS YEARLING",
-        "HALF-SISTER TO 6 WINNERS",
-        "SUPREMACY FILLY",
-        "3-PLACE RACE"
+        "COURSE WINNER",
+        "DISTANCE WINNER",
+        "GOOD RECENT RUN",
+        "3LB CLAIM",
+        "HEAVY-GROUND TEST"
       ],
-      "reason": "A newcomer rather than a exposed no-hoper: she is a 26,000gns yearling and a half-sister to six winners. At 22/1–25/1 in a race dominated by Dorigo, the appeal is that a competent debut can put her into the minor places without needing to beat the favourite.",
-      "risk": "No racecourse evidence yet, so this remains market-and-pedigree led and should be treated below Eagle Storm on each-way confidence.",
-      "source": "HorseRacing.net / Sporting Life"
+      "reason": "A proven 7f horse who was better than the bare sixth at Carlisle after being set plenty to do. Warren Fentiman's 3lb claim helps and the price has drifted to the top of the mid-shot range despite his course/distance credentials.",
+      "risk": "Heavy ground is a stronger test than the latest run and Empirestateofmind is a powerful favourite.",
+      "source": "Sporting Life / Oddschecker"
+    },
+    {
+      "horse": "Toralou",
+      "course": "Ayr",
+      "time": "16:38",
+      "odds": "12/1–14/1",
+      "midStars": 4,
+      "view": "STRONG E/W / WIN CHANCE",
+      "terms": "14-runner handicap; attractive each-way shape",
+      "tags": [
+        "HIGHER-GRADE 2ND",
+        "MARK DROPPING",
+        "3LB CLAIM",
+        "SOFT-GROUND FORM",
+        "1M WINNER"
+      ],
+      "reason": "She was runner-up in a higher grade over a mile on soft ground in June and has continued to fall in the weights. Back on turf with a useful 3lb claimer, the current 12/1–14/1 quote is much shorter than the old forecast but still offers a plausible win and place route.",
+      "risk": "Her recent form is inconsistent and she needs to bounce back from a moderate Newcastle run.",
+      "source": "Sporting Life / Oddschecker"
+    },
+    {
+      "horse": "Ray Gun",
+      "course": "Tramore",
+      "time": "15:55",
+      "odds": "12/1–16/1",
+      "midStars": 3,
+      "view": "SPECULATIVE WIN / E/W",
+      "terms": "8 runners; standard place terms usually 3 places only if bookmaker offers",
+      "tags": [
+        "BLINKERS BACK ON",
+        "FLAT WINNER",
+        "FALLING HURDLE MARK",
+        "PRICE SUPPORT"
+      ],
+      "reason": "A fair Flat winner now down the weights over hurdles, with blinkers reapplied. The live price ranges from about 12/1 to 16/1, giving a much better risk/reward profile than the short end of this race if the headgear sparks a return to his Flat-level ability.",
+      "risk": "His hurdle form for the current yard has been weak and recent stable form is not a positive.",
+      "source": "Timeform / Sporting Life"
+    },
+    {
+      "horse": "Cap Ricochet",
+      "course": "Market Rasen",
+      "time": "15:06",
+      "odds": "10/1",
+      "midStars": 3,
+      "view": "CHASE-DEBUT ANGLE",
+      "terms": "6 runners; each-way terms may be only 2 places",
+      "tags": [
+        "BRIAN HUGHES",
+        "CHASE DEBUT",
+        "LOWER OR 83",
+        "LIGHTLY RACED"
+      ],
+      "reason": "Brian Hughes is booked for the chase debut of a lightly raced five-year-old who once finished second in a junior hurdle. He gets 13lb from the top pair and is Sporting Life's third choice behind the two obvious principals.",
+      "risk": "No chase evidence and his handicap-hurdle form last season was poor; the race also has limited each-way places.",
+      "source": "Sporting Life / Racing TV"
+    },
+    {
+      "horse": "Mistral Blue",
+      "course": "Market Rasen",
+      "time": "16:16",
+      "odds": "10/1–11/1 best",
+      "midStars": 4,
+      "view": "RATINGS + COURSE/TRIP VALUE",
+      "terms": "8 runners; 3-place each-way market available",
+      "tags": [
+        "RPR 108",
+        "OR 97",
+        "TS 92",
+        "3M WINNER",
+        "BACK ON WINNING MARK"
+      ],
+      "reason": "She beat Parikarma by 4½ lengths over roughly three miles on good ground in June and is back on that winning mark. RPR108 against OR97 leaves a healthy ratings cushion, while today's trip/ground are close to the conditions of that success.",
+      "risk": "She folded badly last time and some bookmakers are shorter than 10/1, so she only belongs here if 10/1+ remains available.",
+      "source": "HorseRacing.net / Racing TV / Oddschecker"
     }
   ]
 }
