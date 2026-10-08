@@ -231,10 +231,13 @@
       },
       "result": {
         "position": 1,
-        "status": "User reported",
-        "source": "User-reported winner; SP/official status not yet independently verified",
-        "updatedAt": "2026-10-08T17:51:00+01:00"
-      }
+        "status": "Weighed in",
+        "sp": "4/7",
+        "source": "Racing Post full results",
+        "sourceUrl": "https://www.racingpost.com/results/3/ayr/2026-10-08/928508/",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 5
     },
     {
       "horse": "Port Glen One",
@@ -466,10 +469,13 @@
       },
       "result": {
         "position": 2,
-        "status": "User reported",
-        "source": "User-reported second place; independent result confirmation pending",
-        "updatedAt": "2026-10-08T17:04:13.127Z"
-      }
+        "status": "Weighed in",
+        "sp": "10/11",
+        "source": "Sporting Life full results",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/market-rasen/942381/book-boxing-day-at-the-races-today-handicap-hurdle",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 5
     },
     {
       "horse": "Brilliant Star",
@@ -927,10 +933,13 @@
       },
       "result": {
         "position": 1,
-        "status": "User reported",
-        "source": "User-reported winner; SP/official status not yet independently verified",
-        "updatedAt": "2026-10-08T17:51:00+01:00"
-      }
+        "status": "Weighed in",
+        "sp": "1/1",
+        "source": "Sporting Life full results",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942157/waterford-greenway-beginners-chase",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 12
     },
     {
       "horse": "Kaito",
@@ -996,7 +1005,16 @@
         ],
         "isPrime": false,
         "stars": 4
-      }
+      },
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "6/5",
+        "source": "Racing TV full results",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-08/southwell/1800",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 12
     },
     {
       "horse": "Roxa Love",
@@ -1120,9 +1138,11 @@
       "source": "Racing Post / Sporting Life",
       "result": {
         "status": "NR",
-        "source": "User-reported non-runner; independent confirmation pending",
-        "updatedAt": "2026-10-08T17:04:37.370Z"
-      }
+        "source": "Sporting Life full results (independently verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942157/waterford-greenway-beginners-chase",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 12
     },
     {
       "horse": "Pampar Lady",
@@ -1140,7 +1160,16 @@
       ],
       "reason": "First handicap, a 3lb claim and RPR75 against OR69 create an unexposed handicap profile at a big price. Gavin Cromwell is exactly the type of trainer whose placement deserves attention when a horse changes race conditions or code.",
       "risk": "TS31 is weak and her recent 2-8-0 form leaves plenty to prove at two miles.",
-      "source": "Racing Post / Sporting Life"
+      "source": "Racing Post / Sporting Life",
+      "result": {
+        "position": 11,
+        "status": "Weighed in",
+        "sp": "33/1",
+        "source": "Racing Post full results",
+        "sourceUrl": "https://www.racingpost.com/results/198/thurles/2026-10-08/930164/",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 13
     },
     {
       "horse": "Time To Spare",
@@ -1243,7 +1272,16 @@
       ],
       "reason": "She was runner-up in a higher grade over a mile on soft ground in June and has continued to fall in the weights. Back on turf with a useful 3lb claimer, the current 12/1–14/1 quote is much shorter than the old forecast but still offers a plausible win and place route.",
       "risk": "Her recent form is inconsistent and she needs to bounce back from a moderate Newcastle run.",
-      "source": "Sporting Life / Oddschecker"
+      "source": "Sporting Life / Oddschecker",
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "10/1",
+        "source": "Racing TV full results",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-08/ayr/1638",
+        "updatedAt": "2026-10-08T20:45:00+01:00"
+      },
+      "runnerCount": 13
     },
     {
       "horse": "Ray Gun",
@@ -1326,7 +1364,7 @@
       "runnerCount": 8
     }
   ],
-  "resultsUpdatedAt": "2026-10-08T17:51:00+01:00",
+  "resultsUpdatedAt": "2026-10-08T20:45:00+01:00",
   "resultVerification": {
     "method": "Public result pages manually checked",
     "source": "Sporting Life",
@@ -1336,5 +1374,27 @@
   },
   "selectionPolicy": {
     "scope": "Latest selection snapshot only. Results from current selections are retained across refreshes."
+  },
+  "lastManualResultSearch": {
+    "checkedAt": "2026-10-08T20:45:00+01:00",
+    "sources": [
+      "Racing Post",
+      "Racing TV",
+      "Sporting Life"
+    ],
+    "verifiedUpdates": 7,
+    "awaiting": [
+      {
+        "horse": "War Howl",
+        "course": "Southwell",
+        "time": "20:30"
+      },
+      {
+        "horse": "Eagle Storm",
+        "course": "Southwell",
+        "time": "20:00"
+      }
+    ],
+    "comment": "Results were checked via public race result pages; entries outside confirmed results left pending"
   }
 }
