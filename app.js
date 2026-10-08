@@ -51,10 +51,12 @@ function settlement(e){
    if(pos>1)return {status:'lost',returnAmount:0};
    return odds?{status:'won',returnAmount:e.winStake*odds}:{status:'unpriced',returnAmount:0};
  }
- if(pos>1&&e.placesPaid!==null&&pos>Number(e.placesPaid))return {status:'lost',returnAmount:0};
- if(!odds||!Number(e.ewFraction)||!Number(e.placesPaid))return {status:'unpriced',returnAmount:0};
- const placeWin=pos<=Number(e.placesPaid);
- const placeReturn=placeWin?e.placeStake*(1+(odds-1)*Number(e.ewFraction)):0;
+ const runnerCount=Number(e.runnerCount);
+ const places=runnerCount>0?(runnerCount<=4?1:runnerCount<=7?2:3):Number(e.placesPaid)||null;
+ if(pos>1&&places!==null&&pos>places)return {status:'lost',returnAmount:0};
+ if(!odds||!places)return {status:'unpriced',returnAmount:0};
+ const placeWin=pos<=places;
+ const placeReturn=placeWin?e.placeStake*(1+(odds-1)*0.25):0;
  return {status:pos===1?'won':placeWin?'placed':'lost',returnAmount:(pos===1?e.winStake*odds:0)+placeReturn};
 }
 function tracker(){
@@ -71,7 +73,7 @@ function tracker(){
  '<div><span>Settled P/L</span><strong class="'+(profit>=0?'tracker-positive':'tracker-negative')+'">'+(profit>=0?'+':'')+money(profit)+'</strong></div>'+
  '<div><span>Win strike rate</span><strong>'+(finished?(winners/finished*100).toFixed(1)+'%':'—')+'</strong><small>'+winners+' winners / '+finished+' known finishes</small></div>'+
  '<div><span>Open / unpriced stakes</span><strong>'+money(pending)+'</strong><small>'+settledCount+' fully settled bets</small></div>'+
- '</div><p class="tracker-footnote">Starting bank '+money(starting)+' · Total stakes '+money(stakes)+' · Settled returns '+money(returns)+'. Balance includes deductions for open bets; settled P/L excludes them. Win strike rate counts known race finishes, including E/W selections. Unknown each-way place terms or unconfirmed odds are not estimated.</p></section>';
+ '</div><p class="tracker-footnote">Starting bank '+money(starting)+' · Total stakes '+money(stakes)+' · Settled returns '+money(returns)+'. Balance includes deductions for open bets; settled P/L excludes them. Win strike rate counts known race finishes, including E/W selections. Each-way pays ¼ odds: 1 place for 1–4 runners, 2 for 5–7, and 3 for 8+. Missing field sizes or prices are not estimated.</p></section>';
 }
 
 function nav(){return [["today","Today"],["midshots","Mid Shots 10/1–18/1"],["longshots","Longshots 20/1+"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
