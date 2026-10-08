@@ -650,9 +650,9 @@
     }
   ],
   "scoringModel": {
-    "version": "4.1",
-    "legacy": false,
-    "note": "All 12 original 8 October selections were rechecked under V4.1 at 12:39 BST using current public racecards and market information.",
+    "version": "4.2",
+    "legacy": true,
+    "note": "Existing live cards require a V4.2 contextual refresh before PRIME is restored.",
     "components": [
       {
         "key": "recentForm",
@@ -1250,8 +1250,8 @@
     ]
   },
   "systemV4": {
-    "version": "4.1",
-    "status": "ACTIVE ACCURACY MODE — fresh V4.1 research required for live grades",
+    "version": "4.2",
+    "status": "ACTIVE CONTEXT MODEL",
     "backtest": {
       "races": 10000,
       "runners": 67898,
@@ -1418,8 +1418,8 @@
     },
     "grades": {
       "PRIME": {
-        "rule": ">=55% fused win probability; market favourite; clear model dominance; >=90% critical checks; high race predictability; late-market confirmation; no major red flag. Aiming/retained-ability signals influence probability but are not mandatory hard gates.",
-        "observed": "P>=55% favourite: 71.5% winners (113/158) in the clean unseen sample. P>=50% maiden/novice favourites: 72.5% (74/102), a useful race-type signal but smaller subset.",
+        "rule": "Dynamic V4.2: favourite at >=55% generally; >=50% in maidens/novices with complete context. Context strengthens or weakens the probability rather than acting as arbitrary hard gates.",
+        "observed": "General >=55% favourite: 72.0%; maiden/novice >=50%: 71.4%; trainer/course/class context at >=55%: 78.3%.",
         "display": "Special gold PRIME card"
       },
       "five": {
@@ -1468,87 +1468,15 @@
       "currentUse": "Show fair-price estimate and PRICE OK / TOO SHORT / PRICE WATCH only. Do not increase win stars because a horse is a big price."
     },
     "accuracyMode": {
-      "objective": "Maximise PRIME strike rate by sacrificing selection volume.",
-      "raceGate": [
-        "Score race predictability before selecting a horse.",
-        "Prefer races with a clear form hierarchy, reliable going/surface, manageable field size and limited unknown opposition.",
-        "Apply stricter thresholds to nurseries, deep handicaps and races with several lightly-raced/unexposed runners.",
-        "Allow NO SELECTION whenever the race itself is too uncertain."
-      ],
+      "objective": "Keep strong accuracy while allowing context-supported selections through.",
       "primeRequirements": {
-        "minWinProbability": 55,
+        "generalProbability": 55,
+        "maidenNoviceProbability": 50,
+        "nurseryHurdleGuide": 60,
         "requiredMarketRank": 1,
-        "minLeadOverSecondPctPoints": 8,
-        "minCriticalCoveragePct": 90,
-        "minIndependentPositiveGroups": 5,
-        "retainedAbilityRequiredForHandicaps": false,
-        "minAimingGroupsForHandicaps": null,
-        "noMajorRedFlags": true,
+        "minCriticalCoveragePct": 85,
         "lateMarketConfirmationRequired": true,
-        "pedigreeRequiredForNewcomers": true,
-        "researchCorrection": "Aiming and retained-ability signals remain model inputs, not mandatory PRIME gates: in the clean backtest, forcing them as hard gates reduced strike rate."
-      },
-      "raceTypeRules": {
-        "novice": "Normal V4.1 gate; these were among the most predictable historical segments.",
-        "maiden": "Normal V4.1 gate, with pedigree/experience completeness for sparse form.",
-        "handicap": "PRIME also requires retained ability + at least two placement/aiming groups.",
-        "nursery": "High-uncertainty: require stronger evidence and normally >=60% probability with a clear dominance margin.",
-        "hurdle": "High-uncertainty in the historical sample: normally require >=60% plus strong suitability/form agreement.",
-        "chase": "Use normal gate but require jumping/recent-completion evidence.",
-        "other": "Case-by-case; PRIME requires complete data and clear dominance."
-      },
-      "confidenceBands": [
-        {
-          "label": "PRIME",
-          "min": 55,
-          "extra": "Favourite + lead >=8pp + all PRIME safeguards"
-        },
-        {
-          "label": "★★★★★",
-          "min": 45,
-          "max": 54.9
-        },
-        {
-          "label": "★★★★☆",
-          "min": 35,
-          "max": 44.9
-        },
-        {
-          "label": "★★★☆☆",
-          "min": 27.5,
-          "max": 34.9
-        },
-        {
-          "label": "★★☆☆☆",
-          "min": 20,
-          "max": 27.4
-        },
-        {
-          "label": "★☆☆☆☆",
-          "min": 0,
-          "max": 19.9
-        }
-      ],
-      "dominance": {
-        "definition": "Model win probability minus the second-highest model probability in the race.",
-        "rule": "PRIME normally requires >=8 percentage points. A 56% vs 20% race is treated as safer than 56% vs 42%."
-      },
-      "aimingGroups": [
-        "Retained ability above/around today's OR",
-        "Target return: same course/meeting/time-of-year or proven winning conditions",
-        "Trainer/owner course or race-placement strength",
-        "Meaningful jockey upgrade / booking signal",
-        "Handicap sweet spot only when current ability is independently evidenced"
-      ],
-      "valueWatch": {
-        "separated": true,
-        "gradesDoNotUsePriceValue": true,
-        "labels": [
-          "PRICE OK",
-          "TOO SHORT",
-          "PRICE WATCH"
-        ],
-        "note": "A bigger price never increases stars or PRIME status."
+        "noMajorRedFlags": true
       }
     },
     "latestAccuracyAudit": {
@@ -1583,6 +1511,113 @@
         "strikeRate": 72.5
       },
       "conclusion": "Do not make aiming-group count or retained-ability a hard gate. Use them to move probability. Selectivity is driven primarily by calibrated probability, market rank and race type."
+    },
+    "contextModel": {
+      "principle": "Probability first, context second. Context adjusts confidence; only historically validated factors alter thresholds.",
+      "primeRoutes": [
+        {
+          "name": "General",
+          "rule": "Favourite with model probability >=55% and core evidence complete.",
+          "historical": "113/157 = 72.0%."
+        },
+        {
+          "name": "Maiden/Novice",
+          "rule": "Favourite with probability >=50% when unexposed/pedigree/context checks are complete.",
+          "historical": "75/105 = 71.4%."
+        },
+        {
+          "name": "Trainer-Course-Class boost",
+          "rule": "At >=55%, strong trainer record at this course in the same class materially strengthens confidence.",
+          "historical": "47/60 = 78.3%."
+        },
+        {
+          "name": "Trainer-Course-Grade boost",
+          "rule": "At >=55%, strong trainer record at this course in the same grade strengthens confidence.",
+          "historical": "74/100 = 74.0%."
+        }
+      ],
+      "factors": [
+        "Current ability and recent RPR/TS/form trend",
+        "Class and grade of today's race versus previous races",
+        "Race value and change in prize-value band",
+        "Trainer record at the course",
+        "Trainer course record split by handicap/non-handicap",
+        "Trainer course record in the same class and grade",
+        "Recent stable run-to-form versus horses' prior performance levels",
+        "Jockey current run-to-form and trainer-jockey record",
+        "Horse-jockey partnership including prior RPR uplift",
+        "Horse running style and projected pace setup",
+        "Going, surface, distance and course configuration",
+        "Draw only in course/distance/going/field-size context",
+        "Current OR versus retained ability and last winning mark",
+        "Target-race / same-meeting / seasonal placement patterns",
+        "Owner-course and owner-trainer placement patterns",
+        "Market rank and current probability",
+        "Pedigree for newcomers and lightly raced horses"
+      ],
+      "strongestSignals": [
+        {
+          "signal": "2-3lb below last winning OR",
+          "ae": 1.26,
+          "sample": 186
+        },
+        {
+          "signal": "Target-race return + jockey upgrade",
+          "ae": 1.22,
+          "sample": 92
+        },
+        {
+          "signal": "Horse-jockey RPR uplift +3lb",
+          "ae": 1.12,
+          "sample": 1256
+        },
+        {
+          "signal": "Previous RPR 5lb+ above current OR",
+          "ae": 1.08,
+          "sample": 1851
+        },
+        {
+          "signal": "Owner course strike rate >=15%",
+          "ae": 1.07,
+          "sample": 1937
+        },
+        {
+          "signal": "Trainer course/grade strike rate >=15%",
+          "ae": 1.06,
+          "sample": 2992
+        },
+        {
+          "signal": "Trainer course/class strike rate >=15%",
+          "ae": 1.04,
+          "sample": 1991
+        },
+        {
+          "signal": "Race-value drop >=25%",
+          "ae": 1.04,
+          "sample": 1318
+        },
+        {
+          "signal": "Trainer recent RPR run-to-form +5lb",
+          "ae": 1.04,
+          "sample": 1167
+        },
+        {
+          "signal": "Positive projected pace fit",
+          "ae": 1.02,
+          "sample": 2735
+        }
+      ],
+      "downweighted": [
+        "Raw 14-day trainer win strike rate alone",
+        "Generic same-class win flag",
+        "Generic going place record",
+        "Broad draw bias without exact race context",
+        "Headgear change alone",
+        "First/second handicap start alone",
+        "Large fall below an old winning mark without current ability evidence",
+        "Fixed model-lead/dominance hard gate",
+        "Fixed aiming-signal-count hard gate"
+      ]
     }
   }
 }
