@@ -203,6 +203,7 @@ trainer_course_grade=defaultdict(lambda:[0,0])
 trainer_value_band=defaultdict(lambda:[0,0])
 horse_jockey=defaultdict(lambda:[0,0,0])
 course_style=defaultdict(lambda:[0,0])
+course_draw=defaultdict(lambda:[0,0])
 
 
 def recent_rate(events, who, day, days):
@@ -222,7 +223,8 @@ def hist_rate(hist, predicate, wins=False):
     if wins: return sum(h["win"] for h in arr)/len(arr)
     return len(arr)
 
-def feature_row(r, day, field_size, current_race_value=np.nan, current_grade=10, market_prob=np.nan, market_rank=np.nan):
+def feature_row(r, day, field_size, current_race_value=np.nan, current_grade=10, market_prob=np.nan, market_rank=np.nan,
+                market_top_prob=np.nan, market_gap=np.nan, market_entropy=np.nan, market_competitors=np.nan):
     horse=clean_name(r.get("horse") or r.get("horsename"))
     trainer=clean_name(r.get("trainer"))
     jockey=clean_name(r.get("jockey"))
@@ -270,6 +272,9 @@ def feature_row(r, day, field_size, current_race_value=np.nan, current_grade=10,
     preferred_style=float(np.mean(style_vals)) if style_vals else np.nan
     last_value=last.get("race_value",np.nan) if last else np.nan
     last_grade=last.get("grade",np.nan) if last else np.nan
+    draw=fnum(r.get("draw"))
+    draw_pct=(draw/field_size) if np.isfinite(draw) and field_size>0 else np.nan
+    draw_tertile=(1 if draw_pct<=1/3 else 2 if draw_pct<=2/3 else 3) if np.isfinite(draw_pct) else np.nan
     same_class=[h for h in hist if np.isfinite(current_class) and np.isfinite(h.get("class",np.nan)) and h["class"]==current_class]
     same_grade=[h for h in hist if h.get("grade")==current_grade]
     f={
@@ -329,6 +334,12 @@ def feature_row(r, day, field_size, current_race_value=np.nan, current_grade=10,
       "dam_going_sr":rate(dam_going[(dam,going)]) if dam and going!="unknown" else np.nan,
       "market_prob":market_prob,
       "market_rank":market_rank,
+      "market_top_prob":market_top_prob,
+      "market_gap_top2":market_gap,
+      "market_entropy":market_entropy,
+      "market_competitors_10pct":market_competitors,
+      "draw_percentile":draw_pct,
+      "draw_bias_sr":rate(course_draw[(course,d_bucket,going,draw_tertile)]) if np.isfinite(draw_tertile) and np.isfinite(d_bucket) else np.nan,
     }
     f["targeting_combo"]=float(
         ((f["lbs_below_last_win_or"] if np.isfinite(f["lbs_below_last_win_or"]) else -99)>=2) +
@@ -350,6 +361,9 @@ def update_states(r, day, current_race_value=np.nan, current_grade=10):
     style=run_style_from_comment(r.get("comment"))
     is_hcap=int(rt in ("handicap","nursery"))
     vb=value_band(current_race_value)
+    draw=fnum(r.get("draw"))
+    draw_pct=(draw/fnum(r.get("ran"))) if np.isfinite(draw) and np.isfinite(fnum(r.get("ran"))) and fnum(r.get("ran"))>0 else np.nan
+    draw_tertile=(1 if draw_pct<=1/3 else 2 if draw_pct<=2/3 else 3) if np.isfinite(draw_pct) else np.nan
     horse_hist[horse].append({"date":day,"course":course,"dist":dist,"going":going,"or":cur_or,
                              "rpr":rpr,"ts":ts,"class":cl,"grade":current_grade,"race_value":current_race_value,"style":style,
                              "pos":pos,"win":win,"place":place,"jockey":jockey,"hg":(r.get("hg") or "").strip()})
@@ -370,6 +384,8 @@ def update_states(r, day, current_race_value=np.nan, current_grade=10):
     if trainer and jockey: tj_combo[(trainer,jockey)][0]+=1; tj_combo[(trainer,jockey)][1]+=int(win)
     if np.isfinite(style):
         sk=(course,round(style)); course_style[sk][0]+=1; course_style[sk][1]+=int(win)
+    if np.isfinite(draw_tertile) and np.isfinite(dist):
+        dk=(course,round(dist/2)*2,going,draw_tertile); course_draw[dk][0]+=1; course_draw[dk][1]+=int(win)
     if owner and trainer: owner_trainer[(owner,trainer)][0]+=1; owner_trainer[(owner,trainer)][1]+=int(win)
     if owner: owner_course[(owner,course)][0]+=1; owner_course[(owner,course)][1]+=int(win); owner_type[(owner,rt)][0]+=1; owner_type[(owner,rt)][1]+=int(win)
     d_bucket=round(dist/2)*2 if np.isfinite(dist) else np.nan
@@ -393,8 +409,16 @@ def finalize_race(rows, collected, start_collect, max_races):
     if market_valid:
         probs=inv/denom
         ranks=np.argsort(np.argsort(sps))+1
+        sorted_probs=np.sort(probs)[::-1]
+        market_top_prob=float(sorted_probs[0])
+        market_second_prob=float(sorted_probs[1]) if len(sorted_probs)>1 else 0.0
+        market_gap=float(market_top_prob-market_second_prob)
+        pp=probs[probs>0]
+        market_entropy=float(-np.sum(pp*np.log(pp))/math.log(len(pp))) if len(pp)>1 else 0.0
+        market_competitors=float(np.sum(probs>=.10))
     else:
         probs=np.full(len(rows),np.nan); ranks=np.full(len(rows),np.nan)
+        market_top_prob=market_gap=market_entropy=market_competitors=np.nan
     field=len(rows)
     race_prizes=[parse_money(r.get("prize")) for r in rows]
     current_race_value=max([x for x in race_prizes if np.isfinite(x)], default=np.nan)
@@ -402,7 +426,8 @@ def finalize_race(rows, collected, start_collect, max_races):
     if day>=start_collect and len(collected)<max_races:
         rr=[]
         for i,r in enumerate(rows):
-            f=feature_row(r,day,field,current_race_value,current_grade,probs[i],ranks[i])
+            f=feature_row(r,day,field,current_race_value,current_grade,probs[i],ranks[i],
+                          market_top_prob,market_gap,market_entropy,market_competitors)
             pos=pint(r.get("pos") or r.get("position"))
             rr.append({"race_id":race_key(r),"date":day.isoformat(),"course":r.get("course",""),"race_name":r.get("race_name") or r.get("title") or "",
                        "race_type":race_type(r),"horse":r.get("horse") or r.get("horsename") or "",
@@ -467,12 +492,12 @@ features=[c for c in [
  "trainer14","trainer30","trainer_base_sr","trainer14_vs_base","trainer30_vs_base",
  "trainer_course_sr","trainer_type_sr","trainer_handicap_sr","trainer_course_handicap_sr","trainer_course_class_sr","trainer_course_grade_sr","trainer_value_band_sr",
  "jockey14","jockey_upgrade","trainer_jockey_sr","horse_jockey_win_sr","horse_jockey_place_sr",
- "preferred_style","course_style_sr","projected_leaders","pace_fit",
+ "preferred_style","course_style_sr","projected_leaders","pace_fit","draw_percentile","draw_bias_sr",
  "going_place_rate","going_avg_rpr_minus_or","class_win_rate","grade_win_rate","current_race_value_log","value_change_log","grade_change",
  "owner_trainer_sr","owner_course_sr","owner_type_sr","headgear_change",
  "sire_dist_sr","sire_going_sr","dam_dist_sr","dam_going_sr","targeting_combo"
 ] if c in df.columns]
-market_features=features+["market_prob","market_rank"]
+market_features=features+["market_prob","market_rank","market_top_prob","market_gap_top2","market_entropy","market_competitors_10pct"]
 
 race_dates=df.groupby("race_id")["date"].first().sort_values()
 ids=list(race_dates.index)
@@ -592,6 +617,9 @@ tests={
  "same-grade win rate >0": signal_frame.grade_win_rate>0,
  "dropping race value >=25%": signal_frame.value_change_log<=math.log(.75),
  "rising race value >=25%": signal_frame.value_change_log>=math.log(1.25),
+ "historically favourable draw tertile": signal_frame.draw_bias_sr>=.15,
+ "clear market shape gap >=10pp": signal_frame.market_gap_top2>=.10,
+ "clear market shape gap >=15pp": signal_frame.market_gap_top2>=.15,
 }
 for n,m in tests.items():
     x=signal_stats(signal_frame,n,m)
@@ -650,6 +678,21 @@ acc_defs=[
  ("P>=50 favourite, maiden/novice only", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.race_type.isin(["maiden","novice"]))),
  ("P>=50 favourite, handicap only", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.race_type=="handicap")),
 ]
+acc_defs += [
+ ("P>=55 favourite + trainer course grade >=15%", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.trainer_course_grade_sr>=.15)),
+ ("P>=55 favourite + trainer course class >=15%", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.trainer_course_class_sr>=.15)),
+ ("P>=55 favourite + trainer course H/NH >=15%", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.trainer_course_handicap_sr>=.15)),
+ ("P>=55 favourite + horse-jockey win >=20%", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.horse_jockey_win_sr>=.20)),
+ ("P>=55 favourite + horse-jockey place >=50%", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.horse_jockey_place_sr>=.50)),
+ ("P>=55 favourite + positive pace fit", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.pace_fit>=.6)),
+ ("P>=55 favourite + value drop >=25%", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.value_change_log<=math.log(.75))),
+ ("P>=55 favourite + draw bias", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.draw_bias_sr>=.15)),
+ ("P>=50 favourite + market gap >=10pp", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.market_gap_top2>=.10)),
+ ("P>=50 favourite + market gap >=15pp", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.market_gap_top2>=.15)),
+ ("P>=55 favourite + market gap >=10pp", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.market_gap_top2>=.10)),
+ ("P>=55 favourite + market gap >=15pp", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.market_gap_top2>=.15)),
+]
+
 accuracy_gates=[]
 for label,mask in acc_defs:
     g=fp[mask]
