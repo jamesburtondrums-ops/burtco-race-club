@@ -6,10 +6,10 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 
 | Method | Bets | Strike rate | ROI at SP |
 |---|---:|---:|---:|
-| Form/placement model (no market) | 2795 | 30.1% | +17.6% |
+| Form/placement model (no market) | 2795 | 30.2% | +19.3% |
 | SP favourite baseline | 2791 | 37.2% | +13.5% |
-| Fusion: market + independent evidence | 2795 | 36.9% | +12.7% |
-| Value overlay (all qualifying runners) | 4837 | 7.1% | +26.9% |
+| Fusion: market + independent evidence | 2795 | 37.2% | +14.2% |
+| Value overlay (all qualifying runners) | 4903 | 7.1% | +24.2% |
 
 ## Targeting / placement signal lift
 
@@ -35,13 +35,18 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 
 | Min model P | Races | Win% | ROI |
 |---|---:|---:|---:|
-| 18% | 2646 | 37.7% | +12.8% |
-| 20% | 2544 | 38.6% | +13.9% |
-| 22% | 2398 | 39.5% | +15.1% |
-| 25% | 2181 | 41.1% | +16.9% |
-| 28% | 1917 | 43.6% | +20.4% |
-| 30% | 1745 | 44.8% | +21.7% |
-| 35% | 1274 | 48.0% | +23.6% |
+| 18% | 2634 | 38.2% | +14.9% |
+| 20% | 2534 | 39.1% | +16.4% |
+| 22% | 2409 | 40.0% | +17.5% |
+| 25% | 2179 | 41.5% | +18.3% |
+| 28% | 1914 | 43.1% | +19.4% |
+| 30% | 1758 | 45.2% | +24.5% |
+| 35% | 1298 | 48.5% | +27.0% |
+| 40% | 942 | 51.8% | +30.2% |
+| 45% | 586 | 57.3% | +30.9% |
+| 50% | 412 | 61.4% | +27.6% |
+| 55% | 249 | 66.3% | +33.5% |
+| 60% | 137 | 71.5% | +37.0% |
 
 ## Key integrity rule
 The targeting variables are observable placement patterns (mark, class, course/trip return, trainer patterns). They are **not evidence that connections deliberately ran a horse to lower its mark**.
