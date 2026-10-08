@@ -38,7 +38,7 @@ export async function onRequestGet({request, env, waitUntil}) {
     const page = await env.ASSETS.fetch(new Request(new URL('/data/races.json', request.url)));
     if (!page.ok) throw new Error('Selections unavailable');
     const data = await page.json();
-    const selections = ['todaySelections','midshotsToday','longshotsToday']
+    const selections = ['todaySelections','midshotsToday','longshotsToday','lucky15Only']
       .flatMap(group => data[group] || []);
     const updates = [];
     for (const selection of selections) {
