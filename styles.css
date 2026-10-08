@@ -56,3 +56,12 @@
 .factor-row span{font-size:11px;font-weight:700}
 .factor-row small{grid-column:1/-1;color:var(--muted);font-size:10px;line-height:1.4}
 .factor-status{font-size:9px;letter-spacing:.06em;color:var(--green)}
+
+.longshot-hero{background:linear-gradient(135deg,#161d1b,#293a33);color:#fff}
+.longshot-hero p,.longshot-hero .status-row span{color:rgba(255,255,255,.7)}
+.longshot-hero .status-panel{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)}
+.longshot-card{border-top:3px solid #8b651d}
+.longshot-banner{display:flex;justify-content:space-between;align-items:center;margin:-18px -18px 16px;padding:10px 18px;background:#28241b;color:#fff;font-size:10px;font-weight:900;letter-spacing:.12em}
+.longshot-note{margin:14px 0 18px;padding:11px 14px;border-radius:12px;background:#f5ecd6;border:1px solid #dec58d;font-size:12px;color:#665022}
+.ew-view{display:flex;flex-direction:column;gap:3px;margin:12px 0;padding:10px 12px;border-radius:11px;background:#f3eee1}
+.ew-view strong{font-size:11px;letter-spacing:.08em}.ew-view small{font-size:10px;color:var(--muted)}
