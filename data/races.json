@@ -652,7 +652,7 @@
   "scoringModel": {
     "version": "4.2",
     "legacy": true,
-    "note": "Existing live cards require a V4.2 contextual refresh before PRIME is restored.",
+    "note": "V4.2 is active. Existing 8 October selections retain V4.1 probability estimates but require a V4.2 contextual refresh before PRIME status is restored.",
     "components": [
       {
         "key": "recentForm",
@@ -1477,6 +1477,15 @@
         "minCriticalCoveragePct": 85,
         "lateMarketConfirmationRequired": true,
         "noMajorRedFlags": true
+      },
+      "raceTypeRules": {
+        "novice": "PRIME can begin at 50% when favourite and pedigree/unexposed/context checks are complete.",
+        "maiden": "PRIME can begin at 50% when favourite and contextual evidence is sufficiently complete.",
+        "handicap": "Normally 55%+. Emphasise retained ability, precise handicap position, class/value placement, trainer course/class record and pace.",
+        "nursery": "Higher uncertainty. Normally seek ~60% or unusually strong agreement across pedigree, trainer and market evidence.",
+        "hurdle": "Use stronger contextual requirements; stable form, conditions, jumping and class/grade placement matter.",
+        "chase": "Normal 55% route with jumping reliability and recent completion evidence.",
+        "other": "General 55% route, adjusted by class/grade/value and connection context."
       }
     },
     "latestAccuracyAudit": {
