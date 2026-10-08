@@ -67,7 +67,8 @@ using the same Pages endpoint if GitHub does not have separate API credentials.
 
 No secret is embedded in client JavaScript or committed to GitHub.
 Free-tier results provide places/finishes; SP or live market odds need a tier
-that includes them. The Racing API source data currently updates every five
-minutes, and GitHub scheduled workflows can be delayed. The site checks more
+that includes them. The Racing API advertises updates approximately every three minutes;
+actual arrival times vary. GitHub scheduled workflows run every five minutes
+and can be delayed. The site checks more
 frequently to display new results as soon as they become available.
 Sporting Life is a manual verification link only; scraping is not enabled.
