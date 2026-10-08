@@ -35,13 +35,13 @@ const starsOf=x=>{
 };
 const stars=n=>'<span class="stars">'+Array.from({length:5},(_,i)=>i<n?'★':'☆').join('')+'</span>';
 async function load(){const r=await fetch("./data/races.json?"+Date.now());state.data=await r.json();render()}
-function nav(){return [["today","Today"],["system","V4 System"],["checks","All checks"],["backtest","Backtest"],["sources","Sources"]].map(([v,t])=>`<button class="${state.view===v?"active":""}" data-view="${v}">${t}</button>`).join("")}
+function nav(){return [["today","Today"],["system","V4.2 System"],["checks","All checks"],["backtest","Backtest"],["sources","Sources"]].map(([v,t])=>`<button class="${state.view===v?"active":""}" data-view="${v}">${t}</button>`).join("")}
 function filters(){const x=["ALL","PRIME","★★★★★","★★★★☆","★★★☆☆","WATCH"];return `<div class="meeting-tabs">${x.map(f=>`<button data-filter="${f}" class="${state.filter===f?"active":""}">${f}</button>`).join("")}</div>`}
 function card(x){
  const prime=primeOf(x), winStars=starsOf(x), p=probabilityOf(x), q=v41(x), label=confidenceLabel(x);
  const legacy=!q;
  return `<article class="pick-card ${prime?"prime-card":legacy?"legacy-card":""}">
-   ${prime?'<div class="prime-banner">PRIME · '+p.toFixed(1)+'% WIN PROBABILITY</div>':legacy?'<div class="recheck-banner">V4.1 RECHECK REQUIRED</div>':`<div class="win-confidence"><span>${p.toFixed(1)}% WIN PROBABILITY</span>${stars(winStars)}</div>`}
+   ${prime?'<div class="prime-banner">PRIME · '+p.toFixed(1)+'% WIN PROBABILITY</div>':legacy?'<div class="recheck-banner">V4.2 CONTEXT RECHECK</div>':`<div class="win-confidence"><span>${p.toFixed(1)}% WIN PROBABILITY</span>${stars(winStars)}</div>`}
    <div class="pick-head"><div><span class="tier ${prime?"prime":legacy?"watch":"confidence"}">${prime?"PRIME":legacy?"RECHECK":label}</span><h3>${x.horse}</h3><p>${x.course} · ${x.time}</p></div><strong class="price">${val(x.odds)}</strong></div>
    ${q?`<div class="v41-grid"><div><span>Model lead</span><b>${val(q.leadOverSecond)}pp</b></div><div><span>Market rank</span><b>#${val(q.marketRank)}</b></div><div><span>Check coverage</span><b>${val(q.criticalCoverage)}%</b></div><div><span>Race predictability</span><b>${val(q.racePredictability)}/100</b></div></div>`:""}
    <div class="rating-strip"><div><span>OR</span><b>${val(x.or)}</b></div><div><span>TS</span><b>${val(x.ts)}</b></div><div><span>RPR</span><b>${val(x.rpr)}</b></div></div>
@@ -62,7 +62,7 @@ function today(){
  });
  const primes=picks.filter(primeOf);
  const others=picks.filter(x=>!primeOf(x));
- return `${d.scoringModel?.legacy?'<div class="panel" style="border-left:4px solid #a88026"><strong>V4.1 RECHECK REQUIRED</strong><p class="meta" style="margin-top:5px">These cards pre-date V4.1 Accuracy Mode. Their previous PRIME/stars are suppressed. A fresh grade now requires calibrated probability, favourite status, model dominance, race predictability, aiming/connection checks and late-market confirmation.</p></div>':''}<section class="hero"><div class="hero-main"><div class="eyebrow">8 OCTOBER 2026 · GB + IRE</div><h2>Today's selections — fully rechecked under V4.1 Accuracy Mode.</h2><p>PRIME is now deliberately rare: 55%+ calibrated win probability, favourite status, clear model dominance and full safeguards. If a race is too uncertain, the correct output is NO SELECTION.</p></div>
+ return `${d.scoringModel?.legacy?'<div class="panel" style="border-left:4px solid #a88026"><strong>V4.2 CONTEXT RECHECK</strong><p class="meta" style="margin-top:5px">These cards pre-date V4.1 Accuracy Mode. Their previous PRIME/stars are suppressed. A fresh grade now requires calibrated probability, favourite status, model dominance, race predictability, aiming/connection checks and late-market confirmation.</p></div>':''}<section class="hero"><div class="hero-main"><div class="eyebrow">8 OCTOBER 2026 · GB + IRE</div><h2>Today's selections — V4.2 contextual refresh required before PRIME is restored.</h2><p>PRIME is now deliberately rare: 55%+ calibrated win probability, favourite status, clear model dominance and full safeguards. If a race is too uncertain, the correct output is NO SELECTION.</p></div>
  <div class="status-panel"><div class="status-row"><span>Meetings scanned</span><strong>${d.coverage.meetings}</strong></div><div class="status-row"><span>Races scanned</span><strong>${d.coverage.races}</strong></div><div class="status-row"><span>Selections rechecked</span><strong>${d.todaySelections.length}</strong></div><div class="status-row"><span>PRIME picks</span><strong>${d.todaySelections.filter(primeOf).length}</strong></div></div></section>
  ${filters()}
  ${primes.length?`<div class="section-head prime-section-title"><div><h3>PRIME</h3><p>Highest-conviction win profiles.</p></div></div><div class="prime-grid">${primes.map(card).join("")}</div>`:""}
@@ -72,7 +72,7 @@ function today(){
 function systemV4(){
  const s=state.data.systemV4;
  const gradeRows=[s.grades.PRIME,s.grades.five,s.grades.four,s.grades.three,s.grades.two,s.grades.one];
- return `<section class="hero"><div class="hero-main"><div class="eyebrow">SYSTEM V4.1 ACCURACY MODE · 10,000-RACE BACKTEST</div><h2>PRIME now optimises for accuracy by sacrificing selection volume.</h2><p>The system first decides whether a race is predictable enough to select from, then requires probability, market, dominance and aiming evidence to agree before a horse can be PRIME.</p></div><div class="status-panel"><div class="status-row"><span>Historical races</span><strong>${s.backtest.races.toLocaleString()}</strong></div><div class="status-row"><span>Unseen test races</span><strong>${s.backtest.unseenTestRaces.toLocaleString()}</strong></div><div class="status-row"><span>Clean market races</span><strong>${s.backtest.validMarketTestRaces.toLocaleString()}</strong></div><div class="status-row"><span>55% gate benchmark</span><strong>${s.backtest.prime55.strikeRate}%</strong></div></div></section>
+ return `<section class="hero"><div class="hero-main"><div class="eyebrow">SYSTEM V4.2 CONTEXT MODEL · 10,000-RACE BACKTEST</div><h2>Context now refines probability instead of blocking good selections with rigid rules.</h2><p>The model combines ability and market probability with class/grade/value placement, trainer context, stable run-to-form, horse-jockey partnership, pace, going and targeting.</p></div><div class="status-panel"><div class="status-row"><span>Historical races</span><strong>${s.backtest.races.toLocaleString()}</strong></div><div class="status-row"><span>Unseen test races</span><strong>${s.backtest.unseenTestRaces.toLocaleString()}</strong></div><div class="status-row"><span>Clean market races</span><strong>${s.backtest.validMarketTestRaces.toLocaleString()}</strong></div><div class="status-row"><span>55% gate benchmark</span><strong>${s.backtest.prime55.strikeRate}%</strong></div></div></section>
  <div class="section-head"><div><h3>Confidence ladder</h3><p>Observed historical calibration is shown beside each rule.</p></div></div>
  <div class="panel grading-panel">
    <div class="grade-rule prime-rule"><b>PRIME</b><span>${s.grades.PRIME.rule}<br><small>${s.grades.PRIME.observed}</small></span></div>
@@ -82,15 +82,14 @@ function systemV4(){
    <div class="grade-rule"><b>★★☆☆☆</b><span>${s.grades.two.rule}<br><small>${s.grades.two.observed}</small></span></div>
    <div class="grade-rule"><b>★☆☆☆☆</b><span>${s.grades.one.rule}</span></div>
  </div>
- <div class="section-head"><div><h3>PRIME Accuracy Gate</h3><p>All conditions are required; failing one means downgrade or NO SELECTION.</p></div></div>
+ <div class="section-head"><div><h3>Dynamic PRIME routes</h3><p>V4.2 changes the threshold only where the historical test supports it.</p></div></div>
  <div class="panel decision-gates">
-   <div><b>Probability</b><span>≥55% normally; ≥60% for nurseries/hurdles.</span></div>
-   <div><b>Market</b><span>Must be favourite at final PRIME check.</span></div>
-   <div><b>Dominance</b><span>At least 8 percentage points clear of the second-ranked horse.</span></div>
-   <div><b>Race quality</b><span>Predictability score ≥70/100.</span></div>
-   <div><b>Evidence</b><span>≥90% critical checks and at least five independent positive groups.</span></div>
-   <div><b>Aiming</b><span>Retained ability and targeting signals move probability but are not hard gates; forcing them reduced historical accuracy.</span></div>
-   <div><b>Market close</b><span>Late market confirmation required; unexplained drift blocks PRIME.</span></div>
+   <div><b>General</b><span>Favourite at ≥55% model probability. Historical unseen benchmark: 72.0% winners.</span></div>
+   <div><b>Maiden / Novice</b><span>Favourite at ≥50% when unexposed and pedigree/context checks are complete. Benchmark: 71.4%.</span></div>
+   <div><b>Course + Class</b><span>At ≥55%, a trainer ≥15% at this course in this class lifted the historical win rate to 78.3%.</span></div>
+   <div><b>Course + Grade</b><span>At ≥55%, a trainer ≥15% at this course in this grade produced 74.0% winners.</span></div>
+   <div><b>Nursery / Hurdle</b><span>Use greater caution; normally seek ~60% or unusually strong contextual agreement.</span></div>
+   <div><b>No hard lead rule</b><span>Model lead, pace, aiming counts and draw now influence probability rather than automatically blocking a selection.</span></div>
  </div>
  <div class="section-head"><div><h3>Race-type rules</h3></div></div>
  <div class="source-grid">${Object.entries(s.accuracyMode.raceTypeRules).map(([k,v])=>`<div class="source-card"><h4>${k.toUpperCase()}</h4><p>${v}</p></div>`).join("")}</div>
@@ -128,6 +127,6 @@ function backtest(){
  <div class="section-head"><div><h3>Before we call it calibrated</h3></div></div><div class="panel"><ol class="protocol-list">${v3.calibrationPlan.map(x=>`<li>${x}</li>`).join("")}</ol></div>`;
 }
 function sources(){return `<div class="section-head"><div><h3>Sources</h3><p>Live web research snapshot.</p></div></div><div class="source-grid">${state.data.sources.map(s=>`<div class="source-card"><h4>${s.name}</h4><p><strong>${s.status}</strong><br>${s.role}</p></div>`).join("")}</div>`}
-function render(){const body=state.view==="today"?today():state.view==="system"?systemV4():state.view==="checks"?checks():state.view==="backtest"?backtest():sources();document.querySelector("#app").innerHTML=`<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">${nav()}</div></div></header><main class="main">${body}<div class="footer-note">System V4.1 Accuracy Mode: PRIME normally requires ≥55% calibrated probability, favourite status, ≥8pp model lead, ≥90% check coverage, race predictability ≥70 and all targeting safeguards. Historical strike rates are benchmarks, not guarantees.</div></main>`;bind()}
+function render(){const body=state.view==="today"?today():state.view==="system"?systemV4():state.view==="checks"?checks():state.view==="backtest"?backtest():sources();document.querySelector("#app").innerHTML=`<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">${nav()}</div></div></header><main class="main">${body}<div class="footer-note">System V4.2 Context Model: probability is adjusted by class/grade/value placement, trainer context, stable run-to-form, horse-jockey partnership, pace, conditions and targeting. Historical strike rates are benchmarks, not guarantees.</div></main>`;bind()}
 function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()})}
 load();
