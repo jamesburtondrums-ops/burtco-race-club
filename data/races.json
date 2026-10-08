@@ -144,6 +144,13 @@
         ],
         "isPrime": true,
         "stars": null
+      },
+      "result": {
+        "position": 5,
+        "status": "Weighed in",
+        "sp": "5/6",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
       }
     },
     {
@@ -292,6 +299,13 @@
         ],
         "isPrime": true,
         "stars": null
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "8/11",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
       }
     },
     {
@@ -505,6 +519,13 @@
         ],
         "isPrime": false,
         "stars": 5
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "11/8",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
       }
     },
     {
@@ -647,6 +668,13 @@
         ],
         "isPrime": false,
         "stars": 4
+      },
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "11/10",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
       }
     },
     {
@@ -713,6 +741,13 @@
         ],
         "isPrime": false,
         "stars": 4
+      },
+      "result": {
+        "position": 4,
+        "status": "Weighed in",
+        "sp": "4/5 F",
+        "source": "HorseRacing.net",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
       }
     },
     {
@@ -1167,7 +1202,14 @@
       ],
       "reason": "Brian Hughes is booked for the chase debut of a lightly raced five-year-old who once finished second in a junior hurdle. He gets 13lb from the top pair and is Sporting Life's third choice behind the two obvious principals.",
       "risk": "No chase evidence and his handicap-hurdle form last season was poor; the race also has limited each-way places.",
-      "source": "Sporting Life / Racing TV"
+      "source": "Sporting Life / Racing TV",
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "10/1",
+        "source": "The Sun Racing",
+        "updatedAt": "2026-10-08T15:35:00+01:00"
+      }
     },
     {
       "horse": "Mistral Blue",
@@ -1188,5 +1230,6 @@
       "risk": "She folded badly last time and some bookmakers are shorter than 10/1, so she only belongs here if 10/1+ remains available.",
       "source": "HorseRacing.net / Racing TV / Oddschecker"
     }
-  ]
+  ],
+  "resultsUpdatedAt": "2026-10-08T15:35:00+01:00"
 }
