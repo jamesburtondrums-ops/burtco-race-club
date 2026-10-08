@@ -330,3 +330,14 @@
  .l15-shortcut{margin:-5px 0 12px}
  .l15-shortcut button{width:100%}
 }
+
+.racecards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.racecards-meeting{display:flex;flex-direction:column;gap:7px;padding:19px;background:var(--card);border:1px solid var(--line);border-radius:15px;text-decoration:none;color:var(--ink);box-shadow:0 5px 16px rgba(25,45,38,.04);min-width:0}
+.racecards-meeting:hover{border-color:#a3baa9;box-shadow:0 8px 22px rgba(25,45,38,.08)}
+.racecards-meeting>strong{font:700 22px "Playfair Display",serif;color:var(--green)}
+.racecards-meeting>span{font-weight:700;font-size:12px}
+.racecards-meeting>small{font-size:11px;color:var(--muted)}
+.racecards-meeting>b{font-size:12px;color:#276b54;margin-top:8px}
+.racecards-note{color:var(--muted);font-size:11px;line-height:1.55;margin-top:13px}
+@media(max-width:900px){.racecards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.racecards-grid{grid-template-columns:1fr;gap:8px}.racecards-meeting{padding:15px}.racecards-meeting>strong{font-size:20px}}
