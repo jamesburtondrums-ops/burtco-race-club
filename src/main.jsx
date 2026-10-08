@@ -157,6 +157,7 @@ function SponsorAdmin(){
   const q=new URLSearchParams(location.search),key=q.get('key')||'';
   const [rows,setRows]=useState([]),[err,setErr]=useState(''),[loading,setLoading]=useState(true),[saving,setSaving]=useState(false),[stock,setStock]=useState({horse_available:0,race_available:0});
   const [cashType,setCashType]=useState('horse'),[cashName,setCashName]=useState(''),[cashEmail,setCashEmail]=useState(''),[cashQty,setCashQty]=useState(1),[cashEntries,setCashEntries]=useState([{owner_name:'',horse_name:''}]),[cashAmount,setCashAmount]=useState('5'),[cashNotes,setCashNotes]=useState('');
+  const [orderFilter,setOrderFilter]=useState('all'),[orderSearch,setOrderSearch]=useState('');
   async function refresh(){
     if(!key){setErr('Admin access key required');setLoading(false);return}
     const [{data,error},{data:availability}]=await Promise.all([sb.rpc('sponsorship_admin_orders_v3',{p_key:key}),sb.rpc('sponsorship_availability')]);
@@ -207,9 +208,28 @@ function SponsorAdmin(){
     });
     const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([[head,...data].map(x=>x.map(esc).join(',')).join('\n')],{type:'text/csv'}));a.download='race-night-paid-sponsorships.csv';a.click();
   }
-  const cashTotal=rows.filter(r=>r.payment_method==='cash').reduce((n,r)=>n+Number(r.amount_pence||0),0),stripeTotal=rows.filter(r=>r.payment_method!=='cash').reduce((n,r)=>n+Number(r.amount_pence||0),0);
-  return <main className="sponsorShop"><section className="sponsorHero"><span className="eyebrow">PRIVATE ADMIN</span><h1>Sponsorship Admin</h1><p>Track Stripe and cash sponsorship purchases in one place.</p></section><section className="sponsorForm adminPanel">{loading?<p>Loading…</p>:err?<p>{err}</p>:<>
-    <div className="adminSummary"><b>{rows.length} paid orders</b><b>£{((cashTotal+stripeTotal)/100).toFixed(2)} collected</b><span>Stripe £{(stripeTotal/100).toFixed(2)}</span><span>Cash £{(cashTotal/100).toFixed(2)}</span><button onClick={csv}>DOWNLOAD CSV</button></div>
+  const cashTotal=rows.filter(r=>r.payment_method==='cash').reduce((n,r)=>n+Number(r.amount_pence||0),0),
+        stripeTotal=rows.filter(r=>r.payment_method!=='cash').reduce((n,r)=>n+Number(r.amount_pence||0),0),
+        horseUnits=rows.filter(r=>r.kind==='horse').reduce((n,r)=>n+Number(r.quantity||0),0),
+        raceUnits=rows.filter(r=>r.kind==='race').reduce((n,r)=>n+Number(r.quantity||0),0),
+        search=orderSearch.trim().toLowerCase(),
+        filteredRows=rows.filter(r=>{
+          const method=r.payment_method||'stripe';
+          if(orderFilter==='horse'&&r.kind!=='horse')return false;
+          if(orderFilter==='race'&&r.kind!=='race')return false;
+          if(orderFilter==='cash'&&method!=='cash')return false;
+          if(orderFilter==='stripe'&&method==='cash')return false;
+          if(!search)return true;
+          const hay=[r.customer_name,r.email,r.admin_notes,...(r.horse_names||[]),...(r.horse_entries||[]).flatMap(x=>[x.owner_name,x.horse_name])].filter(Boolean).join(' ').toLowerCase();
+          return hay.includes(search);
+        });
+  return <main className="sponsorShop sponsorAdminPage"><section className="sponsorHero"><span className="eyebrow">PRIVATE ADMIN</span><h1>Sponsorship Admin</h1><p>Track Stripe and cash sponsorship purchases in one place.</p></section><section className="sponsorForm adminPanel">{loading?<p>Loading…</p>:err?<p>{err}</p>:<>
+    <div className="adminStats">
+      <div><span>TOTAL COLLECTED</span><strong>£{((cashTotal+stripeTotal)/100).toFixed(2)}</strong><small>{rows.length} purchases</small></div>
+      <div><span>HORSES SOLD</span><strong>{horseUnits}</strong><small>{stock.horse_available} remaining</small></div>
+      <div><span>RACES SOLD</span><strong>{raceUnits}</strong><small>{stock.race_available} remaining</small></div>
+      <div><span>PAYMENT SPLIT</span><strong>£{(stripeTotal/100).toFixed(0)} <i>Stripe</i></strong><small>£{(cashTotal/100).toFixed(0)} cash</small></div>
+    </div>
     <section className="cashSponsorBox">
       <div className="cashSponsorHead"><div><span className="eyebrow">MANUAL SALE</span><h2>Add cash sponsorship</h2></div><div className="cashStock"><b>{stock.horse_available}</b> horses · <b>{stock.race_available}</b> races left</div></div>
       <div className="cashTypeButtons"><button className={cashType==='horse'?'selected':''} onClick={()=>setType('horse')}>Horse · £5</button><button className={cashType==='race'?'selected':''} onClick={()=>setType('race')}>Race · £50</button></div>
@@ -219,7 +239,34 @@ function SponsorAdmin(){
       <div className="cashFormGrid"><label>Cash received (£)<input type="number" min="0" step="0.01" value={cashAmount} onChange={e=>setCashAmount(e.target.value)}/></label><label>Notes <small>optional</small><input value={cashNotes} onChange={e=>setCashNotes(e.target.value)} placeholder="e.g. paid at bar"/></label></div>
       <button className="cashAddButton" onClick={addCash} disabled={saving||(cashType==='race'&&stock.race_available<1)||(cashType==='horse'&&stock.horse_available<1)}>{saving?'ADDING…':'ADD CASH SPONSORSHIP'}</button>
     </section>
-    <div className="adminTable">{rows.length?rows.map(r=><article key={r.id}><div className="adminOrderTitle"><strong>{r.customer_name}</strong><em className={r.payment_method==='cash'?'cashBadge':'stripeBadge'}>{r.payment_method==='cash'?'CASH':'STRIPE'}</em></div><span>{r.kind==='horse'?'Horse':'Race'} × {r.quantity}</span><span>{r.email||'No email'}</span>{r.kind==='horse'&&(r.horse_entries||[]).length?<div className="adminHorseList">{r.horse_entries.map((e,i)=><span key={i}><b>{e.owner_name}</b> — {e.horse_name}</span>)}</div>:r.kind==='horse'&&<span>{(r.horse_names||[]).join(', ')}</span>}<b>£{(r.amount_pence/100).toFixed(2)}</b>{r.admin_notes&&<small>{r.admin_notes}</small>}<small>{new Date(r.created_at).toLocaleString()}</small></article>):<p>No paid sponsorships yet.</p>}</div>
+
+    <section className="purchaseLedger">
+      <div className="purchaseLedgerHead"><div><span className="eyebrow">PURCHASES</span><h2>Paid sponsorships</h2></div><button className="ledgerExport" onClick={csv}>DOWNLOAD CSV</button></div>
+      <div className="purchaseTools">
+        <input type="search" value={orderSearch} onChange={e=>setOrderSearch(e.target.value)} placeholder="Search sponsor, owner or horse…"/>
+        <div className="purchaseFilters">{[['all','All'],['horse','Horses'],['race','Races'],['stripe','Stripe'],['cash','Cash']].map(([v,label])=><button key={v} className={orderFilter===v?'active':''} onClick={()=>setOrderFilter(v)}>{label}</button>)}</div>
+      </div>
+      <div className="purchaseCount">{filteredRows.length} {filteredRows.length===1?'purchase':'purchases'}</div>
+      <div className="purchaseList">{filteredRows.length?filteredRows.map(r=>{
+        const method=r.payment_method||'stripe',isHorse=r.kind==='horse',entries=r.horse_entries||[];
+        return <details className="purchaseRow" key={r.id}>
+          <summary>
+            <div className="purchaseIcon">{isHorse?'H':'R'}</div>
+            <div className="purchaseMain"><strong>{r.customer_name}</strong><span>{isHorse?(r.quantity+' horse'+(r.quantity===1?'':'s')):'Race sponsorship'}{r.email?' · '+r.email:''}</span></div>
+            <div className="purchaseMeta"><em className={method==='cash'?'cashBadge':'stripeBadge'}>{method==='cash'?'CASH':'STRIPE'}</em><time>{new Date(r.created_at).toLocaleDateString('en-GB',{day:'2-digit',month:'short'})}</time></div>
+            <div className="purchaseAmount">£{(r.amount_pence/100).toFixed(2)}</div>
+            <span className="purchaseChevron">⌄</span>
+          </summary>
+          <div className="purchaseDetails">
+            {isHorse&&entries.length>0&&<div className="purchaseHorseGrid">{entries.map((entry,i)=><div key={i}><span>#{i+1}</span><p><b>{entry.horse_name}</b><small>Owner · {entry.owner_name}</small></p></div>)}</div>}
+            <div className="purchaseDetailLine"><span>Payment</span><b>{method==='cash'?'Cash':'Stripe'}</b></div>
+            <div className="purchaseDetailLine"><span>Date</span><b>{new Date(r.created_at).toLocaleString('en-GB')}</b></div>
+            {r.email&&<div className="purchaseDetailLine"><span>Email</span><b>{r.email}</b></div>}
+            {r.admin_notes&&<div className="purchaseNote">{r.admin_notes}</div>}
+          </div>
+        </details>
+      }):<div className="purchaseEmpty">No purchases match this view.</div>}</div>
+    </section>
   </>}</section></main>
 }
 function App(){let q=new URLSearchParams(location.search),p=location.pathname,h=location.hostname;return h==='sponsor.burtco.co.uk'&&p==='/'?<SponsorShop/>:p==='/sponsor-admin'?<SponsorAdmin/>:p==='/sponsor'?<SponsorShop/>:q.has('setup')||p==='/setup'?<RaceSetup/>:q.has('host')||p==='/host'?<Host/>:q.has('play')||p==='/play'?<Player/>:<Screen/>}createRoot(document.getElementById('root')).render(<App/>);
