@@ -503,6 +503,384 @@
         "min": 0,
         "max": 47
       }
+    ],
+    "legacy": true,
+    "note": "Current 8 October snapshot was created under v1.1. New research passes must use scoringFrameworkV2; PRIME is not valid under v2 until critical trainer/targeting/pedigree checks are complete."
+  },
+  "scoringFrameworkV2": {
+    "version": "2.0",
+    "principle": "Build a confident win decision from independent evidence groups. Value/price is assessed separately from win confidence.",
+    "establishedModel": [
+      {
+        "key": "recentForm",
+        "label": "Recent form & performance trend",
+        "max": 16,
+        "checks": [
+          "Last 3-5 runs",
+          "Recency",
+          "RPR/TS trend",
+          "Finishing effort",
+          "Hidden trouble/blocked run",
+          "Whether recent form is improving or declining"
+        ]
+      },
+      {
+        "key": "ratings",
+        "label": "Ratings & speed evidence",
+        "max": 14,
+        "checks": [
+          "Current OR",
+          "Latest/best recent RPR",
+          "Latest/best recent TS",
+          "RPR/TS versus OR",
+          "Peak recent performance",
+          "Sectionals/speed where available"
+        ]
+      },
+      {
+        "key": "handicap",
+        "label": "Handicap mark, weights & claims",
+        "max": 12,
+        "checks": [
+          "Current OR versus last winning OR",
+          "Current OR versus best winning OR",
+          "Rise/drop since last run",
+          "Race-band eligibility",
+          "Out-of-handicap status",
+          "Apprentice/conditional claim",
+          "Effective carried weight"
+        ]
+      },
+      {
+        "key": "conditions",
+        "label": "Race-condition suitability",
+        "max": 10,
+        "checks": [
+          "Going",
+          "Surface",
+          "Distance",
+          "Course configuration",
+          "Direction/turning track",
+          "Field size",
+          "Class/race conditions"
+        ]
+      },
+      {
+        "key": "trainerForm",
+        "label": "Current trainer form",
+        "max": 8,
+        "checks": [
+          "Last 14-day wins/runs",
+          "Last 30-day trend",
+          "Strike rate",
+          "Horses running to form",
+          "Recent stable momentum"
+        ]
+      },
+      {
+        "key": "trainerCourseRaceType",
+        "label": "Trainer course & race-type record",
+        "max": 7,
+        "checks": [
+          "Trainer record at today's course",
+          "Record in this race type",
+          "Record at this class/band",
+          "Record over similar trip/surface",
+          "Relevant 2yo/3yo/handicap/chase/hurdle/AW split"
+        ]
+      },
+      {
+        "key": "targeting",
+        "label": "Race targeting / placement",
+        "max": 8,
+        "checks": [
+          "Same race/meeting used before",
+          "Alternative entries and chosen race",
+          "Return to favoured course/trip",
+          "Drop into suitable class/band",
+          "Prep-run pattern",
+          "Layoff/turnaround pattern",
+          "Race value/prize money",
+          "Travel/placement context",
+          "Headgear/wind-op/gelding timing",
+          "Multiple stable runners and rider allocation"
+        ]
+      },
+      {
+        "key": "jockey",
+        "label": "Jockey & booking signal",
+        "max": 5,
+        "checks": [
+          "Current jockey form",
+          "Trainer-jockey record",
+          "Horse-jockey record",
+          "Booking upgrade/downgrade",
+          "Claim",
+          "Rider choice where alternatives existed"
+        ]
+      },
+      {
+        "key": "paceDraw",
+        "label": "Pace, draw & likely track position",
+        "max": 6,
+        "checks": [
+          "Likely run style",
+          "Projected pace",
+          "Draw bias",
+          "Recent draw bias",
+          "Field size interaction",
+          "Whether setup helps or hurts the horse"
+        ]
+      },
+      {
+        "key": "market",
+        "label": "Market evidence",
+        "max": 5,
+        "checks": [
+          "Early versus current price",
+          "Bookmaker consensus",
+          "Exchange move where visible",
+          "Liquidity where visible",
+          "Late support/drift",
+          "False move on thin volume"
+        ]
+      },
+      {
+        "key": "formLine",
+        "label": "Class & strength of form line",
+        "max": 4,
+        "checks": [
+          "Quality of recent races",
+          "Subsequent winners",
+          "Class rise/drop",
+          "Race value",
+          "Strength of opposition beaten/finished near"
+        ]
+      },
+      {
+        "key": "dataQuality",
+        "label": "Data quality & source agreement",
+        "max": 5,
+        "checks": [
+          "Freshness",
+          "Source provenance",
+          "Cross-source agreement",
+          "Non-runner status",
+          "No invented fields"
+        ]
+      }
+    ],
+    "newcomerModel": [
+      {
+        "key": "pedigree",
+        "label": "Pedigree: trip / ground / surface",
+        "max": 20,
+        "checks": [
+          "Sire progeny strike rate at trip band",
+          "Sire progeny record on today's ground",
+          "Sire progeny turf/AW record",
+          "Dam's own winning trip/ground record",
+          "Dam's progeny/sibling wins at trip",
+          "Dam's progeny/sibling ground/surface record",
+          "Damsire suitability",
+          "Family class ceiling",
+          "Stamina/speed balance"
+        ]
+      },
+      {
+        "key": "trainerNewcomer",
+        "label": "Trainer newcomer / lightly-raced profile",
+        "max": 12,
+        "checks": [
+          "Debut strike rate",
+          "Second-start strike rate",
+          "First-handicap record",
+          "2yo/3yo record",
+          "Maiden/novice record",
+          "Course record with newcomers"
+        ]
+      },
+      {
+        "key": "trainerForm",
+        "label": "Current trainer form",
+        "max": 6,
+        "checks": [
+          "Last 14-day wins/runs",
+          "Last 30-day trend",
+          "Stable runners performing to expectation"
+        ]
+      },
+      {
+        "key": "targeting",
+        "label": "Placement / race aiming",
+        "max": 8,
+        "checks": [
+          "Choice of maiden/novice/handicap",
+          "Alternative entries",
+          "Race value",
+          "Course choice",
+          "Trip change",
+          "Seasonal/debut timing",
+          "Stable's historical placement pattern"
+        ]
+      },
+      {
+        "key": "jockey",
+        "label": "Jockey / booking",
+        "max": 7,
+        "checks": [
+          "Booking strength",
+          "Trainer-jockey combination",
+          "Rider's newcomer record",
+          "Claim where relevant"
+        ]
+      },
+      {
+        "key": "salesQualifying",
+        "label": "Sales / breeze-up / qualifying evidence",
+        "max": 8,
+        "checks": [
+          "Sale price/context",
+          "Breeze-up evidence where public",
+          "Qualifying runs",
+          "Headgear/gelding change",
+          "Physical/progression clues"
+        ]
+      },
+      {
+        "key": "experiencePotential",
+        "label": "Experience & improvement potential",
+        "max": 10,
+        "checks": [
+          "Debut comments",
+          "Greenness",
+          "Trouble in running",
+          "Sectionals/finish where available",
+          "Expected improvement with trip/experience"
+        ]
+      },
+      {
+        "key": "conditions",
+        "label": "Today's conditions suitability",
+        "max": 10,
+        "checks": [
+          "Trip projection",
+          "Ground",
+          "Surface",
+          "Course configuration",
+          "Draw",
+          "Field size"
+        ]
+      },
+      {
+        "key": "market",
+        "label": "Market evidence",
+        "max": 5,
+        "checks": [
+          "Opening/current price",
+          "Stable support across firms",
+          "Exchange move/liquidity where visible"
+        ]
+      },
+      {
+        "key": "paceDraw",
+        "label": "Pace / draw setup",
+        "max": 4,
+        "checks": [
+          "Draw bias",
+          "Expected position",
+          "Likely pace"
+        ]
+      },
+      {
+        "key": "dataQuality",
+        "label": "Data quality & pedigree completeness",
+        "max": 10,
+        "checks": [
+          "Sire verified",
+          "Dam verified",
+          "Sibling/progeny data checked",
+          "Trainer stats checked",
+          "Racecard details cross-checked",
+          "No invented pedigree percentages"
+        ]
+      }
+    ],
+    "riskDeductions": [
+      {
+        "label": "Major suitability doubt",
+        "range": "-4 to -8"
+      },
+      {
+        "label": "Poor recent form / regression",
+        "range": "-3 to -8"
+      },
+      {
+        "label": "Unproven major trip change",
+        "range": "-2 to -6"
+      },
+      {
+        "label": "Bad pace/draw setup",
+        "range": "-2 to -5"
+      },
+      {
+        "label": "Trainer badly out of form",
+        "range": "-2 to -5"
+      },
+      {
+        "label": "Strong market drift with meaningful liquidity",
+        "range": "-2 to -6"
+      },
+      {
+        "label": "Missing critical evidence",
+        "range": "-3 to -10"
+      },
+      {
+        "label": "Multiple independent red flags",
+        "range": "up to -25 total"
+      }
+    ],
+    "decisionGates": {
+      "prime": "84+/100, >=90% of required checks verified, at least five independent positive evidence groups, no major red flag, and all critical checks complete.",
+      "fiveStar": "78-83/100 with >=85% check coverage and no unresolved critical negative.",
+      "fourStar": "70-77/100 with >=75% check coverage.",
+      "threeStar": "60-69/100 with >=65% check coverage.",
+      "twoStar": "50-59/100 or material unresolved doubts.",
+      "oneStar": "Below 50/100 or insufficient evidence.",
+      "pass": "Do not promote as a selection if critical data is missing, contradictory evidence dominates, or the price destroys the edge."
+    },
+    "criticalChecksEstablished": [
+      "Current trainer form",
+      "Trainer course/race-type record",
+      "Race targeting/placement",
+      "OR/RPR/TS or equivalent ratings evidence",
+      "Going/trip/surface suitability",
+      "Current non-runner/market status"
+    ],
+    "criticalChecksNewcomer": [
+      "Current trainer form",
+      "Trainer newcomer/course profile",
+      "Race targeting/placement",
+      "Sire trip/ground/surface evidence",
+      "Dam and sibling/progeny trip/ground evidence",
+      "Jockey booking",
+      "Current market status"
     ]
-  }
+  },
+  "dailyResearchProtocol": [
+    "Confirm race, going, surface, distance, class, field size, draw and non-runners.",
+    "Record OR, RPR and TS where published; compare current mark with recent and winning marks.",
+    "Read last 3-5 runs, including comments and hidden trouble, not just finishing positions.",
+    "Check current trainer form over at least 14 days and recent trend.",
+    "Check trainer record at the course and in the specific race type/class/distance/surface.",
+    "Check whether the race looks deliberately suitable: alternative entries, same-race history, class/band eligibility, turnaround/layoff, race value, equipment changes and rider allocation.",
+    "Check jockey form, trainer-jockey record, horse-jockey record and whether the booking is an upgrade or meaningful choice.",
+    "Build a pace map and assess draw/track-position advantage or disadvantage.",
+    "Check market movement from early prices to current market and distinguish genuine support from thin-volume moves.",
+    "For newcomers/lightly raced horses, research sire, dam, damsire and siblings/progeny for trip, going and surface suitability before scoring.",
+    "Check the strength of recent form lines and whether horses from those races have subsequently performed well.",
+    "Record contrary evidence and risks explicitly.",
+    "Calculate check coverage; reduce confidence when evidence is missing.",
+    "Only then issue PRIME / stars and a separate VALUE label."
+  ]
 }
