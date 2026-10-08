@@ -589,23 +589,6 @@
       "result": null
     },
     {
-      "id": "2026-10-09|newmarket|15:30|spyce|each-way",
-      "date": "2026-10-09",
-      "course": "Newmarket",
-      "time": "15:30",
-      "horse": "Spyce",
-      "betType": "each-way",
-      "winStake": 5,
-      "placeStake": 5,
-      "selectionOdds": "12/1",
-      "settlementOdds": null,
-      "ewFraction": 0.25,
-      "placesPaid": 3,
-      "runnerCount": 11,
-      "terms": "User-defined 1/4 odds house EW terms based on actual final field size",
-      "result": null
-    },
-    {
       "id": "2026-10-09|newmarket|14:57|dancing destiny|each-way",
       "date": "2026-10-09",
       "course": "Newmarket",
@@ -661,6 +644,14 @@
           "result": null
         },
         {
+          "horse": "Nuit d'Eclair",
+          "course": "Newmarket",
+          "time": "13:50",
+          "selectionOdds": "9/2",
+          "runnerCount": 16,
+          "result": null
+        },
+        {
           "horse": "Theheatison",
           "course": "York",
           "time": "14:05",
@@ -674,14 +665,6 @@
           "time": "14:25",
           "selectionOdds": "13/8",
           "runnerCount": 6,
-          "result": null
-        },
-        {
-          "horse": "Spyce",
-          "course": "Newmarket",
-          "time": "15:30",
-          "selectionOdds": "12/1",
-          "runnerCount": 11,
           "result": null
         }
       ]
