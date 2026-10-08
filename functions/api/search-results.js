@@ -91,7 +91,7 @@ export async function onRequestGet({request,env}){
  const page=await env.ASSETS.fetch(new Request(new URL('/data/races.json',url)));
  if(!page.ok)return json({ok:false,error:'Published selections unavailable'},503);
  const data=await page.json(),date=data.snapshotDate;
- const selections=['todaySelections','midshotsToday','longshotsToday']
+ const selections=['todaySelections','midshotsToday','longshotsToday','lucky15Only']
   .flatMap(g=>(data[g]||[]))
   .filter(p=>!p.result?.position && !/^(NR|PU|F|DNF)$/i.test(p.result?.status||''));
  const key=url.searchParams.get('horse');
