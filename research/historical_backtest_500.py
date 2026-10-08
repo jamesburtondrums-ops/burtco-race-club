@@ -31,31 +31,10 @@ def download(url, dest):
     return dest
 
 def pick_source_file():
-    url = "https://www.kaggle.com/api/v1/datasets/list/deltaromeo/horse-racing-results-ukireland-2015-2025"
-    meta = http_json(url)
-    files = meta if isinstance(meta, list) else meta.get("datasetFiles") or meta.get("files") or []
-    serial = []
-    for x in files:
-        name = x.get("name") or x.get("ref") or x.get("fileName") or ""
-        size = x.get("totalBytes") or x.get("size") or 0
-        serial.append({"name": name, "size": size})
-    (OUT/"kaggle_files.json").write_text(json.dumps(serial, indent=2))
-    preferred = [
-        "form_2015-present/form_2015-present/raceform.csv",
-        "form_2015-present/raceform.csv",
-        "raceform.csv"
-    ]
-    names = {x["name"]: x for x in serial}
-    for p in preferred:
-        if p in names:
-            return p, names[p].get("size",0)
-    candidates = [x for x in serial if "raceform" in x["name"].lower() and "2015" in x["name"].lower()]
-    if not candidates:
-        candidates = [x for x in serial if x["name"].lower().endswith(".csv")]
-    if not candidates:
-        raise RuntimeError(f"No CSV candidate found; files={serial[:20]}")
-    candidates.sort(key=lambda x: (("2015" in x["name"]), x.get("size",0)), reverse=True)
-    return candidates[0]["name"], candidates[0].get("size",0)
+    # The archive's current post-2015 race-runner file. Hard-code the known
+    # member rather than relying on Kaggle's dataset-list response, which can
+    # omit nested members and previously caused the 2005-2014 file to be chosen.
+    return "form_2015-present/form_2015-present/raceform.csv", 0
 
 def open_csv_stream():
     name, size = pick_source_file()
