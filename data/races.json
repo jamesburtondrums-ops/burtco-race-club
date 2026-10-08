@@ -882,5 +882,186 @@
     "Record contrary evidence and risks explicitly.",
     "Calculate check coverage; reduce confidence when evidence is missing.",
     "Only then issue PRIME / stars and a separate VALUE label."
-  ]
+  ],
+  "pilotBacktest": {
+    "label": "Pilot historical test",
+    "warning": "12-race exploratory sample only. Useful for direction, not statistical proof.",
+    "races": [
+      {
+        "race": "York 14:00 · 12 Jul 2025",
+        "pick": "Sisyphean",
+        "forecast": "7/1",
+        "sp": "3/1",
+        "result": "2nd",
+        "won": false,
+        "marketAgreement": false,
+        "shortened": true
+      },
+      {
+        "race": "York 14:35 · 12 Jul 2025",
+        "pick": "Washington Heights",
+        "forecast": "7/2",
+        "sp": "9/4",
+        "result": "1st",
+        "won": true,
+        "marketAgreement": true,
+        "shortened": true
+      },
+      {
+        "race": "York 15:45 · 12 Jul 2025",
+        "pick": "Al Qareem",
+        "forecast": "11/8",
+        "sp": "4/7",
+        "result": "1st",
+        "won": true,
+        "marketAgreement": true,
+        "shortened": true
+      },
+      {
+        "race": "York 16:15 · 12 Jul 2025",
+        "pick": "Amazing Journey",
+        "forecast": "4/1",
+        "sp": "5/2",
+        "result": "1st",
+        "won": true,
+        "marketAgreement": true,
+        "shortened": true
+      },
+      {
+        "race": "York 17:25 · 12 Jul 2025",
+        "pick": "Juan Les Pins",
+        "forecast": "10/1",
+        "sp": "9/2",
+        "result": "3rd",
+        "won": false,
+        "marketAgreement": false,
+        "shortened": true
+      },
+      {
+        "race": "Haydock 13:32 · 5 Sep 2025",
+        "pick": "Mission Possible",
+        "forecast": "4/1",
+        "sp": "7/4",
+        "result": "8th",
+        "won": false,
+        "marketAgreement": true,
+        "shortened": true
+      },
+      {
+        "race": "Haydock 15:50 · 5 Sep 2025",
+        "pick": "Lightning Polka",
+        "forecast": "11/2",
+        "sp": "7/2",
+        "result": "1st",
+        "won": true,
+        "marketAgreement": false,
+        "shortened": true
+      },
+      {
+        "race": "Haydock 16:07 · 6 Sep 2025",
+        "pick": "Jer Batt",
+        "forecast": "9/2",
+        "sp": "5/2",
+        "result": "3rd",
+        "won": false,
+        "marketAgreement": false,
+        "shortened": true
+      },
+      {
+        "race": "Haydock 15:00 · 6 Sep 2025",
+        "pick": "The Reverend",
+        "forecast": "5/1",
+        "sp": "7/2",
+        "result": "1st",
+        "won": true,
+        "marketAgreement": true,
+        "shortened": true
+      },
+      {
+        "race": "Leopardstown 15:15 · 18 Oct 2025",
+        "pick": "Thread Of Gold",
+        "forecast": "11/4",
+        "sp": "9/2",
+        "result": "7th",
+        "won": false,
+        "marketAgreement": false,
+        "shortened": false
+      },
+      {
+        "race": "Leopardstown 16:20 · 18 Oct 2025",
+        "pick": "Yaupon De Replay",
+        "forecast": "11/4",
+        "sp": "6/1",
+        "result": "5th",
+        "won": false,
+        "marketAgreement": false,
+        "shortened": false
+      },
+      {
+        "race": "Leopardstown 17:20 · 18 Oct 2025",
+        "pick": "Hamiyan",
+        "forecast": "6/1",
+        "sp": "9/2",
+        "result": "4th",
+        "won": false,
+        "marketAgreement": false,
+        "shortened": true
+      }
+    ],
+    "metrics": {
+      "blindModel": {
+        "bets": 12,
+        "wins": 5,
+        "strikeRate": 41.7,
+        "roi": 44.3
+      },
+      "favouriteBaseline": {
+        "bets": 12,
+        "wins": 7,
+        "strikeRate": 58.3,
+        "roi": 93.3
+      },
+      "modelMarketAgreement": {
+        "bets": 5,
+        "wins": 4,
+        "strikeRate": 80,
+        "roi": 156.4
+      },
+      "hardEvidencePlusShortening": {
+        "bets": 9,
+        "wins": 5,
+        "strikeRate": 55.6,
+        "roi": 92.5
+      }
+    }
+  },
+  "confidenceMethodV3": {
+    "status": "PROVISIONAL — requires larger walk-forward backtest",
+    "principle": "Use the market as the prior probability, then move confidence only when independent pre-race evidence supports or contradicts it.",
+    "accuracyLane": [
+      "Start from overround-adjusted market implied probability close to the off.",
+      "Require V2 evidence score >=84 for PRIME consideration.",
+      "Require >=90% critical-check coverage.",
+      "Require at least five independent positive evidence groups.",
+      "Require model selection to be market rank 1 or 2 for PRIME.",
+      "No meaningful late drift; steady or shortening market is preferred.",
+      "Block PRIME if current trainer form, trainer course/race-type record, targeting, suitability or data quality is unresolved."
+    ],
+    "valueLane": [
+      "Value is separate from win confidence.",
+      "Estimate model win probability from market prior plus evidence adjustments.",
+      "Only flag VALUE when model probability exceeds market implied probability by a meaningful margin after bookmaker overround.",
+      "Require score >=70 and no severe red flag.",
+      "At bigger prices, require stronger evidence or a larger probability edge; do not raise win stars simply because odds are large.",
+      "Track closing-line value: whether our advised price beats SP/BSP over time."
+    ],
+    "calibrationPlan": [
+      "Backtest at least 500 races before treating star bands as calibrated.",
+      "Use walk-forward testing: train/tune on older races, test only on later unseen races.",
+      "Separate Flat, AW, jumps, 2yo/newcomer and handicap models.",
+      "Measure strike rate, ROI, A/E, Brier score, log loss and calibration by confidence band.",
+      "Record every no-bet as well as every selection to prevent hindsight filtering.",
+      "Freeze all features at a timestamp before the off to prevent data leakage."
+    ]
+  }
 }
