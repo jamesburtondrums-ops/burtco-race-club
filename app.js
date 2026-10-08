@@ -277,19 +277,17 @@ function history(){
  const entries=[...(state.ledger?.entries||[])].sort((a,b)=>String(b.date||'')===String(a.date||'')?
   timeValue(a.time)-timeValue(b.time):String(b.date||'').localeCompare(String(a.date||'')));
  const outcomes=entries.filter(e=>e.result);
- const earlier=entries.filter(e=>e.restoredFromPreviousVersion).length;
  const settled=entries.filter(e=>!['open','unpriced'].includes(settlement(e).status)).length;
- const intro='<section class="page-intro history-intro"><div><div class="eyebrow">PERSISTENT PAPER BET HISTORY</div><h2>Results history</h2><p>Previous selections and results stay here when the daily racecard changes. Tap any horse to review its recorded stake, odds and payout.</p></div><div class="quick-stats"><span><b>'+entries.length+'</b> bets</span><span><b>'+outcomes.length+'</b> results</span><span><b>'+earlier+'</b> recovered</span><span><b>'+settled+'</b> settled</span></div></section>';
+ const intro='<section class="page-intro history-intro"><div><div class="eyebrow">PERSISTENT PAPER BET HISTORY</div><h2>Results history</h2><p>Previous selections and results stay here when the daily racecard changes. Tap any horse to review its recorded stake, odds and payout.</p></div><div class="quick-stats"><span><b>'+entries.length+'</b> bets</span><span><b>'+outcomes.length+'</b> results</span><span><b>'+settled+'</b> settled</span></div></section>';
  const rows=entries.map(e=>{
   const result=e.result||null,position=positionOf(e),outcome=settlement(e),stake=Number(e.winStake||0)+Number(e.placeStake||0);
   const done=!['open','unpriced'].includes(outcome.status),pl=outcome.returnAmount-stake;
   const label=position?ordinal(position)+(String(result?.status||'').includes('User reported')?' · reported':''):result?.status?String(result.status):'Pending';
-  const extra=e.restoredFromPreviousVersion?'<span class="selection-tier restored">RECOVERED</span>':'';
   return '<details class="history-record"><summary><span class="history-time">'+escapeHtml(e.date||'')+' <b>'+escapeHtml(e.time||'')+'</b></span>'+
    '<span class="history-horse"><strong>'+escapeHtml(e.horse)+'</strong><small>'+escapeHtml(e.course||'')+' · '+(e.betType==='win'?'£10 win':'£5 each way')+'</small></span>'+
    '<span class="history-position '+(position===1?'history-won':result?'history-finished':'history-pending')+'">'+escapeHtml(label)+'</span>'+
    '<span class="history-pl '+(done?(pl>=0?'tracker-positive':'tracker-negative'):'')+'">'+(done?signMoney(pl):'Pending')+'</span><span class="history-arrow">⌄</span></summary>'+
-   '<div class="history-details">'+extra+'<div>Recorded price <b>'+escapeHtml(e.selectionOdds||'—')+'</b></div>'+
+   '<div class="history-details"><div>Recorded price <b>'+escapeHtml(e.selectionOdds||'—')+'</b></div>'+
    '<div>Starting price <b>'+escapeHtml(e.settlementOdds||result?.sp||'Not confirmed')+'</b></div>'+
    '<div>Stake <b>'+money(stake)+'</b></div>'+
    '<div>Return <b>'+(done?money(outcome.returnAmount):'Pending confirmation')+'</b></div>'+
@@ -343,9 +341,10 @@ function preservePublishedHistory(incoming,previous){
  for(const group of ['todaySelections','midshotsToday','longshotsToday']){
   const next=incoming[group]||[],old=previous[group]||[],known=new Map(next.map(x=>[key(x),x]));
   for(const prior of old){
+   if(prior.restoredFromPreviousVersion)continue;
    const match=known.get(key(prior));
-   if(!match){next.push(prior);known.set(key(prior),prior)}
-   else if(prior.result&&!match.result)match.result=prior.result;
+   // Published selection roster is authoritative: do not resurrect deleted horses.
+   if(match&&prior.result&&!match.result)match.result=prior.result;
   }
   incoming[group]=next;
  }
@@ -356,9 +355,10 @@ function preserveLedgerHistory(incoming,previous){
  incoming.entries=incoming.entries||[];
  const byId=new Map(incoming.entries.map(e=>[e.id,e]));
  for(const old of previous.entries||[]){
+  if(old.restoredFromPreviousVersion)continue;
   const match=byId.get(old.id);
-  if(!match){incoming.entries.push(old);byId.set(old.id,old)}
-  else if(old.result&&!match.result)match.result=old.result;
+  // Keep only bets deliberately retained in the published ledger.
+  if(match&&old.result&&!match.result)match.result=old.result;
  }
  return incoming;
 }
