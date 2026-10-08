@@ -1,8 +1,8 @@
 const state={data:null,view:"today",filter:"ALL"};
 const val=v=>v===undefined||v===null||v===""?"—":v;
-const v41=x=>x.v41||null;
-const probabilityOf=x=>v41(x)?.winProbability??null;
-const leadOf=x=>v41(x)?.leadOverSecond??null;
+const contextOf=x=>x.v42||x.v41||null;
+const probabilityOf=x=>contextOf(x)?.winProbability??null;
+const leadOf=x=>contextOf(x)?.leadOverSecond??null;
 const confidenceLabel=x=>{
  const p=probabilityOf(x);
  if(p===null)return "RECHECK";
@@ -14,19 +14,15 @@ const confidenceLabel=x=>{
  return "★☆☆☆☆";
 };
 const primeOf=x=>{
- const q=v41(x); if(!q)return false;
+ const q=x.v42; if(!q)return false;
  const rt=(q.raceType||"").toLowerCase();
- const threshold=["nursery","hurdle"].includes(rt)?60:55;
- const handicap=rt==="handicap";
+ const threshold=["maiden","novice"].includes(rt)?50:["nursery","hurdle"].includes(rt)?60:55;
  return q.winProbability>=threshold &&
    q.marketRank===1 &&
-   q.leadOverSecond>=8 &&
-   q.criticalCoverage>=90 &&
-   (q.positiveGroups||0)>=5 &&
+   (q.criticalCoverage??0)>=85 &&
    !q.majorRedFlag &&
    q.lateMarketConfirmed===true &&
-   (!q.newcomer || q.pedigreeComplete===true) &&
-   (q.racePredictability||0)>=70;
+   (!q.newcomer || q.pedigreeComplete===true);
 };
 const starsOf=x=>{
  const p=probabilityOf(x);
@@ -38,7 +34,7 @@ async function load(){const r=await fetch("./data/races.json?"+Date.now());state
 function nav(){return [["today","Today"],["system","V4.2 System"],["checks","All checks"],["backtest","Backtest"],["sources","Sources"]].map(([v,t])=>`<button class="${state.view===v?"active":""}" data-view="${v}">${t}</button>`).join("")}
 function filters(){const x=["ALL","PRIME","★★★★★","★★★★☆","★★★☆☆","WATCH"];return `<div class="meeting-tabs">${x.map(f=>`<button data-filter="${f}" class="${state.filter===f?"active":""}">${f}</button>`).join("")}</div>`}
 function card(x){
- const prime=primeOf(x), winStars=starsOf(x), p=probabilityOf(x), q=v41(x), label=confidenceLabel(x);
+ const prime=primeOf(x), winStars=starsOf(x), p=probabilityOf(x), q=contextOf(x), label=confidenceLabel(x);
  const legacy=!q;
  return `<article class="pick-card ${prime?"prime-card":legacy?"legacy-card":""}">
    ${prime?'<div class="prime-banner">PRIME · '+p.toFixed(1)+'% WIN PROBABILITY</div>':legacy?'<div class="recheck-banner">V4.2 CONTEXT RECHECK</div>':`<div class="win-confidence"><span>${p.toFixed(1)}% WIN PROBABILITY</span>${stars(winStars)}</div>`}
