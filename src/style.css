@@ -399,3 +399,51 @@ transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;
 .adminOrderTitle{display:flex;align-items:center;justify-content:space-between;gap:12px}.adminOrderTitle em{font-style:normal;font-size:11px;font-weight:900;letter-spacing:1px;padding:6px 9px;border-radius:999px}.cashBadge{background:#dff0d8;color:#24543f}.stripeBadge{background:#eee8ff;color:#5b45a1}
 .adminSummary span{font-size:13px;opacity:.75}
 @media(max-width:650px){.cashSponsorHead{display:block}.cashStock{display:inline-block;margin-top:10px}.cashHorseRow{grid-template-columns:1fr}.cashFormGrid{grid-template-columns:1fr}.cashTypeButtons{grid-template-columns:1fr 1fr}}
+
+/* Clean sponsorship purchase ledger */
+.sponsorAdminPage .adminPanel{max-width:1120px;padding:28px}
+.adminStats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.adminStats>div{background:#fff;border:1px solid #18392b1f;border-radius:16px;padding:16px 18px;display:grid;gap:4px}
+.adminStats span{font-size:11px;letter-spacing:.1em;font-weight:900;color:#6a796f}
+.adminStats strong{font-family:Georgia,'Times New Roman',serif;font-size:28px;color:#173c2b;line-height:1.1}
+.adminStats strong i{font-family:inherit;font-size:13px;font-style:normal;font-weight:800;color:#6a796f}
+.adminStats small{color:#77847c}
+.purchaseLedger{margin-top:8px}
+.purchaseLedgerHead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px}
+.purchaseLedgerHead h2{margin:5px 0 0;font-size:30px}.ledgerExport{padding:11px 14px;font-size:13px}
+.purchaseTools{display:grid;grid-template-columns:minmax(240px,1fr) auto;gap:12px;align-items:center;margin-bottom:8px}
+.purchaseTools>input{margin:0;min-height:46px;background:#fff}
+.purchaseFilters{display:flex;gap:6px;flex-wrap:wrap}
+.purchaseFilters button{box-shadow:none;background:#fff;color:#42584d;border:1px solid #18392b20;padding:10px 13px;font-size:13px}
+.purchaseFilters button.active{background:#173c2b;color:#fff;border-color:#173c2b}
+.purchaseCount{font-size:12px;color:#748078;margin:10px 2px}
+.purchaseList{display:grid;gap:8px}
+.purchaseRow{background:#fff;border:1px solid #18392b1a;border-radius:14px;overflow:hidden}
+.purchaseRow summary{list-style:none;display:grid;grid-template-columns:42px minmax(0,1fr) auto 100px 18px;gap:12px;align-items:center;padding:13px 15px;cursor:pointer}
+.purchaseRow summary::-webkit-details-marker{display:none}
+.purchaseRow[open]{border-color:#18392b35;box-shadow:0 8px 24px #18392b0d}
+.purchaseIcon{width:38px;height:38px;border-radius:10px;background:#eef3ec;color:#173c2b;display:grid;place-items:center;font-weight:900}
+.purchaseMain{min-width:0;display:grid;gap:3px}.purchaseMain strong{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.purchaseMain span{font-size:12px;color:#748078;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.purchaseMeta{display:flex;align-items:center;gap:9px}.purchaseMeta time{font-size:12px;color:#7a857f;white-space:nowrap}
+.purchaseAmount{font-size:17px;font-weight:900;text-align:right;color:#173c2b}
+.purchaseChevron{font-size:19px;color:#7a857f;transition:transform .15s}.purchaseRow[open] .purchaseChevron{transform:rotate(180deg)}
+.purchaseDetails{border-top:1px solid #18392b12;background:#fbfcf9;padding:14px 15px 16px 69px}
+.purchaseHorseGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.purchaseHorseGrid>div{display:grid;grid-template-columns:30px 1fr;gap:8px;align-items:center;background:#fff;border:1px solid #18392b12;border-radius:10px;padding:9px}
+.purchaseHorseGrid>div>span{width:28px;height:28px;border-radius:8px;background:#eef3ec;display:grid;place-items:center;font-size:11px;font-weight:900}
+.purchaseHorseGrid p{margin:0;display:grid;gap:2px}.purchaseHorseGrid p b{font-size:13px}.purchaseHorseGrid p small{font-size:11px;color:#748078}
+.purchaseDetailLine{display:flex;justify-content:space-between;gap:18px;padding:7px 0;border-bottom:1px solid #18392b0e;font-size:12px}.purchaseDetailLine span{color:#748078}.purchaseDetailLine b{text-align:right}
+.purchaseNote{margin-top:10px;padding:10px 12px;border-radius:10px;background:#f3efe3;font-size:12px;color:#5d624f}
+.purchaseEmpty{text-align:center;padding:28px;border:1px dashed #18392b30;border-radius:14px;color:#7a857f;background:#fff}
+@media(max-width:850px){
+ .adminStats{grid-template-columns:1fr 1fr}.purchaseTools{grid-template-columns:1fr}.purchaseFilters{overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}
+ .purchaseRow summary{grid-template-columns:38px minmax(0,1fr) auto 18px}.purchaseMeta{display:none}.purchaseAmount{grid-column:3}
+ .purchaseDetails{padding-left:15px}.purchaseHorseGrid{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+ .sponsorAdminPage .adminPanel{padding:16px}.adminStats{grid-template-columns:1fr 1fr;gap:8px}.adminStats>div{padding:13px}.adminStats strong{font-size:23px}
+ .purchaseLedgerHead{align-items:flex-start;flex-direction:column}.ledgerExport{width:100%}
+ .purchaseRow summary{grid-template-columns:36px minmax(0,1fr) auto 14px;gap:8px;padding:11px}
+ .purchaseIcon{width:34px;height:34px}.purchaseMain span{max-width:180px}.purchaseAmount{font-size:15px}
+}
