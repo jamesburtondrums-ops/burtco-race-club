@@ -8,11 +8,11 @@
     "scope": "GB + Ireland thoroughbred meetings"
   },
   "gradingSystem": {
-    "PRIME": "Calibrated high-confidence win selection. Requires >=50% fused probability plus market/top-two and evidence safeguards.",
-    "STRONG": "Replaced by star confidence bands under V4.",
-    "VALUE": "Suspended as a recommendation label until the value model is independently calibrated.",
-    "SPECULATIVE": "Use only as PRICE WATCH; never as high win confidence.",
-    "WATCH": "Interesting but below the confidence threshold or missing critical evidence."
+    "PRIME": "Accuracy Mode: >=55% fused win probability plus favourite status, dominance margin and full safeguards.",
+    "STRONG": "No longer used as a confidence grade.",
+    "VALUE": "Replaced by PRICE WATCH / PRICE OK / TOO SHORT; price does not alter win confidence.",
+    "SPECULATIVE": "No longer promoted as a win-confidence selection.",
+    "WATCH": "Below threshold, incomplete evidence or unsuitable race."
   },
   "meetings": [
     {
@@ -433,9 +433,9 @@
     }
   ],
   "scoringModel": {
-    "version": "4.0",
+    "version": "4.1",
     "legacy": true,
-    "note": "Today’s displayed picks were researched before V4 was finalised. They must be rerun through V4 before any can be called PRIME.",
+    "note": "Existing 8 October cards pre-date V4.1 Accuracy Mode. Their old stars/tiers are suppressed until freshly researched.",
     "components": [
       {
         "key": "recentForm",
@@ -473,7 +473,7 @@
         "max": 5
       }
     ],
-    "primeRule": "Fused win probability >=50%; market rank 1-2; >=90% critical checks complete; at least five independent positive evidence groups; no major red flag. For newcomers, pedigree checks are mandatory."
+    "primeRule": ">=55% fused win probability; market favourite; >=8pp clear of second-ranked horse; >=90% critical checks; >=5 independent positive groups; no major red flag. Handicaps additionally require retained ability and >=2 aiming groups."
   },
   "scoringFrameworkV2": {
     "version": "2.0",
@@ -1033,8 +1033,8 @@
     ]
   },
   "systemV4": {
-    "version": "4.0",
-    "status": "ACTIVE METHODOLOGY — live selections require fresh V4 research",
+    "version": "4.1",
+    "status": "ACTIVE ACCURACY MODE — fresh V4.1 research required for live grades",
     "backtest": {
       "races": 10000,
       "runners": 67898,
@@ -1201,50 +1201,137 @@
     },
     "grades": {
       "PRIME": {
-        "rule": "Fused win probability >=50%; market rank 1-2; >=90% critical checks complete; at least five independent positive evidence groups; no major red flag. For newcomers, pedigree checks are mandatory.",
-        "observed": "69.3% winners at >=50% in the clean unseen sample; 71.5% at >=55%.",
+        "rule": ">=55% fused win probability; market favourite; >=8pp clear of second-ranked horse; >=90% critical checks; >=5 independent positive groups; no major red flag. Handicaps additionally require retained ability and >=2 aiming groups.",
+        "observed": "In the audited unseen test, the >=55% confidence gate won 71.5% (158 races). This is a historical benchmark, not a guarantee.",
         "display": "Special gold PRIME card"
       },
       "five": {
-        "rule": "40-49.9% fused win probability with critical data complete.",
-        "observed": "40-50% calibration band won 43.1%.",
+        "rule": "45-54.9% fused win probability, with critical data complete.",
+        "observed": "High-confidence non-PRIME band.",
         "display": "★★★★★"
       },
       "four": {
-        "rule": "30-39.9% fused win probability.",
-        "observed": "30-40% calibration band won 36.6%.",
+        "rule": "35-44.9% fused win probability.",
+        "observed": "Strong contender band.",
         "display": "★★★★☆"
       },
       "three": {
-        "rule": "25-29.9% fused win probability.",
-        "observed": "25-30% calibration band won 28.4%.",
+        "rule": "27.5-34.9% fused win probability.",
+        "observed": "Credible contender band.",
         "display": "★★★☆☆"
       },
       "two": {
-        "rule": "20-24.9% fused win probability.",
-        "observed": "20-25% calibration band won 22.0%.",
+        "rule": "20-27.4% fused win probability.",
+        "observed": "Possible winner but material uncertainty.",
         "display": "★★☆☆☆"
       },
       "one": {
-        "rule": "Below 20%, or insufficient/contradictory evidence.",
-        "observed": "Low-confidence / watch territory.",
+        "rule": "Below 20%, incomplete critical evidence, or contradictory profile.",
+        "observed": "Watch / no-bet territory.",
         "display": "★☆☆☆☆"
       }
     },
     "hardBlocks": [
-      "Unresolved non-runner/jockey/going status",
-      "Critical trainer/placement checks missing",
-      "Major trip/ground/surface doubt not compensated by evidence",
-      "Strong recent regression with no retained-ability evidence",
-      "Large mark fall treated as the main positive without current performance proof",
-      "For newcomers: sire/dam/sibling suitability not researched",
-      "Material late drift with no plausible explanation when market evidence is required"
+      "Horse is not market favourite at the final PRIME check.",
+      "Model lead over second-ranked horse is below 8 percentage points.",
+      "Critical-check coverage below 90%.",
+      "Unresolved non-runner, jockey, going or surface status.",
+      "Major trip/ground/surface doubt not compensated by strong evidence.",
+      "Strong recent regression with no retained-ability evidence.",
+      "Handicap PRIME lacks retained ability or fewer than two independent aiming groups.",
+      "Large mark fall is being used as the main positive without current performance proof.",
+      "For newcomers: sire/dam/sibling suitability not researched.",
+      "Material late drift or market disagreement with no plausible explanation.",
+      "Race predictability is too low: deep/uncertain race becomes NO SELECTION."
     ],
     "pricePolicy": {
       "status": "CAUTIOUS",
       "rule": "Do not label a horse VALUE solely because model probability exceeds market implied probability.",
       "reason": "The simple value overlay lost 20.9% ROI on the clean unseen market sample, so it is not validated.",
       "currentUse": "Show fair-price estimate and PRICE OK / TOO SHORT / PRICE WATCH only. Do not increase win stars because a horse is a big price."
+    },
+    "accuracyMode": {
+      "objective": "Maximise PRIME strike rate by sacrificing selection volume.",
+      "raceGate": [
+        "Score race predictability before selecting a horse.",
+        "Prefer races with a clear form hierarchy, reliable going/surface, manageable field size and limited unknown opposition.",
+        "Apply stricter thresholds to nurseries, deep handicaps and races with several lightly-raced/unexposed runners.",
+        "Allow NO SELECTION whenever the race itself is too uncertain."
+      ],
+      "primeRequirements": {
+        "minWinProbability": 55,
+        "requiredMarketRank": 1,
+        "minLeadOverSecondPctPoints": 8,
+        "minCriticalCoveragePct": 90,
+        "minIndependentPositiveGroups": 5,
+        "retainedAbilityRequiredForHandicaps": true,
+        "minAimingGroupsForHandicaps": 2,
+        "noMajorRedFlags": true,
+        "lateMarketConfirmationRequired": true,
+        "pedigreeRequiredForNewcomers": true
+      },
+      "raceTypeRules": {
+        "novice": "Normal V4.1 gate; these were among the most predictable historical segments.",
+        "maiden": "Normal V4.1 gate, with pedigree/experience completeness for sparse form.",
+        "handicap": "PRIME also requires retained ability + at least two placement/aiming groups.",
+        "nursery": "High-uncertainty: require stronger evidence and normally >=60% probability with a clear dominance margin.",
+        "hurdle": "High-uncertainty in the historical sample: normally require >=60% plus strong suitability/form agreement.",
+        "chase": "Use normal gate but require jumping/recent-completion evidence.",
+        "other": "Case-by-case; PRIME requires complete data and clear dominance."
+      },
+      "confidenceBands": [
+        {
+          "label": "PRIME",
+          "min": 55,
+          "extra": "Favourite + lead >=8pp + all PRIME safeguards"
+        },
+        {
+          "label": "★★★★★",
+          "min": 45,
+          "max": 54.9
+        },
+        {
+          "label": "★★★★☆",
+          "min": 35,
+          "max": 44.9
+        },
+        {
+          "label": "★★★☆☆",
+          "min": 27.5,
+          "max": 34.9
+        },
+        {
+          "label": "★★☆☆☆",
+          "min": 20,
+          "max": 27.4
+        },
+        {
+          "label": "★☆☆☆☆",
+          "min": 0,
+          "max": 19.9
+        }
+      ],
+      "dominance": {
+        "definition": "Model win probability minus the second-highest model probability in the race.",
+        "rule": "PRIME normally requires >=8 percentage points. A 56% vs 20% race is treated as safer than 56% vs 42%."
+      },
+      "aimingGroups": [
+        "Retained ability above/around today's OR",
+        "Target return: same course/meeting/time-of-year or proven winning conditions",
+        "Trainer/owner course or race-placement strength",
+        "Meaningful jockey upgrade / booking signal",
+        "Handicap sweet spot only when current ability is independently evidenced"
+      ],
+      "valueWatch": {
+        "separated": true,
+        "gradesDoNotUsePriceValue": true,
+        "labels": [
+          "PRICE OK",
+          "TOO SHORT",
+          "PRICE WATCH"
+        ],
+        "note": "A bigger price never increases stars or PRIME status."
+      }
     }
   }
 }
