@@ -325,5 +325,55 @@
     ],
     "terms": "£1 each way per combination: 15 win lines + 15 place lines. 1/4 odds place portion, paid places based on actual runner count. Not bookmaker terms.",
     "recommendationStatus": "Paper ticket proposed overnight; prices and non-runners require Friday verification"
-  }
+  },
+  "racecardLinks": [
+    {
+      "course": "Newmarket",
+      "races": 8,
+      "first": "13:15",
+      "last": "17:20",
+      "url": "https://www.horseracing.net/newmarket/09-10-26",
+      "going": "Good to firm"
+    },
+    {
+      "course": "York",
+      "races": 7,
+      "first": "13:30",
+      "last": "17:00",
+      "url": "https://www.horseracing.net/york/09-10-26",
+      "going": "Good; good to soft in places"
+    },
+    {
+      "course": "Chepstow",
+      "races": 8,
+      "first": "13:22",
+      "last": "17:31",
+      "url": "https://www.horseracing.net/chepstow/09-10-26",
+      "going": "Good to soft; good in places"
+    },
+    {
+      "course": "Downpatrick",
+      "races": 7,
+      "first": "14:13",
+      "last": "17:37",
+      "url": "https://www.horseracing.net/downpatrick/09-10-26",
+      "going": "Recheck on race day"
+    },
+    {
+      "course": "Kempton (AW)",
+      "races": 9,
+      "first": "16:05",
+      "last": "20:15",
+      "url": "https://www.horseracing.net/kempton/09-10-26",
+      "going": "Polytrack"
+    },
+    {
+      "course": "Dundalk (AW)",
+      "races": 8,
+      "first": "16:50",
+      "last": "20:30",
+      "url": "https://www.horseracing.net/dundalk/09-10-26",
+      "going": "Polytrack"
+    }
+  ]
 }
