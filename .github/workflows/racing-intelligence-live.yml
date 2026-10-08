@@ -39,12 +39,12 @@ jobs:
       - name: Commit changed race data
         shell: bash
         run: |
-          if git diff --quiet -- data/races.json; then
+          if git diff --quiet -- data/races.json data/bet-ledger.json; then
             echo "No racing data changes."
             exit 0
           fi
           git config user.name "racing-intelligence-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/races.json
+          git add data/races.json data/bet-ledger.json
           git commit -m "Auto-refresh Racing Intelligence odds and results"
           git push origin HEAD:racing-intelligence
