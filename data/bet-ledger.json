@@ -319,7 +319,12 @@
       "ewFraction": 0.25,
       "placesPaid": 3,
       "terms": "12-runner Class 4 handicap; each-way terms vary",
-      "result": null,
+      "result": {
+        "position": 11,
+        "status": "User reported",
+        "source": "User-reported finish; official confirmation pending",
+        "updatedAt": "2026-10-08T19:48:42.153Z"
+      },
       "runnerCount": 12
     },
     {
@@ -455,7 +460,12 @@
       "ewFraction": 0.25,
       "placesPaid": null,
       "terms": "Typical market: 1/5 odds, 3 places",
-      "result": null
+      "result": {
+        "position": 6,
+        "status": "User reported",
+        "source": "User-reported finish; official confirmation pending",
+        "updatedAt": "2026-10-08T19:48:42.152Z"
+      }
     },
     {
       "id": "2026-10-08|tramore|17:05|king gris|each-way",
