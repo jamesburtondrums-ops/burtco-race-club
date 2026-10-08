@@ -463,6 +463,120 @@
       "roi": 0.14069779426922288
     }
   ],
+  "accuracy_gates": [
+    {
+      "gate": "P>=50 favourite",
+      "races": 215,
+      "wins": 149,
+      "strike_rate": 0.6930232558139535,
+      "roi": 0.06271416696998099,
+      "avg_model_probability": 0.6059418670460003
+    },
+    {
+      "gate": "P>=55 favourite",
+      "races": 158,
+      "wins": 113,
+      "strike_rate": 0.7151898734177216,
+      "roi": 0.053650649631662245,
+      "avg_model_probability": 0.6342982526743557
+    },
+    {
+      "gate": "P>=60 favourite",
+      "races": 91,
+      "wins": 64,
+      "strike_rate": 0.7032967032967034,
+      "roi": -0.03123625458790297,
+      "avg_model_probability": 0.6798798116100937
+    },
+    {
+      "gate": "P>=50 favourite + retained ability",
+      "races": 47,
+      "wins": 30,
+      "strike_rate": 0.6382978723404256,
+      "roi": 0.045849422445167355,
+      "avg_model_probability": 0.5972450214887053
+    },
+    {
+      "gate": "P>=55 favourite + retained ability",
+      "races": 30,
+      "wins": 20,
+      "strike_rate": 0.6666666666666666,
+      "roi": 0.006881266881266867,
+      "avg_model_probability": 0.6415132474454696
+    },
+    {
+      "gate": "P>=50 favourite + 2 aiming groups",
+      "races": 94,
+      "wins": 59,
+      "strike_rate": 0.6276595744680851,
+      "roi": -0.03678044768470314,
+      "avg_model_probability": 0.6150894809269887
+    },
+    {
+      "gate": "P>=55 favourite + 2 aiming groups",
+      "races": 71,
+      "wins": 48,
+      "strike_rate": 0.676056338028169,
+      "roi": -0.006441719469888671,
+      "avg_model_probability": 0.6441604101125218
+    },
+    {
+      "gate": "P>=50 favourite + course/connection evidence",
+      "races": 149,
+      "wins": 104,
+      "strike_rate": 0.697986577181208,
+      "roi": 0.06502727324874971,
+      "avg_model_probability": 0.6102115827580284
+    },
+    {
+      "gate": "P>=50 favourite + target return",
+      "races": 90,
+      "wins": 61,
+      "strike_rate": 0.6777777777777778,
+      "roi": 0.027103038936372236,
+      "avg_model_probability": 0.6133942713618655
+    },
+    {
+      "gate": "P>=50 favourite + jockey upgrade",
+      "races": 25,
+      "wins": 15,
+      "strike_rate": 0.6,
+      "roi": -0.07992363192363186,
+      "avg_model_probability": 0.5959869932850509
+    },
+    {
+      "gate": "P>=50 favourite, not nursery/hurdle",
+      "races": 203,
+      "wins": 140,
+      "strike_rate": 0.6896551724137931,
+      "roi": 0.05845255729492182,
+      "avg_model_probability": 0.6057356433360943
+    },
+    {
+      "gate": "P>=55 favourite, not nursery/hurdle",
+      "races": 151,
+      "wins": 107,
+      "strike_rate": 0.7086092715231788,
+      "roi": 0.04553504993902339,
+      "avg_model_probability": 0.633053008319296
+    },
+    {
+      "gate": "P>=50 favourite, maiden/novice only",
+      "races": 102,
+      "wins": 74,
+      "strike_rate": 0.7254901960784313,
+      "roi": 0.08176434132316487,
+      "avg_model_probability": 0.619278280709554
+    },
+    {
+      "gate": "P>=50 favourite, handicap only",
+      "races": 34,
+      "wins": 22,
+      "strike_rate": 0.6470588235294118,
+      "roi": 0.1059019411960589,
+      "avg_model_probability": 0.5701371377149226
+    }
+  ],
   "segments": [
     {
       "segment": "handicap",
