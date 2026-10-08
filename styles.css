@@ -28,3 +28,8 @@
 .star-legend{display:grid;grid-template-columns:110px 1fr;gap:11px 20px;align-items:center}.star-legend b{color:#a88026;letter-spacing:2px;font-size:18px}.star-legend span{font-size:13px;color:var(--muted)}
 @media(max-width:1000px){.pick-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.pick-grid,.prime-grid{grid-template-columns:1fr}.prime-card h3{font-size:26px}.grade-rule{grid-template-columns:1fr;gap:4px}.topbar .nav{display:flex;overflow:auto}}
+
+.score-breakdown{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.score-breakdown>strong{font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.score-grid{display:grid;grid-template-columns:1fr auto;gap:6px 14px;margin-top:9px;font-size:11px}
+.score-grid span{color:var(--muted)}.score-grid b{text-align:right}
