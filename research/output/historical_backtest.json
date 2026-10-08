@@ -1,0 +1,374 @@
+{
+  "provenance": {
+    "dataset_file": "form_2015-present/form_2015-present/raceform.csv",
+    "columns": [
+      "date",
+      "course",
+      "race_id",
+      "off",
+      "race_name",
+      "type",
+      "class",
+      "pattern",
+      "rating_band",
+      "age_band",
+      "sex_rest",
+      "dist",
+      "going",
+      "ran",
+      "num",
+      "pos",
+      "draw",
+      "ovr_btn",
+      "btn",
+      "horse",
+      "age",
+      "sex",
+      "wgt",
+      "hg",
+      "time",
+      "sp",
+      "jockey",
+      "trainer",
+      "prize",
+      "or",
+      "rpr",
+      "ts",
+      "sire",
+      "dam",
+      "damsire",
+      "owner",
+      "comment"
+    ]
+  },
+  "races_total": 3200,
+  "train_races": 2304,
+  "test_races": 896,
+  "runners_total": 21948,
+  "features": [
+    "field_size",
+    "starts_prior",
+    "win_rate5",
+    "place_rate5",
+    "last_pos",
+    "days_since_run",
+    "cur_or",
+    "or_change",
+    "lbs_below_last_win_or",
+    "prev_rpr_minus_or",
+    "best_rpr3_minus_or",
+    "best_ts3_minus_or",
+    "course_win_rate",
+    "dist_win_rate",
+    "going_win_rate",
+    "cd_place_rate",
+    "class_drop",
+    "same_course_month_win",
+    "return_to_win_conditions",
+    "handicap_start_no",
+    "trainer14",
+    "trainer30",
+    "trainer_course_sr",
+    "trainer_type_sr",
+    "jockey14",
+    "jockey_upgrade",
+    "trainer_jockey_sr",
+    "sire_dist_sr",
+    "sire_going_sr",
+    "dam_dist_sr",
+    "dam_going_sr",
+    "targeting_combo"
+  ],
+  "test": {
+    "form_only": {
+      "strike_rate": 0.28236607142857145,
+      "roi": 0.19781919043092222,
+      "bets": 896
+    },
+    "market_favourite": {
+      "strike_rate": 0.35307262569832404,
+      "roi": 0.060006301891776755,
+      "bets": 895
+    },
+    "fusion": {
+      "strike_rate": 0.36049107142857145,
+      "roi": 0.0999868334644872,
+      "bets": 896,
+      "brier": 0.10715629629616269,
+      "log_loss": 0.3522028513048272
+    },
+    "value": {
+      "threshold_ratio": 1.5,
+      "bets": 1550,
+      "strike_rate": 0.07419354838709677,
+      "roi": 0.1940537634408602
+    }
+  },
+  "signal_lifts": [
+    {
+      "signal": "positive jockey upgrade",
+      "runners": 775,
+      "wins": 130,
+      "strike_rate": 0.16774193548387098,
+      "ae": 1.0797443300764624,
+      "roi": 0.07007082165146673
+    },
+    {
+      "signal": "targeting combo (3+ placement signals)",
+      "runners": 453,
+      "wins": 88,
+      "strike_rate": 0.19426048565121412,
+      "ae": 1.0446544999827574,
+      "roi": 0.10237633043924431
+    },
+    {
+      "signal": "previous RPR 5lb+ above current OR",
+      "runners": 850,
+      "wins": 166,
+      "strike_rate": 0.1952941176470588,
+      "ae": 1.0445679889123691,
+      "roi": 0.1137503999268704
+    },
+    {
+      "signal": "distance win rate >0",
+      "runners": 1653,
+      "wins": 299,
+      "strike_rate": 0.1808832425892317,
+      "ae": 1.0367353444728644,
+      "roi": 0.1870838368796626
+    },
+    {
+      "signal": "class drop >=1",
+      "runners": 805,
+      "wins": 137,
+      "strike_rate": 0.1701863354037267,
+      "ae": 1.0263501308496292,
+      "roi": 0.10438432340606257
+    },
+    {
+      "signal": "return to prior winning conditions",
+      "runners": 1474,
+      "wins": 256,
+      "strike_rate": 0.17367706919945725,
+      "ae": 1.0225580351138672,
+      "roi": 0.1513075713296203
+    },
+    {
+      "signal": "course win rate >0",
+      "runners": 807,
+      "wins": 149,
+      "strike_rate": 0.18463444857496902,
+      "ae": 1.018418552903571,
+      "roi": 0.17788052509242108
+    },
+    {
+      "signal": "5lb+ below last winning OR",
+      "runners": 232,
+      "wins": 29,
+      "strike_rate": 0.125,
+      "ae": 1.0102088587516225,
+      "roi": 0.1344109195402299
+    },
+    {
+      "signal": "trainer course strike rate >=15%",
+      "runners": 1291,
+      "wins": 256,
+      "strike_rate": 0.19829589465530598,
+      "ae": 0.9806641536243884,
+      "roi": 0.055050377155334514
+    },
+    {
+      "signal": "same course / same time-of-year prior win",
+      "runners": 372,
+      "wins": 75,
+      "strike_rate": 0.20161290322580644,
+      "ae": 0.9762715188011319,
+      "roi": 0.11071224922031381
+    },
+    {
+      "signal": "first/second handicap start",
+      "runners": 755,
+      "wins": 103,
+      "strike_rate": 0.13642384105960265,
+      "ae": 0.9668408940734668,
+      "roi": -0.047725265904073964
+    },
+    {
+      "signal": "trainer race-type strike rate >=15%",
+      "runners": 1087,
+      "wins": 228,
+      "strike_rate": 0.20975160993560257,
+      "ae": 0.960801287627864,
+      "roi": -0.04222311088686433
+    },
+    {
+      "signal": "2lb+ below last winning OR",
+      "runners": 396,
+      "wins": 48,
+      "strike_rate": 0.12121212121212122,
+      "ae": 0.9455330866141768,
+      "roi": 0.04863215488215486
+    },
+    {
+      "signal": "trainer 14d strike rate >=15%",
+      "runners": 1477,
+      "wins": 255,
+      "strike_rate": 0.17264725795531483,
+      "ae": 0.9382743096783255,
+      "roi": -0.0869031517643569
+    },
+    {
+      "signal": "best recent TS 5lb+ above OR",
+      "runners": 59,
+      "wins": 8,
+      "strike_rate": 0.13559322033898305,
+      "ae": 0.8345507532146313,
+      "roi": 0.04533898305084741
+    }
+  ],
+  "confidence_gates": [
+    {
+      "min_probability": 0.18,
+      "races": 831,
+      "wins": 314,
+      "strike_rate": 0.3778580024067389,
+      "roi": 0.13548521775056072
+    },
+    {
+      "min_probability": 0.2,
+      "races": 801,
+      "wins": 305,
+      "strike_rate": 0.3807740324594257,
+      "roi": 0.11898237530260006
+    },
+    {
+      "min_probability": 0.22,
+      "races": 751,
+      "wins": 295,
+      "strike_rate": 0.39280958721704395,
+      "roi": 0.13311790850073138
+    },
+    {
+      "min_probability": 0.25,
+      "races": 690,
+      "wins": 280,
+      "strike_rate": 0.4057971014492754,
+      "roi": 0.15005538543582028
+    },
+    {
+      "min_probability": 0.28,
+      "races": 621,
+      "wins": 267,
+      "strike_rate": 0.42995169082125606,
+      "roi": 0.19804865692546866
+    },
+    {
+      "min_probability": 0.3,
+      "races": 569,
+      "wins": 256,
+      "strike_rate": 0.44991212653778556,
+      "roi": 0.23972738597079535
+    },
+    {
+      "min_probability": 0.35,
+      "races": 448,
+      "wins": 227,
+      "strike_rate": 0.5066964285714286,
+      "roi": 0.3310545945869607
+    }
+  ],
+  "segments": [
+    {
+      "segment": "handicap",
+      "races": 494,
+      "strike_rate": 0.33805668016194335,
+      "roi": 0.2501569337095652
+    },
+    {
+      "segment": "maiden",
+      "races": 112,
+      "strike_rate": 0.48214285714285715,
+      "roi": 0.0909714045874761
+    },
+    {
+      "segment": "novice",
+      "races": 106,
+      "strike_rate": 0.32075471698113206,
+      "roi": -0.2107530964842284
+    },
+    {
+      "segment": "chase",
+      "races": 27,
+      "strike_rate": 0.3333333333333333,
+      "roi": -0.403057128057128
+    },
+    {
+      "segment": "hurdle",
+      "races": 25,
+      "strike_rate": 0.52,
+      "roi": 0.20600000000000007
+    },
+    {
+      "segment": "other",
+      "races": 106,
+      "strike_rate": 0.3584905660377358,
+      "roi": -0.08948773448773444
+    }
+  ],
+  "calibration": [
+    {
+      "band": "(-0.001, 0.15]",
+      "n": 9,
+      "avg_model": 0.1397308554150975,
+      "win_rate": 0.0,
+      "roi": -1.0
+    },
+    {
+      "band": "(0.15, 0.2]",
+      "n": 69,
+      "avg_model": 0.17870404862651015,
+      "win_rate": 0.2028985507246377,
+      "roi": 0.08236714975845395
+    },
+    {
+      "band": "(0.2, 0.25]",
+      "n": 119,
+      "avg_model": 0.2245417690990511,
+      "win_rate": 0.21008403361344538,
+      "roi": -0.1364145658263304
+    },
+    {
+      "band": "(0.25, 0.3]",
+      "n": 126,
+      "avg_model": 0.2751044327803177,
+      "win_rate": 0.1984126984126984,
+      "roi": -0.2949333333333334
+    },
+    {
+      "band": "(0.3, 0.4]",
+      "n": 235,
+      "avg_model": 0.3483763552267378,
+      "win_rate": 0.3617021276595745,
+      "roi": 0.1892530873381939
+    },
+    {
+      "band": "(0.4, 0.5]",
+      "n": 220,
+      "avg_model": 0.4472969344295651,
+      "win_rate": 0.4681818181818182,
+      "roi": 0.2828705763933039
+    },
+    {
+      "band": "(0.5, 1.0]",
+      "n": 118,
+      "avg_model": 0.6011845015838917,
+      "win_rate": 0.6016949152542372,
+      "roi": 0.3321939007320362
+    }
+  ],
+  "methodology": {
+    "leakage_control": "All horse/trainer/jockey/pedigree features are calculated only from runs occurring before each tested race. Current-race RPR/TS are never used as inputs.",
+    "targeting_interpretation": "Observable placement profile only. It does not infer deliberate non-trying or handicap manipulation.",
+    "split": "Chronological 72/28 race split; later races are unseen test data."
+  }
+}
