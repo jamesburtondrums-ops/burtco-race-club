@@ -15,6 +15,7 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 
 | Signal | Runners | Win% | A/E | ROI |
 |---|---:|---:|---:|---:|
+| 2-3lb below last winning OR | 186 | 12.9% | 1.26 | +20.0% |
 | target race + jockey upgrade | 92 | 21.7% | 1.22 | +15.3% |
 | ability + placement + market top3 | 440 | 28.6% | 1.09 | -3.7% |
 | previous RPR 5lb+ above current OR | 1851 | 17.5% | 1.08 | -6.3% |

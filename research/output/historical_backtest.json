@@ -118,6 +118,14 @@
   },
   "signal_lifts": [
     {
+      "signal": "2-3lb below last winning OR",
+      "runners": 186,
+      "wins": 24,
+      "strike_rate": 0.12903225806451613,
+      "ae": 1.2622957849313245,
+      "roi": 0.19952210274790938
+    },
+    {
       "signal": "target race + jockey upgrade",
       "runners": 92,
       "wins": 20,
@@ -402,6 +410,57 @@
       "wins": 64,
       "strike_rate": 0.7032967032967034,
       "roi": -0.03123625458790297
+    }
+  ],
+  "prime_gates": [
+    {
+      "gate": "P>=45%, market favourite",
+      "races": 319,
+      "wins": 198,
+      "strike_rate": 0.6206896551724138,
+      "roi": 0.01904930318723418
+    },
+    {
+      "gate": "P>=50%, market favourite",
+      "races": 215,
+      "wins": 149,
+      "strike_rate": 0.6930232558139535,
+      "roi": 0.06271416696998099
+    },
+    {
+      "gate": "P>=55%, market favourite",
+      "races": 158,
+      "wins": 113,
+      "strike_rate": 0.7151898734177216,
+      "roi": 0.053650649631662245
+    },
+    {
+      "gate": "P>=50%, >=2 aiming groups",
+      "races": 94,
+      "wins": 59,
+      "strike_rate": 0.6276595744680851,
+      "roi": -0.03678044768470314
+    },
+    {
+      "gate": "P>=50%, favourite, >=2 aiming groups",
+      "races": 94,
+      "wins": 59,
+      "strike_rate": 0.6276595744680851,
+      "roi": -0.03678044768470314
+    },
+    {
+      "gate": "P>=55%, >=2 aiming groups",
+      "races": 71,
+      "wins": 48,
+      "strike_rate": 0.676056338028169,
+      "roi": -0.006441719469888671
+    },
+    {
+      "gate": "P>=50%, >=3 aiming groups",
+      "races": 28,
+      "wins": 20,
+      "strike_rate": 0.7142857142857143,
+      "roi": 0.14069779426922288
     }
   ],
   "segments": [
