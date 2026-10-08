@@ -72,3 +72,26 @@ actual arrival times vary. GitHub scheduled workflows run every five minutes
 and can be delayed. The site checks more
 frequently to display new results as soon as they become available.
 Sporting Life is a manual verification link only; scraping is not enabled.
+
+## Refresh Race Results — manual web search without an API
+
+Pressing **Refresh Race Results** now queries a Cloudflare Pages function at
+`/api/search-results`. This checks Bing's public RSS search feed for each
+unfinished selection against UK and Irish racing publishers, including
+Sporting Life, Sky Sports, Racing TV, At The Races, Racing Post and others.
+The function filters out racecards, tips and predictions: only search results
+linking to published results pages are eligible.
+
+The search shows source links and short search descriptions. A finishing
+position is applied to the page **only when two distinct publishing sources
+report the same explicit place** for the horse, course and date. Inconclusive
+matches, inaccessible feeds and missing SP/runner counts do not fabricate
+returns. The live paper-bank calculator then recalculates from confirmed
+positions. This on-demand search does not use The Racing API.
+
+**Current persistence:** These web-search-only confirmations are stored in
+the browser's localStorage. They are not automatically committed to GitHub
+and therefore will not carry to another device. Published results in
+`data/races.json` and `data/bet-ledger.json` remain canonical. This feature
+is not a licensed realtime results feed, and external search indexes can be
+delayed or unavailable.
