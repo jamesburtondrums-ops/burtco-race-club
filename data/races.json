@@ -1117,7 +1117,12 @@
       ],
       "reason": "A Gordon Elliott runner ridden by Jack Kennedy at 20/1 deserves more respect than the bare recent form suggests. He has an OR90/TS82/RPR89 base and a prior distance win, giving him established ability in a race containing several runners with very limited chase evidence.",
       "risk": "Recent form 5-5-7-0 is weak and he has to prove the switch to fences unlocks improvement.",
-      "source": "Racing Post / Sporting Life"
+      "source": "Racing Post / Sporting Life",
+      "result": {
+        "status": "NR",
+        "source": "User-reported non-runner; independent confirmation pending",
+        "updatedAt": "2026-10-08T17:04:37.370Z"
+      }
     },
     {
       "horse": "Pampar Lady",
