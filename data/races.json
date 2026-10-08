@@ -86,7 +86,18 @@
       ],
       "reason": "Career-best narrow second at Punchestown, ideally drawn to attack again, and both TS/RPR sit materially above her OR. This is the cleanest low-grade handicap ratings confluence on the scan.",
       "risk": "Still a maiden and a front-running setup can leave her vulnerable late.",
-      "source": "Racing Post"
+      "source": "Racing Post",
+      "scoreComponents": {
+        "recentForm": 22,
+        "ratings": 25,
+        "conditions": 13,
+        "handicap": 12,
+        "courseTrip": 5,
+        "connections": 4,
+        "dataQuality": 5,
+        "riskPenalty": -4,
+        "notes": "Excellent OR/TS/RPR gap, last-start second, low draw and 7lb claim. Maiden status is the main restraint."
+      }
     },
     {
       "horse": "Spot On Soph",
@@ -106,7 +117,18 @@
       ],
       "reason": "Won two straight, is effectively helped by Rebecca Hitchen's 7lb claim, races from the same mark and is proven at the track. The most complete jumps win profile on the shortlist.",
       "risk": "Steps up in trip and carries top weight before the claim.",
-      "source": "Sporting Life"
+      "source": "Sporting Life",
+      "scoreComponents": {
+        "recentForm": 25,
+        "ratings": 13,
+        "conditions": 12,
+        "handicap": 15,
+        "courseTrip": 10,
+        "connections": 5,
+        "dataQuality": 5,
+        "riskPenalty": -3,
+        "notes": "Two consecutive wins, same mark, 7lb claim and course form outweigh a modest ratings edge."
+      }
     },
     {
       "horse": "Fram Castle",
@@ -125,7 +147,18 @@
       ],
       "reason": "Could effectively be chasing a Bath hat-trick but for a void race last time. Strong course evidence and RPR 10lb above OR.",
       "risk": "Steps up to 2m1f and the market has already found him.",
-      "source": "Racing Post / Timeform"
+      "source": "Racing Post / Timeform",
+      "scoreComponents": {
+        "recentForm": 22,
+        "ratings": 17,
+        "conditions": 9,
+        "handicap": 10,
+        "courseTrip": 10,
+        "connections": 4,
+        "dataQuality": 5,
+        "riskPenalty": -5,
+        "notes": "Course form and RPR edge are strong; longer trip prevents top-tier confidence."
+      }
     },
     {
       "horse": "Sea Mirage",
@@ -144,7 +177,18 @@
       ],
       "reason": "Second in a good nursery last time and proven on slow ground, a major positive on Ayr's heavy going. Solid ratings with strong race suitability.",
       "risk": "Short price and Caturra Rock is a credible danger.",
-      "source": "Racing Post"
+      "source": "Racing Post",
+      "scoreComponents": {
+        "recentForm": 22,
+        "ratings": 12,
+        "conditions": 15,
+        "handicap": 6,
+        "courseTrip": 5,
+        "connections": 4,
+        "dataQuality": 5,
+        "riskPenalty": -4,
+        "notes": "Strong current form and proven slow-ground suitability; ratings themselves are only fair."
+      }
     },
     {
       "horse": "Glen Echo",
@@ -163,7 +207,18 @@
       ],
       "reason": "By far the best recent form in the race according to the card, with suitable trip/ground and stall 1. More of a form-strength pick than a ratings-edge pick.",
       "risk": "No ratings edge over OR and the market is already short.",
-      "source": "Racing Post"
+      "source": "Racing Post",
+      "scoreComponents": {
+        "recentForm": 25,
+        "ratings": 6,
+        "conditions": 15,
+        "handicap": 5,
+        "courseTrip": 7,
+        "connections": 3,
+        "dataQuality": 5,
+        "riskPenalty": -5,
+        "notes": "Best-form/conditions selection, not a ratings-edge selection. Yard form is a restraint."
+      }
     },
     {
       "horse": "Blissful Bonita",
@@ -182,7 +237,18 @@
       ],
       "reason": "Best effort yet at Navan and shaped as though even more of a stamina test would suit. Bottomweight, and both TS/RPR sit above her mark.",
       "risk": "Unproven at this exact two-mile trip.",
-      "source": "Racing Post / Timeform"
+      "source": "Racing Post / Timeform",
+      "scoreComponents": {
+        "recentForm": 20,
+        "ratings": 10,
+        "conditions": 13,
+        "handicap": 12,
+        "courseTrip": 5,
+        "connections": 3,
+        "dataQuality": 5,
+        "riskPenalty": -5,
+        "notes": "Recent improvement, bottomweight and likely stamina upside; exact trip remains unproven."
+      }
     },
     {
       "horse": "Tap Dancer",
@@ -201,7 +267,18 @@
       ],
       "reason": "One of the biggest raw ratings gaps on the card. Returns to a longer trip and has won on heavy ground, making the double-digit price interesting.",
       "risk": "Only one career win and recent form is not strong enough for a higher win-confidence score.",
-      "source": "Racing Post"
+      "source": "Racing Post",
+      "scoreComponents": {
+        "recentForm": 10,
+        "ratings": 25,
+        "conditions": 15,
+        "handicap": 8,
+        "courseTrip": 5,
+        "connections": 3,
+        "dataQuality": 5,
+        "riskPenalty": -8,
+        "notes": "Huge TS/RPR edge and heavy-ground suitability, but only modest recent winning evidence."
+      }
     },
     {
       "horse": "Lady Of Clover",
@@ -220,7 +297,18 @@
       ],
       "reason": "Form 143143, already placed over 2m here and has no stamina concerns. Her evidence is stronger than a typical mid-single-figure chance.",
       "risk": "Edwardtheninth has stronger obvious C&D winning form.",
-      "source": "HorseRacing.net / Oddschecker"
+      "source": "HorseRacing.net / Oddschecker",
+      "scoreComponents": {
+        "recentForm": 18,
+        "ratings": 18,
+        "conditions": 12,
+        "handicap": 7,
+        "courseTrip": 9,
+        "connections": 4,
+        "dataQuality": 5,
+        "riskPenalty": -4,
+        "notes": "Consistent profile, proven stamina and solid rating edge; lacks a dominant standout factor."
+      }
     },
     {
       "horse": "Have You A Minute",
@@ -240,7 +328,18 @@
       ],
       "reason": "The largest ratings-versus-OR gap on the shortlist. C&D proven and the Saffie Osborne booking adds another positive.",
       "risk": "Needs to turn strong ratings into a win; current price snapshot is forecast-led rather than a firm exchange market.",
-      "source": "Racing Post"
+      "source": "Racing Post",
+      "scoreComponents": {
+        "recentForm": 17,
+        "ratings": 25,
+        "conditions": 12,
+        "handicap": 10,
+        "courseTrip": 10,
+        "connections": 4,
+        "dataQuality": 5,
+        "riskPenalty": -6,
+        "notes": "Massive OR/TS/RPR gap plus C&D evidence; enough recent form to make the ratings credible."
+      }
     },
     {
       "horse": "Billyb",
@@ -259,7 +358,18 @@
       ],
       "reason": "Dual Southwell winner and latest second came after waiting for a gap. RPR sits 10lb above OR and the price is materially bigger than the favourite.",
       "risk": "Drops back to 7f and Nostrum retains obvious handicapping scope.",
-      "source": "Racing Post / HorseRacing.net"
+      "source": "Racing Post / HorseRacing.net",
+      "scoreComponents": {
+        "recentForm": 17,
+        "ratings": 18,
+        "conditions": 12,
+        "handicap": 8,
+        "courseTrip": 10,
+        "connections": 4,
+        "dataQuality": 5,
+        "riskPenalty": -5,
+        "notes": "Dual course winner, hidden latest run and RPR edge; drop back to 7f is the main concern."
+      }
     },
     {
       "horse": "Tasmanian Girl",
@@ -278,13 +388,24 @@
       ],
       "reason": "The raw ratings are much stronger than OR77 and the 7lb claim adds appeal. A genuine bigger-price angle rather than a high-confidence win pick.",
       "risk": "Recent form is weak, so the ratings need to translate much better than the last few finishing positions.",
-      "source": "Racing Post / HorseRacing.net"
+      "source": "Racing Post / HorseRacing.net",
+      "scoreComponents": {
+        "recentForm": 6,
+        "ratings": 25,
+        "conditions": 10,
+        "handicap": 12,
+        "courseTrip": 6,
+        "connections": 3,
+        "dataQuality": 5,
+        "riskPenalty": -12,
+        "notes": "Excellent raw ratings and 7lb claim, but poor recent form forces a low win-confidence score."
+      }
     },
     {
       "horse": "Kaito",
       "course": "Southwell",
       "time": "18:00",
-      "tier": "SPECULATIVE",
+      "tier": "WATCH",
       "winStars": 2,
       "or": 64,
       "ts": null,
@@ -297,7 +418,91 @@
       ],
       "reason": "Quiet qualifying runs for a yard capable of improving horses when they enter handicaps. Gelded, up in trip and making nursery debut.",
       "risk": "No proven handicap or speed edge yet; this is placement inference rather than hard ratings evidence.",
-      "source": "Sporting Life / Racing Post"
+      "source": "Sporting Life / Racing Post",
+      "scoreComponents": {
+        "recentForm": 5,
+        "ratings": 6,
+        "conditions": 10,
+        "handicap": 10,
+        "courseTrip": 3,
+        "connections": 4,
+        "dataQuality": 4,
+        "riskPenalty": -12,
+        "notes": "Interesting nursery-placement angle, but very little hard performance evidence."
+      }
     }
-  ]
+  ],
+  "scoringModel": {
+    "version": "1.1",
+    "purpose": "Win-evidence confidence, not value or predicted probability",
+    "components": [
+      {
+        "key": "recentForm",
+        "label": "Recent form",
+        "max": 25
+      },
+      {
+        "key": "ratings",
+        "label": "Ratings evidence",
+        "max": 25
+      },
+      {
+        "key": "conditions",
+        "label": "Conditions fit",
+        "max": 15
+      },
+      {
+        "key": "handicap",
+        "label": "Handicap / weight",
+        "max": 15
+      },
+      {
+        "key": "courseTrip",
+        "label": "Course / trip",
+        "max": 10
+      },
+      {
+        "key": "connections",
+        "label": "Jockey / trainer",
+        "max": 5
+      },
+      {
+        "key": "dataQuality",
+        "label": "Data quality",
+        "max": 5
+      }
+    ],
+    "riskPenalty": {
+      "min": -20,
+      "max": 0
+    },
+    "primeRule": "Score >= 82, data quality = 5/5, at least four independent strong evidence groups, and risk penalty no worse than -6.",
+    "starBands": [
+      {
+        "stars": 5,
+        "min": 76,
+        "max": 81
+      },
+      {
+        "stars": 4,
+        "min": 68,
+        "max": 75
+      },
+      {
+        "stars": 3,
+        "min": 58,
+        "max": 67
+      },
+      {
+        "stars": 2,
+        "min": 48,
+        "max": 57
+      },
+      {
+        "stars": 1,
+        "min": 0,
+        "max": 47
+      }
+    ]
+  }
 }
