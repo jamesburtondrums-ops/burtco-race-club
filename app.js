@@ -15,8 +15,9 @@ function resultInfo(x){
  const r=x.result;
  if(r&&typeof r==="string")return {text:r,cls:"result-finished"};
  const status=r?.status||x.resultStatus||x.status;
- if(status&&/non.?runner|nr/i.test(status))return {text:"NR",cls:"result-nr"};
+ if(status&&/non.?runner|^nr$|withdrawn|scratched/i.test(status))return {text:"NR",cls:"result-nr"};
  if(status&&/void|abandon|cancel/i.test(status))return {text:String(status),cls:"result-nr"};
+ if(status&&/^(F|PU|UR|BD|RO|RR|REF|DSQ|DNF|DISQ)$/i.test(status))return {text:"Result: "+status,cls:"result-finished"};
  const pos=r?.position??r?.place??x.finishPosition??x.position;
  if(pos!==undefined&&pos!==null&&pos!=="")return {text:"Result: "+ordinal(pos),cls:Number(pos)===1?"result-won":"result-finished"};
  if(r?.text)return {text:r.text,cls:"result-finished"};
@@ -138,7 +139,7 @@ function tracker(){
  '<div><span>Win strike rate</span><strong>'+rate(winRate)+'</strong><small>'+stats.winCount+' winners from '+stats.known+' known outcomes</small></div>'+
  '<div><span>Each-way place rate</span><strong>'+rate(ewRate)+'</strong><small>'+stats.ewPlaced+' placed from '+stats.ewKnown+' known E/W outcomes</small></div>'+
  '</div><div class="tracker-bottom"><div><span>Running bank after settled bets:</span> <b>'+money(settledBank)+'</b></div><div><span>Outstanding / unpriced stakes:</span> <b>'+money(stats.openStake)+'</b></div><div><span>Today’s strike rate:</span> <b>'+today+'</b></div></div>'+
- '<p class="tracker-footnote">Total stakes '+money(stats.totalStake)+' · Credited returns '+money(stats.totalReturn)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Paper trading only.</p>'+
+ '<p class="tracker-footnote">Total stakes '+money(stats.totalStake)+' · Credited returns '+money(stats.totalReturn)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Settlements use recorded SP where available, otherwise a single unambiguous quoted price. Paper tracking only.</p>'+
  '</section>';
 }
 function liveStatus(){
