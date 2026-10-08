@@ -458,6 +458,16 @@ tests={
  "best recent TS 5lb+ above OR": signal_frame.best_ts3_minus_or>=5,
  "course win rate >0": signal_frame.course_win_rate>0,
  "distance win rate >0": signal_frame.dist_win_rate>0,
+ "0-3lb below last winning OR": (signal_frame.lbs_below_last_win_or>=0)&(signal_frame.lbs_below_last_win_or<=3),
+ "4-8lb below last winning OR": (signal_frame.lbs_below_last_win_or>=4)&(signal_frame.lbs_below_last_win_or<=8),
+ "9lb+ below last winning OR": signal_frame.lbs_below_last_win_or>=9,
+ "owner-trainer strike rate >=15%": signal_frame.owner_trainer_sr>=.15,
+ "owner course strike rate >=15%": signal_frame.owner_course_sr>=.15,
+ "owner race-type strike rate >=15%": signal_frame.owner_type_sr>=.15,
+ "headgear change": signal_frame.headgear_change>=1,
+ "ability + placement": (signal_frame.prev_rpr_minus_or>=5)&((signal_frame.same_course_month_win>=1)|(signal_frame.trainer_course_sr>=.15)|((signal_frame.lbs_below_last_win_or>=0)&(signal_frame.lbs_below_last_win_or<=3))),
+ "ability + placement + market top3": (signal_frame.prev_rpr_minus_or>=5)&((signal_frame.same_course_month_win>=1)|(signal_frame.trainer_course_sr>=.15)|((signal_frame.lbs_below_last_win_or>=0)&(signal_frame.lbs_below_last_win_or<=3)))&(signal_frame.market_rank<=3),
+ "target race + jockey upgrade": (signal_frame.same_course_month_win>=1)&(signal_frame.jockey_upgrade>=.05),
 }
 for n,m in tests.items():
     x=signal_stats(signal_frame,n,m)
