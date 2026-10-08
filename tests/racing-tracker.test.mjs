@@ -14,11 +14,17 @@ const app = vm.runInNewContext(source.slice(0,boot)+'\n;({state,settlement,track
 app.state.ledger=ledger;
 app.state.data=racing;
 const stats=app.trackerStats(ledger.entries);
-assert.equal(stats.known,14,'Known finishes');
-assert.equal(stats.winCount,4,'Winning picks');
+assert.equal(stats.known,16,'Known finishes');
+assert.equal(stats.winCount,6,'Winning picks');
 assert.equal(stats.settled,14,'Fully settled bets');
 assert.equal(stats.openStake,90,'Outstanding stakes');
 assert.equal(stats.totalStake,230,'Total paper stakes');
+assert.equal(ledger.entries.length,23,'Only latest selection ledger entries');
+assert.equal(racing.todaySelections.length,13,'Only latest main selections');
+assert.equal(racing.todaySelections.filter(x => x.restoredFromPreviousVersion).length,0,'Earlier picks removed');
+assert.equal(ledger.entries.filter(x => x.restoredFromPreviousVersion).length,0,'Earlier bets removed');
+assert.equal(racing.todaySelections.find(x=>x.horse==='Aighear')?.result?.position,1,'Aighear win preserved');
+assert.equal(racing.todaySelections.find(x=>x.horse==='Rattledelatch')?.result?.position,1,'Rattledelatch win preserved');
 assert.equal(Math.round(stats.profit*100)/100,28.52,'Settled P/L');
 assert.equal(Math.round((1000-stats.totalStake+stats.totalReturn)*100)/100,938.52,'Available bank');
 assert.equal(app.settlement({betType:'win',winStake:10,placeStake:0,result:{status:'NR'}}).returnAmount,10,'Refund NR');
@@ -33,6 +39,11 @@ assert.match(appElement.innerHTML,/Profit & strike-rate tracker/,'Tracker render
 assert.match(appElement.innerHTML,/Win strike rate/,'Win strike rate displayed');
 assert.match(appElement.innerHTML,/Each-way place rate/,'EW strike rate displayed');
 assert.match(appElement.innerHTML,/data-refresh-results/,'Manual refresh button is present');
+app.state.view='history';
+app.render();
+assert.match(appElement.innerHTML,/Results history/,'Latest results history accessible');
+assert.doesNotMatch(appElement.innerHTML,/Blissful Bonita|Lady Of Clover/,'Removed earlier selections absent');
+
 assert.match(appElement.innerHTML,/sportinglife.com\\/racing\\/fast-results/,'Fast results reference is present');
 assert.match(appElement.innerHTML,/£938\.52/,'Bank shown correctly');
 assert.match(appElement.innerHTML,/\+£28\.52/,'Settled P/L shown correctly');
