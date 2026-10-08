@@ -6,10 +6,10 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 
 | Method | Bets | Strike rate | ROI at SP |
 |---|---:|---:|---:|
-| Form/placement model (no market) | 2795 | 31.2% | -6.4% |
+| Form/placement model (no market) | 2795 | 30.8% | -7.6% |
 | SP favourite baseline | 1629 | 36.2% | -8.7% |
-| Fusion: market + independent evidence | 1629 | 37.3% | -4.3% |
-| Value overlay (all qualifying runners) | 2873 | 5.2% | -23.4% |
+| Fusion: market + independent evidence | 1629 | 37.0% | -5.2% |
+| Value overlay (all qualifying runners) | 2886 | 5.2% | -24.4% |
 
 ## Targeting / placement signal lift
 
@@ -36,7 +36,10 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 | positive jockey upgrade | 1726 | 13.0% | 1.02 | -22.9% |
 | trainer race-type strike rate >=15% | 2636 | 19.5% | 1.02 | -12.9% |
 | same-grade win rate >0 | 3731 | 15.1% | 1.01 | -19.3% |
+| clear market shape gap >=10pp | 5605 | 13.5% | 1.00 | -21.9% |
+| clear market shape gap >=15pp | 3804 | 14.0% | 1.00 | -20.3% |
 | distance win rate >0 | 3643 | 15.2% | 1.00 | -21.0% |
+| historically favourable draw tertile | 546 | 14.1% | 1.00 | -4.0% |
 | trainer 14d strike rate >=15% | 3300 | 16.1% | 1.00 | -17.6% |
 | owner race-type strike rate >=15% | 2974 | 16.6% | 1.00 | -17.8% |
 | same-class win rate >0 | 2203 | 15.6% | 0.99 | -18.1% |
@@ -60,18 +63,18 @@ Analysed **10,000 races / 67,898 runners** with a chronological train/test split
 
 | Min model P | Races | Win% | ROI |
 |---|---:|---:|---:|
-| 18% | 1559 | 38.2% | -3.9% |
-| 20% | 1487 | 38.7% | -5.5% |
-| 22% | 1418 | 39.5% | -5.4% |
-| 25% | 1235 | 42.3% | -3.0% |
-| 28% | 1055 | 45.1% | -2.4% |
-| 30% | 957 | 47.0% | -1.3% |
-| 35% | 754 | 49.6% | -3.4% |
-| 40% | 539 | 54.0% | -2.5% |
-| 45% | 303 | 62.7% | +1.8% |
-| 50% | 212 | 68.9% | +5.3% |
-| 55% | 148 | 71.6% | +4.7% |
-| 60% | 88 | 75.0% | +3.0% |
+| 18% | 1547 | 37.8% | -5.5% |
+| 20% | 1487 | 38.3% | -6.4% |
+| 22% | 1418 | 38.9% | -7.4% |
+| 25% | 1258 | 41.5% | -4.6% |
+| 28% | 1085 | 44.6% | -2.1% |
+| 30% | 989 | 45.7% | -3.3% |
+| 35% | 768 | 48.7% | -4.6% |
+| 40% | 546 | 53.3% | -3.4% |
+| 45% | 314 | 62.7% | +2.7% |
+| 50% | 217 | 67.7% | +3.9% |
+| 55% | 158 | 71.5% | +5.3% |
+| 60% | 90 | 74.4% | +2.0% |
 
 ## Key integrity rule
 The targeting variables are observable placement patterns (mark, class, course/trip return, trainer patterns). They are **not evidence that connections deliberately ran a horse to lower its mark**.
