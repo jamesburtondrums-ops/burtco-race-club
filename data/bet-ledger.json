@@ -73,11 +73,19 @@
       "winStake": 10,
       "placeStake": 0,
       "selectionOdds": "~5/4–15/8",
-      "settlementOdds": null,
+      "settlementOdds": "13/8",
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "13/8",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/thurles/942170/killinan-handicap",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 5
     },
     {
       "id": "2026-10-08|market rasen|16:48|ratemenow|win",
@@ -127,11 +135,19 @@
       "winStake": 10,
       "placeStake": 0,
       "selectionOdds": "13/8–15/8",
-      "settlementOdds": null,
+      "settlementOdds": "11/8",
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "11/8",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/ayr/942393/san-miguel-handicap",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 10
     },
     {
       "id": "2026-10-08|tramore|15:20|tutu twist|win",
@@ -187,11 +203,19 @@
       "winStake": 10,
       "placeStake": 0,
       "selectionOdds": "2/1",
-      "settlementOdds": null,
+      "settlementOdds": "7/4",
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "7/4",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/market-rasen/942380/market-rasen-racecourse-caravan-park-mares-handicap-hurdle",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 8
     },
     {
       "id": "2026-10-08|tramore|17:05|rattledelatch|win",
@@ -235,11 +259,19 @@
       "winStake": 10,
       "placeStake": 0,
       "selectionOdds": "~11/4",
-      "settlementOdds": null,
+      "settlementOdds": "5/1",
       "ewFraction": null,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "5/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/southwell/942855/follow-attheraces-on-instagram-nursery",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 7
     },
     {
       "id": "2026-10-08|southwell|20:30|war howl|each-way",
@@ -268,11 +300,18 @@
       "winStake": 5,
       "placeStake": 5,
       "selectionOdds": "18/1",
-      "settlementOdds": null,
+      "settlementOdds": "66/1",
       "ewFraction": 0.25,
       "placesPaid": 3,
       "terms": "10 runners; check bookmaker each-way terms",
-      "result": null,
+      "result": {
+        "position": 9,
+        "status": "Weighed in",
+        "sp": "66/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/ayr/942393/san-miguel-handicap",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
       "runnerCount": 10
     },
     {
@@ -302,12 +341,19 @@
       "winStake": 5,
       "placeStake": 5,
       "selectionOdds": "12/1–16/1",
-      "settlementOdds": null,
+      "settlementOdds": "6/1",
       "ewFraction": 0.25,
-      "placesPaid": 3,
+      "placesPaid": 2,
       "terms": "8 runners; standard place terms usually 3 places only if bookmaker offers",
-      "result": null,
-      "runnerCount": 8
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "6/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/tramore/942155/tramore-racecourse-on-instagram-handicap-hurdle",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 7
     },
     {
       "id": "2026-10-08|market rasen|15:06|cap ricochet|each-way",
@@ -342,11 +388,18 @@
       "winStake": 5,
       "placeStake": 5,
       "selectionOdds": "10/1–11/1 best",
-      "settlementOdds": null,
+      "settlementOdds": "9/1",
       "ewFraction": 0.25,
       "placesPaid": 3,
       "terms": "8 runners; 3-place each-way market available",
-      "result": null,
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "9/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/market-rasen/942380/market-rasen-racecourse-caravan-park-mares-handicap-hurdle",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
       "runnerCount": 8
     },
     {
@@ -408,16 +461,29 @@
       "winStake": 5,
       "placeStake": 5,
       "selectionOdds": "66/1",
-      "settlementOdds": null,
+      "settlementOdds": "200/1",
       "ewFraction": 0.25,
       "placesPaid": 3,
       "terms": "14-runner novice; check live each-way terms",
-      "result": null,
-      "runnerCount": 14
+      "result": {
+        "position": 13,
+        "status": "Weighed in",
+        "sp": "200/1",
+        "source": "Sporting Life Full Results (web verified)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-08/bath/942386/seat-unique-ebf-restricted-novice-stakes-gbbgbbplus-race",
+        "updatedAt": "2026-10-08T16:38:00+01:00"
+      },
+      "runnerCount": 13
     }
   ],
   "placePolicy": {
     "fraction": 0.25,
     "rule": "Four or fewer runners: 1 place; five to seven: 2 places; eight or more: 3 places"
+  },
+  "lastWebVerification": {
+    "date": "2026-10-08",
+    "checkedAt": "2026-10-08T16:38:00+01:00",
+    "verifiedSelections": 8,
+    "source": "Sporting Life Full Results"
   }
 }
