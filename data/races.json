@@ -1116,7 +1116,13 @@
       ],
       "reason": "Improved from eighth to third at Wolverhampton and now gets 8st13lb from a low draw. Her RPR66 puts her much closer to the experienced second tier of this maiden than a 20/1+ quote suggests, while Jennie Candlish is operating well enough to make the profile credible.",
       "risk": "Dorigo sets a very high standard and Eagle Storm was well held by the first two last time; this is primarily a place-value case.",
-      "source": "Racing Post / HorseRacing.net / Coral"
+      "source": "Racing Post / HorseRacing.net / Coral",
+      "result": {
+        "position": 6,
+        "status": "User reported",
+        "source": "User-reported finish; official confirmation pending",
+        "updatedAt": "2026-10-08T19:48:42.152Z"
+      }
     },
     {
       "horse": "King Gris",
@@ -1225,7 +1231,13 @@
       ],
       "reason": "The strongest ratings-versus-price profile in this band. RPR91 sits 24lb above OR67, his last two runs have been much better than the earlier form for Ben Haslam, and he was third at Newcastle last time. Low weight and stall 2 add to a live 7f handicap profile.",
       "risk": "This is a deeper Class 4 than his latest run and Nostrum/Not That Guy set a much stronger market standard.",
-      "source": "Racing Post / Sporting Life / Oddschecker"
+      "source": "Racing Post / Sporting Life / Oddschecker",
+      "result": {
+        "position": 11,
+        "status": "User reported",
+        "source": "User-reported finish; official confirmation pending",
+        "updatedAt": "2026-10-08T19:48:42.153Z"
+      }
     },
     {
       "horse": "Monsieur Kodi",
