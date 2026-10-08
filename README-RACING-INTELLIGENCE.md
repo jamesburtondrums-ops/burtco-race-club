@@ -3,7 +3,7 @@
 This site is isolated on the `racing-intelligence` branch. The Race Club production branch is untouched.
 
 ## Live coverage architecture
-The ingestion adapter is built around The Racing API because its documented Core API covers UK and Irish pre/post-race data and refreshes approximately every five minutes.
+The ingestion adapter is built around The Racing API because its documented Core API covers UK and Irish pre/post-race data and refreshes every few minutes.
 
 Every daily ingest requests GB + IRE cards and stores each runner's:
 - official rating (OR)
