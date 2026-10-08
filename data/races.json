@@ -463,6 +463,12 @@
         ],
         "isPrime": false,
         "stars": 5
+      },
+      "result": {
+        "position": 2,
+        "status": "User reported",
+        "source": "User-reported second place; independent result confirmation pending",
+        "updatedAt": "2026-10-08T17:04:13.127Z"
       }
     },
     {
