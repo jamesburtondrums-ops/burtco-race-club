@@ -1,7 +1,7 @@
 {
   "startingBank": 1000,
   "currency": "GBP",
-  "policy": "Fixed paper stakes £10 win / £5 each-way (£10 total). Settlement uses recorded SP when available; ambiguous prices or EW place terms require verification. Existing bets never repriced.",
+  "policy": "Fixed paper stakes £10 win or £5 EW (£10 total) on individual published selections; optional £1 each-way Lucky 15 adds 30 separate lines (£30), shown separately. Results and historical ledgers are retained; no real bets are placed.",
   "entries": [
     {
       "id": "2026-10-08|market rasen|15:06|whitewinewednesday|win",
@@ -536,6 +536,91 @@
         "updatedAt": "2026-10-08T16:38:00+01:00"
       },
       "runnerCount": 13
+    },
+    {
+      "id": "2026-10-09|newmarket|14:25|flora of bermuda|win",
+      "date": "2026-10-09",
+      "course": "Newmarket",
+      "time": "14:25",
+      "horse": "Flora Of Bermuda",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "13/8",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "runnerCount": 6,
+      "terms": null,
+      "result": null
+    },
+    {
+      "id": "2026-10-09|newmarket|14:57|musical times|win",
+      "date": "2026-10-09",
+      "course": "Newmarket",
+      "time": "14:57",
+      "horse": "Musical Times",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "1/2",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "placesPaid": null,
+      "runnerCount": 8,
+      "terms": null,
+      "result": null
+    },
+    {
+      "id": "2026-10-09|york|14:05|theheatison|each-way",
+      "date": "2026-10-09",
+      "course": "York",
+      "time": "14:05",
+      "horse": "Theheatison",
+      "betType": "each-way",
+      "winStake": 5,
+      "placeStake": 5,
+      "selectionOdds": "14/1",
+      "settlementOdds": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
+      "runnerCount": 16,
+      "terms": "User-defined 1/4 odds house EW terms based on actual final field size",
+      "result": null
+    },
+    {
+      "id": "2026-10-09|newmarket|15:30|spyce|each-way",
+      "date": "2026-10-09",
+      "course": "Newmarket",
+      "time": "15:30",
+      "horse": "Spyce",
+      "betType": "each-way",
+      "winStake": 5,
+      "placeStake": 5,
+      "selectionOdds": "12/1",
+      "settlementOdds": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
+      "runnerCount": 11,
+      "terms": "User-defined 1/4 odds house EW terms based on actual final field size",
+      "result": null
+    },
+    {
+      "id": "2026-10-09|newmarket|14:57|dancing destiny|each-way",
+      "date": "2026-10-09",
+      "course": "Newmarket",
+      "time": "14:57",
+      "horse": "Dancing Destiny",
+      "betType": "each-way",
+      "winStake": 5,
+      "placeStake": 5,
+      "selectionOdds": "22/1",
+      "settlementOdds": null,
+      "ewFraction": 0.25,
+      "placesPaid": 3,
+      "runnerCount": 8,
+      "terms": "User-defined 1/4 odds house EW terms based on actual final field size",
+      "result": null
     }
   ],
   "placePolicy": {
@@ -555,5 +640,51 @@
       "War Howl",
       "Eagle Storm"
     ]
-  }
+  },
+  "lucky15Tickets": [
+    {
+      "id": "2026-10-09|ew-lucky15",
+      "date": "2026-10-09",
+      "stakePerLinePerSide": 1,
+      "totalStake": 30,
+      "eachWayFraction": 0.25,
+      "linesPerSide": 15,
+      "placed": false,
+      "paperOnly": true,
+      "legs": [
+        {
+          "horse": "Flann Sunna",
+          "course": "Newmarket",
+          "time": "13:15",
+          "selectionOdds": "5/2",
+          "runnerCount": 13,
+          "result": null
+        },
+        {
+          "horse": "Theheatison",
+          "course": "York",
+          "time": "14:05",
+          "selectionOdds": "14/1",
+          "runnerCount": 16,
+          "result": null
+        },
+        {
+          "horse": "Flora Of Bermuda",
+          "course": "Newmarket",
+          "time": "14:25",
+          "selectionOdds": "13/8",
+          "runnerCount": 6,
+          "result": null
+        },
+        {
+          "horse": "Spyce",
+          "course": "Newmarket",
+          "time": "15:30",
+          "selectionOdds": "12/1",
+          "runnerCount": 11,
+          "result": null
+        }
+      ]
+    }
+  ]
 }
