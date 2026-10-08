@@ -63,10 +63,10 @@ function bestOdds(runner) {
 function resultForRunner(runner) {
   const rawPosition = runner?.position ?? runner?.pos ?? runner?.finish_position ?? runner?.placing ?? null;
   const casualty = runner?.casualty || runner?.outcome || runner?.status;
+  const sp = runner?.sp || runner?.starting_price || runner?.startingPrice || null;
   let position = rawPosition;
   if (typeof position === 'string' && /^\d+$/.test(position)) position = Number(position);
   if (position === 0) position = null;
-  const sp = runner?.sp || runner?.starting_price || runner?.startingPrice || null;
   if (position !== null && position !== undefined && position !== '') {
     return { position, status: 'Weighed in', sp, source: 'The Racing API', updatedAt: now };
   }
@@ -100,13 +100,36 @@ if (customUrl) {
 } else if (apiUser && apiPass) {
   const auth = 'Basic ' + Buffer.from(`${apiUser}:${apiPass}`).toString('base64');
   const headers = { authorization: auth };
-  const [cardPayload, resultPayload] = await Promise.all([
-    fetchJson('https://api.theracingapi.com/v1/racecards/standard?day=today&limit=500', headers),
-    fetchJson('https://api.theracingapi.com/v1/results/today?limit=500', headers)
+  // Account tiers differ: Standard provides SP and prices; Free provides positions.
+  // Do not request 500 results: the official results endpoint caps limit at 100.
+  async function firstAvailable(urls) {
+    let last;
+    for (const url of urls) {
+      try { return { payload: await fetchJson(url, headers), endpoint: url }; }
+      catch (err) {
+        last = err;
+        if (!/-> (401|403)\\b/.test(String(err))) throw err;
+        console.log('Feed tier lacks access to '+url.split('?')[0]+'; trying next tier');
+      }
+    }
+    throw last;
+  }
+  const resultResponse = await firstAvailable([
+    'https://api.theracingapi.com/v1/results/today?limit=100',
+    'https://api.theracingapi.com/v1/results/today/free?limit=100'
   ]);
-  cards = listFrom(cardPayload, ['racecards', 'races', 'results']);
-  results = listFrom(resultPayload, ['results', 'races']);
-  feedName = 'The Racing API';
+  results = listFrom(resultResponse.payload, ['results', 'races']);
+  // Prices are optional. Results must still work if only the Free plan is enabled.
+  try {
+    const cardResponse = await firstAvailable([
+      'https://api.theracingapi.com/v1/racecards/standard?day=today&limit=100',
+      'https://api.theracingapi.com/v1/racecards/free?day=today&limit=100'
+    ]);
+    cards = listFrom(cardResponse.payload, ['racecards', 'races']);
+  } catch (err) {
+    console.warn('Racecards unavailable; results will still update: '+String(err));
+  }
+  feedName = 'The Racing API ('+(resultResponse.endpoint.includes('/free')?'Free':'Standard')+')';
 } else {
   console.log('No live racing feed credentials configured. Add RACING_API_USERNAME + RACING_API_PASSWORD, or RACING_DATA_API_URL.');
   process.exit(0);
@@ -125,9 +148,15 @@ let resultChanges = 0;
 for (const { selection } of selections) {
   const cardRace = cards.find(race =>
     sameCourse(courseOf(race), selection.course) &&
+    (!race.date || race.date === data.snapshotDate) &&
     runnersOf(race).some(runner => sameHorse(horseNameOf(runner), selection.horse))
   );
   if (cardRace) {
+    const count = Number(cardRace.field_size || cardRace.fieldSize || cardRace.runners_count);
+    if (Number.isInteger(count) && count > 0 && count !== selection.runnerCount) {
+      selection.runnerCount = count;
+      resultChanges++;
+    }
     const runner = runnersOf(cardRace).find(r => sameHorse(horseNameOf(r), selection.horse));
     const latest = bestOdds(runner);
     if (latest?.text && latest.text !== selection.odds) {
@@ -138,8 +167,10 @@ for (const { selection } of selections) {
       oddsChanges++;
     }
     if (runner?.status && /non.?runner|withdrawn|scratched|nr/i.test(String(runner.status))) {
-      selection.result = { status: 'NR', source: feedName, updatedAt: now };
-      resultChanges++;
+      if (selection.result?.status !== 'NR') {
+        selection.result = { status: 'NR', source: feedName, updatedAt: now };
+        resultChanges++;
+      }
     }
   }
 
@@ -148,6 +179,11 @@ for (const { selection } of selections) {
     runnersOf(race).some(runner => sameHorse(horseNameOf(runner), selection.horse))
   );
   if (resultRace) {
+    const confirmed = Number(resultRace.field_size || resultRace.fieldSize) || runnersOf(resultRace).filter(r => !/^(NR|non.?runner|withdrawn)$/i.test(String(r?.position || r?.status || ''))).length;
+    if (confirmed > 0 && confirmed !== selection.runnerCount) {
+      selection.runnerCount = confirmed;
+      resultChanges++;
+    }
     const runner = runnersOf(resultRace).find(r => sameHorse(horseNameOf(r), selection.horse));
     const nextResult = resultForRunner(runner);
     if (nextResult) {
@@ -180,6 +216,12 @@ for (const { group, selection } of selections) {
       placesPaid: betType === 'each-way' && Number(selection.runnerCount || selection.runners || selection.fieldSize) ? (Number(selection.runnerCount || selection.runners || selection.fieldSize) <= 4 ? 1 : Number(selection.runnerCount || selection.runners || selection.fieldSize) <= 7 ? 2 : 3) : null, terms: selection.terms || null,
       result: selection.result || null };
     ledger.entries.push(entry);
+    ledgerChanges++;
+  }
+  const actualCount = Number(selection.runnerCount) || null;
+  if (betType === 'each-way' && actualCount && entry.runnerCount !== actualCount) {
+    entry.runnerCount = actualCount;
+    entry.placesPaid = actualCount <= 4 ? 1 : actualCount <= 7 ? 2 : 3;
     ledgerChanges++;
   }
   const nextResult = selection.result || null;
