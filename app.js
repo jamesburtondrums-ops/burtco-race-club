@@ -25,7 +25,6 @@ const primeOf=x=>{
    (q.positiveGroups||0)>=5 &&
    !q.majorRedFlag &&
    q.lateMarketConfirmed===true &&
-   (!handicap || (q.retainedAbility===true && (q.aimingGroups||0)>=2)) &&
    (!q.newcomer || q.pedigreeComplete===true) &&
    (q.racePredictability||0)>=70;
 };
@@ -63,8 +62,8 @@ function today(){
  });
  const primes=picks.filter(primeOf);
  const others=picks.filter(x=>!primeOf(x));
- return `${d.scoringModel?.legacy?'<div class="panel" style="border-left:4px solid #a88026"><strong>V4.1 RECHECK REQUIRED</strong><p class="meta" style="margin-top:5px">These cards pre-date V4.1 Accuracy Mode. Their previous PRIME/stars are suppressed. A fresh grade now requires calibrated probability, favourite status, model dominance, race predictability, aiming/connection checks and late-market confirmation.</p></div>':''}<section class="hero"><div class="hero-main"><div class="eyebrow">8 OCTOBER 2026 · GB + IRE</div><h2>Today's win selections, separated by confidence and value.</h2><p>PRIME is now deliberately rare: 55%+ calibrated win probability, favourite status, clear model dominance and full safeguards. If a race is too uncertain, the correct output is NO SELECTION.</p></div>
- <div class="status-panel"><div class="status-row"><span>Meetings scanned</span><strong>${d.coverage.meetings}</strong></div><div class="status-row"><span>Races scanned</span><strong>${d.coverage.races}</strong></div><div class="status-row"><span>Selections</span><strong>${d.todaySelections.length}</strong></div><div class="status-row"><span>PRIME picks</span><strong>${d.todaySelections.filter(primeOf).length}</strong></div></div></section>
+ return `${d.scoringModel?.legacy?'<div class="panel" style="border-left:4px solid #a88026"><strong>V4.1 RECHECK REQUIRED</strong><p class="meta" style="margin-top:5px">These cards pre-date V4.1 Accuracy Mode. Their previous PRIME/stars are suppressed. A fresh grade now requires calibrated probability, favourite status, model dominance, race predictability, aiming/connection checks and late-market confirmation.</p></div>':''}<section class="hero"><div class="hero-main"><div class="eyebrow">8 OCTOBER 2026 · GB + IRE</div><h2>Today's selections — fully rechecked under V4.1 Accuracy Mode.</h2><p>PRIME is now deliberately rare: 55%+ calibrated win probability, favourite status, clear model dominance and full safeguards. If a race is too uncertain, the correct output is NO SELECTION.</p></div>
+ <div class="status-panel"><div class="status-row"><span>Meetings scanned</span><strong>${d.coverage.meetings}</strong></div><div class="status-row"><span>Races scanned</span><strong>${d.coverage.races}</strong></div><div class="status-row"><span>Selections rechecked</span><strong>${d.todaySelections.length}</strong></div><div class="status-row"><span>PRIME picks</span><strong>${d.todaySelections.filter(primeOf).length}</strong></div></div></section>
  ${filters()}
  ${primes.length?`<div class="section-head prime-section-title"><div><h3>PRIME</h3><p>Highest-conviction win profiles.</p></div></div><div class="prime-grid">${primes.map(card).join("")}</div>`:""}
  ${others.length?`<div class="section-head"><div><h3>Other selections</h3><p>Stars represent confidence in the data for win purposes — not value.</p></div></div><div class="pick-grid">${others.map(card).join("")}</div>`:""}
@@ -90,7 +89,7 @@ function systemV4(){
    <div><b>Dominance</b><span>At least 8 percentage points clear of the second-ranked horse.</span></div>
    <div><b>Race quality</b><span>Predictability score ≥70/100.</span></div>
    <div><b>Evidence</b><span>≥90% critical checks and at least five independent positive groups.</span></div>
-   <div><b>Handicaps</b><span>Retained ability plus at least two aiming/placement groups.</span></div>
+   <div><b>Aiming</b><span>Retained ability and targeting signals move probability but are not hard gates; forcing them reduced historical accuracy.</span></div>
    <div><b>Market close</b><span>Late market confirmation required; unexplained drift blocks PRIME.</span></div>
  </div>
  <div class="section-head"><div><h3>Race-type rules</h3></div></div>
