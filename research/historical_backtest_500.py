@@ -510,6 +510,32 @@ for label,mask in prime_gate_defs:
         prime_gates.append({"gate":label,"races":len(g),"wins":int(g.won.sum()),"strike_rate":float(g.won.mean()),
                             "roi":float(((valid.won*valid.sp).sum()-len(valid))/len(valid)) if len(valid) else None})
 
+# accuracy-maximisation study: sacrifice volume for higher win rate
+acc_defs=[
+ ("P>=50 favourite", (fp.p_model>=.50)&(fp.market_rank==1)),
+ ("P>=55 favourite", (fp.p_model>=.55)&(fp.market_rank==1)),
+ ("P>=60 favourite", (fp.p_model>=.60)&(fp.market_rank==1)),
+ ("P>=50 favourite + retained ability", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.aim_retained_ability>=1)),
+ ("P>=55 favourite + retained ability", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.aim_retained_ability>=1)),
+ ("P>=50 favourite + 2 aiming groups", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.aim_groups>=2)),
+ ("P>=55 favourite + 2 aiming groups", (fp.p_model>=.55)&(fp.market_rank==1)&(fp.aim_groups>=2)),
+ ("P>=50 favourite + course/connection evidence", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.aim_course_connections>=1)),
+ ("P>=50 favourite + target return", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.aim_target_return>=1)),
+ ("P>=50 favourite + jockey upgrade", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.aim_booking>=1)),
+ ("P>=50 favourite, not nursery/hurdle", (fp.p_model>=.50)&(fp.market_rank==1)&(~fp.race_type.isin(["nursery","hurdle"]))),
+ ("P>=55 favourite, not nursery/hurdle", (fp.p_model>=.55)&(fp.market_rank==1)&(~fp.race_type.isin(["nursery","hurdle"]))),
+ ("P>=50 favourite, maiden/novice only", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.race_type.isin(["maiden","novice"]))),
+ ("P>=50 favourite, handicap only", (fp.p_model>=.50)&(fp.market_rank==1)&(fp.race_type=="handicap")),
+]
+accuracy_gates=[]
+for label,mask in acc_defs:
+    g=fp[mask]
+    if len(g)>=15:
+        valid=g[np.isfinite(g.sp)]
+        accuracy_gates.append({"gate":label,"races":len(g),"wins":int(g.won.sum()),"strike_rate":float(g.won.mean()),
+                               "roi":float(((valid.won*valid.sp).sum()-len(valid))/len(valid)) if len(valid) else None,
+                               "avg_model_probability":float(g.p_model.mean())})
+
 # segment results
 segments=[]
 for seg in ["handicap","nursery","maiden","novice","chase","hurdle","other"]:
@@ -582,6 +608,7 @@ summary={
  "signal_lifts":signals,
  "confidence_gates":gate_rows,
  "prime_gates":prime_gates,
+ "accuracy_gates":accuracy_gates,
  "segments":segments,
  "calibration":cal,
  "agreement":agreement,
