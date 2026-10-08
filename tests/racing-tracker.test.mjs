@@ -14,17 +14,19 @@ const app = vm.runInNewContext(source.slice(0,boot)+'\n;({state,settlement,track
 app.state.ledger=ledger;
 app.state.data=racing;
 const stats=app.trackerStats(ledger.entries);
-assert.equal(stats.known,20,'Known finishes');
+assert.equal(stats.known,22,'Known finishes');
 assert.equal(stats.winCount,6,'Winning picks');
-assert.equal(stats.settled,21,'Fully settled bets');
-assert.equal(stats.openStake,20,'Outstanding stakes');
+assert.equal(stats.settled,23,'Fully settled bets');
+assert.equal(stats.openStake,0,'Outstanding stakes');
 assert.equal(stats.totalStake,230,'Total paper stakes');
 assert.equal(app.settlement(ledger.entries.find(e=>e.horse==='King Gris')).returnAmount,10,'King Gris NR £10 refund');
 assert.equal(ledger.entries.find(e=>e.horse==='Aighear').settlementOdds,'4/7','Aighear confirmed SP');
 assert.equal(ledger.entries.find(e=>e.horse==='Rattledelatch').settlementOdds,'1/1','Rattledelatch confirmed SP');
 assert.equal(app.settlement(ledger.entries.find(e=>e.horse==='Toralou')).status,'lost','Toralou confirmed sixth place is a losing EW bet');
 assert.equal(app.settlement(ledger.entries.find(e=>e.horse==='Pampar Lady')).status,'lost','Pampar Lady confirmed eleventh place is losing');
-assert.equal(ledger.entries.filter(e=>!e.result).length,2,'Two unverified Southwell races stay pending');
+assert.equal(app.settlement(ledger.entries.find(e=>e.horse==='Eagle Storm')).status,'lost','Eagle Storm sixth place loses £10 each-way');
+assert.equal(app.settlement(ledger.entries.find(e=>e.horse==='War Howl')).status,'lost','War Howl eleventh place loses £10 each-way');
+assert.equal(ledger.entries.filter(e=>!e.result).length,0,'All selected races have outcomes recorded');
 assert.equal(app.settlement(ledger.entries.find(e=>e.horse==='Ratemenow')).status,'lost','Ratemenow second in win-only market is a loss');
 assert.equal(ledger.entries.length,23,'Only latest selection ledger entries');
 assert.equal(racing.todaySelections.length,13,'Only latest main selections');
@@ -32,7 +34,7 @@ assert.equal(racing.todaySelections.filter(x => x.restoredFromPreviousVersion).l
 assert.equal(ledger.entries.filter(x => x.restoredFromPreviousVersion).length,0,'Earlier bets removed');
 assert.equal(racing.todaySelections.find(x=>x.horse==='Aighear')?.result?.position,1,'Aighear win preserved');
 assert.equal(racing.todaySelections.find(x=>x.horse==='Rattledelatch')?.result?.position,1,'Rattledelatch win preserved');
-assert.equal(Math.round(stats.profit*100)/100,4.24,'Settled P/L');
+assert.equal(Math.round(stats.profit*100)/100,-15.76,'Settled P/L');
 assert.equal(Math.round((1000-stats.totalStake+stats.totalReturn)*100)/100,984.24,'Available bank');
 assert.equal(app.settlement({betType:'win',winStake:10,placeStake:0,result:{status:'NR'}}).returnAmount,10,'Refund NR');
 assert.equal(app.settlement({betType:'win',winStake:10,placeStake:0,result:{status:'PU'}}).status,'lost','PU is a loss');
@@ -53,5 +55,5 @@ assert.doesNotMatch(appElement.innerHTML,/Blissful Bonita|Lady Of Clover/,'Remov
 
 assert.match(appElement.innerHTML,/sportinglife.com\\/racing\\/fast-results/,'Fast results reference is present');
 assert.match(appElement.innerHTML,/£984\.24/,'Bank shown correctly');
-assert.match(appElement.innerHTML,/\+£4\.24/,'Settled P/L shown correctly');
+assert.match(appElement.innerHTML,/-£15\.76/,'Settled P/L shown correctly');
 console.log('PASS: profit, bankroll, all strike rates, each-way terms, refunds, DNF, dashboard and refresh control');
