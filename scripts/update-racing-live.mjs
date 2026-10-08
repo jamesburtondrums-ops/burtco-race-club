@@ -128,8 +128,18 @@ if (customUrl) {
   }
   feedName = 'The Racing API ('+(resultResponse.endpoint.includes('/free')?'Free':'Standard')+')';
 } else {
-  console.log('No live racing feed credentials configured. Add RACING_API_USERNAME + RACING_API_PASSWORD, or RACING_DATA_API_URL.');
-  process.exit(0);
+  // Reuse the Cloudflare Pages live endpoint: credentials can be configured
+  // once in Pages without needing a second copy of secrets in GitHub Actions.
+  const live = await fetchJson('https://racing-intelligence.pages.dev/api/live-results');
+  if (!live.connected) {
+    console.log('Live results not connected: ' + (live.reason || 'configure the Cloudflare Pages API secrets'));
+    process.exit(0);
+  }
+  results = (live.updates || []).map(update => ({
+    course:update.course, date:update.date, field_size:update.runnerCount,
+    runners:[{horse:update.horse,...update.result}]
+  }));
+  feedName = live.source || 'Cloudflare Pages live results';
 }
 
 const flattenMeetings = items => items.flatMap(item => {
