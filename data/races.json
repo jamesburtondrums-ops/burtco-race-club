@@ -5,9 +5,9 @@
   "coverage": {
     "meetings": 6,
     "races": 47,
-    "scope": "Six GB and Ireland meetings reviewed from published racecards; five individual selections plus one Lucky 15-only runner",
+    "scope": "Six GB and Ireland racecards reviewed; four individual selections and two Lucky 15-only runners",
     "publishedDate": "2026-10-08",
-    "selectedIndividuals": 5
+    "selectedIndividuals": 4
   },
   "meetings": [
     {
@@ -216,30 +216,6 @@
       "risk": "Sixteen-runner juvenile race is inherently unpredictable. Ground listed good with good-to-soft patches; race pace and position may decide the outcome. A place possibility, not a high-probability winner.",
       "source": "HorseRacing.net / York declared card",
       "sourceUrl": "https://www.horseracing.net/york/09-10-26"
-    },
-    {
-      "horse": "Spyce",
-      "course": "Newmarket",
-      "time": "15:30",
-      "odds": "12/1",
-      "runnerCount": 11,
-      "or": 96,
-      "ts": 95,
-      "rpr": 112,
-      "midStars": 3,
-      "view": "E/W VALUE — CONDITIONAL",
-      "terms": "11 declared · 3 places at 1/4 odds under tracker policy",
-      "tags": [
-        "HERITAGE HANDICAP / £51,540",
-        "RPR 112 / OR 96",
-        "ROSSA RYAN",
-        "12/1 OVERNIGHT",
-        "BREATHING CHANGE"
-      ],
-      "reason": "The price allows an each-way case rather than a strict win expectation. RPR112 tops OR96; an expected improvement from a breathing intervention and the longer 1m4f trip could change a recent disappointing finishing profile. Rossa Ryan booked.",
-      "risk": "Recent form 4-5496 is poor; the breathing operation and trip improvement are theories, not verified positives. This is the weakest of the shortlist and should be withdrawn if the market or conditions worsen.",
-      "source": "HorseRacing.net / The Times racing tips",
-      "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26"
     }
   ],
   "longshotsToday": [
@@ -288,22 +264,42 @@
       "risk": "Group 3 sprint with 13 starters; 5f pace and draw can produce sizeable reversals.",
       "source": "HorseRacing.net / The Independent / Racing TV",
       "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26"
+    },
+    {
+      "horse": "Nuit d'Eclair",
+      "course": "Newmarket",
+      "time": "13:50",
+      "odds": "9/2",
+      "runnerCount": 16,
+      "or": 100,
+      "ts": 93,
+      "rpr": 107,
+      "tags": [
+        "LUCKY 15 LEG ONLY",
+        "GROUP 3 / £42,533 WINNER",
+        "RECENT FORM 1423",
+        "3 PAID PLACES"
+      ],
+      "reason": "Better evidence-backed ticket leg than a hopeful wind-operation turnaround: progressive two-year-old with form 1423, recent placed efforts, RPR107 and a roughly 9/2 quote in the 16-runner Oh So Sharp Stakes. This is a place-value leg, not a standalone paper bet.",
+      "risk": "Sixteen-runner juvenile Group 3 is competitive. Draw, pace and finishing speed may undermine early place expectations.",
+      "source": "HorseRacing.net / Racing TV",
+      "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26"
     }
   ],
   "midshotsPolicy": {
-    "publicNote": "Small, disciplined 10/1–18/1 each-way shortlist. These are lower-probability selections than the win picks, despite form-based place appeal.",
+    "publicNote": "Only one 10/1–18/1 runner retained: Theheatison's sequence of placed efforts is the clearest early each-way angle. Others failed the confidence screen.",
     "minOdds": "10/1",
     "maxOdds": "18/1",
     "priceRule": "Only take an unambiguous 10/1–18/1 quote; recheck declared field, market and going."
   },
   "longshotsPolicy": {
-    "publicNote": "Only one speculative 20/1+ contender retained; this is NOT a high-confidence win pick. Strong place appeal at a long price is possible without high absolute probability.",
+    "publicNote": "One speculative 20/1+ place-value watch remains. It is not high-confidence to win, even with a plausible place profile.",
     "minOdds": "20/1",
     "priceRule": "No longshot bet if quoted under 20/1 or fewer than 8 runners after non-runners; reassess paid places."
   },
   "selectionPolicy": {
     "scope": "Current day's selective shortlist only. Previous paper bets and results remain in permanent ledger and archived racecard.",
-    "maxIndividualSelections": 5,
+    "maxIndividualSelections": 4,
     "winStakes": 10,
     "eachWayWinStake": 5,
     "eachWayPlaceStake": 5,
@@ -319,9 +315,9 @@
     "totalCost": 30,
     "legHorses": [
       "Flann Sunna",
+      "Nuit d'Eclair",
       "Theheatison",
-      "Flora Of Bermuda",
-      "Spyce"
+      "Flora Of Bermuda"
     ],
     "terms": "£1 each way per combination: 15 win lines + 15 place lines. 1/4 odds place portion, paid places based on actual runner count. Not bookmaker terms.",
     "recommendationStatus": "Paper ticket proposed overnight; prices and non-runners require Friday verification"
