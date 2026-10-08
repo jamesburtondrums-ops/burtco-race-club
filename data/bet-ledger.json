@@ -447,7 +447,11 @@
       "ewFraction": 0.25,
       "placesPaid": 3,
       "terms": "13-runner beginners chase; check bookmaker place terms",
-      "result": null,
+      "result": {
+        "status": "NR",
+        "source": "User-reported non-runner; independent confirmation pending",
+        "updatedAt": "2026-10-08T17:04:37.370Z"
+      },
       "runnerCount": 13
     },
     {
