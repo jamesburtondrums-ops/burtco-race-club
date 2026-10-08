@@ -78,7 +78,7 @@ function trackerStats(entries){
  let totalStake=0,openStake=0,settledStake=0,totalReturn=0;
  let settled=0,winCount=0,known=0,ewPlaced=0,ewKnown=0,voided=0;
  let todayKnown=0,todayWins=0;
- const today=new Date().toLocaleDateString('en-CA',{timeZone:'Europe/London'});
+ const today=state.data?.snapshotDate||new Date().toLocaleDateString('en-CA',{timeZone:'Europe/London'});
  for(const e of entries){
   const stake=Number(e.winStake||0)+Number(e.placeStake||0);
   totalStake+=stake;
@@ -102,7 +102,7 @@ function signMoney(n){return (n<0?'-':'+')+money(Math.abs(n));}
 function applyLiveResults(){
  if(!state.data||!state.ledger||!state.live?.connected||state.live.date!==state.data.snapshotDate)return;
  const updates=state.live.updates||[];
- const groups=['todaySelections','midshotsToday','longshotsToday'];
+ const groups=['todaySelections','midshotsToday','longshotsToday','lucky15Only'];
  for(const group of groups)for(const pick of state.data[group]||[]){
    const update=updates.find(u=>u.horse===pick.horse&&u.course===pick.course&&u.time===pick.time);
    if(!update)continue;
@@ -123,7 +123,7 @@ const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','
 const webKey=(date,course,time,horse)=>[date,course,time,horse].join('|').toLowerCase();
 function applyWebConfirmations(){
  if(!state.data||!state.ledger)return;
- for(const group of ['todaySelections','midshotsToday','longshotsToday'])
+ for(const group of ['todaySelections','midshotsToday','longshotsToday','lucky15Only'])
   for(const pick of state.data[group]||[]){
    if(pick.result?.position)continue;
    const confirmed=state.webConfirmed[webKey(state.data.snapshotDate,pick.course,pick.time,pick.horse)];
@@ -185,30 +185,79 @@ async function searchRaceResults(){
  }
 }
 
+function lucky15Calc(ticket){
+ const rows=ticket.legs.map(leg=>{
+  const p=state.data?.snapshotDate===ticket.date?
+   ['todaySelections','midshotsToday','longshotsToday','lucky15Only'].flatMap(g=>state.data[g]||[])
+    .find(x=>x.horse===leg.horse&&x.course===leg.course&&x.time===leg.time):null;
+  const result=p?.result||leg.result||null;
+  const count=Number(p?.runnerCount||leg.runnerCount)||null;
+  const places=count?(count<=4?1:count<=7?2:3):null;
+  const odds=decimalOdds(result?.sp||leg.settlementOdds||leg.selectionOdds);
+  const pos=Number(result?.position)||null;
+  const status=String(result?.status||'');
+  let win=null,place=null;
+  if(/^(NR|NON.RUNNER|WITHDRAWN|SCRATCHED|VOID|ABANDONED|CANCELLED)$/i.test(status)){win=1;place=1}
+  else if(pos>3){win=0;place=0}
+  else if(pos&&places&&odds){win=pos===1?odds:0;place=pos<=places?1+(odds-1)*.25:0}
+  else if(/^(F|PU|UR|BD|RO|RR|REF|DSQ|DNF|DISQ)$/i.test(status)){win=0;place=0}
+  return {...leg,result,places,win,place};
+ });
+ const stake=Number(ticket.totalStake||30);
+ if(rows.some(x=>x.win===null||x.place===null))return {ticket,legs:rows,stake,status:'open',returnAmount:0};
+ let payout=0;
+ for(let mask=1;mask<16;mask++){
+  let wf=1,pf=1;for(let i=0;i<4;i++)if(mask&(1<<i)){wf*=rows[i].win;pf*=rows[i].place}
+  payout+=Number(ticket.stakePerLinePerSide)*(wf+pf);
+ }
+ return {ticket,legs:rows,stake,status:'settled',returnAmount:payout};
+}
+function exoticSummary(){
+ const tickets=(state.ledger?.lucky15Tickets||[]).map(lucky15Calc);
+ return {tickets,stake:tickets.reduce((a,x)=>a+x.stake,0),
+  pendingStake:tickets.filter(x=>x.status==='open').reduce((a,x)=>a+x.stake,0),
+  settledStake:tickets.filter(x=>x.status==='settled').reduce((a,x)=>a+x.stake,0),
+  returns:tickets.reduce((a,x)=>a+x.returnAmount,0)};
+}
+function lucky15Page(){
+ const ticket=(state.ledger?.lucky15Tickets||[]).find(t=>t.date===state.data?.snapshotDate);
+ if(!ticket)return '<div class="panel">No Lucky 15 prepared for this racecard.</div>';
+ const x=lucky15Calc(ticket);
+ const rows=x.legs.map((p,i)=>'<div class="l15-leg"><b>'+(i+1)+'</b><div><strong>'+escapeHtml(p.horse)+'</strong><small>'+escapeHtml(p.course)+' · '+escapeHtml(p.time)+' · '+(p.places?'Top '+p.places+' places':'Field size pending')+'</small></div><div><strong>'+escapeHtml(p.selectionOdds)+'</strong><small>'+(p.result?.position?ordinal(p.result.position):escapeHtml(p.result?.status||'Awaiting race'))+'</small></div></div>').join('');
+ return '<section class="l15-panel"><div class="l15-heading"><div><div class="eyebrow">FRIDAY 9 OCTOBER · PAPER BET</div><h2>Each-way Lucky 15</h2><p>Four separate races · 15 win combinations and 15 place combinations.</p></div><b>'+money(x.stake)+'</b></div>'+
+  '<div class="l15-combinations"><span>4 singles</span><span>6 doubles</span><span>4 trebles</span><span>1 fourfold</span></div>'+
+  '<p class="l15-note">£1 each-way per combination = £15 win + £15 place. Each-way terms: ¼ odds, 1 place up to 4 runners, 2 places for 5–7, and 3 places for 8+.</p>'+
+  '<div class="l15-legs">'+rows+'</div><div class="l15-outcome">'+(x.status==='settled'?'Return '+money(x.returnAmount)+' · P/L '+signMoney(x.returnAmount-x.stake):'£30 reserved in paper bank · Settlement pending all four results')+'</div>'+
+  '<p class="l15-note">Overnight quoted odds may change. The combination is tracked separately from single selections, and the same runner can count in both. Starting prices are used when published. A non-runner is treated provisionally as a unit factor before bookmaker deductions.</p></section>';
+}
+
 function tracker(){
  const ledger=state.ledger;
  if(!ledger)return '';
  const entries=ledger.entries||[];
  const stats=trackerStats(entries);
+ const combos=exoticSummary();
  const starting=Number(ledger.startingBank??1000);
- const bank=starting-stats.totalStake+stats.totalReturn;
- const settledBank=starting+stats.profit;
- const roi=stats.settledStake>0?stats.profit/stats.settledStake*100:null;
+ const bank=starting-stats.totalStake-combos.stake+stats.totalReturn+combos.returns;
+ const settledBank=starting+stats.profit+combos.returns-combos.settledStake;
+ const combinedProfit=stats.profit+combos.returns-combos.settledStake;
+ const settledStakes=stats.settledStake+combos.settledStake;
+ const roi=settledStakes?combinedProfit/settledStakes*100:null;
  const winRate=stats.known?stats.winCount/stats.known*100:null;
  const ewRate=stats.ewKnown?stats.ewPlaced/stats.ewKnown*100:null;
  const today=stats.todayKnown?stats.todayWins+'/'+stats.todayKnown+' ('+(stats.todayWins/stats.todayKnown*100).toFixed(1)+'%)':'Awaiting finished races';
  const rate=v=>v===null?'—':v.toFixed(1)+'%';
  return '<section class="tracker-panel" aria-label="Live paper betting profit and strike rate">'+
- '<div class="tracker-heading"><div><strong>Profit & strike-rate tracker</strong><span class="tracker-kicker">£1,000 starting bank · £10 win or £5 each-way · '+entries.length+' selections recorded</span></div><span class="tracker-live-label">'+(state.live?.connected?'Live result checks active':'Web-verified results · automatic updates not active')+'</span></div>'+
+ '<div class="tracker-heading"><div><strong>Profit & strike-rate tracker</strong><span class="tracker-kicker">£1,000 starting bank · £10 win or £5 each-way · '+entries.length+' singles recorded · '+combos.tickets.length+' Lucky 15 ticket</span></div><span class="tracker-live-label">'+(state.live?.connected?'Live result checks active':'Web-verified results · automatic updates not active')+'</span></div>'+
  '<div class="tracker-toolbar"><button type="button" data-refresh-results class="refresh-results-btn" '+(state.refreshing?'disabled aria-busy="true"':'')+'>'+(state.refreshing?'Checking results…':'↻ Refresh race results')+'</button><a class="tracker-source-link" href="https://www.sportinglife.com/racing/fast-results" target="_blank" rel="noopener noreferrer">Sporting Life fast results ↗</a></div>'+
  '<p class="tracker-refresh-message" aria-live="polite" role="status">'+(state.refreshMessage||'Refresh checks for newly published results; the public source link opens separately.')+'</p>'+
  '<div class="tracker-stats">'+
  '<div><span>Available bank</span><strong>'+money(bank)+'</strong><small>After all stakes and credited returns</small></div>'+
- '<div><span>Settled profit / loss</span><strong class="'+(stats.profit>=0?'tracker-positive':'tracker-negative')+'">'+signMoney(stats.profit)+'</strong><small>'+stats.settled+' settled · '+(roi===null?'—':rate(roi))+' return on settled stakes</small></div>'+
+ '<div><span>Settled profit / loss</span><strong class="'+(combinedProfit>=0?'tracker-positive':'tracker-negative')+'">'+signMoney(combinedProfit)+'</strong><small>'+stats.settled+' settled · '+(roi===null?'—':rate(roi))+' return on settled stakes</small></div>'+
  '<div><span>Win strike rate</span><strong>'+rate(winRate)+'</strong><small>'+stats.winCount+' winners from '+stats.known+' known outcomes</small></div>'+
  '<div><span>Each-way place rate</span><strong>'+rate(ewRate)+'</strong><small>'+stats.ewPlaced+' placed from '+stats.ewKnown+' known E/W outcomes</small></div>'+
- '</div><div class="tracker-bottom"><div><span>Running bank after settled bets:</span> <b>'+money(settledBank)+'</b></div><div><span>Outstanding / unpriced stakes:</span> <b>'+money(stats.openStake)+'</b></div><div><span>Today’s strike rate:</span> <b>'+today+'</b></div></div>'+
- '<p class="tracker-footnote">Total stakes '+money(stats.totalStake)+' · Credited returns '+money(stats.totalReturn)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Settlements use recorded SP where available, otherwise a single unambiguous quoted price. Paper tracking only.</p>'+
+ '</div><div class="tracker-bottom"><div><span>Running bank after settled bets:</span> <b>'+money(settledBank)+'</b></div><div><span>Outstanding / unpriced stakes:</span> <b>'+money(stats.openStake+combos.pendingStake)+'</b></div><div><span>Today’s strike rate:</span> <b>'+today+'</b></div></div>'+
+ '<p class="tracker-footnote">Total stakes '+money(stats.totalStake+combos.stake)+' (including '+money(combos.stake)+' Lucky 15) · Credited returns '+money(stats.totalReturn+combos.returns)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Settlements use recorded SP where available, otherwise a single unambiguous quoted price. Paper tracking only.</p>'+
  '</section>';
 }
 function liveStatus(){
@@ -221,7 +270,7 @@ function liveStatus(){
  return '<div class="live-connection '+(connected?'live-connected':'live-disconnected')+'" role="status">'+note+'</div>';
 }
 
-function nav(){return [["today","Today"],["midshots","Mid Shots 10/1–18/1"],["longshots","Longshots 20/1+"],["history","Results history"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
+function nav(){return [["today","Today"],["midshots","Mid Shots 10/1–18/1"],["longshots","Longshots 20/1+"],["lucky15","E/W Lucky 15"],["history","Results history"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
 function filters(){const x=["ALL","PRIME","★★★★★","★★★★☆","★★★☆☆","WATCH"];return '<div class="meeting-tabs">'+x.map(f=>'<button data-filter="'+f+'" class="'+(state.filter===f?'active':'')+'">'+f+'</button>').join("")+'</div>'}
 function resultBadge(x){const r=resultInfo(x);return r?'<span class="result-badge '+r.cls+'">'+r.text+'</span>':''}
 function summaryBadges(x,type){
@@ -300,11 +349,11 @@ function history(){
 function sources(){return '<div class="section-head"><div><h3>Sources</h3><p>Current research and cross-check sources.</p></div></div><div class="source-grid">'+(state.data.sources||[]).map(s=>'<div class="source-card"><h4>'+s.name+'</h4><p><strong>'+s.status+'</strong><br>'+s.role+'</p></div>').join("")+'</div>'}
 function rememberOpen(){state.openKeys=new Set([...document.querySelectorAll('.selection-row[open]')].map(x=>x.dataset.key))}
 function restoreOpen(){(state.openKeys||new Set()).forEach(k=>{const el=[...document.querySelectorAll('.selection-row')].find(x=>x.dataset.key===k);if(el)el.open=true})}
-function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():state.view==="history"?history():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+liveStatus()+searchPanel()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
+function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():state.view==="lucky15"?lucky15Page():state.view==="history"?history():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+(state.data?.lucky15Plan&&state.view!=="lucky15"?'<div class="l15-shortcut">E/W Lucky 15 prepared · four runners · £30 paper ticket <button data-view="lucky15">View ticket →</button></div>':'')+liveStatus()+searchPanel()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
 function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()});document.querySelector("[data-refresh-results]")?.addEventListener("click",refreshResults)}
 function knownResultSignature(){
  if(!state.data||!state.ledger)return '';
- const picks=['todaySelections','midshotsToday','longshotsToday'].flatMap(group=>(state.data[group]||[]).map(x=>[group,x.horse,x.course,x.time,x.result?.position??'',x.result?.status??'',x.result?.sp??'',x.runnerCount??'']));
+ const picks=['todaySelections','midshotsToday','longshotsToday','lucky15Only'].flatMap(group=>(state.data[group]||[]).map(x=>[group,x.horse,x.course,x.time,x.result?.position??'',x.result?.status??'',x.result?.sp??'',x.runnerCount??'']));
  const ledgerResults=(state.ledger.entries||[]).map(e=>[e.id,e.result?.position??'',e.result?.status??'',e.result?.sp??'',e.settlementOdds??'',e.runnerCount??'']);
  return JSON.stringify([picks,ledgerResults]);
 }
