@@ -9,13 +9,6 @@
     "refreshedAt": "13:35 BST",
     "recheckedSelections": 13
   },
-  "gradingSystem": {
-    "PRIME": "Accuracy Mode: >=55% fused win probability plus favourite status, dominance margin and full safeguards.",
-    "STRONG": "No longer used as a confidence grade.",
-    "VALUE": "Replaced by PRICE WATCH / PRICE OK / TOO SHORT; price does not alter win confidence.",
-    "SPECULATIVE": "No longer promoted as a win-confidence selection.",
-    "WATCH": "Below threshold, incomplete evidence or unsuitable race."
-  },
   "meetings": [
     {
       "course": "Bath",
@@ -148,7 +141,9 @@
             "status": "VERY STRONG",
             "detail": "Clear favourite around 4/7"
           }
-        ]
+        ],
+        "isPrime": true,
+        "stars": null
       }
     },
     {
@@ -223,7 +218,9 @@
             "status": "STRONG",
             "detail": "Clear favourite around Evens"
           }
-        ]
+        ],
+        "isPrime": true,
+        "stars": null
       }
     },
     {
@@ -292,7 +289,9 @@
             "status": "VERY STRONG",
             "detail": "8/11 favourite"
           }
-        ]
+        ],
+        "isPrime": true,
+        "stars": null
       }
     },
     {
@@ -361,7 +360,9 @@
             "status": "STRONG",
             "detail": "Favourite with credible opposition"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 5
       }
     },
     {
@@ -430,7 +431,9 @@
             "status": "STRONG",
             "detail": "5/4–11/8 favourite"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 5
       }
     },
     {
@@ -499,7 +502,9 @@
             "status": "STRONG",
             "detail": "Favourite around 11/8–6/4"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 5
       }
     },
     {
@@ -568,7 +573,9 @@
             "status": "STRONG",
             "detail": "Clear 13/8–15/8 favourite"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 5
       }
     },
     {
@@ -637,7 +644,9 @@
             "status": "STRONG",
             "detail": "6/4–7/4 favourite"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 4
       }
     },
     {
@@ -701,7 +710,9 @@
             "status": "POSITIVE",
             "detail": "13/8 favourite; Asthelightdeclines 9/4"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 4
       }
     },
     {
@@ -770,7 +781,9 @@
             "status": "STRONG",
             "detail": "2/1 favourite"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 4
       }
     },
     {
@@ -834,7 +847,9 @@
             "status": "STRONG",
             "detail": "Around 11/10–5/4"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 4
       }
     },
     {
@@ -898,7 +913,9 @@
             "status": "MIXED",
             "detail": "9/4 favourite but eased from earlier support"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 4
       }
     },
     {
@@ -962,1003 +979,129 @@
             "status": "MIXED",
             "detail": "Still favourite but drifted to around 11/4"
           }
-        ]
+        ],
+        "isPrime": false,
+        "stars": 4
       }
     }
   ],
-  "scoringModel": {
-    "version": "4.2",
-    "legacy": false,
-    "note": "Live cards rebuilt at 13:35 BST using the V4.2 context model.",
-    "components": [],
-    "primeRule": "Dynamic V4.2: favourite at >=55% generally; >=50% in maidens/novices with complete context. Context strengthens or weakens the probability rather than acting as arbitrary hard gates."
+  "longshotsUpdatedAt": "2026-10-08T13:48:00+01:00",
+  "longshotsPolicy": {
+    "publicNote": "Only runners available or forecast at 20/1+ qualify. Each-way appeal is about the chance of outrunning the price and reaching the places; it is separate from the main win-confidence selections.",
+    "minOdds": "20/1",
+    "priceRule": "If the price contracts below 20/1, the horse no longer qualifies for this tab."
   },
-  "scoringFrameworkV2": {
-    "version": "2.0",
-    "principle": "Build a confident win decision from independent evidence groups. Value/price is assessed separately from win confidence.",
-    "establishedModel": [
-      {
-        "key": "recentForm",
-        "label": "Recent form & performance trend",
-        "max": 16,
-        "checks": [
-          "Last 3-5 runs",
-          "Recency",
-          "RPR/TS trend",
-          "Finishing effort",
-          "Hidden trouble/blocked run",
-          "Whether recent form is improving or declining"
-        ]
-      },
-      {
-        "key": "ratings",
-        "label": "Ratings & speed evidence",
-        "max": 14,
-        "checks": [
-          "Current OR",
-          "Latest/best recent RPR",
-          "Latest/best recent TS",
-          "RPR/TS versus OR",
-          "Peak recent performance",
-          "Sectionals/speed where available"
-        ]
-      },
-      {
-        "key": "handicap",
-        "label": "Handicap mark, weights & claims",
-        "max": 12,
-        "checks": [
-          "Current OR versus last winning OR",
-          "Current OR versus best winning OR",
-          "Rise/drop since last run",
-          "Race-band eligibility",
-          "Out-of-handicap status",
-          "Apprentice/conditional claim",
-          "Effective carried weight"
-        ]
-      },
-      {
-        "key": "conditions",
-        "label": "Race-condition suitability",
-        "max": 10,
-        "checks": [
-          "Going",
-          "Surface",
-          "Distance",
-          "Course configuration",
-          "Direction/turning track",
-          "Field size",
-          "Class/race conditions"
-        ]
-      },
-      {
-        "key": "trainerForm",
-        "label": "Current trainer form",
-        "max": 8,
-        "checks": [
-          "Last 14-day wins/runs",
-          "Last 30-day trend",
-          "Strike rate",
-          "Horses running to form",
-          "Recent stable momentum"
-        ]
-      },
-      {
-        "key": "trainerCourseRaceType",
-        "label": "Trainer course & race-type record",
-        "max": 7,
-        "checks": [
-          "Trainer record at today's course",
-          "Record in this race type",
-          "Record at this class/band",
-          "Record over similar trip/surface",
-          "Relevant 2yo/3yo/handicap/chase/hurdle/AW split"
-        ]
-      },
-      {
-        "key": "targeting",
-        "label": "Race targeting / placement",
-        "max": 8,
-        "checks": [
-          "Same race/meeting used before",
-          "Alternative entries and chosen race",
-          "Return to favoured course/trip",
-          "Drop into suitable class/band",
-          "Prep-run pattern",
-          "Layoff/turnaround pattern",
-          "Race value/prize money",
-          "Travel/placement context",
-          "Headgear/wind-op/gelding timing",
-          "Multiple stable runners and rider allocation"
-        ]
-      },
-      {
-        "key": "jockey",
-        "label": "Jockey & booking signal",
-        "max": 5,
-        "checks": [
-          "Current jockey form",
-          "Trainer-jockey record",
-          "Horse-jockey record",
-          "Booking upgrade/downgrade",
-          "Claim",
-          "Rider choice where alternatives existed"
-        ]
-      },
-      {
-        "key": "paceDraw",
-        "label": "Pace, draw & likely track position",
-        "max": 6,
-        "checks": [
-          "Likely run style",
-          "Projected pace",
-          "Draw bias",
-          "Recent draw bias",
-          "Field size interaction",
-          "Whether setup helps or hurts the horse"
-        ]
-      },
-      {
-        "key": "market",
-        "label": "Market evidence",
-        "max": 5,
-        "checks": [
-          "Early versus current price",
-          "Bookmaker consensus",
-          "Exchange move where visible",
-          "Liquidity where visible",
-          "Late support/drift",
-          "False move on thin volume"
-        ]
-      },
-      {
-        "key": "formLine",
-        "label": "Class & strength of form line",
-        "max": 4,
-        "checks": [
-          "Quality of recent races",
-          "Subsequent winners",
-          "Class rise/drop",
-          "Race value",
-          "Strength of opposition beaten/finished near"
-        ]
-      },
-      {
-        "key": "dataQuality",
-        "label": "Data quality & source agreement",
-        "max": 5,
-        "checks": [
-          "Freshness",
-          "Source provenance",
-          "Cross-source agreement",
-          "Non-runner status",
-          "No invented fields"
-        ]
-      }
-    ],
-    "newcomerModel": [
-      {
-        "key": "pedigree",
-        "label": "Pedigree: trip / ground / surface",
-        "max": 20,
-        "checks": [
-          "Sire progeny strike rate at trip band",
-          "Sire progeny record on today's ground",
-          "Sire progeny turf/AW record",
-          "Dam's own winning trip/ground record",
-          "Dam's progeny/sibling wins at trip",
-          "Dam's progeny/sibling ground/surface record",
-          "Damsire suitability",
-          "Family class ceiling",
-          "Stamina/speed balance"
-        ]
-      },
-      {
-        "key": "trainerNewcomer",
-        "label": "Trainer newcomer / lightly-raced profile",
-        "max": 12,
-        "checks": [
-          "Debut strike rate",
-          "Second-start strike rate",
-          "First-handicap record",
-          "2yo/3yo record",
-          "Maiden/novice record",
-          "Course record with newcomers"
-        ]
-      },
-      {
-        "key": "trainerForm",
-        "label": "Current trainer form",
-        "max": 6,
-        "checks": [
-          "Last 14-day wins/runs",
-          "Last 30-day trend",
-          "Stable runners performing to expectation"
-        ]
-      },
-      {
-        "key": "targeting",
-        "label": "Placement / race aiming",
-        "max": 8,
-        "checks": [
-          "Choice of maiden/novice/handicap",
-          "Alternative entries",
-          "Race value",
-          "Course choice",
-          "Trip change",
-          "Seasonal/debut timing",
-          "Stable's historical placement pattern"
-        ]
-      },
-      {
-        "key": "jockey",
-        "label": "Jockey / booking",
-        "max": 7,
-        "checks": [
-          "Booking strength",
-          "Trainer-jockey combination",
-          "Rider's newcomer record",
-          "Claim where relevant"
-        ]
-      },
-      {
-        "key": "salesQualifying",
-        "label": "Sales / breeze-up / qualifying evidence",
-        "max": 8,
-        "checks": [
-          "Sale price/context",
-          "Breeze-up evidence where public",
-          "Qualifying runs",
-          "Headgear/gelding change",
-          "Physical/progression clues"
-        ]
-      },
-      {
-        "key": "experiencePotential",
-        "label": "Experience & improvement potential",
-        "max": 10,
-        "checks": [
-          "Debut comments",
-          "Greenness",
-          "Trouble in running",
-          "Sectionals/finish where available",
-          "Expected improvement with trip/experience"
-        ]
-      },
-      {
-        "key": "conditions",
-        "label": "Today's conditions suitability",
-        "max": 10,
-        "checks": [
-          "Trip projection",
-          "Ground",
-          "Surface",
-          "Course configuration",
-          "Draw",
-          "Field size"
-        ]
-      },
-      {
-        "key": "market",
-        "label": "Market evidence",
-        "max": 5,
-        "checks": [
-          "Opening/current price",
-          "Stable support across firms",
-          "Exchange move/liquidity where visible"
-        ]
-      },
-      {
-        "key": "paceDraw",
-        "label": "Pace / draw setup",
-        "max": 4,
-        "checks": [
-          "Draw bias",
-          "Expected position",
-          "Likely pace"
-        ]
-      },
-      {
-        "key": "dataQuality",
-        "label": "Data quality & pedigree completeness",
-        "max": 10,
-        "checks": [
-          "Sire verified",
-          "Dam verified",
-          "Sibling/progeny data checked",
-          "Trainer stats checked",
-          "Racecard details cross-checked",
-          "No invented pedigree percentages"
-        ]
-      }
-    ],
-    "riskDeductions": [
-      {
-        "label": "Major suitability doubt",
-        "range": "-4 to -8"
-      },
-      {
-        "label": "Poor recent form / regression",
-        "range": "-3 to -8"
-      },
-      {
-        "label": "Unproven major trip change",
-        "range": "-2 to -6"
-      },
-      {
-        "label": "Bad pace/draw setup",
-        "range": "-2 to -5"
-      },
-      {
-        "label": "Trainer badly out of form",
-        "range": "-2 to -5"
-      },
-      {
-        "label": "Strong market drift with meaningful liquidity",
-        "range": "-2 to -6"
-      },
-      {
-        "label": "Missing critical evidence",
-        "range": "-3 to -10"
-      },
-      {
-        "label": "Multiple independent red flags",
-        "range": "up to -25 total"
-      }
-    ],
-    "decisionGates": {
-      "prime": "84+/100, >=90% of required checks verified, at least five independent positive evidence groups, no major red flag, and all critical checks complete.",
-      "fiveStar": "78-83/100 with >=85% check coverage and no unresolved critical negative.",
-      "fourStar": "70-77/100 with >=75% check coverage.",
-      "threeStar": "60-69/100 with >=65% check coverage.",
-      "twoStar": "50-59/100 or material unresolved doubts.",
-      "oneStar": "Below 50/100 or insufficient evidence.",
-      "pass": "Do not promote as a selection if critical data is missing, contradictory evidence dominates, or the price destroys the edge."
+  "longshotsToday": [
+    {
+      "horse": "Eagle Storm",
+      "course": "Southwell",
+      "time": "20:00",
+      "odds": "20/1–22/1",
+      "ewStars": 4,
+      "placeView": "STRONG E/W CASE",
+      "terms": "Typical market: 1/5 odds, 3 places",
+      "tags": [
+        "FORM 8-3",
+        "RPR 66",
+        "TS 49",
+        "LOW WEIGHT",
+        "DRAW 3"
+      ],
+      "reason": "Improved from eighth to third at Wolverhampton and now gets 8st13lb from a low draw. Her RPR66 puts her much closer to the experienced second tier of this maiden than a 20/1+ quote suggests, while Jennie Candlish is operating well enough to make the profile credible.",
+      "risk": "Dorigo sets a very high standard and Eagle Storm was well held by the first two last time; this is primarily a place-value case.",
+      "source": "Racing Post / HorseRacing.net / Coral"
     },
-    "criticalChecksEstablished": [
-      "Current trainer form",
-      "Trainer course/race-type record",
-      "Race targeting/placement",
-      "OR/RPR/TS or equivalent ratings evidence",
-      "Going/trip/surface suitability",
-      "Current non-runner/market status"
-    ],
-    "criticalChecksNewcomer": [
-      "Current trainer form",
-      "Trainer newcomer/course profile",
-      "Race targeting/placement",
-      "Sire trip/ground/surface evidence",
-      "Dam and sibling/progeny trip/ground evidence",
-      "Jockey booking",
-      "Current market status"
-    ]
-  },
-  "dailyResearchProtocol": [
-    "Confirm race, going, surface, distance, class, field size, draw and non-runners.",
-    "Record OR, RPR and TS where published; compare current mark with recent and winning marks.",
-    "Read last 3-5 runs, including comments and hidden trouble, not just finishing positions.",
-    "Check current trainer form over at least 14 days and recent trend.",
-    "Check trainer record at the course and in the specific race type/class/distance/surface.",
-    "Check whether the race looks deliberately suitable: alternative entries, same-race history, class/band eligibility, turnaround/layoff, race value, equipment changes and rider allocation.",
-    "Check jockey form, trainer-jockey record, horse-jockey record and whether the booking is an upgrade or meaningful choice.",
-    "Build a pace map and assess draw/track-position advantage or disadvantage.",
-    "Check market movement from early prices to current market and distinguish genuine support from thin-volume moves.",
-    "For newcomers/lightly raced horses, research sire, dam, damsire and siblings/progeny for trip, going and surface suitability before scoring.",
-    "Check the strength of recent form lines and whether horses from those races have subsequently performed well.",
-    "Record contrary evidence and risks explicitly.",
-    "Calculate check coverage; reduce confidence when evidence is missing.",
-    "Only then issue PRIME / stars and a separate VALUE label."
-  ],
-  "pilotBacktest": {
-    "label": "Pilot historical test",
-    "warning": "12-race exploratory sample only. Useful for direction, not statistical proof.",
-    "races": [
-      {
-        "race": "York 14:00 · 12 Jul 2025",
-        "pick": "Sisyphean",
-        "forecast": "7/1",
-        "sp": "3/1",
-        "result": "2nd",
-        "won": false,
-        "marketAgreement": false,
-        "shortened": true
-      },
-      {
-        "race": "York 14:35 · 12 Jul 2025",
-        "pick": "Washington Heights",
-        "forecast": "7/2",
-        "sp": "9/4",
-        "result": "1st",
-        "won": true,
-        "marketAgreement": true,
-        "shortened": true
-      },
-      {
-        "race": "York 15:45 · 12 Jul 2025",
-        "pick": "Al Qareem",
-        "forecast": "11/8",
-        "sp": "4/7",
-        "result": "1st",
-        "won": true,
-        "marketAgreement": true,
-        "shortened": true
-      },
-      {
-        "race": "York 16:15 · 12 Jul 2025",
-        "pick": "Amazing Journey",
-        "forecast": "4/1",
-        "sp": "5/2",
-        "result": "1st",
-        "won": true,
-        "marketAgreement": true,
-        "shortened": true
-      },
-      {
-        "race": "York 17:25 · 12 Jul 2025",
-        "pick": "Juan Les Pins",
-        "forecast": "10/1",
-        "sp": "9/2",
-        "result": "3rd",
-        "won": false,
-        "marketAgreement": false,
-        "shortened": true
-      },
-      {
-        "race": "Haydock 13:32 · 5 Sep 2025",
-        "pick": "Mission Possible",
-        "forecast": "4/1",
-        "sp": "7/4",
-        "result": "8th",
-        "won": false,
-        "marketAgreement": true,
-        "shortened": true
-      },
-      {
-        "race": "Haydock 15:50 · 5 Sep 2025",
-        "pick": "Lightning Polka",
-        "forecast": "11/2",
-        "sp": "7/2",
-        "result": "1st",
-        "won": true,
-        "marketAgreement": false,
-        "shortened": true
-      },
-      {
-        "race": "Haydock 16:07 · 6 Sep 2025",
-        "pick": "Jer Batt",
-        "forecast": "9/2",
-        "sp": "5/2",
-        "result": "3rd",
-        "won": false,
-        "marketAgreement": false,
-        "shortened": true
-      },
-      {
-        "race": "Haydock 15:00 · 6 Sep 2025",
-        "pick": "The Reverend",
-        "forecast": "5/1",
-        "sp": "7/2",
-        "result": "1st",
-        "won": true,
-        "marketAgreement": true,
-        "shortened": true
-      },
-      {
-        "race": "Leopardstown 15:15 · 18 Oct 2025",
-        "pick": "Thread Of Gold",
-        "forecast": "11/4",
-        "sp": "9/2",
-        "result": "7th",
-        "won": false,
-        "marketAgreement": false,
-        "shortened": false
-      },
-      {
-        "race": "Leopardstown 16:20 · 18 Oct 2025",
-        "pick": "Yaupon De Replay",
-        "forecast": "11/4",
-        "sp": "6/1",
-        "result": "5th",
-        "won": false,
-        "marketAgreement": false,
-        "shortened": false
-      },
-      {
-        "race": "Leopardstown 17:20 · 18 Oct 2025",
-        "pick": "Hamiyan",
-        "forecast": "6/1",
-        "sp": "9/2",
-        "result": "4th",
-        "won": false,
-        "marketAgreement": false,
-        "shortened": true
-      }
-    ],
-    "metrics": {
-      "blindModel": {
-        "bets": 12,
-        "wins": 5,
-        "strikeRate": 41.7,
-        "roi": 44.3
-      },
-      "favouriteBaseline": {
-        "bets": 12,
-        "wins": 7,
-        "strikeRate": 58.3,
-        "roi": 93.3
-      },
-      "modelMarketAgreement": {
-        "bets": 5,
-        "wins": 4,
-        "strikeRate": 80,
-        "roi": 156.4
-      },
-      "hardEvidencePlusShortening": {
-        "bets": 9,
-        "wins": 5,
-        "strikeRate": 55.6,
-        "roi": 92.5
-      }
+    {
+      "horse": "King Gris",
+      "course": "Tramore",
+      "time": "17:05",
+      "odds": "20/1",
+      "ewStars": 4,
+      "placeView": "STRONG E/W CASE",
+      "terms": "13-runner beginners chase; check bookmaker place terms",
+      "tags": [
+        "ELLIOTT / KENNEDY",
+        "OR 90",
+        "TS 82",
+        "RPR 89",
+        "DISTANCE WINNER"
+      ],
+      "reason": "A Gordon Elliott runner ridden by Jack Kennedy at 20/1 deserves more respect than the bare recent form suggests. He has an OR90/TS82/RPR89 base and a prior distance win, giving him established ability in a race containing several runners with very limited chase evidence.",
+      "risk": "Recent form 5-5-7-0 is weak and he has to prove the switch to fences unlocks improvement.",
+      "source": "Racing Post / Sporting Life"
+    },
+    {
+      "horse": "Pampar Lady",
+      "course": "Thurles",
+      "time": "17:20",
+      "odds": "20/1 forecast",
+      "ewStars": 4,
+      "placeView": "E/W TARGET",
+      "terms": "Large-field handicap; take only if 20/1+ remains available",
+      "tags": [
+        "HCAP DEBUT",
+        "RPR 75 VS OR 69",
+        "3LB CLAIM",
+        "GAVIN CROMWELL"
+      ],
+      "reason": "First handicap, a 3lb claim and RPR75 against OR69 create an unexposed handicap profile at a big price. Gavin Cromwell is exactly the type of trainer whose placement deserves attention when a horse changes race conditions or code.",
+      "risk": "TS31 is weak and her recent 2-8-0 form leaves plenty to prove at two miles.",
+      "source": "Racing Post / Sporting Life"
+    },
+    {
+      "horse": "Tatum",
+      "course": "Thurles",
+      "time": "17:20",
+      "odds": "25/1 forecast",
+      "ewStars": 3,
+      "placeView": "SPECULATIVE E/W",
+      "terms": "Large-field handicap; take only at 20/1+",
+      "tags": [
+        "RECENT WIN IN FORM",
+        "RPR 74 VS OR 68",
+        "BEN COEN",
+        "NOEL MEADE"
+      ],
+      "reason": "She has a recent win in the six-run form sequence and an RPR74 versus OR68. Noel Meade and Ben Coen are a credible combination, and the price is large enough for the earlier winning form to matter if the step up in trip revives her.",
+      "risk": "Her last two runs were poor and she is not an obvious proven two-mile Flat stayer.",
+      "source": "Racing Post / Sporting Life"
+    },
+    {
+      "horse": "Time To Spare",
+      "course": "Bath",
+      "time": "15:50",
+      "odds": "25/1",
+      "ewStars": 3,
+      "placeView": "PEDIGREE E/W ANGLE",
+      "terms": "14-runner novice; check live each-way terms",
+      "tags": [
+        "WITHOUT PAROLE",
+        "DAM 1M WINNER",
+        "HALF-BROTHER 6F–7.4F WINNER",
+        "DRAW 2"
+      ],
+      "reason": "A debutant with a pedigree that makes today's mile plausible: by Without Parole, out of a dam who won around a mile, and a half-brother won from 6f to roughly 7½f. Draw 2 is useful and the 25/1 price allows for the obvious lack of race experience.",
+      "risk": "Jonathan Portman's yard was 0-16 with 2yo newcomers this season in the available pre-race data, so this is pedigree-led rather than trainer-debut confidence.",
+      "source": "Timeform / Saturday Racing / Sporting Life"
+    },
+    {
+      "horse": "Just Another Eagle",
+      "course": "Thurles",
+      "time": "15:36",
+      "odds": "20/1+ target",
+      "ewStars": 3,
+      "placeView": "RATINGS E/W ANGLE",
+      "terms": "Only qualifies if 20/1+ is available",
+      "tags": [
+        "OR 44",
+        "TS 45",
+        "RPR 61",
+        "7LB CLAIM",
+        "RPR +17 VS OR"
+      ],
+      "reason": "The headline attraction is the ratings gap: RPR61 against OR44, with a further 7lb claim. That is the sort of well-treated-looking profile worth monitoring at outsider prices when a horse returns from a break.",
+      "risk": "Recent form is poor and the 110-day absence means this is much more speculative than Eagle Storm or King Gris.",
+      "source": "Racing Post"
     }
-  },
-  "confidenceMethodV3": {
-    "status": "PROVISIONAL — requires larger walk-forward backtest",
-    "principle": "Use the market as the prior probability, then move confidence only when independent pre-race evidence supports or contradicts it.",
-    "accuracyLane": [
-      "Start from overround-adjusted market implied probability close to the off.",
-      "Require V2 evidence score >=84 for PRIME consideration.",
-      "Require >=90% critical-check coverage.",
-      "Require at least five independent positive evidence groups.",
-      "Require model selection to be market rank 1 or 2 for PRIME.",
-      "No meaningful late drift; steady or shortening market is preferred.",
-      "Block PRIME if current trainer form, trainer course/race-type record, targeting, suitability or data quality is unresolved."
-    ],
-    "valueLane": [
-      "Value is separate from win confidence.",
-      "Estimate model win probability from market prior plus evidence adjustments.",
-      "Only flag VALUE when model probability exceeds market implied probability by a meaningful margin after bookmaker overround.",
-      "Require score >=70 and no severe red flag.",
-      "At bigger prices, require stronger evidence or a larger probability edge; do not raise win stars simply because odds are large.",
-      "Track closing-line value: whether our advised price beats SP/BSP over time."
-    ],
-    "calibrationPlan": [
-      "Backtest at least 500 races before treating star bands as calibrated.",
-      "Use walk-forward testing: train/tune on older races, test only on later unseen races.",
-      "Separate Flat, AW, jumps, 2yo/newcomer and handicap models.",
-      "Measure strike rate, ROI, A/E, Brier score, log loss and calibration by confidence band.",
-      "Record every no-bet as well as every selection to prevent hindsight filtering.",
-      "Freeze all features at a timestamp before the off to prevent data leakage."
-    ]
-  },
-  "systemV4": {
-    "version": "4.2",
-    "status": "ACTIVE CONTEXT MODEL — LIVE",
-    "backtest": {
-      "races": 10000,
-      "runners": 67898,
-      "trainRaces": 7184,
-      "unseenTestRaces": 2795,
-      "validMarketTestRaces": 1629,
-      "chronologyViolations": 0,
-      "favourite": {
-        "strikeRate": 36.2,
-        "roi": -8.7
-      },
-      "fusion": {
-        "strikeRate": 37.4,
-        "roi": -3.8,
-        "brier": 0.09123,
-        "logLoss": 0.30763
-      },
-      "prime50": {
-        "races": 212,
-        "strikeRate": 68.4,
-        "roi": 4.2
-      },
-      "prime55": {
-        "races": 157,
-        "strikeRate": 72,
-        "roi": 6
-      },
-      "note": "ROI uses only complete SP books with 101%-140% overround. Incomplete archived betting books are excluded."
-    },
-    "philosophy": [
-      "Estimate WIN CHANCE first; assess PRICE separately.",
-      "Use the current market as a prior, not as the answer.",
-      "Only use information knowable before the race.",
-      "Targeting means observable placement evidence; never infer deliberate non-trying.",
-      "A falling handicap mark is not automatically positive. Large falls require proof that ability remains.",
-      "Missing critical data reduces confidence and can block PRIME."
-    ],
-    "probabilityEngine": {
-      "description": "Market prior + independent pre-race evidence, calibrated by race type.",
-      "evidenceGroups": [
-        {
-          "name": "Retained ability",
-          "weight": "Very high",
-          "checks": [
-            "Previous RPR relative to today's OR",
-            "Best recent RPR/TS",
-            "Recent finishing effort and comments",
-            "Performance trend",
-            "Strength of form line"
-          ],
-          "research": "Previous RPR 5lb+ above current OR: A/E 1.08 on clean market sample."
-        },
-        {
-          "name": "Current form",
-          "weight": "High",
-          "checks": [
-            "Last 3-5 runs",
-            "Days since run",
-            "Improving/declining profile",
-            "Hidden trouble",
-            "Running to form rather than bare finishing position"
-          ]
-        },
-        {
-          "name": "Race suitability",
-          "weight": "High",
-          "checks": [
-            "Trip",
-            "Going",
-            "Surface",
-            "Course configuration",
-            "Field size",
-            "Class",
-            "Pace",
-            "Draw"
-          ]
-        },
-        {
-          "name": "Trainer placement",
-          "weight": "High",
-          "checks": [
-            "Trainer course strike rate",
-            "Trainer record in race type/class",
-            "Alternative entries",
-            "Return to suitable conditions",
-            "Race value",
-            "Turnaround/layoff pattern"
-          ],
-          "research": "Trainer course >=15%: A/E 1.05. Trainer 14-day form alone did not add value."
-        },
-        {
-          "name": "Owner/connection placement",
-          "weight": "Medium-high",
-          "checks": [
-            "Owner course record",
-            "Owner-trainer record",
-            "Owner race-type record",
-            "Multiple runners",
-            "Stable rider allocation"
-          ],
-          "research": "Owner course >=15%: A/E 1.07; owner-trainer >=15%: A/E 1.04."
-        },
-        {
-          "name": "Jockey signal",
-          "weight": "Medium-high",
-          "checks": [
-            "Positive rider upgrade",
-            "Trainer-jockey record",
-            "Horse-jockey record",
-            "Claim",
-            "Unusual/meaningful booking"
-          ],
-          "research": "Target-race return + jockey upgrade: A/E 1.22 in 92 clean-market runners; promising but smaller sample."
-        },
-        {
-          "name": "Handicap position",
-          "weight": "Conditional",
-          "checks": [
-            "Current OR vs last winning OR",
-            "OR vs retained performance",
-            "Band eligibility",
-            "Weight/claim",
-            "Class movement"
-          ],
-          "research": "Being 5lb+ below an old winning mark underperformed market expectation. A mark drop only counts positively when retained ability is independently proven."
-        },
-        {
-          "name": "Target-race pattern",
-          "weight": "Conditional",
-          "checks": [
-            "Same course/time of year",
-            "Return to winning conditions",
-            "Same meeting/race pattern",
-            "Course specialist evidence"
-          ],
-          "research": "Same course/time-of-year prior win: A/E 1.03; useful as supporting evidence, not standalone proof."
-        },
-        {
-          "name": "Market confirmation",
-          "weight": "Very high for confidence",
-          "checks": [
-            "Overround-adjusted implied probability",
-            "Market rank",
-            "Late support/drift",
-            "Consensus",
-            "Liquidity where available"
-          ],
-          "research": "Fusion model at >=50% probability and market top-two: 69.3% winners in 215 unseen clean-market races."
-        },
-        {
-          "name": "Pedigree / unexposed",
-          "weight": "High only when sparse form",
-          "checks": [
-            "Sire progeny trip/ground/surface",
-            "Dam own record",
-            "Sibling/progeny record",
-            "Damsire",
-            "Trainer newcomer profile",
-            "Sales/breeze-up evidence"
-          ],
-          "research": "Used as a prior for newcomers; confidence is capped if family evidence is incomplete."
-        }
-      ]
-    },
-    "grades": {
-      "PRIME": {
-        "rule": "Dynamic V4.2: favourite at >=55% generally; >=50% in maidens/novices with complete context. Context strengthens or weakens the probability rather than acting as arbitrary hard gates.",
-        "observed": "General >=55% favourite: 72.0%; maiden/novice >=50%: 71.4%; trainer/course/class context at >=55%: 78.3%.",
-        "display": "Special gold PRIME card"
-      },
-      "five": {
-        "rule": "45-54.9% fused win probability, with critical data complete.",
-        "observed": "High-confidence non-PRIME band.",
-        "display": "★★★★★"
-      },
-      "four": {
-        "rule": "35-44.9% fused win probability.",
-        "observed": "Strong contender band.",
-        "display": "★★★★☆"
-      },
-      "three": {
-        "rule": "27.5-34.9% fused win probability.",
-        "observed": "Credible contender band.",
-        "display": "★★★☆☆"
-      },
-      "two": {
-        "rule": "20-27.4% fused win probability.",
-        "observed": "Possible winner but material uncertainty.",
-        "display": "★★☆☆☆"
-      },
-      "one": {
-        "rule": "Below 20%, incomplete critical evidence, or contradictory profile.",
-        "observed": "Watch / no-bet territory.",
-        "display": "★☆☆☆☆"
-      }
-    },
-    "hardBlocks": [
-      "Unresolved non-runner, jockey, going or surface status.",
-      "Critical evidence coverage below the race-type minimum.",
-      "Major trip/ground/surface concern that is not offset by credible evidence.",
-      "Strong recent regression with no current evidence of retained ability.",
-      "Large fall in handicap mark used as the main positive without recent performance evidence.",
-      "For newcomers/lightly raced horses: material pedigree/experience uncertainty not reflected in probability.",
-      "Meaningful late market opposition that materially contradicts the model without an explanation."
-    ],
-    "pricePolicy": {
-      "status": "CAUTIOUS",
-      "rule": "Do not label a horse VALUE solely because model probability exceeds market implied probability.",
-      "reason": "The simple value overlay lost 20.9% ROI on the clean unseen market sample, so it is not validated.",
-      "currentUse": "Show fair-price estimate and PRICE OK / TOO SHORT / PRICE WATCH only. Do not increase win stars because a horse is a big price."
-    },
-    "accuracyMode": {
-      "objective": "Keep strong accuracy while allowing context-supported selections through.",
-      "primeRequirements": {
-        "generalProbability": 55,
-        "maidenNoviceProbability": 50,
-        "nurseryHurdleGuide": 60,
-        "requiredMarketRank": 1,
-        "minCriticalCoveragePct": 85,
-        "lateMarketConfirmationRequired": true,
-        "noMajorRedFlags": true
-      },
-      "raceTypeRules": {
-        "novice": "PRIME can begin at 50% when favourite and pedigree/unexposed/context checks are complete.",
-        "maiden": "PRIME can begin at 50% when favourite and contextual evidence is sufficiently complete.",
-        "handicap": "Normally 55%+. Emphasise retained ability, precise handicap position, class/value placement, trainer course/class record and pace.",
-        "nursery": "Higher uncertainty. Normally seek ~60% or unusually strong agreement across pedigree, trainer and market evidence.",
-        "hurdle": "Use stronger contextual requirements; stable form, conditions, jumping and class/grade placement matter.",
-        "chase": "Normal 55% route with jumping reliability and recent completion evidence.",
-        "other": "General 55% route, adjusted by class/grade/value and connection context."
-      }
-    },
-    "latestAccuracyAudit": {
-      "p50Favourite": {
-        "races": 215,
-        "wins": 149,
-        "strikeRate": 69.3
-      },
-      "p55Favourite": {
-        "races": 158,
-        "wins": 113,
-        "strikeRate": 71.5
-      },
-      "p60Favourite": {
-        "races": 91,
-        "wins": 64,
-        "strikeRate": 70.3
-      },
-      "p50FavouriteCourseConnection": {
-        "races": 149,
-        "wins": 104,
-        "strikeRate": 69.8
-      },
-      "p55FavouriteTwoAimingGroups": {
-        "races": 71,
-        "wins": 48,
-        "strikeRate": 67.6
-      },
-      "p50FavouriteMaidenNovice": {
-        "races": 102,
-        "wins": 74,
-        "strikeRate": 72.5
-      },
-      "conclusion": "Do not make aiming-group count or retained-ability a hard gate. Use them to move probability. Selectivity is driven primarily by calibrated probability, market rank and race type."
-    },
-    "contextModel": {
-      "principle": "Probability first, context second. Context adjusts confidence; only historically validated factors alter thresholds.",
-      "primeRoutes": [
-        {
-          "name": "General",
-          "rule": "Favourite with model probability >=55% and core evidence complete.",
-          "historical": "113/157 = 72.0%."
-        },
-        {
-          "name": "Maiden/Novice",
-          "rule": "Favourite with probability >=50% when unexposed/pedigree/context checks are complete.",
-          "historical": "75/105 = 71.4%."
-        },
-        {
-          "name": "Trainer-Course-Class boost",
-          "rule": "At >=55%, strong trainer record at this course in the same class materially strengthens confidence.",
-          "historical": "47/60 = 78.3%."
-        },
-        {
-          "name": "Trainer-Course-Grade boost",
-          "rule": "At >=55%, strong trainer record at this course in the same grade strengthens confidence.",
-          "historical": "74/100 = 74.0%."
-        }
-      ],
-      "factors": [
-        "Current ability and recent RPR/TS/form trend",
-        "Class and grade of today's race versus previous races",
-        "Race value and change in prize-value band",
-        "Trainer record at the course",
-        "Trainer course record split by handicap/non-handicap",
-        "Trainer course record in the same class and grade",
-        "Recent stable run-to-form versus horses' prior performance levels",
-        "Jockey current run-to-form and trainer-jockey record",
-        "Horse-jockey partnership including prior RPR uplift",
-        "Horse running style and projected pace setup",
-        "Going, surface, distance and course configuration",
-        "Draw only in course/distance/going/field-size context",
-        "Current OR versus retained ability and last winning mark",
-        "Target-race / same-meeting / seasonal placement patterns",
-        "Owner-course and owner-trainer placement patterns",
-        "Market rank and current probability",
-        "Pedigree for newcomers and lightly raced horses"
-      ],
-      "strongestSignals": [
-        {
-          "signal": "2-3lb below last winning OR",
-          "ae": 1.26,
-          "sample": 186
-        },
-        {
-          "signal": "Target-race return + jockey upgrade",
-          "ae": 1.22,
-          "sample": 92
-        },
-        {
-          "signal": "Horse-jockey RPR uplift +3lb",
-          "ae": 1.12,
-          "sample": 1256
-        },
-        {
-          "signal": "Previous RPR 5lb+ above current OR",
-          "ae": 1.08,
-          "sample": 1851
-        },
-        {
-          "signal": "Owner course strike rate >=15%",
-          "ae": 1.07,
-          "sample": 1937
-        },
-        {
-          "signal": "Trainer course/grade strike rate >=15%",
-          "ae": 1.06,
-          "sample": 2992
-        },
-        {
-          "signal": "Trainer course/class strike rate >=15%",
-          "ae": 1.04,
-          "sample": 1991
-        },
-        {
-          "signal": "Race-value drop >=25%",
-          "ae": 1.04,
-          "sample": 1318
-        },
-        {
-          "signal": "Trainer recent RPR run-to-form +5lb",
-          "ae": 1.04,
-          "sample": 1167
-        },
-        {
-          "signal": "Positive projected pace fit",
-          "ae": 1.02,
-          "sample": 2735
-        }
-      ],
-      "downweighted": [
-        "Raw 14-day trainer win strike rate alone",
-        "Generic same-class win flag",
-        "Generic going place record",
-        "Broad draw bias without exact race context",
-        "Headgear change alone",
-        "First/second handicap start alone",
-        "Large fall below an old winning mark without current ability evidence",
-        "Fixed model-lead/dominance hard gate",
-        "Fixed aiming-signal-count hard gate"
-      ],
-      "liveRules": {
-        "probabilityFirst": "Market-implied probability is the starting prior; contextual evidence moves it up or down.",
-        "classGrade": "Class and formal grade are assessed independently of raw form. Trainer course/class and course/grade records receive extra weight where sample sizes are credible.",
-        "raceValue": "Prize/value band and material value changes are checked independently of class.",
-        "stableForm": "Use recent performance/run-to-form against the yard's normal standard, not raw 14-day win percentage alone.",
-        "partnership": "Horse-jockey history is measured by wins and performance uplift.",
-        "pace": "Infer preferred running style from prior races and compare it with projected pace pressure today.",
-        "draw": "Only use draw in exact course/distance/going/field-size context.",
-        "targeting": "Same-race, same-meeting, seasonal return, course specialist, mark sweet spot and jockey changes are supporting evidence.",
-        "market": "Late market rank and support remain powerful information, but price does not create a strong selection by itself."
-      },
-      "latestInteractionAudit": [
-        {
-          "factor": "Trainer × course × class ≥15%",
-          "condition": "Model ≥55% + favourite",
-          "races": 60,
-          "wins": 47,
-          "strikeRate": 78.3
-        },
-        {
-          "factor": "Horse-jockey win rate ≥20%",
-          "condition": "Model ≥55% + favourite",
-          "races": 36,
-          "wins": 27,
-          "strikeRate": 75
-        },
-        {
-          "factor": "Trainer × course × grade ≥15%",
-          "condition": "Model ≥55% + favourite",
-          "races": 100,
-          "wins": 74,
-          "strikeRate": 74
-        },
-        {
-          "factor": "Trainer recent RTF +3lb",
-          "condition": "Model ≥55% + favourite",
-          "races": 55,
-          "wins": 40,
-          "strikeRate": 72.7
-        },
-        {
-          "factor": "Race-value drop ≥25%",
-          "condition": "Model ≥55% + favourite",
-          "races": 43,
-          "wins": 31,
-          "strikeRate": 72.1
-        },
-        {
-          "factor": "General favourite",
-          "condition": "Model ≥55%",
-          "races": 157,
-          "wins": 113,
-          "strikeRate": 72
-        }
-      ]
-    }
-  }
+  ]
 }
