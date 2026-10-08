@@ -29,7 +29,9 @@ jobs:
           node-version: '22'
 
       - name: Verify profit tracker and settlement rules
-        run: node tests/racing-tracker.test.mjs
+        run: |
+          node tests/racing-tracker.test.mjs
+          node tests/racing-web-search.test.mjs
 
       - name: Refresh live odds and results
         run: node scripts/update-racing-live.mjs
