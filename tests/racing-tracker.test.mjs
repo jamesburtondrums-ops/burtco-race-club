@@ -53,7 +53,7 @@ app.render();
 assert.match(appElement.innerHTML,/Results history/,'Latest results history accessible');
 assert.doesNotMatch(appElement.innerHTML,/Blissful Bonita|Lady Of Clover/,'Removed earlier selections absent');
 
-assert.match(appElement.innerHTML,/sportinglife.com\\/racing\\/fast-results/,'Fast results reference is present');
+assert.ok(appElement.innerHTML.includes('sportinglife.com/racing/fast-results'),'Fast results reference is present');
 assert.match(appElement.innerHTML,/£984\.24/,'Bank shown correctly');
 assert.match(appElement.innerHTML,/-£15\.76/,'Settled P/L shown correctly');
 console.log('PASS: profit, bankroll, all strike rates, each-way terms, refunds, DNF, dashboard and refresh control');
