@@ -137,7 +137,7 @@ function tracker(){
  '<div><span>Settled profit / loss</span><strong class="'+(stats.profit>=0?'tracker-positive':'tracker-negative')+'">'+signMoney(stats.profit)+'</strong><small>'+stats.settled+' settled · '+(roi===null?'—':rate(roi))+' return on settled stakes</small></div>'+
  '<div><span>Win strike rate</span><strong>'+rate(winRate)+'</strong><small>'+stats.winCount+' winners from '+stats.known+' known outcomes</small></div>'+
  '<div><span>Each-way place rate</span><strong>'+rate(ewRate)+'</strong><small>'+stats.ewPlaced+' placed from '+stats.ewKnown+' known E/W outcomes</small></div>'+
- '</div><div class="tracker-bottom"><div><span>Running bank after settled bets:</span> <b>'+money(settledBank)+'</b></div><div><span>Outstanding / unpriced stakes:</span> <b>'+money(stats.openStake)+'</b></div><div><span>Today's strike rate:</span> <b>'+today+'</b></div></div>'+
+ '</div><div class="tracker-bottom"><div><span>Running bank after settled bets:</span> <b>'+money(settledBank)+'</b></div><div><span>Outstanding / unpriced stakes:</span> <b>'+money(stats.openStake)+'</b></div><div><span>Today’s strike rate:</span> <b>'+today+'</b></div></div>'+
  '<p class="tracker-footnote">Total stakes '+money(stats.totalStake)+' · Credited returns '+money(stats.totalReturn)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Paper trading only.</p>'+
  '</section>';
 }
