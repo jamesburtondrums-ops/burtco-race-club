@@ -100,13 +100,19 @@ function selectionRow(x,type){
  const risk=x.risk||"—";
  const special=type==="mid"?'<div class="ew-view"><strong>'+val(x.view)+'</strong><small>'+val(x.terms)+'</small></div>':type==="long"?'<div class="ew-view"><strong>'+val(x.placeView)+'</strong><small>'+val(x.terms)+'</small></div>':'';
  const typeStars=type==="mid"&&x.midStars?stars(x.midStars):type==="long"&&x.ewStars?stars(x.ewStars):'';
+ const bet=(state.ledger?.entries||[]).find(e=>e.id===[state.data.snapshotDate,x.course,x.time,x.horse,type==="main"?"win":"each-way"].join("|").toLowerCase());
+ const settled=bet?settlement(bet):null;
+ const stake=bet?Number(bet.winStake||0)+Number(bet.placeStake||0):0;
+ const profit=settled&& !["open","unpriced"].includes(settled.status)?settled.returnAmount-stake:null;
+ const betLine=bet?'<div class="bet-line"><b>Paper bet: '+(bet.betType==="win"?"£10 WIN":"£5 E/W (£10 total)")+'</b><span>Recorded price: '+val(bet.selectionOdds)+'</span><span>'+(profit!==null?'Return '+money(settled.returnAmount)+' · P/L '+(profit>=0?'+':'')+money(profit):'Settlement pending / terms unverified')+'</span></div>':'';
+
  return '<details class="selection-row" data-key="'+k+'"><summary class="selection-summary">'+
    '<div class="selection-time">'+val(x.time)+'</div>'+
    '<div class="selection-main"><div class="selection-name-line"><strong>'+val(x.horse)+'</strong>'+summaryBadges(x,type)+'</div><span>'+val(x.course)+'</span></div>'+
    '<div class="selection-odds"><span>Odds</span><strong>'+val(x.odds)+'</strong></div>'+
    '<div class="selection-result">'+resultBadge(x)+'</div>'+
    '<div class="selection-chevron">⌄</div>'+
- '</summary><div class="selection-details">'+typeStars+special+commonDetails(x)+
+ '</summary><div class="selection-details">'+betLine+typeStars+special+commonDetails(x)+
    '<div class="detail-copy"><strong>'+(type==="long"?'Why it can outrun the price':type==="mid"?'Why it can win / place':'Decision')+'</strong><p>'+intro+'</p></div>'+
    '<div class="detail-risk"><strong>Risk</strong><p>'+risk+'</p></div>'+
    '<div class="source-line">Source: '+val(x.source)+'</div>'+
