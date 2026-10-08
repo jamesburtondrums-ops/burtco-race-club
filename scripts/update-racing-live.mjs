@@ -61,21 +61,18 @@ function bestOdds(runner) {
 }
 
 function resultForRunner(runner) {
-  const rawPosition = runner?.position ?? runner?.pos ?? runner?.finish_position ?? runner?.placing ?? null;
-  const casualty = runner?.casualty || runner?.outcome || runner?.status;
+  const raw = runner?.position ?? runner?.pos ?? runner?.finish_position ?? runner?.placing ?? null;
   const sp = runner?.sp || runner?.starting_price || runner?.startingPrice || null;
-  let position = rawPosition;
-  if (typeof position === 'string' && /^\d+$/.test(position)) position = Number(position);
-  if (position === 0) position = null;
-  if (position !== null && position !== undefined && position !== '') {
-    return { position, status: 'Weighed in', sp, source: 'The Racing API', updatedAt: now };
+  const text = String(raw ?? '').trim();
+  if (/^\d+(st|nd|rd|th)?$/i.test(text)) {
+    const position = Number.parseInt(text, 10);
+    if (position > 0) return { position, status: 'Weighed in', sp, source: 'The Racing API', updatedAt: now };
   }
-  if (casualty) {
-    return { status: String(casualty), sp, source: 'The Racing API', updatedAt: now };
-  }
+  const status = String(runner?.status || runner?.outcome || runner?.casualty || text).trim();
+  if (/^(NR|PU|F|UR|BD|RO|RR|DSQ|DNF|REF|VOID|NON.RUNNER|WITHDRAWN)$/i.test(status))
+    return { status: status.toUpperCase(), sp, source: 'The Racing API', updatedAt: now };
   return null;
 }
-
 async function fetchJson(url, headers = {}) {
   const res = await fetch(url, { headers: { accept: 'application/json', ...headers } });
   if (!res.ok) throw new Error(`${url} -> ${res.status} ${res.statusText}`);
@@ -108,7 +105,7 @@ if (customUrl) {
       try { return { payload: await fetchJson(url, headers), endpoint: url }; }
       catch (err) {
         last = err;
-        if (!/-> (401|403)\\b/.test(String(err))) throw err;
+        if (!/-> (401|403)\b/.test(String(err))) throw err;
         console.log('Feed tier lacks access to '+url.split('?')[0]+'; trying next tier');
       }
     }
@@ -176,6 +173,7 @@ for (const { selection } of selections) {
 
   const resultRace = results.find(race =>
     sameCourse(courseOf(race), selection.course) &&
+    (!race.date || race.date === data.snapshotDate) &&
     runnersOf(race).some(runner => sameHorse(horseNameOf(runner), selection.horse))
   );
   if (resultRace) {
