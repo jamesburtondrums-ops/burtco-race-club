@@ -132,7 +132,7 @@ function tracker(){
  const today=stats.todayKnown?stats.todayWins+'/'+stats.todayKnown+' ('+(stats.todayWins/stats.todayKnown*100).toFixed(1)+'%)':'Awaiting finished races';
  const rate=v=>v===null?'—':v.toFixed(1)+'%';
  return '<section class="tracker-panel" aria-label="Live paper betting profit and strike rate">'+
- '<div class="tracker-heading"><div><strong>Profit & strike-rate tracker</strong><span class="tracker-kicker">£1,000 starting bank · £10 win or £5 each-way · '+entries.length+' selections recorded</span></div><span class="tracker-live-label">'+(state.live?.connected?'Live result checks active':'Last recorded results · feed not connected')+'</span></div>'+
+ '<div class="tracker-heading"><div><strong>Profit & strike-rate tracker</strong><span class="tracker-kicker">£1,000 starting bank · £10 win or £5 each-way · '+entries.length+' selections recorded</span></div><span class="tracker-live-label">'+(state.live?.connected?'Live result checks active':'Web-verified results · automatic updates not active')+'</span></div>'+
  '<div class="tracker-stats">'+
  '<div><span>Available bank</span><strong>'+money(bank)+'</strong><small>After all stakes and credited returns</small></div>'+
  '<div><span>Settled profit / loss</span><strong class="'+(stats.profit>=0?'tracker-positive':'tracker-negative')+'">'+signMoney(stats.profit)+'</strong><small>'+stats.settled+' settled · '+(roi===null?'—':rate(roi))+' return on settled stakes</small></div>'+
@@ -145,8 +145,10 @@ function tracker(){
 function liveStatus(){
  const l=state.live,connected=l?.connected===true;
  const checked=connected&&l.checkedAt?new Date(l.checkedAt).toLocaleTimeString('en-GB',{timeZone:'Europe/London',hour:'2-digit',minute:'2-digit',second:'2-digit'}):null;
+ const webCheck=state.data?.resultVerification?.checkedAt;
+ const webStatus=webCheck?new Date(webCheck).toLocaleString('en-GB',{timeZone:'Europe/London',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}):'not checked';
  const note=connected?'Results feed connected · Last check '+checked+' · New finishing positions update the tracker automatically':
-   'Automatic results offline · '+(l?.reason||'API connection not confirmed')+' · Historical confirmed results remain in your tracker';
+   'Web-verified results · Last checked '+webStatus+' · Further updates require manual verification or a licensed data connection';
  return '<div class="live-connection '+(connected?'live-connected':'live-disconnected')+'" role="status">'+note+'</div>';
 }
 
@@ -191,7 +193,7 @@ function selectionRow(x,type){
  '</summary><div class="selection-details">'+betLine+typeStars+special+commonDetails(x)+
    '<div class="detail-copy"><strong>'+(type==="long"?'Why it can outrun the price':type==="mid"?'Why it can win / place':'Decision')+'</strong><p>'+intro+'</p></div>'+
    '<div class="detail-risk"><strong>Risk</strong><p>'+risk+'</p></div>'+
-   '<div class="source-line">Source: '+val(x.source)+'</div>'+
+   '<div class="source-line">Source: '+val(x.source)+(x.result?.sourceUrl?' · <a target="_blank" rel="noopener noreferrer" href="'+x.result.sourceUrl+'">Verify result ↗</a>':'')+'</div>'+
  '</div></details>';
 }
 function listBlock(items,type,emptyText){const sorted=chronological(items);return sorted.length?'<div class="selection-list">'+sorted.map(x=>selectionRow(x,type)).join("")+'</div>':'<div class="panel"><p class="meta">'+emptyText+'</p></div>'}
@@ -205,7 +207,7 @@ function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section
 function sources(){return '<div class="section-head"><div><h3>Sources</h3><p>Current research and cross-check sources.</p></div></div><div class="source-grid">'+(state.data.sources||[]).map(s=>'<div class="source-card"><h4>'+s.name+'</h4><p><strong>'+s.status+'</strong><br>'+s.role+'</p></div>').join("")+'</div>'}
 function rememberOpen(){state.openKeys=new Set([...document.querySelectorAll('.selection-row[open]')].map(x=>x.dataset.key))}
 function restoreOpen(){(state.openKeys||new Set()).forEach(k=>{const el=[...document.querySelectorAll('.selection-row')].find(x=>x.dataset.key===k);if(el)el.open=true})}
-function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+liveStatus()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Live racing feed has not updated this dataset. Prices may be stale until a licensed feed is connected and its scheduled refresh succeeds. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
+function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div></div></header><main class="main">'+tracker()+liveStatus()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
 function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()})}
 async function load(initial=false){
  try{
