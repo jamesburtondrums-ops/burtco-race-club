@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09T07:46:49.956Z",
+  "days": [
+    {
+      "date": "2026-10-08",
+      "selectionCount": 23,
+      "winPicks": 13,
+      "ewPicks": 10,
+      "longshots": 2,
+      "resultCount": 22,
+      "winners": 6,
+      "winStrikeRate": 27.27,
+      "eachWayRunners": 8,
+      "eachWayPlaced": 3,
+      "ewPlaceRate": 37.5,
+      "settled": 23,
+      "voided": 1,
+      "pending": 0,
+      "stakes": 230,
+      "settledStakes": 230,
+      "returns": 214.24,
+      "settledProfit": -15.76,
+      "availableAfterStakes": 984.24,
+      "unresolvedStakes": 0,
+      "comboTickets": 0,
+      "comboStakes": 0,
+      "comboReturns": 0,
+      "byCategory": {
+        "win": {
+          "bets": 13,
+          "settled": 13,
+          "profit": -27.01
+        },
+        "midshot": {
+          "bets": 8,
+          "settled": 8,
+          "profit": 21.25
+        },
+        "longshot": {
+          "bets": 2,
+          "settled": 2,
+          "profit": -10
+        }
+      },
+      "cumulative": {
+        "settledProfit": -15.76,
+        "availableBank": 984.24,
+        "winStrikeRate": 27.27,
+        "ewPlaceRate": 37.5,
+        "winners": 6,
+        "knownResults": 22,
+        "totalStakes": 230,
+        "returns": 214.24,
+        "pendingStakes": 0
+      },
+      "recordedAt": "2026-10-09T07:46:49.956Z",
+      "revision": 1
+    },
+    {
+      "date": "2026-10-09",
+      "selectionCount": 10,
+      "winPicks": 5,
+      "ewPicks": 5,
+      "longshots": 1,
+      "resultCount": 0,
+      "winners": 0,
+      "winStrikeRate": null,
+      "eachWayRunners": 0,
+      "eachWayPlaced": 0,
+      "ewPlaceRate": null,
+      "settled": 0,
+      "voided": 0,
+      "pending": 11,
+      "stakes": 130,
+      "settledStakes": 0,
+      "returns": 0,
+      "settledProfit": 0,
+      "availableAfterStakes": 854.24,
+      "unresolvedStakes": 130,
+      "comboTickets": 1,
+      "comboStakes": 30,
+      "comboReturns": 0,
+      "byCategory": {
+        "win": {
+          "bets": 5,
+          "settled": 0,
+          "profit": 0
+        },
+        "midshot": {
+          "bets": 4,
+          "settled": 0,
+          "profit": 0
+        },
+        "longshot": {
+          "bets": 1,
+          "settled": 0,
+          "profit": 0
+        }
+      },
+      "cumulative": {
+        "settledProfit": -15.76,
+        "availableBank": 854.24,
+        "winStrikeRate": 27.27,
+        "ewPlaceRate": 37.5,
+        "winners": 6,
+        "knownResults": 22,
+        "totalStakes": 360,
+        "returns": 214.24,
+        "pendingStakes": 130
+      },
+      "recordedAt": "2026-10-09T07:46:49.956Z",
+      "revision": 1
+    }
+  ],
+  "tuningLog": [
+    {
+      "key": "min-odds",
+      "date": "2026-10-09",
+      "title": "Eliminated odds-on selections",
+      "description": "Individual picks must be at least evens (1/1). This is an explicit selection-price rule, not a proven accuracy gain.",
+      "kind": "rule",
+      "recordedAt": "2026-10-09T07:46:49.956Z",
+      "evidenceStatus": "Rule change implemented; improved predictive accuracy not yet demonstrated"
+    },
+    {
+      "key": "midshot-range",
+      "date": "2026-10-09",
+      "title": "Expanded the midshot research band",
+      "description": "Screened 6/1–18/1 runners for recent form, class, pace, ratings and each-way terms rather than selecting on a long price alone.",
+      "kind": "rule",
+      "recordedAt": "2026-10-09T07:46:49.956Z",
+      "evidenceStatus": "Rule change implemented; improved predictive accuracy not yet demonstrated"
+    },
+    {
+      "key": "lucky15-price",
+      "date": "2026-10-09",
+      "title": "Raised the Lucky 15 price floor",
+      "description": "Four distinct-race legs must each be priced strictly above 11/2. Removed shorter legs and excluded reported non-runners.",
+      "kind": "rule",
+      "recordedAt": "2026-10-09T07:46:49.956Z",
+      "evidenceStatus": "Rule change implemented; improved predictive accuracy not yet demonstrated"
+    },
+    {
+      "key": "longshot-cap",
+      "date": "2026-10-09",
+      "title": "Reduced speculative longshots",
+      "description": "Capped the 20/1+ category at one conditional place-oriented runner to concentrate the shortlist.",
+      "kind": "rule",
+      "recordedAt": "2026-10-09T07:46:49.956Z",
+      "evidenceStatus": "Rule change implemented; improved predictive accuracy not yet demonstrated"
+    },
+    {
+      "key": "research-checks",
+      "date": "2026-10-09",
+      "title": "Added a repeatable pre-race checklist",
+      "description": "Checks now document going, race grade/value, OR/TS/RPR, draw/pace, jockey, recent form, market and available trainer records. Not all factors were verifiable for every runner.",
+      "kind": "process",
+      "recordedAt": "2026-10-09T07:46:49.956Z",
+      "evidenceStatus": "Rule change implemented; improved predictive accuracy not yet demonstrated"
+    },
+    {
+      "key": "evidence-gaps",
+      "date": "2026-10-09",
+      "title": "Identified unverified inputs",
+      "description": "Full historical trainer/course splits and all-runner sectionals remain incomplete. Confidence labels are qualitative, not calibrated probabilities.",
+      "kind": "limitation",
+      "recordedAt": "2026-10-09T07:46:49.956Z",
+      "evidenceStatus": "Rule change implemented; improved predictive accuracy not yet demonstrated"
+    }
+  ],
+  "measurementNote": "Auto-generated from recorded paper bets and explicit rule changes. No live feed, predictive self-training, backtest or accuracy improvement is assumed."
+}
