@@ -220,6 +220,7 @@ for (const { group, selection } of selections) {
       horse: selection.horse, betType, winStake: betType === 'win' ? 10 : 5,
       placeStake: betType === 'win' ? 0 : 5,
       selectionOdds: selection.oddsAtSelection || selection.odds,
+      priceBasis: data.snapshotDate >= '2026-10-09' ? 'early' : 'legacy',
       settlementOdds: selection.result?.sp || null,
       ewFraction: betType === 'each-way' ? 0.25 : null,
       runnerCount: Number(selection.runnerCount || selection.runners || selection.fieldSize) || null,
