@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#153b32"><meta name="robots" content="noindex,nofollow">
+<title>Back Office | Racing Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./backoffice.css">
+</head>
+<body>
+<header class="office-header">
+<a class="office-brand" href="./"><span class="office-mark">R</span><span>Racing Intelligence <small>Private operations · back office</small></span></a>
+<a class="office-public" href="./">← Public racecards</a>
+</header>
+<main id="office-root">
+<section class="login-panel" id="login-panel" hidden>
+<div class="eyebrow">SECURE AREA</div><h1>Back Office</h1>
+<p>Enter the access PIN to view the daily performance log and the system change register.</p>
+<form id="pin-form" autocomplete="off">
+<label for="pin">Four-digit PIN</label>
+<input id="pin" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" minlength="4" placeholder="••••" autocomplete="off" required aria-describedby="pin-help">
+<small id="pin-help">PIN verification happens on the server. Five failed attempts trigger a temporary lockout.</small>
+<button type="submit" id="sign-in">Unlock back office</button>
+</form>
+<p class="error-text" id="login-error" role="alert" aria-live="polite"></p>
+</section>
+<section id="office-panel" hidden>
+<div class="office-page-header">
+<div><div class="eyebrow">RESTRICTED PERFORMANCE LOG</div><h1>Racing back office</h1><p>Recorded paper returns, daily strike rates, and changes made to the selection process.</p></div>
+<div class="office-actions"><button type="button" class="subtle-button" id="refresh-office">Refresh report</button><button type="button" class="dark-button" id="sign-out">Lock office</button></div>
+</div>
+<div id="report-loading" class="status" role="status">Loading journal…</div>
+<div id="report-content" hidden></div>
+</section>
+</main>
+<footer>Results are based on recorded paper bets, not real-money returns. Selection-rule changes are not evidence of a self-improving predictive model.</footer>
+<script type="module" src="./backoffice.js"></script>
+</body></html>
