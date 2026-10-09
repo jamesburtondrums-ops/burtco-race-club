@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09T08:00:34.483Z",
+  "updatedAt": "2026-10-09T08:00:34.483Z",
+  "latest": {
+    "recordedTipBets": 33,
+    "recordedTipDates": 2,
+    "recordedBetsWithResult": 23,
+    "confirmedFinishedOutcomes": 22,
+    "uniqueObservedSelectionRaces": 19,
+    "sourcedHistoricalRuns": 0,
+    "sourcedHistoricalRaces": 0,
+    "withRunComments": 0,
+    "withSectionals": 0,
+    "withOfficialRatings": 0,
+    "featureCoveragePercent": null,
+    "quantitativeRetrainReady": false,
+    "minimumHistoricalRaces": 500,
+    "minimumFullFieldRunners": 2000,
+    "status": "Research mode — insufficient verified full-field historic data for retraining",
+    "missing": [
+      "Permissioned machine-readable race comments and full field histories",
+      "Course/trip-specific track geometry and sectional par data",
+      "Pre-race trainer/course and race-type performance snapshots"
+    ],
+    "recordedAt": null
+  },
+  "snapshots": [
+    {
+      "recordedAt": null,
+      "recordedTipBets": 33,
+      "recordedTipDates": 2,
+      "recordedBetsWithResult": 23,
+      "confirmedFinishedOutcomes": 22,
+      "uniqueObservedSelectionRaces": 19,
+      "sourcedHistoricalRuns": 0,
+      "sourcedHistoricalRaces": 0,
+      "withRunComments": 0,
+      "withSectionals": 0,
+      "withOfficialRatings": 0,
+      "featureCoveragePercent": null,
+      "quantitativeRetrainReady": false,
+      "minimumHistoricalRaces": 500,
+      "minimumFullFieldRunners": 2000,
+      "status": "Research mode — insufficient verified full-field historic data for retraining",
+      "missing": [
+        "Permissioned machine-readable race comments and full field histories",
+        "Course/trip-specific track geometry and sectional par data",
+        "Pre-race trainer/course and race-type performance snapshots"
+      ]
+    }
+  ],
+  "factors": [
+    {
+      "id": "running_style",
+      "name": "Early pace and running style",
+      "source": "Race in-running positions / verified running comment"
+    },
+    {
+      "id": "pace_pressure",
+      "name": "Projected race pace competition",
+      "source": "Prior early pace of all declared runners; ≥4 observed styles"
+    },
+    {
+      "id": "track_geometry",
+      "name": "Course-and-distance geometry",
+      "source": "Track profile: turns, first bend, straight, incline, rail variant"
+    },
+    {
+      "id": "draw_pace_interaction",
+      "name": "Draw versus pace and field size",
+      "source": "Same track/trip/surface/going historical cohorts"
+    },
+    {
+      "id": "official_rating",
+      "name": "Official rating versus performance figure",
+      "source": "Historical BHA OR and performance figures at time of run"
+    },
+    {
+      "id": "trouble",
+      "name": "Previous race incidents",
+      "source": "Sourced race comments and steward reports"
+    },
+    {
+      "id": "sectionals",
+      "name": "Efficiency and finishing speed versus par",
+      "source": "Licensed furlong splits or published RaceiQ par metrics"
+    },
+    {
+      "id": "jumping",
+      "name": "Obstacle efficiency (hurdles/chases)",
+      "source": "Confirmed jumping errors/lengths lost / licensed tracker data"
+    },
+    {
+      "id": "going",
+      "name": "Suitability of surface and ground",
+      "source": "Historical performance by course/trip/going"
+    },
+    {
+      "id": "trainer_type",
+      "name": "Trainer course, class and race-type splits",
+      "source": "Historic training statistics available before race"
+    },
+    {
+      "id": "fitness",
+      "name": "Days off and first/second run after absence",
+      "source": "Dated historic race records"
+    },
+    {
+      "id": "market",
+      "name": "Price value and overround",
+      "source": "Timestamped pre-race prices and the full field market"
+    }
+  ],
+  "sources": [
+    {
+      "title": "BHA guide to handicapping",
+      "url": "https://www.britishhorseracing.com/regulation/guide-to-handicapping/",
+      "reliability": "official",
+      "scope": "Current/previous official marks, weights, performance figures"
+    },
+    {
+      "title": "BHA performance figures",
+      "url": "https://www.britishhorseracing.com/regulation/performance-figures/",
+      "reliability": "official",
+      "scope": "Interpretation of tempo, course, going, slow starts and trouble"
+    },
+    {
+      "title": "BHA ratings database",
+      "url": "https://www.britishhorseracing.com/regulation/official-ratings/ratings-database/",
+      "reliability": "official",
+      "scope": "Weekly exportable ratings and changes. Archive each observed to avoid using future revisions."
+    },
+    {
+      "title": "BHA steward reports",
+      "url": "https://www.britishhorseracing.com/racing/stewards-reports/",
+      "reliability": "official",
+      "scope": "Documented incidents: interference, lame, lost shoe, saddle slip"
+    },
+    {
+      "title": "BHA handicapping tools",
+      "url": "https://www.britishhorseracing.com/regulation/handicapping-tools/",
+      "reliability": "official",
+      "scope": "Time/weight adjustments and comparisons of sectionals"
+    },
+    {
+      "title": "Racing TV RaceiQ sectionals",
+      "url": "https://www.racingtv.com/raceiq/sectionals-tab",
+      "reliability": "publisher",
+      "scope": "Furlong splits, position by furlong. Automate only with content permission."
+    },
+    {
+      "title": "Racing TV RaceiQ par",
+      "url": "https://www.racingtv.com/raceiq/par-sectionals",
+      "reliability": "publisher",
+      "scope": "Finishing speed percentage relative to track/trip par. Automate only with content permission."
+    }
+  ],
+  "validation": {
+    "ready": false,
+    "races": 0,
+    "observations": 0,
+    "reason": "Need at least 500 sourced historical races and 2,000 full-field runner observations; not trained or validated"
+  },
+  "methodology": "Every prospective feature must predate the subject race; store dated evidence with a direct source. No blind race comment classification counts as verified improvement. Racewise chronological tests against a market baseline must demonstrate improvement before changing live selection scoring.",
+  "developmentState": "Research-only feature engineering, no automatic model retraining, paper picks unchanged."
+}
