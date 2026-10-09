@@ -385,8 +385,9 @@
       "races": 8,
       "first": "13:15",
       "last": "17:20",
-      "url": "https://www.horseracing.net/newmarket/09-10-26",
-      "going": "Good to firm"
+      "url": "https://www.racingpost.com/racecards/2026-10-09/",
+      "going": "Good (Racing Post morning update)",
+      "status": "Latest venue card (morning going and fields refreshed)"
     },
     {
       "course": "York",
@@ -394,7 +395,8 @@
       "first": "13:30",
       "last": "17:00",
       "url": "https://www.horseracing.net/york/09-10-26",
-      "going": "Good; good to soft in places"
+      "going": "Good; good to soft in places",
+      "status": "Going and 18-runner 16:25 handicap checked"
     },
     {
       "course": "Chepstow",
@@ -410,7 +412,7 @@
       "first": "14:13",
       "last": "17:37",
       "url": "https://www.horseracing.net/downpatrick/09-10-26",
-      "going": "Recheck on race day"
+      "going": "Good"
     },
     {
       "course": "Kempton (AW)",
@@ -418,7 +420,7 @@
       "first": "16:05",
       "last": "20:15",
       "url": "https://www.horseracing.net/kempton/09-10-26",
-      "going": "Polytrack"
+      "going": "Standard to slow (Polytrack)"
     },
     {
       "course": "Dundalk (AW)",
@@ -426,7 +428,7 @@
       "first": "16:50",
       "last": "20:30",
       "url": "https://www.horseracing.net/dundalk/09-10-26",
-      "going": "Polytrack"
+      "going": "Standard"
     }
   ],
   "morningRecheck": {
@@ -461,7 +463,58 @@
       "Timeform odds and analysis",
       "At The Races racecards"
     ],
-    "comments": "Overnight selections were screened against morning declared fields, market changes, published analyst comments and going. Quote exact bookmaker odds and E/W place terms before using real money."
+    "comments": "Overnight selections were screened against morning declared fields, market changes, published analyst comments and going. Quote exact bookmaker odds and E/W place terms before using real money.",
+    "selectedHorses": [
+      {
+        "horse": "Flora Of Bermuda",
+        "course": "Newmarket",
+        "time": "14:25",
+        "odds": "13/8",
+        "priority": "PRIME"
+      },
+      {
+        "horse": "Musical Times",
+        "course": "Newmarket",
+        "time": "14:57",
+        "odds": "1/2",
+        "priority": "PRIME"
+      },
+      {
+        "horse": "Theheatison",
+        "course": "York",
+        "time": "14:05",
+        "odds": "11/1",
+        "priority": "VALUE E/W — BELOW PRIME"
+      },
+      {
+        "horse": "Dancing Destiny",
+        "course": "Newmarket",
+        "time": "14:57",
+        "odds": "20/1–25/1, prices vary",
+        "priority": "SPECULATIVE 20/1+ PLACE CASE"
+      },
+      {
+        "horse": "Nuit d'Eclair",
+        "course": "Newmarket",
+        "time": "13:50",
+        "odds": "5/1",
+        "priority": "NEAR-PRIME E/W"
+      },
+      {
+        "horse": "Archers Bay",
+        "course": "Newmarket",
+        "time": "15:30",
+        "odds": "4/1",
+        "priority": "NEAR-PRIME E/W"
+      },
+      {
+        "horse": "Toca Madera",
+        "course": "York",
+        "time": "16:25",
+        "odds": "3/1",
+        "priority": "NEAR-PRIME E/W"
+      }
+    ]
   },
   "lucky15RemovedLegs": [
     "Flann Sunna",
