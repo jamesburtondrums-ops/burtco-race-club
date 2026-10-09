@@ -76,3 +76,17 @@ footer{max-width:1180px;margin:0 auto 28px;padding:0 20px;color:var(--muted);fon
 .research-disclaimer{font-size:11px;color:var(--muted);line-height:1.65}
 @media(max-width:850px){.research-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.research-factors{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:550px){.research-factors{grid-template-columns:1fr}.research-readiness{padding:12px}}
+
+/* Verified track types; actual draw/pace bias still an evidence-gathering task */
+.research-course-panel{padding-top:12px;border-top:1px solid var(--line);margin:18px 0}
+.research-course-panel h3{font-size:19px;margin:6px 0}
+.research-course-panel>p{font-size:11px;color:var(--muted);line-height:1.6}
+.course-profiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.course-profile{background:#f8faf6;border:1px solid #dbe6d8;border-radius:11px;overflow:hidden}
+.course-profile summary{display:flex;flex-direction:column;gap:4px;cursor:pointer;padding:12px;min-height:60px}
+.course-profile summary strong{font-size:12px;color:var(--green)}
+.course-profile summary small{font-size:10px;color:var(--muted);line-height:1.5}
+.course-profile-body{padding:3px 14px 14px;border-top:1px solid #dbe6d8}
+.course-profile-body p{font-size:11px;color:#42594c;line-height:1.55;margin:8px 0}
+.course-profile-body a{display:inline-block;font-size:10px;font-weight:700;margin:4px 8px 0 0}
+@media(max-width:620px){.course-profiles{grid-template-columns:1fr}}
