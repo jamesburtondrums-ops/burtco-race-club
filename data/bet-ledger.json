@@ -569,16 +569,18 @@
       "winStake": 5,
       "placeStake": 5,
       "selectionOdds": "14/1",
-      "settlementOdds": null,
+      "settlementOdds": "6/1",
       "ewFraction": 0.25,
       "placesPaid": 3,
-      "runnerCount": 16,
+      "runnerCount": 14,
       "terms": "User-defined 1/4 odds house EW terms based on actual final field size",
       "result": {
         "position": 3,
-        "status": "User reported",
-        "source": "User-reported finish; official starting price not independently checked",
-        "updatedAt": "2026-10-09T13:30:27.158Z"
+        "status": "Weighed in",
+        "sp": "6/1",
+        "source": "Sporting Life official weighed-in result",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/york/942533/british-ebf-100000-final-colts-and-geldings",
+        "updatedAt": "2026-10-09T16:00:16.667Z"
       }
     },
     {
@@ -681,16 +683,18 @@
       "winStake": 5,
       "placeStake": 5,
       "selectionOdds": "8/1",
-      "settlementOdds": null,
+      "settlementOdds": "4/1",
       "ewFraction": 0.25,
       "runnerCount": 13,
       "placesPaid": 3,
       "terms": "13-runner 5f Group 3; 3 places at 1/4 house odds; bookmaker terms vary",
       "result": {
         "position": 3,
-        "status": "User reported",
-        "source": "User-reported finishing position; published result and SP not independently verified",
-        "updatedAt": "2026-10-09T13:02:00.850Z"
+        "status": "Weighed in",
+        "sp": "4/1",
+        "source": "Sporting Life official full result",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/newmarket/942519/newmarket-academy-godolphin-beacon-project-cornwallis-stakes-group-3",
+        "updatedAt": "2026-10-09T16:00:16.667Z"
       }
     },
     {
@@ -705,7 +709,7 @@
       "selectionOdds": "12/1",
       "settlementOdds": null,
       "ewFraction": 0.25,
-      "runnerCount": 17,
+      "runnerCount": 15,
       "placesPaid": 3,
       "terms": "17-runner 1m2f Group 3; 3 places at 1/4 house odds; bookmaker terms vary",
       "result": {
@@ -771,48 +775,57 @@
           "priceFloorStrictlyGreaterThan": "11/2",
           "result": {
             "position": 3,
-            "status": "User reported",
-            "source": "User-reported finishing position; published result and SP not independently verified",
-            "updatedAt": "2026-10-09T13:02:00.850Z"
+            "status": "Weighed in",
+            "sp": "4/1",
+            "source": "Sporting Life official full result",
+            "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/newmarket/942519/newmarket-academy-godolphin-beacon-project-cornwallis-stakes-group-3",
+            "updatedAt": "2026-10-09T16:00:16.667Z"
           },
-          "confidenceTier": "FORM-STRONG E/W"
+          "confidenceTier": "FORM-STRONG E/W",
+          "settlementOdds": "4/1"
         },
         {
           "horse": "Sweltering",
           "course": "Newmarket",
           "time": "13:50",
           "selectionOdds": "8/1",
-          "runnerCount": 15,
+          "runnerCount": 14,
           "priceFloorStrictlyGreaterThan": "11/2",
           "result": {
             "position": 2,
-            "status": "User reported",
-            "source": "User-reported finishing position; published result and SP not independently verified",
-            "updatedAt": "2026-10-09T13:02:00.850Z"
+            "status": "Weighed in",
+            "sp": "11/2",
+            "source": "Racing TV published results",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-09/newmarket/1350",
+            "updatedAt": "2026-10-09T16:00:16.667Z"
           },
-          "confidenceTier": "GROUP STEP / EACH-WAY"
+          "confidenceTier": "GROUP STEP / EACH-WAY",
+          "settlementOdds": "11/2"
         },
         {
           "horse": "Theheatison",
           "course": "York",
           "time": "14:05",
           "selectionOdds": "11/1",
-          "runnerCount": 16,
+          "runnerCount": 14,
           "priceFloorStrictlyGreaterThan": "11/2",
           "result": {
             "position": 3,
-            "status": "User reported",
-            "source": "User-reported finish; official starting price not independently checked",
-            "updatedAt": "2026-10-09T13:30:27.158Z"
+            "status": "Weighed in",
+            "sp": "6/1",
+            "source": "Sporting Life official weighed-in result",
+            "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/york/942533/british-ebf-100000-final-colts-and-geldings",
+            "updatedAt": "2026-10-09T16:00:16.667Z"
           },
-          "confidenceTier": "VALUE E/W — BELOW PRIME"
+          "confidenceTier": "VALUE E/W — BELOW PRIME",
+          "settlementOdds": "6/1"
         },
         {
           "horse": "Naga",
           "course": "Newmarket",
           "time": "16:45",
           "selectionOdds": "12/1",
-          "runnerCount": 17,
+          "runnerCount": 15,
           "priceFloorStrictlyGreaterThan": "11/2",
           "result": {
             "position": 11,
@@ -1001,5 +1014,14 @@
       "Naga"
     ],
     "pricesUnconfirmed": true
+  },
+  "verifiedSPUpdate": {
+    "checkedAt": "2026-10-09T16:00:16.667Z",
+    "changed": [
+      "Fast Track",
+      "Sweltering",
+      "Theheatison"
+    ],
+    "pricesSource": "Official published results"
   }
 }
