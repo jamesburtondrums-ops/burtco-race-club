@@ -43,6 +43,12 @@ assert.equal(tickets.filter(t=>t.id==='2026-10-09|ew-lucky15').length,1,'One his
 const ticket=tickets.find(t=>t.id==='2026-10-09|ew-lucky15');
 assert.equal(ticket.totalStake,30,'Lucky 15 total stake');
 assert.equal(ticket.legs.length,4,'Four legs');
+assert.deepEqual(Array.from(ticket.legs.map(l=>l.horse)),["Nuit d'Eclair","Theheatison","Archers Bay","Toca Madera"],'Revised morning Lucky15 runner list');
+assert.deepEqual(Array.from(ticket.legs.map(l=>l.runnerCount)),[15,16,10,18],'Current reported field sizes for ticket');
+assert.equal(ticket.placed,false,'Ticket is paper only and was not placed');
+assert.equal((ticket.versions||[]).length,1,'Previous overnight ticket safely versioned');
+assert.ok(!ticket.legs.some(l=>l.horse==='Flann Sunna'||l.horse==='Flora Of Bermuda'),'Short-price overnight legs removed');
+
 assert.equal(new Set(ticket.legs.map(l=>l.course+'|'+l.time)).size,4,'All four Lucky 15 legs in different races');
 const allVoid=JSON.parse(JSON.stringify(ticket));
 allVoid.date='1900-01-01';for(const leg of allVoid.legs)leg.result={status:'NR'};
@@ -64,8 +70,12 @@ if(racing.snapshotDate==='2026-10-09'){
  assert.equal(racing.longshotsToday.length,1,'One Friday longshot');
  assert.equal(ledger.entries.filter(e=>e.date==='2026-10-09').length,4,'Four Friday paper singles');
  assert.equal((racing.racecardLinks||[]).length,6,'Friday runner cards available');
+ assert.ok(racing.morningRecheck?.scheduledRaces===47,'Friday's six-meeting review recorded');
  app.state.view='lucky15';app.render();
- assert.match(appElement.innerHTML,/Flann Sunna/,'Friday Lucky15 displayed');
+ assert.match(appElement.innerHTML,/Nuit d.Eclair/,'Friday refreshed Lucky15 displayed');
+ assert.match(appElement.innerHTML,/Archers Bay/,'Near-Prime choice displayed');
+ assert.match(appElement.innerHTML,/Evidence and risks/,'Runner research visible');
+ assert.doesNotMatch(appElement.innerHTML,/Flann Sunna/,'Removed old Lucky15 runner absent');
  app.state.view='racecards';app.render();
  assert.match(appElement.innerHTML,/All runners/,'All runners accessible');
 }
