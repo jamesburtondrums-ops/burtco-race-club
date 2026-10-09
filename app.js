@@ -59,7 +59,8 @@ function settlement(e){
  const places=count>0?(count<=4?1:count<=7?2:3):(Number(e.placesPaid)||null);
  if(e.betType==='each-way' && (places!==null?pos>places:pos>3))
    return {status:'lost',returnAmount:0};
- const odds=decimalOdds(e.settlementOdds)||decimalOdds(e.selectionOdds);
+ // Early-price paper wagers settle at the immutable published quote, never at official SP.
+ const odds=e.priceBasis==='early'?decimalOdds(e.selectionOdds):decimalOdds(e.settlementOdds)||decimalOdds(e.selectionOdds);
  if(!odds)return {status:'unpriced',returnAmount:0};
  if(e.betType==='win')return {status:'won',returnAmount:Number(e.winStake)*odds};
  if(!places)return {status:'unpriced',returnAmount:0};
@@ -193,7 +194,7 @@ function lucky15Calc(ticket){
   const result=p?.result||leg.result||null;
   const count=Number(p?.runnerCount||leg.runnerCount)||null;
   const places=count?(count<=4?1:count<=7?2:3):null;
-  const odds=decimalOdds(result?.sp||leg.settlementOdds||leg.selectionOdds);
+  const odds=ticket.priceBasis==='early'?decimalOdds(leg.selectionOdds):decimalOdds(result?.sp||leg.settlementOdds||leg.selectionOdds);
   const pos=Number(result?.position)||null;
   const status=String(result?.status||'');
   let win=null,place=null;
@@ -259,7 +260,7 @@ function lucky15Page(){
  '<p class="l15-note">£1 each way on 15 combinations = £30 total stake. Every leg is at least 6/1 in this saved, unplaced paper ticket. The higher prices mean lower implied chances and cannot be classified as guaranteed or calibrated Prime tips.</p>'+
  '<p class="l15-note">House settlement policy: ¼ win odds for place returns; 1 place up to 4 runners, 2 places for 5–7, and 3 places for 8+. Actual bookmakers may use different terms.</p>'+
  '<div class="l15-legs">'+rows+'</div><div class="l15-outcome">'+(x.status==='settled'?'Return '+money(x.returnAmount)+' · P/L '+signMoney(x.returnAmount-x.stake):'£30 reserved in paper bank · Settlement pending all four results')+'</div>'+
- '<p class="l15-note">Reference prices may change, and real bookmakers can pay different place terms. Recheck all four runners, accepted prices and each-way places before treating the draft ticket as eligible. This is a virtual tracking ticket, not an actual bookmaker bet. Starting prices are used for paper settlement when published; non-runners use provisional unit-factor treatment.</p></section>';
+ '<p class="l15-note">Reference prices may change, and real bookmakers can pay different place terms. Recheck all four runners, accepted prices and each-way places before treating the draft ticket as eligible. This is a virtual tracking ticket, not an actual bookmaker bet. All paper tickets from 9 October use the early prices saved when the selections were published; later SPs are shown for comparison only. Non-runners use provisional unit-factor treatment.</p></section>';
 }
 
 function tracker(){
@@ -378,7 +379,7 @@ function history(){
    '<span class="history-position '+(position===1?'history-won':result?'history-finished':'history-pending')+'">'+escapeHtml(label)+'</span>'+
    '<span class="history-pl '+(done?(pl>=0?'tracker-positive':'tracker-negative'):'')+'">'+(done?signMoney(pl):'Pending')+'</span><span class="history-arrow">⌄</span></summary>'+
    '<div class="history-details"><div>Recorded price <b>'+escapeHtml(e.selectionOdds||'—')+'</b></div>'+
-   '<div>Starting price <b>'+escapeHtml(e.settlementOdds||result?.sp||'Not confirmed')+'</b></div>'+
+   '<div>Starting price (reference only) <b>'+escapeHtml(e.settlementOdds||result?.sp||'Not confirmed')+'</b></div><div>Paper settlement <b>'+(e.priceBasis==='early'?'Published early odds':'Legacy historical terms')+'</b></div>'+
    '<div>Stake <b>'+money(stake)+'</b></div>'+
    '<div>Return <b>'+(done?money(outcome.returnAmount):'Pending confirmation')+'</b></div>'+
    (result?.source?'<p>Result source: '+escapeHtml(result.source)+'</p>':'')+
