@@ -23,7 +23,7 @@ export function settleEntry(entry){
  const count=number(entry.runnerCount);
  const places=count>0?(count<=4?1:count<=7?2:3):(number(entry.placesPaid)||null);
  if(entry.betType==='each-way'&&(places!==null?pos>places:pos>3))return {status:'lost',returns:0};
- const odds=price(entry.settlementOdds)||price(entry.selectionOdds);
+ const odds=entry.priceBasis==='early'?price(entry.selectionOdds):price(entry.settlementOdds)||price(entry.selectionOdds);
  if(!odds)return {status:'unpriced',returns:0};
  if(entry.betType==='win')return {status:'won',returns:number(entry.winStake)*odds};
  if(!places)return {status:'unpriced',returns:0};
@@ -37,7 +37,7 @@ function ticketLegValue(leg){
  if(nr(status))return {win:1,place:1};
  const pos=position({result:r});
  const count=number(leg.runnerCount),places=count?(count<=4?1:count<=7?2:3):null;
- const odds=price(leg.settlementOdds)||price(r?.sp)||price(leg.selectionOdds);
+ const odds=leg.priceBasis==='early'?price(leg.selectionOdds):price(leg.settlementOdds)||price(r?.sp)||price(leg.selectionOdds);
  if(pos>3)return {win:0,place:0};
  if(pos&&places&&odds)return {win:pos===1?odds:0,place:pos<=places?1+(odds-1)*.25:0};
  if(dnf(status))return {win:0,place:0};
