@@ -90,3 +90,9 @@ footer{max-width:1180px;margin:0 auto 28px;padding:0 20px;color:var(--muted);fon
 .course-profile-body p{font-size:11px;color:#42594c;line-height:1.55;margin:8px 0}
 .course-profile-body a{display:inline-block;font-size:10px;font-weight:700;margin:4px 8px 0 0}
 @media(max-width:620px){.course-profiles{grid-template-columns:1fr}}
+
+.research-audit{padding:15px 0;margin:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.research-audit h3{font-size:18px;margin:0 0 5px}
+.research-audit>p,.research-audit>small{display:block;color:var(--muted);font-size:11px;line-height:1.6}
+.research-audit table{margin:10px 0}
+.research-audit td,.research-audit th{font-size:11px}
