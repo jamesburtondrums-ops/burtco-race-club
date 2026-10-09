@@ -244,9 +244,9 @@ export function sectionalRelativePar({overallDistanceFurlongs,overallTimeSeconds
   interpretation:'Race-effort distribution relative to the supplied course/trip par; NOT an automatic stamina or winning probability adjustment'};
 }
 export function historicHandicapContext(runs,asOfDate,currentOfficialRating){
- const prior=(runs||[]).filter(r=>validatePriorRun(r,asOfDate).ok&&Number.isFinite(Number(r.officialRating))&&
-  Number.isFinite(Number(r.performanceFigure))).sort((a,b)=>b.date.localeCompare(a.date));
- if(prior.length<2||!Number.isFinite(Number(currentOfficialRating)))
+ const prior=(runs||[]).filter(r=>validatePriorRun(r,asOfDate).ok&&!blank(r.officialRating)&&!blank(r.performanceFigure)&&
+  Number.isFinite(Number(r.officialRating))&&Number.isFinite(Number(r.performanceFigure))).sort((a,b)=>b.date.localeCompare(a.date));
+ if(prior.length<2||blank(currentOfficialRating)||!Number.isFinite(Number(currentOfficialRating)))
   return {status:'insufficient sourced historical figures',ratedRuns:prior.length,confidence:'unknown'};
  const relevant=prior.slice(0,5);
  const meanFigure=relevant.reduce((sum,r)=>sum+Number(r.performanceFigure),0)/relevant.length;
