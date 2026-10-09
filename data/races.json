@@ -1,14 +1,15 @@
 {
   "snapshotDate": "2026-10-09",
   "verifiedAt": "2026-10-09T06:53:15.918Z",
-  "mode": "FRIDAY MORNING RECHECK — selective four singles, four-leg revised EW Lucky15",
+  "mode": "FRIDAY MORNING DEEP RECHECK — 10 singles; 8 WIN, 1 midshot E/W, 1 longshot E/W; Lucky15 unchanged",
   "coverage": {
     "meetings": 6,
     "races": 47,
-    "scope": "All 47 GB & IRE races listed and reviewed by meeting, focused checks on runners, non-runners, odds, class, pace, form and going for the retained selections",
+    "scope": "All six UK and Irish published meetings (47 races) cross-checked at card level; strongest runners selected on published form/ratings/jockey, market, class and going. Some trainer-course splits and full pace maps unavailable.",
     "publishedDate": "2026-10-08",
-    "selectedIndividuals": 4,
-    "lastReviewedAt": "2026-10-09T06:53:15.918Z"
+    "selectedIndividuals": 10,
+    "lastReviewedAt": "2026-10-09T07:12:53.549Z",
+    "focus": "8 main WIN picks + one 10/1-18/1 E/W midshot + one 20/1+ speculative longshot"
   },
   "meetings": [
     {
@@ -71,10 +72,156 @@
   ],
   "todaySelections": [
     {
+      "horse": "Beagle Bay",
+      "course": "York",
+      "time": "13:30",
+      "odds": "2/1",
+      "runnerCount": 18,
+      "or": 94,
+      "ts": 97,
+      "rpr": 110,
+      "jockey": "Hector Crouch",
+      "trainer": "Ralph Beckett",
+      "tier": "STRONG",
+      "confidenceTier": "FORM POSITIVE / HIGH FIELD RISK",
+      "tags": [
+        "TWO HANDICAP WINS",
+        "RPR110 OR94",
+        "BECKETT / CROUCH",
+        "YORK 18 RUNNERS",
+        "CLASS 3 £15,462"
+      ],
+      "reason": "Form 2-1411 and unbeaten in two handicap starts including a Sandown victory. OR94 with RPR110/TS97, and Beckett/Crouch stable-rider combination. Market around 2/1 and strong consensus make him attractive on ability.",
+      "risk": "18-runner straight-mile-type York handicap; stall 9, traffic and draw/pace split increase variance. At roughly 2/1 the implied win chance may not offer value against such a field.",
+      "source": "Racing Post / HorseRacing.net",
+      "sourceUrl": "https://www.racingpost.com/racecards/107/york/2026-10-09/928531/",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Class 3 handicap",
+        "priceLabel": "SHORT FOR AN 18-RUNNER RACE",
+        "contextSummary": "Strong recent handicap profile but significant large-field tactical uncertainty.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "VERY STRONG",
+            "detail": "Unbeaten in two handicap starts"
+          },
+          {
+            "name": "Handicap",
+            "status": "POSITIVE",
+            "detail": "OR94 and RPR110"
+          },
+          {
+            "name": "Trainer / jockey",
+            "status": "STRONG",
+            "detail": "Ralph Beckett / Hector Crouch"
+          },
+          {
+            "name": "Draw / pace",
+            "status": "CAUTION",
+            "detail": "Stall 9 and 18 competitors"
+          },
+          {
+            "name": "Ground",
+            "status": "NEUTRAL",
+            "detail": "York good with good-to-soft areas; no decisive preference confirmed"
+          },
+          {
+            "name": "Class/value",
+            "status": "POSITIVE",
+            "detail": "Class 3 £15,462 first prize"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "2/1 early favourite"
+          },
+          {
+            "name": "Exact trainer/course record",
+            "status": "UNVERIFIED",
+            "detail": "Not established"
+          }
+        ]
+      }
+    },
+    {
+      "horse": "Saint Jeannais",
+      "course": "Chepstow",
+      "time": "13:57",
+      "odds": "8/11",
+      "runnerCount": 10,
+      "or": null,
+      "ts": 81,
+      "rpr": 123,
+      "jockey": "Sam Twiston-Davies",
+      "trainer": "Nigel & Willy Twiston-Davies",
+      "tier": "STRONG",
+      "confidenceTier": "STRONG — NOT PRIME",
+      "tags": [
+        "7L HURDLE DEBUT WIN",
+        "12 TIPSTER MENTIONS",
+        "SAM TWISTON-DAVIES",
+        "RPR 123",
+        "10 RUNNERS"
+      ],
+      "reason": "Drew clear by seven lengths on Bangor hurdles debut; repeatable evidence over hurdles unlike several debutants today. Sam Twiston-Davies booked for in-form Twiston-Davies yard; roughly 8/11 quote makes him the market leader.",
+      "risk": "Dutch Corner has a comparable or higher previous RPR (125) and TS (120), and both return from a break. Clear market favouritism is not a reliable guarantee in novice hurdles.",
+      "source": "HorseRacing.net / Racing Post / talkSPORT",
+      "sourceUrl": "https://www.horseracing.net/chepstow/09-10-26/13:57",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Class 4 novice hurdle",
+        "priceLabel": "WIN CONFIDENCE / SHORT ODDS",
+        "contextSummary": "Repeatable hurdles performance but closely matched Dutch Corner and return from a break.",
+        "contextFactors": [
+          {
+            "name": "Recent form",
+            "status": "STRONG",
+            "detail": "Seven-length Bangor hurdle debut win in May"
+          },
+          {
+            "name": "Class / value",
+            "status": "GOOD",
+            "detail": "Class 4 novice hurdle, £5,446 winner"
+          },
+          {
+            "name": "Trainer / rider",
+            "status": "POSITIVE",
+            "detail": "Twiston-Davies yard and Sam Twiston-Davies"
+          },
+          {
+            "name": "Course / ground",
+            "status": "CAUTION",
+            "detail": "Chepstow good-to-soft; Bangor win not course form"
+          },
+          {
+            "name": "Opposition",
+            "status": "CAUTION",
+            "detail": "Dutch Corner RPR125 and TS120; capable of challenging"
+          },
+          {
+            "name": "Tactics / pace",
+            "status": "UNVERIFIED",
+            "detail": "No complete sectional pace map verified"
+          },
+          {
+            "name": "Market",
+            "status": "STRONG",
+            "detail": "Around 8/11 favourite"
+          },
+          {
+            "name": "Trainer at course",
+            "status": "UNVERIFIED",
+            "detail": "Exact type/course strike rate unavailable"
+          }
+        ]
+      }
+    },
+    {
       "horse": "Flora Of Bermuda",
       "course": "Newmarket",
       "time": "14:25",
-      "tier": "PRIME",
+      "tier": "STRONG",
       "odds": "13/8",
       "runnerCount": 6,
       "or": 111,
@@ -88,15 +235,15 @@
         "JAMES DOYLE"
       ],
       "reason": "Best balance of proven class and usable win price in the trimmed list. Course-and-distance evidence, RPR126 and TS114 stand out in a six-runner Group 2; James Doyle retained and a clear market leader.",
-      "risk": "Group 2 with six runners, and a strong Pina Sonata challenger who was faster than the benchmark in a similar 7f Group race. Only two places under paper rules. Recheck the going and short price.",
-      "source": "HorseRacing.net / Racing TV / Racing Post",
-      "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26",
+      "risk": "Racing Post selects Time To Turn ahead of the field, whose TS113 matches the top level, and Pina Sonata RPR123 is close to Flora's 125. Only six runners, first two paid places under tracker policy. 13/8 may be tight.",
+      "source": "Racing Post / Racing TV / Sporting Life",
+      "sourceUrl": "https://www.racingpost.com/racecards/38/newmarket/2026-10-09/",
       "v42": {
-        "isPrime": true,
+        "isPrime": false,
         "marketRank": 1,
         "raceType": "Group 2",
-        "priceLabel": "OVER­NIGHT QUOTE",
-        "contextSummary": "Strong recent figures and proven course/distance; price still reflects obvious ability. Overnight judgement, not a calibrated win probability.",
+        "priceLabel": "COMPETITIVE GROUP 2 / NO PRIME",
+        "contextSummary": "Proven C&D and peak RPR125, but Time To Turn and Pina Sonata have comparable form; not safe to call Prime.",
         "contextFactors": [
           {
             "name": "Class/grade",
@@ -131,7 +278,13 @@
         ]
       },
       "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "currentGoing": "Good (morning Newmarket report)"
+      "currentGoing": "Good (morning Newmarket report)",
+      "confidenceTier": "STRONG — COMPETITIVE GROUP 2",
+      "reassessment": {
+        "decision": "RETAIN / DOWNGRADE FROM PRIME",
+        "checkedAt": "2026-10-09T07:12:53.549Z",
+        "why": "Proven C&D but serious opposition near same rating"
+      }
     },
     {
       "horse": "Musical Times",
@@ -153,7 +306,7 @@
       "reason": "Clear pure-win candidate: unbeaten in three, progressive RPR123 at the mile, William Buick aboard for Charlie Appleby. Strongest ratings-and-market consensus on the Newmarket Group 1 card. Rechecked as highest-rated by Timeform (126p) with runner odds-on; market leader remains, but this is still not a certain win.",
       "risk": "Odds-on means limited reward for a loss. High-class improving two-year-old rivals and a change in going remain risks; no runner has a guaranteed win.",
       "source": "Timeform / Racing Post / Racing TV",
-      "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26",
+      "sourceUrl": "https://www.racingpost.com/racecards/38/newmarket/2026-10-09/925073/",
       "v42": {
         "isPrime": true,
         "marketRank": 1,
@@ -194,7 +347,305 @@
         ]
       },
       "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "currentGoing": "Good (morning Newmarket report)"
+      "currentGoing": "Good (morning Newmarket report)",
+      "confidenceTier": "PRIME WIN — SHORT ODDS",
+      "reassessment": {
+        "decision": "RETAIN PRIME",
+        "checkedAt": "2026-10-09T07:12:53.549Z",
+        "why": "Unbeaten 3 from 3, OR115/RPR123, Buick + Appleby; odds-on risk"
+      }
+    },
+    {
+      "horse": "Sharadd",
+      "course": "York",
+      "time": "15:18",
+      "odds": "3/10",
+      "runnerCount": 5,
+      "or": null,
+      "ts": 50,
+      "rpr": 85,
+      "jockey": "Tom Marquand",
+      "trainer": "William Haggas",
+      "tier": "PRIME",
+      "confidenceTier": "PRIME FORM / POOR PRICE",
+      "tags": [
+        "SIX LENGTH DEBUT WIN",
+        "HAGGAS / MARQUAND",
+        "5 RUNNERS",
+        "NOVICE CLASS",
+        "3/10 PRICE"
+      ],
+      "reason": "Highly impressive 6-length Haydock debut win over today's 6f. William Haggas and Tom Marquand team up and 12 racing writers mention him; in this five-runner York novice the market has him clear at around 3/10.",
+      "risk": "This is only his second start, unexposed opponents can improve and 3/10 offers very poor reward for one defeat. Pacesetting advantage not independently quantified.",
+      "source": "Racing Post / HorseRacing.net / York racecard",
+      "sourceUrl": "https://www.horseracing.net/york/09-10-26/15:18",
+      "v42": {
+        "isPrime": true,
+        "raceType": "Class 2 novice",
+        "priceLabel": "VERY SHORT / NO VALUE CLAIM",
+        "contextSummary": "Best pure win profile from powerful debut in small field; extremely poor price.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "VERY STRONG",
+            "detail": "Six-length Haydock winning debut"
+          },
+          {
+            "name": "Race conditions",
+            "status": "POSITIVE",
+            "detail": "Five-runner Class 2 6f novice"
+          },
+          {
+            "name": "Trainer/jockey",
+            "status": "STRONG",
+            "detail": "Haggas / Marquand"
+          },
+          {
+            "name": "Course / going",
+            "status": "UNKNOWN",
+            "detail": "York debut; going good, good to soft in places"
+          },
+          {
+            "name": "Class/ratings",
+            "status": "POSITIVE",
+            "detail": "RPR85, TS50 after single run"
+          },
+          {
+            "name": "Market",
+            "status": "VERY STRONG",
+            "detail": "Around 3/10 favourite"
+          },
+          {
+            "name": "Pace",
+            "status": "UNCERTAIN",
+            "detail": "No dependable sectionals for new rivals"
+          },
+          {
+            "name": "Trainer at course",
+            "status": "UNVERIFIED",
+            "detail": "Specific historical record not available"
+          }
+        ]
+      }
+    },
+    {
+      "horse": "Archers Bay",
+      "course": "Newmarket",
+      "time": "15:30",
+      "odds": "4/1",
+      "runnerCount": 11,
+      "or": 100,
+      "ts": 104,
+      "rpr": 112,
+      "jockey": "Ryan Moore",
+      "trainer": "Marco Botti",
+      "tier": "STRONG",
+      "confidenceTier": "STRONG — HERITAGE HANDICAP",
+      "tags": [
+        "C&D LISTED 2ND",
+        "RYAN MOORE",
+        "RPR112 / OR100",
+        "ONLY +1LB",
+        "CLASS 2 £51,540"
+      ],
+      "reason": "Listed runner-up over this same Newmarket 1m4f only 14 days ago, preceded by an Ascot handicap win. Handicap mark only 1lb higher than before his stronger Listed effort; Ryan Moore booked, RPR112/TS104. One of the clearest handicapping cases at around 4/1.",
+      "risk": "11-runner Heritage Handicap with draw 10 and top weight 9-9; well-handicapped rivals such as Decade Of Time can improve. Listed runner-up does not guarantee a favourable pace.",
+      "source": "Timeform / Racing Post / Racing TV",
+      "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1530/36/5",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Class 2 Heritage Handicap",
+        "priceLabel": "BEST HANDICAP FORM / 4/1",
+        "contextSummary": "Recent course-and-distance Listed second, proven at trip and rider upgrade, but large-handicap pace risk.",
+        "contextFactors": [
+          {
+            "name": "Handicap placement",
+            "status": "VERY STRONG",
+            "detail": "OR100 after C&D Listed second, just 1lb higher"
+          },
+          {
+            "name": "Course / distance",
+            "status": "VERY STRONG",
+            "detail": "Newmarket 1m4f C&D proven"
+          },
+          {
+            "name": "Current form",
+            "status": "STRONG",
+            "detail": "Recent placed Listed effort and previous Ascot win"
+          },
+          {
+            "name": "Class / value",
+            "status": "HIGH",
+            "detail": "Class 2 Heritage, £51,540 prize"
+          },
+          {
+            "name": "Jockey",
+            "status": "STRONG",
+            "detail": "Ryan Moore"
+          },
+          {
+            "name": "Draw / tactics",
+            "status": "CAUTION",
+            "detail": "Stall 10 in 11 runners; pace not fully resolved"
+          },
+          {
+            "name": "Trainer current form",
+            "status": "POSITIVE",
+            "detail": "Botti yard published in active form"
+          },
+          {
+            "name": "Exact trainer type/course",
+            "status": "UNVERIFIED",
+            "detail": "Reliable historical splits not established"
+          }
+        ]
+      }
+    },
+    {
+      "horse": "Cosmic Connection",
+      "course": "Chepstow",
+      "time": "15:43",
+      "odds": "15/8",
+      "runnerCount": 11,
+      "or": 138,
+      "ts": 143,
+      "rpr": 151,
+      "jockey": "Freddie Gordon",
+      "trainer": "Chris Gordon",
+      "tier": "PRIME",
+      "confidenceTier": "PRIME FORM / CLASS RISK",
+      "tags": [
+        "3 WINS IN 4 HURDLES",
+        "RPR 151 TS 143",
+        "GRADE 2 / £45,560",
+        "FREDDIE GORDON",
+        "11 RUNNERS"
+      ],
+      "reason": "Won three of four over hurdles last spring, most recently a valuable 15-runner Sandown novices' handicap. OR138, RPR151 and TS143 create a powerful form base for the 11-runner Persian War Grade 2; roughly 15/8 is a usable price.",
+      "risk": "Returns after 167 days and steps up to Grade 2 company and 2m3f for the first time under rules; Lord Byron has Grade 1-level form. This is not a proven class/trip match.",
+      "source": "Timeform / Racing Post / Sporting Life",
+      "sourceUrl": "https://www.timeform.com/horse-racing/odds/chepstow/2026-10-09/1543/11/5",
+      "v42": {
+        "isPrime": true,
+        "raceType": "Grade 2 novice hurdle",
+        "priceLabel": "STRONG PROFILE / CLASS STEP",
+        "contextSummary": "Progressive form and good ratings, tempered by longer trip and higher grade.",
+        "contextFactors": [
+          {
+            "name": "Current form",
+            "status": "VERY STRONG",
+            "detail": "Three wins from last four hurdles; Sandown handicap win"
+          },
+          {
+            "name": "Class / value",
+            "status": "HIGH",
+            "detail": "Grade 2; £45,560 winner prize"
+          },
+          {
+            "name": "Ratings",
+            "status": "VERY STRONG",
+            "detail": "OR138, RPR151, TS143"
+          },
+          {
+            "name": "Jockey/trainer",
+            "status": "POSITIVE",
+            "detail": "Freddie Gordon / Chris Gordon"
+          },
+          {
+            "name": "Going",
+            "status": "CAUTION",
+            "detail": "Chepstow good-to-soft vs latest Sandown on fast ground"
+          },
+          {
+            "name": "Distance",
+            "status": "UNPROVEN",
+            "detail": "Up to 2m3f100yd; stamina assumed, not demonstrated"
+          },
+          {
+            "name": "Opposition",
+            "status": "CAUTION",
+            "detail": "Lord Byron brings Grade 1 form"
+          },
+          {
+            "name": "Pace / sectionals",
+            "status": "UNVERIFIED",
+            "detail": "No verified whole-field pace map"
+          }
+        ]
+      }
+    },
+    {
+      "horse": "Sin City",
+      "course": "Kempton",
+      "time": "18:15",
+      "odds": "4/6",
+      "runnerCount": 11,
+      "or": 89,
+      "ts": 84,
+      "rpr": 89,
+      "jockey": "Rowan Scott",
+      "trainer": "Kevin Philippart De Foy",
+      "tier": "WATCH",
+      "confidenceTier": "CONDITIONAL WIN — LAYOFF",
+      "tags": [
+        "AW COURSE / DISTANCE WINNER",
+        "NOVICE CLASS 4",
+        "OR89 / TS84",
+        "195 DAY ABSENCE",
+        "11 RUNNERS"
+      ],
+      "reason": "Already won a mile novice on Polytrack and has the strongest published form in a Class 4 race with 11 currently listed. The March Class 2 conditions fifth came in a significantly stronger race; market around 4/6.",
+      "risk": "195-day layoff, carrying a winner's penalty, and a fairly narrow established ratings advantage. A previous 6.5-length defeat here makes him a conditional, NOT Prime, winner despite strong market backing.",
+      "source": "Racing TV / Racing Post / At The Races",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-09/kempton-park/1815",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Class 4 novice AW",
+        "priceLabel": "CONDITIONAL / VERY SHORT",
+        "contextSummary": "AW course-and-distance proven, but off 195 days and carries penalty.",
+        "contextFactors": [
+          {
+            "name": "Course/trip",
+            "status": "VERY STRONG",
+            "detail": "Won 1m on Polytrack"
+          },
+          {
+            "name": "Class change",
+            "status": "POSITIVE",
+            "detail": "From much tougher March conditions race to Class 4 novice"
+          },
+          {
+            "name": "Ratings",
+            "status": "POSITIVE",
+            "detail": "OR89/RPR89 TS84; best established level but competition lightly raced"
+          },
+          {
+            "name": "Trainer/jockey",
+            "status": "NEUTRAL",
+            "detail": "K P De Foy / Rowan Scott"
+          },
+          {
+            "name": "Fitness",
+            "status": "RED FLAG",
+            "detail": "195 days off; no verified prep run"
+          },
+          {
+            "name": "Penalty",
+            "status": "CAUTION",
+            "detail": "Carries winner's penalty"
+          },
+          {
+            "name": "Market",
+            "status": "VERY STRONG",
+            "detail": "Around 4/6"
+          },
+          {
+            "name": "Pace / draws",
+            "status": "UNKNOWN",
+            "detail": "No measurable sectionals for every rival"
+          }
+        ]
+      }
     }
   ],
   "midshotsToday": [
@@ -222,8 +673,13 @@
       "source": "Sporting Life live show / Racing Post / Timeform",
       "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-09/york/live-show/942533/british-ebf-100000-final-colts-and-geldings",
       "currentOdds": "11/1",
-      "confidenceTier": "VALUE E/W — BELOW PRIME",
-      "researchUpdatedAt": "2026-10-09T06:53:15.918Z"
+      "confidenceTier": "VALUE E/W — HIGH FIELD RISK",
+      "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
+      "reassessment": {
+        "decision": "RETAIN E/W VALUE / NOT PRIME",
+        "checkedAt": "2026-10-09T07:12:53.549Z",
+        "why": "Recent placed profile but 16 juvenile runners and market 11/1; place chance uncertain"
+      }
     }
   ],
   "longshotsToday": [
@@ -247,12 +703,18 @@
         "22/1 EARLY QUOTE"
       ],
       "reason": "Among big-priced runners, a relatively credible place case: form 341223 shows repeated top-three finishes at strong level, RPR112, and a stepping-back-up-to-a-mile argument. Racing TV's analyst also notes consistency and a good-value outsider profile.",
-      "risk": "Group 1 opponent Musical Times is much stronger on ratings. Dancing Destiny was over eight lengths beaten in her last Group 1 third, and some bookmakers offer only 18/1; do NOT qualify for 20/1+ unless actual quote is at least 20/1.",
+      "risk": "A same-race outsider against our main Prime Musical Times; Group 1 last third was over eight lengths back. Only qualifies at available 20/1+ (22/1 listed); place appeal only and not suitable for a 'high win confidence' label.",
       "source": "HorseRacing.net / Racing TV analyst",
-      "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26",
+      "sourceUrl": "https://m.attheraces.com/racecard/Newmarket/09-October-2026/1457",
       "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
       "currentGoing": "Good (morning Newmarket report)",
-      "currentOdds": "20/1–25/1, prices vary"
+      "currentOdds": "22/1",
+      "reassessment": {
+        "decision": "RETAIN AS SOLE SPECULATIVE LONGSHOT / MARKET CONDITIONAL",
+        "checkedAt": "2026-10-09T07:12:53.549Z",
+        "why": "22/1 independently visible, RPR112 and repeated places; strong Group 1 favourite makes win unlikely"
+      },
+      "confidenceTier": "SPECULATIVE E/W — BELOW PRIME"
     }
   ],
   "lucky15Only": [
@@ -280,34 +742,6 @@
       "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1350/36/2",
       "currentGoing": "Good (Racing Post revised morning report)",
       "confidenceTier": "NEAR-PRIME E/W",
-      "researchUpdatedAt": "2026-10-09T06:53:15.918Z"
-    },
-    {
-      "horse": "Archers Bay",
-      "course": "Newmarket",
-      "time": "15:30",
-      "odds": "4/1",
-      "runnerCount": 10,
-      "or": 100,
-      "ts": 104,
-      "rpr": 112,
-      "currentGoing": "Good (morning report; recheck)",
-      "jockey": "Ryan Moore",
-      "trainer": "Marco Botti",
-      "tags": [
-        "LUCKY 15 ONLY",
-        "NEAR-PRIME E/W",
-        "RYAN MOORE",
-        "C&D FORM",
-        "RPR 112",
-        "LATEST 2ND IN LISTED",
-        "10 RUNNERS"
-      ],
-      "confidenceTier": "NEAR-PRIME E/W",
-      "reason": "RPR 112/TS 104, won over 1m4f at Ascot, then runner-up in a Listed race over this Newmarket course and distance; just 1lb higher and Ryan Moore booked. Multiple independent cards shortlist him near the head of the market.",
-      "risk": "A heritage handicap, top weight, and other improving three-year-olds create more uncertainty than the favourable form figures suggest. Recent heavy scrutiny of price; 4/1 is only an observed morning quote.",
-      "source": "Timeform / Racing Post / HorseRacing.net",
-      "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1530/36/5",
       "researchUpdatedAt": "2026-10-09T06:53:15.918Z"
     },
     {
@@ -353,12 +787,26 @@
   },
   "selectionPolicy": {
     "scope": "Current day's selective shortlist only. Previous paper bets and results remain in permanent ledger and archived racecard.",
-    "maxIndividualSelections": 4,
+    "maxIndividualSelections": 10,
     "winStakes": 10,
     "eachWayWinStake": 5,
     "eachWayPlaceStake": 5,
     "reviewRequired": "Recheck going, non-runners, weight/draw and market within one hour of scheduled off time",
-    "confidenceNote": "Qualitative research confidence, not backtested/calibrated probabilities."
+    "confidenceNote": "Prime=relative evidence strength, not a calibrated numerical winning probability. Strong/Watch marks meaningful field, fitness or class concerns.",
+    "minimumLongshotPrice": "20/1",
+    "numLongshots": 1,
+    "systemFactors": [
+      "Current form / speed figures",
+      "Trainer and jockey current record",
+      "Race class and purse",
+      "Course, distance and going",
+      "Trainer race type/course record where verifiable",
+      "Draw and pace running styles",
+      "Fitness and seasonal returns",
+      "Handicap mark or penalties",
+      "Market value and market rank",
+      "Jockey-horse partnership where recorded"
+    ]
   },
   "lucky15Plan": {
     "date": "2026-10-09",
@@ -519,5 +967,35 @@
   "lucky15RemovedLegs": [
     "Flann Sunna",
     "Flora Of Bermuda"
-  ]
+  ],
+  "reassessment": {
+    "checkedAt": "2026-10-09T07:12:53.549Z",
+    "originalFour": {
+      "Flora": "RETAIN / DOWNGRADE",
+      "Musical": "RETAIN PRIME",
+      "Theheatison": "RETAIN E/W BELOW PRIME",
+      "Dancing": "RETAIN SOLE SPECULATIVE LONGSHOT"
+    },
+    "newWinners": [
+      "Saint Jeannais",
+      "Sharadd",
+      "Cosmic Connection",
+      "Archers Bay",
+      "Beagle Bay",
+      "Sin City"
+    ],
+    "issues": [
+      "No calibrated backtest on this exact 10-runner selection threshold",
+      "Racecards and prices may change before off",
+      "Trainer-course and complete race-pace sectional data unavailable for some runners"
+    ],
+    "sources": [
+      "Racing Post cards",
+      "HorseRacing.net cards",
+      "Sporting Life live shows",
+      "Racing TV racecards",
+      "Timeform odds",
+      "At The Races form and odds"
+    ]
+  }
 }
