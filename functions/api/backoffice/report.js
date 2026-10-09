@@ -1,6 +1,9 @@
 import history from '../../_private/backoffice-history.json';
+import researchHistory from '../../_private/racing-research-journal.json';
+import historicalRuns from '../../_private/racing-historical-runs.json';
 import {isAuthed,reply} from '../../_lib/backoffice-auth.mjs';
 import {dailyReports,tuningNotes} from '../../_lib/backoffice-stats.mjs';
+import {researchCoverage,chronologicalAssessment} from '../../_lib/race-research.mjs';
 
 export async function onRequestGet({request,env}){
  if(!await isAuthed(request,env))return reply({ok:false,error:'PIN authentication required'},401);
@@ -24,6 +27,14 @@ export async function onRequestGet({request,env}){
   return reply({
    ok:true,generatedAt:new Date().toISOString(),source:'Published paper-bet ledger plus private daily snapshots',
    overview:latest?.cumulative||null,daily:days,tuning:changes,archiveDays:(history.days||[]).length,
+   research:{
+    coverage:researchCoverage(ledger,historicalRuns.runs||[]),
+    factors:researchHistory.factors||[],
+    sources:researchHistory.sources||[],
+    validation:chronologicalAssessment(historicalRuns.runs||[]),
+    snapshotsRecorded:researchHistory.snapshots?.length||0,
+    status:'Evidence-backed shadow research: do not update live picks until out-of-sample improvement is established'
+   },
    methodology:{
     strikeRate:'Confirmed winning finishers divided by all known finishes; non-runners excluded',
     placeRate:'Each-way selections placed within known paid-place terms / settled each-way runners with verified terms',
