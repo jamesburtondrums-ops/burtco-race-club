@@ -219,36 +219,47 @@ function exoticSummary(){
   settledStake:tickets.filter(x=>x.status==='settled').reduce((a,x)=>a+x.stake,0),
   returns:tickets.reduce((a,x)=>a+x.returnAmount,0)};
 }
+function lucky15LegEligible(leg){
+ const quote=String(leg.selectionOdds||'').trim();
+ const fraction=quote.match(/^(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/);
+ const strictlyAbove=!!fraction&&Number(fraction[1])/Number(fraction[2])>5.5;
+ const withdrawn=/^(NR|NON.RUNNER|WITHDRAWN|SCRATCHED|VOID)$/i.test(String(leg.result?.status||'').trim());
+ return strictlyAbove&&!withdrawn;
+}
 function lucky15Page(){
  const ticket=(state.ledger?.lucky15Tickets||[]).find(t=>t.date===state.data?.snapshotDate);
  if(!ticket)return '<div class="panel">No Lucky 15 prepared for this racecard.</div>';
  const x=lucky15Calc(ticket);
+ const allPricesEligible=x.legs.length===4&&x.legs.every(lucky15LegEligible);
+ const validationText=allPricesEligible?'4 of 4 legs strictly above 11/2 at their recorded reference prices':
+  'Ticket does NOT meet the >11/2 non-runner and price rules; check the runners and revise the ticket before use';
  const known=['todaySelections','midshotsToday','longshotsToday','lucky15Only'].flatMap(g=>state.data[g]||[]);
  const rows=x.legs.map((leg,i)=>{
   const pick=known.find(p=>p.horse===leg.horse&&p.course===leg.course&&p.time===leg.time)||{};
-  const confidence=leg.confidenceTier||pick.confidenceTier||'E/W selection';
-  const isNearPrime=confidence.includes('NEAR-PRIME');
-  const label=isNearPrime?'Near-Prime E/W':'Value E/W (below Prime)';
+  const confidence=leg.confidenceTier||pick.confidenceTier||'Form-based E/W selection';
+  const isNearPrime=confidence.includes('NEAR-PRIME')||confidence.includes('FORM-STRONG');
+  const label=confidence;
   const placeCount=leg.places?'Top '+leg.places+' paid places':'Final runner count pending';
   const result=leg.result?.position?ordinal(leg.result.position):escapeHtml(leg.result?.status||'Awaiting race');
   return '<div class="l15-leg"><b>'+(i+1)+'</b><div><strong>'+escapeHtml(leg.horse)+'</strong>'+
    '<small>'+escapeHtml(leg.course)+' · '+escapeHtml(leg.time)+' · '+placeCount+'</small>'+
-   '<small class="'+(isNearPrime?'l15-near-prime':'l15-value')+'">'+label+'</small></div>'+
+   '<small class="'+(isNearPrime?'l15-near-prime':'l15-value')+'">'+escapeHtml(label)+'</small></div>'+
    '<div><strong>'+escapeHtml(leg.selectionOdds)+'</strong><small>'+result+'</small></div></div>'+
    '<details class="l15-leg-research"><summary>Evidence and risks for '+escapeHtml(leg.horse)+'</summary>'+
    '<p>'+escapeHtml(pick.reason||'Market and prior form reviewed; no win or place is guaranteed.')+'</p>'+
    (pick.risk?'<p class="l15-leg-risk">Main risk: '+escapeHtml(pick.risk)+'</p>':'')+
    (pick.sourceUrl?'<a href="'+escapeHtml(pick.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Check published racecard and odds ↗</a>':'')+'</details>';
  }).join('');
- const recheck=state.data?.morningRecheck;
- const checked=recheck?.updatedAt?new Date(recheck.updatedAt).toLocaleString('en-GB',{timeZone:'Europe/London',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'overnight';
+ const checkedAt=ticket.updatedAt||state.data?.verifiedAt;
+ const checked=checkedAt?new Date(checkedAt).toLocaleString('en-GB',{timeZone:'Europe/London',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'overnight';
  return '<section class="l15-panel"><div class="l15-heading"><div><div class="eyebrow">FRIDAY 9 OCTOBER · MORNING REVIEW · PAPER BET</div>'+
  '<h2>Each-way Lucky 15</h2><p>Four separate races · 15 win combinations and 15 place combinations. Reviewed '+checked+'.</p></div><b>'+money(x.stake)+'</b></div>'+
  '<div class="l15-combinations"><span>4 singles</span><span>6 doubles</span><span>4 trebles</span><span>1 fourfold</span></div>'+
- '<p class="l15-note">£1 each way on 15 combinations = £30 total stake. Three legs sit near the top of their markets; the fourth is a higher-price form-based E/W choice, not Prime. Higher odds reduce implied win probability.</p>'+
+ '<div class="l15-price-rule '+(allPricesEligible?'l15-rule-ok':'l15-rule-warning')+'" role="status"><strong>Strict price floor: greater than 11/2</strong><span>'+validationText+'</span></div>'+
+ '<p class="l15-note">£1 each way on 15 combinations = £30 total stake. Every leg is at least 6/1 in this saved, unplaced paper ticket. The higher prices mean lower implied chances and cannot be classified as guaranteed or calibrated Prime tips.</p>'+
  '<p class="l15-note">House settlement policy: ¼ win odds for place returns; 1 place up to 4 runners, 2 places for 5–7, and 3 places for 8+. Actual bookmakers may use different terms.</p>'+
  '<div class="l15-legs">'+rows+'</div><div class="l15-outcome">'+(x.status==='settled'?'Return '+money(x.returnAmount)+' · P/L '+signMoney(x.returnAmount-x.stake):'£30 reserved in paper bank · Settlement pending all four results')+'</div>'+
- '<p class="l15-note">Morning quotes shown, not guaranteed accepted prices. This paper ticket is separate from individual selections and is not a real bookmaker bet. Starting prices are used for result settlement when published. Non-runners use provisional unit-factor treatment.</p></section>';
+ '<p class="l15-note">Reference prices may change, and real bookmakers can pay different place terms. Recheck all four runners, accepted prices and each-way places before treating the draft ticket as eligible. This is a virtual tracking ticket, not an actual bookmaker bet. Starting prices are used for paper settlement when published; non-runners use provisional unit-factor treatment.</p></section>';
 }
 
 function tracker(){
@@ -290,7 +301,7 @@ function liveStatus(){
  return '<div class="live-connection '+(connected?'live-connected':'live-disconnected')+'" role="status">'+note+'</div>';
 }
 
-function nav(){const upcoming=state.data?.snapshotDate>new Date().toLocaleDateString("en-CA",{timeZone:"Europe/London"});return [["today",upcoming?"Tomorrow":"Today"],["midshots","Mid Shots 10/1–18/1"],["longshots","Longshots 20/1+"],["lucky15","E/W Lucky 15"],["racecards","All runners"],["history","Results history"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
+function nav(){const upcoming=state.data?.snapshotDate>new Date().toLocaleDateString("en-CA",{timeZone:"Europe/London"});return [["today",upcoming?"Tomorrow":"Today"],["midshots","Mid Shots 6/1–18/1"],["longshots","Longshots 20/1+"],["lucky15","E/W Lucky 15"],["racecards","All runners"],["history","Results history"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
 function filters(){const x=["ALL","PRIME","STRONG","CONDITIONAL","WATCH"];return '<div class="meeting-tabs">'+x.map(f=>'<button data-filter="'+f+'" class="'+(state.filter===f?'active':'')+'">'+f+'</button>').join("")+'</div>'}
 function resultBadge(x){const r=resultInfo(x);return r?'<span class="result-badge '+r.cls+'">'+r.text+'</span>':''}
 function summaryBadges(x,type){
@@ -350,7 +361,7 @@ function today(){
  const picks=(d.todaySelections||[]).filter(x=>{const label=confidenceLabel(x);if(state.filter==="ALL")return true;if(state.filter==="WATCH")return label==="WATCH"||label==="RECHECK";return label===state.filter});
  return '<section class="page-intro"><div><div class="eyebrow">'+String(d.snapshotDate||"").toUpperCase()+' · GB + IRE</div><h2>'+(d.snapshotDate>new Date().toLocaleDateString('en-CA',{timeZone:'Europe/London'})?'Tomorrow\'s':'Today\'s')+' selections</h2><p>Selections are listed strictly by race time. Tap any runner to open the full reasoning, ratings, context and risk.</p></div><div class="quick-stats"><span><b>'+val(d.coverage?.meetings)+'</b> meetings</span><span><b>'+val(d.coverage?.races)+'</b> races screened</span><span><b>'+val((d.todaySelections||[]).length+(d.midshotsToday||[]).length+(d.longshotsToday||[]).length)+'</b> total selections</span><span><b>'+(d.todaySelections||[]).filter(primeOf).length+'</b> PRIME</span></div></section>'+morningCheckPanel()+filters()+listBlock(picks,"main","No selections match this filter.");
 }
-function midshots(){const d=state.data,ms=d.midshotsToday||[];return '<section class="page-intro mid-intro"><div><div class="eyebrow">10/1–18/1 WIN + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> candidates</span><span><b>10/1–18/1</b> price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No mid-shot selections currently qualify.")}
+function midshots(){const d=state.data,ms=d.midshotsToday||[];return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> candidates</span><span><b>6/1–18/1</b> price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No mid-shot selections currently qualify.")}
 function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section class="page-intro long-intro"><div><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ls.length+'</b> candidates</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No longshots currently qualify.")}
 function history(){
  const entries=[...(state.ledger?.entries||[])].sort((a,b)=>String(b.date||'')===String(a.date||'')?
