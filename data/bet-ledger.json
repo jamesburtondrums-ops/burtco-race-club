@@ -708,7 +708,12 @@
       "runnerCount": 17,
       "placesPaid": 3,
       "terms": "17-runner 1m2f Group 3; 3 places at 1/4 house odds; bookmaker terms vary",
-      "result": null
+      "result": {
+        "position": 11,
+        "status": "User reported",
+        "source": "User-reported 11th place; independent official finish and SP confirmation pending",
+        "updatedAt": "2026-10-09T15:58:20.501Z"
+      }
     },
     {
       "id": "2026-10-09|kempton|17:15|miss mambo|each-way",
@@ -809,7 +814,12 @@
           "selectionOdds": "12/1",
           "runnerCount": 17,
           "priceFloorStrictlyGreaterThan": "11/2",
-          "result": null,
+          "result": {
+            "position": 11,
+            "status": "User reported",
+            "source": "User-reported 11th place; independent official finish and SP confirmation pending",
+            "updatedAt": "2026-10-09T15:58:20.501Z"
+          },
           "confidenceTier": "FORM-STRONG E/W"
         }
       ],
@@ -981,13 +991,14 @@
     }
   ],
   "latestReportedResults": {
-    "checkedAt": "2026-10-09T13:30:27.158Z",
+    "checkedAt": "2026-10-09T15:58:20.501Z",
     "horses": [
       "Fast Track",
       "Beagle Bay",
       "Sweltering",
       "Theheatison",
-      "Flora Of Bermuda"
+      "Flora Of Bermuda",
+      "Naga"
     ],
     "pricesUnconfirmed": true
   }
