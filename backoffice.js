@@ -70,11 +70,18 @@ function render(report){
  ].join('')+'</div>';
  const signalRows=(research.factors||[]).map(f=>'<div class="research-factor"><strong>'+esc(f.name)+'</strong><small>'+esc(f.source)+'</small></div>').join('');
  const sources=(research.sources||[]).map(p=>'<a href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.title)+' ↗</a>').join('');
+ const tracks=(research.tracks||[]).map(course=>'<details class="course-profile"><summary><strong>'+esc(course.course)+'</strong><small>'+esc(course.surface)+' · '+esc(course.configuration)+'</small></summary>'+
+  '<div class="course-profile-body"><p><b>Track direction:</b> '+esc(course.direction)+'</p>'+
+  (course.details?Object.entries(course.details).map(([key,value])=>'<p><b>'+esc(key.replace(/([A-Z])/g,' $1'))+':</b> '+esc(value)+'</p>').join(''):'')+
+  '<p><b>Measured draw/pace bias:</b> Not yet quantified from a controlled historic sample.</p>'+
+  (course.sourceUrls||[]).map(url=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Course source ↗</a>').join(' ')+'</div></details>').join('');
+ const coursePanel='<div class="research-course-panel"><h3>Track-type profiles</h3><p>Course and distance are kept separate. No generic pace or draw bias is claimed without a comparable sample.</p><div class="course-profiles">'+tracks+'</div></div>';
  const researchPanel='<section class="sheet"><div class="section-title"><div><h2>Historical research laboratory</h2>'+
  '<p>Running style, track layout, handicap marks, race comments and sectional pace. Factor engineering runs in shadow mode until tested.</p></div></div>'+
  researchMetrics+
  '<p class="research-readiness"><strong>'+(coverage.quantitativeRetrainReady?'Archive threshold met — evaluate prospectively':'Historical validation not yet ready')+'</strong><span>'+esc(validation.reason||'Require an independent chronological held-out test before changing predictions')+'</span></p>'+
  '<div class="research-factors">'+signalRows+'</div>'+
+ coursePanel+
  '<div class="research-sources"><strong>Research references</strong><div>'+sources+'</div></div>'+
  '<p class="research-disclaimer">The existing paper ledger has '+esc(coverage.recordedTipBets??0)+' recorded bets over '+esc(coverage.recordedTipDates??0)+' race dates; it does not contain 500 verified full historical races. This panel never invents sectionals or retrospective performance figures. Changes are tested out-of-sample before use.</p></section>';
  const methodology=report.methodology||{};
