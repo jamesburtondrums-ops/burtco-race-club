@@ -374,3 +374,8 @@
 .l15-rule-ok{border:1px solid #c6d7cb;background:#eff5ed;color:#24533a}
 .l15-rule-warning{border:1px solid #ecc78d;background:#fff3e0;color:#80500e}
 @media(max-width:650px){.l15-price-rule{flex-direction:column;align-items:flex-start;padding:10px 12px}}
+
+/* PIN-gated operations shortcut; the reports themselves are server protected */
+.office-entry{flex:0 0 auto;text-decoration:none;white-space:nowrap;border:1px solid #c5d1c5;background:#eaf0e7;color:var(--green);font-weight:800;font-size:11px;padding:11px 12px;border-radius:9px}
+.office-entry:hover{border-color:#87ad8d;background:#deebde}
+@media(max-width:760px){.topbar-inner{flex-wrap:wrap;justify-content:space-between}.office-entry{order:1;padding:9px 10px;font-size:10px}.topbar .nav{order:2;flex-basis:100%;max-width:100%}}
