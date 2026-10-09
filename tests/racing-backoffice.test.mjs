@@ -14,6 +14,14 @@ assert.equal(days[0].cumulative.settledProfit,-15.76,'Historical settled P/L mat
 assert.equal(days[0].winStrikeRate,27.27,'Day-one win strike rate');
 assert.equal(days[0].ewPlaceRate,37.5,'Known-place strike rate matches site');
 assert.equal(days[0].cumulative.availableBank,984.24,'Bank after first day');
+const currentTicket=ledger.lucky15Tickets.find(t=>t.date==='2026-10-09');
+assert.equal(currentTicket.priceBasis,'early','Backoffice reads current early-price ticket setting');
+assert.equal(Math.round(settleTicket(currentTicket).returns*100)/100,79.75,'Backoffice Lucky15 payout follows published early prices');
+const fast=ledger.entries.find(e=>e.date==='2026-10-09'&&e.horse==='Fast Track');
+assert.equal(settleEntry(fast).returns,15,'Backoffice individual paper payout uses early Fast Track quote, SP reference ignored');
+const heat=ledger.entries.find(e=>e.date==='2026-10-09'&&e.horse==='Theheatison');
+assert.equal(settleEntry(heat).returns,22.5,'Backoffice individual paper payout uses early Theheatison quote');
+
 assert.ok(history.days.length>=2,'Snapshots persisted outside public assets');
 assert.ok(history.tuningLog.some(e=>e.key==='min-odds'),'Odds floor recorded in system change log');
 assert.ok(history.tuningLog.some(e=>e.key==='lucky15-price'),'Strict Lucky15 price history recorded');
