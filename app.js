@@ -301,7 +301,7 @@ function summaryBadges(x,type){
 function commonDetails(x){
  const q=contextOf(x);
  return '<div class="detail-grid">'+
-   (q?'<div class="detail-stat"><span>Win probability</span><b>'+val(q.winProbability!==undefined?Number(q.winProbability).toFixed(1)+'%':null)+'</b></div><div class="detail-stat"><span>Market rank</span><b>'+val(q.marketRank?'#'+q.marketRank:null)+'</b></div><div class="detail-stat"><span>Coverage</span><b>'+val(q.criticalCoverage!==undefined?q.criticalCoverage+'%':null)+'</b></div><div class="detail-stat"><span>Predictability</span><b>'+val(q.racePredictability!==undefined?q.racePredictability+'/100':null)+'</b></div>':'')+
+   (q?(x.calibratedWinProbability===true&&q.winProbability!==undefined?'<div class="detail-stat"><span>Calibrated win probability</span><b>'+Number(q.winProbability).toFixed(1)+'%</b></div>':'')+'<div class="detail-stat"><span>Market rank</span><b>'+val(q.marketRank?'#'+q.marketRank:null)+'</b></div><div class="detail-stat"><span>Coverage</span><b>'+val(q.criticalCoverage!==undefined?q.criticalCoverage+'%':null)+'</b></div><div class="detail-stat"><span>Predictability</span><b>'+val(q.racePredictability!==undefined?q.racePredictability+'/100':null)+'</b></div>':'')+
    (x.or!==undefined?'<div class="detail-stat"><span>OR</span><b>'+val(x.or)+'</b></div>':'')+
    (x.ts!==undefined?'<div class="detail-stat"><span>TS</span><b>'+val(x.ts)+'</b></div>':'')+
    (x.rpr!==undefined?'<div class="detail-stat"><span>RPR</span><b>'+val(x.rpr)+'</b></div>':'')+
