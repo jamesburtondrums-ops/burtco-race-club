@@ -43,11 +43,14 @@ assert.equal(tickets.filter(t=>t.id==='2026-10-09|ew-lucky15').length,1,'One his
 const ticket=tickets.find(t=>t.id==='2026-10-09|ew-lucky15');
 assert.equal(ticket.totalStake,30,'Lucky 15 total stake');
 assert.equal(ticket.legs.length,4,'Four legs');
-assert.deepEqual(Array.from(ticket.legs.map(l=>l.horse)),["Nuit d'Eclair","Theheatison","Archers Bay","Toca Madera"],'Revised morning Lucky15 runner list');
-assert.deepEqual(Array.from(ticket.legs.map(l=>l.runnerCount)),[16,16,11,18],'Current reported field sizes for ticket');
+assert.deepEqual(Array.from(ticket.legs.map(l=>l.horse)),["Fast Track","Sweltering","Theheatison","Naga"],'Revised morning Lucky15 runner list');
+assert.deepEqual(Array.from(ticket.legs.map(l=>l.runnerCount)),[13,15,16,17],'Current reported field sizes for ticket');
 assert.equal(ticket.placed,false,'Ticket is paper only and was not placed');
-assert.equal((ticket.versions||[]).length,1,'Previous overnight ticket safely versioned');
-assert.ok(!ticket.legs.some(l=>l.horse==='Flann Sunna'||l.horse==='Flora Of Bermuda'),'Short-price overnight legs removed');
+assert.equal((ticket.versions||[]).length,2,'Prior Lucky15 revisions retained for audit');
+assert.ok(!ticket.legs.some(l=>['Flann Sunna','Flora Of Bermuda','Archers Bay','Toca Madera',"Nuit d'Eclair"].includes(l.horse)),'Below-floor and non-runner legs excluded');
+assert.ok(racing.lucky15Excluded.some(l=>l.horse==="Nuit d'Eclair"&&l.result?.status==='NR'),'Racing TV confirmed non-runner excluded');
+assert.equal(ticket.minimumFractionalOddsExclusive,'11/2','User price floor stored on ticket');
+assert.ok(ticket.legs.every(l=>{const [n,d]=l.selectionOdds.split('/').map(Number);return Number.isFinite(n/d)&&n/d>5.5;}),'All four Lucky15 runners priced STRICTLY above 11/2');
 
 assert.equal(new Set(ticket.legs.map(l=>l.course+'|'+l.time)).size,4,'All four Lucky 15 legs in different races');
 const allVoid=JSON.parse(JSON.stringify(ticket));
@@ -65,21 +68,26 @@ assert.match(appElement.innerHTML,/data-refresh-results/,'Manual refresh button'
 assert.ok(appElement.innerHTML.includes('sportinglife.com/racing/fast-results'),'Fast results source');
 assert.ok(appElement.innerHTML.includes('£'+bank.toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2})),'Bankroll display matches ledger');
 if(racing.snapshotDate==='2026-10-09'){
- assert.equal(racing.todaySelections.length,8,'Eight research-rated win selections');
- assert.equal(racing.todaySelections.filter(x=>x.v42?.isPrime).length,3,'Three form-Prime win selections');
+ assert.equal(racing.todaySelections.length,5,'Five value-priced main selections');
+ assert.equal(racing.todaySelections.filter(x=>x.v42?.isPrime).length,1,'One relative Prime profile at acceptable odds');
  assert.equal(ledger.entries.filter(e=>e.date==='2026-10-08').length,23,'Previous day stakes remain unchanged');
  assert.equal(racing.todaySelections.filter(x=>x.horse==='Archers Bay').length,1,'No duplicate Archers Bay row');
  assert.equal((racing.todaySelections.length+racing.midshotsToday.length+racing.longshotsToday.length),10,'Ten selections across all categories');
- assert.equal(racing.midshotsToday.length,1,'Only one higher-confidence Friday midshot');
+ assert.equal(racing.midshotsToday.length,4,'Four priced 6/1-18/1 midshots');
  assert.equal(racing.longshotsToday.length,1,'One Friday longshot');
  assert.equal(ledger.entries.filter(e=>e.date==='2026-10-09').length,10,'Ten Friday paper singles');
+ const todayBets=ledger.entries.filter(e=>e.date==='2026-10-09');
+ assert.ok(todayBets.every(b=>{const m=String(b.selectionOdds).match(/^(\d+)\/(\d+)$/);return m&&Number(m[1])/Number(m[2])>=1;}),'No odds-on individual selections retained');
+ assert.equal(racing.midshotsPolicy.minOdds,'6/1','Midshot band lowered to 6/1');
  assert.equal((racing.racecardLinks||[]).length,6,'Friday runner cards available');
  assert.ok(racing.morningRecheck?.scheduledRaces===47,'Friday's six-meeting review recorded');
  app.state.view='lucky15';app.render();
- assert.match(appElement.innerHTML,/Nuit d.Eclair/,'Friday refreshed Lucky15 displayed');
- assert.match(appElement.innerHTML,/Archers Bay/,'Near-Prime choice displayed');
+ assert.match(appElement.innerHTML,/Sweltering/,'New >11/2 Lucky15 replacement displayed');
+ assert.match(appElement.innerHTML,/Strict price floor/,'User strict price floor visible');
+ assert.match(appElement.innerHTML,/4 of 4 legs strictly above 11\/2/,'All four qualifying legs visible');
+ assert.match(appElement.innerHTML,/Fast Track/,'Form-reviewed midshot included in Lucky15');
  assert.match(appElement.innerHTML,/Evidence and risks/,'Runner research visible');
- assert.doesNotMatch(appElement.innerHTML,/Flann Sunna/,'Removed old Lucky15 runner absent');
+ assert.doesNotMatch(appElement.innerHTML,/Flann Sunna|Nuit d.Eclair|Toca Madera/,'Short-priced and withdrawn Lucky15 legs absent');
  app.state.view='racecards';app.render();
  assert.match(appElement.innerHTML,/All runners/,'All runners accessible');
 }
