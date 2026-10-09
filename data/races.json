@@ -142,6 +142,12 @@
             "detail": "Not established"
           }
         ]
+      },
+      "result": {
+        "position": 5,
+        "status": "User reported",
+        "source": "User-reported finishing position; published result and SP not independently verified",
+        "updatedAt": "2026-10-09T13:02:00.850Z"
       }
     },
     {
@@ -466,7 +472,13 @@
       "risk": "Only two years old, contested Group 3 sprint with 13 runners; pace, draw and rivals including Flann Sunna and In The Black may spoil the advantage. Morning best prices and bookmaker place terms differ.",
       "source": "Sporting Life tips / Racing Post / HorseRacing.net / Sky Bet",
       "sourceUrl": "https://www.sportinglife.com/racing/fast-cards/120816/2026-10-09/newmarket",
-      "researchUpdatedAt": "2026-10-09T07:31:03.493Z"
+      "researchUpdatedAt": "2026-10-09T07:31:03.493Z",
+      "result": {
+        "position": 3,
+        "status": "User reported",
+        "source": "User-reported finishing position; published result and SP not independently verified",
+        "updatedAt": "2026-10-09T13:02:00.850Z"
+      }
     },
     {
       "horse": "Theheatison",
@@ -617,7 +629,13 @@
       "risk": "Only two career runs, unproven in Group company and at the Rowley Mile; a step up from novice class and the 15-runner field create serious uncertainty. This is a conditional each-way ticket leg rather than a Prime-calibrated selection.",
       "source": "Timeform Newmarket 13:50 / Racing TV / Oddschecker",
       "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1350/36/2/godolphin-lifetime-care-oh-so-sharp-stakes",
-      "researchUpdatedAt": "2026-10-09T07:33:11.997Z"
+      "researchUpdatedAt": "2026-10-09T07:33:11.997Z",
+      "result": {
+        "position": 2,
+        "status": "User reported",
+        "source": "User-reported finishing position; published result and SP not independently verified",
+        "updatedAt": "2026-10-09T13:02:00.850Z"
+      }
     }
   ],
   "midshotsPolicy": {
@@ -1038,5 +1056,24 @@
       "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
       "excludedAt": "2026-10-09T07:33:11.997Z"
     }
-  ]
+  ],
+  "latestReportedResults": {
+    "checkedAt": "2026-10-09T13:02:00.850Z",
+    "reportedBy": "user",
+    "horses": [
+      {
+        "horse": "Fast Track",
+        "position": 3
+      },
+      {
+        "horse": "Beagle Bay",
+        "position": 5
+      },
+      {
+        "horse": "Sweltering",
+        "position": 2
+      }
+    ],
+    "awaitingPublishedResultsAndSP": true
+  }
 }
