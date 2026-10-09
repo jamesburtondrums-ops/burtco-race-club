@@ -1,13 +1,14 @@
 {
   "snapshotDate": "2026-10-09",
-  "verifiedAt": "2026-10-08T22:00:00+01:00",
-  "mode": "OVERNIGHT / PRE-RACE: selective four-runner paper shortlist",
+  "verifiedAt": "2026-10-09T06:53:15.918Z",
+  "mode": "FRIDAY MORNING RECHECK — selective four singles, four-leg revised EW Lucky15",
   "coverage": {
     "meetings": 6,
     "races": 47,
-    "scope": "Six GB and Ireland racecards reviewed; four individual selections and two Lucky 15-only runners",
+    "scope": "All 47 GB & IRE races listed and reviewed by meeting, focused checks on runners, non-runners, odds, class, pace, form and going for the retained selections",
     "publishedDate": "2026-10-08",
-    "selectedIndividuals": 4
+    "selectedIndividuals": 4,
+    "lastReviewedAt": "2026-10-09T06:53:15.918Z"
   },
   "meetings": [
     {
@@ -87,7 +88,7 @@
         "JAMES DOYLE"
       ],
       "reason": "Best balance of proven class and usable win price in the trimmed list. Course-and-distance evidence, RPR126 and TS114 stand out in a six-runner Group 2; James Doyle retained and a clear market leader.",
-      "risk": "Strong opposition in a Group 2 and only two paid places under the paper-tracker rules. Confirm going and any market drift in the morning.",
+      "risk": "Group 2 with six runners, and a strong Pina Sonata challenger who was faster than the benchmark in a similar 7f Group race. Only two places under paper rules. Recheck the going and short price.",
       "source": "HorseRacing.net / Racing TV / Racing Post",
       "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26",
       "v42": {
@@ -128,7 +129,9 @@
             "detail": "Group company and small paid-place allowance"
           }
         ]
-      }
+      },
+      "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
+      "currentGoing": "Good (morning Newmarket report)"
     },
     {
       "horse": "Musical Times",
@@ -147,9 +150,9 @@
         "RPR 123",
         "SHORT PRICE"
       ],
-      "reason": "Clear pure-win candidate: unbeaten in three, progressive RPR123 at the mile, William Buick aboard for Charlie Appleby. Strongest ratings-and-market consensus on the Newmarket Group 1 card.",
+      "reason": "Clear pure-win candidate: unbeaten in three, progressive RPR123 at the mile, William Buick aboard for Charlie Appleby. Strongest ratings-and-market consensus on the Newmarket Group 1 card. Rechecked as highest-rated by Timeform (126p) with runner odds-on; market leader remains, but this is still not a certain win.",
       "risk": "Odds-on means limited reward for a loss. High-class improving two-year-old rivals and a change in going remain risks; no runner has a guaranteed win.",
-      "source": "HorseRacing.net / Racing TV / The Independent",
+      "source": "Timeform / Racing Post / Racing TV",
       "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26",
       "v42": {
         "isPrime": true,
@@ -189,7 +192,9 @@
             "detail": "The short price may already fully reflect superiority"
           }
         ]
-      }
+      },
+      "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
+      "currentGoing": "Good (morning Newmarket report)"
     }
   ],
   "midshotsToday": [
@@ -213,9 +218,12 @@
         "16 RUNNERS"
       ],
       "reason": "One of the better 10/1–18/1 place profiles: form 143252 includes several recent top-three finishes. RPR94 compared with OR80 offers a useful ratings angle; low weight and experienced Silvestre De Sousa in a valuable York 7f novice event.",
-      "risk": "Sixteen-runner juvenile race is inherently unpredictable. Ground listed good with good-to-soft patches; race pace and position may decide the outcome. A place possibility, not a high-probability winner.",
-      "source": "HorseRacing.net / York declared card",
-      "sourceUrl": "https://www.horseracing.net/york/09-10-26"
+      "risk": "Despite reliable recent places, at 11/1 in a 16-runner juvenile Class 2 it is NOT a Prime-probability runner. Market now around 11/1, versus yesterday's paper selection 14/1; draw 12 and large-field traffic are substantial risks.",
+      "source": "Sporting Life live show / Racing Post / Timeform",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-09/york/live-show/942533/british-ebf-100000-final-colts-and-geldings",
+      "currentOdds": "11/1",
+      "confidenceTier": "VALUE E/W — BELOW PRIME",
+      "researchUpdatedAt": "2026-10-09T06:53:15.918Z"
     }
   ],
   "longshotsToday": [
@@ -239,38 +247,21 @@
         "22/1 EARLY QUOTE"
       ],
       "reason": "Among big-priced runners, a relatively credible place case: form 341223 shows repeated top-three finishes at strong level, RPR112, and a stepping-back-up-to-a-mile argument. Racing TV's analyst also notes consistency and a good-value outsider profile.",
-      "risk": "Same race as dominant favourite Musical Times; winning chances are low and even third place is uncertain in Group 1 company. This is a place-oriented longshot, NOT a high-confidence win selection.",
+      "risk": "Group 1 opponent Musical Times is much stronger on ratings. Dancing Destiny was over eight lengths beaten in her last Group 1 third, and some bookmakers offer only 18/1; do NOT qualify for 20/1+ unless actual quote is at least 20/1.",
       "source": "HorseRacing.net / Racing TV analyst",
-      "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26"
+      "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26",
+      "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
+      "currentGoing": "Good (morning Newmarket report)",
+      "currentOdds": "20/1–25/1, prices vary"
     }
   ],
   "lucky15Only": [
     {
-      "horse": "Flann Sunna",
-      "course": "Newmarket",
-      "time": "13:15",
-      "odds": "5/2",
-      "runnerCount": 13,
-      "or": 104,
-      "ts": 99,
-      "rpr": 113,
-      "tags": [
-        "LUCKY 15 LEG ONLY",
-        "GROUP 3 / £42,533 WINNER",
-        "WILLIAM BUICK",
-        "FORM 1153"
-      ],
-      "reason": "Reasonable 5f Group 3 place profile at around 5/2: RPR113, winner twice before recent third and William Buick booking. Kept as a ticket leg instead of adding another £10 individual bet.",
-      "risk": "Group 3 sprint with 13 starters; 5f pace and draw can produce sizeable reversals.",
-      "source": "HorseRacing.net / The Independent / Racing TV",
-      "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26"
-    },
-    {
       "horse": "Nuit d'Eclair",
       "course": "Newmarket",
       "time": "13:50",
-      "odds": "9/2",
-      "runnerCount": 16,
+      "odds": "5/1",
+      "runnerCount": 15,
       "or": 100,
       "ts": 93,
       "rpr": 107,
@@ -278,12 +269,75 @@
         "LUCKY 15 LEG ONLY",
         "GROUP 3 / £42,533 WINNER",
         "RECENT FORM 1423",
-        "3 PAID PLACES"
+        "3 PAID PLACES",
+        "CONSISTENT GROUP 3 FORM",
+        "FORM 1423",
+        "15 RUNNERS"
       ],
-      "reason": "Better evidence-backed ticket leg than a hopeful wind-operation turnaround: progressive two-year-old with form 1423, recent placed efforts, RPR107 and a roughly 9/2 quote in the 16-runner Oh So Sharp Stakes. This is a place-value leg, not a standalone paper bet.",
-      "risk": "Sixteen-runner juvenile Group 3 is competitive. Draw, pace and finishing speed may undermine early place expectations.",
-      "source": "HorseRacing.net / Racing TV",
-      "sourceUrl": "https://www.horseracing.net/newmarket/09-10-26"
+      "reason": "Proven placed form at Group level (1423), a recent Salisbury Group 3 third, draw 3, RPR 107, TS 93 and market standing near 5/1. One of the better qualifying alternatives to short-price Lucky 15 legs.",
+      "risk": "Two-year-old Group 3 with 15 declared after a morning reduction, a step to 7f and possible course/ground pace bias. Early quote not guaranteed.",
+      "source": "Timeform / Racing Post / HorseRacing.net",
+      "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1350/36/2",
+      "currentGoing": "Good (Racing Post revised morning report)",
+      "confidenceTier": "NEAR-PRIME E/W",
+      "researchUpdatedAt": "2026-10-09T06:53:15.918Z"
+    },
+    {
+      "horse": "Archers Bay",
+      "course": "Newmarket",
+      "time": "15:30",
+      "odds": "4/1",
+      "runnerCount": 10,
+      "or": 100,
+      "ts": 104,
+      "rpr": 112,
+      "currentGoing": "Good (morning report; recheck)",
+      "jockey": "Ryan Moore",
+      "trainer": "Marco Botti",
+      "tags": [
+        "LUCKY 15 ONLY",
+        "NEAR-PRIME E/W",
+        "RYAN MOORE",
+        "C&D FORM",
+        "RPR 112",
+        "LATEST 2ND IN LISTED",
+        "10 RUNNERS"
+      ],
+      "confidenceTier": "NEAR-PRIME E/W",
+      "reason": "RPR 112/TS 104, won over 1m4f at Ascot, then runner-up in a Listed race over this Newmarket course and distance; just 1lb higher and Ryan Moore booked. Multiple independent cards shortlist him near the head of the market.",
+      "risk": "A heritage handicap, top weight, and other improving three-year-olds create more uncertainty than the favourable form figures suggest. Recent heavy scrutiny of price; 4/1 is only an observed morning quote.",
+      "source": "Timeform / Racing Post / HorseRacing.net",
+      "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1530/36/5",
+      "researchUpdatedAt": "2026-10-09T06:53:15.918Z"
+    },
+    {
+      "horse": "Toca Madera",
+      "course": "York",
+      "time": "16:25",
+      "odds": "3/1",
+      "runnerCount": 18,
+      "or": 95,
+      "ts": 98,
+      "rpr": 108,
+      "currentGoing": "Good (good to soft in places)",
+      "draw": 2,
+      "jockey": "Daniel Tudhope",
+      "trainer": "David O'Meara",
+      "tags": [
+        "LUCKY 15 ONLY",
+        "NEAR-PRIME E/W",
+        "DRAW 2",
+        "TRACK FORM",
+        "RECENT WIN",
+        "TOP MARKET",
+        "18 RUNNERS"
+      ],
+      "confidenceTier": "NEAR-PRIME E/W",
+      "reason": "Drawn 2 where low numbers may be favoured on York's 5f course; form 530201 and a latest Beverley conditions win. RPR 108 compared with OR 95, proven York form and Daniel Tudhope riding support a strong each-way profile.",
+      "risk": "18-runner Class 3 sprint; busy early pace, top weight and track-bias uncertainty are real. A good draw and market support cannot guarantee a place.",
+      "source": "At The Races / Sporting Life / Racing Post",
+      "sourceUrl": "https://m.attheraces.com/racecard/York/09-October-2026/1625",
+      "researchUpdatedAt": "2026-10-09T06:53:15.918Z"
     }
   ],
   "midshotsPolicy": {
@@ -314,13 +368,16 @@
     "numberOfLines": 15,
     "totalCost": 30,
     "legHorses": [
-      "Flann Sunna",
       "Nuit d'Eclair",
       "Theheatison",
-      "Flora Of Bermuda"
+      "Archers Bay",
+      "Toca Madera"
     ],
     "terms": "£1 each way per combination: 15 win lines + 15 place lines. 1/4 odds place portion, paid places based on actual runner count. Not bookmaker terms.",
-    "recommendationStatus": "Paper ticket proposed overnight; prices and non-runners require Friday verification"
+    "recommendationStatus": "Friday morning refreshed — paper ticket only; confirm prices and non-runners pre-off",
+    "priceRange": "3/1–11/1",
+    "priceRationale": "Raised the shorter odds on two prior legs; three of four now near the head of their respective markets, with one higher-price form-based each-way leg",
+    "updatedAt": "2026-10-09T06:53:15.918Z"
   },
   "racecardLinks": [
     {
@@ -371,5 +428,43 @@
       "url": "https://www.horseracing.net/dundalk/09-10-26",
       "going": "Polytrack"
     }
+  ],
+  "morningRecheck": {
+    "updatedAt": "2026-10-09T06:53:15.918Z",
+    "meetingCount": 6,
+    "scheduledRaces": 47,
+    "going": {
+      "Newmarket": "Good (Racing Post morning update)",
+      "York": "Good; good to soft in places",
+      "Chepstow": "Good to soft; good in places",
+      "Kempton": "Standard to slow",
+      "Downpatrick": "Good",
+      "Dundalk": "Standard"
+    },
+    "adjustments": [
+      {
+        "course": "Newmarket",
+        "time": "13:50",
+        "oldRunners": 16,
+        "currentRunners": 15
+      },
+      {
+        "course": "Newmarket",
+        "time": "15:30",
+        "oldRunners": 11,
+        "currentRunners": 10
+      }
+    ],
+    "sources": [
+      "Racing Post racecard 2026-10-09",
+      "Sporting Life live show 2026-10-09",
+      "Timeform odds and analysis",
+      "At The Races racecards"
+    ],
+    "comments": "Overnight selections were screened against morning declared fields, market changes, published analyst comments and going. Quote exact bookmaker odds and E/W place terms before using real money."
+  },
+  "lucky15RemovedLegs": [
+    "Flann Sunna",
+    "Flora Of Bermuda"
   ]
 }
