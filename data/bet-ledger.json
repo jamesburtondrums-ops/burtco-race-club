@@ -637,7 +637,12 @@
       "placesPaid": null,
       "runnerCount": 18,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 5,
+        "status": "User reported",
+        "source": "User-reported finishing position; published result and SP not independently verified",
+        "updatedAt": "2026-10-09T13:02:00.850Z"
+      }
     },
     {
       "id": "2026-10-09|kempton|19:15|gunfighter|win",
@@ -671,7 +676,12 @@
       "runnerCount": 13,
       "placesPaid": 3,
       "terms": "13-runner 5f Group 3; 3 places at 1/4 house odds; bookmaker terms vary",
-      "result": null
+      "result": {
+        "position": 3,
+        "status": "User reported",
+        "source": "User-reported finishing position; published result and SP not independently verified",
+        "updatedAt": "2026-10-09T13:02:00.850Z"
+      }
     },
     {
       "id": "2026-10-09|newmarket|16:45|naga|each-way",
@@ -744,7 +754,12 @@
           "selectionOdds": "9/1",
           "runnerCount": 13,
           "priceFloorStrictlyGreaterThan": "11/2",
-          "result": null,
+          "result": {
+            "position": 3,
+            "status": "User reported",
+            "source": "User-reported finishing position; published result and SP not independently verified",
+            "updatedAt": "2026-10-09T13:02:00.850Z"
+          },
           "confidenceTier": "FORM-STRONG E/W"
         },
         {
@@ -754,7 +769,12 @@
           "selectionOdds": "8/1",
           "runnerCount": 15,
           "priceFloorStrictlyGreaterThan": "11/2",
-          "result": null,
+          "result": {
+            "position": 2,
+            "status": "User reported",
+            "source": "User-reported finishing position; published result and SP not independently verified",
+            "updatedAt": "2026-10-09T13:02:00.850Z"
+          },
           "confidenceTier": "GROUP STEP / EACH-WAY"
         },
         {
@@ -944,5 +964,14 @@
       "excludedAt": "2026-10-09T07:31:03.493Z",
       "reason": "User minimum odds 1/1; odds-on runners are not tips and should not affect bankroll or strike rates"
     }
-  ]
+  ],
+  "latestReportedResults": {
+    "checkedAt": "2026-10-09T13:02:00.850Z",
+    "horses": [
+      "Fast Track",
+      "Beagle Bay",
+      "Sweltering"
+    ],
+    "pricesUnconfirmed": true
+  }
 }
