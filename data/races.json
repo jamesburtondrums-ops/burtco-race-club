@@ -550,7 +550,13 @@
       "risk": "17-runner Group 3 is a sharp increase in pace pressure; low draw 1 may need a clean passage, and Timeform and Racing TV list materially shorter 8/1 quotes than Sporting Life's 12/1. Strong last-time form does not establish a high win probability.",
       "source": "Sporting Life Newmarket 16:45 / Racing Post / Racing TV",
       "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-09/newmarket/live-show/942522/newmarket-pony-academy-pride-stakes-fillies-and-mares-group-3",
-      "researchUpdatedAt": "2026-10-09T07:31:03.493Z"
+      "researchUpdatedAt": "2026-10-09T07:31:03.493Z",
+      "result": {
+        "position": 11,
+        "status": "User reported",
+        "source": "User-reported 11th place; independent official finish and SP confirmation pending",
+        "updatedAt": "2026-10-09T15:58:20.501Z"
+      }
     },
     {
       "horse": "Miss Mambo",
@@ -1070,7 +1076,7 @@
     }
   ],
   "latestReportedResults": {
-    "checkedAt": "2026-10-09T13:30:27.158Z",
+    "checkedAt": "2026-10-09T15:58:20.501Z",
     "reportedBy": "user",
     "horses": [
       {
@@ -1092,6 +1098,10 @@
       {
         "horse": "Flora Of Bermuda",
         "position": 2
+      },
+      {
+        "horse": "Naga",
+        "position": 11
       }
     ],
     "awaitingPublishedResultsAndSP": true
