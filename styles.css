@@ -365,3 +365,12 @@
 .selection-confidence-note>strong{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#547060}
 .selection-confidence-note>span{font-size:11px;font-weight:700;color:#23523b}
 @media(max-width:650px){.selection-confidence-note{padding:10px;align-items:flex-start;flex-direction:column;gap:4px}.selection-tier.strong,.selection-tier.watch{white-space:nowrap}}
+
+
+/* Lucky 15 eligibility is a price and runner rule, not an implied promise of winning. */
+.l15-price-rule{margin:14px 0 5px;border-radius:11px;padding:11px 13px;display:flex;flex-wrap:wrap;gap:5px 12px;align-items:center;font-size:12px;line-height:1.45}
+.l15-price-rule strong{font-weight:800}
+.l15-price-rule span{font-size:11px}
+.l15-rule-ok{border:1px solid #c6d7cb;background:#eff5ed;color:#24533a}
+.l15-rule-warning{border:1px solid #ecc78d;background:#fff3e0;color:#80500e}
+@media(max-width:650px){.l15-price-rule{flex-direction:column;align-items:flex-start;padding:10px 12px}}
