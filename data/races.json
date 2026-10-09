@@ -1,6 +1,6 @@
 {
   "snapshotDate": "2026-10-09",
-  "verifiedAt": "2026-10-09T06:53:15.918Z",
+  "verifiedAt": "2026-10-09T07:14:34.314Z",
   "mode": "FRIDAY MORNING DEEP RECHECK — 10 singles; 8 WIN, 1 midshot E/W, 1 longshot E/W; Lucky15 unchanged",
   "coverage": {
     "meetings": 6,
@@ -278,7 +278,7 @@
         ]
       },
       "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "currentGoing": "Good (morning Newmarket report)",
+      "currentGoing": "Good to firm (meeting-level Racing Post listing; recheck live race going)",
       "confidenceTier": "STRONG — COMPETITIVE GROUP 2",
       "reassessment": {
         "decision": "RETAIN / DOWNGRADE FROM PRIME",
@@ -347,7 +347,7 @@
         ]
       },
       "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "currentGoing": "Good (morning Newmarket report)",
+      "currentGoing": "Good to firm (meeting-level Racing Post listing; recheck live race going)",
       "confidenceTier": "PRIME WIN — SHORT ODDS",
       "reassessment": {
         "decision": "RETAIN PRIME",
@@ -499,7 +499,8 @@
             "detail": "Reliable historical splits not established"
           }
         ]
-      }
+      },
+      "currentGoing": "Good to firm (meeting-level Racing Post listing; recheck live race going)"
     },
     {
       "horse": "Cosmic Connection",
@@ -707,7 +708,7 @@
       "source": "HorseRacing.net / Racing TV analyst",
       "sourceUrl": "https://m.attheraces.com/racecard/Newmarket/09-October-2026/1457",
       "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "currentGoing": "Good (morning Newmarket report)",
+      "currentGoing": "Good to firm (meeting-level Racing Post listing; recheck live race going)",
       "currentOdds": "22/1",
       "reassessment": {
         "decision": "RETAIN AS SOLE SPECULATIVE LONGSHOT / MARKET CONDITIONAL",
@@ -723,7 +724,7 @@
       "course": "Newmarket",
       "time": "13:50",
       "odds": "5/1",
-      "runnerCount": 15,
+      "runnerCount": 16,
       "or": 100,
       "ts": 93,
       "rpr": 107,
@@ -740,7 +741,7 @@
       "risk": "Two-year-old Group 3 with 15 declared after a morning reduction, a step to 7f and possible course/ground pace bias. Early quote not guaranteed.",
       "source": "Timeform / Racing Post / HorseRacing.net",
       "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1350/36/2",
-      "currentGoing": "Good (Racing Post revised morning report)",
+      "currentGoing": "Good to firm (meeting-level Racing Post listing; recheck live race going)",
       "confidenceTier": "NEAR-PRIME E/W",
       "researchUpdatedAt": "2026-10-09T06:53:15.918Z"
     },
@@ -834,7 +835,7 @@
       "first": "13:15",
       "last": "17:20",
       "url": "https://www.racingpost.com/racecards/2026-10-09/",
-      "going": "Good (Racing Post morning update)",
+      "going": "Good to firm (meeting morning; recheck)",
       "status": "Latest venue card (morning going and fields refreshed)"
     },
     {
@@ -880,29 +881,38 @@
     }
   ],
   "morningRecheck": {
-    "updatedAt": "2026-10-09T06:53:15.918Z",
+    "updatedAt": "2026-10-09T07:14:34.314Z",
     "meetingCount": 6,
     "scheduledRaces": 47,
     "going": {
-      "Newmarket": "Good (Racing Post morning update)",
-      "York": "Good; good to soft in places",
-      "Chepstow": "Good to soft; good in places",
-      "Kempton": "Standard to slow",
+      "Newmarket": "Good to firm (meeting-level morning listing; recheck each race)",
+      "York": "Good, good to soft in places",
+      "Chepstow": "Good to soft, good in places",
+      "Kempton": "Standard to slow (Polytrack)",
       "Downpatrick": "Good",
-      "Dundalk": "Standard"
+      "Dundalk": "Standard (Polytrack)"
     },
     "adjustments": [
       {
         "course": "Newmarket",
         "time": "13:50",
-        "oldRunners": 16,
-        "currentRunners": 15
+        "currentRunners": 16
       },
       {
         "course": "Newmarket",
         "time": "15:30",
-        "oldRunners": 11,
-        "currentRunners": 10
+        "currentRunners": 11
+      },
+      {
+        "course": "York",
+        "time": "15:18",
+        "currentRunners": 5
+      },
+      {
+        "course": "Kempton",
+        "time": "18:15",
+        "currentRunners": 11,
+        "note": "Racing Post lists 11; another provider had 12"
       }
     ],
     "sources": [
@@ -911,56 +921,87 @@
       "Timeform odds and analysis",
       "At The Races racecards"
     ],
-    "comments": "Overnight selections were screened against morning declared fields, market changes, published analyst comments and going. Quote exact bookmaker odds and E/W place terms before using real money.",
+    "comments": "Rechecked against 9 Oct Racing Post, Sporting Life, HorseRacing.net, Timeform, Racing TV; live race cards/going may differ by timestamp. Full verified trainer-course histories and pace sectionals unavailable for some runners.",
     "selectedHorses": [
+      {
+        "horse": "Beagle Bay",
+        "course": "York",
+        "time": "13:30",
+        "odds": "2/1",
+        "priority": "FORM POSITIVE / HIGH FIELD RISK",
+        "field": 18
+      },
+      {
+        "horse": "Saint Jeannais",
+        "course": "Chepstow",
+        "time": "13:57",
+        "odds": "8/11",
+        "priority": "STRONG — NOT PRIME",
+        "field": 10
+      },
       {
         "horse": "Flora Of Bermuda",
         "course": "Newmarket",
         "time": "14:25",
         "odds": "13/8",
-        "priority": "PRIME"
+        "priority": "STRONG — COMPETITIVE GROUP 2",
+        "field": 6
       },
       {
         "horse": "Musical Times",
         "course": "Newmarket",
         "time": "14:57",
         "odds": "1/2",
-        "priority": "PRIME"
+        "priority": "PRIME WIN — SHORT ODDS",
+        "field": 8
       },
       {
-        "horse": "Theheatison",
+        "horse": "Sharadd",
         "course": "York",
-        "time": "14:05",
-        "odds": "11/1",
-        "priority": "VALUE E/W — BELOW PRIME"
-      },
-      {
-        "horse": "Dancing Destiny",
-        "course": "Newmarket",
-        "time": "14:57",
-        "odds": "20/1–25/1, prices vary",
-        "priority": "SPECULATIVE 20/1+ PLACE CASE"
-      },
-      {
-        "horse": "Nuit d'Eclair",
-        "course": "Newmarket",
-        "time": "13:50",
-        "odds": "5/1",
-        "priority": "NEAR-PRIME E/W"
+        "time": "15:18",
+        "odds": "3/10",
+        "priority": "PRIME FORM / POOR PRICE",
+        "field": 5
       },
       {
         "horse": "Archers Bay",
         "course": "Newmarket",
         "time": "15:30",
         "odds": "4/1",
-        "priority": "NEAR-PRIME E/W"
+        "priority": "STRONG — HERITAGE HANDICAP",
+        "field": 11
       },
       {
-        "horse": "Toca Madera",
+        "horse": "Cosmic Connection",
+        "course": "Chepstow",
+        "time": "15:43",
+        "odds": "15/8",
+        "priority": "PRIME FORM / CLASS RISK",
+        "field": 11
+      },
+      {
+        "horse": "Sin City",
+        "course": "Kempton",
+        "time": "18:15",
+        "odds": "4/6",
+        "priority": "CONDITIONAL WIN — LAYOFF",
+        "field": 11
+      },
+      {
+        "horse": "Theheatison",
         "course": "York",
-        "time": "16:25",
-        "odds": "3/1",
-        "priority": "NEAR-PRIME E/W"
+        "time": "14:05",
+        "odds": "11/1",
+        "priority": "VALUE E/W — HIGH FIELD RISK",
+        "field": 16
+      },
+      {
+        "horse": "Dancing Destiny",
+        "course": "Newmarket",
+        "time": "14:57",
+        "odds": "22/1",
+        "priority": "SPECULATIVE E/W — BELOW PRIME",
+        "field": 8
       }
     ]
   },
@@ -969,7 +1010,7 @@
     "Flora Of Bermuda"
   ],
   "reassessment": {
-    "checkedAt": "2026-10-09T07:12:53.549Z",
+    "checkedAt": "2026-10-09T07:14:34.314Z",
     "originalFour": {
       "Flora": "RETAIN / DOWNGRADE",
       "Musical": "RETAIN PRIME",
@@ -997,5 +1038,23 @@
       "Timeform odds",
       "At The Races form and odds"
     ]
+  },
+  "reviewCompleteness": {
+    "allMeetings": [
+      "Newmarket",
+      "York",
+      "Chepstow",
+      "Kempton",
+      "Dundalk",
+      "Downpatrick"
+    ],
+    "scheduledRaces": 47,
+    "screenType": "Card-level cross-check; detailed selected-runner review",
+    "unverified": [
+      "Complete horse-by-horse sectionals",
+      "Exact historical trainer/course/type strike rates for every trainer",
+      "Late market / non-runners may change after last check"
+    ],
+    "methodNote": "No claim of retrospective quantitative validation or high-precision win accuracy."
   }
 }
