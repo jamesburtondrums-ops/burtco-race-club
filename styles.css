@@ -357,3 +357,11 @@
 .l15-leg-research p.l15-leg-risk{color:#805e31}
 .l15-leg-research a{color:var(--green);font-weight:700}
 @media(max-width:650px){.morning-check{padding:12px 13px;margin:2px 0 13px}.morning-check>div{align-items:flex-start}.morning-check p{font-size:11px}.l15-leg-research{padding-left:35px}.l15-leg small.l15-near-prime,.l15-leg small.l15-value{font-size:9px}}
+
+/* Explain relative confidence tiers without claiming calibrated probabilities. */
+.selection-tier.strong{background:#e1eee6;color:#236246}
+.selection-tier.watch{background:#f2e8d5;color:#825a1f}
+.selection-confidence-note{margin:11px 0;border:1px solid #d4dfd5;border-radius:10px;padding:10px 12px;background:#f1f6ef;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.selection-confidence-note>strong{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#547060}
+.selection-confidence-note>span{font-size:11px;font-weight:700;color:#23523b}
+@media(max-width:650px){.selection-confidence-note{padding:10px;align-items:flex-start;flex-direction:column;gap:4px}.selection-tier.strong,.selection-tier.watch{white-space:nowrap}}
