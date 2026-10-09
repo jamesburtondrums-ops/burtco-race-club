@@ -42,6 +42,17 @@ const tickets=ledger.lucky15Tickets||[];
 assert.equal(tickets.filter(t=>t.id==='2026-10-09|ew-lucky15').length,1,'One historical Lucky 15 ticket, not duplicated');
 const ticket=tickets.find(t=>t.id==='2026-10-09|ew-lucky15');
 assert.equal(ticket.totalStake,30,'Lucky 15 total stake');
+assert.equal(ticket.priceBasis,'early','Lucky15 uses locked early prices rather than SP');
+assert.ok(ticket.legs.every(l=>l.priceBasis==='early'),'Each Lucky15 leg has early-price basis');
+assert.equal(Math.round(app.lucky15Calc(ticket).returnAmount*100)/100,79.75,'Three placed legs return £79.75 at early ticket prices');
+const earlyFast=ledger.entries.find(e=>e.date==='2026-10-09'&&e.horse==='Fast Track');
+const earlyHeat=ledger.entries.find(e=>e.date==='2026-10-09'&&e.horse==='Theheatison');
+assert.equal(earlyFast.selectionOdds,'8/1','Single early Fast Track price retained');
+assert.equal(earlyFast.settlementOdds,'4/1','Official Fast Track SP retained as reference');
+assert.equal(app.settlement(earlyFast).returnAmount,15,'Fast Track settles at early 8/1 not 4/1 SP');
+assert.equal(app.settlement(earlyHeat).returnAmount,22.5,'Theheatison settles at early 14/1 not 6/1 SP');
+assert.ok(ledger.entries.filter(e=>e.date==='2026-10-09').every(e=>e.priceBasis==='early'),'Every Friday paper single uses early prices');
+
 assert.equal(ticket.legs.length,4,'Four legs');
 assert.deepEqual(Array.from(ticket.legs.map(l=>l.horse)),["Fast Track","Sweltering","Theheatison","Naga"],'Revised morning Lucky15 runner list');
 assert.deepEqual(Array.from(ticket.legs.map(l=>l.runnerCount)),[13,15,16,17],'Current reported field sizes for ticket');
