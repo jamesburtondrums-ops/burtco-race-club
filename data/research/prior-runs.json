@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "description": "Verified, sourced historical race runs available before a target race. No synthetic race comments or inferred telemetry. Add evidence only where usage is permitted.",
+  "licensing": "Confirm rights to store and process any provider data; retain short factual tags rather than verbatim copyright-protected report text.",
+  "fieldGuide": {
+    "date": "YYYY-MM-DD race date",
+    "horse": "Horse official racecard name",
+    "course": "Official course",
+    "raceTime": "Local race time HH:mm",
+    "sourceUrl": "Direct source to historical race result or Steward report",
+    "sourceCheckedAt": "Date/time note recorded; MUST precede any target prediction date",
+    "comment": "Short summary of factually verified in-running observation (paraphrase where needed)",
+    "going": "Recorded race going",
+    "distanceFurlongs": "Official trip furlongs",
+    "surface": "turf / AW / hurdles / chase",
+    "fieldSize": "Number of starters",
+    "finishingPosition": "Finishing position or null",
+    "officialRating": "Official mark at time of race; not today's updated OR",
+    "performanceFigure": "Official contemporary performance figure, if verified",
+    "draw": "Flat starting stall",
+    "weightLbs": "Actual carried weight",
+    "sectionals": "Only rights-cleared furlong times; never synthetic",
+    "trackProfileRef": "Verified track-and-distance geometry source URL"
+  },
+  "runs": [],
+  "updatedAt": null,
+  "verifiedSourceCount": 0
+}
