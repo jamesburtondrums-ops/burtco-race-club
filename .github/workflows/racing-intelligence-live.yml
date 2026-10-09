@@ -32,6 +32,7 @@ jobs:
         run: |
           node tests/racing-tracker.test.mjs
           node tests/racing-web-search.test.mjs
+          node tests/racing-backoffice.test.mjs
 
       - name: Refresh live odds and results
         run: node scripts/update-racing-live.mjs
