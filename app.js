@@ -335,10 +335,18 @@ function selectionRow(x,type){
  '</div></details>';
 }
 function listBlock(items,type,emptyText){const sorted=chronological(items);return sorted.length?'<div class="selection-list">'+sorted.map(x=>selectionRow(x,type)).join("")+'</div>':'<div class="panel"><p class="meta">'+emptyText+'</p></div>'}
+function morningCheckPanel(){
+ const review=state.data?.morningRecheck;if(!review)return '';
+ const checked=review.updatedAt?new Date(review.updatedAt).toLocaleString('en-GB',{timeZone:'Europe/London',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'recently';
+ const changes=(review.adjustments||[]).map(a=>escapeHtml(a.course)+' '+escapeHtml(a.time)+' field '+a.oldRunners+' → '+a.currentRunners).join(' · ');
+ return '<section class="morning-check"><div><strong>Morning racecard recheck</strong><span>Reviewed '+checked+' · '+review.meetingCount+' meetings / '+review.scheduledRaces+' races</span></div>'+
+ '<p>Newmarket: '+escapeHtml(review.going?.Newmarket||'going to confirm')+'. York: '+escapeHtml(review.going?.York||'going to confirm')+'. '+changes+'.</p>'+
+ '<small>Morning selections are conditional: late non-runners, changing ground and bookmaker odds can alter suitability. Market strength is not a guaranteed win percentage.</small></section>';
+}
 function today(){
  const d=state.data;
  const picks=(d.todaySelections||[]).filter(x=>{const label=confidenceLabel(x);if(state.filter==="ALL")return true;if(state.filter==="WATCH")return label==="★☆☆☆☆"||label==="RECHECK"||label==="WATCH";return label===state.filter});
- return '<section class="page-intro"><div><div class="eyebrow">'+String(d.snapshotDate||"").toUpperCase()+' · GB + IRE</div><h2>'+(d.snapshotDate>new Date().toLocaleDateString('en-CA',{timeZone:'Europe/London'})?'Tomorrow\'s':'Today\'s')+' selections</h2><p>Selections are listed strictly by race time. Tap any runner to open the full reasoning, ratings, context and risk.</p></div><div class="quick-stats"><span><b>'+val(d.coverage?.meetings)+'</b> meetings</span><span><b>'+val(d.coverage?.races)+'</b> races scanned</span><span><b>'+val(d.todaySelections?.length)+'</b> selections</span><span><b>'+(d.todaySelections||[]).filter(primeOf).length+'</b> PRIME</span></div></section>'+filters()+listBlock(picks,"main","No selections match this filter.");
+ return '<section class="page-intro"><div><div class="eyebrow">'+String(d.snapshotDate||"").toUpperCase()+' · GB + IRE</div><h2>'+(d.snapshotDate>new Date().toLocaleDateString('en-CA',{timeZone:'Europe/London'})?'Tomorrow\'s':'Today\'s')+' selections</h2><p>Selections are listed strictly by race time. Tap any runner to open the full reasoning, ratings, context and risk.</p></div><div class="quick-stats"><span><b>'+val(d.coverage?.meetings)+'</b> meetings</span><span><b>'+val(d.coverage?.races)+'</b> races scanned</span><span><b>'+val(d.todaySelections?.length)+'</b> selections</span><span><b>'+(d.todaySelections||[]).filter(primeOf).length+'</b> PRIME</span></div></section>'+morningCheckPanel()+filters()+listBlock(picks,"main","No selections match this filter.");
 }
 function midshots(){const d=state.data,ms=d.midshotsToday||[];return '<section class="page-intro mid-intro"><div><div class="eyebrow">10/1–18/1 WIN + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> candidates</span><span><b>10/1–18/1</b> price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No mid-shot selections currently qualify.")}
 function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section class="page-intro long-intro"><div><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ls.length+'</b> candidates</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No longshots currently qualify.")}
@@ -369,7 +377,7 @@ function history(){
 function allRunners(){
  const meetings=state.data?.racecardLinks||[];
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(state.data?.snapshotDate||'')+' · COMPLETE MEETING CARDS</div><h2>All runners</h2><p>Explore every declared runner and jockey in all six British and Irish meetings. The betting shortlist is deliberately much smaller, and all runners are linked directly to published racecards.</p></div><div class="quick-stats"><span><b>'+meetings.length+'</b> meetings</span><span><b>'+meetings.reduce((x,m)=>x+m.races,0)+'</b> races</span></div></section>'+
- '<div class="racecards-grid">'+meetings.map(m=>'<a class="racecards-meeting" href="'+escapeHtml(m.url)+'" target="_blank" rel="noopener noreferrer"><strong>'+escapeHtml(m.course)+'</strong><span>'+m.races+' races · '+escapeHtml(m.first)+'–'+escapeHtml(m.last)+'</span><small>'+escapeHtml(m.going)+'</small><b>See all declared runners ↗</b></a>').join('')+'</div>'+
+ morningCheckPanel()+'<div class="racecards-grid">'+meetings.map(m=>'<a class="racecards-meeting" href="'+escapeHtml(m.url)+'" target="_blank" rel="noopener noreferrer"><strong>'+escapeHtml(m.course)+'</strong><span>'+m.races+' races · '+escapeHtml(m.first)+'–'+escapeHtml(m.last)+'</span><small>'+escapeHtml(m.going)+'</small><b>See all declared runners ↗</b></a>').join('')+'</div>'+
  '<p class="racecards-note">These links open published racecards and include the complete list of runners, riders, draw, form and market prices. Late non-runners and changes remain possible.</p>';
 }
 
