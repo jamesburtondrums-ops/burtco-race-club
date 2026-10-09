@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-09",
+  "sourcePolicy": "Store only historical runs with source URL and recorded-at timestamp before the target race. Do not scrape protected provider pages without permission.",
+  "runs": [],
+  "lastUpdatedAt": null
+}
