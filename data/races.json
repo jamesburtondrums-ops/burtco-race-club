@@ -218,7 +218,13 @@
         "checkedAt": "2026-10-09T07:12:53.549Z",
         "why": "Proven C&D but serious opposition near same rating"
       },
-      "currentOdds": "15/8"
+      "currentOdds": "15/8",
+      "result": {
+        "position": 2,
+        "status": "User reported",
+        "source": "User-reported finish; official starting price not independently checked",
+        "updatedAt": "2026-10-09T13:30:27.158Z"
+      }
     },
     {
       "horse": "Archers Bay",
@@ -510,6 +516,12 @@
         "decision": "RETAIN E/W VALUE / NOT PRIME",
         "checkedAt": "2026-10-09T07:12:53.549Z",
         "why": "Recent placed profile but 16 juvenile runners and market 11/1; place chance uncertain"
+      },
+      "result": {
+        "position": 3,
+        "status": "User reported",
+        "source": "User-reported finish; official starting price not independently checked",
+        "updatedAt": "2026-10-09T13:30:27.158Z"
       }
     },
     {
@@ -1058,7 +1070,7 @@
     }
   ],
   "latestReportedResults": {
-    "checkedAt": "2026-10-09T13:02:00.850Z",
+    "checkedAt": "2026-10-09T13:30:27.158Z",
     "reportedBy": "user",
     "horses": [
       {
@@ -1071,6 +1083,14 @@
       },
       {
         "horse": "Sweltering",
+        "position": 2
+      },
+      {
+        "horse": "Theheatison",
+        "position": 3
+      },
+      {
+        "horse": "Flora Of Bermuda",
         "position": 2
       }
     ],
