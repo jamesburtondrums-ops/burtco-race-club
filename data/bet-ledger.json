@@ -738,13 +738,24 @@
       "paperOnly": true,
       "legs": [
         {
-          "horse": "Nuit d'Eclair",
+          "horse": "Fast Track",
+          "course": "Newmarket",
+          "time": "13:15",
+          "selectionOdds": "9/1",
+          "runnerCount": 13,
+          "priceFloorStrictlyGreaterThan": "11/2",
+          "result": null,
+          "confidenceTier": "FORM-STRONG E/W"
+        },
+        {
+          "horse": "Sweltering",
           "course": "Newmarket",
           "time": "13:50",
-          "selectionOdds": "5/1",
-          "runnerCount": 16,
+          "selectionOdds": "8/1",
+          "runnerCount": 15,
+          "priceFloorStrictlyGreaterThan": "11/2",
           "result": null,
-          "confidenceTier": "NEAR-PRIME E/W"
+          "confidenceTier": "GROUP STEP / EACH-WAY"
         },
         {
           "horse": "Theheatison",
@@ -752,26 +763,19 @@
           "time": "14:05",
           "selectionOdds": "11/1",
           "runnerCount": 16,
+          "priceFloorStrictlyGreaterThan": "11/2",
           "result": null,
           "confidenceTier": "VALUE E/W — BELOW PRIME"
         },
         {
-          "horse": "Archers Bay",
+          "horse": "Naga",
           "course": "Newmarket",
-          "time": "15:30",
-          "selectionOdds": "4/1",
-          "runnerCount": 11,
+          "time": "16:45",
+          "selectionOdds": "12/1",
+          "runnerCount": 17,
+          "priceFloorStrictlyGreaterThan": "11/2",
           "result": null,
-          "confidenceTier": "NEAR-PRIME E/W"
-        },
-        {
-          "horse": "Toca Madera",
-          "course": "York",
-          "time": "16:25",
-          "selectionOdds": "3/1",
-          "runnerCount": 18,
-          "result": null,
-          "confidenceTier": "NEAR-PRIME E/W"
+          "confidenceTier": "FORM-STRONG E/W"
         }
       ],
       "versions": [
@@ -812,10 +816,55 @@
               "result": null
             }
           ]
+        },
+        {
+          "savedAt": "2026-10-09T07:33:11.997Z",
+          "reason": "User requires all 4 each-way Lucky 15 legs strictly greater than 11/2; Nuit d'Eclair NR",
+          "legs": [
+            {
+              "horse": "Nuit d'Eclair",
+              "course": "Newmarket",
+              "time": "13:50",
+              "selectionOdds": "5/1",
+              "runnerCount": 16,
+              "result": null,
+              "confidenceTier": "NEAR-PRIME E/W"
+            },
+            {
+              "horse": "Theheatison",
+              "course": "York",
+              "time": "14:05",
+              "selectionOdds": "11/1",
+              "runnerCount": 16,
+              "result": null,
+              "confidenceTier": "VALUE E/W — BELOW PRIME"
+            },
+            {
+              "horse": "Archers Bay",
+              "course": "Newmarket",
+              "time": "15:30",
+              "selectionOdds": "4/1",
+              "runnerCount": 11,
+              "result": null,
+              "confidenceTier": "NEAR-PRIME E/W"
+            },
+            {
+              "horse": "Toca Madera",
+              "course": "York",
+              "time": "16:25",
+              "selectionOdds": "3/1",
+              "runnerCount": 18,
+              "result": null,
+              "confidenceTier": "NEAR-PRIME E/W"
+            }
+          ]
         }
       ],
-      "updatedAt": "2026-10-09T06:53:15.918Z",
-      "amendmentReason": "Larger morning odds, more near-prime selections, updated actual fields; no bets placed"
+      "updatedAt": "2026-10-09T07:33:11.997Z",
+      "amendmentReason": "All four legs >11/2; excluded NR; higher-priced form-led choices",
+      "minimumFractionalOddsExclusive": "11/2",
+      "validAtReview": true,
+      "reviewSource": "Racing TV / Timeform / Sporting Life / Oddschecker"
     }
   ],
   "excludedDraftSelections": [
