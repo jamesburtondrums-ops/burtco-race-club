@@ -46,7 +46,7 @@ assert.ok(!cookie.includes(env.BACKOFFICE_PIN),'PIN never appears in cookie');
 const request=new Request('https://racing-intelligence.pages.dev/api/backoffice/report',{headers:{cookie:cookie.split(';')[0]}});
 assert.equal(await isAuthed(request,env),true,'Valid cookie authenticates');
 assert.equal(await isAuthed(new Request(request.url),env),false,'No-cookie report access denied');
-const tampered=cookie.split(';')[0].replace(/.$/,'0');
+const tampered=cookie.split(';')[0].replace(/=([A-Za-z0-9_-])/,(_m,c)=>'='+(c==='A'?'B':'A'));
 assert.equal(await isAuthed(new Request(request.url,{headers:{cookie:tampered}}),env),false,'Forged cookie denied');
 assert.equal(signOut().headers.get('set-cookie').includes('Max-Age=0'),true,'Logout revokes browser cookie');
 const page=readFileSync(new URL('../backoffice.html',import.meta.url),'utf8');
