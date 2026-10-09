@@ -196,3 +196,61 @@ export function historicalPriceAudit(ledger){
   conclusions:'Too small and selection-biased for accuracy claims; treat deviations as hypotheses, not proof that any system change improved results.'
  };
 }
+
+
+// No draw or pace "bias" from a dozen cherry-picked winners.
+// Requires complete *full-field* results for >=40 similar historical races.
+export function historicDrawEvidence(fullRuns,query){
+ const match=(r)=>{
+  const distance=Number(r.distanceFurlongs),wanted=Number(query.distanceFurlongs);
+  return norm(r.course)===norm(query.course)&&Math.abs(distance-wanted)<0.13&&
+   norm(r.surface)===norm(query.surface)&&norm(r.going)===norm(query.going)&&
+   r.date<query.beforeDate&&Number(r.fieldSize)>=6&&Number(r.draw)>0&&Number(r.finishingPosition)>0&&
+   validatePriorRun(r,query.beforeDate).ok;
+ };
+ const cohort=(fullRuns||[]).filter(match);
+ const grouped=new Map();
+ for(const r of cohort){
+  const id=[r.date,norm(r.course),r.raceTime].join('|');
+  if(!grouped.has(id))grouped.set(id,[]);
+  grouped.get(id).push(r);
+ }
+ const fullFields=[...grouped.values()].filter(field=>{
+  const expected=Number(field[0].fieldSize);
+  return field.length===expected&&new Set(field.map(r=>Number(r.draw))).size===field.length&&
+   field.filter(r=>Number(r.finishingPosition)===1).length===1;
+ });
+ const base={status:'insufficient historic full-field results',matchingFullRaces:fullFields.length,minimumFullRaces:40,
+  caveat:'Draw and pace vary by course, distance, going, field size, stalls and rail movements. No numeric bias without a full comparable cohort.'};
+ if(fullFields.length<40)return base;
+ const b=[{label:'low',starts:0,wins:0},{label:'middle',starts:0,wins:0},{label:'high',starts:0,wins:0}];
+ for(const field of fullFields)for(const r of field){
+  const normalized=(Number(r.draw)-1)/(Number(r.fieldSize)-1);
+  const k=normalized<1/3?0:normalized<2/3?1:2;
+  b[k].starts++;if(Number(r.finishingPosition)===1)b[k].wins++;
+ }
+ const outputs=b.map(x=>({group:x.label,starts:x.starts,wins:x.wins,
+  observedWinPercent:Math.round(x.wins/x.starts*10000)/100}));
+ if(b.some(x=>x.starts<30||x.wins<5))
+  return {...base,status:'cohort present, bin precision still inadequate',groups:outputs};
+ return {...base,status:'descriptive comparable cohort — requires held-out testing before use',groups:outputs};
+}
+export function sectionalRelativePar({overallDistanceFurlongs,overallTimeSeconds,finishSectionDistanceFurlongs,finishSectionSeconds,parFinishingSpeedPercent}={}){
+ const d=Number(overallDistanceFurlongs),t=Number(overallTimeSeconds),s=Number(finishSectionDistanceFurlongs),st=Number(finishSectionSeconds),par=Number(parFinishingSpeedPercent);
+ if(![d,t,s,st,par].every(Number.isFinite)||d<=0||t<=0||s<=0||st<=0||par<=0||s>=d)
+  return {status:'unavailable',reason:'Actual sectional time, distance and matching published par required'};
+ const fsp=100*s*t/(st*d);
+ return {status:'descriptive',fspPercent:Math.round(fsp*100)/100,parFspPercent:par,relativeToPar:Math.round((fsp-par)*100)/100,
+  interpretation:'Race-effort distribution relative to the supplied course/trip par; NOT an automatic stamina or winning probability adjustment'};
+}
+export function historicHandicapContext(runs,asOfDate,currentOfficialRating){
+ const prior=(runs||[]).filter(r=>validatePriorRun(r,asOfDate).ok&&Number.isFinite(Number(r.officialRating))&&
+  Number.isFinite(Number(r.performanceFigure))).sort((a,b)=>b.date.localeCompare(a.date));
+ if(prior.length<2||!Number.isFinite(Number(currentOfficialRating)))
+  return {status:'insufficient sourced historical figures',ratedRuns:prior.length,confidence:'unknown'};
+ const relevant=prior.slice(0,5);
+ const meanFigure=relevant.reduce((sum,r)=>sum+Number(r.performanceFigure),0)/relevant.length;
+ return {status:'historical descriptive context only',ratedRuns:relevant.length,officialMark:Number(currentOfficialRating),
+  pastMeanFigure:Math.round(meanFigure*10)/10,meanFigureMinusMark:Math.round((meanFigure-Number(currentOfficialRating))*10)/10,
+  caveat:'Past figures are course/going/tempo dependent and do not prove the horse is ahead of its mark; no automatic wager adjustment'};
+}
