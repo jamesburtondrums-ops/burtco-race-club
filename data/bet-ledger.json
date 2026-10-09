@@ -552,7 +552,12 @@
       "placesPaid": null,
       "runnerCount": 6,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 2,
+        "status": "User reported",
+        "source": "User-reported finish; official starting price not independently checked",
+        "updatedAt": "2026-10-09T13:30:27.158Z"
+      }
     },
     {
       "id": "2026-10-09|york|14:05|theheatison|each-way",
@@ -569,7 +574,12 @@
       "placesPaid": 3,
       "runnerCount": 16,
       "terms": "User-defined 1/4 odds house EW terms based on actual final field size",
-      "result": null
+      "result": {
+        "position": 3,
+        "status": "User reported",
+        "source": "User-reported finish; official starting price not independently checked",
+        "updatedAt": "2026-10-09T13:30:27.158Z"
+      }
     },
     {
       "id": "2026-10-09|newmarket|14:57|dancing destiny|each-way",
@@ -784,7 +794,12 @@
           "selectionOdds": "11/1",
           "runnerCount": 16,
           "priceFloorStrictlyGreaterThan": "11/2",
-          "result": null,
+          "result": {
+            "position": 3,
+            "status": "User reported",
+            "source": "User-reported finish; official starting price not independently checked",
+            "updatedAt": "2026-10-09T13:30:27.158Z"
+          },
           "confidenceTier": "VALUE E/W — BELOW PRIME"
         },
         {
@@ -966,11 +981,13 @@
     }
   ],
   "latestReportedResults": {
-    "checkedAt": "2026-10-09T13:02:00.850Z",
+    "checkedAt": "2026-10-09T13:30:27.158Z",
     "horses": [
       "Fast Track",
       "Beagle Bay",
-      "Sweltering"
+      "Sweltering",
+      "Theheatison",
+      "Flora Of Bermuda"
     ],
     "pricesUnconfirmed": true
   }
