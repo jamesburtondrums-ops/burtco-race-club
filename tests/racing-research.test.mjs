@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {parseRunningComment,validatePriorRun,styleEvidence,paceMap,researchCoverage,chronologicalAssessment,RESEARCH_SOURCES} from '../functions/_lib/race-research.mjs';
+import {parseRunningComment,validatePriorRun,styleEvidence,paceMap,researchCoverage,chronologicalAssessment,historicDrawEvidence,sectionalRelativePar,historicHandicapContext,historicalPriceAudit,RESEARCH_SOURCES} from '../functions/_lib/race-research.mjs';
 
 const mk=(horse,date,note,course='York')=>({
  horse,date,course,raceTime:'14:10',sourceUrl:'https://www.britishhorseracing.com/racing/',
@@ -34,4 +34,25 @@ assert.equal(chronologicalAssessment(raceNotes.runs).ready,false,'Walk-forward t
 assert.ok(RESEARCH_SOURCES.some(x=>x.url.includes('official-ratings')),'BHA source provenance included');
 const dash=readFileSync(new URL('../backoffice.js',import.meta.url),'utf8');
 assert.match(dash,/Historical research laboratory/,'Back-office research panel visible');
+const tracks=JSON.parse(readFileSync(new URL('../functions/_private/racing-track-profiles.json',import.meta.url),'utf8'));
+assert.ok(tracks.tracks.length>=4,'Sourced track geometries stored');
+assert.ok(tracks.tracks.every(t=>t.sourceUrls.length&&t.paceBiasNumerical===null&&t.drawBiasNumerical===null),'No invented track bias percentages');
+const unsourced=historicDrawEvidence([mk('Faster','2026-10-02','Led')],{course:'York',distanceFurlongs:6,going:'Good',surface:'Turf',beforeDate:'2026-10-09'});
+assert.equal(unsourced.status,'insufficient historic full-field results','Cannot claim bias from one partial race');
+const fsp=sectionalRelativePar({overallDistanceFurlongs:8,overallTimeSeconds:96,finishSectionDistanceFurlongs:2,finishSectionSeconds:23,parFinishingSpeedPercent:102});
+assert.equal(fsp.status,'descriptive','Sectional efficiency computed against supplied par');
+assert.ok(Math.abs(fsp.fspPercent-104.35)<0.03,'Finishing speed metric uses distance and time correctly');
+assert.equal(sectionalRelativePar({overallDistanceFurlongs:8,overallTimeSeconds:96,finishSectionDistanceFurlongs:2,finishSectionSeconds:23}).status,'unavailable','Without published par no sectional verdict');
+assert.equal(historicHandicapContext([], '2026-10-09',92).status,'insufficient sourced historical figures','No handicap edge without sourced ratings and figures');
+const dated=[{...mk('Sample','2026-10-01','Held up'),officialRating:88,performanceFigure:95},
+{...mk('Sample','2026-10-03','Midfield'),officialRating:90,performanceFigure:96}];
+const hd=historicHandicapContext(dated,'2026-10-09',92);
+assert.equal(hd.ratedRuns,2,'Two historical handicap efforts included');
+assert.equal(hd.meanFigureMinusMark,3.5,'Historical performance context arithmetic');
+const audit=historicalPriceAudit(led);
+assert.ok(audit.usableSelections>0,'Baseline includes actual historical odds and known results');
+assert.equal(audit.oddsBands[0].oddsBand,'Odds-on (historical only)','Retired odds-on selections still reflected in history');
+assert.equal(audit.marketBenchmark.observations,audit.usableSelections,'Benchmark accounts for all usable prices');
+assert.ok(!audit.conclusions.includes('improved accuracy'),'No fabricated measured improvement');
+
 console.log('PASS: sourced run comment tags, pace data gates, leakage-safe chronology and research readiness');
