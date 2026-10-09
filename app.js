@@ -325,12 +325,13 @@ function selectionRow(x,type){
  return '<details class="selection-row" data-key="'+k+'"><summary class="selection-summary">'+
    '<div class="selection-time">'+val(x.time)+'</div>'+
    '<div class="selection-main"><div class="selection-name-line"><strong>'+val(x.horse)+'</strong>'+summaryBadges(x,type)+'</div><span>'+val(x.course)+'</span></div>'+
-   '<div class="selection-odds"><span>Odds</span><strong>'+val(x.odds)+'</strong></div>'+
+   '<div class="selection-odds"><span>'+(x.currentOdds?'Morning range':'Quoted odds')+'</span><strong>'+val(x.currentOdds||x.odds)+'</strong></div>'+
    '<div class="selection-result">'+resultBadge(x)+'</div>'+
    '<div class="selection-chevron">⌄</div>'+
  '</summary><div class="selection-details">'+betLine+typeStars+special+commonDetails(x)+
    '<div class="detail-copy"><strong>'+(type==="long"?'Why it can outrun the price':type==="mid"?'Why it can win / place':'Decision')+'</strong><p>'+intro+'</p></div>'+
    '<div class="detail-risk"><strong>Risk</strong><p>'+risk+'</p></div>'+
+   (x.currentOdds&&x.currentOdds!==x.odds?'<div class="source-line">Original recorded price: '+val(x.odds)+' · Morning reference price: '+val(x.currentOdds)+'</div>':'')+
    '<div class="source-line">Source: '+val(x.source)+(x.result?.sourceUrl?' · <a target="_blank" rel="noopener noreferrer" href="'+x.result.sourceUrl+'">Verify result ↗</a>':'')+'</div>'+
  '</div></details>';
 }
