@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "verifiedAsOf": "2026-10-09",
+  "rule": "These are verified geographic/configuration facts, not empirically demonstrated draw or pace advantages. Track biases require same course/distance/going/field historical samples.",
+  "tracks": [
+    {
+      "course": "York",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Flat, wide and galloping; separate straight sprint course and round course",
+      "homeStraightFurlongsApprox": 5,
+      "details": {
+        "fiveSixFurlong": "Straight sprint course; draw effect depends on field and going",
+        "sevenFurlong": "Starts from a chute",
+        "round": "Sweeping turn and long home run-in"
+      },
+      "sourceUrls": [
+        "https://www.yorkracecourse.co.uk/uploads/brochures/42Guide-for-Owners.pdf",
+        "https://www.attheraces.com/course-guides/York"
+      ],
+      "status": "verified course geometry",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Newmarket - Rowley Mile",
+      "surface": "Turf",
+      "direction": "track-dependent/straight",
+      "configuration": "1m2f straight stretch; undulations and the Dip near the finish",
+      "homeStraightFurlongsApprox": null,
+      "details": {
+        "rowleyMile": "Substantial straight, downhill penultimate furlong then uphill final furlong; finishing-speed par must reflect gradient",
+        "bias": "No numerical draw/pace effect assigned without same-day evidence"
+      },
+      "sourceUrls": [
+        "https://www.newmarketracingclub.com/racecourses/the-rowley-mile/"
+      ],
+      "status": "verified course geometry",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Chepstow",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Undulating near-2-mile oval; Flat straight course and obstacle configuration separate",
+      "homeStraightFurlongsApprox": 5,
+      "details": {
+        "flat": "Long run-in over undulating terrain; 1m and shorter on the straight course",
+        "jumps": "Eleven fences per complete circuit, five in straight; pronounced undulations and potentially testing going"
+      },
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Chepstow",
+        "https://www.racingtv.com/racecourses/uk/chepstow"
+      ],
+      "status": "verified course geometry",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Kempton - All Weather",
+      "surface": "Polytrack",
+      "direction": "right-handed",
+      "configuration": "Two loops: sharp inner for 5f / 9f / 10f; sweeping outer for 6f to 1m",
+      "homeStraightFurlongsApprox": null,
+      "details": {
+        "inner": "Sharp inner with shorter run-in just under 2f",
+        "outer": "Sweeping turn and near 3f straight",
+        "going": "Surface preparation/conditions affect pace and draw; do not treat as fixed bias"
+      },
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Kempton"
+      ],
+      "status": "verified course geometry",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    }
+  ]
+}
