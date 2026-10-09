@@ -636,38 +636,84 @@
       "paperOnly": true,
       "legs": [
         {
-          "horse": "Flann Sunna",
-          "course": "Newmarket",
-          "time": "13:15",
-          "selectionOdds": "5/2",
-          "runnerCount": 13,
-          "result": null
-        },
-        {
           "horse": "Nuit d'Eclair",
           "course": "Newmarket",
           "time": "13:50",
-          "selectionOdds": "9/2",
-          "runnerCount": 16,
-          "result": null
+          "selectionOdds": "5/1",
+          "runnerCount": 15,
+          "result": null,
+          "confidenceTier": "NEAR-PRIME E/W"
         },
         {
           "horse": "Theheatison",
           "course": "York",
           "time": "14:05",
-          "selectionOdds": "14/1",
+          "selectionOdds": "11/1",
           "runnerCount": 16,
-          "result": null
+          "result": null,
+          "confidenceTier": "VALUE E/W — BELOW PRIME"
         },
         {
-          "horse": "Flora Of Bermuda",
+          "horse": "Archers Bay",
           "course": "Newmarket",
-          "time": "14:25",
-          "selectionOdds": "13/8",
-          "runnerCount": 6,
-          "result": null
+          "time": "15:30",
+          "selectionOdds": "4/1",
+          "runnerCount": 10,
+          "result": null,
+          "confidenceTier": "NEAR-PRIME E/W"
+        },
+        {
+          "horse": "Toca Madera",
+          "course": "York",
+          "time": "16:25",
+          "selectionOdds": "3/1",
+          "runnerCount": 18,
+          "result": null,
+          "confidenceTier": "NEAR-PRIME E/W"
         }
-      ]
+      ],
+      "versions": [
+        {
+          "savedAt": "2026-10-09T06:53:15.918Z",
+          "reason": "Morning refresh — replace short-price legs, update field sizes and favour higher-form-confidence alternatives",
+          "legs": [
+            {
+              "horse": "Flann Sunna",
+              "course": "Newmarket",
+              "time": "13:15",
+              "selectionOdds": "5/2",
+              "runnerCount": 13,
+              "result": null
+            },
+            {
+              "horse": "Nuit d'Eclair",
+              "course": "Newmarket",
+              "time": "13:50",
+              "selectionOdds": "9/2",
+              "runnerCount": 16,
+              "result": null
+            },
+            {
+              "horse": "Theheatison",
+              "course": "York",
+              "time": "14:05",
+              "selectionOdds": "14/1",
+              "runnerCount": 16,
+              "result": null
+            },
+            {
+              "horse": "Flora Of Bermuda",
+              "course": "Newmarket",
+              "time": "14:25",
+              "selectionOdds": "13/8",
+              "runnerCount": 6,
+              "result": null
+            }
+          ]
+        }
+      ],
+      "updatedAt": "2026-10-09T06:53:15.918Z",
+      "amendmentReason": "Larger morning odds, more near-prime selections, updated actual fields; no bets placed"
     }
   ]
 }
