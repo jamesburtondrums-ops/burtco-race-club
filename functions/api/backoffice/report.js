@@ -4,7 +4,7 @@ import historicalRuns from '../../_private/racing-historical-runs.json';
 import trackProfiles from '../../_private/racing-track-profiles.json';
 import {isAuthed,reply} from '../../_lib/backoffice-auth.mjs';
 import {dailyReports,tuningNotes} from '../../_lib/backoffice-stats.mjs';
-import {researchCoverage,chronologicalAssessment} from '../../_lib/race-research.mjs';
+import {researchCoverage,chronologicalAssessment,historicalPriceAudit} from '../../_lib/race-research.mjs';
 
 export async function onRequestGet({request,env}){
  if(!await isAuthed(request,env))return reply({ok:false,error:'PIN authentication required'},401);
@@ -33,6 +33,7 @@ export async function onRequestGet({request,env}){
     factors:researchHistory.factors||[],
     sources:researchHistory.sources||[],
     validation:chronologicalAssessment(historicalRuns.runs||[]),
+    priceAudit:historicalPriceAudit(ledger),
     snapshotsRecorded:researchHistory.snapshots?.length||0,
     tracks:trackProfiles.tracks||[],
     status:'Evidence-backed shadow research: do not update live picks until out-of-sample improvement is established'
