@@ -1,11 +1,11 @@
 const state={data:null,ledger:null,live:null,liveSerial:"",view:"today",filter:"ALL",serial:"",refreshing:false,refreshMessage:"",refreshCheckedAt:null,search:null,searchError:"",webConfirmed:{},searchCheckedAt:null};
 const val=v=>v===undefined||v===null||v===""?"—":v;
 const contextOf=x=>x.v42||x.v41||null;
-const probabilityOf=x=>contextOf(x)?.winProbability??null;
+const probabilityOf=x=>x.calibratedWinProbability===true?contextOf(x)?.winProbability??null:null;
 const primeOf=x=>contextOf(x)?.isPrime===true;
 const starsOf=x=>contextOf(x)?.stars??0;
 const stars=n=>'<span class="stars">'+Array.from({length:5},(_,i)=>i<n?'★':'☆').join('')+'</span>';
-const confidenceLabel=x=>primeOf(x)?"PRIME":starsOf(x)?Array.from({length:5},(_,i)=>i<starsOf(x)?"★":"☆").join(""):"WATCH";
+const confidenceLabel=x=>primeOf(x)?"PRIME":String(x.confidenceTier||"").startsWith("CONDITIONAL")?"CONDITIONAL":x.tier==="STRONG"?"STRONG":starsOf(x)?Array.from({length:5},(_,i)=>i<starsOf(x)?"★":"☆").join(""):"WATCH";
 const timeValue=t=>{const m=String(t||"").match(/(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):9999};
 const chronological=items=>[...(items||[])].sort((a,b)=>timeValue(a.time)-timeValue(b.time)||String(a.course||"").localeCompare(String(b.course||"")));
 const keyOf=(x,type)=>[type,x.time,x.course,x.horse].join("|").replace(/[^a-z0-9|_-]/gi,"-");
@@ -291,10 +291,10 @@ function liveStatus(){
 }
 
 function nav(){const upcoming=state.data?.snapshotDate>new Date().toLocaleDateString("en-CA",{timeZone:"Europe/London"});return [["today",upcoming?"Tomorrow":"Today"],["midshots","Mid Shots 10/1–18/1"],["longshots","Longshots 20/1+"],["lucky15","E/W Lucky 15"],["racecards","All runners"],["history","Results history"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
-function filters(){const x=["ALL","PRIME","★★★★★","★★★★☆","★★★☆☆","WATCH"];return '<div class="meeting-tabs">'+x.map(f=>'<button data-filter="'+f+'" class="'+(state.filter===f?'active':'')+'">'+f+'</button>').join("")+'</div>'}
+function filters(){const x=["ALL","PRIME","STRONG","CONDITIONAL","WATCH"];return '<div class="meeting-tabs">'+x.map(f=>'<button data-filter="'+f+'" class="'+(state.filter===f?'active':'')+'">'+f+'</button>').join("")+'</div>'}
 function resultBadge(x){const r=resultInfo(x);return r?'<span class="result-badge '+r.cls+'">'+r.text+'</span>':''}
 function summaryBadges(x,type){
- if(type==="main"){const p=probabilityOf(x);return (x.restoredFromPreviousVersion?'<span class="selection-tier restored">EARLIER PICK</span>':'')+'<span class="selection-tier '+(primeOf(x)?'prime':'')+'">'+confidenceLabel(x)+'</span>'+(p!==null?'<span class="probability">'+Number(p).toFixed(1)+'%</span>':'')}
+ if(type==="main"){const p=probabilityOf(x);return (x.restoredFromPreviousVersion?'<span class="selection-tier restored">EARLIER PICK</span>':'')+'<span class="selection-tier '+(primeOf(x)?'prime':x.tier==='STRONG'?'strong':x.tier==='WATCH'?'watch':'')+'">'+confidenceLabel(x)+'</span>'+(p!==null?'<span class="probability">'+Number(p).toFixed(1)+'%</span>':'')}
  if(type==="mid")return '<span class="selection-tier mid">'+(x.view||"MID-SHOT")+'</span>';
  return '<span class="selection-tier long">'+(x.placeView||"E/W")+'</span>';
 }
@@ -329,6 +329,7 @@ function selectionRow(x,type){
    '<div class="selection-result">'+resultBadge(x)+'</div>'+
    '<div class="selection-chevron">⌄</div>'+
  '</summary><div class="selection-details">'+betLine+typeStars+special+commonDetails(x)+
+   (x.confidenceTier?'<div class="selection-confidence-note"><strong>Confidence assessment</strong><span>'+escapeHtml(x.confidenceTier)+'</span></div>':'')+
    '<div class="detail-copy"><strong>'+(type==="long"?'Why it can outrun the price':type==="mid"?'Why it can win / place':'Decision')+'</strong><p>'+intro+'</p></div>'+
    '<div class="detail-risk"><strong>Risk</strong><p>'+risk+'</p></div>'+
    (x.currentOdds&&x.currentOdds!==x.odds?'<div class="source-line">Original recorded price: '+val(x.odds)+' · Morning reference price: '+val(x.currentOdds)+'</div>':'')+
@@ -346,7 +347,7 @@ function morningCheckPanel(){
 }
 function today(){
  const d=state.data;
- const picks=(d.todaySelections||[]).filter(x=>{const label=confidenceLabel(x);if(state.filter==="ALL")return true;if(state.filter==="WATCH")return label==="★☆☆☆☆"||label==="RECHECK"||label==="WATCH";return label===state.filter});
+ const picks=(d.todaySelections||[]).filter(x=>{const label=confidenceLabel(x);if(state.filter==="ALL")return true;if(state.filter==="WATCH")return label==="WATCH"||label==="RECHECK";return label===state.filter});
  return '<section class="page-intro"><div><div class="eyebrow">'+String(d.snapshotDate||"").toUpperCase()+' · GB + IRE</div><h2>'+(d.snapshotDate>new Date().toLocaleDateString('en-CA',{timeZone:'Europe/London'})?'Tomorrow\'s':'Today\'s')+' selections</h2><p>Selections are listed strictly by race time. Tap any runner to open the full reasoning, ratings, context and risk.</p></div><div class="quick-stats"><span><b>'+val(d.coverage?.meetings)+'</b> meetings</span><span><b>'+val(d.coverage?.races)+'</b> races scanned</span><span><b>'+val(d.todaySelections?.length)+'</b> selections</span><span><b>'+(d.todaySelections||[]).filter(primeOf).length+'</b> PRIME</span></div></section>'+morningCheckPanel()+filters()+listBlock(picks,"main","No selections match this filter.");
 }
 function midshots(){const d=state.data,ms=d.midshotsToday||[];return '<section class="page-intro mid-intro"><div><div class="eyebrow">10/1–18/1 WIN + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> candidates</span><span><b>10/1–18/1</b> price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No mid-shot selections currently qualify.")}
