@@ -223,12 +223,32 @@ function lucky15Page(){
  const ticket=(state.ledger?.lucky15Tickets||[]).find(t=>t.date===state.data?.snapshotDate);
  if(!ticket)return '<div class="panel">No Lucky 15 prepared for this racecard.</div>';
  const x=lucky15Calc(ticket);
- const rows=x.legs.map((p,i)=>'<div class="l15-leg"><b>'+(i+1)+'</b><div><strong>'+escapeHtml(p.horse)+'</strong><small>'+escapeHtml(p.course)+' · '+escapeHtml(p.time)+' · '+(p.places?'Top '+p.places+' places':'Field size pending')+'</small></div><div><strong>'+escapeHtml(p.selectionOdds)+'</strong><small>'+(p.result?.position?ordinal(p.result.position):escapeHtml(p.result?.status||'Awaiting race'))+'</small></div></div>').join('');
- return '<section class="l15-panel"><div class="l15-heading"><div><div class="eyebrow">FRIDAY 9 OCTOBER · PAPER BET</div><h2>Each-way Lucky 15</h2><p>Four separate races · 15 win combinations and 15 place combinations.</p></div><b>'+money(x.stake)+'</b></div>'+
-  '<div class="l15-combinations"><span>4 singles</span><span>6 doubles</span><span>4 trebles</span><span>1 fourfold</span></div>'+
-  '<p class="l15-note">£1 each-way per combination = £15 win + £15 place. Each-way terms: ¼ odds, 1 place up to 4 runners, 2 places for 5–7, and 3 places for 8+.</p>'+
-  '<div class="l15-legs">'+rows+'</div><div class="l15-outcome">'+(x.status==='settled'?'Return '+money(x.returnAmount)+' · P/L '+signMoney(x.returnAmount-x.stake):'£30 reserved in paper bank · Settlement pending all four results')+'</div>'+
-  '<p class="l15-note">Overnight quoted odds may change. The combination is tracked separately from single selections, and the same runner can count in both. Starting prices are used when published. A non-runner is treated provisionally as a unit factor before bookmaker deductions.</p></section>';
+ const known=['todaySelections','midshotsToday','longshotsToday','lucky15Only'].flatMap(g=>state.data[g]||[]);
+ const rows=x.legs.map((leg,i)=>{
+  const pick=known.find(p=>p.horse===leg.horse&&p.course===leg.course&&p.time===leg.time)||{};
+  const confidence=leg.confidenceTier||pick.confidenceTier||'E/W selection';
+  const isNearPrime=confidence.includes('NEAR-PRIME');
+  const label=isNearPrime?'Near-Prime E/W':'Value E/W (below Prime)';
+  const placeCount=leg.places?'Top '+leg.places+' paid places':'Final runner count pending';
+  const result=leg.result?.position?ordinal(leg.result.position):escapeHtml(leg.result?.status||'Awaiting race');
+  return '<div class="l15-leg"><b>'+(i+1)+'</b><div><strong>'+escapeHtml(leg.horse)+'</strong>'+
+   '<small>'+escapeHtml(leg.course)+' · '+escapeHtml(leg.time)+' · '+placeCount+'</small>'+
+   '<small class="'+(isNearPrime?'l15-near-prime':'l15-value')+'">'+label+'</small></div>'+
+   '<div><strong>'+escapeHtml(leg.selectionOdds)+'</strong><small>'+result+'</small></div></div>'+
+   '<details class="l15-leg-research"><summary>Evidence and risks for '+escapeHtml(leg.horse)+'</summary>'+
+   '<p>'+escapeHtml(pick.reason||'Market and prior form reviewed; no win or place is guaranteed.')+'</p>'+
+   (pick.risk?'<p class="l15-leg-risk">Main risk: '+escapeHtml(pick.risk)+'</p>':'')+
+   (pick.sourceUrl?'<a href="'+escapeHtml(pick.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Check published racecard and odds ↗</a>':'')+'</details>';
+ }).join('');
+ const recheck=state.data?.morningRecheck;
+ const checked=recheck?.updatedAt?new Date(recheck.updatedAt).toLocaleString('en-GB',{timeZone:'Europe/London',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'overnight';
+ return '<section class="l15-panel"><div class="l15-heading"><div><div class="eyebrow">FRIDAY 9 OCTOBER · MORNING REVIEW · PAPER BET</div>'+
+ '<h2>Each-way Lucky 15</h2><p>Four separate races · 15 win combinations and 15 place combinations. Reviewed '+checked+'.</p></div><b>'+money(x.stake)+'</b></div>'+
+ '<div class="l15-combinations"><span>4 singles</span><span>6 doubles</span><span>4 trebles</span><span>1 fourfold</span></div>'+
+ '<p class="l15-note">£1 each way on 15 combinations = £30 total stake. Three legs sit near the top of their markets; the fourth is a higher-price form-based E/W choice, not Prime. Higher odds reduce implied win probability.</p>'+
+ '<p class="l15-note">House settlement policy: ¼ win odds for place returns; 1 place up to 4 runners, 2 places for 5–7, and 3 places for 8+. Actual bookmakers may use different terms.</p>'+
+ '<div class="l15-legs">'+rows+'</div><div class="l15-outcome">'+(x.status==='settled'?'Return '+money(x.returnAmount)+' · P/L '+signMoney(x.returnAmount-x.stake):'£30 reserved in paper bank · Settlement pending all four results')+'</div>'+
+ '<p class="l15-note">Morning quotes shown, not guaranteed accepted prices. This paper ticket is separate from individual selections and is not a real bookmaker bet. Starting prices are used for result settlement when published. Non-runners use provisional unit-factor treatment.</p></section>';
 }
 
 function tracker(){
