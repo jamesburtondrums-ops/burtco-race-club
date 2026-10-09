@@ -341,3 +341,19 @@
 .racecards-note{color:var(--muted);font-size:11px;line-height:1.55;margin-top:13px}
 @media(max-width:900px){.racecards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.racecards-grid{grid-template-columns:1fr;gap:8px}.racecards-meeting{padding:15px}.racecards-meeting>strong{font-size:20px}}
+
+
+/* October 9 live-card quality, context and Lucky 15 evidence */
+.morning-check{padding:14px 18px;border:1px solid #cbd9cf;border-radius:14px;background:#f2f7f1;margin:-5px 0 16px;color:#214435}
+.morning-check>div{display:flex;align-items:baseline;justify-content:space-between;gap:9px;flex-wrap:wrap}
+.morning-check strong{font-size:13px}.morning-check>div span{font-size:11px;color:#557266}
+.morning-check p{margin:8px 0;font-size:12px;line-height:1.55}
+.morning-check small{color:#668075;font-size:10px;line-height:1.55;display:block}
+.l15-leg small.l15-near-prime{color:#236846;font-weight:800}
+.l15-leg small.l15-value{color:#96701d;font-weight:800}
+.l15-leg-research{padding:0 6px 14px 43px;border-bottom:1px solid var(--line);font-size:11px;color:var(--muted)}
+.l15-leg-research summary{font-size:11px;line-height:1.4;color:var(--green);font-weight:700;cursor:pointer;min-height:26px}
+.l15-leg-research p{margin:7px 0;line-height:1.55}
+.l15-leg-research p.l15-leg-risk{color:#805e31}
+.l15-leg-research a{color:var(--green);font-weight:700}
+@media(max-width:650px){.morning-check{padding:12px 13px;margin:2px 0 13px}.morning-check>div{align-items:flex-start}.morning-check p{font-size:11px}.l15-leg-research{padding-left:35px}.l15-leg small.l15-near-prime,.l15-leg small.l15-value{font-size:9px}}
