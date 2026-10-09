@@ -86,10 +86,12 @@ export function summarizeDay(ledger,date){
    result.resultCount++;
    if(p===1)result.winners++;
    if(e.betType==='each-way'){
-    result.eachWayRunners++;
     const count=number(e.runnerCount);
     const places=count?(count<=4?1:count<=7?2:3):number(e.placesPaid)||null;
-    if(p&&places&&p<=places)result.eachWayPlaced++;
+    if(places){
+     result.eachWayRunners++;
+     if(p&&p<=places)result.eachWayPlaced++;
+    }
    }
   }
  }
@@ -127,6 +129,7 @@ export function dailyReports(ledger){
    totalStakes:fixed(cumulativeStakes),returns:fixed(cumulativeReturns),
    pendingStakes:fixed(cumulativeStakes-cumulativeSettledStakes)
   };
+  day.availableAfterStakes=day.cumulative.availableBank;
   return day;
  });
 }
