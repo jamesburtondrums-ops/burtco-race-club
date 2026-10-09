@@ -1,6 +1,7 @@
 import history from '../../_private/backoffice-history.json';
 import researchHistory from '../../_private/racing-research-journal.json';
 import historicalRuns from '../../_private/racing-historical-runs.json';
+import trackProfiles from '../../_private/racing-track-profiles.json';
 import {isAuthed,reply} from '../../_lib/backoffice-auth.mjs';
 import {dailyReports,tuningNotes} from '../../_lib/backoffice-stats.mjs';
 import {researchCoverage,chronologicalAssessment} from '../../_lib/race-research.mjs';
@@ -33,6 +34,7 @@ export async function onRequestGet({request,env}){
     sources:researchHistory.sources||[],
     validation:chronologicalAssessment(historicalRuns.runs||[]),
     snapshotsRecorded:researchHistory.snapshots?.length||0,
+    tracks:trackProfiles.tracks||[],
     status:'Evidence-backed shadow research: do not update live picks until out-of-sample improvement is established'
    },
    methodology:{
