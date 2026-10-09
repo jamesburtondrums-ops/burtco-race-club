@@ -69,6 +69,10 @@ export function validatePriorRun(run,selectionDate){
   return {ok:false,reason:'Future or same-race evidence excluded'};
  if(!str(run.horse)||!str(run.course))return {ok:false,reason:'Horse/course identification missing'};
  if(!run.sourceUrl||!/^https:\/\//i.test(run.sourceUrl))return {ok:false,reason:'Sourced historic result URL required'};
+ if(!run.sourceCheckedAt||!/^20\d\d-\d\d-\d\dT/.test(run.sourceCheckedAt))
+  return {ok:false,reason:'Source observation timestamp required to prevent revisions leaking into historic predictions'};
+ if(run.sourceCheckedAt.slice(0,10)>=selectionDate)
+  return {ok:false,reason:'Source not yet available before target race'};
  const p=Number(run.finishingPosition);
  if(!blank(run.finishingPosition)&&(!Number.isFinite(p)||p<1))return {ok:false,reason:'Bad finishing position'};
  if(run.officialRating!==null&&!blank(run.officialRating)&&(!Number.isFinite(Number(run.officialRating))||Number(run.officialRating)<0))return {ok:false,reason:'Invalid historic rating'};
@@ -128,7 +132,7 @@ export function researchCoverage(ledger,priorRuns=[],racecard=null){
  };
 }
 export function chronologicalAssessment(rows){
- const dated=(rows||[]).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(str(x.date))&&x.sourceUrl)
+ const dated=(rows||[]).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(str(x.date))&&x.sourceUrl&&x.sourceCheckedAt&&Number(x.finishingPosition)>0)
   .slice().sort((a,b)=>a.date.localeCompare(b.date));
  const raceIds=[...new Set(dated.map(x=>x.date+'|'+norm(x.course)+'|'+str(x.raceTime)))];
  if(raceIds.length<500||dated.length<2000)
