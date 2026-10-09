@@ -44,7 +44,7 @@ const ticket=tickets.find(t=>t.id==='2026-10-09|ew-lucky15');
 assert.equal(ticket.totalStake,30,'Lucky 15 total stake');
 assert.equal(ticket.legs.length,4,'Four legs');
 assert.deepEqual(Array.from(ticket.legs.map(l=>l.horse)),["Nuit d'Eclair","Theheatison","Archers Bay","Toca Madera"],'Revised morning Lucky15 runner list');
-assert.deepEqual(Array.from(ticket.legs.map(l=>l.runnerCount)),[15,16,10,18],'Current reported field sizes for ticket');
+assert.deepEqual(Array.from(ticket.legs.map(l=>l.runnerCount)),[16,16,11,18],'Current reported field sizes for ticket');
 assert.equal(ticket.placed,false,'Ticket is paper only and was not placed');
 assert.equal((ticket.versions||[]).length,1,'Previous overnight ticket safely versioned');
 assert.ok(!ticket.legs.some(l=>l.horse==='Flann Sunna'||l.horse==='Flora Of Bermuda'),'Short-price overnight legs removed');
@@ -65,10 +65,14 @@ assert.match(appElement.innerHTML,/data-refresh-results/,'Manual refresh button'
 assert.ok(appElement.innerHTML.includes('sportinglife.com/racing/fast-results'),'Fast results source');
 assert.ok(appElement.innerHTML.includes('£'+bank.toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2})),'Bankroll display matches ledger');
 if(racing.snapshotDate==='2026-10-09'){
- assert.equal(racing.todaySelections.length,2,'Small Friday win shortlist');
+ assert.equal(racing.todaySelections.length,8,'Eight research-rated win selections');
+ assert.equal(racing.todaySelections.filter(x=>x.v42?.isPrime).length,3,'Three form-Prime win selections');
+ assert.equal(ledger.entries.filter(e=>e.date==='2026-10-08').length,23,'Previous day stakes remain unchanged');
+ assert.equal(racing.todaySelections.filter(x=>x.horse==='Archers Bay').length,1,'No duplicate Archers Bay row');
+ assert.equal((racing.todaySelections.length+racing.midshotsToday.length+racing.longshotsToday.length),10,'Ten selections across all categories');
  assert.equal(racing.midshotsToday.length,1,'Only one higher-confidence Friday midshot');
  assert.equal(racing.longshotsToday.length,1,'One Friday longshot');
- assert.equal(ledger.entries.filter(e=>e.date==='2026-10-09').length,4,'Four Friday paper singles');
+ assert.equal(ledger.entries.filter(e=>e.date==='2026-10-09').length,10,'Ten Friday paper singles');
  assert.equal((racing.racecardLinks||[]).length,6,'Friday runner cards available');
  assert.ok(racing.morningRecheck?.scheduledRaces===47,'Friday's six-meeting review recorded');
  app.state.view='lucky15';app.render();
