@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-09",
+  "state": "Evidence gathering; no autonomous learning or reliable uplift measured",
+  "plannedResearch": [
+    {
+      "feature": "Handicap mark versus last achieved figure",
+      "source": "BHA ratings database and performance figures",
+      "method": "Save historic weekly ratings with immutable observation dates; compare published pre-event mark and achieved past figures, controlling for trip/going. Do not compare with retrospective ratings revisions without timestamps.",
+      "status": "schema designed",
+      "impact": "Unknown until walk-forward evaluation"
+    },
+    {
+      "feature": "Running-style pattern",
+      "source": "Racing TV in-running position, attributable results and stewards",
+      "method": "Tagged leader/prominent/midfield/closer from last six sourced runs; demand >=3 style observations with >=60% agreement or mark unknown.",
+      "status": "implemented shadow-only",
+      "impact": "Unknown until licensed historical comments imported"
+    },
+    {
+      "feature": "Projected field pace pressure",
+      "source": "Prior-run style of every declared horse",
+      "method": "Only show a race map when >=4 styles known and >=60% coverage of field; three+ confirmed front-runners suggests pace competition, no certainty.",
+      "status": "implemented shadow-only",
+      "impact": "Unknown"
+    },
+    {
+      "feature": "Track geometry and bias",
+      "source": "Verified racecourse and distance-specific course maps",
+      "method": "Model bend count, first-turn distance, straight length, gradient, rails, field size, surface and going separately. Require >=40 comparable historical races before quantifying biases.",
+      "status": "design",
+      "impact": "Unverified"
+    },
+    {
+      "feature": "Trouble in running",
+      "source": "BHA steward reports and published factual race notes",
+      "method": "Tag documented slow starts, hampering, wide trips, lost shoes, lameness, late strength, easing and jumping mistakes with source and incident date; no automatic improvement bonus.",
+      "status": "implemented note tagging",
+      "impact": "Unknown"
+    },
+    {
+      "feature": "Sectional energy distribution",
+      "source": "Racing TV RaceiQ licensed sectionals",
+      "method": "Use finishing speed % relative to actual par for same track/trip/going, not universal FSP threshold; never extrapolate unavailable fractions.",
+      "status": "design",
+      "impact": "Awaiting source permission"
+    },
+    {
+      "feature": "Statistical validation",
+      "source": "Dated full-field historical results plus saved pre-race predictions",
+      "method": "No training with <500 distinct historical races and <2,000 sourced field runners. Forward-chain by race date; keep all runners in each race together. Compare Brier/log loss to timestamped market baseline; report ROI with realistic odds and uncertainty.",
+      "status": "research gate implemented",
+      "impact": "No quantified improvement yet"
+    }
+  ],
+  "referenceUrls": [
+    "https://www.britishhorseracing.com/regulation/guide-to-handicapping/",
+    "https://www.britishhorseracing.com/regulation/performance-figures/",
+    "https://www.britishhorseracing.com/regulation/official-ratings/ratings-database/",
+    "https://www.britishhorseracing.com/racing/stewards-reports/",
+    "https://www.britishhorseracing.com/regulation/handicapping-tools/",
+    "https://www.racingtv.com/raceiq/par-sectionals",
+    "https://www.racingtv.com/raceiq/sectionals-tab"
+  ]
+}
