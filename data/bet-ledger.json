@@ -1,7 +1,7 @@
 {
   "startingBank": 1000,
   "currency": "GBP",
-  "policy": "All individual paper selections need odds at least 1/1. £10 win or £5 each-way (£10 total). Active Mid Shots are 6/1–18/1; 20/1+ longshot maximum 1. Removed sub-evens draft picks do not count towards bankroll. £1 each-way Lucky 15 = £30 separate paper ticket. Results and historical bets retained.",
+  "policy": "All individual paper selections need odds at least 1/1. £10 win or £5 each-way (£10 total). Active Mid Shots are 6/1–18/1; 20/1+ longshot maximum 1. Removed sub-evens draft picks do not count towards bankroll. £1 each-way Lucky 15 = £30 separate paper ticket. All 9 October and later paper wagers settle at immutable published early selection odds; SP is reference only. Results and historical bets retained.",
   "entries": [
     {
       "id": "2026-10-08|market rasen|15:06|whitewinewednesday|win",
@@ -557,7 +557,8 @@
         "status": "User reported",
         "source": "User-reported finish; official starting price not independently checked",
         "updatedAt": "2026-10-09T13:30:27.158Z"
-      }
+      },
+      "priceBasis": "early"
     },
     {
       "id": "2026-10-09|york|14:05|theheatison|each-way",
@@ -581,7 +582,8 @@
         "source": "Sporting Life official weighed-in result",
         "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/york/942533/british-ebf-100000-final-colts-and-geldings",
         "updatedAt": "2026-10-09T16:00:16.667Z"
-      }
+      },
+      "priceBasis": "early"
     },
     {
       "id": "2026-10-09|newmarket|14:57|dancing destiny|each-way",
@@ -598,7 +600,8 @@
       "placesPaid": 3,
       "runnerCount": 8,
       "terms": "User-defined 1/4 odds house EW terms based on actual final field size",
-      "result": null
+      "result": null,
+      "priceBasis": "early"
     },
     {
       "id": "2026-10-09|chepstow|15:43|cosmic connection|win",
@@ -615,7 +618,8 @@
       "placesPaid": null,
       "runnerCount": 11,
       "terms": null,
-      "result": null
+      "result": null,
+      "priceBasis": "early"
     },
     {
       "id": "2026-10-09|newmarket|15:30|archers bay|win",
@@ -632,7 +636,8 @@
       "placesPaid": null,
       "runnerCount": 11,
       "terms": null,
-      "result": null
+      "result": null,
+      "priceBasis": "early"
     },
     {
       "id": "2026-10-09|york|13:30|beagle bay|win",
@@ -654,7 +659,8 @@
         "status": "User reported",
         "source": "User-reported finishing position; published result and SP not independently verified",
         "updatedAt": "2026-10-09T13:02:00.850Z"
-      }
+      },
+      "priceBasis": "early"
     },
     {
       "id": "2026-10-09|kempton|19:15|gunfighter|win",
@@ -671,7 +677,8 @@
       "runnerCount": 10,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": null,
+      "priceBasis": "early"
     },
     {
       "id": "2026-10-09|newmarket|13:15|fast track|each-way",
@@ -695,7 +702,8 @@
         "source": "Sporting Life official full result",
         "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/newmarket/942519/newmarket-academy-godolphin-beacon-project-cornwallis-stakes-group-3",
         "updatedAt": "2026-10-09T16:00:16.667Z"
-      }
+      },
+      "priceBasis": "early"
     },
     {
       "id": "2026-10-09|newmarket|16:45|naga|each-way",
@@ -717,7 +725,8 @@
         "status": "User reported",
         "source": "User-reported 11th place; independent official finish and SP confirmation pending",
         "updatedAt": "2026-10-09T15:58:20.501Z"
-      }
+      },
+      "priceBasis": "early"
     },
     {
       "id": "2026-10-09|kempton|17:15|miss mambo|each-way",
@@ -734,7 +743,8 @@
       "runnerCount": 13,
       "placesPaid": 3,
       "terms": "13-runner Class 6 one-mile Polytrack handicap; 3 places at 1/4 house odds; bookmaker terms vary",
-      "result": null
+      "result": null,
+      "priceBasis": "early"
     }
   ],
   "placePolicy": {
@@ -782,7 +792,8 @@
             "updatedAt": "2026-10-09T16:00:16.667Z"
           },
           "confidenceTier": "FORM-STRONG E/W",
-          "settlementOdds": "4/1"
+          "settlementOdds": "4/1",
+          "priceBasis": "early"
         },
         {
           "horse": "Sweltering",
@@ -800,7 +811,8 @@
             "updatedAt": "2026-10-09T16:00:16.667Z"
           },
           "confidenceTier": "GROUP STEP / EACH-WAY",
-          "settlementOdds": "11/2"
+          "settlementOdds": "11/2",
+          "priceBasis": "early"
         },
         {
           "horse": "Theheatison",
@@ -818,7 +830,8 @@
             "updatedAt": "2026-10-09T16:00:16.667Z"
           },
           "confidenceTier": "VALUE E/W — BELOW PRIME",
-          "settlementOdds": "6/1"
+          "settlementOdds": "6/1",
+          "priceBasis": "early"
         },
         {
           "horse": "Naga",
@@ -833,7 +846,8 @@
             "source": "User-reported 11th place; independent official finish and SP confirmation pending",
             "updatedAt": "2026-10-09T15:58:20.501Z"
           },
-          "confidenceTier": "FORM-STRONG E/W"
+          "confidenceTier": "FORM-STRONG E/W",
+          "priceBasis": "early"
         }
       ],
       "versions": [
@@ -922,7 +936,8 @@
       "amendmentReason": "All four legs >11/2; excluded NR; higher-priced form-led choices",
       "minimumFractionalOddsExclusive": "11/2",
       "validAtReview": true,
-      "reviewSource": "Racing TV / Timeform / Sporting Life / Oddschecker"
+      "reviewSource": "Racing TV / Timeform / Sporting Life / Oddschecker",
+      "priceBasis": "early"
     }
   ],
   "excludedDraftSelections": [
@@ -1023,5 +1038,11 @@
       "Theheatison"
     ],
     "pricesSource": "Official published results"
+  },
+  "pricingPolicy": {
+    "mode": "recorded_early_odds",
+    "effectiveFrom": "2026-10-09",
+    "notes": "Individual singles settle at their own selectionOdds and Lucky15 at each leg's separately saved selectionOdds, even when later SP differs. Earlier 8 Oct returns kept at their original historical terms as multiple quoted early ranges cannot identify a unique accepted price.",
+    "officialSPReferenceOnly": true
   }
 }
