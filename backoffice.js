@@ -68,6 +68,14 @@ function render(report){
   card('Sectional datasets',String(coverage.withSectionals??0),'Furlong splits with publication rights'),
   card('Selection outcomes retained',String(coverage.confirmedFinishedOutcomes??0),'Only observed results; not full-field validation data')
  ].join('')+'</div>';
+ const audit=research.priceAudit||{},baselineRows=(audit.oddsBands||[]).map(row=>
+   '<tr><th scope="row">'+esc(row.oddsBand)+'</th><td>'+esc(row.observations)+'</td><td>'+esc(row.winners)+'</td>'+
+   '<td>'+percent(row.winRatePercent)+'</td><td>'+esc(row.impliedExpectedWins??'—')+'</td>'+
+   '<td>'+esc(row.marketImpliedBrier??'—')+'</td></tr>').join('');
+ const auditTable='<div class="research-audit"><h3>Odds versus outcomes: baseline</h3>'+
+  '<p>This is a descriptive check against raw market-implied chances, not a trained model. Bets without a clear saved price are excluded.</p>'+
+  '<div class="table-scroll"><table><thead><tr><th>Quoted odds</th><th>Known picks</th><th>Wins</th><th>Strike</th><th>Market expected wins</th><th>Brier</th></tr></thead><tbody>'+baselineRows+'</tbody></table></div>'+
+  '<small>'+esc(audit.conclusions||'No reliable accuracy conclusion yet')+'</small></div>';
  const signalRows=(research.factors||[]).map(f=>'<div class="research-factor"><strong>'+esc(f.name)+'</strong><small>'+esc(f.source)+'</small></div>').join('');
  const sources=(research.sources||[]).map(p=>'<a href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.title)+' ↗</a>').join('');
  const tracks=(research.tracks||[]).map(course=>'<details class="course-profile"><summary><strong>'+esc(course.course)+'</strong><small>'+esc(course.surface)+' · '+esc(course.configuration)+'</small></summary>'+
@@ -81,6 +89,7 @@ function render(report){
  researchMetrics+
  '<p class="research-readiness"><strong>'+(coverage.quantitativeRetrainReady?'Archive threshold met — evaluate prospectively':'Historical validation not yet ready')+'</strong><span>'+esc(validation.reason||'Require an independent chronological held-out test before changing predictions')+'</span></p>'+
  '<div class="research-factors">'+signalRows+'</div>'+
+ auditTable+
  coursePanel+
  '<div class="research-sources"><strong>Research references</strong><div>'+sources+'</div></div>'+
  '<p class="research-disclaimer">The existing paper ledger has '+esc(coverage.recordedTipBets??0)+' recorded bets over '+esc(coverage.recordedTipDates??0)+' race dates; it does not contain 500 verified full historical races. This panel never invents sectionals or retrospective performance figures. Changes are tested out-of-sample before use.</p></section>';
