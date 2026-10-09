@@ -61,13 +61,29 @@ function render(report){
  const changes='<section class="sheet"><div class="section-title"><div><h2>System changes & research</h2>'+
  '<p>Documented adjustments made to research and selection rules, not invented autonomous learning</p></div></div>'+
  '<div class="change-list">'+(notes||'<p>No changes recorded yet.</p>')+'</div></section>';
+ const research=report.research||{},coverage=research.coverage||{},validation=research.validation||{};
+ const researchMetrics='<div class="research-metrics">'+[
+  card('Historical races in database',String(coverage.sourcedHistoricalRaces??0),'Sourced full-field race histories, distinct race dates/times'),
+  card('Run-style comments stored',String(coverage.withRunComments??0),'Tagged notes with attributable prior-race sources'),
+  card('Sectional datasets',String(coverage.withSectionals??0),'Furlong splits with publication rights'),
+  card('Selection outcomes retained',String(coverage.confirmedFinishedOutcomes??0),'Only observed results; not full-field validation data')
+ ].join('')+'</div>';
+ const signalRows=(research.factors||[]).map(f=>'<div class="research-factor"><strong>'+esc(f.name)+'</strong><small>'+esc(f.source)+'</small></div>').join('');
+ const sources=(research.sources||[]).map(p=>'<a href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.title)+' ↗</a>').join('');
+ const researchPanel='<section class="sheet"><div class="section-title"><div><h2>Historical research laboratory</h2>'+
+ '<p>Running style, track layout, handicap marks, race comments and sectional pace. Factor engineering runs in shadow mode until tested.</p></div></div>'+
+ researchMetrics+
+ '<p class="research-readiness"><strong>'+(coverage.quantitativeRetrainReady?'Archive threshold met — evaluate prospectively':'Historical validation not yet ready')+'</strong><span>'+esc(validation.reason||'Require an independent chronological held-out test before changing predictions')+'</span></p>'+
+ '<div class="research-factors">'+signalRows+'</div>'+
+ '<div class="research-sources"><strong>Research references</strong><div>'+sources+'</div></div>'+
+ '<p class="research-disclaimer">The existing paper ledger has '+esc(coverage.recordedTipBets??0)+' recorded bets over '+esc(coverage.recordedTipDates??0)+' race dates; it does not contain 500 verified full historical races. This panel never invents sectionals or retrospective performance figures. Changes are tested out-of-sample before use.</p></section>';
  const methodology=report.methodology||{};
  const standards='<section class="sheet methodology"><h2>How the figures are measured</h2>'+
   '<p><b>Win strike rate:</b> '+esc(methodology.strikeRate||'Wins / known finished runners')+'</p>'+
   '<p><b>E/W place rate:</b> '+esc(methodology.placeRate||'Places / EW runners with known terms')+'</p>'+
   '<p><b>Profit:</b> '+esc(methodology.profit||'Settled returns less settled stakes')+'</p>'+
   '<p><b>Evidence standard:</b> '+esc(methodology.caveat||'No unverified accuracy claim')+'</p></section>';
- $('report-content').innerHTML=cards+chart+table+changes+standards;
+ $('report-content').innerHTML=cards+chart+table+changes+researchPanel+standards;
  $('report-content').hidden=false;
  $('report-loading').hidden=true;
 }
