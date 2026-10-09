@@ -700,7 +700,8 @@
     "allowEvens": true,
     "oddsOnAction": "EXCLUDE: no published tip and no new £10 paper wager if available odds are shorter than evens",
     "midshotMinOdds": "6/1",
-    "midshotMaxOdds": "18/1"
+    "midshotMaxOdds": "18/1",
+    "paperSettlementPricing": "Early prices recorded at publication on the individual selection and Lucky15 leg separately; later SP cannot override the paper payout."
   },
   "lucky15Plan": {
     "date": "2026-10-09",
@@ -738,7 +739,8 @@
         "horse": "Naga",
         "price": "12/1"
       }
-    ]
+    ],
+    "settlementPricing": "Recorded early fractional odds, not SP; the four ticket quotes are separate from overlapping single picks."
   },
   "racecardLinks": [
     {
