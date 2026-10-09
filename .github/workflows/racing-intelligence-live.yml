@@ -33,6 +33,7 @@ jobs:
           node tests/racing-tracker.test.mjs
           node tests/racing-web-search.test.mjs
           node tests/racing-backoffice.test.mjs
+          node tests/racing-research.test.mjs
 
       - name: Refresh live odds and results
         run: node scripts/update-racing-live.mjs
@@ -42,18 +43,21 @@ jobs:
           RACING_DATA_API_URL: ${{ secrets.RACING_DATA_API_URL }}
           RACING_DATA_API_TOKEN: ${{ secrets.RACING_DATA_API_TOKEN }}
 
+      - name: Log research data coverage and readiness
+        run: node scripts/log-racing-research.mjs
+
       - name: Log daily racing performance and documented rule changes
         run: node scripts/log-racing-backoffice.mjs
 
       - name: Commit changed race data
         shell: bash
         run: |
-          if git diff --quiet -- data/races.json data/bet-ledger.json functions/_private/backoffice-history.json; then
+          if git diff --quiet -- data/races.json data/bet-ledger.json functions/_private/backoffice-history.json functions/_private/racing-research-journal.json; then
             echo "No racing data changes."
             exit 0
           fi
           git config user.name "racing-intelligence-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/races.json data/bet-ledger.json functions/_private/backoffice-history.json
+          git add data/races.json data/bet-ledger.json functions/_private/backoffice-history.json functions/_private/racing-research-journal.json
           git commit -m "Refresh racing data and back-office daily tracker"
           git push origin HEAD:racing-intelligence
