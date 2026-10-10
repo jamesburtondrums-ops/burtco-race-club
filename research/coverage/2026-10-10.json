@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-10",
+  "observedAt": "2026-10-10T08:47:23.603Z",
+  "ledger": {
+    "bets": 43,
+    "dates": 3,
+    "finishedSelections": 27,
+    "distinctFinishedSelectionRaces": 24
+  },
+  "research": {
+    "reviewedRaceReferences": 4,
+    "reviewedRaceStarterCount": 49,
+    "reviewedNamedSourceNotes": 12,
+    "permissionedFullFieldRaces": 0,
+    "permissionedRunnerRows": 0,
+    "licensedComments": 0,
+    "sectionalsWithPar": 0,
+    "officialPerformanceFigures": 0,
+    "goalRaces": 500,
+    "goalRunners": 2000,
+    "retrainEligible": false
+  },
+  "baseline": {
+    "type": "unadjusted implied-probability diagnostic on selected horses only",
+    "finishedWithExactRecordedFractionalPrice": 13,
+    "winners": 2,
+    "rawBrier": 0.1262,
+    "timestampedQuotes": 0,
+    "completeRaceMarketAvailable": false,
+    "walkForwardReady": false
+  },
+  "blockers": [
+    "No verified rights for systematic source extraction",
+    "No permissioned full-field historic data",
+    "No pre-off timestamped complete-field market",
+    "No verified race-specific sectional pars"
+  ],
+  "existingBacktest": "Exploratory external Kaggle results exist but lack verified ingestion rights and time-stamped early-price market baseline; not counted toward qualifying archive."
+}
