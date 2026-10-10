@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-09",
+  "checkedAt": "2026-10-10T08:47:07.919Z",
+  "rights": "unconfirmed; reference-only; NOT licensed training data",
+  "id": "2026-10-09-york-1330",
+  "course": "York",
+  "time": "13:30",
+  "code": "GB flat handicap",
+  "starters": 17,
+  "trip": "7f192y",
+  "going": "Good to Soft",
+  "source": "https://www.irishracing.com/raceresults/Fri-9th-Oct-2026/York/1330",
+  "notes": [
+    [
+      "Mr Swivell",
+      1,
+      "leader",
+      "draw 15; led throughout"
+    ],
+    [
+      "Spoken Truth",
+      4,
+      "interference",
+      "draw 1; lacked clear passage"
+    ],
+    [
+      "Beagle Bay",
+      5,
+      "midfield",
+      "draw 9; no decisive late gain"
+    ]
+  ]
+}
