@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-09",
+  "checkedAt": "2026-10-10T08:47:07.919Z",
+  "rights": "unconfirmed; reference-only; NOT licensed training data",
+  "id": "2026-10-09-dundalk-2030",
+  "course": "Dundalk",
+  "time": "20:30",
+  "code": "IE AW handicap",
+  "starters": 5,
+  "trip": "1m4f",
+  "going": "Standard",
+  "source": "https://www.irishracing.com/raceresults/Fri-9th-Oct-2026/Dundalk/2030",
+  "stewards": "https://www.ihrb.ie/daily-enquiries/Dundalk%209th%20October%202026",
+  "notes": [
+    [
+      "Fixation",
+      1,
+      "prominent",
+      "draw 1; led in straight"
+    ],
+    [
+      "Quatre Bras",
+      2,
+      "interference",
+      "draw 5; short of room"
+    ],
+    [
+      "Touch The Moon",
+      5,
+      "keen",
+      "draw 3; veterinary exam normal"
+    ]
+  ]
+}
