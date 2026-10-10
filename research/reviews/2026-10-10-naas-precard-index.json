@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-10",
+  "course": "Naas",
+  "time": "16:08",
+  "horse": "Keke",
+  "source": "https://www.irishracing.com/punchestown/racecards/Sat-10th-Oct-2026/Naas/1608",
+  "checkedAt": "2026-10-10T08:48:03.498Z",
+  "rights": "not cleared; shadow only",
+  "ORcurrent": 93,
+  "ORhistory": [
+    [
+      "2026-08-22",
+      99
+    ],
+    [
+      "2026-09-13",
+      95
+    ],
+    [
+      "2026-09-26",
+      94
+    ]
+  ],
+  "performanceFigure": null,
+  "postRaceResult": null
+}
