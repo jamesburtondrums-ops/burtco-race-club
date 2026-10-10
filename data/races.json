@@ -1,1147 +1,836 @@
 {
-  "snapshotDate": "2026-10-09",
-  "verifiedAt": "2026-10-09T07:33:11.997Z",
-  "mode": "USER VALUE POLICY — NO ODDS-ON; 5 WIN, 4 MIDSHOT E/W, 1 LONGSHOT E/W",
+  "snapshotDate": "2026-10-10",
+  "verifiedAt": "2026-10-10T08:05:20.951Z",
+  "mode": "SATURDAY 10 OCTOBER · 10 pre-race paper selections · 5 wins / 5 midshots / no forced longshot",
   "coverage": {
-    "meetings": 6,
-    "races": 47,
-    "scope": "October 9 2026 six-meeting racecard screened; detailed mid-price alternatives checked against available public racecards, form, going and market.",
-    "publishedDate": "2026-10-08",
+    "meetings": 7,
+    "races": 51,
+    "scope": "Screened seven GB/Ireland meeting cards; detailed public form/OR-RPR-TS/ground/riders/field check for 10 choices. Not a calibrated probability model.",
+    "publishedDate": "2026-10-10",
     "selectedIndividuals": 10,
-    "lastReviewedAt": "2026-10-09T07:31:03.493Z",
-    "focus": "5 win picks priced evens or bigger; 4 midshots 6/1–18/1; just 1 conditional 20/1+ E/W longshot"
+    "focus": "No odds-on selections, 5 win prices 11/10–9/2, 5 E/W midshots 13/2–16/1, no speculative longshot"
   },
   "meetings": [
     {
       "course": "Newmarket",
-      "code": "Flat",
-      "races": 8
-    },
-    {
-      "course": "York",
-      "code": "Flat",
-      "races": 7
+      "code": "Flat Turf",
+      "races": 7,
+      "going": "Good to soft"
     },
     {
       "course": "Chepstow",
+      "code": "Jumps Turf",
+      "races": 7,
+      "going": "Good to soft"
+    },
+    {
+      "course": "York",
+      "code": "Flat Turf",
+      "races": 7,
+      "going": "Soft (good to soft in places)"
+    },
+    {
+      "course": "Naas",
+      "code": "Flat Turf Ireland",
+      "races": 7,
+      "going": "Soft (soft to heavy in places)"
+    },
+    {
+      "course": "Hexham",
       "code": "Jumps",
-      "races": 8
+      "races": 7,
+      "going": "Recheck current going"
     },
     {
-      "course": "Downpatrick",
-      "code": "Jumps IRE",
-      "races": 7
+      "course": "Fairyhouse",
+      "code": "Jumps Ireland",
+      "races": 7,
+      "going": "Recheck current going"
     },
     {
-      "course": "Kempton",
-      "code": "AW",
-      "races": 9
-    },
-    {
-      "course": "Dundalk",
-      "code": "AW IRE",
-      "races": 8
+      "course": "Southwell",
+      "code": "All-Weather",
+      "races": 9,
+      "going": "Tapeta standard"
     }
   ],
   "sources": [
     {
+      "name": "HorseRacing.net / Racing Post-backed cards",
+      "status": "published",
+      "role": "Declared runners, class, OR/TS/RPR, jockey, race card and quoted market"
+    },
+    {
       "name": "Racing Post",
       "status": "published",
-      "role": "Declared racecard, field sizes, race classes, purse and jockeys"
+      "role": "Meeting schedule, official conditions and early price cross-check"
     },
     {
-      "name": "HorseRacing.net",
-      "status": "published",
-      "role": "Overnight runner details, OR/RPR/TS, form and market quotes"
+      "name": "Timeform / Racing TV",
+      "status": "reference",
+      "role": "Pace, race analysis and price / sectional methodology"
     },
     {
-      "name": "Racing TV",
-      "status": "published",
-      "role": "Independent pre-race notes and price cross-check"
-    },
-    {
-      "name": "StableBet",
-      "status": "published",
-      "role": "GB and Irish daily meeting listings"
-    },
-    {
-      "name": "Racing commentary",
-      "status": "context only",
-      "role": "Independent opinions; never used as claimed proven predictive accuracy"
+      "name": "BHA",
+      "status": "official background",
+      "role": "Handicap rating and race-day rule interpretation"
     }
   ],
   "todaySelections": [
     {
-      "horse": "Beagle Bay",
-      "course": "York",
-      "time": "13:30",
-      "odds": "2/1",
-      "runnerCount": 18,
-      "or": 94,
-      "ts": 97,
-      "rpr": 110,
-      "jockey": "Hector Crouch",
-      "trainer": "Ralph Beckett",
-      "tier": "STRONG",
-      "confidenceTier": "FORM POSITIVE / HIGH FIELD RISK",
+      "horse": "The Lost King",
+      "course": "Newmarket",
+      "time": "13:15",
+      "odds": "7/4",
+      "runnerCount": 5,
+      "or": 110,
+      "ts": 107,
+      "rpr": 122,
+      "jockey": "William Buick",
+      "trainer": "Andrew Balding",
+      "tier": "PRIME",
+      "confidenceTier": "PRIME FORM / GROUP 3",
       "tags": [
-        "TWO HANDICAP WINS",
-        "RPR110 OR94",
-        "BECKETT / CROUCH",
-        "YORK 18 RUNNERS",
-        "CLASS 3 £15,462"
+        "FORM 401122",
+        "TWO RECENT GROUP RUNNER-UP FINISHES",
+        "BUICK / BALDING",
+        "RPR 122 / TS 107",
+        "5 RUNNERS"
       ],
-      "reason": "Form 2-1411 and unbeaten in two handicap starts including a Sandown victory. OR94 with RPR110/TS97, and Beckett/Crouch stable-rider combination. Market around 2/1 and strong consensus make him attractive on ability.",
-      "risk": "18-runner straight-mile-type York handicap; stall 9, traffic and draw/pace split increase variance. At roughly 2/1 the implied win chance may not offer value against such a field.",
-      "source": "Racing Post / HorseRacing.net",
-      "sourceUrl": "https://www.racingpost.com/racecards/107/york/2026-10-09/928531/",
+      "reason": "Form 401122 and recent Group-level seconds, most recently over this Newmarket course, offer a repeatable class case. William Buick is aboard for Andrew Balding; RPR 122 and TS 107 are competitive. Quote around 7/4 rather than odds-on.",
+      "risk": "Five-runner Group 3 means one paid place under house each-way rules. Boiling Point (RPR123) is a proven course-distance threat and Humidity returns with Group form; 7/4 is a short value margin.",
+      "source": "HorseRacing.net / Racing Post",
+      "sourceUrl": "https://www.horseracing.net/newmarket/10-10-26",
       "v42": {
-        "isPrime": false,
-        "raceType": "Class 3 handicap",
-        "priceLabel": "SHORT FOR AN 18-RUNNER RACE",
-        "contextSummary": "Strong recent handicap profile but significant large-field tactical uncertainty.",
+        "isPrime": true,
+        "raceType": "Group 3, 1m1f, £53,875 winner",
+        "priceLabel": "EARLY QUOTE / 7/4",
+        "contextSummary": "Group runner-up class with Buick/Balding; moderate price and viable rivals.",
         "contextFactors": [
           {
-            "name": "Current form",
-            "status": "VERY STRONG",
-            "detail": "Unbeaten in two handicap starts"
-          },
-          {
-            "name": "Handicap",
-            "status": "POSITIVE",
-            "detail": "OR94 and RPR110"
-          },
-          {
-            "name": "Trainer / jockey",
+            "name": "Recent form",
             "status": "STRONG",
-            "detail": "Ralph Beckett / Hector Crouch"
+            "detail": "401122, placed twice in Group races"
           },
           {
-            "name": "Draw / pace",
-            "status": "CAUTION",
-            "detail": "Stall 9 and 18 competitors"
-          },
-          {
-            "name": "Ground",
-            "status": "NEUTRAL",
-            "detail": "York good with good-to-soft areas; no decisive preference confirmed"
+            "name": "Course and trip",
+            "status": "POSITIVE",
+            "detail": "Recent Newmarket Group second; 1m1f in range"
           },
           {
             "name": "Class/value",
-            "status": "POSITIVE",
-            "detail": "Class 3 £15,462 first prize"
-          },
-          {
-            "name": "Market",
-            "status": "STRONG",
-            "detail": "2/1 early favourite"
-          },
-          {
-            "name": "Exact trainer/course record",
-            "status": "UNVERIFIED",
-            "detail": "Not established"
-          }
-        ]
-      },
-      "result": {
-        "position": 5,
-        "status": "User reported",
-        "source": "User-reported finishing position; published result and SP not independently verified",
-        "updatedAt": "2026-10-09T13:02:00.850Z"
-      }
-    },
-    {
-      "horse": "Flora Of Bermuda",
-      "course": "Newmarket",
-      "time": "14:25",
-      "tier": "STRONG",
-      "odds": "13/8",
-      "runnerCount": 6,
-      "or": 111,
-      "ts": 114,
-      "rpr": 126,
-      "tags": [
-        "6 RUNNERS",
-        "GROUP 2 / £93,572 WINNER",
-        "COURSE & DISTANCE WINNER",
-        "RPR 126",
-        "JAMES DOYLE"
-      ],
-      "reason": "Best balance of proven class and usable win price in the trimmed list. Course-and-distance evidence, RPR126 and TS114 stand out in a six-runner Group 2; James Doyle retained and a clear market leader.",
-      "risk": "Racing Post selects Time To Turn ahead of the field, whose TS113 matches the top level, and Pina Sonata RPR123 is close to Flora's 125. Only six runners, first two paid places under tracker policy. 13/8 may be tight.",
-      "source": "Racing Post / Racing TV / Sporting Life",
-      "sourceUrl": "https://www.racingpost.com/racecards/38/newmarket/2026-10-09/",
-      "v42": {
-        "isPrime": false,
-        "marketRank": 1,
-        "raceType": "Group 2",
-        "priceLabel": "COMPETITIVE GROUP 2 / NO PRIME",
-        "contextSummary": "Proven C&D and peak RPR125, but Time To Turn and Pina Sonata have comparable form; not safe to call Prime.",
-        "contextFactors": [
-          {
-            "name": "Class/grade",
-            "status": "STRONG",
-            "detail": "Group 2, 7f, £93,572 first prize; proven in stakes company"
-          },
-          {
-            "name": "Current form",
-            "status": "STRONG",
-            "detail": "Form 101102 and recent second; RPR126, TS114"
-          },
-          {
-            "name": "Course/distance",
-            "status": "STRONG",
-            "detail": "Previous course-and-distance winner"
+            "status": "HIGH",
+            "detail": "Group 3; £53,875 winner prize"
           },
           {
             "name": "Jockey/trainer",
-            "status": "POSITIVE",
-            "detail": "James Doyle for Andrew Balding"
-          },
-          {
-            "name": "Market",
             "status": "STRONG",
-            "detail": "Early price around 13/8–7/4 in six-runner event"
-          },
-          {
-            "name": "Risk",
-            "status": "CAUTION",
-            "detail": "Group company and small paid-place allowance"
-          }
-        ]
-      },
-      "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "currentGoing": "Good to firm (meeting-level Racing Post listing; recheck live race going)",
-      "confidenceTier": "STRONG — COMPETITIVE GROUP 2",
-      "reassessment": {
-        "decision": "RETAIN / DOWNGRADE FROM PRIME",
-        "checkedAt": "2026-10-09T07:12:53.549Z",
-        "why": "Proven C&D but serious opposition near same rating"
-      },
-      "currentOdds": "15/8",
-      "result": {
-        "position": 2,
-        "status": "User reported",
-        "source": "User-reported finish; official starting price not independently checked",
-        "updatedAt": "2026-10-09T13:30:27.158Z"
-      }
-    },
-    {
-      "horse": "Archers Bay",
-      "course": "Newmarket",
-      "time": "15:30",
-      "odds": "4/1",
-      "runnerCount": 11,
-      "or": 100,
-      "ts": 104,
-      "rpr": 112,
-      "jockey": "Ryan Moore",
-      "trainer": "Marco Botti",
-      "tier": "STRONG",
-      "confidenceTier": "STRONG — HERITAGE HANDICAP",
-      "tags": [
-        "C&D LISTED 2ND",
-        "RYAN MOORE",
-        "RPR112 / OR100",
-        "ONLY +1LB",
-        "CLASS 2 £51,540"
-      ],
-      "reason": "Listed runner-up over this same Newmarket 1m4f only 14 days ago, preceded by an Ascot handicap win. Handicap mark only 1lb higher than before his stronger Listed effort; Ryan Moore booked, RPR112/TS104. One of the clearest handicapping cases at around 4/1.",
-      "risk": "11-runner Heritage Handicap with draw 10 and top weight 9-9; well-handicapped rivals such as Decade Of Time can improve. Listed runner-up does not guarantee a favourable pace. Current public quote is 5/1, original paper quote 4/1 retained for historical audit.",
-      "source": "Timeform / Racing Post / Racing TV",
-      "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1530/36/5",
-      "v42": {
-        "isPrime": false,
-        "raceType": "Class 2 Heritage Handicap",
-        "priceLabel": "BEST HANDICAP FORM / 4/1",
-        "contextSummary": "Recent course-and-distance Listed second, proven at trip and rider upgrade, but large-handicap pace risk.",
-        "contextFactors": [
-          {
-            "name": "Handicap placement",
-            "status": "VERY STRONG",
-            "detail": "OR100 after C&D Listed second, just 1lb higher"
-          },
-          {
-            "name": "Course / distance",
-            "status": "VERY STRONG",
-            "detail": "Newmarket 1m4f C&D proven"
-          },
-          {
-            "name": "Current form",
-            "status": "STRONG",
-            "detail": "Recent placed Listed effort and previous Ascot win"
-          },
-          {
-            "name": "Class / value",
-            "status": "HIGH",
-            "detail": "Class 2 Heritage, £51,540 prize"
-          },
-          {
-            "name": "Jockey",
-            "status": "STRONG",
-            "detail": "Ryan Moore"
-          },
-          {
-            "name": "Draw / tactics",
-            "status": "CAUTION",
-            "detail": "Stall 10 in 11 runners; pace not fully resolved"
-          },
-          {
-            "name": "Trainer current form",
-            "status": "POSITIVE",
-            "detail": "Botti yard published in active form"
-          },
-          {
-            "name": "Exact trainer type/course",
-            "status": "UNVERIFIED",
-            "detail": "Reliable historical splits not established"
-          }
-        ]
-      },
-      "currentGoing": "Good to firm (meeting-level Racing Post listing; recheck live race going)",
-      "currentOdds": "5/1"
-    },
-    {
-      "horse": "Cosmic Connection",
-      "course": "Chepstow",
-      "time": "15:43",
-      "odds": "15/8",
-      "runnerCount": 11,
-      "or": 138,
-      "ts": 143,
-      "rpr": 151,
-      "jockey": "Freddie Gordon",
-      "trainer": "Chris Gordon",
-      "tier": "PRIME",
-      "confidenceTier": "PRIME FORM / CLASS RISK",
-      "tags": [
-        "3 WINS IN 4 HURDLES",
-        "RPR 151 TS 143",
-        "GRADE 2 / £45,560",
-        "FREDDIE GORDON",
-        "11 RUNNERS"
-      ],
-      "reason": "Won three of four over hurdles last spring, most recently a valuable 15-runner Sandown novices' handicap. OR138, RPR151 and TS143 create a powerful form base for the 11-runner Persian War Grade 2; roughly 15/8 is a usable price.",
-      "risk": "Returns after 167 days and steps up to Grade 2 company and 2m3f for the first time under rules; Lord Byron has Grade 1-level form. This is not a proven class/trip match.",
-      "source": "Timeform / Racing Post / Sporting Life",
-      "sourceUrl": "https://www.timeform.com/horse-racing/odds/chepstow/2026-10-09/1543/11/5",
-      "v42": {
-        "isPrime": true,
-        "raceType": "Grade 2 novice hurdle",
-        "priceLabel": "STRONG PROFILE / CLASS STEP",
-        "contextSummary": "Progressive form and good ratings, tempered by longer trip and higher grade.",
-        "contextFactors": [
-          {
-            "name": "Current form",
-            "status": "VERY STRONG",
-            "detail": "Three wins from last four hurdles; Sandown handicap win"
-          },
-          {
-            "name": "Class / value",
-            "status": "HIGH",
-            "detail": "Grade 2; £45,560 winner prize"
-          },
-          {
-            "name": "Ratings",
-            "status": "VERY STRONG",
-            "detail": "OR138, RPR151, TS143"
-          },
-          {
-            "name": "Jockey/trainer",
-            "status": "POSITIVE",
-            "detail": "Freddie Gordon / Chris Gordon"
+            "detail": "William Buick for Andrew Balding"
           },
           {
             "name": "Going",
+            "status": "RECHECK",
+            "detail": "Good to soft; verify latest suitability"
+          },
+          {
+            "name": "Opponent ratings",
             "status": "CAUTION",
-            "detail": "Chepstow good-to-soft vs latest Sandown on fast ground"
+            "detail": "Boiling Point RPR123, Humidity improving"
           },
           {
-            "name": "Distance",
-            "status": "UNPROVEN",
-            "detail": "Up to 2m3f100yd; stamina assumed, not demonstrated"
-          },
-          {
-            "name": "Opposition",
-            "status": "CAUTION",
-            "detail": "Lord Byron brings Grade 1 form"
-          },
-          {
-            "name": "Pace / sectionals",
+            "name": "Pace/sectionals",
             "status": "UNVERIFIED",
-            "detail": "No verified whole-field pace map"
-          }
-        ]
-      }
-    },
-    {
-      "horse": "Gunfighter",
-      "course": "Kempton",
-      "time": "19:15",
-      "tier": "STRONG",
-      "confidenceTier": "STRONG — C&D / COMPETITIVE HANDICAP",
-      "odds": "2/1",
-      "currentOdds": "15/8",
-      "runnerCount": 10,
-      "or": 71,
-      "ts": null,
-      "rpr": null,
-      "trainer": "John Butler",
-      "jockey": "Billy Loughnane",
-      "tags": [
-        "4 WINS FROM 11 AW STARTS",
-        "LAST-TIME C&D WIN",
-        "BILLY LOUGHNANE",
-        "CLASS 5 / £4,187",
-        "10 RUNNERS",
-        "MIN PRICE 1/1"
-      ],
-      "reason": "One of the more repeatable win profiles available at acceptable prices: four wins from eleven all-weather races, most recently a sustained late run to score over this same mile on Kempton Polytrack. Billy Loughnane is booked for the first time, and Sporting Life and HorseRacing.net both place him near the top of this ten-runner Class 5 handicap.",
-      "risk": "Asteverdi finished close behind over C&D previously and Berry Clever is a last-time winner; Gunfighter faces a meaningful handicap test. Morning show ranged 15/8–2/1; do not treat him as selected if he drops below evens.",
-      "source": "Sporting Life 19:15 live show / HorseRacing.net / Racing TV",
-      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-09/kempton/live-show/942529/try-unibets-superboosts-handicap-div-2",
-      "v42": {
-        "isPrime": false,
-        "raceType": "Class 5 one-mile AW handicap",
-        "priceLabel": "C&D CASE, 15/8–2/1",
-        "contextSummary": "Recent C&D win, four all-weather wins overall and Loughnane booking. Still a contested ten-runner handicap.",
-        "contextFactors": [
-          {
-            "name": "Current form",
-            "status": "STRONG",
-            "detail": "Won most recent 1m Kempton handicap with strong late run"
-          },
-          {
-            "name": "Course and distance",
-            "status": "VERY STRONG",
-            "detail": "Proven winner on this Polytrack track and trip"
-          },
-          {
-            "name": "Class/value",
-            "status": "SUITABLE",
-            "detail": "Class 5 handicap; £4,187 winner"
-          },
-          {
-            "name": "Trainer/jockey",
-            "status": "POSITIVE",
-            "detail": "John Butler, with Billy Loughnane newly booked"
-          },
-          {
-            "name": "Opposition",
-            "status": "CAUTION",
-            "detail": "Berry Clever won last time and Asteverdi has C&D form"
-          },
-          {
-            "name": "Pace/running style",
-            "status": "POSITIVE",
-            "detail": "Produced late surge to win over C&D; full sectional map not verified"
-          },
-          {
-            "name": "Market",
-            "status": "ACCEPTABLE",
-            "detail": "15/8–2/1 show, comfortably above evens"
-          },
-          {
-            "name": "Trainer course/type split",
-            "status": "UNVERIFIED",
-            "detail": "Precise percentage not confirmed"
+            "detail": "Complete five-runner early race pace not sourced"
           }
         ]
       },
-      "researchUpdatedAt": "2026-10-09T07:31:03.493Z"
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Good to soft"
+    },
+    {
+      "horse": "Divine Whisper",
+      "course": "York",
+      "time": "13:30",
+      "odds": "9/2",
+      "runnerCount": 11,
+      "or": 86,
+      "ts": 111,
+      "rpr": 105,
+      "jockey": "Tom Marquand",
+      "trainer": "George Boughey",
+      "tier": "STRONG",
+      "confidenceTier": "STRONG PROFILE / SOFT GROUND TEST",
+      "tags": [
+        "FORM 213",
+        "TS 111",
+        "MARQUAND / BOUGHEY",
+        "LISTED 6F £39,697",
+        "11 RUNNERS"
+      ],
+      "reason": "Form 213 includes a competitive Glorious Goodwood third against a stronger juvenile field. TS111 is a useful speed indicator and published analysis expects improvement at this six-furlong trip. Tom Marquand/George Boughey at about 9/2.",
+      "risk": "73 days since last run and testing soft ground at York may blunt earlier speed. RPR105 is not clearly superior to all rivals and draw/pace remain unsettled.",
+      "source": "HorseRacing.net / Racing Post",
+      "sourceUrl": "https://www.horseracing.net/york/10-10-26",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Listed, 6f, £39,697 winner",
+        "priceLabel": "WIN CASE / 9/2",
+        "contextSummary": "Good race-level TS and progressive juvenile form, but a 73-day absence and soft ground reduce confidence.",
+        "contextFactors": [
+          {
+            "name": "Form",
+            "status": "STRONG",
+            "detail": "213, third in Goodwood stakes-level form"
+          },
+          {
+            "name": "Speed",
+            "status": "POSITIVE",
+            "detail": "Topspeed 111"
+          },
+          {
+            "name": "Jockey/trainer",
+            "status": "STRONG",
+            "detail": "Tom Marquand / George Boughey"
+          },
+          {
+            "name": "Race class/value",
+            "status": "HIGH",
+            "detail": "Listed sprint, £39,697 to winner"
+          },
+          {
+            "name": "Surface/going",
+            "status": "CAUTION",
+            "detail": "Soft York turf versus previous profile"
+          },
+          {
+            "name": "Fitness",
+            "status": "CAUTION",
+            "detail": "73-day break"
+          },
+          {
+            "name": "Early pace",
+            "status": "UNVERIFIED",
+            "detail": "Sprint field-wide draw + pace map incomplete"
+          }
+        ]
+      },
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Soft (good to soft in places)"
+    },
+    {
+      "horse": "Made U Blush",
+      "course": "Chepstow",
+      "time": "14:10",
+      "odds": "3/1",
+      "runnerCount": 13,
+      "or": 121,
+      "ts": 106,
+      "rpr": 128,
+      "jockey": "Harry Skelton",
+      "trainer": "Dan Skelton",
+      "tier": "STRONG",
+      "confidenceTier": "STRONG JUMP PROFILE / RETURNING FRESH",
+      "tags": [
+        "FORM 3112-5",
+        "RPR128 / OR121",
+        "SKELTON / SKELTON",
+        "CLASS 2 HURDLE £13,008",
+        "13 RUNNERS"
+      ],
+      "reason": "Progressive hurdles profile, followed by a fifth in the valuable Swinton at Haydock. RPR128 compared with current OR121 and Harry/Dan Skelton partnership offer an identifiable Class 2 2m hurdle opportunity around 3/1.",
+      "risk": "154 days off and 13-runner competitive four-year-old hurdle. Training fitness and exact pace/weight changes have not been independently quantified.",
+      "source": "HorseRacing.net / Chepstow Racing Post card",
+      "sourceUrl": "https://www.horseracing.net/chepstow/10-10-26",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Class 2 four-year-old hurdle, 2m, £13,008 winner",
+        "priceLabel": "WIN CASE / 3/1",
+        "contextSummary": "Useful prior handicap-run class with strong trainer-rider team; seasonal break and opposition meaningful.",
+        "contextFactors": [
+          {
+            "name": "Previous class",
+            "status": "STRONG",
+            "detail": "Swinton Hurdle fifth; quality opposition"
+          },
+          {
+            "name": "OR/RPR",
+            "status": "POSITIVE",
+            "detail": "OR121 vs RPR128 (context only)"
+          },
+          {
+            "name": "Trainer/rider",
+            "status": "STRONG",
+            "detail": "Dan Skelton / Harry Skelton"
+          },
+          {
+            "name": "Going",
+            "status": "POSSIBLE",
+            "detail": "Good-to-soft; no hard claim of ground superiority"
+          },
+          {
+            "name": "Fitness",
+            "status": "CAUTION",
+            "detail": "154 days since last race"
+          },
+          {
+            "name": "Trip / class",
+            "status": "POSITIVE",
+            "detail": "2m Class 2 limited handicap"
+          },
+          {
+            "name": "Race pace",
+            "status": "UNVERIFIED",
+            "detail": "Exact early-jumping profiles incomplete"
+          }
+        ]
+      },
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Good to soft"
+    },
+    {
+      "horse": "Rock Montreal",
+      "course": "Newmarket",
+      "time": "14:25",
+      "odds": "11/10",
+      "runnerCount": 7,
+      "or": 106,
+      "ts": 94,
+      "rpr": 109,
+      "jockey": "William Buick",
+      "trainer": "Roger Varian",
+      "tier": "STRONG",
+      "confidenceTier": "FORM STRONG / SHORT ACCEPTABLE PRICE",
+      "tags": [
+        "FORM 12",
+        "LISTED 2ND LAST TIME",
+        "BUICK / VARIAN",
+        "OR106",
+        "7 RUNNERS"
+      ],
+      "reason": "Won on debut and narrowly lost a Doncaster Listed race last time; first run at one mile is expected to suit. William Buick with Roger Varian, promising RPR 109 and an early price around 11/10, just above the user's evens floor.",
+      "risk": "Very lightly raced two-year-old and competitive Group 3 with Sergei Diaghilev among rivals; seven declared runners and only two house-terms places. This is close to the minimum acceptable price, so not a proven value edge.",
+      "source": "HorseRacing.net / Racing Post",
+      "sourceUrl": "https://www.horseracing.net/newmarket/10-10-26",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Group 3, 1m, £42,533 winner",
+        "priceLabel": "11/10 · JUST ABOVE EVENS",
+        "contextSummary": "Promising Listed placing and trainer/rider; price is not generous relative to two-year-old uncertainty.",
+        "contextFactors": [
+          {
+            "name": "Form",
+            "status": "STRONG",
+            "detail": "12, narrowly second in Doncaster Listed"
+          },
+          {
+            "name": "Class/value",
+            "status": "HIGH",
+            "detail": "Group 3; £42,533 winner"
+          },
+          {
+            "name": "Distance",
+            "status": "PROJECTION",
+            "detail": "Step up to 1m should help, not proven"
+          },
+          {
+            "name": "Stable/rider",
+            "status": "STRONG",
+            "detail": "Roger Varian / William Buick"
+          },
+          {
+            "name": "Ground",
+            "status": "RECHECK",
+            "detail": "Good to soft"
+          },
+          {
+            "name": "Opposition",
+            "status": "CAUTION",
+            "detail": "Sergei Diaghilev Group placing"
+          },
+          {
+            "name": "Market",
+            "status": "CAUTION",
+            "detail": "Only 11/10, narrow value margin"
+          }
+        ]
+      },
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Good to soft"
+    },
+    {
+      "horse": "Darkness Falls",
+      "course": "Newmarket",
+      "time": "15:00",
+      "odds": "15/8",
+      "runnerCount": 5,
+      "or": null,
+      "ts": 117,
+      "rpr": 121,
+      "jockey": "Ryan Moore",
+      "trainer": "A P O'Brien",
+      "tier": "PRIME",
+      "confidenceTier": "PRIME GROUP 1 FORM / TRIP QUESTION",
+      "tags": [
+        "FORM 311",
+        "GROUP 1 WINNER",
+        "MOORE / O'BRIEN",
+        "RPR121 TS117",
+        "5 RUNNERS"
+      ],
+      "reason": "Progressive Group 1-winning juvenile with form 311 and an RPR121/TS117 peak, partnered by Ryan Moore for Aidan O'Brien. Early 15/8 in a five-runner Dewhurst; stronger established class evidence than many unexposed rivals.",
+      "risk": "Drops to seven furlongs after succeeding over further and faces unbeaten Desert Castle. At Group 1 intensity, the pace may favour one opponent; clear predicted win probability is unvalidated.",
+      "source": "HorseRacing.net / Racing Post / Saturday racing previews",
+      "sourceUrl": "https://www.horseracing.net/newmarket/10-10-26",
+      "v42": {
+        "isPrime": true,
+        "raceType": "Group 1 Dewhurst, 7f, £283,550 winner",
+        "priceLabel": "15/8 · GROUP 1 WIN FORM",
+        "contextSummary": "Recent Group 1 win with strong RPR/TS; drop back to seven furlongs against Desert Castle is the critical test.",
+        "contextFactors": [
+          {
+            "name": "Class/grade",
+            "status": "VERY STRONG",
+            "detail": "Group 1 winner"
+          },
+          {
+            "name": "Recent form",
+            "status": "STRONG",
+            "detail": "311, improved last two starts"
+          },
+          {
+            "name": "RPR/TS",
+            "status": "STRONG",
+            "detail": "121 / 117"
+          },
+          {
+            "name": "Jockey/trainer",
+            "status": "STRONG",
+            "detail": "Ryan Moore / Aidan O'Brien"
+          },
+          {
+            "name": "Trip",
+            "status": "CAUTION",
+            "detail": "Shorter 7f vs latest win"
+          },
+          {
+            "name": "Rivals",
+            "status": "CAUTION",
+            "detail": "Unbeaten Desert Castle"
+          },
+          {
+            "name": "Field size",
+            "status": "LOW",
+            "detail": "Five runners, no qualifying E/W place beyond winner under house terms"
+          }
+        ]
+      },
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Good to soft"
     }
   ],
   "midshotsToday": [
     {
-      "horse": "Fast Track",
-      "course": "Newmarket",
-      "time": "13:15",
-      "odds": "8/1",
-      "currentOdds": "8/1–9/1 shown",
-      "runnerCount": 13,
-      "or": 101,
-      "ts": 111,
-      "rpr": 114,
-      "midStars": 4,
-      "view": "MIDSHOT E/W — GROUP FORM",
-      "confidenceTier": "STRONGER MIDSHOT / STILL E/W RISK",
-      "terms": "13-runner 5f Group 3; 3 places at 1/4 house odds; bookmaker terms vary",
-      "tags": [
-        "FLYING CHILDERS FORM",
-        "RPR114 TS111",
-        "OISIN MURPHY",
-        "ANDREW BALDING",
-        "13 RUNNERS",
-        "8/1–9/1"
-      ],
-      "reason": "At around 8/1–9/1 his ratings and proven Group 2 sprint form offer a credible win and place route. RPR114/TS111 are competitive with today's field, Oisin Murphy rides for Andrew Balding and his last Doncaster effort was a close, bunched finish. Racing Post-associated analysis also identifies a possible front-running tactical advantage on the Rowley Mile.",
-      "risk": "Only two years old, contested Group 3 sprint with 13 runners; pace, draw and rivals including Flann Sunna and In The Black may spoil the advantage. Morning best prices and bookmaker place terms differ.",
-      "source": "Sporting Life tips / Racing Post / HorseRacing.net / Sky Bet",
-      "sourceUrl": "https://www.sportinglife.com/racing/fast-cards/120816/2026-10-09/newmarket",
-      "researchUpdatedAt": "2026-10-09T07:31:03.493Z",
-      "result": {
-        "position": 3,
-        "status": "Weighed in",
-        "sp": "4/1",
-        "source": "Sporting Life official full result",
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/newmarket/942519/newmarket-academy-godolphin-beacon-project-cornwallis-stakes-group-3",
-        "updatedAt": "2026-10-09T16:00:16.667Z"
-      }
-    },
-    {
-      "horse": "Theheatison",
+      "horse": "Say What You See",
       "course": "York",
       "time": "14:05",
-      "odds": "11/1",
-      "runnerCount": 14,
-      "or": 80,
-      "ts": 79,
-      "rpr": 94,
-      "midStars": 3,
-      "view": "MIDSHOT E/W — RECENT PLACES",
-      "terms": "16 runners · top three paid places at 1/4 house odds (bookmaker terms vary)",
-      "tags": [
-        "FORM 143252",
-        "RPR 94 / OR 80",
-        "14/1 QUOTE",
-        "SILVESTRE DE SOUSA",
-        "16 RUNNERS"
-      ],
-      "reason": "One of the better 10/1–18/1 place profiles: form 143252 includes several recent top-three finishes. RPR94 compared with OR80 offers a useful ratings angle; low weight and experienced Silvestre De Sousa in a valuable York 7f novice event.",
-      "risk": "Sixteen-runner juvenile Class 2 makes a win highly uncertain; stall 12 is a pace/draw concern and the Sporting Life verdict prefers Capitano Josepi and Everatease. Strictly an each-way value opinion, not Prime.",
-      "source": "Sporting Life York 14:05 live show / Racing Post / Timeform",
-      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-09/york/live-show/942533/british-ebf-100000-final-colts-and-geldings",
-      "currentOdds": "11/1",
-      "confidenceTier": "VALUE E/W — BELOW PRIME",
-      "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "reassessment": {
-        "decision": "RETAIN E/W VALUE / NOT PRIME",
-        "checkedAt": "2026-10-09T07:12:53.549Z",
-        "why": "Recent placed profile but 16 juvenile runners and market 11/1; place chance uncertain"
-      },
-      "result": {
-        "position": 3,
-        "status": "Weighed in",
-        "sp": "6/1",
-        "source": "Sporting Life official weighed-in result",
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/york/942533/british-ebf-100000-final-colts-and-geldings",
-        "updatedAt": "2026-10-09T16:00:16.667Z"
-      }
-    },
-    {
-      "horse": "Naga",
-      "course": "Newmarket",
-      "time": "16:45",
-      "odds": "12/1",
-      "currentOdds": "8/1–12/1 shown",
-      "runnerCount": 15,
-      "or": 104,
-      "ts": 89,
-      "rpr": 113,
-      "midStars": 4,
-      "view": "MIDSHOT E/W — LISTED WINNER",
-      "confidenceTier": "FORM-STRONG MIDSHOT / GROUP STEP",
-      "terms": "17-runner 1m2f Group 3; 3 places at 1/4 house odds; bookmaker terms vary",
-      "tags": [
-        "LAST-TIME LISTED WIN",
-        "J & T GOSDEN",
-        "ROBERT HAVLIN",
-        "RPR113 OR104",
-        "1M2F PROVEN",
-        "12/1 OBSERVED"
-      ],
-      "reason": "Won a Listed race over 1m2f at Yarmouth 23 days ago, having been allowed to dictate from the front; that shows a credible route to defy 12/1 in this Group 3. John and Thady Gosden / Robert Havlin combination, course-and-distance indicators on public cards, OR104 and RPR113 underpin the case.",
-      "risk": "17-runner Group 3 is a sharp increase in pace pressure; low draw 1 may need a clean passage, and Timeform and Racing TV list materially shorter 8/1 quotes than Sporting Life's 12/1. Strong last-time form does not establish a high win probability.",
-      "source": "Sporting Life Newmarket 16:45 / Racing Post / Racing TV",
-      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-09/newmarket/live-show/942522/newmarket-pony-academy-pride-stakes-fillies-and-mares-group-3",
-      "researchUpdatedAt": "2026-10-09T07:31:03.493Z",
-      "result": {
-        "position": 11,
-        "status": "User reported",
-        "source": "User-reported 11th place; independent official finish and SP confirmation pending",
-        "updatedAt": "2026-10-09T15:58:20.501Z"
-      }
-    },
-    {
-      "horse": "Miss Mambo",
-      "course": "Kempton",
-      "time": "17:15",
-      "odds": "13/2",
-      "currentOdds": "6/1–13/2 shown",
-      "runnerCount": 13,
-      "or": 54,
-      "ts": null,
-      "rpr": null,
-      "midStars": 3,
-      "view": "MIDSHOT E/W — RECENT PLACES",
-      "confidenceTier": "PLACE CASE / FIRST-TIME VISOR RISK",
-      "terms": "13-runner Class 6 one-mile Polytrack handicap; 3 places at 1/4 house odds; bookmaker terms vary",
-      "tags": [
-        "FORM 367624",
-        "RECENT 2ND + 4TH",
-        "VISOR FIRST TIME",
-        "BENOIT DE LA SAYETTE",
-        "13 RUNNERS",
-        "6/1–13/2"
-      ],
-      "reason": "Recent form of 367624 includes a second and competitive fourth, suggesting she can get involved in this low-grade one-mile handicap. Benoit de la Sayette takes the ride, a first-time visor offers a plausible way to focus the effort and one source puts her among the two likeliest dangers to Arvana Belle.",
-      "risk": "Class 6 is unreliable, recent fourth came as beaten favourite and first-time headgear has an unproven effect. Arvana Belle is a consistent rival and 13 runners make the place case uncertain. This is the least confident of the new midshots, not Prime.",
-      "source": "Racing TV Kempton 17:15 / Sporting Life live show",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-09/kempton-park/1715",
-      "researchUpdatedAt": "2026-10-09T07:31:03.493Z"
-    }
-  ],
-  "longshotsToday": [
-    {
-      "horse": "Dancing Destiny",
-      "course": "Newmarket",
-      "time": "14:57",
-      "odds": "22/1",
-      "runnerCount": 8,
-      "or": null,
+      "odds": "16/1",
+      "runnerCount": 20,
+      "or": 93,
       "ts": 95,
-      "rpr": 112,
-      "ewStars": 3,
-      "placeView": "SPECULATIVE 20/1+ PLACE CASE",
-      "terms": "Eight declared · top three at 1/4 odds under tracker policy",
+      "rpr": 111,
+      "jockey": "Billy Garritty",
+      "trainer": "Liam Bailey",
+      "midStars": 3,
+      "view": "MIDSHOT E/W — COURSE & DISTANCE",
+      "confidenceTier": "VALUE E/W / 20-RUNNER HANDICAP",
+      "terms": "20 runners; house 1/4 odds, top 3; bookmaker terms may be better",
       "tags": [
-        "GROUP 1 / £283,550 WINNER",
-        "RECENT FORM 341223",
-        "RPR 112",
-        "DECLAN MCDONOGH",
-        "22/1 EARLY QUOTE"
+        "FORM 211233",
+        "YORK C&D WINNER",
+        "RPR111 / OR93",
+        "20 RUNNERS",
+        "16/1 QUOTE"
       ],
-      "reason": "Among big-priced runners, a relatively credible place case: form 341223 shows repeated top-three finishes at strong level, RPR112, and a stepping-back-up-to-a-mile argument. Racing TV's analyst also notes consistency and a good-value outsider profile.",
-      "risk": "A same-race outsider against our main Prime Musical Times; Group 1 last third was over eight lengths back. Only qualifies at available 20/1+ (22/1 listed); place appeal only and not suitable for a 'high win confidence' label.",
-      "source": "HorseRacing.net / Racing TV analyst",
-      "sourceUrl": "https://m.attheraces.com/racecard/Newmarket/09-October-2026/1457",
-      "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "currentGoing": "Good to firm (meeting-level Racing Post listing; recheck live race going)",
-      "currentOdds": "22/1",
-      "reassessment": {
-        "decision": "RETAIN AS SOLE SPECULATIVE LONGSHOT / MARKET CONDITIONAL",
-        "checkedAt": "2026-10-09T07:12:53.549Z",
-        "why": "22/1 independently visible, RPR112 and repeated places; strong Group 1 favourite makes win unlikely"
-      },
-      "confidenceTier": "SPECULATIVE E/W — BELOW PRIME"
-    }
-  ],
-  "lucky15Only": [
+      "reason": "Past course-and-distance win, form 211233, and a recent third at York over a longer trip supply a genuine place argument. OR93 compared with historical RPR111 warrants a handicap review. At 16/1 the price compensates partly for 20-runner uncertainty.",
+      "risk": "Twenty-runner Class 2 heritage-type handicap is volatile. Today's soft ground and stall 1 may alter the run style; published pace sections are incomplete. Not Prime win confidence.",
+      "source": "HorseRacing.net / York Racing Post card",
+      "sourceUrl": "https://www.horseracing.net/york/10-10-26",
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Soft (good to soft in places)"
+    },
     {
-      "horse": "Sweltering",
-      "course": "Newmarket",
-      "time": "13:50",
-      "odds": "8/1",
-      "currentOdds": "7/1–8/1 available",
-      "runnerCount": 14,
-      "tier": "STRONG E/W",
-      "confidenceTier": "FORM-STRONG E/W / GROUP STEP RISK",
-      "trainer": "Andrew Balding",
-      "jockey": "Oisin Murphy",
+      "horse": "Nyman",
+      "course": "York",
+      "time": "14:40",
+      "odds": "14/1",
+      "runnerCount": 20,
+      "or": 78,
+      "ts": 76,
+      "rpr": 91,
+      "jockey": "Joanna Mason",
+      "trainer": "Roger Fell",
+      "midStars": 3,
+      "view": "MIDSHOT E/W — RECENT FORM",
+      "confidenceTier": "CONDITIONAL E/W / SOFT UNKNOWN",
+      "terms": "20 runners; house 1/4 odds, top 3",
       "tags": [
-        "LUCKY15 ONLY",
-        "LATEST 7F NOVICE WIN",
-        "GOOD-GROUND TURF FORM",
-        "OISIN MURPHY",
-        "ANDREW BALDING",
-        "8/1 REFERENCE",
-        "15 DECLARED AFTER NR"
+        "FORM 439151",
+        "LAST-RUN WIN",
+        "RPR91 / OR78",
+        "20 RUNNERS",
+        "14/1 QUOTE"
       ],
-      "reason": "Impressive second-start victory over 7f on turf at Leicester: disputed the pace before quickening clear. Stays at 7f for Newmarket's Group 3; Oisin Murphy on for Andrew Balding, a positive stable-rider pairing, with enough improvement potential to be interesting at 7/1–8/1.",
-      "risk": "Only two career runs, unproven in Group company and at the Rowley Mile; a step up from novice class and the 15-runner field create serious uncertainty. This is a conditional each-way ticket leg rather than a Prime-calibrated selection.",
-      "source": "Timeform Newmarket 13:50 / Racing TV / Oddschecker",
-      "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1350/36/2/godolphin-lifetime-care-oh-so-sharp-stakes",
-      "researchUpdatedAt": "2026-10-09T07:33:11.997Z",
-      "result": {
-        "position": 2,
-        "status": "Weighed in",
-        "sp": "11/2",
-        "source": "Racing TV published results",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-09/newmarket/1350",
-        "updatedAt": "2026-10-09T16:00:16.667Z"
-      }
+      "reason": "Two recent wins within the form line 439151 and good prior results on good-to-soft provide a genuine late-developing handicap profile. RPR91 compared with OR78 merits a closer look at this mile trip. Early 14/1 is available from a number of sources.",
+      "risk": "York has turned soft, slower than the going on which recent wins came; 20 runners and a crowded midfield pace are notable negatives. This is the least confident midshot and can be dropped if going gets heavier.",
+      "source": "HorseRacing.net / York racecard",
+      "sourceUrl": "https://www.horseracing.net/york/10-10-26",
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Soft (good to soft in places)"
+    },
+    {
+      "horse": "Thunderbear",
+      "course": "Naas",
+      "time": "15:28",
+      "odds": "13/2",
+      "runnerCount": 9,
+      "or": 92,
+      "ts": 92,
+      "rpr": 114,
+      "jockey": "Jack Kearney",
+      "trainer": "Stephen Thorne",
+      "midStars": 4,
+      "view": "MIDSHOT E/W — REPEATABLE TRACK PROFILE",
+      "confidenceTier": "BEST MIDSHOT COURSE / GOING MATCH",
+      "terms": "9 runners; house 1/4 odds, top 3",
+      "tags": [
+        "PREVIOUS NAAS WINNER",
+        "1ST AND 2ND LAST TWO RENEWALS",
+        "SOFT GROUND",
+        "RPR114",
+        "13/2 QUOTE"
+      ],
+      "reason": "Won and finished second in the previous two runnings of this same Naas Listed sprint; acts on soft going, and a better recent handicap run suggests he is returning to form. RPR114 and an early 13/2 give a more grounded place case than most 6/1+ candidates.",
+      "risk": "Current seasonal form has been inconsistent (form -60035), and 9 Listed sprinters could place competing early speed under severe ground. Stable/rider statistics are modest; this is still a conditional E/W bet.",
+      "source": "HorseRacing.net / Naas declared card",
+      "sourceUrl": "https://www.horseracing.net/naas/10-10-26",
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Soft (soft to heavy in places)"
+    },
+    {
+      "horse": "Naval Tribute",
+      "course": "Newmarket",
+      "time": "15:40",
+      "odds": "9/1",
+      "runnerCount": 29,
+      "or": 85,
+      "ts": 91,
+      "rpr": 113,
+      "jockey": "George Wood",
+      "trainer": "James Owen",
+      "midStars": 4,
+      "view": "MIDSHOT E/W — PROGRESSIVE STAYER",
+      "confidenceTier": "STRONG MIDSHOT FORM / EXTREME TRIP",
+      "terms": "29 runners; house 1/4 odds, top 3 (bookmaker can offer additional places)",
+      "tags": [
+        "FORM 171211",
+        "4 WINS FROM 6 HANDICAPS",
+        "RPR113 / OR85",
+        "CESAREWITCH 2M2F",
+        "9/1 QUOTE"
+      ],
+      "reason": "Progressive form 171211, four wins from six handicap starts, and staying on strongly over two miles support a 2m2f Cesarewitch tilt. RPR113 versus OR85 indicates peak form has exceeded historical mark; early odds 9/1 are more appealing than the market leaders.",
+      "risk": "29-runner heritage handicap with heavy traffic, draw position and an additional two-furlong stamina test. The RPR/OR comparison is contextual, not a guaranteed handicap advantage. Big-field luck is essential.",
+      "source": "HorseRacing.net / Racing Post Cesarewitch preview",
+      "sourceUrl": "https://www.horseracing.net/newmarket/10-10-26",
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Good to soft"
+    },
+    {
+      "horse": "Wellington Arch",
+      "course": "Chepstow",
+      "time": "16:02",
+      "odds": "10/1",
+      "runnerCount": 18,
+      "or": 144,
+      "ts": 137,
+      "rpr": 147,
+      "jockey": "Jonjo O'Neill Jr",
+      "trainer": "Jonjo & A J O'Neill",
+      "midStars": 3,
+      "view": "MIDSHOT E/W — RECENT IMPROVEMENT",
+      "confidenceTier": "VALUE E/W / FITNESS & 7LB RISE",
+      "terms": "18 runners; house 1/4 odds, top 3",
+      "tags": [
+        "FORM 39211-",
+        "AINTREE HANDICAP WIN",
+        "OR144 / RPR147",
+        "JONJO JR",
+        "10/1 QUOTE"
+      ],
+      "reason": "Consecutive wins near the end of last season, including an Aintree success, support upside in a £42,713 Premier Handicap Hurdle. Jonjo O'Neill Jr rides; RPR147 and TS137 demonstrate ability for this standard at about 10/1.",
+      "risk": "183-day absence and a 7lb increase in the handicap mark. This is a deep 18-runner race with fit improving rivals, and no verified fresh-running guarantee.",
+      "source": "HorseRacing.net / Chepstow Racing Post card",
+      "sourceUrl": "https://www.horseracing.net/chepstow/10-10-26",
+      "result": null,
+      "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
+      "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
+      "currentGoing": "Good to soft"
     }
   ],
+  "longshotsToday": [],
+  "lucky15Only": [],
   "midshotsPolicy": {
-    "publicNote": "6/1–18/1 evidenced-value and each-way shortlist: recent class/form/ratings, suitable trip, positive riders and real place prospects matter more than forecast odds alone.",
+    "publicNote": "Evidence-based 6/1–18/1 E/W values, not guaranteed place chances. Emphasis on course/going, recent form, mark and plausible race shape.",
     "minOdds": "6/1",
     "maxOdds": "18/1",
-    "priceRule": "Keep an unambiguous market quote of at least 6/1 and no more than 18/1. All individual tips, in any category, must be at least 1/1."
+    "priceRule": "Price is recorded from Saturday morning quotes. Do not substitute later SP in the paper tracker."
   },
   "longshotsPolicy": {
-    "publicNote": "One speculative 20/1+ place-value watch remains. It is not high-confidence to win, even with a plausible place profile.",
+    "publicNote": "No 20/1+ runner passed the evidence-versus-risk threshold today; no forced outsider selection.",
     "minOdds": "20/1",
-    "priceRule": "No longshot bet if quoted under 20/1 or fewer than 8 runners after non-runners; reassess paid places."
+    "priceRule": "Only list independently supported 20/1+ place candidates with credible course/distance/style evidence."
   },
   "selectionPolicy": {
-    "scope": "Current day's selective shortlist only. Previous paper bets and results remain in permanent ledger and archived racecard.",
+    "minSelectionOdds": "1/1",
+    "avoidOddsOn": true,
+    "allowEvens": true,
+    "midshotMinOdds": "6/1",
+    "midshotMaxOdds": "18/1",
+    "numLongshots": 0,
     "maxIndividualSelections": 10,
     "winStakes": 10,
     "eachWayWinStake": 5,
     "eachWayPlaceStake": 5,
-    "reviewRequired": "Recheck going, non-runners, weight/draw and market within one hour of scheduled off time",
-    "confidenceNote": "Do not confuse odds-on favourites with value; Prime means relative form strength only, not a calibrated winning probability.",
-    "minimumLongshotPrice": "20/1",
-    "numLongshots": 1,
+    "paperSettlementPricing": "All Oct 9 onwards paper singles and Lucky15 legs settle at their own recorded early selectionOdds, not later SP.",
+    "reviewRequired": "Recheck non-runners, actual final field, going, market and confirmed jockey within one hour of each scheduled off.",
+    "confidenceNote": "PRIME and STRONG are qualitative rankings of evidence, not out-of-time backtested success percentages.",
     "systemFactors": [
-      "Current form / speed figures",
-      "Trainer and jockey current record",
-      "Race class and purse",
-      "Course, distance and going",
-      "Trainer race type/course record where verifiable",
-      "Draw and pace running styles",
-      "Fitness and seasonal returns",
-      "Handicap mark or penalties",
-      "Market value and market rank",
-      "Jockey-horse partnership where recorded"
-    ],
-    "minSelectionOdds": "1/1",
-    "avoidOddsOn": true,
-    "allowEvens": true,
-    "oddsOnAction": "EXCLUDE: no published tip and no new £10 paper wager if available odds are shorter than evens",
-    "midshotMinOdds": "6/1",
-    "midshotMaxOdds": "18/1",
-    "paperSettlementPricing": "Early prices recorded at publication on the individual selection and Lucky15 leg separately; later SP cannot override the paper payout."
+      "Contemporary form, OR/RPR/TS",
+      "Handicap mark, class and winner prize",
+      "Course/trip/going",
+      "Early running style, draw and race pace when sourced",
+      "Trainer/jockey form and partnership",
+      "Fitness/absence and penalty",
+      "Historical race notes and source provenance",
+      "Market price and field size"
+    ]
   },
   "lucky15Plan": {
-    "date": "2026-10-09",
+    "date": "2026-10-10",
     "unitStake": 1,
     "betType": "each-way",
     "numberOfSelections": 4,
     "numberOfLines": 15,
     "totalCost": 30,
     "legHorses": [
-      "Fast Track",
-      "Sweltering",
-      "Theheatison",
-      "Naga"
+      "Say What You See",
+      "Thunderbear",
+      "Naval Tribute",
+      "Wellington Arch"
     ],
-    "terms": "£1 each way per combination: 15 win lines + 15 place lines. 1/4 odds place portion, paid places based on actual runner count. Not bookmaker terms.",
-    "recommendationStatus": "Friday morning refreshed, draft paper ticket only; bookmaker prices and non-runners must be rechecked before use",
-    "priceRange": "8/1–12/1",
-    "priceRationale": "Strictly greater than 11/2 for every leg, preference for positive repeatable form, avoid non-runners; 4 different races",
-    "updatedAt": "2026-10-09T07:33:11.997Z",
     "minimumFractionalOddsExclusive": "11/2",
-    "currentReferenceOdds": [
-      {
-        "horse": "Fast Track",
-        "price": "9/1"
-      },
-      {
-        "horse": "Sweltering",
-        "price": "8/1"
-      },
-      {
-        "horse": "Theheatison",
-        "price": "11/1"
-      },
-      {
-        "horse": "Naga",
-        "price": "12/1"
-      }
-    ],
-    "settlementPricing": "Recorded early fractional odds, not SP; the four ticket quotes are separate from overlapping single picks."
+    "priceRange": "13/2–16/1",
+    "recommendationStatus": "Saturday morning reference quotes; paper ticket only; all legs >11/2 and in four distinct races",
+    "settlementPricing": "Each of four immutable early fractional quotes, 1/4 odds place side, house 1/2/3-place field sizes. Bookmaker terms may differ.",
+    "terms": "£1 each-way per combination: 15 win plus 15 place stakes; £30 total. No later SP substitutions."
   },
   "racecardLinks": [
     {
       "course": "Newmarket",
-      "races": 8,
+      "races": 7,
+      "url": "https://www.horseracing.net/newmarket/10-10-26",
+      "going": "Good to soft",
       "first": "13:15",
-      "last": "17:20",
-      "url": "https://www.racingpost.com/racecards/2026-10-09/",
-      "going": "Good to firm (meeting morning; recheck)",
-      "status": "Latest venue card (morning going and fields refreshed)"
+      "last": "16:50"
+    },
+    {
+      "course": "Chepstow",
+      "races": 7,
+      "url": "https://www.horseracing.net/chepstow/10-10-26",
+      "going": "Good to soft",
+      "first": "13:35",
+      "last": "17:10"
     },
     {
       "course": "York",
       "races": 7,
+      "url": "https://www.horseracing.net/york/10-10-26",
+      "going": "Soft (good to soft in places)",
       "first": "13:30",
-      "last": "17:00",
-      "url": "https://www.horseracing.net/york/09-10-26",
-      "going": "Good; good to soft in places",
-      "status": "Going and 18-runner 16:25 handicap checked"
+      "last": "17:07"
     },
     {
-      "course": "Chepstow",
-      "races": 8,
-      "first": "13:22",
-      "last": "17:31",
-      "url": "https://www.horseracing.net/chepstow/09-10-26",
-      "going": "Good to soft; good in places"
-    },
-    {
-      "course": "Downpatrick",
+      "course": "Naas",
       "races": 7,
-      "first": "14:13",
-      "last": "17:37",
-      "url": "https://www.horseracing.net/downpatrick/09-10-26",
-      "going": "Good"
+      "url": "https://www.horseracing.net/naas/10-10-26",
+      "going": "Soft (soft to heavy in places)",
+      "first": "13:40",
+      "last": "17:15"
     },
     {
-      "course": "Kempton (AW)",
+      "course": "Hexham",
+      "races": 7,
+      "url": "https://www.horseracing.net/hexham/10-10-26",
+      "going": "Recheck current going",
+      "first": "13:43",
+      "last": "17:30"
+    },
+    {
+      "course": "Fairyhouse",
+      "races": 7,
+      "url": "https://www.horseracing.net/fairyhouse/10-10-26",
+      "going": "Recheck current going",
+      "first": "13:58",
+      "last": "17:35"
+    },
+    {
+      "course": "Southwell",
       "races": 9,
-      "first": "16:05",
-      "last": "20:15",
-      "url": "https://www.horseracing.net/kempton/09-10-26",
-      "going": "Standard to slow (Polytrack)"
-    },
-    {
-      "course": "Dundalk (AW)",
-      "races": 8,
-      "first": "16:50",
-      "last": "20:30",
-      "url": "https://www.horseracing.net/dundalk/09-10-26",
-      "going": "Standard"
+      "url": "https://www.horseracing.net/southwell/10-10-26",
+      "going": "Tapeta standard",
+      "first": "16:10",
+      "last": "20:30"
     }
   ],
   "morningRecheck": {
-    "updatedAt": "2026-10-09T07:14:34.314Z",
-    "meetingCount": 6,
-    "scheduledRaces": 47,
+    "updatedAt": "2026-10-10T08:05:20.951Z",
+    "meetingCount": 7,
+    "scheduledRaces": 51,
     "going": {
-      "Newmarket": "Good to firm (meeting-level morning listing; recheck each race)",
-      "York": "Good, good to soft in places",
-      "Chepstow": "Good to soft, good in places",
-      "Kempton": "Standard to slow (Polytrack)",
-      "Downpatrick": "Good",
-      "Dundalk": "Standard (Polytrack)"
+      "Newmarket": "Good to soft",
+      "Chepstow": "Good to soft",
+      "York": "Soft (good to soft in places)",
+      "Naas": "Soft (soft to heavy in places)",
+      "Hexham": "Recheck current going",
+      "Fairyhouse": "Recheck current going",
+      "Southwell": "Tapeta standard"
     },
-    "adjustments": [
-      {
-        "course": "Newmarket",
-        "time": "13:50",
-        "currentRunners": 16
-      },
-      {
-        "course": "Newmarket",
-        "time": "15:30",
-        "currentRunners": 11
-      },
-      {
-        "course": "York",
-        "time": "15:18",
-        "currentRunners": 5
-      },
-      {
-        "course": "Kempton",
-        "time": "18:15",
-        "currentRunners": 11,
-        "note": "Racing Post lists 11; another provider had 12"
-      }
-    ],
+    "adjustments": [],
+    "comments": "Saturday morning public racecard check; declarations and quoted odds are time-specific; recheck actual non-runners and field sizes just before the off.",
     "sources": [
-      "Racing Post racecard 2026-10-09",
-      "Sporting Life live show 2026-10-09",
-      "Timeform odds and analysis",
-      "At The Races racecards"
+      "HorseRacing.net (Racing Post-derived runner cards)",
+      "Racing Post meeting racecards",
+      "Published Saturday racing form previews"
     ],
-    "comments": "Rechecked against 9 Oct Racing Post, Sporting Life, HorseRacing.net, Timeform, Racing TV; live race cards/going may differ by timestamp. Full verified trainer-course histories and pace sectionals unavailable for some runners.",
     "selectedHorses": [
       {
-        "horse": "Beagle Bay",
-        "course": "York",
-        "time": "13:30",
-        "odds": "2/1",
-        "priority": "FORM POSITIVE / HIGH FIELD RISK",
-        "field": 18
-      },
-      {
-        "horse": "Saint Jeannais",
-        "course": "Chepstow",
-        "time": "13:57",
-        "odds": "8/11",
-        "priority": "STRONG — NOT PRIME",
-        "field": 10
-      },
-      {
-        "horse": "Flora Of Bermuda",
+        "horse": "The Lost King",
         "course": "Newmarket",
-        "time": "14:25",
-        "odds": "13/8",
-        "priority": "STRONG — COMPETITIVE GROUP 2",
-        "field": 6
-      },
-      {
-        "horse": "Musical Times",
-        "course": "Newmarket",
-        "time": "14:57",
-        "odds": "1/2",
-        "priority": "PRIME WIN — SHORT ODDS",
-        "field": 8
-      },
-      {
-        "horse": "Sharadd",
-        "course": "York",
-        "time": "15:18",
-        "odds": "3/10",
-        "priority": "PRIME FORM / POOR PRICE",
+        "time": "13:15",
+        "odds": "7/4",
+        "priority": "PRIME FORM / GROUP 3",
         "field": 5
       },
       {
-        "horse": "Archers Bay",
-        "course": "Newmarket",
-        "time": "15:30",
-        "odds": "4/1",
-        "priority": "STRONG — HERITAGE HANDICAP",
+        "horse": "Divine Whisper",
+        "course": "York",
+        "time": "13:30",
+        "odds": "9/2",
+        "priority": "STRONG PROFILE / SOFT GROUND TEST",
         "field": 11
       },
       {
-        "horse": "Cosmic Connection",
+        "horse": "Made U Blush",
         "course": "Chepstow",
-        "time": "15:43",
+        "time": "14:10",
+        "odds": "3/1",
+        "priority": "STRONG JUMP PROFILE / RETURNING FRESH",
+        "field": 13
+      },
+      {
+        "horse": "Rock Montreal",
+        "course": "Newmarket",
+        "time": "14:25",
+        "odds": "11/10",
+        "priority": "FORM STRONG / SHORT ACCEPTABLE PRICE",
+        "field": 7
+      },
+      {
+        "horse": "Darkness Falls",
+        "course": "Newmarket",
+        "time": "15:00",
         "odds": "15/8",
-        "priority": "PRIME FORM / CLASS RISK",
-        "field": 11
+        "priority": "PRIME GROUP 1 FORM / TRIP QUESTION",
+        "field": 5
       },
       {
-        "horse": "Sin City",
-        "course": "Kempton",
-        "time": "18:15",
-        "odds": "4/6",
-        "priority": "CONDITIONAL WIN — LAYOFF",
-        "field": 11
-      },
-      {
-        "horse": "Theheatison",
+        "horse": "Say What You See",
         "course": "York",
         "time": "14:05",
-        "odds": "11/1",
-        "priority": "VALUE E/W — HIGH FIELD RISK",
-        "field": 16
+        "odds": "16/1",
+        "priority": "VALUE E/W / 20-RUNNER HANDICAP",
+        "field": 20
       },
       {
-        "horse": "Dancing Destiny",
+        "horse": "Nyman",
+        "course": "York",
+        "time": "14:40",
+        "odds": "14/1",
+        "priority": "CONDITIONAL E/W / SOFT UNKNOWN",
+        "field": 20
+      },
+      {
+        "horse": "Thunderbear",
+        "course": "Naas",
+        "time": "15:28",
+        "odds": "13/2",
+        "priority": "BEST MIDSHOT COURSE / GOING MATCH",
+        "field": 9
+      },
+      {
+        "horse": "Naval Tribute",
         "course": "Newmarket",
-        "time": "14:57",
-        "odds": "22/1",
-        "priority": "SPECULATIVE E/W — BELOW PRIME",
-        "field": 8
+        "time": "15:40",
+        "odds": "9/1",
+        "priority": "STRONG MIDSHOT FORM / EXTREME TRIP",
+        "field": 29
+      },
+      {
+        "horse": "Wellington Arch",
+        "course": "Chepstow",
+        "time": "16:02",
+        "odds": "10/1",
+        "priority": "VALUE E/W / FITNESS & 7LB RISE",
+        "field": 18
       }
-    ]
-  },
-  "lucky15RemovedLegs": [
-    "Flann Sunna",
-    "Flora Of Bermuda"
-  ],
-  "reassessment": {
-    "checkedAt": "2026-10-09T07:14:34.314Z",
-    "originalFour": {
-      "Flora": "RETAIN / DOWNGRADE",
-      "Musical": "RETAIN PRIME",
-      "Theheatison": "RETAIN E/W BELOW PRIME",
-      "Dancing": "RETAIN SOLE SPECULATIVE LONGSHOT"
-    },
-    "newWinners": [
-      "Saint Jeannais",
-      "Sharadd",
-      "Cosmic Connection",
-      "Archers Bay",
-      "Beagle Bay",
-      "Sin City"
-    ],
-    "issues": [
-      "No calibrated backtest on this exact 10-runner selection threshold",
-      "Racecards and prices may change before off",
-      "Trainer-course and complete race-pace sectional data unavailable for some runners"
-    ],
-    "sources": [
-      "Racing Post cards",
-      "HorseRacing.net cards",
-      "Sporting Life live shows",
-      "Racing TV racecards",
-      "Timeform odds",
-      "At The Races form and odds"
     ]
   },
   "reviewCompleteness": {
     "allMeetings": [
       "Newmarket",
-      "York",
       "Chepstow",
-      "Kempton",
-      "Dundalk",
-      "Downpatrick"
+      "York",
+      "Naas",
+      "Hexham",
+      "Fairyhouse",
+      "Southwell"
     ],
-    "scheduledRaces": 47,
-    "screenType": "Card-level cross-check; detailed selected-runner review",
+    "scheduledRaces": 51,
+    "screenType": "Meeting-by-meeting scan and detailed review of shortlisted runners",
     "unverified": [
-      "Complete horse-by-horse sectionals",
-      "Exact historical trainer/course/type strike rates for every trainer",
-      "Late market / non-runners may change after last check"
+      "Full field-wide measured early-pace maps and sectional GPS for each race",
+      "Historic type-by-course trainer/jockey split for every entry",
+      "Market prices and non-runner status immediately before each off",
+      "Calibration or 500-race out-of-time proof"
     ],
-    "methodNote": "No claim of retrospective quantitative validation or high-precision win accuracy."
-  },
-  "valueReassessment": {
-    "reviewedAt": "2026-10-09T07:31:03.493Z",
-    "removed": [
-      "Saint Jeannais",
-      "Musical Times",
-      "Sharadd",
-      "Sin City"
-    ],
-    "kept": [
-      "Beagle Bay",
-      "Flora Of Bermuda",
-      "Archers Bay",
-      "Cosmic Connection",
-      "Gunfighter"
-    ],
-    "newMidshots": [
-      "Fast Track",
-      "Naga",
-      "Miss Mambo"
-    ],
-    "newWin": "Gunfighter",
-    "criteria": [
-      "No tips below 1/1",
-      "Recent form and RPR/TS compared with opposition",
-      "Trainer/jockey booking",
-      "Pace, draw and course/trip suitability",
-      "Class and race value",
-      "Available price versus competitive risk",
-      "Max one 20/1+ speculative longshot"
-    ],
-    "dataSources": [
-      "Sporting Life",
-      "Racing Post",
-      "Racing TV",
-      "HorseRacing.net",
-      "At The Races"
-    ],
-    "limitations": "Odds are time dependent; many trainer-course performance splits and detailed sectional race maps unavailable.",
-    "lucky15UpdatedAt": "2026-10-09T07:33:11.997Z",
-    "lucky15Requirement": "All 4 legs must be priced strictly above 11/2; no NR; four different races",
-    "lucky15Chosen": [
-      "Fast Track",
-      "Sweltering",
-      "Theheatison",
-      "Naga"
-    ]
-  },
-  "lucky15Excluded": [
-    {
-      "horse": "Nuit d'Eclair",
-      "course": "Newmarket",
-      "time": "13:50",
-      "odds": "5/1",
-      "runnerCount": 16,
-      "or": 100,
-      "ts": 93,
-      "rpr": 107,
-      "tags": [
-        "LUCKY 15 LEG ONLY",
-        "GROUP 3 / £42,533 WINNER",
-        "RECENT FORM 1423",
-        "3 PAID PLACES",
-        "CONSISTENT GROUP 3 FORM",
-        "FORM 1423",
-        "15 RUNNERS"
-      ],
-      "reason": "NON-RUNNER confirmed by Racing TV; also quoted below >11/2 minimum",
-      "risk": "Two-year-old Group 3 with 15 declared after a morning reduction, a step to 7f and possible course/ground pace bias. Early quote not guaranteed.",
-      "source": "Timeform / Racing Post / HorseRacing.net",
-      "sourceUrl": "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-09/1350/36/2",
-      "currentGoing": "Good to firm (meeting-level Racing Post listing; recheck live race going)",
-      "confidenceTier": "NEAR-PRIME E/W",
-      "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "result": {
-        "status": "NR",
-        "source": "Racing TV Newmarket 13:50 published non-runner list",
-        "sourceUrl": "https://www.racingtv.com/racecards/2026-10-09/newmarket/1350",
-        "updatedAt": "2026-10-09T07:33:11.997Z"
-      },
-      "excludedAt": "2026-10-09T07:33:11.997Z"
-    },
-    {
-      "horse": "Toca Madera",
-      "course": "York",
-      "time": "16:25",
-      "odds": "3/1",
-      "runnerCount": 18,
-      "or": 95,
-      "ts": 98,
-      "rpr": 108,
-      "currentGoing": "Good (good to soft in places)",
-      "draw": 2,
-      "jockey": "Daniel Tudhope",
-      "trainer": "David O'Meara",
-      "tags": [
-        "LUCKY 15 ONLY",
-        "NEAR-PRIME E/W",
-        "DRAW 2",
-        "TRACK FORM",
-        "RECENT WIN",
-        "TOP MARKET",
-        "18 RUNNERS"
-      ],
-      "confidenceTier": "NEAR-PRIME E/W",
-      "reason": "Below minimum 6/1 for the each-way Lucky 15",
-      "risk": "18-runner Class 3 sprint; busy early pace, top weight and track-bias uncertainty are real. A good draw and market support cannot guarantee a place.",
-      "source": "At The Races / Sporting Life / Racing Post",
-      "sourceUrl": "https://m.attheraces.com/racecard/York/09-October-2026/1625",
-      "researchUpdatedAt": "2026-10-09T06:53:15.918Z",
-      "excludedAt": "2026-10-09T07:33:11.997Z"
-    }
-  ],
-  "latestReportedResults": {
-    "checkedAt": "2026-10-09T15:58:20.501Z",
-    "reportedBy": "user",
-    "horses": [
-      {
-        "horse": "Fast Track",
-        "position": 3
-      },
-      {
-        "horse": "Beagle Bay",
-        "position": 5
-      },
-      {
-        "horse": "Sweltering",
-        "position": 2
-      },
-      {
-        "horse": "Theheatison",
-        "position": 3
-      },
-      {
-        "horse": "Flora Of Bermuda",
-        "position": 2
-      },
-      {
-        "horse": "Naga",
-        "position": 11
-      }
-    ],
-    "awaitingPublishedResultsAndSP": true
-  },
-  "verifiedSPUpdate": {
-    "checkedAt": "2026-10-09T16:00:16.667Z",
-    "changed": [
-      "Fast Track",
-      "Sweltering",
-      "Theheatison"
-    ],
-    "sources": [
-      {
-        "horse": "Fast Track",
-        "source": "Sporting Life official full result",
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/newmarket/942519/newmarket-academy-godolphin-beacon-project-cornwallis-stakes-group-3",
-        "sp": "4/1"
-      },
-      {
-        "horse": "Sweltering",
-        "source": "Racing TV published results",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-09/newmarket/1350",
-        "sp": "11/2"
-      },
-      {
-        "horse": "Theheatison",
-        "source": "Sporting Life official weighed-in result",
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-09/york/942533/british-ebf-100000-final-colts-and-geldings",
-        "sp": "6/1"
-      }
-    ],
-    "nagaNote": "Naga 11th currently user reported; starting price not required for losing EW position",
-    "pricingPolicy": "Track settled virtual returns at published starting prices; retain selectionOdds as historical early prices"
+    "methodNote": "Never treat tipster consensus as calibrated probability or official confirmation of a positive betting expectation."
   }
 }
