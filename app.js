@@ -253,7 +253,7 @@ function lucky15Page(){
  }).join('');
  const checkedAt=ticket.updatedAt||state.data?.verifiedAt;
  const checked=checkedAt?new Date(checkedAt).toLocaleString('en-GB',{timeZone:'Europe/London',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'overnight';
- return '<section class="l15-panel"><div class="l15-heading"><div><div class="eyebrow">FRIDAY 9 OCTOBER · MORNING REVIEW · PAPER BET</div>'+
+ return '<section class="l15-panel"><div class="l15-heading"><div><div class="eyebrow">'+escapeHtml(new Date(ticket.date+"T12:00:00Z").toLocaleDateString("en-GB",{timeZone:"Europe/London",weekday:"long",day:"numeric",month:"long",year:"numeric"}).toUpperCase())+' · EARLY PRICE PAPER BET</div>'+
  '<h2>Each-way Lucky 15</h2><p>Four separate races · 15 win combinations and 15 place combinations. Reviewed '+checked+'.</p></div><b>'+money(x.stake)+'</b></div>'+
  '<div class="l15-combinations"><span>4 singles</span><span>6 doubles</span><span>4 trebles</span><span>1 fourfold</span></div>'+
  '<div class="l15-price-rule '+(allPricesEligible?'l15-rule-ok':'l15-rule-warning')+'" role="status"><strong>Strict price floor: greater than 11/2</strong><span>'+validationText+'</span></div>'+
@@ -390,7 +390,7 @@ function history(){
 
 function allRunners(){
  const meetings=state.data?.racecardLinks||[];
- return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(state.data?.snapshotDate||'')+' · COMPLETE MEETING CARDS</div><h2>All runners</h2><p>Explore every declared runner and jockey in all six British and Irish meetings. The betting shortlist is deliberately much smaller, and all runners are linked directly to published racecards.</p></div><div class="quick-stats"><span><b>'+meetings.length+'</b> meetings</span><span><b>'+meetings.reduce((x,m)=>x+m.races,0)+'</b> races</span></div></section>'+
+ return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(state.data?.snapshotDate||'')+' · COMPLETE MEETING CARDS</div><h2>All runners</h2><p>Explore every declared runner and jockey in '+meetings.length+' British and Irish meetings. The betting shortlist is deliberately much smaller, and all runners are linked directly to published racecards.</p></div><div class="quick-stats"><span><b>'+meetings.length+'</b> meetings</span><span><b>'+meetings.reduce((x,m)=>x+m.races,0)+'</b> races</span></div></section>'+
  morningCheckPanel()+'<div class="racecards-grid">'+meetings.map(m=>'<a class="racecards-meeting" href="'+escapeHtml(m.url)+'" target="_blank" rel="noopener noreferrer"><strong>'+escapeHtml(m.course)+'</strong><span>'+m.races+' races · '+escapeHtml(m.first)+'–'+escapeHtml(m.last)+'</span><small>'+escapeHtml(m.going)+'</small><b>See all declared runners ↗</b></a>').join('')+'</div>'+
  '<p class="racecards-note">These links open published racecards and include the complete list of runners, riders, draw, form and market prices. Late non-runners and changes remain possible.</p>';
 }
