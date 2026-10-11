@@ -7,6 +7,8 @@ import {buildTrainerView} from '../../_lib/trainer-view.mjs';
 import thirdPartySources from '../../_private/racing-third-party-sources.json';
 import thirdPartyObservations from '../../_private/racing-third-party-observations.json';
 import {thirdPartyReport} from '../../_lib/third-party-research.mjs';
+import manualRaceTimeEvidence from '../../_private/racing-manual-sectionals-example.json';
+import {analyseFurlongTrail,compareClosing} from '../../_lib/race-time-analysis.mjs';
 import {isAuthed,reply} from '../../_lib/backoffice-auth.mjs';
 import {dailyReports,tuningNotes} from '../../_lib/backoffice-stats.mjs';
 import {researchCoverage,chronologicalAssessment,historicalPriceAudit} from '../../_lib/race-research.mjs';
@@ -42,6 +44,18 @@ export async function onRequestGet({request,env}){
     snapshotsRecorded:researchHistory.snapshots?.length||0,
     tracks:trackProfiles.tracks||[],
     trainerView:buildTrainerView(race,priorRuns.runs||[],trackProfiles),
+    raceTimeResearch:{
+      scope:'Private, manually verified one-race example; not a licensed systematic historical feed',
+      lastReviewedAt:manualRaceTimeEvidence.lastReviewedAt,
+      caseStudies:(manualRaceTimeEvidence.examples||[]).map(x=>({
+       race:x.race,selectedHorse:x.selectedHorse,rivalHorse:x.rivalHorse,
+       analysis:analyseFurlongTrail({horse:x.selectedHorse,race:x.race,measurements:x.observations.find(y=>y.horse===x.selectedHorse),positionFinish:2}),
+       opponent:analyseFurlongTrail({horse:x.rivalHorse,race:x.race,measurements:x.observations.find(y=>y.horse===x.rivalHorse),positionFinish:1}),
+       comparison:compareClosing({runner:x.observations.find(y=>y.horse===x.selectedHorse),leader:x.observations.find(y=>y.horse===x.rivalHorse),race:x.race}),
+       interpretation:x.qualitativeVerdict,
+       verification:'Manually cited public result; observed after this tip sheet was locked. No backdated selection confidence changes.'
+      }))
+    },
     externalResearch:thirdPartyReport(race,thirdPartyObservations.notes||[],thirdPartySources),
     status:'Evidence-backed shadow research: do not update live picks until out-of-sample improvement is established'
    },
