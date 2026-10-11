@@ -82,6 +82,34 @@ if(racing.snapshotDate==='2026-10-10'){
  assert.equal(app.lucky15Calc(voidTicket).returnAmount,0,'Four losers return zero');
 }
 
+if(racing.snapshotDate==='2026-10-12'){
+ assert.equal(racing.coverage.meetings,6,'Monday six UK and Irish meetings');
+ assert.equal(racing.coverage.races,47,'47 Monday scheduled races');
+ assert.equal(racing.todaySelections.length,6,'Six paper win runners');
+ assert.equal(racing.midshotsToday.length,4,'Four published early-priced E/W picks');
+ assert.equal(racing.longshotsToday.length,0,'Do not force an unsupported outsider');
+ assert.equal(ledger.entries.filter(x=>x.date==='2026-10-12').length,10,'10 immutable Monday singles');
+ assert.equal(racing.racecardLinks.length,6,'Six meeting card links');
+ const monday=ledger.entries.filter(x=>x.date==='2026-10-12');
+ for(const entry of monday){
+  const m=String(entry.selectionOdds).match(/^(\d+)\/(\d+)$/);
+  assert.ok(m&&Number(m[1])/Number(m[2])>=1,'No odds-on picks');
+  assert.equal(entry.priceBasis,'early','Every Monday paper price frozen');
+  assert.equal(entry.paperOnly,true,'Selections remain paper bets');
+  assert.equal(entry.result,null,'No invented result prior to racing');
+ }
+ assert.ok(racing.todaySelections.every(x=>x.calibratedWinProbability!==true),'No unsupported win probability claims');
+ const combo=ledger.lucky15Tickets.find(x=>x.date==='2026-10-12');
+ assert.ok(combo,'Separate Monday E/W Lucky15');
+ assert.equal(combo.totalStake,30);
+ assert.equal(combo.legs.length,4);
+ assert.equal(new Set(combo.legs.map(x=>x.course+'|'+x.time)).size,4);
+ for(const leg of combo.legs){
+  const p=String(leg.selectionOdds).split('/').map(Number);
+  assert.ok(p.length===2&&p[0]/p[1]>5.5,'All Lucky15 paper quotes over 11/2');
+ }
+ assert.equal(monday.reduce((a,x)=>a+x.winStake+x.placeStake,0)+combo.totalStake,130,'£130 paper scenario stake');
+}
 const stats=app.trackerStats(ledger.entries),combos=app.exoticSummary();
 const available=ledger.startingBank-stats.totalStake-combos.stake+stats.totalReturn+combos.returns;
 assert.ok(Number.isFinite(available),'Bank always calculable');
@@ -102,9 +130,19 @@ if(racing.snapshotDate==='2026-10-10'){
  app.state.view='racecards';app.render();
  assert.equal((element.innerHTML.match(/See all declared runners/g)||[]).length,7,'Seven current meeting cards');
 }
+if(racing.snapshotDate==='2026-10-12'){
+ assert.match(element.innerHTML,/Samra Green/,'Monday main selection visible');
+ app.state.view='midshots';app.render();
+ assert.match(element.innerHTML,/I'm Workin On It/,'Monday E/W selection visible');
+ app.state.view='lucky15';app.render();
+ assert.match(element.innerHTML,/Flowstate/,'Monday Lucky15 leg shown');
+ assert.match(element.innerHTML,/4 of 4 legs strictly above 11\/2/,'All Monday lucky prices pass strict floor');
+ app.state.view='racecards';app.render();
+ assert.equal((element.innerHTML.match(/See all declared runners/g)||[]).length,6);
+}
 app.state.view='history';app.render();
 assert.match(element.innerHTML,/Results history/,'Historical results view');
 assert.match(element.innerHTML,/Aighear/,'8 October history visible');
 assert.match(element.innerHTML,/Theheatison/,'9 October history visible');
 assert.doesNotMatch(element.innerHTML,/Blissful Bonita|Lady Of Clover/,'Explicitly removed earlier picks remain removed');
-console.log('PASS: rolling early-price bet history, Saturday 10-pick card, >11/2 Lucky15 and mobile views');
+console.log('PASS: rolling early-price history, 10 Oct archive, 12 Oct paper card and 4-leg Lucky15');
