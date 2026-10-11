@@ -6,7 +6,8 @@ const races=JSON.parse(readFileSync(new URL('../data/races.json',import.meta.url
 assert.ok(profiles.tracks.length>=15,'Multiple verified track layouts available');
 assert.ok(profiles.tracks.every(x=>x.sourceUrls.length>0 && x.paceBiasNumerical===null),'Course descriptions are sourced; no made-up measured bias');
 assert.equal(selectTrackProfile(profiles,{course:'Newmarket'}).status,'ambiguous','Never conflate Rowley and July');
-assert.equal(selectTrackProfile(profiles,{course:'Newmarket',configuration:'Rowley Mile',surface:'Turf',discipline:'Flat'}).trackId,'newmarket rowley');
+const rowley=selectTrackProfile(profiles,{course:'Newmarket',configuration:'Rowley Mile',surface:'Turf',discipline:'Flat'});
+assert.equal(rowley.trackId,'newmarket rowley',JSON.stringify(rowley));
 assert.equal(selectTrackProfile(profiles,{course:'Kempton',surface:'all weather',discipline:'Flat',distanceFurlongs:5}).trackId,'kempton aw inner');
 assert.equal(selectTrackProfile(profiles,{course:'Kempton',surface:'all weather',discipline:'Flat',distanceFurlongs:6}).trackId,'kempton aw outer');
 assert.equal(selectTrackProfile(profiles,{course:'Kempton',surface:'all weather',discipline:'Flat'}).status,'ambiguous','Trip needed to resolve AW loops');
