@@ -369,10 +369,11 @@
         "NEWCASTLE C&D SECOND",
         "AW FORM",
         "IN FORM",
-        "2LB HIGHER"
+        "2LB HIGHER",
+        "VERIFIED LATE SPEED — POST-SELECTION REVIEW"
       ],
       "reason": "A recent neck defeat over today's Newcastle course/distance gives the strongest direct surface-and-trip suitability evidence, following an all-weather win at Southwell in August. Tudhope is booked for O'Meara.",
-      "risk": "Handicap mark has risen 2lb; Maria Da Silva has Newcastle AW wins and Espanita is consistent, so a repeat run might still only place.",
+      "risk": "Handicap mark has risen 2lb; Maria Da Silva has Newcastle AW wins and Espanita is consistent, so a repeat run might still only place. Updated independent time audit: his 1 October last-two furlongs (23.57s) were 0.51s faster than winner Dalamara's, with field-best 106.9% FSP; that supports his late ability but may require a strong pace today.",
       "source": "Racing Post racecards, irishracing.com morning quoted markets; independent form and course context",
       "sourceUrl": "https://www.irishracing.com/odds-comparison/Mon-12th-Oct-2026/Newcastle/1700",
       "earlyOddsLockedAt": "2026-10-11T23:33:24.491Z",
@@ -409,6 +410,17 @@
             "detail": "9/4 early book quote; not SP, not a guaranteed bookmaker offer"
           }
         ]
+      },
+      "postPublicationTimingReview": {
+        "reviewedAt": "2026-10-11T23:51:19.349Z",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-01/newcastle/1830",
+        "clockStatus": "measured individual race time",
+        "finishTimeSeconds": 101.07,
+        "finishingSpeedPercent": 106.9,
+        "finishingSpeedRank": "1 of 10",
+        "topSpeedMph": 39.11,
+        "read": "Late sustained acceleration shown in the last 2f (+0.51s versus winner), not just an unlucky second; strong ground-specific form but requires matching pace today.",
+        "guard": "Research obtained after the original paper quote was frozen; not the basis of the original selection."
       }
     }
   ],
@@ -611,10 +623,11 @@
         "NEWCASTLE 7F SPECIALIST",
         "PAST C&D WINS",
         "CLASS 5",
-        "PRICE DEPENDENT"
+        "PRICE DEPENDENT",
+        "SECTIONAL WARNING — POST-SELECTION REVIEW"
       ],
       "reason": "Several prior Newcastle seven-furlong wins supply genuine course suitability, with today's mark close to the previous winning mark. This is a track/trip specialist at an early double-digit quote rather than an arbitrary outsider.",
-      "risk": "Recent finishes of sixth and fifth are a fitness/form concern. Spartan Fighter has repeatedly won here and Abduction also has course-and-distance winning form. Best early 10/1 is not widely offered.",
+      "risk": "Recent finishes of sixth and fifth are a fitness/form concern. Spartan Fighter has repeatedly won here and Abduction also has course-and-distance winning form. Best early 10/1 is not widely offered. New dated RaceiQ check: on 25 Sep Newcastle 7f he finished 6th in 87.53s, FSP only 97.50%, recorded lowest peak speed of all 11 and was 0.94s slower over final 2f than the winner. Confidence in the place case is lower; do not assume prior track wins guarantee a rebound.",
       "source": "Racing Post racecards, irishracing.com morning quoted markets; independent form and course context",
       "sourceUrl": "https://www.irishracing.com/odds-comparison/Mon-12th-Oct-2026/Newcastle/2000",
       "earlyOddsLockedAt": "2026-10-11T23:33:24.491Z",
@@ -653,11 +666,23 @@
         ]
       },
       "or": 73,
-      "view": "VALUE EACH-WAY / CONDITION-LED",
+      "view": "CAUTION: SECTIONALS WEAK / REVIEW",
       "midStars": 0,
       "ewFraction": 0.25,
       "terms": "13 declared; paper book: top 3 at 1/4 odds (bookmaker terms may vary)",
-      "placeView": "TOP-THREE POTENTIAL UNVERIFIED"
+      "placeView": "TOP-THREE POTENTIAL UNVERIFIED",
+      "postPublicationTimingReview": {
+        "reviewedAt": "2026-10-11T23:51:19.349Z",
+        "sourceUrl": "https://www.racingtv.com/results/2026-09-25/newcastle/1945",
+        "clockStatus": "measured individual race time",
+        "finishTimeSeconds": 87.53,
+        "finishingSpeedPercent": 97.5,
+        "finishingSpeedRank": "6 of 11",
+        "topSpeedMph": 39.55,
+        "topSpeedRank": "11 of 11",
+        "read": "Failed to finish strongly in recent C&D contest; 0.94s slower last two furlongs than winner. Downgrade confidence until there is fresher independent evidence.",
+        "guard": "Review discovered after published selection. Original quoted early price, paper stakes and Lucky15 leg remain frozen for honest tracking."
+      }
     }
   ],
   "longshotsToday": [],
@@ -696,7 +721,7 @@
     ],
     "minimumFractionalOddsExclusive": "11/2",
     "priceRange": "6/1–14/1",
-    "recommendationStatus": "Paper ticket only. Four distinct races with prices strictly greater than 11/2. Some best quotes appear at one book only.",
+    "recommendationStatus": "Paper ticket only. Four distinct races with prices strictly greater than 11/2. Some best quotes appear at one book only. Flowstate has a material post-publication sectional warning, so the four-leg combination should not be called a confidently revalidated bet; retained unchanged for historical paper tracking.",
     "settlementPricing": "Saved quoted early price for each leg; 1/4-odds top 3 under paper rules. Different real bookmakers may offer different terms.",
     "terms": "£1 each-way per combination: 15 win and 15 place stakes, £30 total. No SP substitutions."
   },
@@ -753,5 +778,13 @@
     "checkedAt": "2026-10-11T23:33:24.491Z",
     "kind": "Reference quotes only, not offered/accepted bookmaker prices"
   },
-  "morningRecheck": null
+  "morningRecheck": null,
+  "timingResearchUpdate": {
+    "reviewedAt": "2026-10-11T23:51:19.349Z",
+    "scope": "Sourced Newcastle individual timings added to existing published picks, after original price lock. No retrospective probability calibration, paper selection or odds alterations.",
+    "proofUrls": [
+      "https://www.racingtv.com/results/2026-10-01/newcastle/1830",
+      "https://www.racingtv.com/results/2026-09-25/newcastle/1945"
+    ]
+  }
 }
