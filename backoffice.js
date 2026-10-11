@@ -148,7 +148,31 @@ function render(report){
   '<div class="table-scroll"><table><thead><tr><th>Selection</th><th>Race</th><th>Sources</th><th>Evidence</th><th>Checked references</th></tr></thead><tbody>'+
   (extAuditRows||'<tr><td colspan="5">No published runners to compare.</td></tr>')+
   '</tbody></table></div></section>';
-  $('report-content').innerHTML=cards+chart+table+changes+trainerPanel+externalPanel+researchPanel+standards;
+ 
+ const timings=research.raceTimeResearch||{},cases=timings.caseStudies||[];
+ const clockPanels=cases.map(c=>{
+  const a=c.analysis||{},p=a.positions||{},pace=a.pace||{},cmp=c.comparison||{},clock=a.time||{},race=c.race||{};
+  const trail=(p.trail||[]).map(q=>'<span class="sectional-pos">'+esc(q.furlong)+'f <b>'+escapeHtml(ordinal(Number(q.position)))+'</b></span>').join('');
+  return '<article class="timing-case"><div class="timing-title"><h3>'+esc(c.selectedHorse)+' — '+esc(race.course)+' '+esc(race.raceTime)+'</h3>'+
+   '<small>'+esc(race.date)+' · '+esc(race.surface)+' · '+esc(race.going)+' · '+esc(race.distanceFurlongs.toFixed(2))+'f</small></div>'+
+   '<div class="timing-metrics">'+
+    '<div><small>Official race-winning time</small><b>'+esc(race.winningTimeSeconds)+'s</b></div>'+
+    '<div><small>Horse own measured time</small><b>'+esc(clock.seconds)+'s</b></div>'+
+    '<div><small>Finish and movement</small><b>2nd · +'+esc(p.positionsGained)+' places</b></div>'+
+    '<div><small>Closing speed / field rank</small><b>'+esc(pace.publishedFinishingSpeedPercent)+'% · #'+esc(pace.finishingSpeedRank)+'</b></div>'+
+    '<div><small>Peak speed / field rank</small><b>'+esc(pace.topSpeedMph)+' mph · #'+esc(pace.topSpeedRank)+'</b></div>'+
+    '<div><small>Last 2f vs winner</small><b>'+esc(cmp.horseClosingTime)+'s vs '+esc(cmp.rivalClosingTime)+'s</b></div>'+
+    '</div><div class="timing-positions">'+trail+'</div>'+
+    '<p class="research-disclaimer">'+esc(c.interpretation)+'</p>'+
+    '<p class="research-disclaimer"><b>Data timing:</b> '+esc(c.verification)+' Winner official '+esc(race.winningTimeSeconds)+'s vs tracker '+esc(c.opponent?.time?.seconds)+'s. No race-specific par FSP connected. Not a proven future speed rating.</p>'+
+    '<div class="research-sources"><a href="'+esc(race.sourceUrl)+'" target="_blank" rel="noopener noreferrer">View published result and sectionals ↗</a></div></article>';
+ }).join('');
+ const timingPanel='<section class="sheet"><div class="section-title"><div><h2>Horse time & sectional research</h2>'+
+  '<p>Individual finishing clocks, furlong-by-furlong running position and evidence of finishing effort, sourced from historic results.</p></div><span>MANUAL RESEARCH</span></div>'+
+  '<p class="research-readiness"><strong>Measured times first; margin-based estimates second</strong>'+
+  '<span>'+esc(timings.scope||'Manual timing verification')+'. Official winning time is not the individual time of every runner; winning time plus beaten lengths only gives a conditional approximation.</span></p>'+
+  (clockPanels||'<p>No independently verified past timing example yet.</p>')+'</section>';
+  $('report-content').innerHTML=cards+chart+table+changes+trainerPanel+timingPanel+externalPanel+researchPanel+standards;
  $('report-content').hidden=false;
  $('report-loading').hidden=true;
 }
