@@ -112,3 +112,18 @@ footer{max-width:1180px;margin:0 auto 28px;padding:0 20px;color:var(--muted);fon
 .terrain-pill{border:1px solid #c8dbce;background:#eaf3ec;color:#29583e;border-radius:6px;padding:4px 8px;font-size:10px;font-weight:700;text-transform:capitalize}
 .trainer-gaps{border-left:3px solid #b69465;padding:8px 10px;background:#f6f1e8}
 @media(max-width:720px){.trainer-list{grid-template-columns:1fr}}
+
+/* Private measured race time / furlong position research cards */
+.timing-case{padding:17px;border:1px solid #dce6dc;background:#fafbf7;border-radius:13px;margin:14px 0}
+.timing-title{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.timing-title h3{font-size:18px;color:var(--green);margin:0}
+.timing-title small{color:var(--muted)}
+.timing-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.timing-metrics>div{border:1px solid #e2e8df;border-radius:9px;padding:10px 12px;background:white;display:flex;flex-direction:column;gap:5px;min-width:0}
+.timing-metrics small{font-size:10px;line-height:1.4;color:var(--muted)}
+.timing-metrics b{font-size:15px;color:var(--green);font-variant-numeric:tabular-nums}
+.timing-positions{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:5px;margin:15px 0}
+.sectional-pos{display:flex;flex-direction:column;align-items:center;padding:8px 3px;background:#eaf1e9;border:1px solid #d1e0d3;border-radius:8px;color:#536457;font-size:10px;gap:4px}
+.sectional-pos b{color:#124e38;font-size:14px}
+@media(max-width:760px){.timing-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){.timing-metrics{grid-template-columns:1fr 1fr}.timing-metrics b{font-size:12px}.timing-case{padding:11px}.timing-positions{gap:3px}.sectional-pos{font-size:9px}.sectional-pos b{font-size:11px}}
