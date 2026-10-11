@@ -15,7 +15,9 @@
       "course": "Newmarket",
       "code": "Flat Turf",
       "races": 7,
-      "going": "Good to soft"
+      "going": "Good to soft",
+      "trackVariant": "Rowley Mile",
+      "trackVariantSource": "https://www.attheraces.com/course-guides/Newmarket"
     },
     {
       "course": "Chepstow",
