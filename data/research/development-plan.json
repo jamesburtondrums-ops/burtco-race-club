@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-10-09",
-  "state": "Evidence gathering; no autonomous learning or reliable uplift measured",
+  "asOf": "2026-10-11",
+  "state": "Private Trainer's View terrain and race-placement audit deployed; historical run and sectional data not yet ingested. No win-rate uplift claimed.",
   "plannedResearch": [
     {
       "feature": "Handicap mark versus last achieved figure",
@@ -51,6 +51,20 @@
       "method": "No training with <500 distinct historical races and <2,000 sourced field runners. Forward-chain by race date; keep all runners in each race together. Compare Brier/log loss to timestamped market baseline; report ROI with realistic odds and uncertainty.",
       "status": "research gate implemented",
       "impact": "No quantified improvement yet"
+    },
+    {
+      "feature": "Trainer/owner race placement and course-type transfer",
+      "source": "Sourced racecourse layouts, dated horse histories, public declarations, historical OR/class and documented jockey records",
+      "method": "Distinguish objective entry changes (trip, class, going, handicap mark, layoff, repeat rider) from unverified private intent; compare Flat/Jumps and actual track variants. Missing telemetry stays neutral, not a synthetic minus score.",
+      "status": "private research panel and source-gated hypotheses implemented; historical run data 0",
+      "impact": "No out-of-sample uplift demonstrated"
+    },
+    {
+      "feature": "Course-specific sectional par import",
+      "source": "Permissioned RaceiQ/TPD actual and par sectionals",
+      "method": "Require signed/verified reuse rights, actual/par source URLs, matching race conditions and observation times predating predictions; calculate raw FSP minus appropriate par only as descriptive context.",
+      "status": "rights-checked import schema implemented; awaiting licensed feed",
+      "impact": "Unknown"
     }
   ],
   "referenceUrls": [
