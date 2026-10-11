@@ -1,3 +1,4 @@
+import {analyseFurlongTrail,computeRaceTime} from './race-time-analysis.mjs';
 // Trainer's View: pre-race, provenance-constrained course and placement evidence.
 // Descriptive research only; never infer private stable plans or assign arbitrary selection probabilities.
 const norm=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
@@ -73,7 +74,7 @@ export function trackPerformanceEvidence({horse,asOfDate,target,priorRuns,profil
  const current=selectTrackProfile(profiles,target||{});
  const base={status:'insufficient evidence',target:current,horse,asOfDate,
   eligibleRuns:0,directRuns:0,similarLayoutRuns:0,
-  directFinishes:[],similarLayoutFinishes:[],sectionalParComparisons:[],
+  directFinishes:[],similarLayoutFinishes:[],sectionalParComparisons:[],raceTimeAnalysis:[],
   missing:[],note:'Only sourced observations known before race time are eligible. Similar track type does not prove a repeatable preference.'};
  if(current.status!=='course geometry documented'){
   base.missing.push('Unambiguous course configuration');return base;
@@ -102,6 +103,27 @@ export function trackPerformanceEvidence({horse,asOfDate,target,priorRuns,profil
    sourceUrl:r.sourceUrl,sharedTerrain:similar.overlap,
    note:'Prior result context only; no uplift claimed'};
   if(isDirect)base.directFinishes.push(rec);else base.similarLayoutFinishes.push(rec);
+  const winningTime=number(r.winningTimeSeconds),ownTime=number(r.horseTimeSeconds);
+  if(winningTime!==null && r.timingSourceUrl && /^https:\/\//.test(r.timingSourceUrl)){
+    const trail=analyseFurlongTrail({horse:r.horse,race:{
+      winningTimeSeconds:winningTime,course:r.course,distanceFurlongs:historicDistance,
+      fieldSize:r.fieldSize||r.runnerCount,sourceUrl:r.timingSourceUrl
+     },measurements:{
+      horseTimeSeconds:ownTime,
+      position:r.finishingPosition,
+      lengthsBehindWinner:r.lengthsBehindWinner,
+      sectionals:r.sectionalPermissionVerified?r.sectionals:null,
+      sectionalRights:r.sectionalPermissionVerified?'licensed':null,
+      finishingSectionFurlongs:r.finishingSectionFurlongs,
+      finishingSpeedPercent:r.finishSpeedPercent,topSpeedMph:r.topSpeedMph
+     },positionFinish:r.finishingPosition});
+    base.raceTimeAnalysis.push({date:r.date,course:r.course,going:r.going||null,
+      position:Number(r.finishingPosition)||null,clock:trail.time,
+      furlongPositions:trail.positions?.trail||[],
+      fspPercent:trail.pace?.publishedFinishingSpeedPercent??null,
+      sourceUrl:r.timingSourceUrl,matchingLayout:isDirect,
+      caveat:'Prior race outcome only, not a corrected time rating or guarantee of today\'s speed.'});
+  }
   // Only compare against a real, supplied par for the same historic race.
   const fsp=number(r.finishSpeedPercent),par=number(r.parFinishSpeedPercent);
   if(fsp!==null&&par!==null&&fsp>0&&par>0&&r.sectionalPermissionVerified===true){
