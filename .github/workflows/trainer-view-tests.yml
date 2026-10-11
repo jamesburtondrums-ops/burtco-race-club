@@ -1,0 +1,24 @@
+name: Trainer View integrity tests
+on:
+  push:
+    branches: [racing-intelligence]
+    paths:
+      - "functions/_lib/trainer-view.mjs"
+      - "functions/_private/racing-track-profiles.json"
+      - "functions/api/backoffice/report.js"
+      - "scripts/import-racing-research.mjs"
+      - "tests/trainer-view.test.mjs"
+      - ".github/workflows/trainer-view-tests.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify research and trainer-intent gates
+        run: node --test tests/trainer-view.test.mjs tests/racing-research.test.mjs
