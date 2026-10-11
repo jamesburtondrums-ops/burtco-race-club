@@ -96,3 +96,19 @@ footer{max-width:1180px;margin:0 auto 28px;padding:0 20px;color:var(--muted);fon
 .research-audit>p,.research-audit>small{display:block;color:var(--muted);font-size:11px;line-height:1.6}
 .research-audit table{margin:10px 0}
 .research-audit td,.research-audit th{font-size:11px}
+
+/* Private trainer-placement review: evidence labels, not prediction scores */
+.trainer-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.trainer-runner{min-width:0;border:1px solid #dce6db;border-radius:12px;background:#f8faf6;overflow:hidden}
+.trainer-runner>summary{cursor:pointer;min-height:64px;display:flex;flex-direction:column;gap:5px;padding:15px;list-style-position:inside}
+.trainer-runner>summary strong{font-size:14px;color:var(--green)}
+.trainer-runner>summary small{color:var(--muted);font-size:10px;line-height:1.5}
+.trainer-body{border-top:1px solid #dce6db;padding:14px 16px 17px}
+.trainer-body p,.trainer-body li{font-size:11px;line-height:1.65;color:#40594e;margin:8px 0}
+.trainer-body ul{padding-left:18px;margin:8px 0}
+.trainer-body em{color:var(--muted)}
+.trainer-subtitle{font-weight:800;font-size:11px;color:var(--green);margin:14px 0 7px}
+.terrain-tags{display:flex;gap:6px;flex-wrap:wrap}
+.terrain-pill{border:1px solid #c8dbce;background:#eaf3ec;color:#29583e;border-radius:6px;padding:4px 8px;font-size:10px;font-weight:700;text-transform:capitalize}
+.trainer-gaps{border-left:3px solid #b69465;padding:8px 10px;background:#f6f1e8}
+@media(max-width:720px){.trainer-list{grid-template-columns:1fr}}
