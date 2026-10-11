@@ -44,13 +44,30 @@ if(!sourcePath||sourcePath.startsWith('-')){
    performanceFigure:raw.performanceFigure??null,finishingPosition:raw.finishingPosition??null,
    distanceFurlongs:raw.distanceFurlongs??null,
    weightLbs:raw.weightLbs??null,trainer:raw.trainer||null,jockey:raw.jockey||null,
-   sectionals:Array.isArray(raw.sectionals)?raw.sectionals:null
+   sectionals:Array.isArray(raw.sectionals)?raw.sectionals:null,
+   trackVariant:raw.trackVariant||null,discipline:raw.discipline||null,
+   finishSpeedPercent:raw.finishSpeedPercent??null,parFinishSpeedPercent:raw.parFinishSpeedPercent??null,
+   sectionalPermissionVerified:incoming.allowSectionalReuse===true &&
+    typeof raw.sectionalSourceUrl==='string' && /^https:\/\//.test(raw.sectionalSourceUrl) &&
+    typeof raw.parSectionalSourceUrl==='string' && /^https:\/\//.test(raw.parSectionalSourceUrl),
+   sectionalSourceUrl:raw.sectionalSourceUrl||null,parSectionalSourceUrl:raw.parSectionalSourceUrl||null
   };
   const validation=validatePriorRun(row,'2099-01-01');
   if(!validation.ok){rejects.push({row:i+1,reason:validation.reason});return;}
   if(row.sourceCheckedAt>now){rejects.push({row:i+1,reason:'Source retrieval timestamp is in future'});return;}
   if(!/^\d\d:\d\d$/.test(row.raceTime)){rejects.push({row:i+1,reason:'raceTime must be HH:MM in course-local time'});return;}
-  if(row.comment.length>0 && incoming.allowCommentReuse!==true){
+  const hasFSP=row.finishSpeedPercent!==null||row.parFinishSpeedPercent!==null;
+  const hasSplits=Array.isArray(row.sectionals)&&row.sectionals.length>0;
+  if((hasFSP||hasSplits)&&!row.sectionalPermissionVerified){
+   rejects.push({row:i+1,reason:'Sectionals/par require allowSectionalReuse and licensed source URLs for both actual and course-specific par'});
+   return;
+  }
+  if(hasFSP&&(row.finishSpeedPercent===null||row.parFinishSpeedPercent===null||
+     ![row.finishSpeedPercent,row.parFinishSpeedPercent].every(x=>Number.isFinite(Number(x))&&Number(x)>0&&Number(x)<200))){
+   rejects.push({row:i+1,reason:'Actual FSP and matched course/going par FSP must both be realistic positive numbers'});
+   return;
+  }
+    if(row.comment.length>0 && incoming.allowCommentReuse!==true){
    rejects.push({row:i+1,reason:'Do not import copyrighted narrative comments without explicit allowCommentReuse=true and permission'});
    return;
   }
