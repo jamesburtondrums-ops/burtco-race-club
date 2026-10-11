@@ -99,7 +99,35 @@ function render(report){
   '<p><b>E/W place rate:</b> '+esc(methodology.placeRate||'Places / EW runners with known terms')+'</p>'+
   '<p><b>Profit:</b> '+esc(methodology.profit||'Settled returns less settled stakes')+'</p>'+
   '<p><b>Evidence standard:</b> '+esc(methodology.caveat||'No unverified accuracy claim')+'</p></section>';
- $('report-content').innerHTML=cards+chart+table+changes+researchPanel+standards;
+
+ const trainerView=research.trainerView||{},candidates=trainerView.selections||[];
+ const tagLabel=t=>String(t).replace(/-/g,' ');
+ const trainerRows=candidates.map(x=>{
+  const tr=x.track||{},profile=tr.target||{},hyp=x.hypotheses||[],missing=tr.missing||[];
+  const tags=(profile.terrainTags||[]).map(t=>'<span class="terrain-pill">'+esc(tagLabel(t))+'</span>').join('');
+  const sources=(profile.sourceUrls||[]).map((url,i)=>'<a href="'+esc(url)+'" rel="noopener noreferrer" target="_blank">Course guide '+(i+1)+' ↗</a>').join(' ');
+  const observations=tr.directRuns||0,similar=tr.similarLayoutRuns||0,sections=(tr.sectionalParComparisons||[]).length;
+  const identified=profile.status==='course geometry documented';
+  return '<details class="trainer-runner"><summary><strong>'+esc(x.horse)+'</strong><small>'+esc(x.course)+' · '+esc(x.time)+' · '+esc(x.trainer||'Trainer unrecorded')+
+   ' · '+esc(identified?'TRACK MAPPED':'TRACK UNVERIFIED')+'</small></summary>'+
+   '<div class="trainer-body"><p><b>Race context:</b> '+esc(x.raceDescriptor||'Trip/class not recorded')+'</p>'+
+   '<p><b>Course configuration:</b> '+esc(identified?profile.configuration:profile.reason||'Unknown')+'</p>'+
+   '<div class="terrain-tags">'+(tags||'<span class="terrain-pill">Unclassified</span>')+'</div>'+
+   '<p><b>Past comparable starts:</b> '+observations+' same layout · '+similar+' broadly similar layouts · '+sections+' sourced sectional/par comparisons.</p>'+
+   (hyp.length?'<div class="trainer-subtitle">Potential entry signals — not proof of trainer intent</div><ul>'+hyp.map(h=>
+      '<li>'+esc(h.label)+' — '+esc(h.evidence)+'. <em>'+esc(h.certainty)+'</em></li>').join('')+'</ul>':
+      '<p><b>Trainer/owner intent:</b> Unverified; no evidence sufficient for a race-placement inference.</p>')+
+   '<p class="trainer-gaps"><b>Still needed:</b> '+esc(missing.join('; ')||'Independent walk-forward validation before a price or win-probability adjustment')+'</p>'+
+   '<p><b>Decision gate:</b> '+esc(x.gate)+'</p>'+
+   (sources?'<div class="research-sources">'+sources+'</div>':'')+
+   '</div></details>';
+ }).join('');
+ const trainerPanel='<section class="sheet"><div class="section-title"><div><h2>Trainer\'s View — race placement & track suitability</h2>'+
+  '<p>Each runner is checked against the exact course layout, race trip and dated past evidence. Trainer intentions are hypotheses, never insider facts.</p></div><span>'+esc(trainerView.date||'No card')+'</span></div>'+
+  '<p class="research-readiness"><strong>'+esc(String(trainerView.historicalRunners||0))+' licensed past-run observations</strong>'+
+  '<span>The published racecard is a historic snapshot, not today\'s current tips. These diagnostics do not change saved selections or infer sectionals.</span></p>'+
+  '<div class="trainer-list">'+(trainerRows||'<p>There are no published selections to audit.</p>')+'</div></section>';
+ $('report-content').innerHTML=cards+chart+table+changes+trainerPanel+researchPanel+standards;
  $('report-content').hidden=false;
  $('report-loading').hidden=true;
 }
