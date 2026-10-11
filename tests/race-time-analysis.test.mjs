@@ -22,7 +22,7 @@ assert.equal(margins[2].lengthsBehindWinner,1.8);
 assert.equal(margins[3].lengthsBehindWinner,null);
 const published=computeRaceTime({winningTime:r.winningTime,horseTimeSeconds:subject.horseTimeSeconds});
 assert.equal(published.status,'measured individual time');
-assert.equal(published.seconds,101.07,'The horse's real measured time takes priority');
+assert.equal(published.seconds,101.07,"The horse\'s real measured time takes priority");
 assert.equal(computeRaceTime({winningTime:'1m 41.03s',finishPosition:2,lengthsBehindWinner:.3}).status,'unavailable',
  'No blindly assumed lengths per second');
 const estimated=computeRaceTime({winningTime:'1m 41.03s',finishPosition:2,lengthsBehindWinner:.3,
