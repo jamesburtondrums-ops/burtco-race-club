@@ -2,6 +2,7 @@ const $=id=>document.getElementById(id);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money=v=>new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP'}).format(Number(v)||0);
 const signed=v=>(Number(v)>0?'+':'')+money(v);
+const ordinal=n=>{const x=Number(n);if(!Number.isInteger(x)||x<=0)return '?';return x+(x%100>=11&&x%100<=13?'th':x%10===1?'st':x%10===2?'nd':x%10===3?'rd':'th')};
 const percent=v=>v===null||v===undefined?'—':Number(v).toFixed(1)+'%';
 const readable=d=>{try{return new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric'}).format(new Date(d+'T12:00:00Z'))}catch{return d}};
 let loading=false;
