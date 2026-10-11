@@ -39,6 +39,13 @@ export function selectTrackProfile(profiles,query={}){
    if(loop)matched=matched.filter(p=>p.trackId.endsWith(loop));
   }
  }
+ if(matched.length>1 && name==='newcastle' && matched.every(p=>/newcastle-aw-/.test(p.trackId))){
+  const distance=number(query.distanceFurlongs);
+  if(distance!==null){
+   const configuration=distance<=8.2?'straight':'round';
+   matched=matched.filter(p=>p.trackId.endsWith(configuration));
+  }
+ }
  if(matched.length>1)return {status:'ambiguous',reason:'Multiple course layouts. Specify track variant or Flat/Jumps before comparing.',options:matched.map(x=>x.trackId)};
  const p=matched[0];
  return {status:'course geometry documented',trackId:idOf(p),course:p.course,configuration:p.configuration,
@@ -46,14 +53,12 @@ export function selectTrackProfile(profiles,query={}){
   sourceUrls:p.sourceUrls||[],note:'Terrain tags describe track geometry, NOT an empirically tested benefit to a specific horse.'};
 }
 export function parseRaceDistance(label){
- // Parse known furlong/mile notation within race descriptors; never infer from race title alone.
+ // Racing distances are in furlongs (220yd) and often include yardage immediately after m/f.
  const s=String(label||'').toLowerCase();
- let m=s.match(/(?:^|[\s,(])(\d+)m\s*(\d+)f\b/);
- if(m)return Number(m[1])*8+Number(m[2]);
- m=s.match(/(?:^|[\s,(])(\d+)m\b/);
- if(m)return Number(m[1])*8;
- m=s.match(/(?:^|[\s,(])(\d+)f\b/);
- return m?Number(m[1]):null;
+ const m=s.match(/(?:^|[\s,(])(\d+)m(?:\s*(\d+)f)?(?:\s*(\d+)y(?:ds?)?)?\b/);
+ if(m)return Number(m[1])*8+Number(m[2]||0)+Number(m[3]||0)/220;
+ const f=s.match(/(?:^|[\s,(])(\d+)f(?:\s*(\d+)y(?:ds?)?)?\b/);
+ return f?Number(f[1])+Number(f[2]||0)/220:null;
 }
 const terrainOverlap=(a,b)=>{
  const aa=new Set(a||[]),bb=new Set(b||[]);
