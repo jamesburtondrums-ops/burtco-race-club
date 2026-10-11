@@ -8,6 +8,10 @@ on:
       - "functions/api/backoffice/report.js"
       - "scripts/import-racing-research.mjs"
       - "tests/trainer-view.test.mjs"
+      - "tests/racing-third-party.test.mjs"
+      - "functions/_lib/third-party-research.mjs"
+      - "functions/_private/racing-third-party-sources.json"
+      - "functions/_private/racing-third-party-observations.json"
       - ".github/workflows/trainer-view-tests.yml"
   workflow_dispatch:
 permissions:
@@ -21,4 +25,4 @@ jobs:
         with:
           node-version: "22"
       - name: Verify research and trainer-intent gates
-        run: node --test tests/trainer-view.test.mjs tests/racing-research.test.mjs
+        run: node --test tests/trainer-view.test.mjs tests/racing-research.test.mjs tests/racing-third-party.test.mjs
