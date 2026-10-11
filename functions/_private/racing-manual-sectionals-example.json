@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "lastReviewedAt": "2026-10-11T23:45:43.976Z",
+  "usage": "PRIVATE MANUAL factual case study; no automated scrape, no licensed bulk data feed, and no historical signal in the already-frozen 12 October selection. Treat as illustrative until reuse license approved.",
+  "sources": [
+    {
+      "name": "Racing TV RaceiQ result and Sectionals",
+      "url": "https://www.racingtv.com/results/2026-10-01/newcastle/1830",
+      "rights": "Manually consulted publicly visible performance facts; not a data reuse licence"
+    },
+    {
+      "name": "Sporting Life official result",
+      "url": "https://www.sportinglife.com/racing/results/2026-10-01/newcastle/941151/download-the-racecourse-app-raceday-ready-handicap",
+      "rights": "Cross-check winner official time and finish margin only"
+    }
+  ],
+  "examples": [
+    {
+      "race": {
+        "date": "2026-10-01",
+        "course": "Newcastle",
+        "raceTime": "18:30",
+        "discipline": "Flat",
+        "surface": "Tapeta",
+        "going": "Standard",
+        "raceClass": 6,
+        "distanceFurlongs": 8.022727272727273,
+        "fieldSize": 10,
+        "winningTime": "1m 41.03s",
+        "winningTimeSeconds": 101.03,
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-01/newcastle/1830",
+        "publishedRaceDate": "2026-10-01",
+        "reviewedAt": "2026-10-11T23:45:43.976Z"
+      },
+      "selectedHorse": "Sailor's Return",
+      "rivalHorse": "Dalamara",
+      "qualifiedForPredictionsAfter": "2026-10-11T23:45:43.976Z",
+      "notQualifiedForSelectionDate": "2026-10-12",
+      "observations": [
+        {
+          "horse": "Sailor's Return",
+          "runnerDetails": {
+            "jockey": "D Tudhope",
+            "trainer": "D O'Meara",
+            "declaredAgeInSource": 3
+          },
+          "position": 2,
+          "marginBehindPrevious": "Neck",
+          "horseTimeSeconds": 101.07,
+          "finishingSpeedPercent": 106.9,
+          "finishingSpeedRank": 1,
+          "topSpeedMph": 39.11,
+          "topSpeedRank": 1,
+          "sectionalRights": "manual-factual-excerpt",
+          "finishingSectionFurlongs": 2,
+          "sourceUrl": "https://www.racingtv.com/results/2026-10-01/newcastle/1830",
+          "sectionals": [
+            {
+              "furlong": 1,
+              "seconds": 17.17,
+              "position": 10
+            },
+            {
+              "furlong": 2,
+              "seconds": 12.48,
+              "position": 10
+            },
+            {
+              "furlong": 3,
+              "seconds": 12.08,
+              "position": 10
+            },
+            {
+              "furlong": 4,
+              "seconds": 11.94,
+              "position": 10
+            },
+            {
+              "furlong": 5,
+              "seconds": 12.05,
+              "position": 10
+            },
+            {
+              "furlong": 6,
+              "seconds": 11.78,
+              "position": 10
+            },
+            {
+              "furlong": 7,
+              "seconds": 11.59,
+              "position": 8
+            },
+            {
+              "furlong": 8,
+              "seconds": 11.98,
+              "position": 2
+            }
+          ]
+        },
+        {
+          "horse": "Dalamara",
+          "runnerDetails": {
+            "jockey": "A Mullen",
+            "trainer": "B Haslam",
+            "declaredAgeInSource": 3
+          },
+          "position": 1,
+          "marginBehindPrevious": null,
+          "horseTimeSeconds": 101.02,
+          "finishingSpeedPercent": 104.58,
+          "finishingSpeedRank": 3,
+          "topSpeedMph": 38.73,
+          "topSpeedRank": 3,
+          "sectionalRights": "manual-factual-excerpt",
+          "finishingSectionFurlongs": 2,
+          "sourceUrl": "https://www.racingtv.com/results/2026-10-01/newcastle/1830",
+          "sectionals": [
+            {
+              "furlong": 1,
+              "seconds": 16.31,
+              "position": 3
+            },
+            {
+              "furlong": 2,
+              "seconds": 12.35,
+              "position": 2
+            },
+            {
+              "furlong": 3,
+              "seconds": 12.14,
+              "position": 2
+            },
+            {
+              "furlong": 4,
+              "seconds": 12.11,
+              "position": 3
+            },
+            {
+              "furlong": 5,
+              "seconds": 12.12,
+              "position": 2
+            },
+            {
+              "furlong": 6,
+              "seconds": 11.91,
+              "position": 2
+            },
+            {
+              "furlong": 7,
+              "seconds": 11.72,
+              "position": 1
+            },
+            {
+              "furlong": 8,
+              "seconds": 12.36,
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "qualitativeVerdict": "In this one race Sailor's Return travelled in rear, moved from 10th after six furlongs to 2nd at finish, recorded fastest FSP and peak speed, and covered the last 2f 0.51s quicker than winner. Suggests capacity to quicken if pace scenario suits; one run does not establish a preferred tactic, future fitness or race-winning edge.",
+      "conditions": "The racingtv tracking winner time 101.02s and Sporting Life official race clock 101.03s differ by 0.01s; preserve both labelled."
+    }
+  ]
+}
