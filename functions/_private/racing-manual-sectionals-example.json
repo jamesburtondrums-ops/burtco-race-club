@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastReviewedAt": "2026-10-11T23:45:43.976Z",
+  "lastReviewedAt": "2026-10-11T23:49:50.072Z",
   "usage": "PRIVATE MANUAL factual case study; no automated scrape, no licensed bulk data feed, and no historical signal in the already-frozen 12 October selection. Treat as illustrative until reuse license approved.",
   "sources": [
     {
@@ -12,6 +12,11 @@
       "name": "Sporting Life official result",
       "url": "https://www.sportinglife.com/racing/results/2026-10-01/newcastle/941151/download-the-racecourse-app-raceday-ready-handicap",
       "rights": "Cross-check winner official time and finish margin only"
+    },
+    {
+      "name": "Racing TV RaceiQ Newcastle 25 September (Flowstate)",
+      "url": "https://www.racingtv.com/results/2026-09-25/newcastle/1945",
+      "rights": "Manually consulted specific published factual measurements; no permission to scrape full historical feed"
     }
   ],
   "examples": [
@@ -160,6 +165,140 @@
       ],
       "qualitativeVerdict": "In this one race Sailor's Return travelled in rear, moved from 10th after six furlongs to 2nd at finish, recorded fastest FSP and peak speed, and covered the last 2f 0.51s quicker than winner. Suggests capacity to quicken if pace scenario suits; one run does not establish a preferred tactic, future fitness or race-winning edge.",
       "conditions": "The racingtv tracking winner time 101.02s and Sporting Life official race clock 101.03s differ by 0.01s; preserve both labelled."
+    },
+    {
+      "race": {
+        "date": "2026-09-25",
+        "course": "Newcastle",
+        "raceTime": "19:45",
+        "discipline": "Flat",
+        "surface": "Tapeta",
+        "going": "Standard",
+        "raceClass": 5,
+        "distanceFurlongs": 7.0636363636363635,
+        "fieldSize": 11,
+        "winningTime": "1m 26.25s",
+        "winningTimeSeconds": 86.25,
+        "sourceUrl": "https://www.racingtv.com/results/2026-09-25/newcastle/1945",
+        "publishedRaceDate": "2026-09-25",
+        "reviewedAt": "2026-10-11T23:49:50.072Z"
+      },
+      "selectedHorse": "Flowstate",
+      "rivalHorse": "Lord Capulet",
+      "qualifiedForPredictionsAfter": "2026-10-11T23:49:50.072Z",
+      "notQualifiedForSelectionDate": "2026-10-12",
+      "observations": [
+        {
+          "horse": "Flowstate",
+          "runnerDetails": {
+            "jockey": "C J Whiteley (5lb)",
+            "trainer": "D O'Meara",
+            "declaredAgeInSource": 5
+          },
+          "position": 6,
+          "marginBehindPrevious": "2 3/4",
+          "horseTimeSeconds": 87.53,
+          "finishingSpeedPercent": 97.5,
+          "finishingSpeedRank": 6,
+          "topSpeedMph": 39.55,
+          "topSpeedRank": 11,
+          "sectionalRights": "manual-factual-excerpt",
+          "finishingSectionFurlongs": 2,
+          "sourceUrl": "https://www.racingtv.com/results/2026-09-25/newcastle/1945",
+          "sectionals": [
+            {
+              "furlong": 1,
+              "seconds": 16.05,
+              "position": 5
+            },
+            {
+              "furlong": 2,
+              "seconds": 11.68,
+              "position": 5
+            },
+            {
+              "furlong": 3,
+              "seconds": 11.45,
+              "position": 6
+            },
+            {
+              "furlong": 4,
+              "seconds": 11.51,
+              "position": 6
+            },
+            {
+              "furlong": 5,
+              "seconds": 11.42,
+              "position": 4
+            },
+            {
+              "furlong": 6,
+              "seconds": 12.03,
+              "position": 6
+            },
+            {
+              "furlong": 7,
+              "seconds": 13.39,
+              "position": 6
+            }
+          ]
+        },
+        {
+          "horse": "Lord Capulet",
+          "runnerDetails": {
+            "jockey": "Shane Gray",
+            "trainer": "Kevin Ryan",
+            "declaredAgeInSource": 4
+          },
+          "position": 1,
+          "marginBehindPrevious": null,
+          "horseTimeSeconds": 86.25,
+          "finishingSpeedPercent": 99.76,
+          "finishingSpeedRank": 3,
+          "sectionalRights": "manual-factual-excerpt",
+          "finishingSectionFurlongs": 2,
+          "sourceUrl": "https://www.racingtv.com/results/2026-09-25/newcastle/1945",
+          "sectionals": [
+            {
+              "furlong": 1,
+              "seconds": 15.77,
+              "position": 1
+            },
+            {
+              "furlong": 2,
+              "seconds": 11.65,
+              "position": 1
+            },
+            {
+              "furlong": 3,
+              "seconds": 11.39,
+              "position": 1
+            },
+            {
+              "furlong": 4,
+              "seconds": 11.5,
+              "position": 1
+            },
+            {
+              "furlong": 5,
+              "seconds": 11.46,
+              "position": 1
+            },
+            {
+              "furlong": 6,
+              "seconds": 11.8,
+              "position": 1
+            },
+            {
+              "furlong": 7,
+              "seconds": 12.68,
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "qualitativeVerdict": "Flowstate sat mid-division and reached fourth after five furlongs but was sixth at the finish. The 87.53s measured total was 1.28s behind Lord Capulet. His final 2f were 25.42s versus 24.48s for the winner (0.94s slower), and his highest recorded speed ranked last in the field. This questions rather than supports the each-way case on that specific effort; historical course wins alone cannot outweigh lack of recent finishing strength.",
+      "conditions": "Unadjusted same-race comparison. The class, pace and going of other Newcastle 7f races can differ."
     }
   ]
 }
