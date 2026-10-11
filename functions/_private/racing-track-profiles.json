@@ -15,7 +15,8 @@
         "round": "Sweeping turn and long home run-in"
       },
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/York"
+        "https://www.attheraces.com/course-guides/York",
+        "https://myracing.com/racecourses/york-betting-tips/"
       ],
       "status": "verified course geometry",
       "paceBiasNumerical": null,
@@ -40,7 +41,8 @@
         "bias": "No numerical draw/pace effect assigned without same-day evidence"
       },
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Newmarket"
+        "https://www.attheraces.com/course-guides/Newmarket",
+        "https://myracing.com/racecourses/newmarket-betting-tips/"
       ],
       "status": "verified course geometry",
       "paceBiasNumerical": null,
@@ -69,7 +71,8 @@
         "downhill"
       ],
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Newmarket"
+        "https://www.attheraces.com/course-guides/Newmarket",
+        "https://myracing.com/racecourses/newmarket-july-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -86,7 +89,8 @@
         "jumps": "Eleven fences per complete circuit, five in straight; pronounced undulations and potentially testing going"
       },
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Chepstow"
+        "https://www.attheraces.com/course-guides/Chepstow",
+        "https://myracing.com/racecourses/chepstow-betting-tips/"
       ],
       "status": "verified course geometry",
       "paceBiasNumerical": null,
@@ -112,7 +116,8 @@
         "long-straight"
       ],
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Chepstow"
+        "https://www.attheraces.com/course-guides/Chepstow",
+        "https://myracing.com/racecourses/chepstow-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -188,7 +193,8 @@
         "sweeping-turns"
       ],
       "sourceUrls": [
-        "https://m.attheraces.com/festivals/leger/course-guide"
+        "https://m.attheraces.com/festivals/leger/course-guide",
+        "https://myracing.com/racecourses/doncaster-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -206,7 +212,8 @@
         "galloping"
       ],
       "sourceUrls": [
-        "https://m.attheraces.com/festivals/leger/course-guide"
+        "https://m.attheraces.com/festivals/leger/course-guide",
+        "https://myracing.com/racecourses/doncaster-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -225,7 +232,8 @@
         "long-straight"
       ],
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Sandown"
+        "https://www.attheraces.com/course-guides/Sandown",
+        "https://myracing.com/racecourses/sandown-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -243,7 +251,8 @@
         "stiff-finish"
       ],
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Sandown"
+        "https://www.attheraces.com/course-guides/Sandown",
+        "https://myracing.com/racecourses/sandown-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -263,7 +272,8 @@
         "tight-turns"
       ],
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Goodwood"
+        "https://www.attheraces.com/course-guides/Goodwood",
+        "https://myracing.com/racecourses/goodwood-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -283,7 +293,8 @@
         "short-straight"
       ],
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Chester"
+        "https://www.attheraces.com/course-guides/Chester",
+        "https://myracing.com/racecourses/chester-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -302,7 +313,8 @@
         "downhill"
       ],
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Ascot"
+        "https://www.attheraces.com/course-guides/Ascot",
+        "https://myracing.com/racecourses/ascot-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -320,7 +332,8 @@
         "downhill"
       ],
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Ascot"
+        "https://www.attheraces.com/course-guides/Ascot",
+        "https://myracing.com/racecourses/ascot-betting-tips/"
       ],
       "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
@@ -347,5 +360,11 @@
       "paceBiasNumerical": null,
       "drawBiasNumerical": null
     }
-  ]
+  ],
+  "lastIndependentCrossCheck": {
+    "asOf": "2026-10-11",
+    "publisher": "myracing",
+    "verifiedProfiles": 13,
+    "note": "myracing course prose and trainer stats are second-source references, not proof of stable intent or numerical pace/draw edge. Only race/course variant observations can support horse-specific assessments."
+  }
 }
