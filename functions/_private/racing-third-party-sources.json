@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-11",
+  "usage": "Manually verified reference sites for the Trainer's View workflow, not automated licensed racing telemetry and not authoritative model scores.",
+  "providers": {
+    "olbg": {
+      "name": "OLBG",
+      "url": "https://www.olbg.com/best-tipsters/Horse_Racing/2",
+      "kind": "Tipster track record and opinion",
+      "areas": [
+        "independent selections",
+        "tipster 12-month ROI and strike rate",
+        "profitable months",
+        "contradictory views"
+      ],
+      "rules": "Tipster rankings change and can reflect survivorship bias. Only record actual tipster, number of tips and pre-race quoted price when independently checked. No blind consensus bonus.",
+      "citation": "https://www.olbg.com/best-tipsters/Horse_Racing/2"
+    },
+    "myracing": {
+      "name": "myracing",
+      "url": "https://myracing.com/racecards/",
+      "kind": "Racecard / trainer-jockey / course reference",
+      "areas": [
+        "track layouts and going",
+        "course-specific trainer and jockey records with sample sizes",
+        "racecard cross-check",
+        "class and race pace commentary"
+      ],
+      "rules": "Course rates are historical summaries, not evidence of today's horse readiness. Capture source date and runner counts; racecourse guides may contain generalizations and should be checked against official race maps.",
+      "citation": "https://myracing.com/guides/how-to-bet/top-10-statistics-horse-racing-betting/"
+    },
+    "winners-enclosure": {
+      "name": "The Winners Enclosure",
+      "url": "https://www.thewinnersenclosure.com/daily-horse-racing-tips",
+      "kind": "Editorial race reasoning and selections",
+      "areas": [
+        "trainer and ground opinions",
+        "dark horse and each-way arguments",
+        "early quoted prices",
+        "layoff and race-type notes"
+      ],
+      "rules": "Record author and publication time as well as race date and horse. Opinions alone are not sectionals, stable inside information, or proof of value. Do not claim independent agreement if syndicated.",
+      "citation": "https://www.thewinnersenclosure.com/daily-horse-racing-tips"
+    }
+  },
+  "access": "human-public-page-review",
+  "automatedScrapingEnabled": false,
+  "providerAPIConnected": false,
+  "licensing": "Do not bulk scrape, republish site tips, or copy editorial text without permission. Summarise independently with attribution, timestamp and links.",
+  "assessment": "A source-backed factual trainer/course stat may inform a hypothesis, while an editorial tip remains non-measurement. Mixed agreement is never used as a probability without out-of-sample validation."
+}
