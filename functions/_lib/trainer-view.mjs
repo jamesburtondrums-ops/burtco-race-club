@@ -29,6 +29,15 @@ export function selectTrackProfile(profiles,query={}){
   matched=matched.filter(p=>!p.discipline||(expectsJumps?norm(p.discipline)==='jumps':norm(p.discipline)==='flat'));
  }
  if(!matched.length)return {status:'unavailable',reason:'No matching surface/code configuration; do not transfer a different layout'};
+ // AW inner and outer Kempton loops change by trip. Do not treat them as a single course.
+ if(matched.length>1 && name==='kempton' && matched.every(p=>/kempton-aw-/.test(p.trackId))){
+  const distance=number(query.distanceFurlongs);
+  if(distance!==null){
+   const rounded=Math.round(distance);
+   const loop=[5,9,10].includes(rounded)?'inner':[6,7,8].includes(rounded)?'outer':null;
+   if(loop)matched=matched.filter(p=>p.trackId.endsWith(loop));
+  }
+ }
  if(matched.length>1)return {status:'ambiguous',reason:'Multiple course layouts. Specify track variant or Flat/Jumps before comparing.',options:matched.map(x=>x.trackId)};
  const p=matched[0];
  return {status:'course geometry documented',trackId:idOf(p),course:p.course,configuration:p.configuration,
@@ -156,7 +165,7 @@ export function buildTrainerView(races,priorRuns,profiles){
   const descriptor=x?.v42?.raceType||x.raceType||'';
   const d=parseRaceDistance(descriptor);
   const disc=/jump|hurdle|chase/i.test(meeting?.code||'')?'Jumps':meeting?'Flat':null;
-  const candidate={course:x.course,trackVariant:x.trackVariant||x.courseVariant||null,
+  const candidate={course:x.course,trackVariant:x.trackVariant||x.courseVariant||meeting?.trackVariant||null,
    distanceFurlongs:d,discipline:disc,surface:/all.weather|tapeta|polytrack/i.test(meeting?.code||'')?'all weather':meeting?'Turf':null,
    raceClass:x.raceClass??null};
   const audit=assessEntryHypotheses({horse:x.horse,asOfDate:date,target:candidate,priorRuns,profiles});
