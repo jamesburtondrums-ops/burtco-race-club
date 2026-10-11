@@ -18,7 +18,8 @@ export function selectTrackProfile(profiles,query={}){
  const surface=norm(query.surface);
  let matched=found;
  if(variant){
-  matched=matched.filter(p=>norm(p.trackId).includes(variant)||norm(p.configuration).includes(variant)||norm(p.course).includes(variant));
+  // Only match the named variant, not incidental mentions of other courses in prose.
+  matched=matched.filter(p=>norm(p.trackId).includes(variant)||norm(p.course).includes(variant));
   if(!matched.length)return {status:'unavailable',reason:'Requested configuration not among sourced layouts'};
  }
  if(surface)matched=matched.filter(p=>!p.surface||norm(p.surface)===surface||
