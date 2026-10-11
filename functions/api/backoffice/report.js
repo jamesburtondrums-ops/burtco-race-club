@@ -2,6 +2,8 @@ import history from '../../_private/backoffice-history.json';
 import researchHistory from '../../_private/racing-research-journal.json';
 import historicalRuns from '../../_private/racing-historical-runs.json';
 import trackProfiles from '../../_private/racing-track-profiles.json';
+import priorRuns from '../../_private/racing-historical-runs.json';
+import {buildTrainerView} from '../../_lib/trainer-view.mjs';
 import {isAuthed,reply} from '../../_lib/backoffice-auth.mjs';
 import {dailyReports,tuningNotes} from '../../_lib/backoffice-stats.mjs';
 import {researchCoverage,chronologicalAssessment,historicalPriceAudit} from '../../_lib/race-research.mjs';
@@ -36,6 +38,7 @@ export async function onRequestGet({request,env}){
     priceAudit:historicalPriceAudit(ledger),
     snapshotsRecorded:researchHistory.snapshots?.length||0,
     tracks:trackProfiles.tracks||[],
+    trainerView:buildTrainerView(race,priorRuns.runs||[],trackProfiles),
     status:'Evidence-backed shadow research: do not update live picks until out-of-sample improvement is established'
    },
    methodology:{
