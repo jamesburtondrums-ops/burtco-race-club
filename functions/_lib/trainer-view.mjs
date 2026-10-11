@@ -148,7 +148,35 @@ export function assessEntryHypotheses({horse,asOfDate,target,priorRuns,profiles}
     certainty:'Entry choice observed; race quality and rating adjustments still require assessment'});
   }
  }
- if(!hypotheses.length)questions.push('Why this race? Require an owner/trainer declaration or evidence of a deliberate change in conditions.');
+ if(target?.isHandicap===true && number(target?.officialRating)!==null){
+  const wins=all.filter(r=>Number(r.finishingPosition)===1 && number(r.officialRating)!==null);
+  const lastWin=wins[0];
+  if(lastWin){
+   const diff=Number(target.officialRating)-Number(lastWin.officialRating);
+   if(diff<=2)hypotheses.push({label:'Handicap mark near or below a previous winning mark',
+    evidence:'Today OR '+target.officialRating+' vs sourced winning OR '+lastWin.officialRating+' on '+lastWin.date,
+    certainty:'Descriptive mark comparison; different race circumstances and rating revisions may apply'});
+  }else questions.push('No sourced previous winning handicap mark to compare with the current mark.');
+ }
+ if(target?.jockey){
+  const priorPartner=all.filter(r=>norm(r.jockey)===norm(target.jockey));
+  if(priorPartner.length>=2 && priorPartner.some(r=>Number(r.finishingPosition)<=3 && Number(r.finishingPosition)>0))
+   hypotheses.push({label:'Repeat jockey partnership',
+    evidence:priorPartner.length+' previous sourced rides with at least one top-three finish',
+    certainty:'Booking is observable, significance untested'});
+ }
+ const go=norm(target?.going);
+ if(go){
+  const matchingGoing=all.filter(r=>norm(r.going)===go && Number(r.finishingPosition)>0);
+  if(matchingGoing.length>=3&&matchingGoing.filter(r=>Number(r.finishingPosition)<=3).length>=2)
+   hypotheses.push({label:'Repeated performance on identical going description',
+    evidence:matchingGoing.filter(r=>Number(r.finishingPosition)<=3).length+' top-three finishes / '+matchingGoing.length+' prior starts',
+    certainty:'Descriptive ground history; pace, class and seasonal moisture can differ'});
+ }
+ if(target?.prizeWinnerGBP){
+  questions.push('Race value '+String(target.prizeWinnerGBP)+' GBP to winner: compare against likely alternative entries and owner targets, rather than assuming higher purse means stronger winning intention.');
+ }
+  if(!hypotheses.length)questions.push('Why this race? Require an owner/trainer declaration or evidence of a deliberate change in conditions.');
  questions.push('Is the horse suited to the actual field pace, draw/rail setup, going, race value and class?');
  questions.push('Could this be an educational run, fitness run, handicap preparation or a genuine winning opportunity? Do not assert without evidence.');
  return {horse,asOfDate,track:e,hypotheses,questions,trainerIntent:'not established',
@@ -167,7 +195,9 @@ export function buildTrainerView(races,priorRuns,profiles){
   const disc=/jump|hurdle|chase/i.test(meeting?.code||'')?'Jumps':meeting?'Flat':null;
   const candidate={course:x.course,trackVariant:x.trackVariant||x.courseVariant||meeting?.trackVariant||null,
    distanceFurlongs:d,discipline:disc,surface:/all.weather|tapeta|polytrack/i.test(meeting?.code||'')?'all weather':meeting?'Turf':null,
-   raceClass:x.raceClass??null};
+   raceClass:x.raceClass??null,officialRating:x.or??null,jockey:x.jockey||null,
+   going:x.currentGoing||meeting?.going||null,isHandicap:/handicap/i.test(descriptor),
+   prizeWinnerGBP:(()=>{const m=String(descriptor).match(/£([\d,]+)/);return m?Number(m[1].replace(/,/g,'')):null})()};
   const audit=assessEntryHypotheses({horse:x.horse,asOfDate:date,target:candidate,priorRuns,profiles});
   return {horse:x.horse,trainer:x.trainer||null,course:x.course,time:x.time,odds:x.odds,
     raceDescriptor:descriptor,observedTarget:candidate,...audit};
