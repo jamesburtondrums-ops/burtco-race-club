@@ -44,6 +44,14 @@ if(!sourcePath||sourcePath.startsWith('-')){
    performanceFigure:raw.performanceFigure??null,finishingPosition:raw.finishingPosition??null,
    distanceFurlongs:raw.distanceFurlongs??null,
    weightLbs:raw.weightLbs??null,trainer:raw.trainer||null,jockey:raw.jockey||null,
+   horseId:raw.horseId||null,horseAge:raw.horseAge??null,
+   winningTimeSeconds:raw.winningTimeSeconds??null,
+   horseTimeSeconds:raw.horseTimeSeconds??null,
+   lengthsBehindWinner:raw.lengthsBehindWinner??null,
+   marginBehindPrevious:raw.marginBehindPrevious??null,
+   timingSourceUrl:raw.timingSourceUrl||null,
+   timingMethod:raw.horseTimeSeconds!==undefined&&raw.horseTimeSeconds!==null?'individual-measured':
+    raw.winningTimeSeconds!==undefined&&raw.winningTimeSeconds!==null?'official-winner-clock':'not-timed',
    sectionals:Array.isArray(raw.sectionals)?raw.sectionals:null,
    trackVariant:raw.trackVariant||null,discipline:raw.discipline||null,
    finishSpeedPercent:raw.finishSpeedPercent??null,parFinishSpeedPercent:raw.parFinishSpeedPercent??null,
@@ -56,7 +64,27 @@ if(!sourcePath||sourcePath.startsWith('-')){
   if(!validation.ok){rejects.push({row:i+1,reason:validation.reason});return;}
   if(row.sourceCheckedAt>now){rejects.push({row:i+1,reason:'Source retrieval timestamp is in future'});return;}
   if(!/^\d\d:\d\d$/.test(row.raceTime)){rejects.push({row:i+1,reason:'raceTime must be HH:MM in course-local time'});return;}
-  const hasFSP=row.finishSpeedPercent!==null||row.parFinishSpeedPercent!==null;
+
+  const clockFields=[row.winningTimeSeconds,row.horseTimeSeconds];
+  if(clockFields.some(x=>x!==null) &&
+    (!/^https:\/\//.test(String(row.timingSourceUrl||''))||
+    !clockFields.every(x=>x===null||(Number.isFinite(Number(x))&&Number(x)>20&&Number(x)<3600)))){
+   rejects.push({row:i+1,reason:'Clock observations must include source URL and realistic measured race times'});
+   return;
+  }
+  if(row.horseTimeSeconds!==null && row.winningTimeSeconds===null){
+   rejects.push({row:i+1,reason:'Individual timing requires the race-winning time for cross-check'});
+   return;
+  }
+  if(row.horseTimeSeconds!==null && Number(row.horseTimeSeconds)<Number(row.winningTimeSeconds)-0.15){
+   rejects.push({row:i+1,reason:'Horse tracking time cannot materially beat its own race winner'});
+   return;
+  }
+  if(row.lengthsBehindWinner!==null&&(!Number.isFinite(Number(row.lengthsBehindWinner))||Number(row.lengthsBehindWinner)<0)){
+   rejects.push({row:i+1,reason:'Cumulative lengths behind winner must be a nonnegative sourced figure'});
+   return;
+  }
+    const hasFSP=row.finishSpeedPercent!==null||row.parFinishSpeedPercent!==null;
   const hasSplits=Array.isArray(row.sectionals)&&row.sectionals.length>0;
   if((hasFSP||hasSplits)&&!row.sectionalPermissionVerified){
    rejects.push({row:i+1,reason:'Sectionals/par require allowSectionalReuse and licensed source URLs for both actual and course-specific par'});
@@ -67,7 +95,7 @@ if(!sourcePath||sourcePath.startsWith('-')){
    rejects.push({row:i+1,reason:'Actual FSP and matched course/going par FSP must both be realistic positive numbers'});
    return;
   }
-    if(row.comment.length>0 && incoming.allowCommentReuse!==true){
+  if(row.comment.length>0 && incoming.allowCommentReuse!==true){
    rejects.push({row:i+1,reason:'Do not import copyrighted narrative comments without explicit allowCommentReuse=true and permission'});
    return;
   }
