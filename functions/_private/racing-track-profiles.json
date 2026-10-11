@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "verifiedAsOf": "2026-10-11",
-  "rule": "Course geometry can be verified; implied fitness, personal trainer intent, pace/draw edge or numeric winning uplift cannot. Resolve exact code, track variant, race trip, surface, going, rail alterations before comparisons.",
+  "verifiedAsOf": "2026-10-12",
+  "rule": "Course geometry can be verified; implied fitness, personal trainer intent, pace/draw edge or numeric winning uplift cannot. Resolve exact code, track variant, race trip, surface, going, rail alterations before comparisons. 12 Oct additions: Newcastle straight AW and round AW must be determined by exact trip; Roscommon official circuit length differs across sources, only orientation and uphill finishing test considered verified.",
   "tracks": [
     {
       "course": "York",
@@ -357,6 +357,159 @@
         "https://www.attheraces.com/course-guides/Brighton"
       ],
       "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Musselburgh",
+      "trackId": "musselburgh-flat",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "right-handed",
+      "configuration": "Right-handed, sharp turns particularly on round course; 5f straight is fast with slight rise; usually rewards adaptable balanced horses",
+      "terrainTags": [
+        "sharp",
+        "tight-turns",
+        "flat"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Musselburgh"
+      ],
+      "status": "sourced course geometry; descriptive only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Musselburgh",
+      "trackId": "musselburgh-jumps",
+      "discipline": "Jumps",
+      "surface": "Turf",
+      "direction": "right-handed",
+      "configuration": "Right-handed flat oval, sharp turns with relatively short run to finish; generally favours handy fluent jumpers",
+      "terrainTags": [
+        "sharp",
+        "tight-turns",
+        "flat"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Musselburgh"
+      ],
+      "status": "sourced course geometry; descriptive only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Roscommon",
+      "trackId": "roscommon-flat",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "right-handed",
+      "configuration": "Right-handed relatively sharp oval, longish 3½f straight rising to winning post, a speed track; exact oval length varies by source",
+      "terrainTags": [
+        "sharp",
+        "undulating",
+        "stiff-finish"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Roscommon"
+      ],
+      "status": "sourced course geometry; descriptive only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Worcester",
+      "trackId": "worcester-jumps",
+      "discipline": "Jumps",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Left-handed, flat, galloping with sweeping turns and long straight; easy portable fences, 220-yard run-in",
+      "terrainTags": [
+        "flat",
+        "galloping",
+        "long-straight",
+        "sweeping-turns"
+      ],
+      "sourceUrls": [
+        "https://www.worcester-racecourse.co.uk/raceday-experience/racecard-and-race-replays"
+      ],
+      "status": "sourced course geometry; descriptive only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Yarmouth",
+      "trackId": "yarmouth-flat",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Essentially level left-handed oval with five-furlong straight and separate straight mile; galloping wide finish",
+      "terrainTags": [
+        "flat",
+        "galloping",
+        "long-straight"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Yarmouth"
+      ],
+      "status": "sourced course geometry; descriptive only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Newcastle - All Weather",
+      "trackId": "newcastle-aw-straight",
+      "discipline": "Flat",
+      "surface": "Tapeta",
+      "direction": "straight",
+      "configuration": "Newcastle Tapeta floodlit straight course from 5f up to 1m, distinct from the round track; fair straight test",
+      "terrainTags": [
+        "flat",
+        "galloping",
+        "long-straight"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Newcastle"
+      ],
+      "status": "sourced course geometry; descriptive only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Newcastle - All Weather",
+      "trackId": "newcastle-aw-round",
+      "discipline": "Flat",
+      "surface": "Tapeta",
+      "direction": "left-handed",
+      "configuration": "Newcastle Tapeta left-handed oval for longer AW races; long sweeping turns create extra ground-loss risk wide",
+      "terrainTags": [
+        "galloping",
+        "sweeping-turns",
+        "long-straight"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Newcastle"
+      ],
+      "status": "sourced course geometry; descriptive only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Newcastle",
+      "trackId": "newcastle-jumps",
+      "discipline": "Jumps",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Left-handed galloping jumps with steady uphill rise on home turn and demanding run-in",
+      "terrainTags": [
+        "galloping",
+        "stiff-finish",
+        "long-straight"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Newcastle"
+      ],
+      "status": "sourced course geometry; descriptive only",
       "paceBiasNumerical": null,
       "drawBiasNumerical": null
     }
