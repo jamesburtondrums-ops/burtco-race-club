@@ -40,7 +40,7 @@
       "races": 9,
       "code": "Flat All-Weather",
       "going": "Standard to slow",
-      "trackVariant": "All Weather Polytrack"
+      "trackSurface": "Polytrack"
     },
     {
       "course": "Newcastle",
