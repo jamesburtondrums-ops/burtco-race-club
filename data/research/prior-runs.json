@@ -20,7 +20,14 @@
     "draw": "Flat starting stall",
     "weightLbs": "Actual carried weight",
     "sectionals": "Only rights-cleared furlong times; never synthetic",
-    "trackProfileRef": "Verified track-and-distance geometry source URL"
+    "trackProfileRef": "Verified track-and-distance geometry source URL",
+    "trackVariant": "Exact layout identifier when venue has multiple courses (Rowley/July; AW inner/outer, etc).",
+    "discipline": "Flat vs Jumps; do not transfer one code's results to the other.",
+    "finishSpeedPercent": "Sourced actual finish-speed percentage from identified prior race (requires rights).",
+    "parFinishSpeedPercent": "Matching track/trip/going/class race par from authorised feed (requires rights).",
+    "sectionalSourceUrl": "Source for actual splits or FSP; both source URLs mandatory for import of sectional data.",
+    "parSectionalSourceUrl": "Source for matched FSP par; must not use a generic 100% baseline.",
+    "sourceRights": "Import envelope sourceRights licensed/open-licensed/owner-supplied, permissionReference and allowSectionalReuse true for sectionals."
   },
   "runs": [],
   "updatedAt": null,
