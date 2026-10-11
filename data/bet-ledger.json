@@ -600,7 +600,14 @@
       "placesPaid": 3,
       "runnerCount": 8,
       "terms": "User-defined 1/4 odds house EW terms based on actual final field size",
-      "result": null,
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "20/1",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-09/925073/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "priceBasis": "early"
     },
     {
@@ -618,7 +625,13 @@
       "placesPaid": null,
       "runnerCount": 11,
       "terms": null,
-      "result": null,
+      "result": {
+        "position": 9,
+        "status": "Weighed in",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-09/chepstow/1543",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "priceBasis": "early"
     },
     {
@@ -636,7 +649,14 @@
       "placesPaid": null,
       "runnerCount": 11,
       "terms": null,
-      "result": null,
+      "result": {
+        "position": 8,
+        "status": "Weighed in",
+        "sp": "9/4f",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-09/newmarket/1530",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "priceBasis": "early"
     },
     {
@@ -677,7 +697,14 @@
       "runnerCount": 10,
       "placesPaid": null,
       "terms": null,
-      "result": null,
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "5/6f",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-09/kempton-park/1915",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "priceBasis": "early"
     },
     {
@@ -743,7 +770,14 @@
       "runnerCount": 13,
       "placesPaid": 3,
       "terms": "13-runner Class 6 one-mile Polytrack handicap; 3 places at 1/4 house odds; bookmaker terms vary",
-      "result": null,
+      "result": {
+        "position": 10,
+        "status": "Weighed in",
+        "sp": "12/1",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/1079/kempton-aw/2026-10-09/928646/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "priceBasis": "early"
     },
     {
@@ -762,7 +796,14 @@
       "runnerCount": 5,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "7/4f",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/newmarket/1315",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     },
     {
       "id": "2026-10-10|york|13:30|divine whisper|win",
@@ -777,10 +818,17 @@
       "priceBasis": "early",
       "settlementOdds": null,
       "ewFraction": null,
-      "runnerCount": 11,
+      "runnerCount": 10,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 9,
+        "status": "Weighed in",
+        "sp": "6/1",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/york/1330",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     },
     {
       "id": "2026-10-10|chepstow|14:10|made u blush|win",
@@ -795,10 +843,16 @@
       "priceBasis": "early",
       "settlementOdds": null,
       "ewFraction": null,
-      "runnerCount": 13,
+      "runnerCount": 12,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "status": "F",
+        "sp": "7/1",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/12/chepstow/2026-10-10/928364/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     },
     {
       "id": "2026-10-10|newmarket|14:25|rock montreal|win",
@@ -816,7 +870,14 @@
       "runnerCount": 7,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "11/8f",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-10/928526/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     },
     {
       "id": "2026-10-10|newmarket|15:00|darkness falls|win",
@@ -834,7 +895,14 @@
       "runnerCount": 5,
       "placesPaid": null,
       "terms": null,
-      "result": null
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "6/4",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/newmarket/1500",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     },
     {
       "id": "2026-10-10|york|14:05|say what you see|each-way",
@@ -849,10 +917,17 @@
       "priceBasis": "early",
       "settlementOdds": null,
       "ewFraction": 0.25,
-      "runnerCount": 20,
+      "runnerCount": 18,
       "placesPaid": 3,
       "terms": "20 runners; house 1/4 odds, top 3; bookmaker terms may be better",
-      "result": null
+      "result": {
+        "position": 4,
+        "status": "Weighed in",
+        "sp": "11/1",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/york/1405",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     },
     {
       "id": "2026-10-10|york|14:40|nyman|each-way",
@@ -870,7 +945,14 @@
       "runnerCount": 20,
       "placesPaid": 3,
       "terms": "20 runners; house 1/4 odds, top 3",
-      "result": null
+      "result": {
+        "position": 15,
+        "status": "Weighed in",
+        "sp": "11/1",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/york/1440",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     },
     {
       "id": "2026-10-10|naas|15:28|thunderbear|each-way",
@@ -888,7 +970,14 @@
       "runnerCount": 9,
       "placesPaid": 3,
       "terms": "9 runners; house 1/4 odds, top 3",
-      "result": null
+      "result": {
+        "position": 8,
+        "status": "Weighed in",
+        "sp": "9/2",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/192/naas/2026-10-10/930371/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     },
     {
       "id": "2026-10-10|newmarket|15:40|naval tribute|each-way",
@@ -906,7 +995,14 @@
       "runnerCount": 29,
       "placesPaid": 3,
       "terms": "29 runners; house 1/4 odds, top 3 (bookmaker can offer additional places)",
-      "result": null
+      "result": {
+        "position": 14,
+        "status": "Weighed in",
+        "sp": "17/2",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-10/925901/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     },
     {
       "id": "2026-10-10|chepstow|16:02|wellington arch|each-way",
@@ -921,10 +1017,17 @@
       "priceBasis": "early",
       "settlementOdds": null,
       "ewFraction": 0.25,
-      "runnerCount": 18,
+      "runnerCount": 17,
       "placesPaid": 3,
       "terms": "18 runners; house 1/4 odds, top 3",
-      "result": null
+      "result": {
+        "position": 11,
+        "status": "Weighed in",
+        "sp": "12/1",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/12/chepstow/2026-10-10/927482/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      }
     }
   ],
   "placePolicy": {
@@ -938,12 +1041,15 @@
     "source": "Sporting Life Full Results"
   },
   "lastManualResultSearch": {
-    "checkedAt": "2026-10-08T20:45:00+01:00",
-    "verifiedUpdates": 7,
-    "awaiting": [
-      "War Howl",
-      "Eagle Storm"
-    ]
+    "checkedAt": "2026-10-11T22:54:57.298Z",
+    "verifiedUpdates": 15,
+    "dates": [
+      "2026-10-09",
+      "2026-10-10"
+    ],
+    "awaiting": [],
+    "source": "Racing TV and Racing Post weighed-in result pages",
+    "priceBasis": "Existing early odds locked; SP reference only"
   },
   "lucky15Tickets": [
     {
@@ -1137,8 +1243,15 @@
           "course": "York",
           "time": "14:05",
           "selectionOdds": "16/1",
-          "runnerCount": 20,
-          "result": null,
+          "runnerCount": 18,
+          "result": {
+            "position": 4,
+            "status": "Weighed in",
+            "sp": "11/1",
+            "source": "Racing TV full result",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-10/york/1405",
+            "updatedAt": "2026-10-11T22:54:57.298Z"
+          },
           "priceBasis": "early",
           "confidenceTier": "VALUE E/W / 20-RUNNER HANDICAP"
         },
@@ -1148,7 +1261,14 @@
           "time": "15:28",
           "selectionOdds": "13/2",
           "runnerCount": 9,
-          "result": null,
+          "result": {
+            "position": 8,
+            "status": "Weighed in",
+            "sp": "9/2",
+            "source": "Racing Post full result",
+            "sourceUrl": "https://www.racingpost.com/results/192/naas/2026-10-10/930371/",
+            "updatedAt": "2026-10-11T22:54:57.298Z"
+          },
           "priceBasis": "early",
           "confidenceTier": "BEST MIDSHOT COURSE / GOING MATCH"
         },
@@ -1158,7 +1278,14 @@
           "time": "15:40",
           "selectionOdds": "9/1",
           "runnerCount": 29,
-          "result": null,
+          "result": {
+            "position": 14,
+            "status": "Weighed in",
+            "sp": "17/2",
+            "source": "Racing Post full result",
+            "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-10/925901/",
+            "updatedAt": "2026-10-11T22:54:57.298Z"
+          },
           "priceBasis": "early",
           "confidenceTier": "STRONG MIDSHOT FORM / EXTREME TRIP"
         },
@@ -1167,8 +1294,15 @@
           "course": "Chepstow",
           "time": "16:02",
           "selectionOdds": "10/1",
-          "runnerCount": 18,
-          "result": null,
+          "runnerCount": 17,
+          "result": {
+            "position": 11,
+            "status": "Weighed in",
+            "sp": "12/1",
+            "source": "Racing Post full result",
+            "sourceUrl": "https://www.racingpost.com/results/12/chepstow/2026-10-10/927482/",
+            "updatedAt": "2026-10-11T22:54:57.298Z"
+          },
           "priceBasis": "early",
           "confidenceTier": "VALUE E/W / FITNESS & 7LB RISE"
         }
