@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": null,
+  "policy": "Manually reviewed pre-race publisher facts/editorials only, with source URL, observed/published timestamp, and raceStartUtc. Null or late evidence does not alter selection grades.",
+  "notes": []
+}
