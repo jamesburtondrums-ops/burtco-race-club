@@ -21,7 +21,7 @@ const frac=s=>{
  return m&&Number(m[2])>0?Number(m[1])/Number(m[2]):null;
 };
 export function parseMarginLengths(label){
- const s=norm(label).replace(/\s+/g,' ').replace(/[¼]/g,'1/4').replace(/[½]/g,'1/2').replace(/[¾]/g,'3/4');
+ const s=norm(label).replace(/(\d)([¼½¾])/g,'$1 $2').replace(/\s+/g,' ').replace(/¼/g,'1/4').replace(/½/g,'1/2').replace(/¾/g,'3/4');
  if(!s)return null;
  if(/^(dead heat|dead-heat|dh)$/.test(s))return 0;
  if(/^(nose|nse)$/.test(s))return 0.05;
