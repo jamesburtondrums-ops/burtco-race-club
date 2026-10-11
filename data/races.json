@@ -144,7 +144,14 @@
           }
         ]
       },
-      "result": null,
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "7/4f",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/newmarket/1315",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Good to soft"
@@ -154,7 +161,7 @@
       "course": "York",
       "time": "13:30",
       "odds": "9/2",
-      "runnerCount": 11,
+      "runnerCount": 10,
       "or": 86,
       "ts": 111,
       "rpr": 105,
@@ -216,7 +223,14 @@
           }
         ]
       },
-      "result": null,
+      "result": {
+        "position": 9,
+        "status": "Weighed in",
+        "sp": "6/1",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/york/1330",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Soft (good to soft in places)"
@@ -226,7 +240,7 @@
       "course": "Chepstow",
       "time": "14:10",
       "odds": "3/1",
-      "runnerCount": 13,
+      "runnerCount": 12,
       "or": 121,
       "ts": 106,
       "rpr": 128,
@@ -288,7 +302,13 @@
           }
         ]
       },
-      "result": null,
+      "result": {
+        "status": "F",
+        "sp": "7/1",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/12/chepstow/2026-10-10/928364/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Good to soft"
@@ -360,7 +380,14 @@
           }
         ]
       },
-      "result": null,
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "11/8f",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-10/928526/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Good to soft"
@@ -432,7 +459,14 @@
           }
         ]
       },
-      "result": null,
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "6/4",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/newmarket/1500",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Good to soft"
@@ -444,7 +478,7 @@
       "course": "York",
       "time": "14:05",
       "odds": "16/1",
-      "runnerCount": 20,
+      "runnerCount": 18,
       "or": 93,
       "ts": 95,
       "rpr": 111,
@@ -465,7 +499,14 @@
       "risk": "Twenty-runner Class 2 heritage-type handicap is volatile. Today's soft ground and stall 1 may alter the run style; published pace sections are incomplete. Not Prime win confidence.",
       "source": "HorseRacing.net / York Racing Post card",
       "sourceUrl": "https://www.horseracing.net/york/10-10-26",
-      "result": null,
+      "result": {
+        "position": 4,
+        "status": "Weighed in",
+        "sp": "11/1",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/york/1405",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Soft (good to soft in places)"
@@ -496,7 +537,14 @@
       "risk": "York has turned soft, slower than the going on which recent wins came; 20 runners and a crowded midfield pace are notable negatives. This is the least confident midshot and can be dropped if going gets heavier.",
       "source": "HorseRacing.net / York racecard",
       "sourceUrl": "https://www.horseracing.net/york/10-10-26",
-      "result": null,
+      "result": {
+        "position": 15,
+        "status": "Weighed in",
+        "sp": "11/1",
+        "source": "Racing TV full result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-10/york/1440",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Soft (good to soft in places)"
@@ -527,7 +575,14 @@
       "risk": "Current seasonal form has been inconsistent (form -60035), and 9 Listed sprinters could place competing early speed under severe ground. Stable/rider statistics are modest; this is still a conditional E/W bet.",
       "source": "HorseRacing.net / Naas declared card",
       "sourceUrl": "https://www.horseracing.net/naas/10-10-26",
-      "result": null,
+      "result": {
+        "position": 8,
+        "status": "Weighed in",
+        "sp": "9/2",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/192/naas/2026-10-10/930371/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Soft (soft to heavy in places)"
@@ -558,7 +613,14 @@
       "risk": "29-runner heritage handicap with heavy traffic, draw position and an additional two-furlong stamina test. The RPR/OR comparison is contextual, not a guaranteed handicap advantage. Big-field luck is essential.",
       "source": "HorseRacing.net / Racing Post Cesarewitch preview",
       "sourceUrl": "https://www.horseracing.net/newmarket/10-10-26",
-      "result": null,
+      "result": {
+        "position": 14,
+        "status": "Weighed in",
+        "sp": "17/2",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-10/925901/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Good to soft"
@@ -568,7 +630,7 @@
       "course": "Chepstow",
       "time": "16:02",
       "odds": "10/1",
-      "runnerCount": 18,
+      "runnerCount": 17,
       "or": 144,
       "ts": 137,
       "rpr": 147,
@@ -589,7 +651,14 @@
       "risk": "183-day absence and a 7lb increase in the handicap mark. This is a deep 18-runner race with fit improving rivals, and no verified fresh-running guarantee.",
       "source": "HorseRacing.net / Chepstow Racing Post card",
       "sourceUrl": "https://www.horseracing.net/chepstow/10-10-26",
-      "result": null,
+      "result": {
+        "position": 11,
+        "status": "Weighed in",
+        "sp": "12/1",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/12/chepstow/2026-10-10/927482/",
+        "updatedAt": "2026-10-11T22:54:57.298Z"
+      },
       "researchUpdatedAt": "2026-10-10T08:05:20.951Z",
       "earlyOddsLockedAt": "2026-10-10T08:05:20.951Z",
       "currentGoing": "Good to soft"
@@ -832,5 +901,15 @@
       "Calibration or 500-race out-of-time proof"
     ],
     "methodNote": "Never treat tipster consensus as calibrated probability or official confirmation of a positive betting expectation."
+  },
+  "resultVerification": {
+    "date": "2026-10-10",
+    "checkedAt": "2026-10-11T22:55:09.873Z",
+    "verifiedFinishedSelections": 10,
+    "winSelectionsWon": 2,
+    "eachWaySelectionsPlacedUnderHouseTerms": 0,
+    "eachWayFourthUnderExtendedTerms": 1,
+    "note": "Original 10 Oct early quotes preserved. All five each-way singles settled against saved house top-three place rules; Say What You See finished fourth, which may qualify under different bookmaker 4-place terms.",
+    "source": "Racing TV and Racing Post post-race results"
   }
 }
