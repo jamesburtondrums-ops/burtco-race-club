@@ -127,7 +127,28 @@ function render(report){
   '<p class="research-readiness"><strong>'+esc(String(trainerView.historicalRunners||0))+' licensed past-run observations</strong>'+
   '<span>The published racecard is a historic snapshot, not today\'s current tips. These diagnostics do not change saved selections or infer sectionals.</span></p>'+
   '<div class="trainer-list">'+(trainerRows||'<p>There are no published selections to audit.</p>')+'</div></section>';
- $('report-content').innerHTML=cards+chart+table+changes+trainerPanel+researchPanel+standards;
+ const external=research.externalResearch||{},publishers=external.sources||[],extCoverage=external.coverage||[];
+ const publisherCards=publishers.map(p=>'<article class="research-factor"><strong><a href="'+esc(p.url)+
+  '" target="_blank" rel="noopener noreferrer">'+esc(p.name)+' ↗</a></strong>'+
+  '<small>'+esc(p.kind)+'</small><p>'+esc((p.areas||[]).join(' · '))+'</p>'+
+  '<small>'+esc(p.rules||'Independent source: verify context and publication time')+'</small></article>').join('');
+ const extAuditRows=extCoverage.map(x=>{
+  const observed=x.observations||[];
+  const links=observed.map(e=>'<a href="'+esc(e.sourceUrl)+'" target="_blank" rel="noopener noreferrer">'+
+   esc(e.provider)+' — '+esc(e.factor)+' ('+esc(e.stance)+')</a>').join(' · ');
+  return '<tr><th scope="row">'+esc(x.horse)+'</th><td>'+esc(x.course)+' '+esc(x.time)+'</td>'+
+   '<td>'+esc(String(x.sourceCount||0))+'/3</td><td>'+esc(x.status)+'</td>'+
+   '<td>'+(links||'Not captured before the off')+'</td></tr>';
+ }).join('');
+ const externalPanel='<section class="sheet"><div class="section-title"><div><h2>Independent racing research</h2>'+
+  '<p>OLBG · myracing · The Winners Enclosure — compare published reasoning, not follower counts.</p></div>'+
+  '<span>'+esc(String(external.notesStored||0))+' saved verified pre-race notes</span></div>'+
+  '<div class="research-factors">'+publisherCards+'</div>'+
+  '<p class="research-disclaimer">These are attributed links for manual source review, not automatic live feeds. Tips, opinions and trainer trends are only recorded when a race-matched source was checked before the off. Missing reviews never reduce a horse\'s grade; provider agreement never directly increases a win-probability score.</p>'+
+  '<div class="table-scroll"><table><thead><tr><th>Selection</th><th>Race</th><th>Sources</th><th>Evidence</th><th>Checked references</th></tr></thead><tbody>'+
+  (extAuditRows||'<tr><td colspan="5">No published runners to compare.</td></tr>')+
+  '</tbody></table></div></section>';
+  $('report-content').innerHTML=cards+chart+table+changes+trainerPanel+externalPanel+researchPanel+standards;
  $('report-content').hidden=false;
  $('report-loading').hidden=true;
 }
