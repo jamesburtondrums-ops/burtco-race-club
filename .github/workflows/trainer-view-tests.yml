@@ -10,6 +10,10 @@ on:
       - "tests/trainer-view.test.mjs"
       - "tests/racing-tracker.test.mjs"
       - "tests/racing-backoffice.test.mjs"
+      - "tests/race-time-analysis.test.mjs"
+      - "functions/_lib/race-time-analysis.mjs"
+      - "functions/_private/racing-manual-sectionals-example.json"
+      - "backoffice.js"
       - "data/races.json"
       - "data/bet-ledger.json"
       - "tests/racing-third-party.test.mjs"
@@ -29,4 +33,4 @@ jobs:
         with:
           node-version: "22"
       - name: Verify research and trainer-intent gates
-        run: node --test tests/trainer-view.test.mjs tests/racing-research.test.mjs tests/racing-third-party.test.mjs tests/racing-tracker.test.mjs tests/racing-backoffice.test.mjs
+        run: node --test tests/trainer-view.test.mjs tests/racing-research.test.mjs tests/racing-third-party.test.mjs tests/racing-tracker.test.mjs tests/racing-backoffice.test.mjs tests/race-time-analysis.test.mjs
