@@ -159,7 +159,7 @@ function render(report){
    '<div class="timing-metrics">'+
     '<div><small>Official race-winning time</small><b>'+esc(race.winningTimeSeconds)+'s</b></div>'+
     '<div><small>Horse own measured time</small><b>'+esc(clock.seconds)+'s</b></div>'+
-    '<div><small>Finish and movement</small><b>2nd · +'+esc(p.positionsGained)+' places</b></div>'+
+    '<div><small>Finish and movement</small><b>'+esc(ordinal(p.endPosition))+' · '+(Number(p.positionsGained)>0?'+':'')+esc(p.positionsGained)+' places</b></div>'+
     '<div><small>Closing speed / field rank</small><b>'+esc(pace.publishedFinishingSpeedPercent)+'% · #'+esc(pace.finishingSpeedRank)+'</b></div>'+
     '<div><small>Peak speed / field rank</small><b>'+esc(pace.topSpeedMph)+' mph · #'+esc(pace.topSpeedRank)+'</b></div>'+
     '<div><small>Last 2f vs winner</small><b>'+esc(cmp.horseClosingTime)+'s vs '+esc(cmp.rivalClosingTime)+'s</b></div>'+
