@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
-  "verifiedAsOf": "2026-10-09",
-  "rule": "These are verified geographic/configuration facts, not empirically demonstrated draw or pace advantages. Track biases require same course/distance/going/field historical samples.",
+  "schemaVersion": 2,
+  "verifiedAsOf": "2026-10-11",
+  "rule": "Course geometry can be verified; implied fitness, personal trainer intent, pace/draw edge or numeric winning uplift cannot. Resolve exact code, track variant, race trip, surface, going, rail alterations before comparisons.",
   "tracks": [
     {
       "course": "York",
@@ -15,12 +15,19 @@
         "round": "Sweeping turn and long home run-in"
       },
       "sourceUrls": [
-        "https://www.yorkracecourse.co.uk/uploads/brochures/42Guide-for-Owners.pdf",
         "https://www.attheraces.com/course-guides/York"
       ],
       "status": "verified course geometry",
       "paceBiasNumerical": null,
-      "drawBiasNumerical": null
+      "drawBiasNumerical": null,
+      "trackId": "york-turf",
+      "discipline": "Flat",
+      "terrainTags": [
+        "flat",
+        "galloping",
+        "long-straight",
+        "sweeping-turns"
+      ]
     },
     {
       "course": "Newmarket - Rowley Mile",
@@ -33,9 +40,38 @@
         "bias": "No numerical draw/pace effect assigned without same-day evidence"
       },
       "sourceUrls": [
-        "https://www.newmarketracingclub.com/racecourses/the-rowley-mile/"
+        "https://www.attheraces.com/course-guides/Newmarket"
       ],
       "status": "verified course geometry",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null,
+      "trackId": "newmarket-rowley",
+      "discipline": "Flat",
+      "terrainTags": [
+        "galloping",
+        "undulating",
+        "stiff-finish",
+        "long-straight",
+        "downhill"
+      ]
+    },
+    {
+      "course": "Newmarket - July Course",
+      "trackId": "newmarket-july",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "right-handed / straight",
+      "configuration": "Wide galloping Bunbury Mile with undulations, descent then rise; distinct from the Rowley Mile",
+      "terrainTags": [
+        "galloping",
+        "undulating",
+        "long-straight",
+        "downhill"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Newmarket"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
       "drawBiasNumerical": null
     },
@@ -43,35 +79,271 @@
       "course": "Chepstow",
       "surface": "Turf",
       "direction": "left-handed",
-      "configuration": "Undulating near-2-mile oval; Flat straight course and obstacle configuration separate",
+      "configuration": "Chepstow Flat: undulating course; 1m and shorter use straight route; long demanding home stretch",
       "homeStraightFurlongsApprox": 5,
       "details": {
         "flat": "Long run-in over undulating terrain; 1m and shorter on the straight course",
         "jumps": "Eleven fences per complete circuit, five in straight; pronounced undulations and potentially testing going"
       },
       "sourceUrls": [
-        "https://www.attheraces.com/course-guides/Chepstow",
-        "https://www.racingtv.com/racecourses/uk/chepstow"
+        "https://www.attheraces.com/course-guides/Chepstow"
       ],
       "status": "verified course geometry",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null,
+      "trackId": "chepstow-flat",
+      "discipline": "Flat",
+      "terrainTags": [
+        "undulating",
+        "stiff-finish",
+        "long-straight"
+      ]
+    },
+    {
+      "course": "Chepstow",
+      "trackId": "chepstow-jumps",
+      "discipline": "Jumps",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Undulating oval with 11 fences per circuit and a downhill run from the final obstacle",
+      "terrainTags": [
+        "undulating",
+        "downhill",
+        "long-straight"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Chepstow"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
       "drawBiasNumerical": null
     },
     {
       "course": "Kempton - All Weather",
+      "trackId": "kempton-aw-inner",
+      "discipline": "Flat",
       "surface": "Polytrack",
       "direction": "right-handed",
-      "configuration": "Two loops: sharp inner for 5f / 9f / 10f; sweeping outer for 6f to 1m",
-      "homeStraightFurlongsApprox": null,
-      "details": {
-        "inner": "Sharp inner with shorter run-in just under 2f",
-        "outer": "Sweeping turn and near 3f straight",
-        "going": "Surface preparation/conditions affect pace and draw; do not treat as fixed bias"
-      },
+      "configuration": "Inner AW circuit for 5f, 9f and 10f; sharp with under 2f run-in",
+      "terrainTags": [
+        "flat",
+        "sharp",
+        "tight-turns",
+        "short-straight"
+      ],
       "sourceUrls": [
         "https://www.attheraces.com/course-guides/Kempton"
       ],
-      "status": "verified course geometry",
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Kempton - All Weather",
+      "trackId": "kempton-aw-outer",
+      "discipline": "Flat",
+      "surface": "Polytrack",
+      "direction": "right-handed",
+      "configuration": "Outer AW circuit for 6f to 8f; sweeping turns and nearly 3f run-in",
+      "terrainTags": [
+        "flat",
+        "sweeping-turns"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Kempton"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Kempton",
+      "trackId": "kempton-jumps",
+      "discipline": "Jumps",
+      "surface": "Turf",
+      "direction": "right-handed",
+      "configuration": "Right-handed jumping circuit; short run-in from final turn to last obstacle",
+      "terrainTags": [
+        "flat",
+        "short-straight"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Kempton"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Doncaster",
+      "trackId": "doncaster-flat",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Essentially level wide galloping course; straight sprint-to-mile and separate round mile start",
+      "terrainTags": [
+        "flat",
+        "galloping",
+        "long-straight",
+        "sweeping-turns"
+      ],
+      "sourceUrls": [
+        "https://m.attheraces.com/festivals/leger/course-guide"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Doncaster",
+      "trackId": "doncaster-jumps",
+      "discipline": "Jumps",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Flat, quick-draining galloping obstacle course",
+      "terrainTags": [
+        "flat",
+        "galloping"
+      ],
+      "sourceUrls": [
+        "https://m.attheraces.com/festivals/leger/course-guide"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Sandown",
+      "trackId": "sandown-flat",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "right-handed",
+      "configuration": "Right-handed galloping course with stamina-demanding uphill straight; separate rising 5f straight",
+      "terrainTags": [
+        "galloping",
+        "stiff-finish",
+        "long-straight"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Sandown"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Sandown",
+      "trackId": "sandown-jumps",
+      "discipline": "Jumps",
+      "surface": "Turf",
+      "direction": "right-handed",
+      "configuration": "Right-handed galloping jumps track with seven back-straight fences",
+      "terrainTags": [
+        "galloping",
+        "stiff-finish"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Sandown"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Goodwood",
+      "trackId": "goodwood-flat",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "right-handed",
+      "configuration": "Right-handed undulating sharp circuit with pronounced downhill section; distance-dependent bends",
+      "terrainTags": [
+        "undulating",
+        "sharp",
+        "downhill",
+        "tight-turns"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Goodwood"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Chester",
+      "trackId": "chester-flat",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Very sharp left-handed circular course with frequent turns and under 2f run-in",
+      "terrainTags": [
+        "flat",
+        "sharp",
+        "tight-turns",
+        "short-straight"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Chester"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Ascot",
+      "trackId": "ascot-flat",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "right-handed",
+      "configuration": "Round galloping right-handed triangular course and separate straight mile; Swinley Bottom descent",
+      "terrainTags": [
+        "galloping",
+        "sweeping-turns",
+        "downhill"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Ascot"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Ascot",
+      "trackId": "ascot-jumps",
+      "discipline": "Jumps",
+      "surface": "Turf",
+      "direction": "right-handed",
+      "configuration": "Right-handed galloping NH course with relatively stiff fences and descent",
+      "terrainTags": [
+        "galloping",
+        "downhill"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Ascot"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
+      "paceBiasNumerical": null,
+      "drawBiasNumerical": null
+    },
+    {
+      "course": "Brighton",
+      "trackId": "brighton-flat",
+      "discipline": "Flat",
+      "surface": "Turf",
+      "direction": "left-handed",
+      "configuration": "Sharp U-shaped course with pronounced gradients, downhill descent then uphill finish",
+      "terrainTags": [
+        "sharp",
+        "undulating",
+        "downhill",
+        "stiff-finish",
+        "tight-turns"
+      ],
+      "sourceUrls": [
+        "https://www.attheraces.com/course-guides/Brighton"
+      ],
+      "status": "verified geometry; descriptive terrain labels only",
       "paceBiasNumerical": null,
       "drawBiasNumerical": null
     }
