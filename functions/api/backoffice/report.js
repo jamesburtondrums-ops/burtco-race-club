@@ -49,8 +49,8 @@ export async function onRequestGet({request,env}){
       lastReviewedAt:manualRaceTimeEvidence.lastReviewedAt,
       caseStudies:(manualRaceTimeEvidence.examples||[]).map(x=>({
        race:x.race,selectedHorse:x.selectedHorse,rivalHorse:x.rivalHorse,
-       analysis:analyseFurlongTrail({horse:x.selectedHorse,race:x.race,measurements:x.observations.find(y=>y.horse===x.selectedHorse),positionFinish:2}),
-       opponent:analyseFurlongTrail({horse:x.rivalHorse,race:x.race,measurements:x.observations.find(y=>y.horse===x.rivalHorse),positionFinish:1}),
+       analysis:analyseFurlongTrail({horse:x.selectedHorse,race:x.race,measurements:x.observations.find(y=>y.horse===x.selectedHorse),positionFinish:x.observations.find(y=>y.horse===x.selectedHorse)?.position}),
+       opponent:analyseFurlongTrail({horse:x.rivalHorse,race:x.race,measurements:x.observations.find(y=>y.horse===x.rivalHorse),positionFinish:x.observations.find(y=>y.horse===x.rivalHorse)?.position}),
        comparison:compareClosing({runner:x.observations.find(y=>y.horse===x.selectedHorse),leader:x.observations.find(y=>y.horse===x.rivalHorse),race:x.race}),
        interpretation:x.qualitativeVerdict,
        verification:'Manually cited public result; observed after this tip sheet was locked. No backdated selection confidence changes.'
