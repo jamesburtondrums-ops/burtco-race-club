@@ -1,3 +1,4 @@
+import {assessWinConfidence,publicSummary,positivePoints} from './selection-quality.mjs';
 const state={data:null,ledger:null,live:null,liveSerial:"",view:"today",filter:"ALL",serial:"",refreshing:false,refreshMessage:"",refreshCheckedAt:null,search:null,searchError:"",webConfirmed:{},searchCheckedAt:null};
 const val=v=>v===undefined||v===null||v===""?"—":v;
 const contextOf=x=>x.v42||x.v41||null;
@@ -306,7 +307,7 @@ function nav(){const upcoming=state.data?.snapshotDate>new Date().toLocaleDateSt
 function filters(){const x=["ALL","PRIME","STRONG","CONDITIONAL","WATCH"];return '<div class="meeting-tabs">'+x.map(f=>'<button data-filter="'+f+'" class="'+(state.filter===f?'active':'')+'">'+f+'</button>').join("")+'</div>'}
 function resultBadge(x){const r=resultInfo(x);return r?'<span class="result-badge '+r.cls+'">'+r.text+'</span>':''}
 function summaryBadges(x,type){
- if(type==="main"){const p=probabilityOf(x);return (x.restoredFromPreviousVersion?'<span class="selection-tier restored">EARLIER PICK</span>':'')+'<span class="selection-tier '+(primeOf(x)?'prime':x.tier==='STRONG'?'strong':x.tier==='WATCH'?'watch':'')+'">'+confidenceLabel(x)+'</span>'+(p!==null?'<span class="probability">'+Number(p).toFixed(1)+'%</span>':'')}
+ if(type==="main")return '<span class="selection-tier strong">DATA-QUALIFIED WIN</span>';
  if(type==="mid")return '<span class="selection-tier mid">'+(x.view||"MID-SHOT")+'</span>';
  return '<span class="selection-tier long">'+(x.placeView||"E/W")+'</span>';
 }
@@ -324,7 +325,10 @@ function commonDetails(x){
 }
 function selectionRow(x,type){
  const k=keyOf(x,type), isMain=type==="main";
- const intro=isMain?(x.reason||""):(x.reason||"");
+ const intro=publicSummary(x);
+ const points=positivePoints(x);
+ const brief='<div class="selection-brief"><p>'+escapeHtml(intro)+'</p>'+
+   (points.length?'<ul class="selection-positives">'+points.map(p=>'<li>'+escapeHtml(p)+'</li>').join('')+'</ul>':'')+'</div>';
  const risk=x.risk||"—";
  const special=type==="mid"?'<div class="ew-view"><strong>'+val(x.view)+'</strong><small>'+val(x.terms)+'</small></div>':type==="long"?'<div class="ew-view"><strong>'+val(x.placeView)+'</strong><small>'+val(x.terms)+'</small></div>':'';
  const typeStars=type==="mid"&&x.midStars?stars(x.midStars):type==="long"&&x.ewStars?stars(x.ewStars):'';
@@ -339,11 +343,10 @@ function selectionRow(x,type){
    '<div class="selection-main"><div class="selection-name-line"><strong>'+val(x.horse)+'</strong>'+summaryBadges(x,type)+'</div><span>'+val(x.course)+'</span></div>'+
    '<div class="selection-odds"><span>'+(x.currentOdds?'Morning range':'Quoted odds')+'</span><strong>'+val(x.currentOdds||x.odds)+'</strong></div>'+
    '<div class="selection-result">'+resultBadge(x)+'</div>'+
-   '<div class="selection-chevron">⌄</div>'+
+   '<div class="selection-chevron">⌄</div>'+brief+
  '</summary><div class="selection-details">'+betLine+typeStars+special+commonDetails(x)+
    (x.confidenceTier?'<div class="selection-confidence-note"><strong>Confidence assessment</strong><span>'+escapeHtml(x.confidenceTier)+'</span></div>':'')+
-   '<div class="detail-copy"><strong>'+(type==="long"?'Why it can outrun the price':type==="mid"?'Why it can win / place':'Decision')+'</strong><p>'+intro+'</p></div>'+
-   '<div class="detail-risk"><strong>Risk</strong><p>'+risk+'</p></div>'+
+   '<div class="detail-risk"><strong>Points to monitor</strong><p>'+escapeHtml(risk)+'</p></div>'+
    (x.currentOdds&&x.currentOdds!==x.odds?'<div class="source-line">Original recorded price: '+val(x.odds)+' · Morning reference price: '+val(x.currentOdds)+'</div>':'')+
    '<div class="source-line">Source: '+val(x.source)+(x.result?.sourceUrl?' · <a target="_blank" rel="noopener noreferrer" href="'+x.result.sourceUrl+'">Verify result ↗</a>':'')+'</div>'+
  '</div></details>';
@@ -358,9 +361,17 @@ function morningCheckPanel(){
  '<small>Morning selections are conditional: late non-runners, changing ground and bookmaker odds can alter suitability. Market strength is not a guaranteed win percentage.</small></section>';
 }
 function today(){
- const d=state.data;
- const picks=(d.todaySelections||[]).filter(x=>{const label=confidenceLabel(x);if(state.filter==="ALL")return true;if(state.filter==="WATCH")return label==="WATCH"||label==="RECHECK";return label===state.filter});
- return '<section class="page-intro"><div><div class="eyebrow">'+String(d.snapshotDate||"").toUpperCase()+' · GB + IRE</div><h2>'+(d.snapshotDate>new Date().toLocaleDateString('en-CA',{timeZone:'Europe/London'})?'Tomorrow\'s':'Today\'s')+' selections</h2><p>Selections are listed strictly by race time. Tap any runner to open the full reasoning, ratings, context and risk.</p></div><div class="quick-stats"><span><b>'+val(d.coverage?.meetings)+'</b> meetings</span><span><b>'+val(d.coverage?.races)+'</b> races screened</span><span><b>'+val((d.todaySelections||[]).length+(d.midshotsToday||[]).length+(d.longshotsToday||[]).length)+'</b> total selections</span><span><b>'+(d.todaySelections||[]).filter(primeOf).length+'</b> PRIME</span></div></section>'+morningCheckPanel()+filters()+listBlock(picks,"main","No selections match this filter.");
+ const d=state.data,all=d.todaySelections||[];
+ // Price, market favouritism and historic STRONG badges NEVER qualify a WIN pick.
+ const vetted=all.filter(x=>assessWinConfidence(x).qualified);
+ const picks=vetted;
+ const underReview=all.length-vetted.length;
+ return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(String(d.snapshotDate||"").toUpperCase())+' · GB + IRE</div>'+
+  '<h2>High-confidence WIN selections</h2>'+
+  '<p>Only runners passing a documented, pre-race review of ability, recent form, conditions, fitness and opposition are shown. Odds do not influence race confidence.</p></div>'+
+  '<div class="quick-stats"><span><b>'+val(d.coverage?.races)+'</b> races screened</span>'+
+  '<span><b>'+vetted.length+'</b> WIN qualified</span><span><b>'+underReview+'</b> not qualified</span></div></section>'+
+  listBlock(picks,'main','No runners currently meet the high-confidence WIN standard. Previously recorded paper WIN selections remain in Results history; they have not been retrospectively erased or settled differently.');
 }
 function midshots(){const d=state.data,ms=d.midshotsToday||[];return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> candidates</span><span><b>6/1–18/1</b> price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No mid-shot selections currently qualify.")}
 function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section class="page-intro long-intro"><div><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ls.length+'</b> candidates</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No longshots currently qualify.")}
