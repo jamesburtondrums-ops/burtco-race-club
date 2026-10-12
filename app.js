@@ -229,8 +229,11 @@ function lucky15LegEligible(leg){
  return strictlyAbove&&!withdrawn;
 }
 function lucky15Page(){
+ const research=state.data?.latestResearchLucky15;
+ const newResearchLine=research?'<div class="panel" style="margin-bottom:16px"><h3>Latest research Lucky 15</h3><p>'+research.legs.map(escapeHtml).join(' · ')+'</p><small>'+escapeHtml(research.status)+' The ticket displayed below is the previously recorded paper ticket, retained for audit.</small></div>':'';
+
  const ticket=(state.ledger?.lucky15Tickets||[]).find(t=>t.date===state.data?.snapshotDate);
- if(!ticket)return '<div class="panel">No Lucky 15 prepared for this racecard.</div>';
+ if(!ticket)return newResearchLine+'<div class="panel">No Lucky 15 prepared for this racecard.</div>';
  const x=lucky15Calc(ticket);
  const allPricesEligible=x.legs.length===4&&x.legs.every(lucky15LegEligible);
  const validationText=allPricesEligible?'4 of 4 legs strictly above 11/2 at their recorded reference prices':
@@ -365,6 +368,10 @@ function today(){
  const d=state.data,all=d.todaySelections||[];
  // Price, market favouritism and historic STRONG badges NEVER qualify a WIN pick.
  const vetted=all.filter(x=>assessWinConfidence(x).qualified);
+ const nominations=(d.winNominations||[]).map(n=>{const x=[...all,...(d.midshotsToday||[])].find(p=>p.horse===n.horse&&p.course===n.course&&p.time===n.time);
+ return '<div class="panel" style="margin:0 0 12px;padding:17px"><div class="eyebrow">'+escapeHtml(n.label)+' · RESEARCH NOMINATION</div><h3 style="margin:6px 0">'+escapeHtml(n.horse)+' — '+escapeHtml(n.time)+' '+escapeHtml(n.course)+(x?' · '+escapeHtml(x.odds):'')+'</h3><p>'+escapeHtml(n.rationale)+'</p><small>Editorial ranking only — has not passed the complete independently sourced high-confidence WIN gate.</small></div>';
+ }).join('');
+ const nominationsSection=nominations?'<section style="margin-bottom:20px"><h3>Today\'s NAP &amp; NB</h3><p>Ranked on historical form, handicap position and race fit — never on favouritism or price. These remain research nominations until the separate WIN evidence gate is complete.</p>'+nominations+'</section>':'';
  const picks=vetted;
  const underReview=all.length-vetted.length;
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(String(d.snapshotDate||"").toUpperCase())+' · GB + IRE</div>'+
@@ -372,7 +379,7 @@ function today(){
   '<p>Only runners passing a documented, pre-race review of ability, recent form, conditions, fitness and opposition are shown. Odds do not influence race confidence.</p></div>'+
   '<div class="quick-stats"><span><b>'+val(d.coverage?.races)+'</b> races screened</span>'+
   '<span><b>'+vetted.length+'</b> WIN qualified</span><span><b>'+underReview+'</b> not qualified</span></div></section>'+
-  listBlock(picks,'main','No runners currently meet the high-confidence WIN standard. Previously recorded paper WIN selections remain in Results history; they have not been retrospectively erased or settled differently.');
+  nominationsSection+listBlock(picks,'main','No runners currently meet the high-confidence WIN standard. Previously recorded paper WIN selections remain in Results history; they have not been retrospectively erased or settled differently.');
 }
 function midshots(){const d=state.data,ms=d.midshotsToday||[];return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> candidates</span><span><b>6/1–18/1</b> price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No mid-shot selections currently qualify.")}
 function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section class="page-intro long-intro"><div><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ls.length+'</b> candidates</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No longshots currently qualify.")}
