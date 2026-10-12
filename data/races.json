@@ -8,7 +8,9 @@
     "scope": "Six GB+Irish racecard meetings reviewed for declared fields; focused trainer placement, published form/track and market analysis for 10 choices. Full-field sectionals and probability model not connected.",
     "publishedDate": "2026-10-12",
     "selectedIndividuals": 10,
-    "focus": "Trainer race placement, actual course/distance and surface, race conditions, opponents and contemporary early quotes; no fabricated measured bias"
+    "focus": "Trainer race placement, actual course/distance and surface, race conditions, opponents and contemporary early quotes; no fabricated measured bias",
+    "qualifiedWins": 0,
+    "winConfidenceMethod": "Data only; no odds-based confidence"
   },
   "meetings": [
     {
@@ -129,7 +131,13 @@
       },
       "or": 85,
       "ts": 79,
-      "rpr": 94
+      "rpr": 94,
+      "summary": "Her previous Musselburgh form and drop in class give Samra Green a credible chance of being competitive over seven furlongs.",
+      "positivePoints": [
+        "Runner-up at Musselburgh over a mile",
+        "Drops from Class 2 into Class 3",
+        "Karl Burke's cited course record, with Clifford Lee booked"
+      ]
     },
     {
       "horse": "Teoest",
@@ -185,7 +193,13 @@
             "detail": "15/8 early book quote; not SP, not a guaranteed bookmaker offer"
           }
         ]
-      }
+      },
+      "summary": "Teoest returns to Roscommon with strengthened maiden form, and the drop in trip offers a plausible route to improvement.",
+      "positivePoints": [
+        "Previously fourth at Roscommon over 1m4f",
+        "Listowel second behind a horse that won again",
+        "Colin Keane booked for Jim Bolger"
+      ]
     },
     {
       "horse": "Kykorock",
@@ -241,7 +255,13 @@
             "detail": "6/4 early book quote; not SP, not a guaranteed bookmaker offer"
           }
         ]
-      }
+      },
+      "summary": "Kykorock brings a productive chasing record to this Class 4 contest and races from a mark only modestly above his latest winning one.",
+      "positivePoints": [
+        "Won three of four chase starts last campaign",
+        "Recorded chasing wins at three different tracks",
+        "Returns to a shorter chase distance"
+      ]
     },
     {
       "horse": "Koffee And Kale",
@@ -297,7 +317,13 @@
             "detail": "2/1 early book quote; not SP, not a guaranteed bookmaker offer"
           }
         ]
-      }
+      },
+      "summary": "Koffee And Kale has recently gone close twice, including at Yarmouth, giving a solid recent-form foundation for this Class 5 contest.",
+      "positivePoints": [
+        "Two close recent runner-up finishes",
+        "Has already shown competitive form at Yarmouth",
+        "Proven recent ability to finish close to the winner"
+      ]
     },
     {
       "horse": "Ned Broy",
@@ -353,7 +379,13 @@
             "detail": "11/4 early book quote; not SP, not a guaranteed bookmaker offer"
           }
         ]
-      }
+      },
+      "summary": "Ned Broy arrives after a staying win at Newcastle and carries a useful rider allowance into another long-distance contest.",
+      "positivePoints": [
+        "Won last time over approximately two miles",
+        "Has recently demonstrated staying ability",
+        "Jack Nicholls claims 3lb"
+      ]
     },
     {
       "horse": "Sailor's Return",
@@ -421,7 +453,13 @@
         "topSpeedMph": 39.11,
         "read": "Late sustained acceleration shown in the last 2f (+0.51s versus winner), not just an unlucky second; strong ground-specific form but requires matching pace today.",
         "guard": "Research obtained after the original paper quote was frozen; not the basis of the original selection."
-      }
+      },
+      "summary": "A narrow defeat over today's Newcastle course and distance, backed by a recent all-weather win, makes Sailor's Return an interesting form contender.",
+      "positivePoints": [
+        "Neck second over today's Newcastle mile",
+        "All-weather winner at Southwell in August",
+        "Daniel Tudhope booked for David O'Meara"
+      ]
     }
   ],
   "midshotsToday": [
@@ -484,7 +522,13 @@
       "midStars": 0,
       "ewFraction": 0.25,
       "terms": "11 declared; paper book: top 3 at 1/4 odds (bookmaker terms may vary)",
-      "placeView": "TOP-THREE POTENTIAL UNVERIFIED"
+      "placeView": "TOP-THREE POTENTIAL UNVERIFIED",
+      "summary": "A Good Yarn's improved Curragh form on testing ground offers an each-way case as the horse steps up in trip at Roscommon.",
+      "positivePoints": [
+        "Third at the Curragh on heavy ground",
+        "Improved finishing position after an absence",
+        "Recent evidence of handling testing turf"
+      ]
     },
     {
       "horse": "I'm Workin On It",
@@ -545,7 +589,13 @@
       "midStars": 0,
       "ewFraction": 0.25,
       "terms": "14 declared; paper book: top 3 at 1/4 odds (bookmaker terms may vary)",
-      "placeView": "TOP-THREE POTENTIAL UNVERIFIED"
+      "placeView": "TOP-THREE POTENTIAL UNVERIFIED",
+      "summary": "Previous competitive runs over Kempton's mile make I'm Workin On It a plausible each-way contender in another course-and-distance handicap.",
+      "positivePoints": [
+        "Twice fourth at Kempton over a mile this year",
+        "Has won multiple races during career",
+        "Competitive in larger-field handicaps"
+      ]
     },
     {
       "horse": "Bellagio Man",
@@ -607,7 +657,13 @@
       "midStars": 0,
       "ewFraction": 0.25,
       "terms": "12 declared; paper book: top 3 at 1/4 odds (bookmaker terms may vary)",
-      "placeView": "TOP-THREE POTENTIAL UNVERIFIED"
+      "placeView": "TOP-THREE POTENTIAL UNVERIFIED",
+      "summary": "Bellagio Man returns to a proven Newcastle sprint course and distance from a mark below his previous winning handicap level.",
+      "positivePoints": [
+        "Proven Newcastle course-and-distance winner",
+        "Official mark below his previous winning handicap mark",
+        "Experienced over Newcastle's straight six furlongs"
+      ]
     },
     {
       "horse": "Flowstate",
@@ -682,18 +738,26 @@
         "topSpeedRank": "11 of 11",
         "read": "Failed to finish strongly in recent C&D contest; 0.94s slower last two furlongs than winner. Downgrade confidence until there is fresher independent evidence.",
         "guard": "Review discovered after published selection. Original quoted early price, paper stakes and Lucky15 leg remain frozen for honest tracking."
-      }
+      },
+      "summary": "Flowstate's previous Newcastle seven-furlong wins and familiar course conditions provide a track-specialist each-way case.",
+      "positivePoints": [
+        "Multiple previous wins at Newcastle over seven furlongs",
+        "Current handicap mark close to an earlier winning mark",
+        "Extensive experience of Newcastle's all-weather layout"
+      ]
     }
   ],
   "longshotsToday": [],
   "lucky15Only": [],
   "selectionPolicy": {
-    "avoidOddsOn": true,
-    "minimumWinOdds": "1/1",
+    "avoidOddsOn": false,
+    "minimumWinOdds": null,
     "winCandidates": 6,
     "ewCandidates": 4,
     "numLongshots": 0,
-    "rationale": "No arbitrary quantity minimum; 6 individually researched win candidates plus 4 conditional midshot each-way candidates. Evidence does not yet calibrate winning chances. Historical trainer intentions and race-specific sectionals are unverified."
+    "rationale": "Six previously published paper WIN candidates retained for audit. None has the complete structured, independently sourced and timestamped WIN qualification required by the new public confidence gate. Four separate each-way research candidates remain published. No number of selections is forced.",
+    "qualifiedWinCandidates": 0,
+    "winQualificationRule": "Evidence-led pre-publication confirmation of ability/class, recent form, course/going/trip and rivals, supported by verified fitness and connections. Betting odds, favourite status, market rank and existing qualitative STRONG badges are not inputs. Unreviewed WIN candidates stay out of the featured category; historical paper bets remain immutable."
   },
   "midshotsPolicy": {
     "minOdds": "6/1",
