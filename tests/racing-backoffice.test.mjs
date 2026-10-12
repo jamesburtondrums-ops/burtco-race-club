@@ -26,7 +26,8 @@ assert.equal(settleEntry(heat).returns,22.5,'Backoffice individual paper payout 
 assert.ok(history.days.length>=2,'Snapshots persisted outside public assets');
 assert.ok(history.tuningLog.some(e=>e.key==='min-odds'),'Odds floor recorded in system change log');
 assert.ok(history.tuningLog.some(e=>e.key==='lucky15-price'),'Strict Lucky15 price history recorded');
-assert.ok(tuningNotes(races).length>=4,'Current source rules produce a tuning register');
+assert.ok(tuningNotes(races).length>=3,'Current source rules produce a tuning register');
+assert.ok(!tuningNotes(races).some(e=>e.key==='min-odds'),'WIN eligibility no longer depends on an odds floor');
 assert.equal(settleEntry({winStake:10,placeStake:0,betType:'win',result:{status:'NR'}}).returns,10,'NR refund');
 assert.equal(settleTicket({totalStake:30,stakePerLinePerSide:1,legs:Array.from({length:4},()=>({result:{status:'NR'}}))}).returns,30,'Void Lucky15 returns original stake');
 // Authentication tests use fake values. Production access secrets never appear in the repo.
