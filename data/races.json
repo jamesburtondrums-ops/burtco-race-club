@@ -1,11 +1,11 @@
 {
   "snapshotDate": "2026-10-12",
   "verifiedAt": "2026-10-11T23:33:24.491Z",
-  "mode": "MONDAY 12 OCTOBER · market-gap research refreshed · NAP/NB provisional, no invented WIN qualification",
+  "mode": "12 OCTOBER 2026 · verified corrections · remaining selections provisional",
   "coverage": {
     "meetings": 6,
     "races": 47,
-    "scope": "Six GB+Irish racecard meetings reviewed for declared fields; focused trainer placement, published form/track and market analysis for 10 choices. Full-field sectionals and probability model not connected.",
+    "scope": "47 scheduled races identified. Published individual selections partially cross-verified; full historical data of every declared runner across every race has NOT been audited. Avoid complete-coverage accuracy claims.",
     "publishedDate": "2026-10-12",
     "selectedIndividuals": 10,
     "focus": "Trainer race placement, actual course/distance and surface, race conditions, opponents and contemporary early quotes; no fabricated measured bias",
@@ -476,14 +476,14 @@
         "ONLY SIX CAREER RUNS, LEAVING SCOPE FOR IMPRO",
         "PROVEN ON TODAY'S TAPETA SURFACE"
       ],
-      "reason": "Lightly raced three-year-old who improved to win at Newcastle ten days ago and can progress again off a 4lb higher mark.",
-      "summary": "Lightly raced three-year-old who improved to win at Newcastle ten days ago and can progress again off a 4lb higher mark.",
+      "reason": "Won over 7f at Newcastle ten days ago off OR54 and returns off OR58 over a longer one-mile trip; the improvement is credible, but stamina for today's new trip is not yet proved.",
+      "summary": "Won over 7f at Newcastle ten days ago off OR54 and returns off OR58 over a longer one-mile trip; the improvement is credible, but stamina for today's new trip is not yet proved.",
       "positivePoints": [
-        "Won at Newcastle last time over seven furlongs",
-        "Only six career runs, leaving scope for improvement",
-        "Proven on today's Tapeta surface"
+        "Won Newcastle 7f ten days ago off OR54",
+        "Lightly raced, now OR58 after a 4lb rise",
+        "Daniel Tudhope and David O'Meara remain the connections"
       ],
-      "risk": "Steps up from 7f to 1m; opposing pace and stamina at the new trip remain to be assessed.",
+      "risk": "Today's 1m5y is longer than her 7f win; 4lb rating rise, fourteen-runner field and untested mile stamina temper NAP confidence.",
       "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
       "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-12/newcastle/live-show/943002/download-the-racecourse-app-raceday-ready-handicap",
       "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
@@ -513,7 +513,8 @@
             "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
           }
         ]
-      }
+      },
+      "or": 58
     }
   ],
   "midshotsToday": [
@@ -806,8 +807,8 @@
       "time": "20:00",
       "odds": "15/2",
       "runnerCount": 13,
-      "trainer": "",
-      "jockey": "",
+      "trainer": "David O'Meara",
+      "jockey": "Daniel Tudhope",
       "tier": "WATCH",
       "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
       "tags": [
@@ -815,14 +816,14 @@
         "RACES TODAY OFF OR68",
         "RECENT RUNS INCLUDE TROUBLE IN RUNNING"
       ],
-      "reason": "Back below a previous Newcastle-winning handicap mark, with recent interference making his finishing figures less persuasive than his underlying ability.",
-      "summary": "Back below a previous Newcastle-winning handicap mark, with recent interference making his finishing figures less persuasive than his underlying ability.",
+      "reason": "Won Newcastle's straight mile in June 2026 from OR70 and is now OR68, but today's 7f race is a drop in trip, not a repeat of his successful course-and-distance conditions.",
+      "summary": "Won Newcastle's straight mile in June 2026 from OR70 and is now OR68, but today's 7f race is a drop in trip, not a repeat of his successful course-and-distance conditions.",
       "positivePoints": [
-        "Newcastle Class 5 winner off OR70 in June",
-        "Races today off OR68",
-        "Recent runs include trouble in running"
+        "Won Newcastle 1m, 2 June 2026, from OR70",
+        "Current rating OR68, 2lb below winning mark",
+        "Daniel Tudhope rides for David O'Meara"
       ],
-      "risk": "Requires clear passage in a competitive 7f handicap; price and chance remain provisional.",
+      "risk": "June win was at 1m, whereas today's race is 7f14y. Last run seventh; recent form and dropping distance remain genuine doubts.",
       "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
       "sourceUrl": "https://www.racingtv.com/racecards/2026-10-12/newcastle/2000",
       "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
@@ -835,22 +836,22 @@
         "isPrime": false,
         "raceType": "Published racecard",
         "priceLabel": "REFERENCE PRICE · 15/2",
-        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextSummary": "Two pounds below proven Newcastle mile winning mark; seven-furlong suitability is not proved by that victory.",
         "contextFactors": [
           {
-            "name": "Historic form",
-            "status": "RESEARCH",
-            "detail": "Back below a previous Newcastle-winning handicap mark, with recent interference making his finishing figures less persuasive than his underlying ability."
+            "name": "Past result",
+            "status": "VERIFIED",
+            "detail": "Newcastle mile Class 5, 2 June 2026, won off OR70"
           },
           {
-            "name": "Race-specific reservations",
-            "status": "CHECK",
-            "detail": "Requires clear passage in a competitive 7f handicap; price and chance remain provisional."
+            "name": "Today's change",
+            "status": "RISK",
+            "detail": "Newcastle 7f14y, OR68, not same distance"
           },
           {
-            "name": "WIN qualification",
-            "status": "NOT VERIFIED",
-            "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
+            "name": "Current form",
+            "status": "CAUTION",
+            "detail": "Latest seventh; drop in trip must work"
           }
         ]
       }
@@ -861,8 +862,8 @@
       "time": "15:17",
       "odds": "8/1",
       "runnerCount": 14,
-      "trainer": "",
-      "jockey": "",
+      "trainer": "R Mike Smith",
+      "jockey": "Zak Wheatley",
       "tier": "WATCH",
       "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
       "tags": [
@@ -870,12 +871,12 @@
         "TWO CONSECUTIVE RECENT SECOND PLACES",
         "HANDICAP RATING AROUND OR47"
       ],
-      "reason": "Three previous course-and-distance victories and successive runner-up finishes give her a stronger Musselburgh profile than the general market might imply.",
-      "summary": "Three previous course-and-distance victories and successive runner-up finishes give her a stronger Musselburgh profile than the general market might imply.",
+      "reason": "Three wins from 19 previous starts over today's Musselburgh course and distance and two recent second places support her case at the track, though her strike rate should not be mistaken for certainty.",
+      "summary": "Three wins from 19 previous starts over today's Musselburgh course and distance and two recent second places support her case at the track, though her strike rate should not be mistaken for certainty.",
       "positivePoints": [
-        "Three course-and-distance wins",
-        "Two consecutive recent second places",
-        "Handicap rating around OR47"
+        "Three wins from 19 Musselburgh course-and-distance outings",
+        "Recent form ends in two seconds",
+        "OR47 in today's 5f1y Class 6"
       ],
       "risk": "Race pace and ground suitability need checking against today's rivals.",
       "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
@@ -907,15 +908,16 @@
             "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
           }
         ]
-      }
+      },
+      "or": 47
     },
     {
       "horse": "Earls",
       "course": "Roscommon",
       "time": "14:00",
       "odds": "9/1",
-      "trainer": "",
-      "jockey": "",
+      "trainer": "Gavin Cromwell",
+      "jockey": "Jack Kearney (3lb claim)",
       "tier": "WATCH",
       "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
       "tags": [
@@ -923,16 +925,16 @@
         "WON OVER THIS TRIP ON SOFT LAST YEAR",
         "NOW 4LB BELOW HIS LAST WINNING MARK"
       ],
-      "reason": "Three previous Roscommon wins and a mark below his last successful rating make him a credible course-specific value candidate.",
-      "summary": "Three previous Roscommon wins and a mark below his last successful rating make him a credible course-specific value candidate.",
+      "reason": "Three-time Roscommon winner competing today off OR72 with Jack Kearney claiming 3lb; proven course form, although recent form 223709 is a significant warning.",
+      "summary": "Three-time Roscommon winner competing today off OR72 with Jack Kearney claiming 3lb; proven course form, although recent form 223709 is a significant warning.",
       "positivePoints": [
-        "Three previous Roscommon wins",
-        "Won over this trip on soft last year",
-        "Now 4lb below his last winning mark"
+        "Three previous wins at Roscommon",
+        "Today's C&D confirmed on racecard",
+        "OR72; 3lb apprentice Jack Kearney"
       ],
-      "risk": "A repeat depends on retaining past ability and getting the intended ground/pace.",
+      "risk": "Recent finishing sequence 2-2-3-7-0-9; course record alone does not establish a positive current-form edge.",
       "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
-      "sourceUrl": "https://www.timeform.com/horse-racing/odds/roscommon/2026-10-12/1400/223/2",
+      "sourceUrl": "https://www.racingpost.com/racecards/196/roscommon/2026-10-12/930776/",
       "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
       "priceCheckedAt": "2026-10-12T07:29:48.004Z",
       "view": "VALUE / HANDICAP ANGLE",
@@ -942,7 +944,7 @@
         "isPrime": false,
         "raceType": "Published racecard",
         "priceLabel": "REFERENCE PRICE · 9/1",
-        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextSummary": "Proven Roscommon specialist but weak latest results demand caution; no verified calibrated market gap.",
         "contextFactors": [
           {
             "name": "Historic form",
@@ -960,7 +962,8 @@
             "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
           }
         ]
-      }
+      },
+      "or": 72
     },
     {
       "horse": "Macedonian",
@@ -971,22 +974,23 @@
       "trainer": "Michael Dods",
       "jockey": "Rhys Elliott (5lb claim)",
       "tier": "WATCH",
-      "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
+      "confidenceTier": "SPECULATIVE VALUE WATCH · NOT A CONFIDENT WIN",
       "tags": [
-        "WON FROM OR70; NOW RACES FROM OR55",
-        "5LB APPRENTICE ALLOWANCE",
-        "RECENT AYR SECOND SUPPORTS RETAINED ABILITY"
+        "2025 LAST WIN",
+        "1 WIN / 21 RUNS",
+        "OR55 TODAY",
+        "COURSE 0/3"
       ],
-      "reason": "He has previously won from a mark fifteen pounds higher and showed retained ability when runner-up at Ayr in August.",
-      "summary": "He has previously won from a mark fifteen pounds higher and showed retained ability when runner-up at Ayr in August.",
+      "reason": "Just one career win, at Kempton on 5 March 2025 off OR70; now OR55 after a long losing sequence. A second at Ayr in August 2026 offers limited evidence of retained ability, but two subsequent eighths make this an uncertain 16/1 handicap chance.",
+      "summary": "Just one career win, at Kempton on 5 March 2025 off OR70; now OR55 after a long losing sequence. A second at Ayr in August 2026 offers limited evidence of retained ability, but two subsequent eighths make this an uncertain 16/1 handicap chance.",
       "positivePoints": [
-        "Won from OR70; now races from OR55",
-        "5lb apprentice allowance",
-        "Recent Ayr second supports retained ability"
+        "Sole victory: Kempton, 5 March 2025 (6f, OR70)",
+        "Today's Newcastle 6f rating OR55, 15lb lower",
+        "Second at Ayr in August 2026; no win since March 2025"
       ],
-      "risk": "Last two outings were eighth; returning to Newcastle Tapeta presents an unproven transfer.",
-      "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
-      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-12/newcastle/racecard/943004/free-digital-racecard-at-raceday-readycom-handicap",
+      "risk": "Only 1 win in 21 Flat starts; Newcastle 0 wins from 3, two recent eighth-place finishes, different trainer since sole victory. A lower mark alone does not establish value.",
+      "source": "Racing Post 5 Mar 2025 Kempton full result; Newcastle 12 Oct 2026 racecard; horse career statistics",
+      "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-12/928666/",
       "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
       "priceCheckedAt": "2026-10-12T07:29:48.004Z",
       "view": "VALUE / HANDICAP ANGLE",
@@ -996,24 +1000,36 @@
         "isPrime": false,
         "raceType": "Published racecard",
         "priceLabel": "REFERENCE PRICE · 16/1",
-        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextSummary": "Sole career win was in March 2025, NOT 2026. High uncertainty; not a validated price discrepancy.",
         "contextFactors": [
           {
-            "name": "Historic form",
-            "status": "RESEARCH",
-            "detail": "He has previously won from a mark fifteen pounds higher and showed retained ability when runner-up at Ayr in August."
+            "name": "Last win",
+            "status": "VERIFIED",
+            "detail": "5 March 2025, Kempton 6f, OR70. Only career win."
           },
           {
-            "name": "Race-specific reservations",
-            "status": "CHECK",
-            "detail": "Last two outings were eighth; returning to Newcastle Tapeta presents an unproven transfer."
+            "name": "Today",
+            "status": "VERIFIED",
+            "detail": "12 Oct 2026, Newcastle 6f, OR55, Rhys Elliott (5), Michael Dods."
           },
           {
-            "name": "WIN qualification",
-            "status": "NOT VERIFIED",
-            "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
+            "name": "Downside",
+            "status": "MATERIAL",
+            "detail": "0/3 Newcastle, 1/21 career, last two eighth. Lower handicap mark is not by itself sufficient evidence."
           }
         ]
+      },
+      "historicalFormCheck": {
+        "lastWinDate": "2025-03-05",
+        "lastWinCourse": "Kempton",
+        "lastWinDistance": "6f",
+        "lastWinOR": 70,
+        "currentOR": 55,
+        "careerWins": 1,
+        "careerStarts": 21,
+        "newcastleWins": 0,
+        "newcastleStarts": 3,
+        "confirmedFrom": "https://www.racingpost.com/results/1079/kempton-aw/2025-03-05/887442/"
       }
     }
   ],
@@ -1023,7 +1039,7 @@
       "course": "Roscommon",
       "time": "15:00",
       "odds": "20/1",
-      "trainer": "",
+      "trainer": "Aengus King",
       "jockey": "Jessica O'Gorman (7lb claim)",
       "tier": "WATCH",
       "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
@@ -1041,7 +1057,7 @@
       ],
       "risk": "Poor recent form and a 4lb higher official mark remain substantial reservations.",
       "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
-      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-12/roscommon/racecard/943152/roscommon-racecourse-on-facebook-handicap-0-60-div-2",
+      "sourceUrl": "https://www.racingpost.com/racecards/196/roscommon/2026-10-12/930922/",
       "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
       "priceCheckedAt": "2026-10-12T07:29:48.004Z",
       "placeView": "SPECULATIVE E/W",
@@ -1069,7 +1085,8 @@
             "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
           }
         ]
-      }
+      },
+      "or": 58
     },
     {
       "horse": "Imola",
@@ -1086,16 +1103,16 @@
         "BACK AROUND A PREVIOUSLY SUCCESSFUL RATING",
         "RECENT SOUTHWELL RUN MAY BE BETTER THAN FINIS"
       ],
-      "reason": "A multiple all-weather winner earlier this year has slipped in the ratings and offers a speculative bounce-back case at a large price.",
-      "summary": "A multiple all-weather winner earlier this year has slipped in the ratings and offers a speculative bounce-back case at a large price.",
+      "reason": "Won twice at Wolverhampton in February and June 2026, but has since finished 4th, 6th, 11th and 12th; returns today off OR62 with a speculative turnaround required.",
+      "summary": "Won twice at Wolverhampton in February and June 2026, but has since finished 4th, 6th, 11th and 12th; returns today off OR62 with a speculative turnaround required.",
       "positivePoints": [
-        "Three all-weather victories earlier in 2026",
-        "Back around a previously successful rating",
-        "Recent Southwell run may be better than finishing position"
+        "Won at Wolverhampton on 17 February and 1 June 2026",
+        "Three career AW wins from 31 Flat starts",
+        "Current OR62; 0 wins from 3 previous Newcastle starts"
       ],
-      "risk": "Substantial recent form concerns make this a speculative outsider, not a confident win candidate.",
+      "risk": "Four runs without a win, including 11th and 12th on latest two; no Newcastle win in three starts, and recent form is not strong.",
       "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
-      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-12/newcastle/live-show/943002/download-the-racecourse-app-raceday-ready-handicap",
+      "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-12/928670/",
       "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
       "priceCheckedAt": "2026-10-12T07:29:48.004Z",
       "placeView": "SPECULATIVE E/W",
@@ -1105,7 +1122,7 @@
         "isPrime": false,
         "raceType": "Published racecard",
         "priceLabel": "REFERENCE PRICE · 33/1",
-        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextSummary": "Two 2026 wins are genuine, but strong current-form concerns make this strictly speculative.",
         "contextFactors": [
           {
             "name": "Historic form",
@@ -1123,7 +1140,8 @@
             "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
           }
         ]
-      }
+      },
+      "or": 62
     }
   ],
   "lucky15Only": [],
@@ -1236,15 +1254,15 @@
       "time": "19:30",
       "label": "NAP",
       "status": "RESEARCH NOMINATION — NOT DATA-QUALIFIED WIN",
-      "rationale": "Lightly raced three-year-old who improved to win at Newcastle ten days ago and can progress again off a 4lb higher mark."
+      "rationale": "Won over 7f at Newcastle ten days ago off OR54 and returns off OR58 over a longer one-mile trip; the improvement is credible, but stamina for today's new trip is not yet proved."
     },
     {
       "horse": "Criminal Shore",
       "course": "Newcastle",
       "time": "20:00",
       "label": "NB",
-      "status": "RESEARCH NOMINATION — NOT DATA-QUALIFIED WIN",
-      "rationale": "Back below a previous Newcastle-winning handicap mark, with recent interference making his finishing figures less persuasive than his underlying ability."
+      "status": "RESEARCH NOMINATION WITH TRIP WARNING — NOT DATA-QUALIFIED WIN",
+      "rationale": "Won Newcastle's straight mile in June 2026 from OR70 and is now OR68, but today's 7f race is a drop in trip, not a repeat of his successful course-and-distance conditions."
     }
   ],
   "latestResearchLucky15": {
@@ -1255,13 +1273,21 @@
       "Criminal Shore",
       "Macedonian"
     ],
-    "status": "Updated research combination only; not yet placed in the historical paper-bet ledger.",
+    "status": "Research combination only; Macedonian has only one career win (5 March 2025), is 0/3 at Newcastle, and has two eighth-place finishes since his Ayr second. Treat all legs as tentative, not verified value. No paper bet recorded.",
     "minimumPrice": "Over 11/2 per horse",
     "reviewedAt": "2026-10-12T07:29:48.004Z"
   },
   "researchSelectionUpdate": {
-    "reviewedAt": "2026-10-12T07:29:48.004Z",
-    "source": "12 October published racecards; horse-history market-gap comparison",
-    "note": "NAP/NB are editorial rankings; not a certificate of structured high-confidence WIN qualification. Previous settled paper betting records left unchanged."
+    "reviewedAt": "2026-10-12T07:33:57.839Z",
+    "status": "PARTIAL_VERIFICATION_AND_CORRECTIONS",
+    "note": "Independent official racecards and full results cross-checked for Macedonian, Criminal Shore, Ice Show, Ski Angel, Earls, La Tulipe Noire and Imola. Other published legacy candidates still require horse-by-horse historical validation. No claims of complete full-field verification.",
+    "corrections": [
+      "Macedonian sole win 5 Mar 2025, not recent or 2026; career 1/21, Newcastle 0/3",
+      "Criminal Shore June 2026 victory over 1m, today 7f",
+      "Ice Show seven-furlong latest win, today's race one mile",
+      "Ski Angel 3 C&D wins from 19, OR47, 14 runners",
+      "Earls OR72, Jack Kearney (3), recent form weak",
+      "Imola won Feb and June 2026, but last two finishes 11th and 12th"
+    ]
   }
 }
