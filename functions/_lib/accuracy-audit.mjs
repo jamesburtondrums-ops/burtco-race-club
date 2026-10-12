@@ -41,7 +41,7 @@ export function auditSelectionEvidence(racecard={}){
   if(!selfNotes(pick))flags.push('Missing written case or counterargument');
   const classText=String(pick.v42?.raceType||pick.v41?.raceType||'');
   if(!classText)flags.push('Class, trip or race type not structured');
-  if(/\bhandicap\b/i.test(classText)&&!Number.isFinite(Number(pick.or)))flags.push('Handicap OR missing');
+  if(/\bhandicap\b/i.test(classText)&&(pick.or===null||pick.or===undefined||pick.or===''||!Number.isFinite(Number(pick.or))))flags.push('Handicap OR missing');
   const independentNotes=pricedNotes(pick,date);
   const priorRuns=historicRuns(pick,date);
   if(!priorRuns)flags.push('No independently sourced, dated prior-run records attached');
