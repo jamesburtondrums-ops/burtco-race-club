@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
+import {assessWinConfidence,publicSummary,positivePoints} from '../selection-quality.mjs';
 
 const load=file=>JSON.parse(readFileSync(new URL('../'+file,import.meta.url),'utf8'));
 const source=readFileSync(new URL('../app.js',import.meta.url),'utf8');
@@ -10,10 +11,12 @@ const archived09=load('data/archive/2026-10-09-ledger.json');
 const archived09Card=load('data/archive/2026-10-09-races.json');
 const element={innerHTML:''};
 const document={querySelector:s=>s==='#app'?element:null,querySelectorAll:()=>[]};
-const sandbox={document,console,fetch:async()=>{throw Error('Network calls disabled in tests')}};
-const boot=source.indexOf('\nload(true).then(loadLive);');
+const sandbox={document,console,assessWinConfidence,publicSummary,positivePoints,fetch:async()=>{throw Error('Network calls disabled in tests')}};
+const isolatedSource=source.replace(/^import \{assessWinConfidence,publicSummary,positivePoints\} from '\.\/selection-quality\.mjs';\n/,'');
+assert.notEqual(isolatedSource,source,'App imports shared, odds-independent WIN gate');
+const boot=isolatedSource.indexOf('\nload(true).then(loadLive);');
 assert.ok(boot>0,'Frontend boot exists');
-const app=vm.runInNewContext(source.slice(0,boot)+'\n;({state,settlement,trackerStats,exoticSummary,lucky15Calc,render})',sandbox);
+const app=vm.runInNewContext(isolatedSource.slice(0,boot)+'\n;({state,settlement,trackerStats,exoticSummary,lucky15Calc,render})',sandbox);
 app.state.data=racing;app.state.ledger=ledger;
 assert.equal(ledger.startingBank,1000,'£1,000 original paper bank retained');
 assert.equal(archived08.entries.length,23,'8 October archived');
@@ -131,9 +134,13 @@ if(racing.snapshotDate==='2026-10-10'){
  assert.equal((element.innerHTML.match(/See all declared runners/g)||[]).length,7,'Seven current meeting cards');
 }
 if(racing.snapshotDate==='2026-10-12'){
- assert.match(element.innerHTML,/Samra Green/,'Monday main selection visible');
+ assert.doesNotMatch(element.innerHTML,/Samra Green/,'Past qualitative STRONG labels do not qualify an unverified WIN pick');
+ assert.match(element.innerHTML,/No runners currently meet the high-confidence WIN standard/,'No forced winners when evidence is insufficient');
+ assert.match(element.innerHTML,/0<\/b> WIN qualified/,'WIN screen accurately reports number that pass the data gate');
  app.state.view='midshots';app.render();
  assert.match(element.innerHTML,/I'm Workin On It/,'Monday E/W selection visible');
+ assert.match(element.innerHTML,/selection-positives/,'Positive supporting points visible without opening full details');
+ assert.match(element.innerHTML,/Twice fourth at Kempton/,'Simple evidence bullets preserved');
  app.state.view='lucky15';app.render();
  assert.match(element.innerHTML,/Flowstate/,'Monday Lucky15 leg shown');
  assert.match(element.innerHTML,/4 of 4 legs strictly above 11\/2/,'All Monday lucky prices pass strict floor');
