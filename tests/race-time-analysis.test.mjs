@@ -69,5 +69,6 @@ assert.equal(evidence.usage.includes('no automated scrape'),true,'Single curated
 const api=readFileSync(new URL('../functions/api/backoffice/report.js',import.meta.url),'utf8');
 assert.match(api,/raceTimeResearch/);
 const html=readFileSync(new URL('../backoffice.js',import.meta.url),'utf8');
-assert.match(html,/Horse time & sectional research/);
+assert.doesNotMatch(html,/Horse time & sectional research/,'Sectionals remain archival research, not a prominent selection gate');
+assert.match(html,/Accuracy & freely available evidence/,'Back office prioritises measurable, accessible form evidence');
 console.log('PASS: official clock, runner measured total time, no guessed lengths-per-second, sourced furlong progression and closing comparison');
