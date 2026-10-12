@@ -6,17 +6,18 @@ const timestamp=value=>typeof value==='string'&&/(?:Z|[+-]\d{2}:\d{2})$/.test(va
 const fractional=value=>typeof value==='string'&&(/^(?:\d+(?:\.\d+)?\/\d+(?:\.\d+)?|evens?)$/i.test(value.trim()));
 const dateOf=value=>String(value||'').slice(0,10);
 const isPrior=(t,date)=>timestamp(t)&&dateOf(t)<=date;
+const capturedBeforeLock=(value,pick,date)=>isPrior(value,date)&&timestamp(pick.researchUpdatedAt)&&Date.parse(value)<=Date.parse(pick.researchUpdatedAt);
 const nonblank=value=>typeof value==='string'&&value.trim().length>0;
 const selfNotes=x=>[x.reason,x.risk].every(nonblank);
 function pricedNotes(x,date){
  return Array.isArray(x.sourceNotes)&&(x.sourceNotes||[]).filter(n=>
-  validUrl(n.sourceUrl)&&isPrior(n.observedAt,date)&&
-  isPrior(n.publishedAt,date)&&n.raceMatched===true).length||0;
+  validUrl(n.sourceUrl)&&capturedBeforeLock(n.observedAt,x,date)&&
+  capturedBeforeLock(n.publishedAt,x,date)&&n.raceMatched===true).length||0;
 }
 function historicRuns(x,date){
  return Array.isArray(x.verifiedPriorRuns)&&(x.verifiedPriorRuns||[]).filter(r=>
-   validUrl(r.sourceUrl)&&isPrior(r.observedAt,date)&&
-   isPrior(r.ranAt,date)&&r.finishStatus!==undefined).length||0;
+   validUrl(r.sourceUrl)&&capturedBeforeLock(r.observedAt,x,date)&&
+   capturedBeforeLock(r.ranAt,x,date)&&r.finishStatus!==undefined).length||0;
 }
 export const accuracyPriorities=[
  {name:'Ability, handicap & class',source:'BHA official ratings, free racecards, prior class and weights',method:'Use dated ratings and past performances from before the selection; review rivals and race value. A low mark by itself is not a positive.'},
