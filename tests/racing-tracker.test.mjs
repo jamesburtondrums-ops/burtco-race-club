@@ -144,6 +144,7 @@ if(racing.snapshotDate==='2026-10-12'){
  assert.match(element.innerHTML,/Twice fourth at Kempton/,'Simple evidence bullets preserved');
  app.state.view='lucky15';app.render();
  assert.match(element.innerHTML,/Flowstate/,'Monday Lucky15 leg shown');
+ assert.match(element.innerHTML,/Positive evidence for Flowstate/,'Lucky15 research uses concise evidence presentation');
  assert.match(element.innerHTML,/4 of 4 legs strictly above 11\/2/,'All Monday lucky prices pass strict floor');
  app.state.view='racecards';app.render();
  assert.equal((element.innerHTML.match(/See all declared runners/g)||[]).length,6);
