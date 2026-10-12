@@ -13,7 +13,8 @@ export function assessWinConfidence(pick){
  const publishedAt=pick.selectionPublishedAt||pick.earlyOddsLockedAt;
  if(!isTime(publishedAt)||!isTime(review.reviewedAt)||Date.parse(review.reviewedAt)>Date.parse(publishedAt))
   return fail('Evidence review was not frozen before the published selection');
- if((review.majorRisks||[]).length>0)return fail('Material unresolved concern recorded');
+ if(!Array.isArray(review.majorRisks))return fail('Unreviewed material risks');
+ if(review.majorRisks.length>0)return fail('Material unresolved concern recorded');
  for(const factorName of [...coreFactors,...supportFactors]){
   const factor=review.factors?.[factorName];
   if(!factor)return fail('Missing '+factorName+' evidence');
