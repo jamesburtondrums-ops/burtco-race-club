@@ -247,9 +247,10 @@ function lucky15Page(){
    '<small>'+escapeHtml(leg.course)+' · '+escapeHtml(leg.time)+' · '+placeCount+'</small>'+
    '<small class="'+(isNearPrime?'l15-near-prime':'l15-value')+'">'+escapeHtml(label)+'</small></div>'+
    '<div><strong>'+escapeHtml(leg.selectionOdds)+'</strong><small>'+result+'</small></div></div>'+
-   '<details class="l15-leg-research"><summary>Evidence and risks for '+escapeHtml(leg.horse)+'</summary>'+
-   '<p>'+escapeHtml(pick.reason||'Market and prior form reviewed; no win or place is guaranteed.')+'</p>'+
-   (pick.risk?'<p class="l15-leg-risk">Main risk: '+escapeHtml(pick.risk)+'</p>':'')+
+   '<details class="l15-leg-research"><summary>Positive evidence for '+escapeHtml(leg.horse)+'</summary>'+
+   '<p>'+escapeHtml(publicSummary(pick))+'</p>'+
+   '<ul class="selection-positives">'+positivePoints(pick).map(p=>'<li>'+escapeHtml(p)+'</li>').join('')+'</ul>'+
+   (pick.risk?'<details class="l15-review-risk"><summary>Points to monitor</summary><p class="l15-leg-risk">'+escapeHtml(pick.risk)+'</p></details>':'')+
    (pick.sourceUrl?'<a href="'+escapeHtml(pick.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Check published racecard and odds ↗</a>':'')+'</details>';
  }).join('');
  const checkedAt=ticket.updatedAt||state.data?.verifiedAt;
