@@ -38,6 +38,23 @@ The new private **accuracy-audit** scans published picks and reports which value
 ## What the existing deep research means
 The repository contains exploratory backtest output over 46,551 sampled races / 368,830 runners with walk-forward seasons. In its pooled unseen results, the model's **market-fusion top pick equals the SP-favourite baseline at 35.6% winners and -7.6% SP ROI**. The higher probability/PRIME subset contains many short-priced winners but remains negative ROI. The analysis depends on third-party Kaggle-derived archive and SP, so it is **not confirmation of early-price live-tips performance**, guaranteed access rights or a validated deployable predictor. No model-promotion claim until the above standards are met.
 
+## Strict WIN category — pure horse/race evidence, 12 October 2026
+
+A price is not a confidence score. Bookmaker favouritism, odds-on status, market rank, payout potential, and past qualitative "STRONG" labels are **excluded** from the WIN qualification algorithm. Odds remain visible separately for assessing betting value; the standalone Mid Shots and Longshots lists may still be price-oriented.
+
+Every new WIN selection must contain a `winAssessment` created *before* its frozen selection publication time. The assessment needs `decision: "high-confidence"`, `reviewedAt`, an explicit empty `majorRisks: []` after evaluating real risks, plus six dated evidence records in `factors`:
+
+- Core, each graded `strong`: `form`, `abilityClass`, `courseGoingTrip`, `opposition`.
+- Supporting, each graded `strong` or `supported`: `fitness`, `trainerJockey`.
+
+Every factor needs `finding` (specific supporting fact), `sourceUrl` (direct HTTPS evidence) and `checkedAt` (not later than `reviewedAt`). The assessment must be frozen no later than `selectionPublishedAt`, or the recorded initial `earlyOddsLockedAt` timestamp if a separate publication time is not supplied. That fallback is used only to prevent late justification; **neither the quoted odds nor market popularity contributes to qualification**.
+
+Failure of one core factor, an unverified support factor, an unreviewed major risk, missing provenance, or any post-publication review means **do not feature as a WIN selection**. Fewer than one (even zero) is legitimate. This is a conservative human-supported data gate, **not a statistically calibrated probability model**.
+
+Existing previously published WIN paper bets are retained in the immutable result ledger. They do not get silently removed, reclassified as each-way or retroactively re-graded. The public WIN shortlist hides them until an eligible pre-publication evidence assessment exists; Results history continues to show them. The live-updater still settles existing entries but refuses to create a fresh WIN paper bet without qualification.
+
+Display: each selection has one brief factual `summary` statement followed by up to four curated `positivePoints` visible at a glance. Longer risks and original supporting data stay available on expansion. The same concise format applies to Lucky 15 notes.
+
 ## Current implementation
 - `functions/_lib/accuracy-audit.mjs`: pure coverage checks of today's published picks and strict timestamping for manually attached research evidence.
 - `functions/api/backoffice/report.js`: authenticated report exposes coverage and priorities.
