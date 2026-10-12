@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import {assessWinConfidence} from '../selection-quality.mjs';
 
 const file = new URL('../data/races.json', import.meta.url);
 const data = JSON.parse(await fs.readFile(file, 'utf8'));
@@ -215,6 +216,10 @@ for (const { group, selection } of selections) {
   const betType = group === 'todaySelections' ? 'win' : 'each-way';
   const id = [data.snapshotDate, selection.course, selection.time, selection.horse, betType].join('|').toLowerCase();
   let entry = ledger.entries.find(e => e.id === id);
+  if (!entry && group === 'todaySelections' && !assessWinConfidence(selection).qualified) {
+    console.log('Skipping unqualified new WIN paper bet: '+selection.horse);
+    continue; // Historical logged entries are preserved and can still receive results.
+  }
   if (!entry) {
     entry = { id, date: data.snapshotDate, course: selection.course, time: selection.time,
       horse: selection.horse, betType, winStake: betType === 'win' ? 10 : 5,
