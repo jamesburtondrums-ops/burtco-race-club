@@ -1,7 +1,7 @@
 {
   "snapshotDate": "2026-10-12",
   "verifiedAt": "2026-10-11T23:33:24.491Z",
-  "mode": "MONDAY 12 OCTOBER · 10 conditional paper picks · 6 WIN / 4 E/W · no forced longshots",
+  "mode": "MONDAY 12 OCTOBER · market-gap research refreshed · NAP/NB provisional, no invented WIN qualification",
   "coverage": {
     "meetings": 6,
     "races": 47,
@@ -460,6 +460,60 @@
         "All-weather winner at Southwell in August",
         "Daniel Tudhope booked for David O'Meara"
       ]
+    },
+    {
+      "horse": "Ice Show",
+      "course": "Newcastle",
+      "time": "19:30",
+      "odds": "10/3",
+      "runnerCount": 14,
+      "trainer": "David O'Meara",
+      "jockey": "Daniel Tudhope",
+      "tier": "WATCH",
+      "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
+      "tags": [
+        "WON AT NEWCASTLE LAST TIME OVER SEVEN FURLONG",
+        "ONLY SIX CAREER RUNS, LEAVING SCOPE FOR IMPRO",
+        "PROVEN ON TODAY'S TAPETA SURFACE"
+      ],
+      "reason": "Lightly raced three-year-old who improved to win at Newcastle ten days ago and can progress again off a 4lb higher mark.",
+      "summary": "Lightly raced three-year-old who improved to win at Newcastle ten days ago and can progress again off a 4lb higher mark.",
+      "positivePoints": [
+        "Won at Newcastle last time over seven furlongs",
+        "Only six career runs, leaving scope for improvement",
+        "Proven on today's Tapeta surface"
+      ],
+      "risk": "Steps up from 7f to 1m; opposing pace and stamina at the new trip remain to be assessed.",
+      "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-12/newcastle/live-show/943002/download-the-racecourse-app-raceday-ready-handicap",
+      "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
+      "priceCheckedAt": "2026-10-12T07:29:48.004Z",
+      "winNomination": "NAP",
+      "terms": "Bookmaker place terms vary; verify available odds and paid places",
+      "earlyOddsLockedAt": "2026-10-12T07:29:48.004Z",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Published racecard",
+        "priceLabel": "REFERENCE PRICE · 10/3",
+        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextFactors": [
+          {
+            "name": "Historic form",
+            "status": "RESEARCH",
+            "detail": "Lightly raced three-year-old who improved to win at Newcastle ten days ago and can progress again off a 4lb higher mark."
+          },
+          {
+            "name": "Race-specific reservations",
+            "status": "CHECK",
+            "detail": "Steps up from 7f to 1m; opposing pace and stamina at the new trip remain to be assessed."
+          },
+          {
+            "name": "WIN qualification",
+            "status": "NOT VERIFIED",
+            "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
+          }
+        ]
+      }
     }
   ],
   "midshotsToday": [
@@ -745,9 +799,333 @@
         "Current handicap mark close to an earlier winning mark",
         "Extensive experience of Newcastle's all-weather layout"
       ]
+    },
+    {
+      "horse": "Criminal Shore",
+      "course": "Newcastle",
+      "time": "20:00",
+      "odds": "15/2",
+      "runnerCount": 13,
+      "trainer": "",
+      "jockey": "",
+      "tier": "WATCH",
+      "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
+      "tags": [
+        "NEWCASTLE CLASS 5 WINNER OFF OR70 IN JUNE",
+        "RACES TODAY OFF OR68",
+        "RECENT RUNS INCLUDE TROUBLE IN RUNNING"
+      ],
+      "reason": "Back below a previous Newcastle-winning handicap mark, with recent interference making his finishing figures less persuasive than his underlying ability.",
+      "summary": "Back below a previous Newcastle-winning handicap mark, with recent interference making his finishing figures less persuasive than his underlying ability.",
+      "positivePoints": [
+        "Newcastle Class 5 winner off OR70 in June",
+        "Races today off OR68",
+        "Recent runs include trouble in running"
+      ],
+      "risk": "Requires clear passage in a competitive 7f handicap; price and chance remain provisional.",
+      "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-12/newcastle/2000",
+      "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
+      "priceCheckedAt": "2026-10-12T07:29:48.004Z",
+      "winNomination": "NB",
+      "view": "VALUE / HANDICAP ANGLE",
+      "terms": "Bookmaker place terms vary; verify available odds and paid places",
+      "earlyOddsLockedAt": "2026-10-12T07:29:48.004Z",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Published racecard",
+        "priceLabel": "REFERENCE PRICE · 15/2",
+        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextFactors": [
+          {
+            "name": "Historic form",
+            "status": "RESEARCH",
+            "detail": "Back below a previous Newcastle-winning handicap mark, with recent interference making his finishing figures less persuasive than his underlying ability."
+          },
+          {
+            "name": "Race-specific reservations",
+            "status": "CHECK",
+            "detail": "Requires clear passage in a competitive 7f handicap; price and chance remain provisional."
+          },
+          {
+            "name": "WIN qualification",
+            "status": "NOT VERIFIED",
+            "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
+          }
+        ]
+      }
+    },
+    {
+      "horse": "Ski Angel",
+      "course": "Musselburgh",
+      "time": "15:17",
+      "odds": "8/1",
+      "runnerCount": 14,
+      "trainer": "",
+      "jockey": "",
+      "tier": "WATCH",
+      "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
+      "tags": [
+        "THREE COURSE-AND-DISTANCE WINS",
+        "TWO CONSECUTIVE RECENT SECOND PLACES",
+        "HANDICAP RATING AROUND OR47"
+      ],
+      "reason": "Three previous course-and-distance victories and successive runner-up finishes give her a stronger Musselburgh profile than the general market might imply.",
+      "summary": "Three previous course-and-distance victories and successive runner-up finishes give her a stronger Musselburgh profile than the general market might imply.",
+      "positivePoints": [
+        "Three course-and-distance wins",
+        "Two consecutive recent second places",
+        "Handicap rating around OR47"
+      ],
+      "risk": "Race pace and ground suitability need checking against today's rivals.",
+      "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
+      "sourceUrl": "https://www.racingpost.com/racecards/16/musselburgh/2026-10-12/928556/",
+      "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
+      "priceCheckedAt": "2026-10-12T07:29:48.004Z",
+      "view": "VALUE / HANDICAP ANGLE",
+      "terms": "Bookmaker place terms vary; verify available odds and paid places",
+      "earlyOddsLockedAt": "2026-10-12T07:29:48.004Z",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Published racecard",
+        "priceLabel": "REFERENCE PRICE · 8/1",
+        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextFactors": [
+          {
+            "name": "Historic form",
+            "status": "RESEARCH",
+            "detail": "Three previous course-and-distance victories and successive runner-up finishes give her a stronger Musselburgh profile than the general market might imply."
+          },
+          {
+            "name": "Race-specific reservations",
+            "status": "CHECK",
+            "detail": "Race pace and ground suitability need checking against today's rivals."
+          },
+          {
+            "name": "WIN qualification",
+            "status": "NOT VERIFIED",
+            "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
+          }
+        ]
+      }
+    },
+    {
+      "horse": "Earls",
+      "course": "Roscommon",
+      "time": "14:00",
+      "odds": "9/1",
+      "trainer": "",
+      "jockey": "",
+      "tier": "WATCH",
+      "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
+      "tags": [
+        "THREE PREVIOUS ROSCOMMON WINS",
+        "WON OVER THIS TRIP ON SOFT LAST YEAR",
+        "NOW 4LB BELOW HIS LAST WINNING MARK"
+      ],
+      "reason": "Three previous Roscommon wins and a mark below his last successful rating make him a credible course-specific value candidate.",
+      "summary": "Three previous Roscommon wins and a mark below his last successful rating make him a credible course-specific value candidate.",
+      "positivePoints": [
+        "Three previous Roscommon wins",
+        "Won over this trip on soft last year",
+        "Now 4lb below his last winning mark"
+      ],
+      "risk": "A repeat depends on retaining past ability and getting the intended ground/pace.",
+      "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
+      "sourceUrl": "https://www.timeform.com/horse-racing/odds/roscommon/2026-10-12/1400/223/2",
+      "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
+      "priceCheckedAt": "2026-10-12T07:29:48.004Z",
+      "view": "VALUE / HANDICAP ANGLE",
+      "terms": "Bookmaker place terms vary; verify available odds and paid places",
+      "earlyOddsLockedAt": "2026-10-12T07:29:48.004Z",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Published racecard",
+        "priceLabel": "REFERENCE PRICE · 9/1",
+        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextFactors": [
+          {
+            "name": "Historic form",
+            "status": "RESEARCH",
+            "detail": "Three previous Roscommon wins and a mark below his last successful rating make him a credible course-specific value candidate."
+          },
+          {
+            "name": "Race-specific reservations",
+            "status": "CHECK",
+            "detail": "A repeat depends on retaining past ability and getting the intended ground/pace."
+          },
+          {
+            "name": "WIN qualification",
+            "status": "NOT VERIFIED",
+            "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
+          }
+        ]
+      }
+    },
+    {
+      "horse": "Macedonian",
+      "course": "Newcastle",
+      "time": "20:30",
+      "odds": "16/1",
+      "runnerCount": 13,
+      "trainer": "Michael Dods",
+      "jockey": "Rhys Elliott (5lb claim)",
+      "tier": "WATCH",
+      "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
+      "tags": [
+        "WON FROM OR70; NOW RACES FROM OR55",
+        "5LB APPRENTICE ALLOWANCE",
+        "RECENT AYR SECOND SUPPORTS RETAINED ABILITY"
+      ],
+      "reason": "He has previously won from a mark fifteen pounds higher and showed retained ability when runner-up at Ayr in August.",
+      "summary": "He has previously won from a mark fifteen pounds higher and showed retained ability when runner-up at Ayr in August.",
+      "positivePoints": [
+        "Won from OR70; now races from OR55",
+        "5lb apprentice allowance",
+        "Recent Ayr second supports retained ability"
+      ],
+      "risk": "Last two outings were eighth; returning to Newcastle Tapeta presents an unproven transfer.",
+      "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-12/newcastle/racecard/943004/free-digital-racecard-at-raceday-readycom-handicap",
+      "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
+      "priceCheckedAt": "2026-10-12T07:29:48.004Z",
+      "view": "VALUE / HANDICAP ANGLE",
+      "terms": "Bookmaker place terms vary; verify available odds and paid places",
+      "earlyOddsLockedAt": "2026-10-12T07:29:48.004Z",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Published racecard",
+        "priceLabel": "REFERENCE PRICE · 16/1",
+        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextFactors": [
+          {
+            "name": "Historic form",
+            "status": "RESEARCH",
+            "detail": "He has previously won from a mark fifteen pounds higher and showed retained ability when runner-up at Ayr in August."
+          },
+          {
+            "name": "Race-specific reservations",
+            "status": "CHECK",
+            "detail": "Last two outings were eighth; returning to Newcastle Tapeta presents an unproven transfer."
+          },
+          {
+            "name": "WIN qualification",
+            "status": "NOT VERIFIED",
+            "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
+          }
+        ]
+      }
     }
   ],
-  "longshotsToday": [],
+  "longshotsToday": [
+    {
+      "horse": "La Tulipe Noire",
+      "course": "Roscommon",
+      "time": "15:00",
+      "odds": "20/1",
+      "trainer": "",
+      "jockey": "Jessica O'Gorman (7lb claim)",
+      "tier": "WATCH",
+      "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
+      "tags": [
+        "WON THIS RACE IN 2025",
+        "PROVEN ON ROSCOMMON'S TESTING TURF",
+        "7LB RIDER CLAIM OFFSETS TODAY'S HIGHER RATING"
+      ],
+      "reason": "Last year's winner of this exact Roscommon contest returns to the same course and trip under the same claiming rider.",
+      "summary": "Last year's winner of this exact Roscommon contest returns to the same course and trip under the same claiming rider.",
+      "positivePoints": [
+        "Won this race in 2025",
+        "Proven on Roscommon's testing turf",
+        "7lb rider claim offsets today's higher rating"
+      ],
+      "risk": "Poor recent form and a 4lb higher official mark remain substantial reservations.",
+      "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-12/roscommon/racecard/943152/roscommon-racecourse-on-facebook-handicap-0-60-div-2",
+      "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
+      "priceCheckedAt": "2026-10-12T07:29:48.004Z",
+      "placeView": "SPECULATIVE E/W",
+      "terms": "Bookmaker place terms vary; verify available odds and paid places",
+      "earlyOddsLockedAt": "2026-10-12T07:29:48.004Z",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Published racecard",
+        "priceLabel": "REFERENCE PRICE · 20/1",
+        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextFactors": [
+          {
+            "name": "Historic form",
+            "status": "RESEARCH",
+            "detail": "Last year's winner of this exact Roscommon contest returns to the same course and trip under the same claiming rider."
+          },
+          {
+            "name": "Race-specific reservations",
+            "status": "CHECK",
+            "detail": "Poor recent form and a 4lb higher official mark remain substantial reservations."
+          },
+          {
+            "name": "WIN qualification",
+            "status": "NOT VERIFIED",
+            "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
+          }
+        ]
+      }
+    },
+    {
+      "horse": "Imola",
+      "course": "Newcastle",
+      "time": "19:30",
+      "odds": "33/1",
+      "runnerCount": 14,
+      "trainer": "Joey Ramsden",
+      "jockey": "Tom Kiely-Marshall (3lb claim)",
+      "tier": "WATCH",
+      "confidenceTier": "RESEARCH SHORTLIST · NOT DATA-QUALIFIED WIN",
+      "tags": [
+        "THREE ALL-WEATHER VICTORIES EARLIER IN 2026",
+        "BACK AROUND A PREVIOUSLY SUCCESSFUL RATING",
+        "RECENT SOUTHWELL RUN MAY BE BETTER THAN FINIS"
+      ],
+      "reason": "A multiple all-weather winner earlier this year has slipped in the ratings and offers a speculative bounce-back case at a large price.",
+      "summary": "A multiple all-weather winner earlier this year has slipped in the ratings and offers a speculative bounce-back case at a large price.",
+      "positivePoints": [
+        "Three all-weather victories earlier in 2026",
+        "Back around a previously successful rating",
+        "Recent Southwell run may be better than finishing position"
+      ],
+      "risk": "Substantial recent form concerns make this a speculative outsider, not a confident win candidate.",
+      "source": "12 Oct 2026 published racecards and horse form; editorial working price snapshot",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-12/newcastle/live-show/943002/download-the-racecourse-app-raceday-ready-handicap",
+      "researchUpdatedAt": "2026-10-12T07:29:48.004Z",
+      "priceCheckedAt": "2026-10-12T07:29:48.004Z",
+      "placeView": "SPECULATIVE E/W",
+      "terms": "Bookmaker place terms vary; verify available odds and paid places",
+      "earlyOddsLockedAt": "2026-10-12T07:29:48.004Z",
+      "v42": {
+        "isPrime": false,
+        "raceType": "Published racecard",
+        "priceLabel": "REFERENCE PRICE · 33/1",
+        "contextSummary": "Editorial historical-form angle; structured WIN confidence gate has not been completed.",
+        "contextFactors": [
+          {
+            "name": "Historic form",
+            "status": "RESEARCH",
+            "detail": "A multiple all-weather winner earlier this year has slipped in the ratings and offers a speculative bounce-back case at a large price."
+          },
+          {
+            "name": "Race-specific reservations",
+            "status": "CHECK",
+            "detail": "Substantial recent form concerns make this a speculative outsider, not a confident win candidate."
+          },
+          {
+            "name": "WIN qualification",
+            "status": "NOT VERIFIED",
+            "detail": "No full pre-publication sourced factor assessment, so not a qualified WIN."
+          }
+        ]
+      }
+    }
+  ],
   "lucky15Only": [],
   "selectionPolicy": {
     "avoidOddsOn": false,
@@ -850,5 +1228,40 @@
       "https://www.racingtv.com/results/2026-10-01/newcastle/1830",
       "https://www.racingtv.com/results/2026-09-25/newcastle/1945"
     ]
+  },
+  "winNominations": [
+    {
+      "horse": "Ice Show",
+      "course": "Newcastle",
+      "time": "19:30",
+      "label": "NAP",
+      "status": "RESEARCH NOMINATION — NOT DATA-QUALIFIED WIN",
+      "rationale": "Lightly raced three-year-old who improved to win at Newcastle ten days ago and can progress again off a 4lb higher mark."
+    },
+    {
+      "horse": "Criminal Shore",
+      "course": "Newcastle",
+      "time": "20:00",
+      "label": "NB",
+      "status": "RESEARCH NOMINATION — NOT DATA-QUALIFIED WIN",
+      "rationale": "Back below a previous Newcastle-winning handicap mark, with recent interference making his finishing figures less persuasive than his underlying ability."
+    }
+  ],
+  "latestResearchLucky15": {
+    "date": "2026-10-12",
+    "legs": [
+      "Earls",
+      "Ski Angel",
+      "Criminal Shore",
+      "Macedonian"
+    ],
+    "status": "Updated research combination only; not yet placed in the historical paper-bet ledger.",
+    "minimumPrice": "Over 11/2 per horse",
+    "reviewedAt": "2026-10-12T07:29:48.004Z"
+  },
+  "researchSelectionUpdate": {
+    "reviewedAt": "2026-10-12T07:29:48.004Z",
+    "source": "12 October published racecards; horse-history market-gap comparison",
+    "note": "NAP/NB are editorial rankings; not a certificate of structured high-confidence WIN qualification. Previous settled paper betting records left unchanged."
   }
 }
