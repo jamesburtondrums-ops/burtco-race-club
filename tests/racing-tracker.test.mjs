@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 import {assessWinConfidence,publicSummary,positivePoints} from '../selection-quality.mjs';
+import './win-selection-quality.test.mjs';
 
 const load=file=>JSON.parse(readFileSync(new URL('../'+file,import.meta.url),'utf8'));
 const source=readFileSync(new URL('../app.js',import.meta.url),'utf8');
