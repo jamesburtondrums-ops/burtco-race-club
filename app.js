@@ -258,7 +258,7 @@ function lucky15Page(){
  }).join('');
  const checkedAt=ticket.updatedAt||state.data?.verifiedAt;
  const checked=checkedAt?new Date(checkedAt).toLocaleString('en-GB',{timeZone:'Europe/London',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'overnight';
- return '<section class="l15-panel"><div class="l15-heading"><div><div class="eyebrow">'+escapeHtml(new Date(ticket.date+"T12:00:00Z").toLocaleDateString("en-GB",{timeZone:"Europe/London",weekday:"long",day:"numeric",month:"long",year:"numeric"}).toUpperCase())+' · EARLY PRICE PAPER BET</div>'+
+ return newResearchLine+'<section class="l15-panel"><div class="l15-heading"><div><div class="eyebrow">'+escapeHtml(new Date(ticket.date+"T12:00:00Z").toLocaleDateString("en-GB",{timeZone:"Europe/London",weekday:"long",day:"numeric",month:"long",year:"numeric"}).toUpperCase())+' · EARLY PRICE PAPER BET</div>'+
  '<h2>Each-way Lucky 15</h2><p>Four separate races · 15 win combinations and 15 place combinations. Reviewed '+checked+'.</p></div><b>'+money(x.stake)+'</b></div>'+
  '<div class="l15-combinations"><span>4 singles</span><span>6 doubles</span><span>4 trebles</span><span>1 fourfold</span></div>'+
  '<div class="l15-price-rule '+(allPricesEligible?'l15-rule-ok':'l15-rule-warning')+'" role="status"><strong>Strict price floor: greater than 11/2</strong><span>'+validationText+'</span></div>'+
