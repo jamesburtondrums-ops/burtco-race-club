@@ -66,7 +66,7 @@ function render(report){
  const researchMetrics='<div class="research-metrics">'+[
   card('Historical races in database',String(coverage.sourcedHistoricalRaces??0),'Sourced full-field race histories, distinct race dates/times'),
   card('Run-style comments stored',String(coverage.withRunComments??0),'Tagged notes with attributable prior-race sources'),
-  card('Sectional datasets',String(coverage.withSectionals??0),'Furlong splits with publication rights'),
+  card('Historical official marks',String(coverage.withOfficialRatings??0),'Dated, permitted historical rating observations'),
   card('Selection outcomes retained',String(coverage.confirmedFinishedOutcomes??0),'Only observed results; not full-field validation data')
  ].join('')+'</div>';
  const audit=research.priceAudit||{},baselineRows=(audit.oddsBands||[]).map(row=>
@@ -77,7 +77,7 @@ function render(report){
   '<p>This is a descriptive check against raw market-implied chances, not a trained model. Bets without a clear saved price are excluded.</p>'+
   '<div class="table-scroll"><table><thead><tr><th>Quoted odds</th><th>Known picks</th><th>Wins</th><th>Strike</th><th>Market expected wins</th><th>Brier</th></tr></thead><tbody>'+baselineRows+'</tbody></table></div>'+
   '<small>'+esc(audit.conclusions||'No reliable accuracy conclusion yet')+'</small></div>';
- const signalRows=(research.factors||[]).map(f=>'<div class="research-factor"><strong>'+esc(f.name)+'</strong><small>'+esc(f.source)+'</small></div>').join('');
+ const signalRows=(research.factors||[]).filter(f=>!['sectionals'].includes(f.id)).map(f=>'<div class="research-factor"><strong>'+esc(f.name)+'</strong><small>'+esc(f.source)+'</small></div>').join('');
  const sources=(research.sources||[]).map(p=>'<a href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.title)+' ↗</a>').join('');
  const tracks=(research.tracks||[]).map(course=>'<details class="course-profile"><summary><strong>'+esc(course.course)+'</strong><small>'+esc(course.surface)+' · '+esc(course.configuration)+'</small></summary>'+
   '<div class="course-profile-body"><p><b>Track direction:</b> '+esc(course.direction)+'</p>'+
@@ -86,7 +86,7 @@ function render(report){
   (course.sourceUrls||[]).map(url=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Course source ↗</a>').join(' ')+'</div></details>').join('');
  const coursePanel='<div class="research-course-panel"><h3>Track-type profiles</h3><p>Course and distance are kept separate. No generic pace or draw bias is claimed without a comparable sample.</p><div class="course-profiles">'+tracks+'</div></div>';
  const researchPanel='<section class="sheet"><div class="section-title"><div><h2>Historical research laboratory</h2>'+
- '<p>Running style, track layout, handicap marks, race comments and sectional pace. Factor engineering runs in shadow mode until tested.</p></div></div>'+
+ '<p>Recent form, race class and value, handicap marks, course and ground, trainer/jockey records and early odds. Unverified signals remain in shadow mode.</p></div></div>'+
  researchMetrics+
  '<p class="research-readiness"><strong>'+(coverage.quantitativeRetrainReady?'Archive threshold met — evaluate prospectively':'Historical validation not yet ready')+'</strong><span>'+esc(validation.reason||'Require an independent chronological held-out test before changing predictions')+'</span></p>'+
  '<div class="research-factors">'+signalRows+'</div>'+
