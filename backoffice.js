@@ -150,30 +150,33 @@ function render(report){
   (extAuditRows||'<tr><td colspan="5">No published runners to compare.</td></tr>')+
   '</tbody></table></div></section>';
  
- const timings=research.raceTimeResearch||{},cases=timings.caseStudies||[];
- const clockPanels=cases.map(c=>{
-  const a=c.analysis||{},p=a.positions||{},pace=a.pace||{},cmp=c.comparison||{},clock=a.time||{},race=c.race||{};
-  const trail=(p.trail||[]).map(q=>'<span class="sectional-pos">'+esc(q.furlong)+'f <b>'+esc(ordinal(Number(q.position)))+'</b></span>').join('');
-  return '<article class="timing-case"><div class="timing-title"><h3>'+esc(c.selectedHorse)+' — '+esc(race.course)+' '+esc(race.raceTime)+'</h3>'+
-   '<small>'+esc(race.date)+' · '+esc(race.surface)+' · '+esc(race.going)+' · '+esc(race.distanceFurlongs.toFixed(2))+'f</small></div>'+
-   '<div class="timing-metrics">'+
-    '<div><small>Official race-winning time</small><b>'+esc(race.winningTimeSeconds)+'s</b></div>'+
-    '<div><small>Horse own measured time</small><b>'+esc(clock.seconds)+'s</b></div>'+
-    '<div><small>Finish and movement</small><b>'+esc(ordinal(p.endPosition))+' · '+(Number(p.positionsGained)>0?'+':'')+esc(p.positionsGained)+' places</b></div>'+
-    '<div><small>Closing speed / field rank</small><b>'+esc(pace.publishedFinishingSpeedPercent)+'% · #'+esc(pace.finishingSpeedRank)+'</b></div>'+
-    '<div><small>Peak speed / field rank</small><b>'+esc(pace.topSpeedMph)+' mph · #'+esc(pace.topSpeedRank)+'</b></div>'+
-    '<div><small>Last 2f vs winner</small><b>'+esc(cmp.horseClosingTime)+'s vs '+esc(cmp.rivalClosingTime)+'s</b></div>'+
-    '</div><div class="timing-positions">'+trail+'</div>'+
-    '<p class="research-disclaimer">'+esc(c.interpretation)+'</p>'+
-    '<p class="research-disclaimer"><b>Data timing:</b> '+esc(c.verification)+' Winner official '+esc(race.winningTimeSeconds)+'s vs tracker '+esc(c.opponent?.time?.seconds)+'s. No race-specific par FSP connected. Not a proven future speed rating.</p>'+
-    '<div class="research-sources"><a href="'+esc(race.sourceUrl)+'" target="_blank" rel="noopener noreferrer">View published result and sectionals ↗</a></div></article>';
- }).join('');
- const timingPanel='<section class="sheet"><div class="section-title"><div><h2>Horse time & sectional research</h2>'+
-  '<p>Individual finishing clocks, furlong-by-furlong running position and evidence of finishing effort, sourced from historic results.</p></div><span>MANUAL RESEARCH</span></div>'+
-  '<p class="research-readiness"><strong>Measured times first; margin-based estimates second</strong>'+
-  '<span>'+esc(timings.scope||'Manual timing verification')+'. Official winning time is not the individual time of every runner; winning time plus beaten lengths only gives a conditional approximation.</span></p>'+
-  (clockPanels||'<p>No independently verified past timing example yet.</p>')+'</section>';
-  $('report-content').innerHTML=cards+chart+table+changes+trainerPanel+timingPanel+externalPanel+researchPanel+standards;
+ const accuracy=research.accuracy||{},runners=accuracy.selections||[],priorities=accuracy.priorities||[];
+ const evidenceMetrics='<div class="research-metrics">'+[
+  card('Published selections audited',String(accuracy.selectedRunners??0),'Unique current-card runners across tip categories'),
+  card('Dated early prices',String(accuracy.exactDatedQuotes??0)+' / '+String(accuracy.selectedRunners??0),'Quoted and dated before or on the race date; not accepted bets'),
+  card('Direct racecard references',String(accuracy.racecardLinks??0)+' / '+String(accuracy.selectedRunners??0),'Linked factual race or odds sources'),
+  card('Dated historic-run evidence',String(accuracy.selectionsWithSourcedPriorRuns??0)+' / '+String(accuracy.selectedRunners??0),'Structured past-run records attached to each selection'),
+  card('Independent source notes',String(accuracy.selectionsWithIndependentNotes??0)+' / '+String(accuracy.selectedRunners??0),'Attributed, pre-race editorial/factual notes')
+ ].join('')+'</div>';
+ const priorityCards=priorities.map((p,i)=>'<article class="research-factor"><strong>'+(i+1)+'. '+esc(p.name)+'</strong><small>'+esc(p.source)+'</small><p>'+esc(p.method)+'</p></article>').join('');
+ const evidenceRows=runners.map(x=>'<tr><th scope="row">'+esc(x.horse)+'<small>'+esc(x.course)+' '+esc(x.time)+'</small></th>'+
+  '<td>'+esc(x.price)+'</td><td>'+(x.hasQuote?'Dated':'Unverified')+'</td>'+
+  '<td>'+(x.hasRacecardLink?'Linked':'Missing')+'</td>'+
+  '<td>'+esc(x.verifiedPriorRuns)+'</td>'+
+  '<td>'+esc(x.flags.length?x.flags.join(' · '):'Core fields documented; no accuracy uplift implied')+'</td></tr>').join('');
+ const accuracyPanel='<section class="sheet"><div class="section-title"><div><h2>Accuracy & freely available evidence</h2>'+
+  '<p>Start with the handicapper, trainer, jockey and opposition. Sectionals are optional and are not a qualification gate.</p></div>'+
+  '<span>'+esc(accuracy.snapshotDate||'No card')+'</span></div>'+
+  evidenceMetrics+
+  '<p class="research-readiness"><strong>Evidence coverage, not a prediction score</strong>'+
+  '<span>'+esc(accuracy.status||'No automated probability calibration')+'</span></p>'+
+  '<div class="research-factors">'+priorityCards+'</div>'+
+  '<h3>Selection quality control — missing evidence</h3>'+
+  '<div class="table-scroll"><table><thead><tr><th>Horse</th><th>Early price</th><th>Price captured</th><th>Racecard</th><th>Prior runs</th><th>Verification gaps</th></tr></thead>'+
+  '<tbody>'+(evidenceRows||'<tr><td colspan="6">No current selections.</td></tr>')+'</tbody></table></div>'+
+  '<p class="research-disclaimer">'+esc(accuracy.promotionRule||'No new predictor features before chronological held-out validation')+'</p>'+
+  '<p class="research-disclaimer">Public racecards are useful for human research. Free viewing does not imply permission to bulk copy, scrape or train on a publisher\'s content. Historical SP-based backtests are exploratory, not proof that the early-price tips beat the market.</p></section>';
+  $('report-content').innerHTML=cards+chart+table+changes+accuracyPanel+trainerPanel+externalPanel+researchPanel+standards;
  $('report-content').hidden=false;
  $('report-loading').hidden=true;
 }
