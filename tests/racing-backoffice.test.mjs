@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import './racing-accuracy-audit.test.mjs';
 import {readFileSync} from 'node:fs';
 import {webcrypto} from 'node:crypto';
 import {dailyReports,tuningNotes,settleEntry,settleTicket} from '../functions/_lib/backoffice-stats.mjs';
