@@ -9,6 +9,7 @@ import thirdPartyObservations from '../../_private/racing-third-party-observatio
 import {thirdPartyReport} from '../../_lib/third-party-research.mjs';
 import manualRaceTimeEvidence from '../../_private/racing-manual-sectionals-example.json';
 import {analyseFurlongTrail,compareClosing} from '../../_lib/race-time-analysis.mjs';
+import {auditSelectionEvidence} from '../../_lib/accuracy-audit.mjs';
 import {isAuthed,reply} from '../../_lib/backoffice-auth.mjs';
 import {dailyReports,tuningNotes} from '../../_lib/backoffice-stats.mjs';
 import {researchCoverage,chronologicalAssessment,historicalPriceAudit} from '../../_lib/race-research.mjs';
@@ -37,6 +38,7 @@ export async function onRequestGet({request,env}){
    overview:latest?.cumulative||null,daily:days,tuning:changes,archiveDays:(history.days||[]).length,
    research:{
     coverage:researchCoverage(ledger,historicalRuns.runs||[]),
+    accuracy:auditSelectionEvidence(race),
     factors:researchHistory.factors||[],
     sources:researchHistory.sources||[],
     validation:chronologicalAssessment(historicalRuns.runs||[]),
