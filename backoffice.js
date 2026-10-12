@@ -153,7 +153,7 @@ function render(report){
  const timings=research.raceTimeResearch||{},cases=timings.caseStudies||[];
  const clockPanels=cases.map(c=>{
   const a=c.analysis||{},p=a.positions||{},pace=a.pace||{},cmp=c.comparison||{},clock=a.time||{},race=c.race||{};
-  const trail=(p.trail||[]).map(q=>'<span class="sectional-pos">'+esc(q.furlong)+'f <b>'+escapeHtml(ordinal(Number(q.position)))+'</b></span>').join('');
+  const trail=(p.trail||[]).map(q=>'<span class="sectional-pos">'+esc(q.furlong)+'f <b>'+esc(ordinal(Number(q.position)))+'</b></span>').join('');
   return '<article class="timing-case"><div class="timing-title"><h3>'+esc(c.selectedHorse)+' — '+esc(race.course)+' '+esc(race.raceTime)+'</h3>'+
    '<small>'+esc(race.date)+' · '+esc(race.surface)+' · '+esc(race.going)+' · '+esc(race.distanceFurlongs.toFixed(2))+'f</small></div>'+
    '<div class="timing-metrics">'+
