@@ -408,7 +408,17 @@
       "view": "VALUE WATCH",
       "terms": "Check current odds and each-way place terms. No paper bet recorded.",
       "selectionPublishedAt": "2026-10-13T08:48:55.902Z",
-      "earlyOddsLockedAt": "2026-10-13T08:48:55.902Z"
+      "earlyOddsLockedAt": "2026-10-13T08:48:55.902Z",
+      "result": {
+        "position": 5,
+        "status": "Weighed in",
+        "sp": "22/1",
+        "source": "Sporting Life full results; corroborated by Racing Post",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/wolverhampton/943177/cavani-raceday-style-handicap",
+        "updatedAt": "2026-10-13T23:10:18.039Z"
+      },
+      "runnerCount": 11,
+      "placesPaid": 3
     }
   ],
   "longshotsToday": [
@@ -538,8 +548,8 @@
   "researchSelectionUpdate": {
     "reviewedAt": "2026-10-13T08:59:40.809Z",
     "status": "SINGLE_SELECTION_PER_RACE_CLEANUP",
-    "note": "Removed overlapping current-day research runners Hostility (Oviedo race), Bay Breeze and Spirit Of Jenny (Sargent Dennis race); no historical paper bets amended. One NAP/NB label per featured horse.",
-    "lastResultsCheckAt": "2026-10-13T15:09:17.802Z"
+    "note": "Removed overlapping current-day research runners Hostility (Oviedo race), Bay Breeze and Spirit Of Jenny (Sargent Dennis race); no historical paper bets amended. One NAP/NB label per featured horse. Charles Morin independently confirmed fifth at Wolverhampton, separate from unrecorded paper bets.",
+    "lastResultsCheckAt": "2026-10-13T23:10:18.039Z"
   },
   "selectionPresentation": {
     "rule": "ONE_SELECTION_PER_RACE",
@@ -608,21 +618,22 @@
     ]
   },
   "resultsLearning": {
-    "reviewedAt": "2026-10-13T15:09:17.802Z",
+    "reviewedAt": "2026-10-13T23:10:18.039Z",
     "conclusions": [
       "A last-time winner under matching going and trip was not over-discounted: King Of Persia converted despite stall 10.",
       "Donnie Azoff produced another placed run but a WIN-only paper single does not collect for second.",
       "Removed horses' placings show potential place-level signals that were filtered too heavily; retrospectively observing placings does not establish pre-race profitable value.",
       "Notimetotakeoff placed behind King Of Persia in the same race, so backing both would increase correlated exposure rather than add a new race opportunity.",
       "Fenlander and Dashing Dick both placed in the same Leicester 15:39 handicap according to the user; the one-runner-per-race rule should be assessed against each-way coverage rather than relaxed solely after results.",
-      "Sargent Dennis finished 9th of the 18-runner Leicester 6f handicap (user-reported). His recent Wolverhampton all-weather second did not translate into a place on good-to-soft Leicester turf; review surface/going transfer and competitive sprint field before promoting speculative outsiders."
+      "Sargent Dennis finished 9th of the 18-runner Leicester 6f handicap (user-reported). His recent Wolverhampton all-weather second did not translate into a place on good-to-soft Leicester turf; review surface/going transfer and competitive sprint field before promoting speculative outsiders.",
+      "Charles Morin finished 5th of 11 at Wolverhampton (22/1 SP, official result). Ran on inside final furlong without threatening the leaders after changing from turf to Tapeta; today's speculative midshot did not place under standard top-three paper terms. A previous staying win and recent turf third were insufficient to establish a positive surface-transfer edge."
     ],
     "caveat": "King Of Persia and Notimetotakeoff independently confirmed. Remaining finish/SP reports are user-supplied pending independently accessible result pages."
   },
   "resultVerification": {
-    "checkedAt": "2026-10-13T15:09:17.802Z",
-    "confirmedResults": 2,
+    "checkedAt": "2026-10-13T23:10:18.039Z",
+    "confirmedResults": 3,
     "userReportedResults": 4,
-    "scope": "King Of Persia verified and other outcome reports including Sargent Dennis 9th user supplied. Each has distinct provenance; no missing results invented."
+    "scope": "Charles Morin 5th/11 at Wolverhampton 20:30 with 22/1 official SP independently confirmed. Other user reports retain their existing verification status."
   }
 }
