@@ -1,9 +1,13 @@
 // Shared pure analytics. Used by Cloudflare Pages and scheduled GitHub checks.
 const number=v=>Number(v)||0;
+// 5/2 -> 3.5 total-return multiplier including original stake.
+// Favourite indicators (F/JF) are accepted; ambiguous ranges or forecasts are not.
 const price=s=>{
- const v=String(s||'').trim();if(/[–~]|\bforecast\b|\bbest\b|\bfrom\b/i.test(v))return null;
- const m=v.match(/^(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)(?:\s|$)/);
- return m&&Number(m[2])>0?1+Number(m[1])/Number(m[2]):/^evens?$/i.test(v)?2:null;
+ const v=String(s||'').trim();
+ if(!v||/[–~]|\bforecast\b|\bbest\b|\bfrom\b/i.test(v))return null;
+ const m=v.match(/^(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)(?:\s*(?:f|jf|fav|favourite|joint[- ]favourite))?$/i);
+ if(m){const n=Number(m[1]),d=Number(m[2]);return d>0&&Number.isFinite(n/d)?1+n/d:null}
+ return /^(?:evens?|evs)(?:\s*(?:f|jf|fav|favourite|joint[- ]favourite))?$/i.test(v)?2:null;
 };
 const position=e=>{
  const x=e.result?.position??e.result?.place;const n=Number(x);
@@ -25,34 +29,37 @@ export function settleEntry(entry){
  if(entry.betType==='each-way'&&(places!==null?pos>places:pos>3))return {status:'lost',returns:0};
  const odds=entry.priceBasis==='early'?price(entry.selectionOdds):price(entry.settlementOdds)||price(entry.selectionOdds);
  if(!odds)return {status:'unpriced',returns:0};
- if(entry.betType==='win')return {status:'won',returns:number(entry.winStake)*odds};
+ if(entry.betType==='win')return {status:'won',returns:fixed(number(entry.winStake)*odds)};
  if(!places)return {status:'unpriced',returns:0};
  const placed=pos<=places;
- return {status:pos===1?'won':placed?'placed':'lost',
- returns:(pos===1?number(entry.winStake)*odds:0)+(placed?number(entry.placeStake)*(1+(odds-1)*.25):0)};
+ const fraction=number(entry.ewFraction)>0?number(entry.ewFraction):0.25;
+ const winReturn=pos===1?fixed(number(entry.winStake)*odds):0;
+ const placeReturn=placed?fixed(number(entry.placeStake)*(1+(odds-1)*fraction)):0;
+ return {status:pos===1?'won':placed?'placed':'lost',returns:fixed(winReturn+placeReturn)};
 }
-function ticketLegValue(leg){
+function ticketLegValue(leg,ticket){
  const r=leg.result,status=String(r?.status||'').trim();
  if(!r)return {win:null,place:null};
  if(nr(status))return {win:1,place:1};
  const pos=position({result:r});
  const count=number(leg.runnerCount),places=count?(count<=4?1:count<=7?2:3):null;
- const odds=leg.priceBasis==='early'?price(leg.selectionOdds):price(leg.settlementOdds)||price(r?.sp)||price(leg.selectionOdds);
- if(pos>3)return {win:0,place:0};
- if(pos&&places&&odds)return {win:pos===1?odds:0,place:pos<=places?1+(odds-1)*.25:0};
+ const odds=(ticket.priceBasis==='early'||leg.priceBasis==='early')?price(leg.selectionOdds):price(leg.settlementOdds)||price(r?.sp)||price(leg.selectionOdds);
+ if(pos>3||(pos&&places&&pos>places))return {win:0,place:0};
+ if(pos&&places&&odds)return {win:pos===1?odds:0,place:pos<=places?1+(odds-1)*(number(ticket.eachWayFraction)||.25):0};
  if(dnf(status))return {win:0,place:0};
  return {win:null,place:null};
 }
 export function settleTicket(ticket){
- const stake=number(ticket.totalStake)||30,legs=(ticket.legs||[]).map(ticketLegValue);
+ const stake=number(ticket.totalStake)||30,legs=(ticket.legs||[]).map(leg=>ticketLegValue(leg,ticket));
  if(legs.length!==4||legs.some(x=>x.win===null||x.place===null))
   return {status:'open',stake,returns:0};
  let returns=0;
  for(let mask=1;mask<16;mask++){
   let win=1,place=1;for(let i=0;i<4;i++)if(mask&(1<<i)){win*=legs[i].win;place*=legs[i].place}
-  returns+=number(ticket.stakePerLinePerSide)*(win+place);
+  const unit=number(ticket.stakePerLinePerSide);
+  returns+=fixed(unit*win)+fixed(unit*place);
  }
- return {status:'settled',stake,returns};
+ return {status:'settled',stake,returns:fixed(returns)};
 }
 export function summarizeDay(ledger,date){
  const entries=(ledger.entries||[]).filter(x=>x.date===date);
