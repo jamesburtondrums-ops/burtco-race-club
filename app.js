@@ -352,7 +352,7 @@ function selectionRow(x,type){
    (x.confidenceTier?'<div class="selection-confidence-note"><strong>Confidence assessment</strong><span>'+escapeHtml(x.confidenceTier)+'</span></div>':'')+
    '<div class="detail-risk"><strong>Points to monitor</strong><p>'+escapeHtml(risk)+'</p></div>'+
    (x.currentOdds&&x.currentOdds!==x.odds?'<div class="source-line">Original recorded price: '+val(x.odds)+' · Morning reference price: '+val(x.currentOdds)+'</div>':'')+
-   '<div class="source-line">Source: '+val(x.source)+(x.result?.sourceUrl?' · <a target="_blank" rel="noopener noreferrer" href="'+x.result.sourceUrl+'">Verify result ↗</a>':'')+'</div>'+
+   '<div class="source-line">Source: '+escapeHtml(val(x.source))+(x.sourceUrl?' · <a target="_blank" rel="noopener noreferrer" href="'+escapeHtml(x.sourceUrl)+'">Verify racecard and form ↗</a>':'')+(x.result?.sourceUrl?' · <a target="_blank" rel="noopener noreferrer" href="'+x.result.sourceUrl+'">Verify result ↗</a>':'')+'</div>'+
  '</div></details>';
 }
 function listBlock(items,type,emptyText){const sorted=chronological(items);return sorted.length?'<div class="selection-list">'+sorted.map(x=>selectionRow(x,type)).join("")+'</div>':'<div class="panel"><p class="meta">'+emptyText+'</p></div>'}
