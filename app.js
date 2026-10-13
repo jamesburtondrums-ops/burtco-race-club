@@ -307,6 +307,24 @@ function liveStatus(){
  return '<div class="live-connection '+(connected?'live-connected':'live-disconnected')+'" role="status">'+note+'</div>';
 }
 
+// Only one featured runner per race across WIN, Mid Shots and Longshots.
+// For safety if future content accidentally overlaps, higher-ranked sections win.
+// This changes presentation only; archived paper-bet results are never mutated.
+function exclusiveSelectionGroups(){
+ const d=state.data||{},sections=['todaySelections','midshotsToday','longshotsToday','lucky15Only'];
+ const featured={todaySelections:[],midshotsToday:[],longshotsToday:[],lucky15Only:[]};
+ const races=new Set(),horses=new Set();
+ for(const section of sections)for(const p of d[section]||[]){
+  if(!p||!p.horse||!p.course||!p.time)continue;
+  if(section==='todaySelections'&&!assessWinConfidence(p).qualified)continue;
+  const race=String(p.course).trim().toLowerCase()+'|'+String(p.time).trim();
+  const horse=String(p.horse).trim().toLowerCase();
+  if(races.has(race)||horses.has(horse))continue;
+  races.add(race);horses.add(horse);featured[section].push(p);
+ }
+ return featured;
+}
+
 function nav(){const upcoming=state.data?.snapshotDate>new Date().toLocaleDateString("en-CA",{timeZone:"Europe/London"});return [["today",upcoming?"Tomorrow":"Today"],["midshots","Mid Shots 6/1–18/1"],["longshots","Longshots 20/1+"],["lucky15","E/W Lucky 15"],["racecards","All runners"],["history","Results history"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
 function filters(){const x=["ALL","PRIME","STRONG","CONDITIONAL","WATCH"];return '<div class="meeting-tabs">'+x.map(f=>'<button data-filter="'+f+'" class="'+(state.filter===f?'active':'')+'">'+f+'</button>').join("")+'</div>'}
 function resultBadge(x){const r=resultInfo(x);return r?'<span class="result-badge '+r.cls+'">'+r.text+'</span>':''}
@@ -365,27 +383,19 @@ function morningCheckPanel(){
  '<small>Morning selections are conditional: late non-runners, changing ground and bookmaker odds can alter suitability. Market strength is not a guaranteed win percentage.</small></section>';
 }
 function today(){
- const d=state.data,all=d.todaySelections||[];
- // Race confidence comes from reviewed horse/race evidence; odds are a separate value test.
- const vetted=all.filter(x=>assessWinConfidence(x).qualified);
- const nominations=(d.winNominations||[]).map(n=>{
-  const x=vetted.find(p=>p.horse===n.horse&&p.course===n.course&&p.time===n.time);
-  if(!x)return '';
-  return '<div class="panel" style="margin:0 0 12px;padding:17px"><div class="eyebrow">'+escapeHtml(n.label)+' · '+escapeHtml(assessWinConfidence(x).level)+' WIN CONTENDER</div>'+
-   '<h3 style="margin:6px 0">'+escapeHtml(x.horse)+' — '+escapeHtml(x.time)+' '+escapeHtml(x.course)+' · '+escapeHtml(x.odds)+'</h3>'+
-   '<p>'+escapeHtml(publicSummary(x))+'</p><small>'+escapeHtml(x.risk||'Monitor declarations and conditions.')+'</small></div>';
- }).join('');
- const nominationSection=nominations?'<section style="margin-bottom:20px"><h3>NAP &amp; NB</h3><p>Editorial ranking by current form, conditions and rivals; independent of betting odds. These are assessed contenders, not guaranteed or calibrated winners.</p>'+nominations+'</section>':'';
- const underReview=all.length-vetted.length;
+ const d=state.data||{}, vetted=exclusiveSelectionGroups().todaySelections;
+ const ranking=x=>x.winRank==='NAP'?0:x.winRank==='NB'?1:2;
+ const picks=[...vetted].sort((a,b)=>ranking(a)-ranking(b)||timeValue(a.time)-timeValue(b.time));
+ const underReview=(d.todaySelections||[]).length-vetted.length;
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(String(d.snapshotDate||"").toUpperCase())+' · GB + IRE</div>'+
- '<h2>WIN contenders</h2>'+
- '<p>Realistic Strong and Solid selections: current form and race suitability must be evidenced, while manageable risks can remain. No forced quota and no confidence boost for short odds.</p></div>'+
- '<div class="quick-stats"><span><b>'+val(d.coverage?.races)+'</b> races on today\'s card</span>'+
- '<span><b>'+vetted.length+'</b> WIN contenders</span><span><b>'+underReview+'</b> awaiting evidence</span></div></section>'+
- nominationSection+listBlock(vetted,'main','No researched WIN contenders currently meet the revised evidence standard. Previous paper bets remain visible under Results history.');
+ '<h2>WIN selections</h2>'+
+ '<p>One horse per race. NAP and NB are marked directly on their selection rows, with the positive evidence and the risks underneath. Race confidence is based on form and conditions, not price.</p></div>'+
+ '<div class="quick-stats"><span><b>'+val(d.coverage?.races)+'</b> scheduled races</span>'+
+ '<span><b>'+picks.length+'</b> WIN selections</span>'+(underReview?'<span><b>'+underReview+'</b> not displayed</span>':'')+'</div></section>'+
+ (picks.length?'<div class="selection-list">'+picks.map(x=>selectionRow(x,"main")).join("")+'</div>':'<div class="panel"><p class="meta">No current contenders meet the published WIN evidence standard.</p></div>');
 }
-function midshots(){const d=state.data,ms=d.midshotsToday||[];return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> candidates</span><span><b>6/1–18/1</b> price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No mid-shot selections currently qualify.")}
-function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section class="page-intro long-intro"><div><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ls.length+'</b> candidates</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No longshots currently qualify.")}
+function midshots(){const d=state.data||{},ms=exclusiveSelectionGroups().midshotsToday;return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> unique race selections</span><span><b>6/1–18/1</b> reference price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No distinct mid-shot selection currently qualifies.") }
+function longshots(){const d=state.data||{},ls=exclusiveSelectionGroups().longshotsToday;return '<section class="page-intro long-intro"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p><div class="quick-stats"><span><b>'+ls.length+'</b> unique race selections</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum reference price</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No distinct longshot selection currently qualifies.") }
 function history(){
  const entries=[...(state.ledger?.entries||[])].sort((a,b)=>String(b.date||'')===String(a.date||'')?
   timeValue(a.time)-timeValue(b.time):String(b.date||'').localeCompare(String(a.date||'')));
