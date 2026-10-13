@@ -27,14 +27,21 @@ function resultInfo(x){
 }
 
 const money=n=>'£'+Number(n||0).toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2});
+// Decimal multiplier from an unambiguous fractional quotation.
+// 5/2 -> 3.5, i.e. £10 returns £35 including the original stake.
+// Favourite markers such as 9/4f are not part of the quoted price.
 function decimalOdds(s){
  const text=String(s||'').trim();
  if(!text||/[–~]|\bforecast\b|\bbest\b|\bfrom\b/i.test(text))return null;
- const m=text.match(/^(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)(?:\s|$)/);
- if(m)return 1+Number(m[1])/Number(m[2]);
- if(/^evens?$/i.test(text))return 2;
+ const m=text.match(/^(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)(?:\s*(?:f|jf|fav|favourite|joint[- ]favourite))?$/i);
+ if(m){
+  const n=Number(m[1]),d=Number(m[2]);
+  return d>0&&Number.isFinite(n/d)?1+n/d:null;
+ }
+ if(/^(?:evens?|evs)(?:\s*(?:f|jf|fav|favourite|joint[- ]favourite))?$/i.test(text))return 2;
  return null;
 }
+const gbp=n=>Math.round((n+Number.EPSILON)*100)/100;
 function positionOf(e){
  const p=e.result?.position??e.result?.place??null;
  if(p===null||p===''||p===undefined)return null;
@@ -63,12 +70,14 @@ function settlement(e){
  // Early-price paper wagers settle at the immutable published quote, never at official SP.
  const odds=e.priceBasis==='early'?decimalOdds(e.selectionOdds):decimalOdds(e.settlementOdds)||decimalOdds(e.selectionOdds);
  if(!odds)return {status:'unpriced',returnAmount:0};
- if(e.betType==='win')return {status:'won',returnAmount:Number(e.winStake)*odds};
+ if(e.betType==='win')return {status:'won',returnAmount:gbp(Number(e.winStake)*odds)};
  if(!places)return {status:'unpriced',returnAmount:0};
  const placed=pos<=places;
- const placeReturn=placed*Number(e.placeStake)*(1+(odds-1)*0.25);
- const winReturn=pos===1?Number(e.winStake)*odds:0;
- return {status:pos===1?'won':placed?'placed':'lost',returnAmount:winReturn+placeReturn};
+ const fraction=Number.isFinite(Number(e.ewFraction))&&Number(e.ewFraction)>0?Number(e.ewFraction):0.25;
+ // Each-way has separate £-denominated WIN and PLACE stakes. Round each component.
+ const placeReturn=placed?gbp(Number(e.placeStake)*(1+(odds-1)*fraction)):0;
+ const winReturn=pos===1?gbp(Number(e.winStake)*odds):0;
+ return {status:pos===1?'won':placed?'placed':'lost',returnAmount:gbp(winReturn+placeReturn)};
 }
 function isFinisher(e){
  if(positionOf(e)!==null)return true;
@@ -200,8 +209,8 @@ function lucky15Calc(ticket){
   const status=String(result?.status||'');
   let win=null,place=null;
   if(/^(NR|NON.RUNNER|WITHDRAWN|SCRATCHED|VOID|ABANDONED|CANCELLED)$/i.test(status)){win=1;place=1}
-  else if(pos>3){win=0;place=0}
-  else if(pos&&places&&odds){win=pos===1?odds:0;place=pos<=places?1+(odds-1)*.25:0}
+  else if(pos>3||(pos&&places&&pos>places)){win=0;place=0}
+  else if(pos&&places&&odds){win=pos===1?odds:0;place=pos<=places?1+(odds-1)*Number(ticket.eachWayFraction||0.25):0}
   else if(/^(F|PU|UR|BD|RO|RR|REF|DSQ|DNF|DISQ)$/i.test(status)){win=0;place=0}
   return {...leg,result,places,win,place};
  });
@@ -210,9 +219,11 @@ function lucky15Calc(ticket){
  let payout=0;
  for(let mask=1;mask<16;mask++){
   let wf=1,pf=1;for(let i=0;i<4;i++)if(mask&(1<<i)){wf*=rows[i].win;pf*=rows[i].place}
-  payout+=Number(ticket.stakePerLinePerSide)*(wf+pf);
+  // Every combination is a separate win/place bet, paid to the nearest penny.
+  const unit=Number(ticket.stakePerLinePerSide||0);
+  payout+=gbp(unit*wf)+gbp(unit*pf);
  }
- return {ticket,legs:rows,stake,status:'settled',returnAmount:payout};
+ return {ticket,legs:rows,stake,status:'settled',returnAmount:gbp(payout)};
 }
 function exoticSummary(){
  const tickets=(state.ledger?.lucky15Tickets||[]).map(lucky15Calc);
@@ -294,7 +305,7 @@ function tracker(){
  '<div><span>Win strike rate</span><strong>'+rate(winRate)+'</strong><small>'+stats.winCount+' winners from '+stats.known+' known outcomes</small></div>'+
  '<div><span>Each-way place rate</span><strong>'+rate(ewRate)+'</strong><small>'+stats.ewPlaced+' placed from '+stats.ewKnown+' known E/W outcomes</small></div>'+
  '</div><div class="tracker-bottom"><div><span>Running bank after settled bets:</span> <b>'+money(settledBank)+'</b></div><div><span>Outstanding / unpriced stakes:</span> <b>'+money(stats.openStake+combos.pendingStake)+'</b></div><div><span>Today’s strike rate:</span> <b>'+today+'</b></div></div>'+
- '<p class="tracker-footnote">Total stakes '+money(stats.totalStake+combos.stake)+' (including '+money(combos.stake)+' Lucky 15) · Credited returns '+money(stats.totalReturn+combos.returns)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Settlements use recorded SP where available, otherwise a single unambiguous quoted price. Paper tracking only.</p>'+
+ '<p class="tracker-footnote">Total stakes '+money(stats.totalStake+combos.stake)+' (including '+money(combos.stake)+' Lucky 15) · Credited returns '+money(stats.totalReturn+combos.returns)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Paper bets dated 9 October onward settle at their saved early quotes; legacy bets use recorded SP where available. All credited returns include the returned stake. Paper tracking only.</p>'+
  '</section>';
 }
 function liveStatus(){
