@@ -1,7 +1,7 @@
 {
   "startingBank": 1000,
   "currency": "GBP",
-  "policy": "£10 WIN or £5 each way (£10 total) on dated paper singles; £1 each way 15-line Lucky15 (£30) separately. Since 9 Oct all paper returns use immutable quoted early prices; SP for reference only. Never place live real-money bets.",
+  "policy": "Paper bets only: £10 WIN or £5 each-way (£10 total) singles; £1 each-way per Lucky 15 line (£30). For entries with a definite saved early quote, apply simulated Best Odds Guaranteed: if reported starting price is longer, use SP; otherwise retain the researched price. Include the original stake in winning returns. Legacy entries with ambiguous early price keep their recorded settlement basis. No actual bookmaker wagers.",
   "entries": [
     {
       "id": "2026-10-08|market rasen|15:06|whitewinewednesday|win",
@@ -1759,10 +1759,16 @@
     "pricesSource": "Official published results"
   },
   "pricingPolicy": {
-    "mode": "recorded_early_odds",
-    "effectiveFrom": "2026-10-09",
-    "notes": "Individual singles settle at their own selectionOdds and Lucky15 at each leg's separately saved selectionOdds, even when later SP differs. Earlier 8 Oct returns kept at their original historical terms as multiple quoted early ranges cannot identify a unique accepted price.",
-    "officialSPReferenceOnly": true
+    "mode": "simulated_best_odds_guaranteed",
+    "effectiveFrom": "2026-10-13",
+    "appliesToExistingDatedEarlyQuotes": true,
+    "rule": "Settlement uses the higher of the unmodified early selection price and later reported SP whenever both are unambiguous. Without later SP, use original early price. SP cannot worsen recorded early terms.",
+    "originalQuotesImmutable": true,
+    "legacyOddsHandling": "Pre-9-Oct bets with ambiguous early odds remain on their previous settlement-price basis.",
+    "officialSPReferenceOnly": false,
+    "quoteSources": "Published pre-race price retained; later SP stored in result.sp or settlementOdds with its provenance.",
+    "caveat": "Simulation only; bookmaker-specific Best Odds Guaranteed eligibility, cut-offs, Rule 4 deductions, extra places and market types are not verified. Not proof a real wager qualified.",
+    "notes": "Introduced following request on 13 Oct after King Of Persia won at user-reported 6/1 SP versus 9/2 published early. No existing early price or original result overwritten."
   },
   "latestPaperSelectionsPublished": {
     "date": "2026-10-13",
