@@ -42,6 +42,26 @@ function decimalOdds(s){
  return null;
 }
 const gbp=n=>Math.round((n+Number.EPSILON)*100)/100;
+// Paper-only best-odds-guaranteed assumption, not proof a bookmaker accepted a bet.
+// Keep immutable early selectionOdds. For dated early quotes, use a longer recorded
+// starting price if available; otherwise retain the early price.
+// Legacy bets without a definite early quote still use their recorded settlement odds.
+function appliedPrice(early,starting,priceBasis){
+ const original=decimalOdds(early);
+ const sp=decimalOdds(starting);
+ if(priceBasis==='early'){
+  if(original===null)return {odds:null,label:null,improved:false};
+  return sp!==null&&sp>original?
+   {odds:sp,label:String(starting).trim(),improved:true}:
+   {odds:original,label:String(early).trim(),improved:false};
+ }
+ return sp!==null?{odds:sp,label:String(starting).trim(),improved:false}:
+  {odds:original,label:original!==null?String(early).trim():null,improved:false};
+}
+function entryPrice(entry){
+ return appliedPrice(entry.selectionOdds,entry.settlementOdds||entry.result?.sp,entry.priceBasis);
+}
+
 function positionOf(e){
  const p=e.result?.position??e.result?.place??null;
  if(p===null||p===''||p===undefined)return null;
@@ -67,8 +87,8 @@ function settlement(e){
  const places=count>0?(count<=4?1:count<=7?2:3):(Number(e.placesPaid)||null);
  if(e.betType==='each-way' && (places!==null?pos>places:pos>3))
    return {status:'lost',returnAmount:0};
- // Early-price paper wagers settle at the immutable published quote, never at official SP.
- const odds=e.priceBasis==='early'?decimalOdds(e.selectionOdds):decimalOdds(e.settlementOdds)||decimalOdds(e.selectionOdds);
+ // Simulate BOG: best of the saved early quote and the reported starting price.
+ const odds=entryPrice(e).odds;
  if(!odds)return {status:'unpriced',returnAmount:0};
  if(e.betType==='win')return {status:'won',returnAmount:gbp(Number(e.winStake)*odds)};
  if(!places)return {status:'unpriced',returnAmount:0};
@@ -204,7 +224,7 @@ function lucky15Calc(ticket){
   const result=p?.result||leg.result||null;
   const count=Number(p?.runnerCount||leg.runnerCount)||null;
   const places=count?(count<=4?1:count<=7?2:3):null;
-  const odds=ticket.priceBasis==='early'?decimalOdds(leg.selectionOdds):decimalOdds(result?.sp||leg.settlementOdds||leg.selectionOdds);
+  const odds=appliedPrice(leg.selectionOdds,leg.settlementOdds||result?.sp,ticket.priceBasis==='early'||leg.priceBasis==='early'?'early':ticket.priceBasis).odds;
   const pos=Number(result?.position)||null;
   const status=String(result?.status||'');
   let win=null,place=null;
@@ -305,7 +325,7 @@ function tracker(){
  '<div><span>Win strike rate</span><strong>'+rate(winRate)+'</strong><small>'+stats.winCount+' winners from '+stats.known+' known outcomes</small></div>'+
  '<div><span>Each-way place rate</span><strong>'+rate(ewRate)+'</strong><small>'+stats.ewPlaced+' placed from '+stats.ewKnown+' known E/W outcomes</small></div>'+
  '</div><div class="tracker-bottom"><div><span>Running bank after settled bets:</span> <b>'+money(settledBank)+'</b></div><div><span>Outstanding / unpriced stakes:</span> <b>'+money(stats.openStake+combos.pendingStake)+'</b></div><div><span>Today’s strike rate:</span> <b>'+today+'</b></div></div>'+
- '<p class="tracker-footnote">Total stakes '+money(stats.totalStake+combos.stake)+' (including '+money(combos.stake)+' Lucky 15) · Credited returns '+money(stats.totalReturn+combos.returns)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Paper bets dated 9 October onward settle at their saved early quotes; legacy bets use recorded SP where available. All credited returns include the returned stake. Paper tracking only.</p>'+
+ '<p class="tracker-footnote">Total stakes '+money(stats.totalStake+combos.stake)+' (including '+money(combos.stake)+' Lucky 15) · Credited returns '+money(stats.totalReturn+combos.returns)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Paper bets dated 9 October onward use the better of the saved researched quote and recorded SP (simulated Best Odds Guaranteed). Legacy bets without a definite early quote retain recorded SP. Actual bookmaker eligibility and concessions differ. All credited returns include the original stake. Paper tracking only.</p>'+
  '</section>';
 }
 function liveStatus(){
@@ -369,7 +389,11 @@ function selectionRow(x,type){
  const settled=bet?settlement(bet):null;
  const stake=bet?Number(bet.winStake||0)+Number(bet.placeStake||0):0;
  const profit=settled&& !["open","unpriced"].includes(settled.status)?settled.returnAmount-stake:null;
- const betLine=bet?'<div class="bet-line"><b>Paper bet: '+(bet.betType==="win"?"£10 WIN":"£5 E/W (£10 total)")+'</b><span>Recorded price: '+val(bet.selectionOdds)+'</span><span>'+(profit!==null?'Return '+money(settled.returnAmount)+' · P/L '+(profit>=0?'+':'')+money(profit):'Settlement pending / terms unverified')+'</span></div>':'';
+ const chosen=bet?entryPrice(bet):null;
+ const betLine=bet?'<div class="bet-line"><b>Paper bet: '+(bet.betType==="win"?"£10 WIN":"£5 E/W (£10 total)")+'</b><span>Early price: '+escapeHtml(val(bet.selectionOdds))+'</span>'+
+ (bet.settlementOdds||bet.result?.sp?'<span>Reported SP: '+escapeHtml(val(bet.settlementOdds||bet.result.sp))+'</span>':'')+
+ (chosen?.label?'<span>Return calculated at: '+escapeHtml(chosen.label)+(chosen.improved?' (BOG)':'')+'</span>':'')+
+ '<span>'+(profit!==null?'Return '+money(settled.returnAmount)+' · P/L '+(profit>=0?'+':'')+money(profit):'Settlement pending / terms unverified')+'</span></div>':'';
 
  return '<details class="selection-row" data-key="'+k+'"><summary class="selection-summary">'+
    '<div class="selection-time">'+val(x.time)+'</div>'+
@@ -434,8 +458,10 @@ function history(){
    '<span class="history-horse"><strong>'+escapeHtml(e.horse)+'</strong><small>'+escapeHtml(e.course||'')+' · '+(e.betType==='win'?'£10 win':'£5 each way')+'</small></span>'+
    '<span class="history-position '+(position===1?'history-won':result?'history-finished':'history-pending')+'">'+escapeHtml(label)+'</span>'+
    '<span class="history-pl '+(done?(pl>=0?'tracker-positive':'tracker-negative'):'')+'">'+(done?signMoney(pl):'Pending')+'</span><span class="history-arrow">⌄</span></summary>'+
-   '<div class="history-details"><div>Recorded price <b>'+escapeHtml(e.selectionOdds||'—')+'</b></div>'+
-   '<div>Starting price (reference only) <b>'+escapeHtml(e.settlementOdds||result?.sp||'Not confirmed')+'</b></div><div>Paper settlement <b>'+(e.priceBasis==='early'?'Published early odds':'Legacy historical terms')+'</b></div>'+
+   '<div class="history-details"><div>Researched early price <b>'+escapeHtml(e.selectionOdds||'—')+'</b></div>'+
+   '<div>Reported starting price <b>'+escapeHtml(e.settlementOdds||result?.sp||'Not confirmed')+'</b></div>'+
+   '<div>Price used for return <b>'+escapeHtml(entryPrice(e).label||'Not priced')+(entryPrice(e).improved?' (BOG)':'')+'</b></div>'+
+   '<div>Paper settlement <b>'+(e.priceBasis==='early'?'Simulated Best Odds Guaranteed':'Legacy historical terms')+'</b></div>'+
    '<div>Stake <b>'+money(stake)+'</b></div>'+
    '<div>Return <b>'+(done?money(outcome.returnAmount):'Pending confirmation')+'</b></div>'+
    (result?.source?'<p>Result source: '+escapeHtml(result.source)+'</p>':'')+
