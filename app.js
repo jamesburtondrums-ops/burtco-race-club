@@ -277,10 +277,14 @@ function lucky15Page(){
   const label=confidence;
   const placeCount=leg.places?'Top '+leg.places+' paid places':'Final runner count pending';
   const result=leg.result?.position?ordinal(leg.result.position):escapeHtml(leg.result?.status||'Awaiting race');
+  const applied=appliedPrice(leg.selectionOdds,leg.settlementOdds||leg.result?.sp,ticket.priceBasis==='early'||leg.priceBasis==='early'?'early':ticket.priceBasis);
+  const later=leg.settlementOdds||leg.result?.sp;
   return '<div class="l15-leg"><b>'+(i+1)+'</b><div><strong>'+escapeHtml(leg.horse)+'</strong>'+
    '<small>'+escapeHtml(leg.course)+' · '+escapeHtml(leg.time)+' · '+placeCount+'</small>'+
    '<small class="'+(isNearPrime?'l15-near-prime':'l15-value')+'">'+escapeHtml(label)+'</small></div>'+
-   '<div><strong>'+escapeHtml(leg.selectionOdds)+'</strong><small>'+result+'</small></div></div>'+
+   '<div><strong>'+escapeHtml(leg.selectionOdds)+'</strong><small>'+result+'</small>'+
+   (later?'<small>SP '+escapeHtml(later)+'</small>':'')+
+   (applied.improved?'<small>BOG '+escapeHtml(applied.label)+'</small>':'')+'</div></div>'+
    '<details class="l15-leg-research"><summary>Positive evidence for '+escapeHtml(leg.horse)+'</summary>'+
    '<p>'+escapeHtml(publicSummary(pick))+'</p>'+
    '<ul class="selection-positives">'+positivePoints(pick).map(p=>'<li>'+escapeHtml(p)+'</li>').join('')+'</ul>'+
