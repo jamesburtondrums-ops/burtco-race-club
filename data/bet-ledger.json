@@ -1238,6 +1238,91 @@
       "earlyPriceSnapshotAt": "2026-10-11T23:33:24.491Z",
       "earlyPriceSource": "https://www.irishracing.com/odds-comparison/Mon-12th-Oct-2026/Newcastle/2000",
       "paperOnly": true
+    },
+    {
+      "id": "2026-10-13|leicester|13:24|king of persia|win",
+      "date": "2026-10-13",
+      "course": "Leicester",
+      "time": "13:24",
+      "horse": "King Of Persia",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "9/2",
+      "priceBasis": "early",
+      "settlementOdds": "6/1",
+      "ewFraction": null,
+      "runnerCount": 10,
+      "placesPaid": null,
+      "terms": "£10 virtual WIN single at previously published reference quote, not an actual bet",
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "6/1",
+        "source": "Racing TV / Sporting Life / Racing Post result",
+        "sourceUrl": "https://www.racingpost.com/results/30/leicester/2026-10-13/928570/",
+        "updatedAt": "2026-10-13T15:04:03.134Z"
+      },
+      "earlyPriceSnapshotAt": "2026-10-13T08:48:55.902Z",
+      "earlyPriceSource": "https://www.timeform.com/horse-racing/odds/leicester/2026-10-13/1324/29/1",
+      "paperOnly": true,
+      "addedToLedgerAt": "2026-10-13T15:05:06.245Z",
+      "reconstructedAfterPublication": true,
+      "reconstructionNote": "Retrospectively transcribed from the publicly published 13 October morning WIN shortlist. Original price and pick were stored before the off; no actual wager was placed."
+    },
+    {
+      "id": "2026-10-13|hereford|15:30|donnie azoff|win",
+      "date": "2026-10-13",
+      "course": "Hereford",
+      "time": "15:30",
+      "horse": "Donnie Azoff",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "3/1",
+      "priceBasis": "early",
+      "settlementOdds": "11/4",
+      "ewFraction": null,
+      "runnerCount": 8,
+      "placesPaid": null,
+      "terms": "£10 virtual WIN single at previously published reference quote, not an actual bet",
+      "result": {
+        "position": 2,
+        "status": "User reported",
+        "sp": "11/4",
+        "source": "User-reported second place and SP; independent result still being confirmed",
+        "updatedAt": "2026-10-13T15:04:03.134Z"
+      },
+      "earlyPriceSnapshotAt": "2026-10-13T08:48:55.902Z",
+      "earlyPriceSource": "https://www.timeform.com/horse-racing/odds/hereford/2026-10-13/1530/23/4",
+      "paperOnly": true,
+      "addedToLedgerAt": "2026-10-13T15:05:06.245Z",
+      "reconstructedAfterPublication": true,
+      "reconstructionNote": "Retrospectively transcribed from the publicly published 13 October morning WIN shortlist. Original price and pick were stored before the off; no actual wager was placed."
+    },
+    {
+      "id": "2026-10-13|leicester|16:14|oviedo|win",
+      "date": "2026-10-13",
+      "course": "Leicester",
+      "time": "16:14",
+      "horse": "Oviedo",
+      "betType": "win",
+      "winStake": 10,
+      "placeStake": 0,
+      "selectionOdds": "2/1",
+      "priceBasis": "early",
+      "settlementOdds": null,
+      "ewFraction": null,
+      "runnerCount": 9,
+      "placesPaid": null,
+      "terms": "£10 virtual WIN single at previously published reference quote, not an actual bet",
+      "result": null,
+      "earlyPriceSnapshotAt": "2026-10-13T08:48:55.902Z",
+      "earlyPriceSource": "https://www.timeform.com/horse-racing/odds/leicester/2026-10-13/1614/29/6",
+      "paperOnly": true,
+      "addedToLedgerAt": "2026-10-13T15:05:06.245Z",
+      "reconstructedAfterPublication": true,
+      "reconstructionNote": "Retrospectively transcribed from the publicly published 13 October morning WIN shortlist. Original price and pick were stored before the off; no actual wager was placed."
     }
   ],
   "placePolicy": {
@@ -1681,13 +1766,23 @@
     "officialSPReferenceOnly": true
   },
   "latestPaperSelectionsPublished": {
-    "date": "2026-10-12",
-    "checkedAt": "2026-10-11T23:33:24.491Z",
-    "winSingles": 6,
-    "ewSingles": 4,
-    "ewLucky15PaperStake": 30,
-    "totalPaperStake": 130,
-    "priceBasis": "early",
-    "source": "Multi-book quoted reference only; no real money orders"
+    "date": "2026-10-13",
+    "checkedAt": "2026-10-13T15:05:06.245Z",
+    "winSingles": 3,
+    "ewSingles": 0,
+    "ewLucky15PaperStake": 0,
+    "totalPaperStake": 30,
+    "priceBasis": "published_early_reference",
+    "source": "Three WIN selections published 13 Oct at 08:48:55Z; retrospectively recorded in paper ledger, no cash stakes"
+  },
+  "latestManualResultSearch": {
+    "checkedAt": "2026-10-13T15:05:06.245Z",
+    "verifiedUpdates": 1,
+    "userReportedUpdates": 1,
+    "dates": [
+      "2026-10-13"
+    ],
+    "source": "Official Racing Post Leicester 13:24 plus user-reported Hereford 15:30",
+    "priceBasis": "published early prices, SP reference only"
   }
 }
