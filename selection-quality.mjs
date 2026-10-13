@@ -25,7 +25,7 @@ export function assessWinConfidence(pick){
  if(supportedCore.length<3)return fail('Fewer than three of four core factors evidenced');
  if(!supportFactors.some(k=>wellSupported(f[k])))return fail('Neither fitness nor trainer/jockey support evidenced');
  const sources=[...coreFactors,...supportFactors].filter(k=>wellSupported(f[k])).map(k=>f[k].sourceUrl);
- if(new Set(sources.map(u=>new URL(u).hostname.replace(/^www\./,''))).size<2)
+ if(new Set(sources.map(u=>(u.match(/^https:\/\/([^/]+)/)?.[1]||'').replace(/^www\./,''))).size<2)
    return fail('Independent evidence sources not established');
  const strong=supportedCore.filter(k=>f[k].grade==='strong').length;
  const level=strong>=3&&review.riskSeverity==='low'?'STRONG':'SOLID';
