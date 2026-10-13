@@ -162,6 +162,14 @@
             "detail": "Quoted odds do not determine win confidence"
           }
         ]
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "6/1",
+        "source": "Racing TV / Sporting Life / Racing Post result",
+        "sourceUrl": "https://www.racingpost.com/results/30/leicester/2026-10-13/928570/",
+        "updatedAt": "2026-10-13T15:04:03.134Z"
       }
     },
     {
@@ -255,6 +263,13 @@
             "detail": "Quoted odds do not determine win confidence"
           }
         ]
+      },
+      "result": {
+        "position": 2,
+        "status": "User reported",
+        "sp": "11/4",
+        "source": "User-reported second place and SP; independent result still being confirmed",
+        "updatedAt": "2026-10-13T15:04:03.134Z"
       }
     },
     {
@@ -517,7 +532,8 @@
   "researchSelectionUpdate": {
     "reviewedAt": "2026-10-13T08:59:40.809Z",
     "status": "SINGLE_SELECTION_PER_RACE_CLEANUP",
-    "note": "Removed overlapping current-day research runners Hostility (Oviedo race), Bay Breeze and Spirit Of Jenny (Sargent Dennis race); no historical paper bets amended. One NAP/NB label per featured horse."
+    "note": "Removed overlapping current-day research runners Hostility (Oviedo race), Bay Breeze and Spirit Of Jenny (Sargent Dennis race); no historical paper bets amended. One NAP/NB label per featured horse.",
+    "lastResultsCheckAt": "2026-10-13T15:04:03.134Z"
   },
   "selectionPresentation": {
     "rule": "ONE_SELECTION_PER_RACE",
@@ -545,5 +561,61 @@
       }
     ],
     "notes": "NAP/NB are designations on the selected WIN row, not separate repeated pick cards. Alternatives in the same race are removed from today's public picks; historical betting records remain unchanged."
+  },
+  "removedSelectionReview": {
+    "date": "2026-10-13",
+    "checkedAt": "2026-10-13T15:04:03.134Z",
+    "trackingOnly": true,
+    "note": "Preserved ex-ante removals. Results are retrospective and must not be treated as settled historical bets or added to win strike-rate.",
+    "runners": [
+      {
+        "horse": "Notimetotakeoff",
+        "course": "Leicester",
+        "time": "13:24",
+        "position": 3,
+        "sp": "11/2",
+        "source": "Racing TV / Racing Post official result",
+        "sourceUrl": "https://www.racingpost.com/results/30/leicester/2026-10-13/928570/",
+        "removedReason": "Nursery debut and uncertainty at the going",
+        "sameRaceAsFeatured": "King Of Persia"
+      },
+      {
+        "horse": "Fenlander",
+        "course": "Leicester",
+        "time": "15:39",
+        "position": 3,
+        "sp": "13/2",
+        "source": "User reported; independent official result not yet available",
+        "removedReason": "Rating and today's differing going",
+        "sameRaceAsFeatured": "Sargent Dennis"
+      },
+      {
+        "horse": "Dashing Dick",
+        "course": "Leicester",
+        "time": "15:39",
+        "position": 2,
+        "sp": "5/1",
+        "source": "User reported; independent official result not yet available",
+        "removedReason": "Win case judged uncertain in 18-runner sprint",
+        "sameRaceAsFeatured": "Sargent Dennis"
+      }
+    ]
+  },
+  "resultsLearning": {
+    "reviewedAt": "2026-10-13T15:04:03.134Z",
+    "conclusions": [
+      "A last-time winner under matching going and trip was not over-discounted: King Of Persia converted despite stall 10.",
+      "Donnie Azoff produced another placed run but a WIN-only paper single does not collect for second.",
+      "Removed horses' placings show potential place-level signals that were filtered too heavily; retrospectively observing placings does not establish pre-race profitable value.",
+      "Notimetotakeoff placed behind King Of Persia in the same race, so backing both would increase correlated exposure rather than add a new race opportunity.",
+      "Fenlander and Dashing Dick both placed in the same Leicester 15:39 handicap according to the user; the one-runner-per-race rule should be assessed against each-way coverage rather than relaxed solely after results."
+    ],
+    "caveat": "King Of Persia and Notimetotakeoff independently confirmed. Remaining finish/SP reports are user-supplied pending independently accessible result pages."
+  },
+  "resultVerification": {
+    "checkedAt": "2026-10-13T15:04:03.134Z",
+    "confirmedResults": 2,
+    "userReportedResults": 3,
+    "scope": "User report of five horses, two independently confirmed; data for selected Kings/Donnie updated, removed picks in separate review."
   }
 }
