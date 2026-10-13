@@ -3,8 +3,8 @@
 // Previous paper bets and historical judgements are never reclassified retroactively.
 const coreFactors=['form','abilityClass','courseGoingTrip','opposition'];
 const supportFactors=['fitness','trainerJockey'];
-const isTime=t=>typeof t==='string'&&Number.isFinite(Date.parse(t))&&/(?:Z|[+-]\\d{2}:\\d{2})$/.test(t);
-const isUrl=u=>typeof u==='string'&&/^https:\/\/[^\\s/]+\\.[^\\s/]+/.test(u);
+const isTime=t=>typeof t==='string'&&Number.isFinite(Date.parse(t))&&/(?:Z|[+-]\d{2}:\d{2})$/.test(t);
+const isUrl=u=>typeof u==='string'&&/^https:\/\/[^\s/]+\.[^\s/]+/.test(u);
 const textOf=v=>typeof v==='string'?v.trim():'';
 const wellSupported=f=>f&&['strong','supported'].includes(f.grade)&&textOf(f.finding).length>=18&&isUrl(f.sourceUrl);
 export function assessWinConfidence(pick){
@@ -25,7 +25,7 @@ export function assessWinConfidence(pick){
  if(supportedCore.length<3)return fail('Fewer than three of four core factors evidenced');
  if(!supportFactors.some(k=>wellSupported(f[k])))return fail('Neither fitness nor trainer/jockey support evidenced');
  const sources=[...coreFactors,...supportFactors].filter(k=>wellSupported(f[k])).map(k=>f[k].sourceUrl);
- if(new Set(sources.map(u=>new URL(u).hostname.replace(/^www\\./,''))).size<2)
+ if(new Set(sources.map(u=>new URL(u).hostname.replace(/^www\./,''))).size<2)
    return fail('Independent evidence sources not established');
  const strong=supportedCore.filter(k=>f[k].grade==='strong').length;
  const level=strong>=3&&review.riskSeverity==='low'?'STRONG':'SOLID';
