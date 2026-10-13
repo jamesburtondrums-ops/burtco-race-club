@@ -1311,12 +1311,19 @@
       "placeStake": 0,
       "selectionOdds": "2/1",
       "priceBasis": "early",
-      "settlementOdds": null,
+      "settlementOdds": "2/1F",
       "ewFraction": null,
       "runnerCount": 9,
       "placesPaid": null,
       "terms": "£10 virtual WIN single at previously published reference quote, not an actual bet",
-      "result": null,
+      "result": {
+        "position": 5,
+        "status": "Weighed in",
+        "sp": "2/1F",
+        "source": "Racing Post and Sporting Life full results",
+        "sourceUrl": "https://www.racingpost.com/results/30/leicester/2026-10-13/928567/",
+        "updatedAt": "2026-10-13T23:11:36.807Z"
+      },
       "earlyPriceSnapshotAt": "2026-10-13T08:48:55.902Z",
       "earlyPriceSource": "https://www.timeform.com/horse-racing/odds/leicester/2026-10-13/1614/29/6",
       "paperOnly": true,
@@ -1336,14 +1343,13 @@
     "source": "Sporting Life Full Results"
   },
   "lastManualResultSearch": {
-    "checkedAt": "2026-10-13T15:05:06.245Z",
+    "checkedAt": "2026-10-13T23:11:36.807Z",
     "verifiedUpdates": 1,
-    "userReportedUpdates": 1,
     "dates": [
       "2026-10-13"
     ],
-    "source": "Official Racing Post Leicester 13:24 plus user-reported Hereford 15:30",
-    "priceBasis": "published early prices, SP reference only"
+    "source": "Oviedo fifth at Leicester 16:14 independently verified against Racing Post and Sporting Life; other results not reverified",
+    "priceBasis": "BOG simulation; original early price preserved"
   },
   "lucky15Tickets": [
     {
