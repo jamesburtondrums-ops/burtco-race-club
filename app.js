@@ -311,7 +311,7 @@ function nav(){const upcoming=state.data?.snapshotDate>new Date().toLocaleDateSt
 function filters(){const x=["ALL","PRIME","STRONG","CONDITIONAL","WATCH"];return '<div class="meeting-tabs">'+x.map(f=>'<button data-filter="'+f+'" class="'+(state.filter===f?'active':'')+'">'+f+'</button>').join("")+'</div>'}
 function resultBadge(x){const r=resultInfo(x);return r?'<span class="result-badge '+r.cls+'">'+r.text+'</span>':''}
 function summaryBadges(x,type){
- if(type==="main")return '<span class="selection-tier strong">DATA-QUALIFIED WIN</span>';
+ if(type==="main"){const q=assessWinConfidence(x);return '<span class="selection-tier strong">'+escapeHtml(q.level)+' WIN CONTENDER</span>'+(x.winRank?'<span class="selection-tier mid">'+escapeHtml(x.winRank)+'</span>':'');}
  if(type==="mid")return '<span class="selection-tier mid">'+(x.view||"MID-SHOT")+'</span>';
  return '<span class="selection-tier long">'+(x.placeView||"E/W")+'</span>';
 }
@@ -366,20 +366,23 @@ function morningCheckPanel(){
 }
 function today(){
  const d=state.data,all=d.todaySelections||[];
- // Price, market favouritism and historic STRONG badges NEVER qualify a WIN pick.
+ // Race confidence comes from reviewed horse/race evidence; odds are a separate value test.
  const vetted=all.filter(x=>assessWinConfidence(x).qualified);
- const nominations=(d.winNominations||[]).map(n=>{const x=[...all,...(d.midshotsToday||[])].find(p=>p.horse===n.horse&&p.course===n.course&&p.time===n.time);
- return '<div class="panel" style="margin:0 0 12px;padding:17px"><div class="eyebrow">'+escapeHtml(n.label)+' · RESEARCH NOMINATION</div><h3 style="margin:6px 0">'+escapeHtml(n.horse)+' — '+escapeHtml(n.time)+' '+escapeHtml(n.course)+(x?' · '+escapeHtml(x.odds):'')+'</h3><p>'+escapeHtml(n.rationale)+'</p><small>Editorial ranking only — has not passed the complete independently sourced high-confidence WIN gate.</small></div>';
+ const nominations=(d.winNominations||[]).map(n=>{
+  const x=vetted.find(p=>p.horse===n.horse&&p.course===n.course&&p.time===n.time);
+  if(!x)return '';
+  return '<div class="panel" style="margin:0 0 12px;padding:17px"><div class="eyebrow">'+escapeHtml(n.label)+' · '+escapeHtml(assessWinConfidence(x).level)+' WIN CONTENDER</div>'+
+   '<h3 style="margin:6px 0">'+escapeHtml(x.horse)+' — '+escapeHtml(x.time)+' '+escapeHtml(x.course)+' · '+escapeHtml(x.odds)+'</h3>'+
+   '<p>'+escapeHtml(publicSummary(x))+'</p><small>'+escapeHtml(x.risk||'Monitor declarations and conditions.')+'</small></div>';
  }).join('');
- const nominationsSection=nominations?'<section style="margin-bottom:20px"><h3>Today\'s NAP &amp; NB</h3><p>Ranked on historical form, handicap position and race fit — never on favouritism or price. These remain research nominations until the separate WIN evidence gate is complete.</p>'+nominations+'</section>':'';
- const picks=vetted;
+ const nominationSection=nominations?'<section style="margin-bottom:20px"><h3>NAP &amp; NB</h3><p>Editorial ranking by current form, conditions and rivals; independent of betting odds. These are assessed contenders, not guaranteed or calibrated winners.</p>'+nominations+'</section>':'';
  const underReview=all.length-vetted.length;
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(String(d.snapshotDate||"").toUpperCase())+' · GB + IRE</div>'+
-  '<h2>High-confidence WIN selections</h2>'+
-  '<p>Only runners passing a documented, pre-race review of ability, recent form, conditions, fitness and opposition are shown. Odds do not influence race confidence.</p></div>'+
-  '<div class="quick-stats"><span><b>'+val(d.coverage?.races)+'</b> races screened</span>'+
-  '<span><b>'+vetted.length+'</b> WIN qualified</span><span><b>'+underReview+'</b> not qualified</span></div></section>'+
-  nominationsSection+listBlock(picks,'main','No runners currently meet the high-confidence WIN standard. Previously recorded paper WIN selections remain in Results history; they have not been retrospectively erased or settled differently.');
+ '<h2>WIN contenders</h2>'+
+ '<p>Realistic Strong and Solid selections: current form and race suitability must be evidenced, while manageable risks can remain. No forced quota and no confidence boost for short odds.</p></div>'+
+ '<div class="quick-stats"><span><b>'+val(d.coverage?.races)+'</b> races on today\'s card</span>'+
+ '<span><b>'+vetted.length+'</b> WIN contenders</span><span><b>'+underReview+'</b> awaiting evidence</span></div></section>'+
+ nominationSection+listBlock(vetted,'main','No researched WIN contenders currently meet the revised evidence standard. Previous paper bets remain visible under Results history.');
 }
 function midshots(){const d=state.data,ms=d.midshotsToday||[];return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> candidates</span><span><b>6/1–18/1</b> price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No mid-shot selections currently qualify.")}
 function longshots(){const d=state.data,ls=d.longshotsToday||[];return '<section class="page-intro long-intro"><div><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ls.length+'</b> candidates</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No longshots currently qualify.")}
