@@ -5,9 +5,9 @@
   "coverage": {
     "meetings": 5,
     "races": 38,
-    "scope": "Five meetings and 38 scheduled races identified. Named shortlist and key opposition checked, not every historical race of every declared runner.",
+    "scope": "Five meetings, 38 scheduled races identified; six current selections from six distinct races. Individual form and opposition reviewed for shortlisted horses, not complete lifetime results of all entrants.",
     "publishedDate": "2026-10-13",
-    "selectedIndividuals": 9,
+    "selectedIndividuals": 6,
     "qualifiedWins": 3,
     "winConfidenceMethod": "Documented Strong/Solid assessed horse/race evidence; odds are not used to assign confidence"
   },
@@ -352,28 +352,6 @@
   ],
   "midshotsToday": [
     {
-      "horse": "Hostility",
-      "course": "Leicester",
-      "time": "16:14",
-      "odds": "7/1",
-      "tier": "WATCH",
-      "confidenceTier": "RESEARCH ONLY · NOT CALIBRATED",
-      "summary": "Two mile wins at Carlisle this summer and a recent good-to-soft Redcar third make him an interesting alternative to Oviedo.",
-      "reason": "Two mile wins at Carlisle this summer and a recent good-to-soft Redcar third make him an interesting alternative to Oviedo.",
-      "positivePoints": [
-        "Two wins over a mile this summer",
-        "Recent third on good-to-soft turf",
-        "Currently competitive off OR68"
-      ],
-      "source": "Published racecards and earlier price references; refresh odds before use",
-      "sourceUrl": "https://www.timeform.com/horse-racing/odds/leicester/2026-10-13/1614/29/6",
-      "risk": "Opposes Oviedo; their outcomes are correlated and both cannot win.",
-      "view": "VALUE WATCH",
-      "terms": "Check current odds and each-way place terms. No paper bet recorded.",
-      "selectionPublishedAt": "2026-10-13T08:48:55.902Z",
-      "earlyOddsLockedAt": "2026-10-13T08:48:55.902Z"
-    },
-    {
       "horse": "Kodi Lion",
       "course": "Leicester",
       "time": "16:47",
@@ -390,28 +368,6 @@
       "source": "Published racecards and earlier price references; refresh odds before use",
       "sourceUrl": "https://m.attheraces.com/racecard/Leicester/13-October-2026/1647",
       "risk": "Better win record at 6f than 7f and faces 18 rivals.",
-      "view": "VALUE WATCH",
-      "terms": "Check current odds and each-way place terms. No paper bet recorded.",
-      "selectionPublishedAt": "2026-10-13T08:48:55.902Z",
-      "earlyOddsLockedAt": "2026-10-13T08:48:55.902Z"
-    },
-    {
-      "horse": "Bay Breeze",
-      "course": "Leicester",
-      "time": "15:39",
-      "odds": "16/1",
-      "tier": "WATCH",
-      "confidenceTier": "RESEARCH ONLY · NOT CALIBRATED",
-      "summary": "Recent Hamilton wins and softer-ground aptitude offer an each-way case, though this is a stronger 18-runner race.",
-      "reason": "Recent Hamilton wins and softer-ground aptitude offer an each-way case, though this is a stronger 18-runner race.",
-      "positivePoints": [
-        "Two recent wins at Hamilton",
-        "Evidence of handling give in the ground",
-        "Ability still present this season"
-      ],
-      "source": "Published racecards and earlier price references; refresh odds before use",
-      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-13/leicester/live-show/943181/join-racing-tv-now-handicap",
-      "risk": "4lb higher and needs to transfer the form to Leicester; odds an earlier reference.",
       "view": "VALUE WATCH",
       "terms": "Check current odds and each-way place terms. No paper bet recorded.",
       "selectionPublishedAt": "2026-10-13T08:48:55.902Z",
@@ -458,28 +414,6 @@
       "source": "Published racecards and earlier price references; refresh odds before use",
       "sourceUrl": "https://www.racingtv.com/racecards/2026-10-13/leicester/1539",
       "risk": "Surface and going switch in a big sprint; price reference only.",
-      "placeView": "SPECULATIVE E/W",
-      "terms": "Check current odds and each-way place terms. No paper bet recorded.",
-      "selectionPublishedAt": "2026-10-13T08:48:55.902Z",
-      "earlyOddsLockedAt": "2026-10-13T08:48:55.902Z"
-    },
-    {
-      "horse": "Spirit Of Jenny",
-      "course": "Leicester",
-      "time": "15:39",
-      "odds": "22/1",
-      "tier": "WATCH",
-      "confidenceTier": "RESEARCH ONLY · NOT CALIBRATED",
-      "summary": "Past Leicester six-furlong form and a better relative effective weight against Fenlander give a speculative case.",
-      "reason": "Past Leicester six-furlong form and a better relative effective weight against Fenlander give a speculative case.",
-      "positivePoints": [
-        "Relevant Leicester head-to-head",
-        "Better relative weight terms now",
-        "Previous six-furlong winning form"
-      ],
-      "source": "Published racecards and earlier price references; refresh odds before use",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-13/leicester/1539",
-      "risk": "Two poor recent runs; don't mistake old course form for current certainty.",
       "placeView": "SPECULATIVE E/W",
       "terms": "Check current odds and each-way place terms. No paper bet recorded.",
       "selectionPublishedAt": "2026-10-13T08:48:55.902Z",
@@ -581,8 +515,35 @@
     ]
   },
   "researchSelectionUpdate": {
-    "reviewedAt": "2026-10-13T08:48:55.902Z",
-    "status": "NEW_WIN_POLICY",
-    "note": "Current-day shortlist only. Snaafy excluded (non-runner), previous dated betting ledger untouched; no new paper stakes booked."
+    "reviewedAt": "2026-10-13T08:59:40.809Z",
+    "status": "SINGLE_SELECTION_PER_RACE_CLEANUP",
+    "note": "Removed overlapping current-day research runners Hostility (Oviedo race), Bay Breeze and Spirit Of Jenny (Sargent Dennis race); no historical paper bets amended. One NAP/NB label per featured horse."
+  },
+  "selectionPresentation": {
+    "rule": "ONE_SELECTION_PER_RACE",
+    "effectiveDate": "2026-10-13",
+    "selectionCount": 6,
+    "featuredRaceCount": 6,
+    "excludedAlternatives": [
+      {
+        "horse": "Hostility",
+        "course": "Leicester",
+        "time": "16:14",
+        "section": "midshotsToday"
+      },
+      {
+        "horse": "Bay Breeze",
+        "course": "Leicester",
+        "time": "15:39",
+        "section": "midshotsToday"
+      },
+      {
+        "horse": "Spirit Of Jenny",
+        "course": "Leicester",
+        "time": "15:39",
+        "section": "longshotsToday"
+      }
+    ],
+    "notes": "NAP/NB are designations on the selected WIN row, not separate repeated pick cards. Alternatives in the same race are removed from today's public picks; historical betting records remain unchanged."
   }
 }
