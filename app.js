@@ -393,6 +393,19 @@ function morningCheckPanel(){
  '<p>Newmarket: '+escapeHtml(review.going?.Newmarket||'going to confirm')+'. York: '+escapeHtml(review.going?.York||'going to confirm')+'. '+changes+'.</p>'+
  '<small>Morning selections are conditional: late non-runners, changing ground and bookmaker odds can alter suitability. Market strength is not a guaranteed win percentage.</small></section>';
 }
+// Retrospective diagnostic only: excluded runners never become selections,
+// and never enter the published paper-bet bankroll or strike-rate.
+function missedSelectionsReview(){
+ const review=state.data?.removedSelectionReview;
+ if(!review?.runners?.length)return '';
+ const rows=review.runners.map(x=>'<tr><td><strong>'+escapeHtml(x.horse)+'</strong><small style="display:block;color:var(--muted)">'+escapeHtml(x.course)+' · '+escapeHtml(x.time)+'</small></td>'+
+ '<td>'+escapeHtml(ordinal(x.position))+'</td><td>'+escapeHtml(x.sp||'—')+'</td>'+
+ '<td>'+escapeHtml(x.source)+'</td></tr>').join('');
+ return '<section class="panel" aria-label="Retrospective removed selection analysis"><h3>Removed candidates — results review</h3>'+
+ '<p>These horses were considered and removed before racing. They are <strong>not</strong> current selections, credited winners or paid paper bets. Their subsequent placings are recorded to evaluate our exclusions without rewriting the original shortlist.</p>'+
+ '<div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>Horse</th><th>Finish</th><th>SP</th><th>Verification</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+ '<p class="meta">One horse per featured race remains the rule. Outcomes reported by the user are labelled separately from independently verified racing results.</p></section>';
+}
 function today(){
  const d=state.data||{}, vetted=exclusiveSelectionGroups().todaySelections;
  const ranking=x=>x.winRank==='NAP'?0:x.winRank==='NB'?1:2;
@@ -403,7 +416,7 @@ function today(){
  '<p>One horse per race. NAP and NB are marked directly on their selection rows, with the positive evidence and the risks underneath. Race confidence is based on form and conditions, not price.</p></div>'+
  '<div class="quick-stats"><span><b>'+val(d.coverage?.races)+'</b> scheduled races</span>'+
  '<span><b>'+picks.length+'</b> WIN selections</span>'+(underReview?'<span><b>'+underReview+'</b> not displayed</span>':'')+'</div></section>'+
- (picks.length?'<div class="selection-list">'+picks.map(x=>selectionRow(x,"main")).join("")+'</div>':'<div class="panel"><p class="meta">No current contenders meet the published WIN evidence standard.</p></div>');
+ (picks.length?'<div class="selection-list">'+picks.map(x=>selectionRow(x,"main")).join("")+'</div>':'<div class="panel"><p class="meta">No current contenders meet the published WIN evidence standard.</p></div>')+missedSelectionsReview();
 }
 function midshots(){const d=state.data||{},ms=exclusiveSelectionGroups().midshotsToday;return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> unique race selections</span><span><b>6/1–18/1</b> reference price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No distinct mid-shot selection currently qualifies.") }
 function longshots(){const d=state.data||{},ls=exclusiveSelectionGroups().longshotsToday;return '<section class="page-intro long-intro"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p><div class="quick-stats"><span><b>'+ls.length+'</b> unique race selections</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum reference price</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No distinct longshot selection currently qualifies.") }
