@@ -1,0 +1,47 @@
+// Run: node --test tests/betting-returns.test.mjs
+// Regression checks for stake-inclusive pound-sterling paper returns.
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {settleEntry,settleTicket} from '../functions/_lib/backoffice-stats.mjs';
+
+const win=(odds,stake=10)=>({betType:'win',winStake:stake,placeStake:0,priceBasis:'early',selectionOdds:odds,result:{position:1}});
+const ew=(odds,position,runnerCount=10)=>({betType:'each-way',winStake:5,placeStake:5,priceBasis:'early',selectionOdds:odds,runnerCount,result:{position}});
+
+test('WIN stake × (numerator ÷ denominator + 1), including stake',()=>{
+ for(const [price,stake,expected] of [['1/1',10,20],['5/2',10,35],['4/1',10,50],['10/1',10,110],['20/1',5,105],['11/10',10,21],['15/8',10,28.75]]){
+  assert.equal(settleEntry(win(price,stake)).returns,expected,price);
+ }
+});
+
+test('favourite suffixes, penny rounding, malformed and ambiguous quotes',()=>{
+ for(const [price,expected] of [['9/4F',32.5],['6/4 jf',25],['Evens',20],['4/7',15.71],['8/11',17.27]]){
+  assert.equal(settleEntry(win(price)).returns,expected,price);
+ }
+ for(const quote of ['1/0','5/2–3/1','10/1 forecast']){
+  assert.equal(settleEntry(win(quote)).status,'unpriced');
+ }
+});
+
+test('legacy bets use a recorded final settlement quote where the initial quote was a range',()=>{
+ assert.deepEqual(settleEntry({...win('11/8–6/4'),priceBasis:undefined,settlementOdds:'11/8'}),{status:'won',returns:23.75});
+});
+
+test('each-way winners credit both win and quarter-odds place stakes',()=>{
+ assert.deepEqual(settleEntry(ew('10/1',1)),{status:'won',returns:72.5});
+ assert.deepEqual(settleEntry(ew('10/1',2)),{status:'placed',returns:17.5});
+ assert.deepEqual(settleEntry(ew('15/2',3)),{status:'placed',returns:14.38});
+ assert.deepEqual(settleEntry(ew('10/1',4)),{status:'lost',returns:0});
+});
+
+test('losers get £0 and non-runners are refunded',()=>{
+ assert.deepEqual(settleEntry({...win('3/1'),result:{position:2}}),{status:'lost',returns:0});
+ assert.deepEqual(settleEntry({...ew('11/1',2),result:{status:'NR'}}),{status:'void',returns:10});
+});
+
+test('Lucky 15 rounds each of 15 win and 15 place lines independently',()=>{
+ const ticket={totalStake:30,stakePerLinePerSide:1,eachWayFraction:.25,priceBasis:'early',
+  legs:Array.from({length:4},(_,i)=>({horse:'Runner '+i,selectionOdds:'1/1',runnerCount:10,result:{position:1}}))
+ };
+ assert.deepEqual(settleTicket(ticket),{status:'settled',stake:30,returns:104.6});
+ assert.equal(settleTicket({...ticket,legs:[...ticket.legs.slice(0,3),{...ticket.legs[3],result:null}]}).status,'open');
+});
