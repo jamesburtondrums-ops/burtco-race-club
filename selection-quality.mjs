@@ -1,30 +1,35 @@
-// Racing Intelligence: decision to feature a horse as a high-confidence WIN selection.
-// Horse/race evidence only: NO odds, favourite status, betting market rank, stakes,
-// stake returns, or betting popularity may influence this gate.
+// Editorial WIN shortlisting: independent horse/race evidence, never the betting price.
+// A credible contender may have manageable risks and one incompletely evidenced factor.
+// Previous paper bets and historical judgements are never reclassified retroactively.
 const coreFactors=['form','abilityClass','courseGoingTrip','opposition'];
 const supportFactors=['fitness','trainerJockey'];
-const isTime=t=>typeof t==='string'&&Number.isFinite(Date.parse(t))&&/(?:Z|[+-]\d{2}:\d{2})$/.test(t);
-const isUrl=u=>typeof u==='string'&&/^https:\/\/[^\s/]+\.[^\s/]+/.test(u);
+const isTime=t=>typeof t==='string'&&Number.isFinite(Date.parse(t))&&/(?:Z|[+-]\\d{2}:\\d{2})$/.test(t);
+const isUrl=u=>typeof u==='string'&&/^https:\/\/[^\\s/]+\\.[^\\s/]+/.test(u);
 const textOf=v=>typeof v==='string'?v.trim():'';
+const wellSupported=f=>f&&['strong','supported'].includes(f.grade)&&textOf(f.finding).length>=18&&isUrl(f.sourceUrl);
 export function assessWinConfidence(pick){
  const review=pick?.winAssessment;
  const fail=reason=>({qualified:false,reason,level:'UNASSESSED'});
- if(!review||review.decision!=='high-confidence')return fail('No completed high-confidence evidence assessment');
+ if(!review||review.decision!=='win-contender')return fail('No current, reviewed WIN contender assessment');
  const publishedAt=pick.selectionPublishedAt||pick.earlyOddsLockedAt;
  if(!isTime(publishedAt)||!isTime(review.reviewedAt)||Date.parse(review.reviewedAt)>Date.parse(publishedAt))
-  return fail('Evidence review was not frozen before the published selection');
- if(!Array.isArray(review.majorRisks))return fail('Unreviewed material risks');
- if(review.majorRisks.length>0)return fail('Material unresolved concern recorded');
- for(const factorName of [...coreFactors,...supportFactors]){
-  const factor=review.factors?.[factorName];
-  if(!factor)return fail('Missing '+factorName+' evidence');
-  const acceptable=coreFactors.includes(factorName)?factor.grade==='strong':['strong','supported'].includes(factor.grade);
-  if(!acceptable)return fail('Insufficient '+factorName+' evidence');
-  if(textOf(factor.finding).length<18||!isUrl(factor.sourceUrl)||!isTime(factor.checkedAt)||
-    Date.parse(factor.checkedAt)>Date.parse(review.reviewedAt))
-   return fail('Unverifiable or post-review '+factorName+' evidence');
- }
- return {qualified:true,reason:'Strong pre-publication evidence on ability, form, conditions and opposition with supported fitness and connections',level:'HIGH CONFIDENCE'};
+   return fail('Review not documented before or at publication');
+ if(!['low','moderate'].includes(review.riskSeverity)||!Array.isArray(review.riskNotes)||!review.riskNotes.length||review.riskNotes.some(r=>textOf(r).length<12))
+   return fail('Insufficient downside review');
+ if(review.hasCriticalUnknown===true||review.withdrawn===true)return fail('Critical risk or non-runner');
+ const f=review.factors||{};
+ // Present form and today's ground/surface/distance cannot be skipped.
+ if(!wellSupported(f.form)||!wellSupported(f.courseGoingTrip))
+   return fail('Current form or conditions unverified');
+ const supportedCore=coreFactors.filter(k=>wellSupported(f[k]));
+ if(supportedCore.length<3)return fail('Fewer than three of four core factors evidenced');
+ if(!supportFactors.some(k=>wellSupported(f[k])))return fail('Neither fitness nor trainer/jockey support evidenced');
+ const sources=[...coreFactors,...supportFactors].filter(k=>wellSupported(f[k])).map(k=>f[k].sourceUrl);
+ if(new Set(sources.map(u=>new URL(u).hostname.replace(/^www\\./,''))).size<2)
+   return fail('Independent evidence sources not established');
+ const strong=supportedCore.filter(k=>f[k].grade==='strong').length;
+ const level=strong>=3&&review.riskSeverity==='low'?'STRONG':'SOLID';
+ return {qualified:true,level,reason:'Evidence-backed WIN contender with disclosed '+review.riskSeverity+' risks; not a calibrated prediction',coreSupported:supportedCore.length};
 }
 // Intended as user-facing editorial text, not an auto-generated certainty claim.
 export function publicSummary(pick){
