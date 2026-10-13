@@ -1336,15 +1336,14 @@
     "source": "Sporting Life Full Results"
   },
   "lastManualResultSearch": {
-    "checkedAt": "2026-10-11T22:54:57.298Z",
-    "verifiedUpdates": 15,
+    "checkedAt": "2026-10-13T15:05:06.245Z",
+    "verifiedUpdates": 1,
+    "userReportedUpdates": 1,
     "dates": [
-      "2026-10-09",
-      "2026-10-10"
+      "2026-10-13"
     ],
-    "awaiting": [],
-    "source": "Racing TV and Racing Post weighed-in result pages",
-    "priceBasis": "Existing early odds locked; SP reference only"
+    "source": "Official Racing Post Leicester 13:24 plus user-reported Hereford 15:30",
+    "priceBasis": "published early prices, SP reference only"
   },
   "lucky15Tickets": [
     {
@@ -1774,15 +1773,5 @@
     "totalPaperStake": 30,
     "priceBasis": "published_early_reference",
     "source": "Three WIN selections published 13 Oct at 08:48:55Z; retrospectively recorded in paper ledger, no cash stakes"
-  },
-  "latestManualResultSearch": {
-    "checkedAt": "2026-10-13T15:05:06.245Z",
-    "verifiedUpdates": 1,
-    "userReportedUpdates": 1,
-    "dates": [
-      "2026-10-13"
-    ],
-    "source": "Official Racing Post Leicester 13:24 plus user-reported Hereford 15:30",
-    "priceBasis": "published early prices, SP reference only"
   }
 }
