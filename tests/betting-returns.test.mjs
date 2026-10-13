@@ -45,3 +45,30 @@ test('Lucky 15 rounds each of 15 win and 15 place lines independently',()=>{
  assert.deepEqual(settleTicket(ticket),{status:'settled',stake:30,returns:104.6});
  assert.equal(settleTicket({...ticket,legs:[...ticket.legs.slice(0,3),{...ticket.legs[3],result:null}]}).status,'open');
 });
+
+test('simulated BOG uses longer SP while preserving researched quote',()=>{
+ const king={...win('9/2'),settlementOdds:'6/1'};
+ assert.equal(king.selectionOdds,'9/2');
+ assert.deepEqual(settleEntry(king),{status:'won',returns:70});
+ assert.deepEqual(settleEntry({...win('3/1'),settlementOdds:'11/4'}),{status:'won',returns:40});
+ assert.deepEqual(settleEntry({...win('3/1'),settlementOdds:'11/4',result:{position:2}}),{status:'lost',returns:0});
+ assert.deepEqual(settleEntry({...win('11/10'),result:{position:1,sp:'11/8f'}}),{status:'won',returns:23.75});
+ assert.deepEqual(settleEntry({...win('4/1'),result:{position:1,sp:'3/1'}}),{status:'won',returns:50});
+});
+
+test('simulated BOG applies higher SP to both WIN and PLACE components of an E/W result',()=>{
+ assert.deepEqual(settleEntry({...ew('8/1',1),result:{position:1,sp:'12/1'}}),{status:'won',returns:85});
+ assert.deepEqual(settleEntry({...ew('8/1',2),result:{position:2,sp:'12/1'}}),{status:'placed',returns:20});
+});
+
+test('Lucky 15 accepts SP uplift only where it beats that leg\'s preserved quote',()=>{
+ const ticket={totalStake:30,stakePerLinePerSide:1,eachWayFraction:.25,priceBasis:'early',
+  legs:Array.from({length:4},(_,i)=>({horse:'Runner '+i,selectionOdds:'1/1',runnerCount:10,result:{position:1}}))
+ };
+ const base=settleTicket(ticket);
+ const higher={...ticket,legs:ticket.legs.map((x,i)=>i===0?{...x,result:{position:1,sp:'2/1'}}:x)};
+ const lower={...ticket,legs:ticket.legs.map((x,i)=>i===0?{...x,result:{position:1,sp:'4/5'}}:x)};
+ assert.equal(base.returns,104.6);
+ assert.equal(settleTicket(lower).returns,base.returns);
+ assert.ok(settleTicket(higher).returns>base.returns);
+});
