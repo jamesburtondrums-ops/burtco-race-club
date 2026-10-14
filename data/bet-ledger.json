@@ -1546,7 +1546,12 @@
       "runnerCount": 14,
       "placesPaid": 3,
       "terms": "£5 virtual WIN + £5 virtual PLACE; 1/4 odds top three when 8+ runners. Actual bookmaker place terms can differ.",
-      "result": null,
+      "result": {
+        "status": "NR",
+        "source": "Racing Post declared non-runner listing (17:22 Nottingham, 14 Oct 2026)",
+        "sourceUrl": "https://www.racingpost.com/racecards/40/nottingham/2026-10-14/928577/pro/",
+        "updatedAt": "2026-10-14T16:28:26.349Z"
+      },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.racingtv.com/racecards/2026-10-14/nottingham/1722",
       "paperOnly": true,
@@ -1566,14 +1571,14 @@
     "source": "Sporting Life Full Results"
   },
   "lastManualResultSearch": {
-    "checkedAt": "2026-10-14T15:31:01.264Z",
+    "checkedAt": "2026-10-14T16:28:26.349Z",
     "dates": [
       "2026-10-14"
     ],
-    "verifiedUpdates": 0,
-    "userReportedUpdates": 1,
-    "source": "User-reported Seeyainthesuninn winner Wetherby 16:20; SP pending official result",
-    "priceBasis": "Original 7/2 early quote; simulated BOG uplift only after a confirmed higher SP"
+    "verifiedUpdates": 1,
+    "source": "Racing Post confirmed Forever Glamorous NR; earlier independently verified and user-reported results remain stored on each bet.",
+    "priceBasis": "Simulated BOG for eligible settled runners; NR void with full £10 stake returned",
+    "previousCheck": "2026-10-14T15:31:01.264Z"
   },
   "lucky15Tickets": [
     {
