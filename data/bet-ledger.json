@@ -1401,17 +1401,18 @@
       "placeStake": 0,
       "selectionOdds": "7/2",
       "priceBasis": "early",
-      "settlementOdds": null,
+      "settlementOdds": "9/4 F",
       "ewFraction": null,
-      "runnerCount": 9,
+      "runnerCount": 8,
       "placesPaid": null,
       "terms": "£10 virtual WIN only; simulated BOG when later official SP is higher",
       "result": {
         "position": 1,
-        "status": "User reported",
-        "source": "User-reported Wetherby 16:20 winner; official result still awaiting classification at check time",
+        "status": "Weighed in",
+        "sp": "9/4 F",
+        "source": "HorseRacing.net weighed-in official Wetherby 16:20 result, winner by 2¾ lengths",
         "sourceUrl": "https://www.horseracing.net/results/wetherby/14-10-26",
-        "updatedAt": "2026-10-14T15:31:01.264Z"
+        "updatedAt": "2026-10-14T16:38:23.656Z"
       },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
