@@ -636,11 +636,13 @@
       },
       "result": {
         "position": 1,
-        "status": "Published classified first (official weighed-in indicator pending)",
+        "status": "Weighed in",
         "sp": "1/1 F",
-        "source": "HorseRacing.net published 17:30 Kempton result lists Gunfighter first at Evens F; race status still says Awaiting Results at observation",
-        "sourceUrl": "https://www.horseracing.net/results/kempton/14-10-26",
-        "updatedAt": "2026-10-14T16:45:59.102Z"
+        "source": "Racing TV 17:30 Kempton classified result",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-14/kempton-park/1730",
+        "updatedAt": "2026-10-14T17:25:11.393Z",
+        "winningMargin": "1¾ lengths",
+        "raceTime": "1m 40.19s"
       }
     }
   ],
@@ -929,9 +931,9 @@
   },
   "researchSelectionUpdate": {
     "reviewedAt": "2026-10-13T23:21:00.479Z",
-    "status": "OCT14_RESULTS_CENTURION_CONFIRMED_GUNFIGHTER_PENDING",
+    "status": "OCT14_GUNFIGHTER_VERIFIED",
     "note": "Published 14 Oct shortlist based on prior data. Previous 13 Oct results and exclusions preserved in paper ledger/repository history. No hindsight selection editing or invented model improvements. Four new user-provided outcomes logged; 3 independently confirmed, Magic Box second awaiting official final result. All picks' pre-race assessments retained.",
-    "lastResultsCheckAt": "2026-10-14T16:37:07.996Z"
+    "lastResultsCheckAt": "2026-10-14T17:25:11.393Z"
   },
   "resultVerification": {
     "checkedAt": "2026-10-14T16:45:59.102Z",
@@ -941,16 +943,16 @@
       "Guard Your Dreams pulled up at 100/30 F",
       "Forever Glamorous NR — 17:22 Nottingham (Racing Post)",
       "Centurion's Sister first at Wetherby 16:52; 13/8 F SP (HorseRacing.net)",
-      "Seeyainthesuninn Wetherby 16:20 winner, verified 9/4 F SP"
+      "Seeyainthesuninn Wetherby 16:20 winner, verified 9/4 F SP",
+      "Gunfighter winner 17:30 Kempton, SP 1/1 F - Racing TV"
     ],
     "userReported": [
       "Magic Box second, reported SP 14/1; price seen in published market"
     ],
     "pending": [
-      "Magic Box final classified finishing position",
-      "Gunfighter: published first at Evens F, weigh-in status indicator still pending"
+      "Magic Box final classified finishing position"
     ],
-    "scope": "Centurion's Sister independently confirmed. Gunfighter reported as winner before its scheduled off; cannot responsibly settle until a post-race official result confirms.",
+    "scope": "Gunfighter independently confirmed first by Racing TV. Previously recorded user outcomes have their own sources and verification states.",
     "publishedResults": [
       "Gunfighter 17:30 Kempton published first at Evens F"
     ]
