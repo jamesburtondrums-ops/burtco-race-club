@@ -677,7 +677,13 @@
         "Recent winning form at 5f",
         "Four top-three finishes in last six runs (235135)",
         "Competitive OR56 in a Class 6 sprint"
-      ]
+      ],
+      "result": {
+        "status": "NR",
+        "source": "Racing Post declared non-runner listing (17:22 Nottingham, 14 Oct 2026)",
+        "sourceUrl": "https://www.racingpost.com/racecards/40/nottingham/2026-10-14/928577/pro/",
+        "updatedAt": "2026-10-14T16:28:26.349Z"
+      }
     }
   ],
   "longshotsToday": [],
@@ -794,14 +800,15 @@
     "reviewedAt": "2026-10-13T23:21:00.479Z",
     "status": "PARTIAL_OCT14_RESULTS_UPDATE",
     "note": "Published 14 Oct shortlist based on prior data. Previous 13 Oct results and exclusions preserved in paper ledger/repository history. No hindsight selection editing or invented model improvements. Four new user-provided outcomes logged; 3 independently confirmed, Magic Box second awaiting official final result. All picks' pre-race assessments retained.",
-    "lastResultsCheckAt": "2026-10-14T15:30:45.117Z"
+    "lastResultsCheckAt": "2026-10-14T16:28:26.349Z"
   },
   "resultVerification": {
-    "checkedAt": "2026-10-14T15:30:45.117Z",
+    "checkedAt": "2026-10-14T16:28:26.349Z",
     "independentlyConfirmed": [
       "Viroflay non-runner",
       "Green Falcon winner at 5/2 JF",
-      "Guard Your Dreams pulled up at 100/30 F"
+      "Guard Your Dreams pulled up at 100/30 F",
+      "Forever Glamorous NR — 17:22 Nottingham (Racing Post)"
     ],
     "userReported": [
       "Magic Box second, reported SP 14/1; price seen in published market",
@@ -810,10 +817,11 @@
     "pending": [
       "Magic Box final classified finishing position",
       "Seeyainthesuninn official SP and weighed-in confirmation"
-    ]
+    ],
+    "scope": "Results remain individually attributable to their sources; Forever Glamorous independently confirmed NR."
   },
   "recentResultsLearning": {
-    "checkedAt": "2026-10-14T15:30:45.117Z",
+    "checkedAt": "2026-10-14T16:28:26.349Z",
     "note": "Prospectively frozen 14 October selections preserved, analysis updated AFTER results; these are not proven model improvements.",
     "observations": [
       "Green Falcon won the 2m Nottingham Colwick Cup by 2¾ lengths, a successful first attempt at 2m. Novel-trip uncertainty should be assessed separately from actual fitness and demonstrated stamina cues rather than serving as an automatic exclusion.",
@@ -821,7 +829,8 @@
       "Magic Box runner-up at reported 14/1 compared with saved early 6/1. Under ¼-odds top-three hypothetical terms, a £5 place leg returns £22.50; verify the official placing when accessible.",
       "Guard Your Dreams pulled up on ground that was officially changed to soft after Race 1 at Ffos Las. The seasonal absence and adverse going change support stronger day-of ground monitoring for first-run-after-break selections, without drawing a categorical conclusion from one result.",
       "Viroflay was a non-runner and must refund the £10 paper WIN stake; it is excluded from the win strike-rate denominator.",
-      "Seeyainthesuninn was reported winner at Wetherby 16:20 despite concerns about faster good-to-firm going; its recently proven three-mile trip and race fitness were the evidence-led positives. This single outcome should not erase the going concern in future analysis."
+      "Seeyainthesuninn was reported winner at Wetherby 16:20 despite concerns about faster good-to-firm going; its recently proven three-mile trip and race fitness were the evidence-led positives. This single outcome should not erase the going concern in future analysis.",
+      "Forever Glamorous was declared a non-runner for Nottingham 17:22 and the paper each-way stake is fully refunded. Exclude NR from both win and each-way performance denominators."
     ]
   }
 }
