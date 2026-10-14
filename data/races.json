@@ -323,7 +323,7 @@
       ],
       "source": "Published Racing TV and Racing Post racecards; observed pre-race odds",
       "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
-      "runnerCount": 9,
+      "runnerCount": 8,
       "or": 100,
       "going": "Good to firm, good in places",
       "distance": "3m26y",
@@ -386,11 +386,11 @@
       },
       "result": {
         "position": 1,
-        "status": "User reported",
-        "source": "User-reported winner on 14 October; HorseRacing.net public full result still displays awaiting results at check time",
+        "status": "Weighed in",
+        "sp": "9/4 F",
+        "source": "HorseRacing.net weighed-in official Wetherby 16:20 result, winner by 2¾ lengths",
         "sourceUrl": "https://www.horseracing.net/results/wetherby/14-10-26",
-        "updatedAt": "2026-10-14T15:30:45.117Z",
-        "sp": null
+        "updatedAt": "2026-10-14T16:38:23.656Z"
       }
     },
     {
@@ -811,22 +811,21 @@
     "lastResultsCheckAt": "2026-10-14T16:37:07.996Z"
   },
   "resultVerification": {
-    "checkedAt": "2026-10-14T16:37:07.996Z",
+    "checkedAt": "2026-10-14T16:38:23.656Z",
     "independentlyConfirmed": [
       "Viroflay non-runner",
       "Green Falcon winner at 5/2 JF",
       "Guard Your Dreams pulled up at 100/30 F",
       "Forever Glamorous NR — 17:22 Nottingham (Racing Post)",
-      "Centurion's Sister first at Wetherby 16:52; 13/8 F SP (HorseRacing.net)"
+      "Centurion's Sister first at Wetherby 16:52; 13/8 F SP (HorseRacing.net)",
+      "Seeyainthesuninn Wetherby 16:20 winner, verified 9/4 F SP"
     ],
     "userReported": [
       "Magic Box second, reported SP 14/1; price seen in published market",
-      "Seeyainthesuninn won Wetherby 16:20, SP not yet confirmed",
       "Gunfighter reported winner by user for Kempton 17:30; result unconfirmed and claim arrived before scheduled off"
     ],
     "pending": [
       "Magic Box final classified finishing position",
-      "Seeyainthesuninn official SP and weighed-in confirmation",
       "Gunfighter Kempton 17:30 official finishing order and SP; no paper settlement until verified"
     ],
     "scope": "Centurion's Sister independently confirmed. Gunfighter reported as winner before its scheduled off; cannot responsibly settle until a post-race official result confirms."
