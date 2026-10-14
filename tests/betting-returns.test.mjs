@@ -72,3 +72,21 @@ test('Lucky 15 accepts SP uplift only where it beats that leg\'s preserved quote
  assert.equal(settleTicket(lower).returns,base.returns);
  assert.ok(settleTicket(higher).returns>base.returns);
 });
+
+test('best documented bookmaker odds improve simulated WIN returns without rewriting researched quote',()=>{
+ const example={...win('7/4'),bestAvailableOdds:'2/1',settlementOdds:'1/1 F'};
+ assert.equal(example.selectionOdds,'7/4');
+ assert.deepEqual(settleEntry(example),{status:'won',returns:30});
+ assert.deepEqual(settleEntry({...win('15/8'),bestAvailableOdds:'2/1',settlementOdds:'13/8 F'}),{status:'won',returns:30});
+ assert.deepEqual(settleEntry({...win('7/2'),bestAvailableOdds:'9/4',settlementOdds:'9/4 F'}),{status:'won',returns:45});
+});
+test('best documented bookmaker odds on each-way place are used with paper terms',()=>{
+ const example={...ew('6/1',2),bestAvailableOdds:'18/1',settlementOdds:'14/1'};
+ assert.deepEqual(settleEntry(example),{status:'placed',returns:27.5});
+ const traditional={...example,ewFraction:.2};
+ assert.deepEqual(settleEntry(traditional),{status:'placed',returns:23});
+});
+test('a non-runner still refunds stake even when a better bookmaker quote exists',()=>{
+ const e={...ew('15/2',3),bestAvailableOdds:'11/1',result:{status:'NR'}};
+ assert.deepEqual(settleEntry(e),{status:'void',returns:10});
+});
