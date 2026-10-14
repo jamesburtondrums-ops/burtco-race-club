@@ -740,13 +740,14 @@
       ],
       "result": {
         "position": 2,
-        "status": "User reported",
+        "status": "Weighed in",
         "sp": "14/1",
-        "source": "User-reported runner-up; 14/1 corroborated on published Sporting Life price board, finishing place not yet independently verified",
-        "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-14/nottingham/live-show/943406/conference-and-events-at-nottingham-racecourse-handicap-div-1",
+        "source": "Sporting Life official result, 16:14 Nottingham (2nd of 10)",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-14/nottingham/943406/conference-and-events-at-nottingham-racecourse-handicap-div-1",
         "actualGoing": "Good to soft",
         "runnerCount": 10,
-        "updatedAt": "2026-10-14T15:27:00.175Z"
+        "updatedAt": "2026-10-14T17:32:28.864Z",
+        "verifiedAt": "2026-10-14T17:32:28.864Z"
       },
       "bestAvailableOdds": {
         "odds": "18/1",
@@ -933,10 +934,10 @@
     "reviewedAt": "2026-10-13T23:21:00.479Z",
     "status": "OCT14_GUNFIGHTER_VERIFIED",
     "note": "Published 14 Oct shortlist based on prior data. Previous 13 Oct results and exclusions preserved in paper ledger/repository history. No hindsight selection editing or invented model improvements. Four new user-provided outcomes logged; 3 independently confirmed, Magic Box second awaiting official final result. All picks' pre-race assessments retained.",
-    "lastResultsCheckAt": "2026-10-14T17:25:11.393Z"
+    "lastResultsCheckAt": "2026-10-14T17:32:28.864Z"
   },
   "resultVerification": {
-    "checkedAt": "2026-10-14T16:45:59.102Z",
+    "checkedAt": "2026-10-14T17:32:28.864Z",
     "independentlyConfirmed": [
       "Viroflay non-runner",
       "Green Falcon winner at 5/2 JF",
@@ -944,15 +945,12 @@
       "Forever Glamorous NR — 17:22 Nottingham (Racing Post)",
       "Centurion's Sister first at Wetherby 16:52; 13/8 F SP (HorseRacing.net)",
       "Seeyainthesuninn Wetherby 16:20 winner, verified 9/4 F SP",
-      "Gunfighter winner 17:30 Kempton, SP 1/1 F - Racing TV"
+      "Gunfighter winner 17:30 Kempton, SP 1/1 F - Racing TV",
+      "Magic Box 2nd at Nottingham 16:14, 14/1 SP (Sporting Life)"
     ],
-    "userReported": [
-      "Magic Box second, reported SP 14/1; price seen in published market"
-    ],
-    "pending": [
-      "Magic Box final classified finishing position"
-    ],
-    "scope": "Gunfighter independently confirmed first by Racing TV. Previously recorded user outcomes have their own sources and verification states.",
+    "userReported": [],
+    "pending": [],
+    "scope": "All eight 14 October shortlisted runners have source-verified outcomes; early quotes remain unchanged.",
     "publishedResults": [
       "Gunfighter 17:30 Kempton published first at Evens F"
     ]
@@ -1044,5 +1042,107 @@
       }
     ],
     "caveat": "Prices retrieved retrospectively after racing. This is a best-available-market hypothetical, not a contemporaneously accepted bet. Archived bookmaker offers not independently guaranteed executable or BOG eligible."
+  },
+  "previousDayResultsReview": {
+    "date": "2026-10-13",
+    "verifiedAt": "2026-10-14T17:32:28.864Z",
+    "sourceName": "Sporting Life weighed-in full results",
+    "selected": [
+      {
+        "horse": "King Of Persia",
+        "course": "Leicester",
+        "time": "13:24",
+        "category": "WIN",
+        "position": 1,
+        "sp": "6/1",
+        "earlyOdds": "9/2",
+        "paperBetRecorded": true,
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943874/every-race-live-on-racing-tv-nursery"
+      },
+      {
+        "horse": "Donnie Azoff",
+        "course": "Hereford",
+        "time": "15:30",
+        "category": "WIN",
+        "position": 2,
+        "sp": "11/4",
+        "earlyOdds": "3/1",
+        "paperBetRecorded": true,
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/hereford/943160/bettingbet-free-bets-handicap-hurdle"
+      },
+      {
+        "horse": "Oviedo",
+        "course": "Leicester",
+        "time": "16:14",
+        "category": "WIN",
+        "position": 5,
+        "sp": "2/1f",
+        "earlyOdds": "2/1",
+        "paperBetRecorded": true,
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943182/christmas-parties-at-leicester-racecourse-book-now-handicap"
+      },
+      {
+        "horse": "Sargent Dennis",
+        "course": "Leicester",
+        "time": "15:39",
+        "category": "Longshot",
+        "position": 9,
+        "sp": "18/1",
+        "earlyOdds": "22/1",
+        "paperBetRecorded": false,
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943181/join-racing-tv-now-handicap"
+      },
+      {
+        "horse": "Kodi Lion",
+        "course": "Leicester",
+        "time": "16:47",
+        "category": "Midshot",
+        "position": 5,
+        "sp": "7/1",
+        "earlyOdds": "9/1",
+        "paperBetRecorded": false,
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943183/happy-80th-reg-ling-handicap"
+      },
+      {
+        "horse": "Charles Morin",
+        "course": "Wolverhampton",
+        "time": "20:30",
+        "category": "Midshot",
+        "position": 5,
+        "sp": "22/1",
+        "earlyOdds": "18/1",
+        "paperBetRecorded": false,
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/wolverhampton/943177/cavani-raceday-style-handicap"
+      }
+    ],
+    "removed": [
+      {
+        "horse": "Notimetotakeoff",
+        "course": "Leicester",
+        "time": "13:24",
+        "position": 3,
+        "sp": "11/2",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943874/every-race-live-on-racing-tv-nursery"
+      },
+      {
+        "horse": "Dashing Dick",
+        "course": "Leicester",
+        "time": "15:39",
+        "position": 2,
+        "sp": "5/1",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943181/join-racing-tv-now-handicap"
+      },
+      {
+        "horse": "Fenlander",
+        "course": "Leicester",
+        "time": "15:39",
+        "position": 3,
+        "sp": "13/2",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943181/join-racing-tv-now-handicap"
+      }
+    ],
+    "summary": "13 October: 1 winner (King Of Persia) from 6 featured selections; 1 winner from 3 WIN picks. Donnie Azoff finished second; remaining four featured runners unplaced. Three excluded runners placed across two races, which is diagnostic only — no paper bets were retrospectively added.",
+    "sourceLandingUrl": "https://www.sportinglife.com/racing/results/yesterday",
+    "evidenceNote": "Official Sporting Life results cross-checked against the original featured Oct13 candidates. Only 3 WIN picks had pre-existing £10 paper bets; the 3 mid/long watch runners were not placed as hypothetical ledger bets."
   }
 }
