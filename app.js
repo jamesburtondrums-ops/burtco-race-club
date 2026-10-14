@@ -42,24 +42,24 @@ function decimalOdds(s){
  return null;
 }
 const gbp=n=>Math.round((n+Number.EPSILON)*100)/100;
-// Paper-only best-odds-guaranteed assumption, not proof a bookmaker accepted a bet.
-// Keep immutable early selectionOdds. For dated early quotes, use a longer recorded
-// starting price if available; otherwise retain the early price.
-// Legacy bets without a definite early quote still use their recorded settlement odds.
-function appliedPrice(early,starting,priceBasis){
- const original=decimalOdds(early);
- const sp=decimalOdds(starting);
+// Best documented paper price across preserved early quote, bookmaker market
+// comparison and later SP. This is a hypothetical, NOT an accepted bookmaker bet.
+// For live cards the bookmaker observations must be dated and sourced.
+function appliedPrice(early,starting,priceBasis,bestAvailable=null){
+ const original=decimalOdds(early),sp=decimalOdds(starting),best=decimalOdds(bestAvailable);
  if(priceBasis==='early'){
   if(original===null)return {odds:null,label:null,improved:false};
-  return sp!==null&&sp>original?
-   {odds:sp,label:String(starting).trim(),improved:true}:
-   {odds:original,label:String(early).trim(),improved:false};
+  const candidates=[{odds:original,label:String(early).trim(),source:'early'},
+   {odds:sp,label:String(starting||'').trim(),source:'SP'},
+   {odds:best,label:String(bestAvailable||'').trim(),source:'bookmaker'}].filter(x=>x.odds!==null);
+  candidates.sort((a,b)=>b.odds-a.odds);
+  return {...candidates[0],improved:candidates[0].odds>original};
  }
- return sp!==null?{odds:sp,label:String(starting).trim(),improved:false}:
-  {odds:original,label:original!==null?String(early).trim():null,improved:false};
+ return sp!==null?{odds:sp,label:String(starting).trim(),source:'legacy',improved:false}:
+  {odds:original,label:original!==null?String(early).trim():null,source:'legacy',improved:false};
 }
 function entryPrice(entry){
- return appliedPrice(entry.selectionOdds,entry.settlementOdds||entry.result?.sp,entry.priceBasis);
+ return appliedPrice(entry.selectionOdds,entry.settlementOdds||entry.result?.sp,entry.priceBasis,entry.bestAvailableOdds);
 }
 
 function positionOf(e){
@@ -224,7 +224,7 @@ function lucky15Calc(ticket){
   const result=p?.result||leg.result||null;
   const count=Number(p?.runnerCount||leg.runnerCount)||null;
   const places=count?(count<=4?1:count<=7?2:3):null;
-  const odds=appliedPrice(leg.selectionOdds,leg.settlementOdds||result?.sp,ticket.priceBasis==='early'||leg.priceBasis==='early'?'early':ticket.priceBasis).odds;
+  const odds=appliedPrice(leg.selectionOdds,leg.settlementOdds||result?.sp,ticket.priceBasis==='early'||leg.priceBasis==='early'?'early':ticket.priceBasis,leg.bestAvailableOdds).odds;
   const pos=Number(result?.position)||null;
   const status=String(result?.status||'');
   let win=null,place=null;
@@ -277,12 +277,12 @@ function lucky15Page(){
   const label=confidence;
   const placeCount=leg.places?'Top '+leg.places+' paid places':'Final runner count pending';
   const result=leg.result?.position?ordinal(leg.result.position):escapeHtml(leg.result?.status||'Awaiting race');
-  const applied=appliedPrice(leg.selectionOdds,leg.settlementOdds||leg.result?.sp,ticket.priceBasis==='early'||leg.priceBasis==='early'?'early':ticket.priceBasis);
+  const applied=appliedPrice(leg.selectionOdds,leg.settlementOdds||leg.result?.sp,ticket.priceBasis==='early'||leg.priceBasis==='early'?'early':ticket.priceBasis,leg.bestAvailableOdds);
   const later=leg.settlementOdds||leg.result?.sp;
   return '<div class="l15-leg"><b>'+(i+1)+'</b><div><strong>'+escapeHtml(leg.horse)+'</strong>'+
    '<small>'+escapeHtml(leg.course)+' · '+escapeHtml(leg.time)+' · '+placeCount+'</small>'+
    '<small class="'+(isNearPrime?'l15-near-prime':'l15-value')+'">'+escapeHtml(label)+'</small></div>'+
-   '<div><strong>'+escapeHtml(leg.selectionOdds)+'</strong><small>'+result+'</small>'+
+   '<div><strong>'+escapeHtml(applied.label||leg.selectionOdds)+'</strong><small>'+result+'</small>'+
    (later?'<small>SP '+escapeHtml(later)+'</small>':'')+
    (applied.improved?'<small>BOG '+escapeHtml(applied.label)+'</small>':'')+'</div></div>'+
    '<details class="l15-leg-research"><summary>Positive evidence for '+escapeHtml(leg.horse)+'</summary>'+
@@ -329,7 +329,7 @@ function tracker(){
  '<div><span>Win strike rate</span><strong>'+rate(winRate)+'</strong><small>'+stats.winCount+' winners from '+stats.known+' known outcomes</small></div>'+
  '<div><span>Each-way place rate</span><strong>'+rate(ewRate)+'</strong><small>'+stats.ewPlaced+' placed from '+stats.ewKnown+' known E/W outcomes</small></div>'+
  '</div><div class="tracker-bottom"><div><span>Running bank after settled bets:</span> <b>'+money(settledBank)+'</b></div><div><span>Outstanding / unpriced stakes:</span> <b>'+money(stats.openStake+combos.pendingStake)+'</b></div><div><span>Today’s strike rate:</span> <b>'+today+'</b></div></div>'+
- '<p class="tracker-footnote">Total stakes '+money(stats.totalStake+combos.stake)+' (including '+money(combos.stake)+' Lucky 15) · Credited returns '+money(stats.totalReturn+combos.returns)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Paper bets dated 9 October onward use the better of the saved researched quote and recorded SP (simulated Best Odds Guaranteed). Legacy bets without a definite early quote retain recorded SP. Actual bookmaker eligibility and concessions differ. All credited returns include the original stake. Paper tracking only.</p>'+
+ '<p class="tracker-footnote">Total stakes '+money(stats.totalStake+combos.stake)+' (including '+money(combos.stake)+' Lucky 15) · Credited returns '+money(stats.totalReturn+combos.returns)+' · Non-runners refunded. Each-way returns: ¼ odds, 1 paid place for 1–4 runners, 2 for 5–7, and 3 for 8+. Only confirmed results count toward strike rates; missing prices or field sizes remain unresolved. Paper returns use the highest documented pre-race researched quote, subsequently sourced bookmaker offer or reported SP. Actual execution, BOG qualification and bookmaker each-way terms are NOT verified. Original research quotes remain unchanged. All credited returns include original stake. Historical paper simulations only.</p>'+
  '</section>';
 }
 function liveStatus(){
@@ -396,13 +396,14 @@ function selectionRow(x,type){
  const chosen=bet?entryPrice(bet):null;
  const betLine=bet?'<div class="bet-line"><b>Paper bet: '+(bet.betType==="win"?"£10 WIN":"£5 E/W (£10 total)")+'</b><span>Early price: '+escapeHtml(val(bet.selectionOdds))+'</span>'+
  (bet.settlementOdds||bet.result?.sp?'<span>Reported SP: '+escapeHtml(val(bet.settlementOdds||bet.result.sp))+'</span>':'')+
- (chosen?.label?'<span>Return calculated at: '+escapeHtml(chosen.label)+(chosen.improved?' (BOG)':'')+'</span>':'')+
+ (bet.bestAvailableOdds?'<span>Best documented bookmaker price: '+escapeHtml(bet.bestAvailableOdds)+'</span>':'')+
+ (chosen?.label?'<span>Return calculated at: '+escapeHtml(chosen.label)+(chosen.improved?' (best available)':'')+'</span>':'')+
  '<span>'+(profit!==null?'Return '+money(settled.returnAmount)+' · P/L '+(profit>=0?'+':'')+money(profit):'Settlement pending / terms unverified')+'</span></div>':'';
 
  return '<details class="selection-row" data-key="'+k+'"><summary class="selection-summary">'+
    '<div class="selection-time">'+val(x.time)+'</div>'+
    '<div class="selection-main"><div class="selection-name-line"><strong>'+val(x.horse)+'</strong>'+summaryBadges(x,type)+'</div><span>'+val(x.course)+'</span></div>'+
-   '<div class="selection-odds"><span>'+(x.currentOdds?'Morning range':'Quoted odds')+'</span><strong>'+val(x.currentOdds||x.odds)+'</strong></div>'+
+   '<div class="selection-odds"><span>'+((x.result?.status==='NR')?'Non-runner':'Best documented odds')+'</span><strong>'+escapeHtml((x.result?.status==='NR')?'NR':((bet&&entryPrice(bet).label)||x.bestAvailableOdds?.odds||x.currentOdds||x.odds))+'</strong></div>'+
    '<div class="selection-result">'+resultBadge(x)+'</div>'+
    '<div class="selection-chevron">⌄</div>'+brief+
  '</summary><div class="selection-details">'+betLine+typeStars+special+commonDetails(x)+
