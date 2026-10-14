@@ -1342,12 +1342,18 @@
       "placeStake": 0,
       "selectionOdds": "4/1",
       "priceBasis": "early",
-      "settlementOdds": null,
+      "settlementOdds": "100/30 F",
       "ewFraction": null,
-      "runnerCount": 9,
+      "runnerCount": 8,
       "placesPaid": null,
       "terms": "£10 virtual WIN only; simulated BOG when later official SP is higher",
-      "result": null,
+      "result": {
+        "status": "PU",
+        "sp": "100/30 F",
+        "source": "HorseRacing.net full weighed-in result 14:55 Ffos Las",
+        "sourceUrl": "https://www.horseracing.net/results/ffos-las/14-10-26",
+        "updatedAt": "2026-10-14T15:27:24.745Z"
+      },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1455",
       "paperOnly": true,
@@ -1371,7 +1377,12 @@
       "runnerCount": 9,
       "placesPaid": null,
       "terms": "£10 virtual WIN only; simulated BOG when later official SP is higher",
-      "result": null,
+      "result": {
+        "status": "NR",
+        "source": "Racing Post 14 October non-runners",
+        "sourceUrl": "https://www.racingpost.com/non-runners/",
+        "updatedAt": "2026-10-14T15:27:24.745Z"
+      },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1605",
       "paperOnly": true,
@@ -1462,12 +1473,19 @@
       "placeStake": 5,
       "selectionOdds": "13/2",
       "priceBasis": "early",
-      "settlementOdds": null,
+      "settlementOdds": "5/2 JF",
       "ewFraction": 0.25,
-      "runnerCount": 11,
+      "runnerCount": 10,
       "placesPaid": 3,
       "terms": "£5 virtual WIN + £5 virtual PLACE; 1/4 odds top three when 8+ runners. Actual bookmaker place terms can differ.",
-      "result": null,
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "5/2 JF",
+        "source": "Sporting Life full result",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-14/nottingham/943405/colwick-cup-handicap-gbbplus-race",
+        "updatedAt": "2026-10-14T15:27:24.745Z"
+      },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.bethq.com/horse-racing/uk/nottingham/2026-10-14/15h39/",
       "paperOnly": true,
@@ -1486,12 +1504,19 @@
       "placeStake": 5,
       "selectionOdds": "6/1",
       "priceBasis": "early",
-      "settlementOdds": null,
+      "settlementOdds": "14/1",
       "ewFraction": 0.25,
       "runnerCount": 10,
       "placesPaid": 3,
       "terms": "£5 virtual WIN + £5 virtual PLACE; 1/4 odds top three when 8+ runners. Actual bookmaker place terms can differ.",
-      "result": null,
+      "result": {
+        "position": 2,
+        "status": "User reported",
+        "sp": "14/1",
+        "source": "User result: 2nd; published Sporting Life price board confirms 14/1, awaiting official weighed-in classification",
+        "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-14/nottingham/live-show/943406/conference-and-events-at-nottingham-racecourse-handicap-div-1",
+        "updatedAt": "2026-10-14T15:27:24.745Z"
+      },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.bethq.com/horse-racing/uk/nottingham/2026-10-14/16h14/",
       "paperOnly": true,
@@ -1535,13 +1560,14 @@
     "source": "Sporting Life Full Results"
   },
   "lastManualResultSearch": {
-    "checkedAt": "2026-10-13T23:11:36.807Z",
-    "verifiedUpdates": 1,
+    "checkedAt": "2026-10-14T15:27:24.745Z",
     "dates": [
-      "2026-10-13"
+      "2026-10-14"
     ],
-    "source": "Oviedo fifth at Leicester 16:14 independently verified against Racing Post and Sporting Life; other results not reverified",
-    "priceBasis": "BOG simulation; original early price preserved"
+    "verifiedUpdates": 3,
+    "userReportedUpdates": 1,
+    "source": "Sporting Life Green Falcon official Nottingham 15:39; HorseRacing.net Guard Your Dreams 14:55; Racing Post Viroflay NR; user Magic Box runner-up with published 14/1 quote",
+    "priceBasis": "Simulated BOG: higher of original recorded early price versus later SP for individually settled entries"
   },
   "lucky15Tickets": [
     {
