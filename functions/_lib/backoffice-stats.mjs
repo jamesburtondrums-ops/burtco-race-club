@@ -9,18 +9,22 @@ const price=s=>{
  if(m){const n=Number(m[1]),d=Number(m[2]);return d>0&&Number.isFinite(n/d)?1+n/d:null}
  return /^(?:evens?|evs)(?:\s*(?:f|jf|fav|favourite|joint[- ]favourite))?$/i.test(v)?2:null;
 };
-// Simulated paper BOG: preserve the original early price and use the reported SP
-// only when it is longer. This makes no claim of eligibility for a real bookmaker.
-function appliedPrice(early,starting,priceBasis){
- const original=price(early),sp=price(starting);
+// Documented hypothetical return: highest of saved pre-race research quote,
+// sourced bookmaker comparison price and reported SP; original quote is immutable.
+// A bookmaker quote observed in hindsight does not show a bet was accepted there.
+// Unambiguous legacy settlements continue to follow their original policy.
+function appliedPrice(early,starting,priceBasis,bestAvailable=null){
+ const original=price(early),sp=price(starting),best=price(bestAvailable);
  if(priceBasis==='early'){
   if(original===null)return {odds:null,label:null,improved:false};
-  return sp!==null&&sp>original?
-   {odds:sp,label:String(starting).trim(),improved:true}:
-   {odds:original,label:String(early).trim(),improved:false};
+  const options=[{odds:original,label:String(early).trim(),source:'early'},
+   {odds:sp,label:String(starting||'').trim(),source:'SP'},
+   {odds:best,label:String(bestAvailable||'').trim(),source:'bookmaker'}].filter(x=>x.odds!==null);
+  options.sort((a,b)=>b.odds-a.odds);
+  return {...options[0],improved:options[0].odds>original};
  }
- return sp!==null?{odds:sp,label:String(starting).trim(),improved:false}:
-  {odds:original,label:original!==null?String(early).trim():null,improved:false};
+ return sp!==null?{odds:sp,label:String(starting).trim(),source:'legacy',improved:false}:
+  {odds:original,label:original!==null?String(early).trim():null,source:'legacy',improved:false};
 }
 const position=e=>{
  const x=e.result?.position??e.result?.place;const n=Number(x);
@@ -40,7 +44,7 @@ export function settleEntry(entry){
  const count=number(entry.runnerCount);
  const places=count>0?(count<=4?1:count<=7?2:3):(number(entry.placesPaid)||null);
  if(entry.betType==='each-way'&&(places!==null?pos>places:pos>3))return {status:'lost',returns:0};
- const odds=appliedPrice(entry.selectionOdds,entry.settlementOdds||r.sp,entry.priceBasis).odds;
+ const odds=appliedPrice(entry.selectionOdds,entry.settlementOdds||r.sp,entry.priceBasis,entry.bestAvailableOdds).odds;
  if(!odds)return {status:'unpriced',returns:0};
  if(entry.betType==='win')return {status:'won',returns:fixed(number(entry.winStake)*odds)};
  if(!places)return {status:'unpriced',returns:0};
@@ -56,7 +60,7 @@ function ticketLegValue(leg,ticket){
  if(nr(status))return {win:1,place:1};
  const pos=position({result:r});
  const count=number(leg.runnerCount),places=count?(count<=4?1:count<=7?2:3):null;
- const odds=appliedPrice(leg.selectionOdds,leg.settlementOdds||r?.sp,ticket.priceBasis==='early'||leg.priceBasis==='early'?'early':ticket.priceBasis).odds;
+ const odds=appliedPrice(leg.selectionOdds,leg.settlementOdds||r?.sp,ticket.priceBasis==='early'||leg.priceBasis==='early'?'early':ticket.priceBasis,leg.bestAvailableOdds).odds;
  if(pos>3||(pos&&places&&pos>places))return {win:0,place:0};
  if(pos&&places&&odds)return {win:pos===1?odds:0,place:pos<=places?1+(odds-1)*(number(ticket.eachWayFraction)||.25):0};
  if(dnf(status))return {win:0,place:0};
