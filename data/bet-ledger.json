@@ -1259,9 +1259,10 @@
         "position": 1,
         "status": "Weighed in",
         "sp": "6/1",
-        "source": "Racing TV / Sporting Life / Racing Post result",
-        "sourceUrl": "https://www.racingpost.com/results/30/leicester/2026-10-13/928570/",
-        "updatedAt": "2026-10-13T15:04:03.134Z"
+        "source": "Sporting Life official full result",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943874/every-race-live-on-racing-tv-nursery",
+        "updatedAt": "2026-10-13T15:04:03.134Z",
+        "verifiedAt": "2026-10-14T17:31:43.049Z"
       },
       "earlyPriceSnapshotAt": "2026-10-13T08:48:55.902Z",
       "earlyPriceSource": "https://www.timeform.com/horse-racing/odds/leicester/2026-10-13/1324/29/1",
@@ -1288,10 +1289,12 @@
       "terms": "£10 virtual WIN single at previously published reference quote, not an actual bet",
       "result": {
         "position": 2,
-        "status": "User reported",
+        "status": "Weighed in",
         "sp": "11/4",
-        "source": "User-reported second place and SP; independent result still being confirmed",
-        "updatedAt": "2026-10-13T15:04:03.134Z"
+        "source": "Sporting Life official full result",
+        "updatedAt": "2026-10-13T15:04:03.134Z",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/hereford/943160/bettingbet-free-bets-handicap-hurdle",
+        "verifiedAt": "2026-10-14T17:31:43.049Z"
       },
       "earlyPriceSnapshotAt": "2026-10-13T08:48:55.902Z",
       "earlyPriceSource": "https://www.timeform.com/horse-racing/odds/hereford/2026-10-13/1530/23/4",
@@ -1311,7 +1314,7 @@
       "placeStake": 0,
       "selectionOdds": "2/1",
       "priceBasis": "early",
-      "settlementOdds": "2/1F",
+      "settlementOdds": "2/1f",
       "ewFraction": null,
       "runnerCount": 9,
       "placesPaid": null,
@@ -1319,10 +1322,11 @@
       "result": {
         "position": 5,
         "status": "Weighed in",
-        "sp": "2/1F",
-        "source": "Racing Post and Sporting Life full results",
-        "sourceUrl": "https://www.racingpost.com/results/30/leicester/2026-10-13/928567/",
-        "updatedAt": "2026-10-13T23:11:36.807Z"
+        "sp": "2/1f",
+        "source": "Sporting Life official full result",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943182/christmas-parties-at-leicester-racecourse-book-now-handicap",
+        "updatedAt": "2026-10-13T23:11:36.807Z",
+        "verifiedAt": "2026-10-14T17:31:43.049Z"
       },
       "earlyPriceSnapshotAt": "2026-10-13T08:48:55.902Z",
       "earlyPriceSource": "https://www.timeform.com/horse-racing/odds/leicester/2026-10-13/1614/29/6",
@@ -1650,11 +1654,12 @@
       "terms": "£5 virtual WIN + £5 virtual PLACE; 1/4 odds top three when 8+ runners. Actual bookmaker place terms can differ.",
       "result": {
         "position": 2,
-        "status": "User reported",
+        "status": "Weighed in",
         "sp": "14/1",
-        "source": "User result: 2nd; published Sporting Life price board confirms 14/1, awaiting official weighed-in classification",
-        "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-14/nottingham/live-show/943406/conference-and-events-at-nottingham-racecourse-handicap-div-1",
-        "updatedAt": "2026-10-14T15:27:24.745Z"
+        "source": "Sporting Life official full result",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-14/nottingham/943406/conference-and-events-at-nottingham-racecourse-handicap-div-1",
+        "updatedAt": "2026-10-14T15:27:24.745Z",
+        "verifiedAt": "2026-10-14T17:31:43.049Z"
       },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.bethq.com/horse-racing/uk/nottingham/2026-10-14/16h14/",
@@ -1743,13 +1748,14 @@
     "source": "Sporting Life Full Results"
   },
   "lastManualResultSearch": {
-    "checkedAt": "2026-10-14T17:25:11.393Z",
+    "checkedAt": "2026-10-14T17:31:43.049Z",
     "dates": [
+      "2026-10-13",
       "2026-10-14"
     ],
-    "verifiedUpdates": 1,
-    "source": "Racing TV official classified 17:30 Kempton result: Gunfighter 1st of 10, 1/1F SP",
-    "priceBasis": "Paper £10 WIN remains at original 7/4 pre-race recorded quote, better than 1/1 SP. Later 2/1 price snapshot separately archived but not proven as accepted virtual stake."
+    "verifiedUpdates": 4,
+    "source": "Sporting Life weighed-in results: verified 13 Oct WIN outcomes, Magic Box 14 Oct second and official 14/1 SP",
+    "priceBasis": "Saved original early quote and independently sourced SP; simulated best documented odds retained"
   },
   "lucky15Tickets": [
     {
