@@ -66,6 +66,17 @@ test('a Lucky 15 is never falsely labelled prepared with fewer than four valid l
  }else assert.equal(card.lucky15Only?.length||0,0);
 });
 
-test('prospective data does not include settled race results for the publication day',()=>{
- for(const x of all)assert.ok(!x.result?.position,'future result leaked into pre-race selection '+x.horse);
+test('post-race updates preserve pre-race evidence and carry result provenance',()=>{
+ for(const x of all){
+  const publishedAt=Date.parse(x.selectionPublishedAt);
+  assert.ok(Number.isFinite(publishedAt),'missing original selection date '+x.horse);
+  if(!x.result)continue;
+  assert.ok(Date.parse(x.result.updatedAt)>publishedAt,'result predates original publication '+x.horse);
+  assert.ok(x.result.source,'missing result source '+x.horse);
+  const type=x.group==='todaySelections'?'win':'each-way';
+  const entry=ledger.entries.find(e=>e.date===card.snapshotDate&&e.course===x.course&&e.time===x.time&&e.horse===x.horse&&e.betType===type);
+  assert.ok(entry,'result without corresponding saved paper entry '+x.horse);
+  assert.equal(entry.selectionOdds,x.odds,'original price was overwritten for '+x.horse);
+  assert.equal(entry.result?.position??entry.result?.status,x.result.position??x.result.status,'result mismatch for '+x.horse);
+ }
 });
