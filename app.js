@@ -472,7 +472,8 @@ function history(){
    (result?.source?'<p>Result source: '+escapeHtml(result.source)+'</p>':'')+
    (result?.sourceUrl?'<a href="'+escapeHtml(result.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Verify published result ↗</a>':'')+'</div></details>';
  }).join('');
- return intro+'<div class="history-list">'+(rows||'<div class="panel">No recorded bets yet.</div>')+'</div>';
+ const archive=(state.ledger?.researchWatchHistory||[]).map(x=>'<section class="panel"><h3>'+escapeHtml(x.date)+' Verified results review</h3><p>'+escapeHtml(x.summary)+'</p><p>'+x.selected.map(p=>escapeHtml(p.horse)+' '+ordinal(p.position)+' ('+escapeHtml(p.sp)+' SP)').join(' · ')+'</p><small>Removed candidates are research-only; excluded from paper profit.</small></section>').join('');
+ return intro+archive+'<div class="history-list">'+(rows||'<div class="panel">No recorded bets yet.</div>')+'</div>';
 }
 
 function allRunners(){
