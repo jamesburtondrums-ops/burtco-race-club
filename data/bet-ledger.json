@@ -1546,11 +1546,14 @@
       "terms": "£10 virtual WIN only; simulated BOG when later official SP is higher",
       "result": {
         "position": 1,
-        "status": "Published classified first (official weighed-in indicator pending)",
+        "status": "Weighed in",
         "sp": "1/1 F",
-        "source": "HorseRacing.net published 17:30 Kempton result lists Gunfighter first at Evens F; race status still says Awaiting Results at observation",
-        "sourceUrl": "https://www.horseracing.net/results/kempton/14-10-26",
-        "updatedAt": "2026-10-14T16:45:59.102Z"
+        "source": "Racing TV classified full result, 17:30 Kempton 14 October 2026 (10 runners)",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-14/kempton-park/1730",
+        "updatedAt": "2026-10-14T17:25:11.393Z",
+        "winningMargin": "1¾ lengths",
+        "raceTime": "1m 40.19s",
+        "runningComment": "Chased leaders, smooth headway to lead over 1f out; won comfortably"
       },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.racingtv.com/racecards/2026-10-14/kempton-park/1730",
@@ -1740,17 +1743,13 @@
     "source": "Sporting Life Full Results"
   },
   "lastManualResultSearch": {
-    "checkedAt": "2026-10-14T16:37:07.996Z",
+    "checkedAt": "2026-10-14T17:25:11.393Z",
     "dates": [
       "2026-10-14"
     ],
     "verifiedUpdates": 1,
-    "userReportedUpdates": 0,
-    "unverifiedClaims": [
-      "Gunfighter 1st at Kempton 17:30; report preceded scheduled off, awaiting official confirmation"
-    ],
-    "source": "HorseRacing.net Wetherby official results plus user-reported but unverified Kempton claim",
-    "priceBasis": "Saved Centurion's Sister 15/8 early price beats 13/8 SP; Gunfighter 7/4 paper bet unchanged pending results"
+    "source": "Racing TV official classified 17:30 Kempton result: Gunfighter 1st of 10, 1/1F SP",
+    "priceBasis": "Paper £10 WIN remains at original 7/4 pre-race recorded quote, better than 1/1 SP. Later 2/1 price snapshot separately archived but not proven as accepted virtual stake."
   },
   "lucky15Tickets": [
     {
