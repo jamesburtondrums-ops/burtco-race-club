@@ -210,11 +210,14 @@ for (const { selection } of selections) {
 const ledgerFile = new URL('../data/bet-ledger.json', import.meta.url);
 const ledger = JSON.parse(await fs.readFile(ledgerFile, 'utf8'));
 let ledgerChanges = 0;
+// Explicitly cleared paper bets must never be silently recreated by a feed refresh.
+const clearedPaperBetIds = new Set(ledger.clearedPaperBetIds || []);
 for (const { group, selection } of selections) {
   // Lucky15-only runners are a leg of a combination, never standalone £10 bets.
   if (group === 'lucky15Only') continue;
   const betType = group === 'todaySelections' ? 'win' : 'each-way';
   const id = [data.snapshotDate, selection.course, selection.time, selection.horse, betType].join('|').toLowerCase();
+  if (clearedPaperBetIds.has(id)) continue;
   let entry = ledger.entries.find(e => e.id === id);
   if (!entry && group === 'todaySelections' && !assessWinConfidence(selection).qualified) {
     console.log('Skipping unqualified new WIN paper bet: '+selection.horse);
