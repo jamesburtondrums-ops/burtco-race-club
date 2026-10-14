@@ -143,7 +143,7 @@
       ],
       "source": "Published Racing TV and Racing Post racecards; observed pre-race odds",
       "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1455",
-      "runnerCount": 9,
+      "runnerCount": 8,
       "or": 140,
       "going": "Good to soft, soft in places",
       "distance": "2m7f177y",
@@ -203,6 +203,16 @@
             "checkedAt": "2026-10-13T23:21:00.479Z"
           }
         }
+      },
+      "result": {
+        "status": "PU",
+        "sp": "100/30 F",
+        "source": "HorseRacing.net official weighed-in 14:55 Ffos Las result",
+        "sourceUrl": "https://www.horseracing.net/results/ffos-las/14-10-26",
+        "actualGoing": "Soft (good to soft in places) after Race 1",
+        "runnerCount": 8,
+        "comment": "In touch, not fluent 3 out, weakened and pulled up before 2 out",
+        "updatedAt": "2026-10-14T15:27:00.175Z"
       }
     },
     {
@@ -284,6 +294,14 @@
             "checkedAt": "2026-10-13T23:21:00.479Z"
           }
         }
+      },
+      "result": {
+        "status": "NR",
+        "source": "Racing Post 14 October non-runners list",
+        "sourceUrl": "https://www.racingpost.com/non-runners/",
+        "reason": "Non-runner",
+        "runnerCount": null,
+        "updatedAt": "2026-10-14T15:27:00.175Z"
       }
     },
     {
@@ -540,7 +558,7 @@
       "confidenceTier": "EACH-WAY FORM WATCH — NOT A CALIBRATED PROBABILITY",
       "trainer": "David Menuisier",
       "jockey": "Saffie Osborne",
-      "runnerCount": 11,
+      "runnerCount": 10,
       "or": 72,
       "going": "Good to soft, soft in places",
       "distance": "2m",
@@ -563,7 +581,17 @@
         "Improved to third over 1m6f last time",
         "OR72; recent RPR90 and TS77",
         "Saffie Osborne retained for David Menuisier"
-      ]
+      ],
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "5/2 JF",
+        "source": "Sporting Life weighed-in official full result",
+        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-14/nottingham/943405/colwick-cup-handicap-gbbplus-race",
+        "actualGoing": "Good to soft",
+        "runnerCount": 10,
+        "updatedAt": "2026-10-14T15:27:00.175Z"
+      }
     },
     {
       "horse": "Magic Box",
@@ -597,7 +625,17 @@
         "Most recent run third over a mile",
         "Tom Marquand booked for William Haggas",
         "Stall 1 and first-time cheekpieces may help settle"
-      ]
+      ],
+      "result": {
+        "position": 2,
+        "status": "User reported",
+        "sp": "14/1",
+        "source": "User-reported runner-up; 14/1 corroborated on published Sporting Life price board, finishing place not yet independently verified",
+        "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-14/nottingham/live-show/943406/conference-and-events-at-nottingham-racecourse-handicap-div-1",
+        "actualGoing": "Good to soft",
+        "runnerCount": 10,
+        "updatedAt": "2026-10-14T15:27:00.175Z"
+      }
     },
     {
       "horse": "Forever Glamorous",
@@ -746,7 +784,33 @@
   },
   "researchSelectionUpdate": {
     "reviewedAt": "2026-10-13T23:21:00.479Z",
-    "status": "OCT14_PREDICTIONS_FROZEN_BEFORE_RACING",
-    "note": "Published 14 Oct shortlist based on prior data. Previous 13 Oct results and exclusions preserved in paper ledger/repository history. No hindsight selection editing or invented model improvements."
+    "status": "PARTIAL_OCT14_RESULTS_VERIFIED",
+    "note": "Published 14 Oct shortlist based on prior data. Previous 13 Oct results and exclusions preserved in paper ledger/repository history. No hindsight selection editing or invented model improvements. Four new user-provided outcomes logged; 3 independently confirmed, Magic Box second awaiting official final result. All picks' pre-race assessments retained.",
+    "lastResultsCheckAt": "2026-10-14T15:27:00.175Z"
+  },
+  "resultVerification": {
+    "checkedAt": "2026-10-14T15:27:00.175Z",
+    "independentlyConfirmed": [
+      "Viroflay non-runner",
+      "Green Falcon winner at 5/2 JF",
+      "Guard Your Dreams pulled up at 100/30 F"
+    ],
+    "userReported": [
+      "Magic Box second, reported SP 14/1; price seen in published market"
+    ],
+    "pending": [
+      "Magic Box final classified finishing position"
+    ]
+  },
+  "recentResultsLearning": {
+    "checkedAt": "2026-10-14T15:27:00.175Z",
+    "note": "Prospectively frozen 14 October selections preserved, analysis updated AFTER results; these are not proven model improvements.",
+    "observations": [
+      "Green Falcon won the 2m Nottingham Colwick Cup by 2¾ lengths, a successful first attempt at 2m. Novel-trip uncertainty should be assessed separately from actual fitness and demonstrated stamina cues rather than serving as an automatic exclusion.",
+      "Green Falcon's official 5/2 JF SP is shorter than the originally recorded 13/2 research quote. Preserve 13/2 for simulated paper BOG pricing rather than replace with SP.",
+      "Magic Box runner-up at reported 14/1 compared with saved early 6/1. Under ¼-odds top-three hypothetical terms, a £5 place leg returns £22.50; verify the official placing when accessible.",
+      "Guard Your Dreams pulled up on ground that was officially changed to soft after Race 1 at Ffos Las. The seasonal absence and adverse going change support stronger day-of ground monitoring for first-run-after-break selections, without drawing a categorical conclusion from one result.",
+      "Viroflay was a non-runner and must refund the £10 paper WIN stake; it is excluded from the win strike-rate denominator."
+    ]
   }
 }
