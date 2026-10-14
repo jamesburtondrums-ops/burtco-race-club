@@ -1359,7 +1359,26 @@
       "paperOnly": true,
       "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
       "preRaceFreeze": true,
-      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted."
+      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted.",
+      "bestAvailableOdds": "5/1",
+      "bestAvailableOddsSource": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Ffos-Las/1455",
+      "bestAvailableOddsProvenance": {
+        "odds": "5/1",
+        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Ffos-Las/1455",
+        "sourceType": "bookmaker comparison archived race-day quote",
+        "checkedAt": "2026-10-14T16:45:59.102Z",
+        "historic": true,
+        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
+        "observedBookmakerQuote": {
+          "odds": "5/1",
+          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Ffos-Las/1455",
+          "type": "bookmaker comparison archived race-day quote",
+          "observedAt": "2026-10-14T16:45:59.102Z"
+        },
+        "originalResearchPrice": "4/1",
+        "reportedSP": "100/30 F",
+        "quoteWasRetrospectivelyChecked": true
+      }
     },
     {
       "id": "2026-10-14|ffos las|16:05|viroflay|win",
@@ -1388,7 +1407,26 @@
       "paperOnly": true,
       "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
       "preRaceFreeze": true,
-      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted."
+      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted.",
+      "bestAvailableOdds": "9/2",
+      "bestAvailableOddsSource": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1605",
+      "bestAvailableOddsProvenance": {
+        "odds": "9/2",
+        "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1605",
+        "sourceType": "original researched quote",
+        "checkedAt": "2026-10-14T16:45:59.102Z",
+        "historic": true,
+        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
+        "observedBookmakerQuote": {
+          "odds": "9/2",
+          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Ffos-Las/1605",
+          "type": "bookmaker comparison archived race-day quote (runner NR)",
+          "observedAt": "2026-10-14T16:45:59.102Z"
+        },
+        "originalResearchPrice": "9/2",
+        "reportedSP": null,
+        "quoteWasRetrospectivelyChecked": true
+      }
     },
     {
       "id": "2026-10-14|wetherby|16:20|seeyainthesuninn|win",
@@ -1419,7 +1457,26 @@
       "paperOnly": true,
       "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
       "preRaceFreeze": true,
-      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted."
+      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted.",
+      "bestAvailableOdds": "7/2",
+      "bestAvailableOddsSource": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
+      "bestAvailableOddsProvenance": {
+        "odds": "7/2",
+        "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
+        "sourceType": "original researched quote",
+        "checkedAt": "2026-10-14T16:45:59.102Z",
+        "historic": true,
+        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
+        "observedBookmakerQuote": {
+          "odds": "9/4",
+          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Wetherby/1620",
+          "type": "bookmaker comparison race-day quote; saved 7/2 remains higher",
+          "observedAt": "2026-10-14T16:45:59.102Z"
+        },
+        "originalResearchPrice": "7/2",
+        "reportedSP": "9/4 F",
+        "quoteWasRetrospectivelyChecked": true
+      }
     },
     {
       "id": "2026-10-14|wetherby|16:52|centurion's sister|win",
@@ -1450,7 +1507,26 @@
       "paperOnly": true,
       "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
       "preRaceFreeze": true,
-      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted."
+      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted.",
+      "bestAvailableOdds": "2/1",
+      "bestAvailableOddsSource": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Wetherby/1652",
+      "bestAvailableOddsProvenance": {
+        "odds": "2/1",
+        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Wetherby/1652",
+        "sourceType": "bookmaker comparison archived race-day quote",
+        "checkedAt": "2026-10-14T16:45:59.102Z",
+        "historic": true,
+        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
+        "observedBookmakerQuote": {
+          "odds": "2/1",
+          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Wetherby/1652",
+          "type": "bookmaker comparison archived race-day quote",
+          "observedAt": "2026-10-14T16:45:59.102Z"
+        },
+        "originalResearchPrice": "15/8",
+        "reportedSP": "13/8 F",
+        "quoteWasRetrospectivelyChecked": true
+      }
     },
     {
       "id": "2026-10-14|kempton|17:30|gunfighter|win",
@@ -1463,18 +1539,45 @@
       "placeStake": 0,
       "selectionOdds": "7/4",
       "priceBasis": "early",
-      "settlementOdds": null,
+      "settlementOdds": "1/1 F",
       "ewFraction": null,
       "runnerCount": 10,
       "placesPaid": null,
       "terms": "£10 virtual WIN only; simulated BOG when later official SP is higher",
-      "result": null,
+      "result": {
+        "position": 1,
+        "status": "Published classified first (official weighed-in indicator pending)",
+        "sp": "1/1 F",
+        "source": "HorseRacing.net published 17:30 Kempton result lists Gunfighter first at Evens F; race status still says Awaiting Results at observation",
+        "sourceUrl": "https://www.horseracing.net/results/kempton/14-10-26",
+        "updatedAt": "2026-10-14T16:45:59.102Z"
+      },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.racingtv.com/racecards/2026-10-14/kempton-park/1730",
       "paperOnly": true,
       "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
       "preRaceFreeze": true,
-      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted."
+      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted.",
+      "bestAvailableOdds": "2/1",
+      "bestAvailableOddsSource": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Kempton/1730",
+      "bestAvailableOddsProvenance": {
+        "odds": "2/1",
+        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Kempton/1730",
+        "sourceType": "recorded bookmaker price 2/1 at 12:40 on race day before 17:30 off",
+        "checkedAt": "2026-10-14T16:45:59.102Z",
+        "historic": true,
+        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
+        "observedBookmakerQuote": {
+          "odds": "2/1",
+          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Kempton/1730",
+          "type": "recorded bookmaker price 2/1 at 12:40 on race day before 17:30 off",
+          "quoteTime": "2026-10-14T12:40:00+01:00",
+          "observedAt": "2026-10-14T16:45:59.102Z"
+        },
+        "originalResearchPrice": "7/4",
+        "reportedSP": "1/1 F",
+        "quoteWasRetrospectivelyChecked": true
+      }
     },
     {
       "id": "2026-10-14|nottingham|15:39|green falcon|each-way",
@@ -1505,7 +1608,26 @@
       "paperOnly": true,
       "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
       "preRaceFreeze": true,
-      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted."
+      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted.",
+      "bestAvailableOdds": "13/2",
+      "bestAvailableOddsSource": "https://www.bethq.com/horse-racing/uk/nottingham/2026-10-14/15h39/",
+      "bestAvailableOddsProvenance": {
+        "odds": "13/2",
+        "sourceUrl": "https://www.bethq.com/horse-racing/uk/nottingham/2026-10-14/15h39/",
+        "sourceType": "original researched quote",
+        "checkedAt": "2026-10-14T16:45:59.102Z",
+        "historic": true,
+        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
+        "observedBookmakerQuote": {
+          "odds": "6/1",
+          "sourceUrl": "https://www.irishracing.com/hong-kong-odds-comparison/Wed-14th-Oct-2026/Nottingham/1539",
+          "type": "archived bookmaker comparison; saved 13/2 remains higher",
+          "observedAt": "2026-10-14T16:45:59.102Z"
+        },
+        "originalResearchPrice": "13/2",
+        "reportedSP": "5/2 JF",
+        "quoteWasRetrospectivelyChecked": true
+      }
     },
     {
       "id": "2026-10-14|nottingham|16:14|magic box|each-way",
@@ -1536,7 +1658,27 @@
       "paperOnly": true,
       "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
       "preRaceFreeze": true,
-      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted."
+      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted.",
+      "bestAvailableOdds": "18/1",
+      "bestAvailableOddsSource": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1614",
+      "bestAvailableOddsProvenance": {
+        "odds": "18/1",
+        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1614",
+        "sourceType": "recorded bookmaker 18/1 offer around 14:13, before 16:14 off; 1/5 odds three places commonly shown",
+        "checkedAt": "2026-10-14T16:45:59.102Z",
+        "historic": true,
+        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
+        "observedBookmakerQuote": {
+          "odds": "18/1",
+          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1614",
+          "type": "recorded bookmaker 18/1 offer around 14:13, before 16:14 off; 1/5 odds three places commonly shown",
+          "quoteTime": "2026-10-14T14:13:00+01:00",
+          "observedAt": "2026-10-14T16:45:59.102Z"
+        },
+        "originalResearchPrice": "6/1",
+        "reportedSP": "14/1",
+        "quoteWasRetrospectivelyChecked": true
+      }
     },
     {
       "id": "2026-10-14|nottingham|17:22|forever glamorous|each-way",
@@ -1565,7 +1707,26 @@
       "paperOnly": true,
       "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
       "preRaceFreeze": true,
-      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted."
+      "researchProvenance": "Preserved from pre-race 14 Oct published candidate form; price is bookmaker comparison observation, not proof an actual bet accepted.",
+      "bestAvailableOdds": "11/1",
+      "bestAvailableOddsSource": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1722",
+      "bestAvailableOddsProvenance": {
+        "odds": "11/1",
+        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1722",
+        "sourceType": "archived comparison quote; non-runner, no payable odds",
+        "checkedAt": "2026-10-14T16:45:59.102Z",
+        "historic": true,
+        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
+        "observedBookmakerQuote": {
+          "odds": "11/1",
+          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1722",
+          "type": "archived comparison quote; non-runner, no payable odds",
+          "observedAt": "2026-10-14T16:45:59.102Z"
+        },
+        "originalResearchPrice": "15/2",
+        "reportedSP": null,
+        "quoteWasRetrospectivelyChecked": true
+      }
     }
   ],
   "placePolicy": {
@@ -2005,7 +2166,7 @@
     "pricesSource": "Official published results"
   },
   "pricingPolicy": {
-    "mode": "simulated_best_odds_guaranteed",
+    "mode": "best_documented_available_odds_paper_simulation",
     "effectiveFrom": "2026-10-13",
     "appliesToExistingDatedEarlyQuotes": true,
     "rule": "Settlement uses the higher of the unmodified early selection price and later reported SP whenever both are unambiguous. Without later SP, use original early price. SP cannot worsen recorded early terms.",
@@ -2013,8 +2174,10 @@
     "legacyOddsHandling": "Pre-9-Oct bets with ambiguous early odds remain on their previous settlement-price basis.",
     "officialSPReferenceOnly": false,
     "quoteSources": "Published pre-race price retained; later SP stored in result.sp or settlementOdds with its provenance.",
-    "caveat": "Simulation only; bookmaker-specific Best Odds Guaranteed eligibility, cut-offs, Rule 4 deductions, extra places and market types are not verified. Not proof a real wager qualified.",
-    "notes": "Introduced following request on 13 Oct after King Of Persia won at user-reported 6/1 SP versus 9/2 published early. No existing early price or original result overwritten."
+    "caveat": "Retrospective bookmaker odds are not proof of actual bet acceptance, BOG eligibility, or matched each-way terms; users must check prices at placement.",
+    "notes": "Published original early price never rewritten; later independently found race-day bookmaker offers can improve hypothetical settlement when sourced; do not imply they were accepted real bets.",
+    "bestAvailableEnabled": true,
+    "sourceOfTruth": "bestAvailableOdds and original immutable selectionOdds; use max documented bookmaker pre-off and official SP"
   },
   "latestPaperSelectionsPublished": {
     "date": "2026-10-14",
