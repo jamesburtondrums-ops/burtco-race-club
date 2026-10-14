@@ -1,823 +1,535 @@
 {
-  "snapshotDate": "2026-10-14",
-  "verifiedAt": "2026-10-13T23:21:00.479Z",
-  "mode": "LIVE PRE-RACE RESEARCH · realistic WIN and E/W watch · 14 OCTOBER 2026",
+  "snapshotDate": "2026-10-15",
+  "verifiedAt": "2026-10-14T21:08:21.657Z",
+  "mode": "NEXT-DAY PROSPECTIVE RESEARCH — FROZEN BEFORE THE OFF",
   "coverage": {
     "meetings": 5,
-    "races": 39,
-    "scope": "39 scheduled races in five meetings screened at race-level; selected runners, opposition, going, form and prices separately cross-checked. Not all lifetime race data for all 400+ declared runners audited.",
-    "publishedDate": "2026-10-14",
-    "selectedIndividuals": 8,
-    "qualifiedWins": 5,
-    "winConfidenceMethod": "Research-only Strong/Solid evidence tiers based on form, ability, course/going/trip and opposition; price never sets confidence.",
-    "historicalDataNote": "Recorded 13 Oct WIN selections 1/3. Larger paper sample is uncalibrated; no demonstrable model accuracy improvement established."
+    "races": 40,
+    "scope": "Forty scheduled races reviewed across five declared meetings. All shortlisted horses reviewed for past form, race suitability, published odds and at least one credible opponent. Does not claim an exhaustive independent review of every runner's lifetime data.",
+    "publishedDate": "2026-10-15",
+    "selectedIndividuals": 6,
+    "qualifiedWins": 4,
+    "winConfidenceMethod": "Documented horse/race evidence supports Strong/Solid editorial shortlist, odds excluded from race-confidence rating."
   },
   "meetings": [
     {
-      "course": "Nottingham",
+      "course": "Perth",
       "races": 8,
-      "first": "13:19",
-      "last": "17:22",
-      "going": "Good to soft, soft in places",
-      "code": "Flat turf"
+      "going": "Good to soft (monitor rain)",
+      "code": "Jumps",
+      "first": "12:55",
+      "last": "16:50"
     },
     {
-      "course": "Ffos Las",
-      "races": 7,
-      "first": "13:45",
-      "last": "17:13",
-      "going": "Good to soft, soft in places",
-      "code": "Jumps"
-    },
-    {
-      "course": "Wetherby",
-      "races": 7,
-      "first": "13:25",
-      "last": "16:52",
-      "going": "Good to firm, good in places",
-      "code": "Jumps"
-    },
-    {
-      "course": "Punchestown",
+      "course": "Curragh",
       "races": 8,
-      "first": "13:35",
-      "last": "17:40",
-      "going": "Good, watered",
-      "code": "Irish jumps"
+      "going": "Yielding straight; good to yielding round",
+      "code": "Flat turf",
+      "first": "13:02",
+      "last": "17:07"
     },
     {
-      "course": "Kempton",
+      "course": "Fontwell",
+      "races": 7,
+      "going": "Good to soft, good in places hurdle course",
+      "code": "Jumps",
+      "first": "13:44",
+      "last": "17:14"
+    },
+    {
+      "course": "Brighton",
+      "races": 8,
+      "going": "Good, good to soft in places",
+      "code": "Flat turf",
+      "first": "13:32",
+      "last": "17:25"
+    },
+    {
+      "course": "Southwell",
       "races": 9,
-      "first": "16:25",
-      "last": "20:30",
-      "going": "Standard to slow Polytrack",
-      "code": "Flat all-weather"
+      "going": "Standard Tapeta",
+      "code": "Flat all-weather",
+      "first": "16:30",
+      "last": "20:30"
     }
   ],
   "racecardLinks": [
     {
-      "course": "Nottingham",
+      "course": "Perth",
       "races": 8,
-      "first": "13:19",
-      "last": "17:22",
-      "going": "Good to soft, soft in places",
+      "going": "Good to soft (monitor rain)",
+      "code": "Jumps",
+      "first": "12:55",
+      "last": "16:50",
+      "url": "https://www.racingpost.com/racecards/41/perth/2026-10-15/"
+    },
+    {
+      "course": "Curragh",
+      "races": 8,
+      "going": "Yielding straight; good to yielding round",
       "code": "Flat turf",
-      "url": "https://www.racingpost.com/racecards/40/nottingham/2026-10-14/"
+      "first": "13:02",
+      "last": "17:07",
+      "url": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/"
     },
     {
-      "course": "Ffos Las",
+      "course": "Fontwell",
       "races": 7,
-      "first": "13:45",
-      "last": "17:13",
-      "going": "Good to soft, soft in places",
+      "going": "Good to soft, good in places hurdle course",
       "code": "Jumps",
-      "url": "https://www.racingpost.com/racecards/1212/ffos-las/2026-10-14/"
+      "first": "13:44",
+      "last": "17:14",
+      "url": "https://www.racingpost.com/racecards/20/fontwell/2026-10-15/"
     },
     {
-      "course": "Wetherby",
-      "races": 7,
-      "first": "13:25",
-      "last": "16:52",
-      "going": "Good to firm, good in places",
-      "code": "Jumps",
-      "url": "https://www.racingpost.com/racecards/87/wetherby/2026-10-14/"
-    },
-    {
-      "course": "Punchestown",
+      "course": "Brighton",
       "races": 8,
-      "first": "13:35",
-      "last": "17:40",
-      "going": "Good, watered",
-      "code": "Irish jumps",
-      "url": "https://www.racingpost.com/racecards/195/punchestown/2026-10-14/"
+      "going": "Good, good to soft in places",
+      "code": "Flat turf",
+      "first": "13:32",
+      "last": "17:25",
+      "url": "https://www.racingpost.com/racecards/7/brighton/2026-10-15/"
     },
     {
-      "course": "Kempton",
+      "course": "Southwell",
       "races": 9,
-      "first": "16:25",
-      "last": "20:30",
-      "going": "Standard to slow Polytrack",
+      "going": "Standard Tapeta",
       "code": "Flat all-weather",
-      "url": "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-14/"
+      "first": "16:30",
+      "last": "20:30",
+      "url": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/"
     }
   ],
   "sources": [
     {
-      "name": "Racing TV",
-      "status": "Observed 14 October pre-race card",
-      "role": "Runner, jockey, distance, form and live market comparison"
-    },
-    {
       "name": "Racing Post",
-      "status": "Observed 14 October pre-race card",
-      "role": "Official mark, class and field, going and track/race geometry"
+      "status": "Pre-race cards checked 14 October",
+      "role": "Races, handicaps, runners, draw, opposition and going"
     },
     {
       "name": "Sporting Life",
-      "status": "Cross-check",
-      "role": "Declared runners, non-runners and form"
+      "status": "Pre-race runner form checked",
+      "role": "Recent finishing record, class, barriers and form comments"
     },
     {
-      "name": "BetHQ",
-      "status": "Observed pre-race reference prices",
-      "role": "Published bookmaker comparison snapshots with timestamp; not accepted bets"
+      "name": "Racing TV",
+      "status": "Pre-race card with bookmaker quote",
+      "role": "Rider, trainer, up-to-date UK prices"
+    },
+    {
+      "name": "StableBet",
+      "status": "Tomorrow's declared 15 Oct card; bookmaker comparison",
+      "role": "Verified Irish/Perth pre-race fractions and race fields"
+    },
+    {
+      "name": "IrishRacing",
+      "status": "Southwell live bookmaker price comparison",
+      "role": "Yordan market and main opposition"
     }
   ],
   "todaySelections": [
     {
-      "horse": "Guard Your Dreams",
-      "course": "Ffos Las",
-      "time": "14:55",
-      "odds": "4/1",
-      "trainer": "Nigel & Willy Twiston-Davies",
-      "jockey": "Sam Twiston-Davies",
-      "winRank": null,
-      "tier": "SOLID",
-      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — UNCALIBRATED",
-      "summary": "Reliable return-from-a-break record and handicap mark OR140 make Guard Your Dreams a credible staying-chase contender on ground with some give; fresh rival Nocte Volatus and the improving Iron Bridge remain dangers.",
-      "reason": "Reliable return-from-a-break record and handicap mark OR140 make Guard Your Dreams a credible staying-chase contender on ground with some give; fresh rival Nocte Volatus and the improving Iron Bridge remain dangers.",
-      "positivePoints": [
-        "Strong historical record when racing fresh",
-        "Proven veteran chaser over staying distances",
-        "Trainer and rider combined with suitable ground"
-      ],
-      "source": "Published Racing TV and Racing Post racecards; observed pre-race odds",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1455",
-      "runnerCount": 8,
-      "or": 140,
-      "going": "Good to soft, soft in places",
-      "distance": "2m7f177y",
-      "raceClass": "Class 2 veterans' chase",
-      "risk": "Off 193 days in an open nine-runner veterans' chase; Iron Bridge, Nocte Volatus and The Boola Boss are genuine rivals. No independent fresh fitness test.",
-      "tags": [
-        "Strong historical record when racing fresh",
-        "Proven veteran chaser over staying distances",
-        "Trainer and rider combined with suitable ground"
-      ],
-      "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
-      "earlyOddsLockedAt": "2026-10-13T23:21:00.479Z",
-      "winAssessment": {
-        "decision": "win-contender",
-        "reviewedAt": "2026-10-13T23:21:00.479Z",
-        "riskSeverity": "moderate",
-        "riskNotes": [
-          "Off 193 days in an open nine-runner veterans' chase; Iron Bridge, Nocte Volatus and The Boola Boss are genuine rivals. No independent fresh fitness test."
-        ],
-        "hasCriticalUnknown": false,
-        "withdrawn": false,
-        "factors": {
-          "form": {
-            "grade": "supported",
-            "finding": "Historical course and chase performance includes high-class staying form; last run fourth at Haydock and some earlier setbacks.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1455",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "abilityClass": {
-            "grade": "strong",
-            "finding": "Has competed effectively in higher-class veterans and handicap chases and is now on an OR140 mark.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1212/ffos-las/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "courseGoingTrip": {
-            "grade": "supported",
-            "finding": "Ffos Las 2m7f177y on good-to-soft suits a proven staying chaser more than an unproven trip candidate.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1455",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "opposition": {
-            "grade": "supported",
-            "finding": "Iron Bridge has a recent staying-chase win, with Nocte Volatus and The Boola Boss credible alternative contenders.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1212/ffos-las/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "fitness": {
-            "grade": "supported",
-            "finding": "Historic strong fresh-run record is positive, but no run for 193 days limits certainty of present match fitness.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1455",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "trainerJockey": {
-            "grade": "supported",
-            "finding": "Sam Twiston-Davies is booked for the Nigel and Willy Twiston-Davies stable.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1212/ffos-las/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          }
-        }
-      },
-      "result": {
-        "status": "PU",
-        "sp": "100/30 F",
-        "source": "HorseRacing.net official weighed-in 14:55 Ffos Las result",
-        "sourceUrl": "https://www.horseracing.net/results/ffos-las/14-10-26",
-        "actualGoing": "Soft (good to soft in places) after Race 1",
-        "runnerCount": 8,
-        "comment": "In touch, not fluent 3 out, weakened and pulled up before 2 out",
-        "updatedAt": "2026-10-14T15:27:00.175Z"
-      },
-      "bestAvailableOdds": {
-        "odds": "5/1",
-        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Ffos-Las/1455",
-        "sourceType": "bookmaker comparison archived race-day quote",
-        "checkedAt": "2026-10-14T16:45:59.102Z",
-        "historic": true,
-        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
-        "observedBookmakerQuote": {
-          "odds": "5/1",
-          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Ffos-Las/1455",
-          "type": "bookmaker comparison archived race-day quote",
-          "observedAt": "2026-10-14T16:45:59.102Z"
-        }
-      }
-    },
-    {
-      "horse": "Viroflay",
-      "course": "Ffos Las",
-      "time": "16:05",
-      "odds": "9/2",
-      "trainer": "Paul Nicholls",
-      "jockey": "Lucas Murphy (7lb)",
-      "winRank": null,
-      "tier": "SOLID",
-      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — UNCALIBRATED",
-      "summary": "Viroflay won his latest staying chase and has a demonstrated near-three-mile distance profile; the 7lb rider allowance is useful against King Roly and Ben Solo, but this is a competitive seasonal return.",
-      "reason": "Viroflay won his latest staying chase and has a demonstrated near-three-mile distance profile; the 7lb rider allowance is useful against King Roly and Ben Solo, but this is a competitive seasonal return.",
-      "positivePoints": [
-        "Last-time staying-chase winner (form 2120-1)",
-        "Proven near-three-mile race distance",
-        "Lucas Murphy claims 7lb against the OR144 top weight"
-      ],
-      "source": "Published Racing TV and Racing Post racecards; observed pre-race odds",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1605",
-      "runnerCount": 9,
-      "or": 144,
-      "going": "Good to soft, soft in places",
-      "distance": "2m7f177y",
-      "raceClass": "Class 2 handicap chase",
-      "risk": "154-day absence and top weight in a strong Class 2 with progressive King Roly and well-supported Ben Solo. Fitness is inferred, not measured.",
-      "tags": [
-        "Last-time staying-chase winner (form 2120-1)",
-        "Proven near-three-mile race distance",
-        "Lucas Murphy claims 7lb against the OR144 top weight"
-      ],
-      "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
-      "earlyOddsLockedAt": "2026-10-13T23:21:00.479Z",
-      "winAssessment": {
-        "decision": "win-contender",
-        "reviewedAt": "2026-10-13T23:21:00.479Z",
-        "riskSeverity": "moderate",
-        "riskNotes": [
-          "154-day absence and top weight in a strong Class 2 with progressive King Roly and well-supported Ben Solo. Fitness is inferred, not measured."
-        ],
-        "hasCriticalUnknown": false,
-        "withdrawn": false,
-        "factors": {
-          "form": {
-            "grade": "strong",
-            "finding": "Recorded chase sequence 2120-1 includes a win on the latest run and multiple previous competitive finishes.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1605",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "abilityClass": {
-            "grade": "strong",
-            "finding": "OR144 with past race performance figures TS139 and RPR145 indicate genuine ability in stronger staying chase company.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1212/ffos-las/2026-10-14/929837/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "courseGoingTrip": {
-            "grade": "strong",
-            "finding": "Proven winner at a similar three-mile chase trip, in a race now scheduled for 2m7f177y good-to-soft ground.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1605",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "opposition": {
-            "grade": "supported",
-            "finding": "King Roly and Ben Solo arrive with convincing form; Etalon and Scarface also have a credible chance.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1212/ffos-las/2026-10-14/929837/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "fitness": {
-            "grade": "supported",
-            "finding": "Returns 154 days after latest victory, creating first-up fitness uncertainty despite productive recent chase record.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1605",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "trainerJockey": {
-            "grade": "supported",
-            "finding": "Paul Nicholls runner with Lucas Murphy claiming a declared 7lb allowance.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1212/ffos-las/2026-10-14/929837/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          }
-        }
-      },
-      "result": {
-        "status": "NR",
-        "source": "Racing Post 14 October non-runners list",
-        "sourceUrl": "https://www.racingpost.com/non-runners/",
-        "reason": "Non-runner",
-        "runnerCount": null,
-        "updatedAt": "2026-10-14T15:27:00.175Z"
-      },
-      "bestAvailableOdds": {
-        "odds": "9/2",
-        "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/ffos-las/1605",
-        "sourceType": "original researched quote",
-        "checkedAt": "2026-10-14T16:45:59.102Z",
-        "historic": true,
-        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
-        "observedBookmakerQuote": {
-          "odds": "9/2",
-          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Ffos-Las/1605",
-          "type": "bookmaker comparison archived race-day quote (runner NR)",
-          "observedAt": "2026-10-14T16:45:59.102Z"
-        }
-      }
-    },
-    {
-      "horse": "Seeyainthesuninn",
-      "course": "Wetherby",
-      "time": "16:20",
-      "odds": "7/2",
-      "trainer": "Micky Hammond",
-      "jockey": "Alice Stevens (3lb)",
-      "winRank": null,
-      "tier": "SOLID",
-      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — UNCALIBRATED",
-      "summary": "Three wins from his last four, including a recent Perth staying-hurdle win, and a 3lb claiming rider make him a realistic repeat contender; Wetherby's quicker going is the major unknown.",
-      "reason": "Three wins from his last four, including a recent Perth staying-hurdle win, and a 3lb claiming rider make him a realistic repeat contender; Wetherby's quicker going is the major unknown.",
-      "positivePoints": [
-        "Three victories in last four hurdle starts",
-        "Won over three miles only 21 days ago",
-        "Alice Stevens claims 3lb in an appropriate staying contest"
-      ],
-      "source": "Published Racing TV and Racing Post racecards; observed pre-race odds",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
-      "runnerCount": 8,
-      "or": 100,
-      "going": "Good to firm, good in places",
-      "distance": "3m26y",
-      "raceClass": "Class 5 handicap hurdle",
-      "risk": "Today is good to firm rather than the good-to-soft of his latest Perth win; 6lb handicap rise, plus Scottish Dancer and French Diablo among active rivals.",
-      "tags": [
-        "Three victories in last four hurdle starts",
-        "Won over three miles only 21 days ago",
-        "Alice Stevens claims 3lb in an appropriate staying contest"
-      ],
-      "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
-      "earlyOddsLockedAt": "2026-10-13T23:21:00.479Z",
-      "winAssessment": {
-        "decision": "win-contender",
-        "reviewedAt": "2026-10-13T23:21:00.479Z",
-        "riskSeverity": "moderate",
-        "riskNotes": [
-          "Today is good to firm rather than the good-to-soft of his latest Perth win; 6lb handicap rise, plus Scottish Dancer and French Diablo among active rivals."
-        ],
-        "hasCriticalUnknown": false,
-        "withdrawn": false,
-        "factors": {
-          "form": {
-            "grade": "strong",
-            "finding": "Recent form -P1411 supplies three wins in four completed runs, last racing 21 days ago.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "abilityClass": {
-            "grade": "supported",
-            "finding": "Repeated Class 5 staying hurdle wins show retained ability but a 6lb higher handicap mark is now a test.",
-            "sourceUrl": "https://www.racingpost.com/racecards/87/wetherby/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "courseGoingTrip": {
-            "grade": "supported",
-            "finding": "Proven over three miles; Wetherby's good-to-firm ground may be too fast compared with recent preferred good-to-soft.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "opposition": {
-            "grade": "supported",
-            "finding": "Scottish Dancer has a recent win and second, while French Diablo was second in a recent staying event.",
-            "sourceUrl": "https://www.racingpost.com/racecards/87/wetherby/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "fitness": {
-            "grade": "strong",
-            "finding": "Latest win 21 days ago means current competitive fitness is directly supported rather than a long-break guess.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          },
-          "trainerJockey": {
-            "grade": "supported",
-            "finding": "Alice Stevens claims 3lb for the declared Micky Hammond runner.",
-            "sourceUrl": "https://www.racingpost.com/racecards/87/wetherby/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
-          }
-        }
-      },
-      "result": {
-        "position": 1,
-        "status": "Weighed in",
-        "sp": "9/4 F",
-        "source": "HorseRacing.net weighed-in official Wetherby 16:20 result, winner by 2¾ lengths",
-        "sourceUrl": "https://www.horseracing.net/results/wetherby/14-10-26",
-        "updatedAt": "2026-10-14T16:38:23.656Z"
-      },
-      "bestAvailableOdds": {
-        "odds": "7/2",
-        "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
-        "sourceType": "original researched quote",
-        "checkedAt": "2026-10-14T16:45:59.102Z",
-        "historic": true,
-        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
-        "observedBookmakerQuote": {
-          "odds": "9/4",
-          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Wetherby/1620",
-          "type": "bookmaker comparison race-day quote; saved 7/2 remains higher",
-          "observedAt": "2026-10-14T16:45:59.102Z"
-        }
-      }
-    },
-    {
-      "horse": "Centurion's Sister",
-      "course": "Wetherby",
-      "time": "16:52",
-      "odds": "15/8",
-      "trainer": "Nicky Richards",
-      "jockey": "Danny McMenamin",
+      "horse": "Nouvel Espoir",
+      "course": "Curragh",
+      "time": "13:37",
+      "odds": "13/2",
+      "trainer": "James M Barcoe",
+      "jockey": "Julian Pietropaolo (7lb)",
+      "or": 78,
+      "runnerCount": 13,
+      "draw": 10,
+      "going": "Yielding",
+      "distance": "6f",
+      "raceClass": "Handicap (13 runners)",
       "winRank": "NB",
       "tier": "SOLID",
-      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — UNCALIBRATED",
-      "summary": "A maiden-hurdle win at Market Rasen follows three strong placed runs, demonstrating retained ability over intermediate distances; the faster ground and Farhh Echo's latest wins require respect.",
-      "reason": "A maiden-hurdle win at Market Rasen follows three strong placed runs, demonstrating retained ability over intermediate distances; the faster ground and Farhh Echo's latest wins require respect.",
+      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+      "summary": "A Curragh six-furlong course-and-distance winner who scored again just 11 days ago after four consecutive placed runs; the 7lb claim assists, although Moltophino and Keke make this competitive.",
+      "reason": "A Curragh six-furlong course-and-distance winner who scored again just 11 days ago after four consecutive placed runs; the 7lb claim assists, although Moltophino and Keke make this competitive.",
       "positivePoints": [
-        "Recent form 3-2231 supports sustained competitiveness",
-        "Won over an intermediate hurdle trip in August",
-        "Farhh Echo and Fine Point identified as material opposition"
+        "Course-and-distance winner over 6f",
+        "Form 432221: latest win, with sustained top-three results",
+        "Julian Pietropaolo claims 7lb off OR78"
       ],
-      "source": "Published Racing TV and Racing Post racecards; observed pre-race odds",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1652",
-      "runnerCount": 7,
-      "or": 105,
-      "going": "Good to firm, good in places",
-      "distance": "2m3f154y",
-      "raceClass": "Class 5 handicap hurdle",
-      "risk": "Returning from 60 days off; has not yet established the same level on very quick ground, and Farhh Echo/Fine Point could challenge a 5lb higher mark.",
+      "risk": "A competitive 13-runner handicap on yielding ground, and a recent win may trigger a tougher mark; Moltophino and Keke have credible track/sprint form.",
       "tags": [
-        "Recent form 3-2231 supports sustained competitiveness",
-        "Won over an intermediate hurdle trip in August",
-        "Farhh Echo and Fine Point identified as material opposition"
+        "Course-and-distance winner over 6f",
+        "Form 432221: latest win, with sustained top-three results",
+        "Julian Pietropaolo claims 7lb off OR78"
       ],
-      "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
-      "earlyOddsLockedAt": "2026-10-13T23:21:00.479Z",
+      "source": "Checked 15 October Racing Post/Sporting Life/Racing TV declared racecard and independent bookmaker prices",
+      "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+      "priceSource": "https://stablebet.co.uk/racecards/curragh/",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
       "winAssessment": {
         "decision": "win-contender",
-        "reviewedAt": "2026-10-13T23:21:00.479Z",
+        "reviewedAt": "2026-10-14T21:08:21.657Z",
         "riskSeverity": "moderate",
         "riskNotes": [
-          "Returning from 60 days off; has not yet established the same level on very quick ground, and Farhh Echo/Fine Point could challenge a 5lb higher mark."
+          "A competitive 13-runner handicap on yielding ground, and a recent win may trigger a tougher mark; Moltophino and Keke have credible track/sprint form."
         ],
         "hasCriticalUnknown": false,
         "withdrawn": false,
         "factors": {
           "form": {
             "grade": "strong",
-            "finding": "Three placed runs preceded the maiden hurdle win last time, with up-to-date form sequence 3-2231.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1652",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "finding": "Recorded form 432221 includes a latest win eleven days ago following four consecutive places.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/curragh/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "abilityClass": {
             "grade": "supported",
-            "finding": "OR105 is now 5lb higher after a relevant maiden win, but the recorded RPR111 supports Class 5 competitiveness.",
-            "sourceUrl": "https://www.racingpost.com/racecards/87/wetherby/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "finding": "Rated 78 and competitive in Irish handicaps against similarly rated six-furlong rivals.",
+            "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "courseGoingTrip": {
-            "grade": "supported",
-            "finding": "Has proved successful over an intermediate hurdle distance, though Wetherby 2m3f154y on good-to-firm is a new combination.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1652",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "grade": "strong",
+            "finding": "Previously won over Curragh six furlongs, so both course and distance are confirmed; current going is yielding.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/curragh/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "opposition": {
             "grade": "supported",
-            "finding": "Farhh Echo has two recent wins and latest second, and Fine Point also offers a strong recent second.",
-            "sourceUrl": "https://www.racingpost.com/racecards/87/wetherby/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "finding": "Moltophino has form 799213 and a Curragh C&D win; Keke is a further proven six-furlong rival.",
+            "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "fitness": {
-            "grade": "supported",
-            "finding": "Last raced 60 days ago when winning; a modest absence needs acknowledging.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1652",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "grade": "strong",
+            "finding": "Won within eleven days and thus has fresh evidence of current racing fitness and form.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/curragh/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "trainerJockey": {
             "grade": "supported",
-            "finding": "Nicky Richards and Danny McMenamin retain their declared horse-rider partnership.",
-            "sourceUrl": "https://www.racingpost.com/racecards/87/wetherby/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "finding": "Declared for James M Barcoe with Julian Pietropaolo's useful seven-pound allowance.",
+            "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           }
-        }
-      },
-      "result": {
-        "position": 1,
-        "status": "Weighed in",
-        "sp": "13/8 F",
-        "source": "HorseRacing.net confirmed 16:52 Wetherby weighed-in winner (official classified finish)",
-        "sourceUrl": "https://www.horseracing.net/results/wetherby/14-10-26",
-        "updatedAt": "2026-10-14T16:37:07.996Z"
-      },
-      "bestAvailableOdds": {
-        "odds": "2/1",
-        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Wetherby/1652",
-        "sourceType": "bookmaker comparison archived race-day quote",
-        "checkedAt": "2026-10-14T16:45:59.102Z",
-        "historic": true,
-        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
-        "observedBookmakerQuote": {
-          "odds": "2/1",
-          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Wetherby/1652",
-          "type": "bookmaker comparison archived race-day quote",
-          "observedAt": "2026-10-14T16:45:59.102Z"
         }
       }
     },
     {
-      "horse": "Gunfighter",
-      "course": "Kempton",
-      "time": "17:30",
-      "odds": "7/4",
-      "trainer": "John Butler",
-      "jockey": "David Egan",
-      "winRank": "NAP",
-      "tier": "STRONG",
-      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — UNCALIBRATED",
-      "summary": "A proven Kempton mile course-and-distance winner who was an unlucky third over the identical track and trip five days ago; he meets familiar conditions again, with Port Road and Warning Symbol the principal threats.",
-      "reason": "A proven Kempton mile course-and-distance winner who was an unlucky third over the identical track and trip five days ago; he meets familiar conditions again, with Port Road and Warning Symbol the principal threats.",
+      "horse": "Major Fortune",
+      "course": "Perth",
+      "time": "14:30",
+      "odds": "11/4",
+      "trainer": "Dan Skelton",
+      "jockey": "Harry Skelton",
+      "or": 127,
+      "runnerCount": 6,
+      "going": "Good to soft (monitor rain)",
+      "distance": "2m7f180y",
+      "raceClass": "Class 3 handicap chase",
+      "winRank": null,
+      "tier": "SOLID",
+      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+      "summary": "Last-season form 81221 and an efficient jumping profile make Major Fortune a credible staying-chase contender for Dan and Harry Skelton; a 194-day return and Chasingouttheblues are the main threats.",
+      "reason": "Last-season form 81221 and an efficient jumping profile make Major Fortune a credible staying-chase contender for Dan and Harry Skelton; a 194-day return and Chasingouttheblues are the main threats.",
       "positivePoints": [
-        "Established Kempton 1m Polytrack winner",
-        "Close, troubled third over this exact C&D five days ago",
-        "Runs from OR71 in suitable Class 5 company"
+        "Ended last campaign with form 81221 and a victory",
+        "Strong documented jumping-efficiency record",
+        "Dan Skelton stable recorded 14 winners from 67 recent runners"
       ],
-      "source": "Published Racing TV and Racing Post racecards; observed pre-race odds",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/kempton-park/1730",
-      "runnerCount": 10,
-      "or": 71,
-      "going": "Standard to slow Polytrack",
-      "distance": "1m",
-      "raceClass": "Class 5 0-75 handicap",
-      "risk": "Only five days since his last run, and there may be pace or traffic pressure from other course-and-distance performers Port Road and Warning Symbol.",
+      "risk": "First run in 194 days, with no proven Perth C&D win; Chasingouttheblues has a distance win and Thunder Rock/I Wish You return as credible rivals. Forecast rain could soften conditions.",
       "tags": [
-        "Established Kempton 1m Polytrack winner",
-        "Close, troubled third over this exact C&D five days ago",
-        "Runs from OR71 in suitable Class 5 company"
+        "Ended last campaign with form 81221 and a victory",
+        "Strong documented jumping-efficiency record",
+        "Dan Skelton stable recorded 14 winners from 67 recent runners"
       ],
-      "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
-      "earlyOddsLockedAt": "2026-10-13T23:21:00.479Z",
+      "source": "Checked 15 October Racing Post/Sporting Life/Racing TV declared racecard and independent bookmaker prices",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+      "priceSource": "https://stablebet.co.uk/racecards/perth/",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
       "winAssessment": {
         "decision": "win-contender",
-        "reviewedAt": "2026-10-13T23:21:00.479Z",
-        "riskSeverity": "low",
+        "reviewedAt": "2026-10-14T21:08:21.657Z",
+        "riskSeverity": "moderate",
         "riskNotes": [
-          "Only five days since his last run, and there may be pace or traffic pressure from other course-and-distance performers Port Road and Warning Symbol."
+          "First run in 194 days, with no proven Perth C&D win; Chasingouttheblues has a distance win and Thunder Rock/I Wish You return as credible rivals. Forecast rain could soften conditions."
         ],
         "hasCriticalUnknown": false,
         "withdrawn": false,
         "factors": {
           "form": {
             "grade": "strong",
-            "finding": "Recent sequence 917513 includes a win and near miss when third over course and distance five days ago.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/kempton-park/1730",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "finding": "Recent recorded form 81221 includes two runner-up finishes followed by a winning seasonal finale.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/perth/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "abilityClass": {
             "grade": "strong",
-            "finding": "OR71 inside a Class 5 0-75 handicap and a verified Kempton C&D win indicate ability at this level.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "finding": "Official mark 127 and established Class 3 chase quality provide a supported ability baseline.",
+            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "courseGoingTrip": {
-            "grade": "strong",
-            "finding": "Won at Kempton over one mile on Polytrack; today is the same course, trip and all-weather surface.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/kempton-park/1730",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "grade": "supported",
+            "finding": "Has documented staying chase form close to three miles, but a Perth course-and-distance win is not verified; good-to-soft forecast must be monitored.",
+            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "opposition": {
             "grade": "supported",
-            "finding": "Port Road is a C&D winner drawn widest; Warning Symbol another course/distance winner and realistic opponent.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "finding": "Chasingouttheblues is proven at the distance; Thunder Rock and I Wish You also hold credible Class 3 form.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/perth/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "fitness": {
+            "grade": "supported",
+            "finding": "Dan Skelton 14 wins from 67 recent runners is supportive of stable form, but individual fitness after 194 days is unknown.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/perth/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "trainerJockey": {
+            "grade": "strong",
+            "finding": "Dan Skelton and Harry Skelton partnership; the trainer has 14 wins from last 67 stable starters according to current data.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/perth/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          }
+        }
+      }
+    },
+    {
+      "horse": "Shifra",
+      "course": "Brighton",
+      "time": "15:15",
+      "odds": "2/1",
+      "trainer": "Pat Phelan",
+      "jockey": "Paddy Bradley",
+      "or": 60,
+      "runnerCount": 11,
+      "draw": 3,
+      "going": "Good; good to soft in places",
+      "distance": "1m1f207y",
+      "raceClass": "Class 6 (0–60) handicap",
+      "winRank": "NAP",
+      "tier": "SOLID",
+      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+      "summary": "Two wins from her recent five-run sequence, including a decisive Bath handicap success over a very similar 1m2f trip, make Shifra a leading WIN case; an 8lb rise and Cosmic Girl remain concerns.",
+      "reason": "Two wins from her recent five-run sequence, including a decisive Bath handicap success over a very similar 1m2f trip, make Shifra a leading WIN case; an 8lb rise and Cosmic Girl remain concerns.",
+      "positivePoints": [
+        "Latest Bath win at approximately 1m2f was dominant",
+        "Consistent recent form 9-82121",
+        "Drawn 3 of 11, with proven winning form at this distance"
+      ],
+      "risk": "Now 8lb higher than her decisive Bath win and making a Brighton course debut; Cosmic Girl is improving and Skimming Along has course form. Softer patches could change the balance.",
+      "tags": [
+        "Latest Bath win at approximately 1m2f was dominant",
+        "Consistent recent form 9-82121",
+        "Drawn 3 of 11, with proven winning form at this distance"
+      ],
+      "source": "Checked 15 October Racing Post/Sporting Life/Racing TV declared racecard and independent bookmaker prices",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-15/brighton/racecard/943581/bet-boost-at-bet365-handicap-div-1",
+      "priceSource": "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "winAssessment": {
+        "decision": "win-contender",
+        "reviewedAt": "2026-10-14T21:08:21.657Z",
+        "riskSeverity": "moderate",
+        "riskNotes": [
+          "Now 8lb higher than her decisive Bath win and making a Brighton course debut; Cosmic Girl is improving and Skimming Along has course form. Softer patches could change the balance."
+        ],
+        "hasCriticalUnknown": false,
+        "withdrawn": false,
+        "factors": {
+          "form": {
+            "grade": "strong",
+            "finding": "Sequence 9-82121 contains two recent wins and two seconds, including a decisive latest Bath Class 6 success.",
+            "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-15/brighton/racecard/943581/bet-boost-at-bet365-handicap-div-1",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "abilityClass": {
+            "grade": "strong",
+            "finding": "Latest win was at this broad Class 6 handicap level, though the revised OR60 mark is now eight pounds higher.",
+            "sourceUrl": "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "courseGoingTrip": {
+            "grade": "supported",
+            "finding": "Successful at about one mile two furlongs, closely matching Brighton 1m1f207y; not an established Brighton course winner.",
+            "sourceUrl": "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "opposition": {
+            "grade": "supported",
+            "finding": "Cosmic Girl has progressive form and Skimming Along is a previous Brighton winner returning from placed efforts.",
+            "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-15/brighton/racecard/943581/bet-boost-at-bet365-handicap-div-1",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "fitness": {
             "grade": "strong",
-            "finding": "Ran five days ago and remains demonstrably race fit, although the quick return is a recovery concern.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/kempton-park/1730",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "finding": "Last won 32 days ago and has a recent pattern of competitive races without a long seasonal break.",
+            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           },
           "trainerJockey": {
             "grade": "supported",
-            "finding": "David Egan is confirmed as jockey for John Butler on current Racing TV and independent racecards.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-14/",
-            "checkedAt": "2026-10-13T23:21:00.479Z"
+            "finding": "Pat Phelan is the listed trainer with Paddy Bradley booked from stall three.",
+            "sourceUrl": "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
           }
         }
-      },
-      "bestAvailableOdds": {
-        "odds": "2/1",
-        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Kempton/1730",
-        "sourceType": "recorded bookmaker price 2/1 at 12:40 on race day before 17:30 off",
-        "checkedAt": "2026-10-14T16:45:59.102Z",
-        "historic": true,
-        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
-        "observedBookmakerQuote": {
-          "odds": "2/1",
-          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Kempton/1730",
-          "type": "recorded bookmaker price 2/1 at 12:40 on race day before 17:30 off",
-          "quoteTime": "2026-10-14T12:40:00+01:00",
-          "observedAt": "2026-10-14T16:45:59.102Z"
-        },
-        "reportedSP": "1/1 F"
-      },
-      "result": {
-        "position": 1,
-        "status": "Weighed in",
-        "sp": "1/1 F",
-        "source": "Racing TV 17:30 Kempton classified result",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-14/kempton-park/1730",
-        "updatedAt": "2026-10-14T17:25:11.393Z",
-        "winningMargin": "1¾ lengths",
-        "raceTime": "1m 40.19s"
+      }
+    },
+    {
+      "horse": "Yordan",
+      "course": "Southwell",
+      "time": "19:30",
+      "odds": "3/1",
+      "trainer": "Kevin Ryan",
+      "jockey": "Kevin Stott",
+      "or": 85,
+      "runnerCount": 9,
+      "draw": 8,
+      "going": "Standard Tapeta",
+      "distance": "6f16y",
+      "raceClass": "Class 4 (0–85) handicap",
+      "winRank": null,
+      "tier": "SOLID",
+      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+      "summary": "Yordan was twice successful on Tapeta before being pitched into a tougher Ascot turf handicap; the return to a six-furlong all-weather Class 4 offers a coherent reset against in-form Return Of The Gods and New Image.",
+      "reason": "Yordan was twice successful on Tapeta before being pitched into a tougher Ascot turf handicap; the return to a six-furlong all-weather Class 4 offers a coherent reset against in-form Return Of The Gods and New Image.",
+      "positivePoints": [
+        "Two Tapeta victories preceded the Ascot defeat",
+        "Returns to proven 6f all-weather conditions",
+        "OR85 suits the Class 4 0–85 race conditions"
+      ],
+      "risk": "This nine-runner sprint has several progressive rivals: Return Of The Gods won recently, New Image bids for a C&D hat-trick and Town Queen has Southwell form. Stall 8 adds tactical uncertainty.",
+      "tags": [
+        "Two Tapeta victories preceded the Ascot defeat",
+        "Returns to proven 6f all-weather conditions",
+        "OR85 suits the Class 4 0–85 race conditions"
+      ],
+      "source": "Checked 15 October Racing Post/Sporting Life/Racing TV declared racecard and independent bookmaker prices",
+      "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+      "priceSource": "https://www.irishracing.com/odds-comparison/Thu-15th-Oct-2026/Southwell/1930",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "winAssessment": {
+        "decision": "win-contender",
+        "reviewedAt": "2026-10-14T21:08:21.657Z",
+        "riskSeverity": "moderate",
+        "riskNotes": [
+          "This nine-runner sprint has several progressive rivals: Return Of The Gods won recently, New Image bids for a C&D hat-trick and Town Queen has Southwell form. Stall 8 adds tactical uncertainty."
+        ],
+        "hasCriticalUnknown": false,
+        "withdrawn": false,
+        "factors": {
+          "form": {
+            "grade": "supported",
+            "finding": "Form sequence 2110 includes two all-weather wins then a defeat when raised markedly in class on turf at Ascot.",
+            "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "abilityClass": {
+            "grade": "strong",
+            "finding": "OR85 fits the Class 4 (0–85) conditions after a much stronger Ascot handicap.",
+            "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "courseGoingTrip": {
+            "grade": "strong",
+            "finding": "Demonstrated six-furlong ability on Tapeta before the Ascot turf switch; returns to standard Tapeta at Southwell.",
+            "sourceUrl": "https://www.irishracing.com/odds-comparison/Thu-15th-Oct-2026/Southwell/1930",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "opposition": {
+            "grade": "supported",
+            "finding": "Return Of The Gods won last time, New Image is chasing a C&D hat-trick, and Town Queen is a proven track performer.",
+            "sourceUrl": "https://www.irishracing.com/odds-comparison/Thu-15th-Oct-2026/Southwell/1930",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "fitness": {
+            "grade": "strong",
+            "finding": "Ran thirteen days ago and has relatively recent evidence of competitive fitness and pace.",
+            "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "trainerJockey": {
+            "grade": "supported",
+            "finding": "Kevin Stott rides for trainer Kevin Ryan in a familiar sprint setting.",
+            "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          }
+        }
       }
     }
   ],
   "midshotsToday": [
     {
-      "horse": "Green Falcon",
-      "course": "Nottingham",
-      "time": "15:39",
-      "odds": "13/2",
-      "tier": "VALUE WATCH",
-      "confidenceTier": "EACH-WAY FORM WATCH — NOT A CALIBRATED PROBABILITY",
-      "trainer": "David Menuisier",
-      "jockey": "Saffie Osborne",
-      "runnerCount": 10,
-      "or": 72,
-      "going": "Good to soft, soft in places",
-      "distance": "2m",
-      "summary": "Recent third when stepping up to 1m6f at Ffos Las and his improved late-race figures support a staying each-way case; trying two miles for the first time makes him unsuitable for a high-confidence WIN rating.",
-      "reason": "Recent third when stepping up to 1m6f at Ffos Las and his improved late-race figures support a staying each-way case; trying two miles for the first time makes him unsuitable for a high-confidence WIN rating.",
-      "positivePoints": [
-        "Improved to third over 1m6f last time",
-        "OR72; recent RPR90 and TS77",
-        "Saffie Osborne retained for David Menuisier"
-      ],
-      "risk": "First attempt at 2m and stall 11 of 11 on potentially testing turf; proven 2m rivals Believitanducan and Rock N Roll Pinkie have a stamina advantage.",
-      "source": "Public racecard and published bookmaker comparison",
-      "sourceUrl": "https://www.racingpost.com/racecards/40/nottingham/2026-10-14/",
-      "priceSource": "https://www.bethq.com/horse-racing/uk/nottingham/2026-10-14/15h39/",
-      "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
-      "earlyOddsLockedAt": "2026-10-13T23:21:00.479Z",
-      "view": "MIDSHOT / E/W WATCH",
-      "terms": "1/4 odds top three are the site's standard hypothetical paper terms; bookmaker offers may differ. Do not treat price as confidence.",
-      "tags": [
-        "Improved to third over 1m6f last time",
-        "OR72; recent RPR90 and TS77",
-        "Saffie Osborne retained for David Menuisier"
-      ],
-      "result": {
-        "position": 1,
-        "status": "Weighed in",
-        "sp": "5/2 JF",
-        "source": "Sporting Life weighed-in official full result",
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-14/nottingham/943405/colwick-cup-handicap-gbbplus-race",
-        "actualGoing": "Good to soft",
-        "runnerCount": 10,
-        "updatedAt": "2026-10-14T15:27:00.175Z"
-      },
-      "bestAvailableOdds": {
-        "odds": "13/2",
-        "sourceUrl": "https://www.bethq.com/horse-racing/uk/nottingham/2026-10-14/15h39/",
-        "sourceType": "original researched quote",
-        "checkedAt": "2026-10-14T16:45:59.102Z",
-        "historic": true,
-        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
-        "observedBookmakerQuote": {
-          "odds": "6/1",
-          "sourceUrl": "https://www.irishracing.com/hong-kong-odds-comparison/Wed-14th-Oct-2026/Nottingham/1539",
-          "type": "archived bookmaker comparison; saved 13/2 remains higher",
-          "observedAt": "2026-10-14T16:45:59.102Z"
-        }
-      }
-    },
-    {
-      "horse": "Magic Box",
-      "course": "Nottingham",
-      "time": "16:14",
-      "odds": "6/1",
-      "tier": "VALUE WATCH",
-      "confidenceTier": "EACH-WAY FORM WATCH — NOT A CALIBRATED PROBABILITY",
-      "trainer": "William Haggas",
-      "jockey": "Tom Marquand",
-      "runnerCount": 10,
-      "or": 70,
-      "going": "Good to soft, soft in places",
-      "distance": "1m75y",
-      "summary": "Recent third over a mile at Kempton and a low draw give Magic Box a plausible each-way chance in this Class 5 contest, with Tom Marquand booked and cheekpieces added for the first time.",
-      "reason": "Recent third over a mile at Kempton and a low draw give Magic Box a plausible each-way chance in this Class 5 contest, with Tom Marquand booked and cheekpieces added for the first time.",
-      "positivePoints": [
-        "Most recent run third over a mile",
-        "Tom Marquand booked for William Haggas",
-        "Stall 1 and first-time cheekpieces may help settle"
-      ],
-      "risk": "Switches from Polytrack to potentially testing Nottingham turf; Anton Mauve arrives off a win and Lieutenant Kije has a recent second.",
-      "source": "Public racecard and published bookmaker comparison",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/nottingham/1614",
-      "priceSource": "https://www.bethq.com/horse-racing/uk/nottingham/2026-10-14/16h14/",
-      "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
-      "earlyOddsLockedAt": "2026-10-13T23:21:00.479Z",
-      "view": "MIDSHOT / E/W WATCH",
-      "terms": "1/4 odds top three are the site's standard hypothetical paper terms; bookmaker offers may differ. Do not treat price as confidence.",
-      "tags": [
-        "Most recent run third over a mile",
-        "Tom Marquand booked for William Haggas",
-        "Stall 1 and first-time cheekpieces may help settle"
-      ],
-      "result": {
-        "position": 2,
-        "status": "Weighed in",
-        "sp": "14/1",
-        "source": "Sporting Life official result, 16:14 Nottingham (2nd of 10)",
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-14/nottingham/943406/conference-and-events-at-nottingham-racecourse-handicap-div-1",
-        "actualGoing": "Good to soft",
-        "runnerCount": 10,
-        "updatedAt": "2026-10-14T17:32:28.864Z",
-        "verifiedAt": "2026-10-14T17:32:28.864Z"
-      },
-      "bestAvailableOdds": {
-        "odds": "18/1",
-        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1614",
-        "sourceType": "recorded bookmaker 18/1 offer around 14:13, before 16:14 off; 1/5 odds three places commonly shown",
-        "checkedAt": "2026-10-14T16:45:59.102Z",
-        "historic": true,
-        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
-        "observedBookmakerQuote": {
-          "odds": "18/1",
-          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1614",
-          "type": "recorded bookmaker 18/1 offer around 14:13, before 16:14 off; 1/5 odds three places commonly shown",
-          "quoteTime": "2026-10-14T14:13:00+01:00",
-          "observedAt": "2026-10-14T16:45:59.102Z"
-        }
-      }
-    },
-    {
-      "horse": "Forever Glamorous",
-      "course": "Nottingham",
-      "time": "17:22",
+      "horse": "Navajo Point",
+      "course": "Curragh",
+      "time": "14:47",
       "odds": "15/2",
+      "trainer": "Martin Hassett",
+      "jockey": "Paddy Harnett (3lb)",
+      "or": 70,
+      "runnerCount": 22,
+      "going": "Good to yielding on round course",
+      "distance": "1m1f",
+      "draw": 7,
       "tier": "VALUE WATCH",
-      "confidenceTier": "EACH-WAY FORM WATCH — NOT A CALIBRATED PROBABILITY",
-      "trainer": "Chris Mason",
-      "jockey": "Gina Mangan",
-      "runnerCount": 14,
-      "or": 56,
-      "going": "Good to soft, soft in places",
-      "distance": "5f8y",
-      "summary": "A five-furlong winner earlier this season with a recent 235135 form pattern, giving an each-way argument stronger than an outsider with only old form; the 14-runner sprint and softer turf create pace uncertainty.",
-      "reason": "A five-furlong winner earlier this season with a recent 235135 form pattern, giving an each-way argument stronger than an outsider with only old form; the 14-runner sprint and softer turf create pace uncertainty.",
+      "confidenceTier": "FORM-LED E/W WATCH — NOT CALIBRATED",
+      "summary": "Won a handicap 26 days ago and has proven form at this 1m1f distance; a draw in stall seven and Paddy Harnett's 3lb allowance support a possible place in a demanding Curragh field.",
+      "reason": "Won a handicap 26 days ago and has proven form at this 1m1f distance; a draw in stall seven and Paddy Harnett's 3lb allowance support a possible place in a demanding Curragh field.",
       "positivePoints": [
-        "Recent winning form at 5f",
-        "Four top-three finishes in last six runs (235135)",
-        "Competitive OR56 in a Class 6 sprint"
+        "Latest-race winner (form 842101)",
+        "Won over this 1m1f distance",
+        "Paddy Harnett claims 3lb; stall 7 of 22"
       ],
-      "risk": "47 days since fifth last time and Nottingham sprint pace/stalls on good-to-soft could disadvantage a runner depending on early speed; Call Time is a dual recent winner.",
-      "source": "Public racecard and published bookmaker comparison",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-14/nottingham/1722",
-      "priceSource": "https://www.racingtv.com/racecards/2026-10-14/nottingham/1722",
-      "selectionPublishedAt": "2026-10-13T23:21:00.479Z",
-      "earlyOddsLockedAt": "2026-10-13T23:21:00.479Z",
-      "view": "MIDSHOT / E/W WATCH",
-      "terms": "1/4 odds top three are the site's standard hypothetical paper terms; bookmaker offers may differ. Do not treat price as confidence.",
+      "risk": "Twenty-two-runner handicap is pace- and traffic-sensitive; first-time cheekpieces and rising mark add uncertainty, while Suir Monad and Lady Arwen have recent form.",
       "tags": [
-        "Recent winning form at 5f",
-        "Four top-three finishes in last six runs (235135)",
-        "Competitive OR56 in a Class 6 sprint"
+        "Latest-race winner (form 842101)",
+        "Won over this 1m1f distance",
+        "Paddy Harnett claims 3lb; stall 7 of 22"
       ],
-      "result": {
-        "status": "NR",
-        "source": "Racing Post declared non-runner listing (17:22 Nottingham, 14 Oct 2026)",
-        "sourceUrl": "https://www.racingpost.com/racecards/40/nottingham/2026-10-14/928577/pro/",
-        "updatedAt": "2026-10-14T16:28:26.349Z"
-      },
-      "bestAvailableOdds": {
-        "odds": "11/1",
-        "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1722",
-        "sourceType": "archived comparison quote; non-runner, no payable odds",
-        "checkedAt": "2026-10-14T16:45:59.102Z",
-        "historic": true,
-        "notes": "Best documented comparison from original quote, later race-day bookmaker offers and recorded SP. Not a real accepted bet; bookmaker and EW eligibility unverified.",
-        "observedBookmakerQuote": {
-          "odds": "11/1",
-          "sourceUrl": "https://www.irishracing.com/odds-comparison/Wed-14th-Oct-2026/Nottingham/1722",
-          "type": "archived comparison quote; non-runner, no payable odds",
-          "observedAt": "2026-10-14T16:45:59.102Z"
-        }
-      }
+      "source": "15 October independently checked racecards and bookmaker prices",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-15/curragh/live-show/943368/dng-excellence-handicap",
+      "priceSource": "https://stablebet.co.uk/racecards/curragh/",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "view": "MIDSHOT / E/W WATCH",
+      "terms": "£5 WIN + £5 PLACE hypothetical paper bet at 1/4 odds top three; a real bookmaker may offer different paid places and fractions. Not a calibrated recommendation."
+    },
+    {
+      "horse": "Mary Shoelaces",
+      "course": "Curragh",
+      "time": "16:32",
+      "odds": "15/2",
+      "trainer": "Eddie & Patrick Harty",
+      "jockey": "Jessica O'Gorman (4lb)",
+      "or": 68,
+      "runnerCount": 17,
+      "going": "Yielding on straight course",
+      "distance": "5f",
+      "draw": 1,
+      "tier": "VALUE WATCH",
+      "confidenceTier": "FORM-LED E/W WATCH — NOT CALIBRATED",
+      "summary": "A Curragh five-furlong course-and-distance winner supported by a recent stable strike and 4lb claiming rider, Mary Shoelaces has a reasonable place case despite a less convincing last two runs.",
+      "reason": "A Curragh five-furlong course-and-distance winner supported by a recent stable strike and 4lb claiming rider, Mary Shoelaces has a reasonable place case despite a less convincing last two runs.",
+      "positivePoints": [
+        "Proven Curragh course-and-distance 5f winner",
+        "Stable 2 wins from 7 recent runners",
+        "Jessica O'Gorman claims 4lb from stall 1"
+      ],
+      "risk": "Recent results fourth and fifth after a win and 49 days off; 17-runner sprint introduces significant stall/pace uncertainty and Coincidental Glory has recent placing form.",
+      "tags": [
+        "Proven Curragh course-and-distance 5f winner",
+        "Stable 2 wins from 7 recent runners",
+        "Jessica O'Gorman claims 4lb from stall 1"
+      ],
+      "source": "15 October independently checked racecards and bookmaker prices",
+      "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+      "priceSource": "https://stablebet.co.uk/racecards/curragh/",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "view": "MIDSHOT / E/W WATCH",
+      "terms": "£5 WIN + £5 PLACE hypothetical paper bet at 1/4 odds top three; a real bookmaker may offer different paid places and fractions. Not a calibrated recommendation."
     }
   ],
   "longshotsToday": [],
@@ -825,324 +537,112 @@
   "selectionPolicy": {
     "avoidOddsOn": true,
     "minimumWinOdds": "1/1",
-    "winCandidates": 5,
-    "qualifiedWinCandidates": 5,
+    "winCandidates": 4,
+    "qualifiedWinCandidates": 4,
     "numLongshots": 0,
-    "winQualificationRule": "Documented current form and today's specific surface/going/trip plus at least one of class and rivals; at least one supporting factor and independent source. Moderate downside allowed but disclosed. No odds-driven confidence.",
-    "rationale": "Prioritize repeatable race-specific performances and oppose unproved surface/trip changes; do not prohibit well-backed runners for price-based race confidence. Avoid odds-on as a separate paper-selection value policy."
+    "winQualificationRule": "Documented current form and a credible match to going/surface/distance, with class/opposition and fitness or trainer/jockey evidence verified from independent sources. Moderate risk is allowed but must be disclosed. Odds do not establish win confidence.",
+    "rationale": "Avoid confusing favourites with confidence; do not overreact to one day's successes. Prefer repeatable conditions and expose unknowns such as long absences or handicap raises."
   },
   "midshotsPolicy": {
     "minOdds": "6/1",
     "maxOdds": "18/1",
-    "publicNote": "Three early-priced, distinct-race each-way research candidates. None is a proven statistical market edge; all require price and actual placed-runner terms confirmation.",
-    "priceRule": "Quoted prices were observed on a racing bookmaker comparison page before the race and may change."
+    "publicNote": "Two value-watch E/W research candidates from separate Curragh races. Odds are early reference prices, not confidence metrics.",
+    "priceRule": "Fractional quotes taken from timestamped pre-race bookmaker comparisons. Actual bookmaker place terms and accepted bet may differ."
   },
   "longshotsPolicy": {
     "minOdds": "20/1",
-    "publicNote": "No 20/1+ candidate supported by sufficient recent form, conditions and opposition review today.",
-    "priceRule": "Do not force an unqualified longshot to fill the tab."
+    "publicNote": "No horse priced at 20/1+ met a sufficiently supported recent-form and conditions threshold today. An empty list is preferable to fabricated confidence.",
+    "priceRule": "No speculative longshot forced."
   },
   "winNominations": [
     {
-      "horse": "Centurion's Sister",
-      "course": "Wetherby",
-      "time": "16:52",
+      "horse": "Nouvel Espoir",
+      "course": "Curragh",
+      "time": "13:37",
       "label": "NB",
       "status": "SOLID CONTENDER",
-      "rationale": "A maiden-hurdle win at Market Rasen follows three strong placed runs, demonstrating retained ability over intermediate distances; the faster ground and Farhh Echo's latest wins require respect."
+      "rationale": "A Curragh six-furlong course-and-distance winner who scored again just 11 days ago after four consecutive placed runs; the 7lb claim assists, although Moltophino and Keke make this competitive."
     },
     {
-      "horse": "Gunfighter",
-      "course": "Kempton",
-      "time": "17:30",
+      "horse": "Shifra",
+      "course": "Brighton",
+      "time": "15:15",
       "label": "NAP",
-      "status": "STRONG CONTENDER",
-      "rationale": "A proven Kempton mile course-and-distance winner who was an unlucky third over the identical track and trip five days ago; he meets familiar conditions again, with Port Road and Warning Symbol the principal threats."
+      "status": "SOLID CONTENDER",
+      "rationale": "Two wins from her recent five-run sequence, including a decisive Bath handicap success over a very similar 1m2f trip, make Shifra a leading WIN case; an 8lb rise and Cosmic Girl remain concerns."
     }
   ],
   "latestResearchLucky15": {
     "legs": [
-      "Green Falcon",
-      "Magic Box",
-      "Forever Glamorous"
+      "Navajo Point",
+      "Mary Shoelaces"
     ],
-    "status": "Only three separately raced midshot candidates researched; NO four-leg Lucky15 qualified or registered. Three-watch list is not a ticket.",
-    "checkedAt": "2026-10-13T23:21:00.479Z"
+    "status": "Only two independent 6/1+ each-way prospects qualified. No four-leg Lucky 15 created or registered.",
+    "checkedAt": "2026-10-14T21:08:21.657Z"
   },
   "selectionPresentation": {
     "rule": "ONE_SELECTION_PER_RACE",
-    "effectiveDate": "2026-10-14",
-    "selectionCount": 8,
-    "featuredRaceCount": 8,
-    "excludedAlternatives": [],
-    "notes": "Five WIN and three midshot selections in eight distinct races, NAP/NB badges on WIN rows only."
+    "effectiveDate": "2026-10-15",
+    "selectionCount": 6,
+    "featuredRaceCount": 6,
+    "excludedAlternatives": [
+      "Kado Sacree: chase debut after good hurdle wins",
+      "Midnight's Dream: possible 48-hour turnaround after recent win",
+      "Smoke Them Out: same Curragh 13:37 race as Nouvel Espoir"
+    ],
+    "notes": "Four WIN and two E/W watch selections; no multiple picks in a race; NAP and NB appear on WIN rows only."
   },
   "reviewCompleteness": {
     "verified": [
-      "All five meetings and published ground/distance conditions",
-      "Current field declarations and source-backed odds for every selected horse",
-      "Selected horses' recent form, class/rating and specific challengers",
-      "Distinct race assignment and no duplicates"
+      "Five declared meetings and observed course going",
+      "Published early price for all six choices",
+      "Recent form, rated ability, trip/surface and named rivals for every choice",
+      "One pick per distinct race and source-backed pre-race freeze"
     ],
     "unverified": [
-      "No complete proprietary sectionals or calibrated race win probabilities",
-      "Morning ground could change due weather or watering",
-      "No bookmaker account acceptance or BOG eligibility",
-      "Long-term profitability and expected win percentages not established",
-      "The complete all-runner form history has not been audited"
+      "All-runner proprietary sectional data not available",
+      "Future rain and revised race-day going unknown",
+      "Tomorrow's final non-runner/declaration changes not known",
+      "No genuine bookmaker wager or universal BOG eligibility assumed",
+      "No backtested proof that editorial changes materially improve accuracy"
     ]
   },
   "recentPerformanceReview": {
-    "reviewedAt": "2026-10-13T23:21:00.479Z",
-    "trackedEntries": 56,
-    "knownFinished": 45,
-    "totalWinnersAllBetTypes": 9,
-    "allSelectedWinnerSharePercent": 20,
-    "winOnlyOneDay13Oct": {
-      "winnerCount": 1,
-      "selections": 3,
-      "winRatePercent": 33.33,
-      "napResult": "Oviedo 5th",
-      "winner": "King Of Persia, 6/1 SP"
-    },
-    "unresolvedOct12PaperStakesGBP": 130,
-    "netCumulativeSettledPaperProfitGBP": -66.02,
-    "notes": "The 9/45 ratio covers winners among WIN and EW types and is NOT the pure WIN-only strike rate. Missing Oct12 paper settlements make historical performance incomplete.",
-    "evidenceStatus": "Descriptive small-sample audit only; insufficient for tuning numerical weights."
+    "reviewedAt": "2026-10-14T21:08:21.657Z",
+    "previousDay": "2026-10-14",
+    "conclusion": "Gunfighter, Centurion's Sister and Seeyainthesuninn all won; Green Falcon also won as an each-way choice. Guard Your Dreams PU, Magic Box second, Viroflay/Forever Glamorous NR. Confirm pricing in ledger: original early quote and verified SP are distinct.",
+    "lessons": [
+      "Gunfighter's repeat Kempton course, distance and surface was a well-supported winning signal; retain specific compatibility review.",
+      "Centurion's Sister's recent placing form progressed into another win; a runner's latest form can be relevant without a favourite-based confidence boost.",
+      "Green Falcon won at the new two-mile trip despite pre-race uncertainty; treat unproven trip as a risk, not automatic rejection.",
+      "Guard Your Dreams was pulled up on softened ground and a seasonal return; verify live going changes and fitness before promoting returners.",
+      "Only a few races/days are recorded: do not claim 70%+ future model accuracy from one successful day."
+    ],
+    "pricing": "Paper settlements use preserved early odds or verified higher SP (simulated BOG); later better bookmaker screenshots are evidence for research only unless explicitly recorded as pre-race paper accepted quote."
   },
   "modelAccuracyDevelopment": {
-    "status": "SHADOW_TEST — process improvement, not validated predictive uplift",
-    "ruleChanges": [
-      "Confirm specific course, distance, going and surface of every referenced historical win; avoid past Ice Show and Criminal Shore trip-assumption mistakes.",
-      "Separate WIN suitability from EW top-three competitiveness: Donnie Azoff was second while removed horses Dashing Dick/Fenlander/Notimetotakeoff placed.",
-      "Penalise untested jumps in trip and surface when selecting WIN: Green Falcon's first 2m and Charles Morin's disappointing Tapeta debut illustrate need for evidence.",
-      "Build a named-opposition review, particularly improving rivals, not just own form: Oviedo lost as 2/1 favourite.",
-      "Evaluate first-run-after-absence and rest days as fitness risks, rather than treating old winning marks as proof of current ability.",
-      "Keep bookmaker prices outside race-confidence classification; apply prices only to independent value checks after ability scoring.",
-      "Log pre-race evidence, official going and early quote timestamps to enable future honest out-of-sample calibration."
+    "status": "SHADOW AUDIT — improved evidence capture, no statistically validated model lift",
+    "changedResearchChecks": [
+      "Course/distance/surface winner evidence separated from merely similar form",
+      "Named credible opponents and late-going changes reviewed",
+      "Seasonal first-up layoff flagged, particularly in jumps",
+      "Field size and draw/pace uncertainty assessed independently of win-price popularity",
+      "Trip increases permitted if relevant stamina indicators exist, rather than categorical rejection",
+      "Early price provenance and time frozen, with SP compared only after outcome",
+      "Ex-post horse results must never retroactively change published selection ranks"
     ],
     "shadowMetrics": [
-      "Win strike among published WIN selections",
-      "EW top-three strike using actual declared place rules",
-      "Brier score and log loss only AFTER a calibrated probability model exists",
-      "ROI based on timestamped prices under separately labelled simulated BOG and fixed-price scenarios",
-      "Per-condition cohort performance by trip, going, surface, class and field size"
+      "WIN strike and yield by predicted Strong/Solid grade",
+      "E/W top-three rate against actual paid place terms",
+      "Per-course/trip/surface/going cohorts and absence bands",
+      "ROI of early-price fixed vs labelled simulated BOG",
+      "Calibration requires prospective probability forecasts and large held-out chronological set"
     ],
-    "archiveTarget": "At least 500 chronologically valid historical races with prior-day evidence and published prices; do not claim this has been achieved."
+    "warning": "Existing sample too small, no measured accuracy improvement or live training claimed."
   },
   "researchSelectionUpdate": {
-    "reviewedAt": "2026-10-13T23:21:00.479Z",
-    "status": "OCT14_GUNFIGHTER_VERIFIED",
-    "note": "Published 14 Oct shortlist based on prior data. Previous 13 Oct results and exclusions preserved in paper ledger/repository history. No hindsight selection editing or invented model improvements. Four new user-provided outcomes logged; 3 independently confirmed, Magic Box second awaiting official final result. All picks' pre-race assessments retained.",
-    "lastResultsCheckAt": "2026-10-14T17:32:28.864Z"
-  },
-  "resultVerification": {
-    "checkedAt": "2026-10-14T17:32:28.864Z",
-    "independentlyConfirmed": [
-      "Viroflay non-runner",
-      "Green Falcon winner at 5/2 JF",
-      "Guard Your Dreams pulled up at 100/30 F",
-      "Forever Glamorous NR — 17:22 Nottingham (Racing Post)",
-      "Centurion's Sister first at Wetherby 16:52; 13/8 F SP (HorseRacing.net)",
-      "Seeyainthesuninn Wetherby 16:20 winner, verified 9/4 F SP",
-      "Gunfighter winner 17:30 Kempton, SP 1/1 F - Racing TV",
-      "Magic Box 2nd at Nottingham 16:14, 14/1 SP (Sporting Life)"
-    ],
-    "userReported": [],
-    "pending": [],
-    "scope": "All eight 14 October shortlisted runners have source-verified outcomes; early quotes remain unchanged.",
-    "publishedResults": [
-      "Gunfighter 17:30 Kempton published first at Evens F"
-    ]
-  },
-  "recentResultsLearning": {
-    "checkedAt": "2026-10-14T16:37:07.996Z",
-    "note": "Prospectively frozen 14 October selections preserved, analysis updated AFTER results; these are not proven model improvements.",
-    "observations": [
-      "Green Falcon won the 2m Nottingham Colwick Cup by 2¾ lengths, a successful first attempt at 2m. Novel-trip uncertainty should be assessed separately from actual fitness and demonstrated stamina cues rather than serving as an automatic exclusion.",
-      "Green Falcon's official 5/2 JF SP is shorter than the originally recorded 13/2 research quote. Preserve 13/2 for simulated paper BOG pricing rather than replace with SP.",
-      "Magic Box runner-up at reported 14/1 compared with saved early 6/1. Under ¼-odds top-three hypothetical terms, a £5 place leg returns £22.50; verify the official placing when accessible.",
-      "Guard Your Dreams pulled up on ground that was officially changed to soft after Race 1 at Ffos Las. The seasonal absence and adverse going change support stronger day-of ground monitoring for first-run-after-break selections, without drawing a categorical conclusion from one result.",
-      "Viroflay was a non-runner and must refund the £10 paper WIN stake; it is excluded from the win strike-rate denominator.",
-      "Seeyainthesuninn was reported winner at Wetherby 16:20 despite concerns about faster good-to-firm going; its recently proven three-mile trip and race fitness were the evidence-led positives. This single outcome should not erase the going concern in future analysis.",
-      "Forever Glamorous was declared a non-runner for Nottingham 17:22 and the paper each-way stake is fully refunded. Exclude NR from both win and each-way performance denominators.",
-      "Centurion's Sister won the 16:52 Wetherby as 13/8 favourite after an August maiden hurdle win, confirming that sustained place form and intermediate trip suitability can identify a contender; one result does not prove model uplift."
-    ]
-  },
-  "provisionalOutcomeClaims": [],
-  "priceResearchUpdate": {
-    "checkedAt": "2026-10-14T16:45:59.102Z",
-    "scope": "8 October 14 selections",
-    "method": "Best documented original/pre-off bookmaker quote or reported SP; audit retains immutable early quote",
-    "source": "Race-day bookmaker grids and source-linked result reports",
-    "quotes": [
-      {
-        "horse": "Guard Your Dreams",
-        "early": "4/1",
-        "bookmaker": "5/1",
-        "sp": "100/30 F",
-        "best": "5/1",
-        "kind": "bookmaker comparison archived race-day quote"
-      },
-      {
-        "horse": "Viroflay",
-        "early": "9/2",
-        "bookmaker": "9/2",
-        "sp": null,
-        "best": "9/2",
-        "kind": "original researched quote"
-      },
-      {
-        "horse": "Seeyainthesuninn",
-        "early": "7/2",
-        "bookmaker": "9/4",
-        "sp": "9/4 F",
-        "best": "7/2",
-        "kind": "original researched quote"
-      },
-      {
-        "horse": "Centurion's Sister",
-        "early": "15/8",
-        "bookmaker": "2/1",
-        "sp": "13/8 F",
-        "best": "2/1",
-        "kind": "bookmaker comparison archived race-day quote"
-      },
-      {
-        "horse": "Gunfighter",
-        "early": "7/4",
-        "bookmaker": "2/1",
-        "sp": null,
-        "best": "2/1",
-        "kind": "recorded bookmaker price 2/1 at 12:40 on race day before 17:30 off"
-      },
-      {
-        "horse": "Green Falcon",
-        "early": "13/2",
-        "bookmaker": "6/1",
-        "sp": "5/2 JF",
-        "best": "13/2",
-        "kind": "original researched quote"
-      },
-      {
-        "horse": "Magic Box",
-        "early": "6/1",
-        "bookmaker": "18/1",
-        "sp": "14/1",
-        "best": "18/1",
-        "kind": "recorded bookmaker 18/1 offer around 14:13, before 16:14 off; 1/5 odds three places commonly shown"
-      },
-      {
-        "horse": "Forever Glamorous",
-        "early": "15/2",
-        "bookmaker": "11/1",
-        "sp": null,
-        "best": "11/1",
-        "kind": "archived comparison quote; non-runner, no payable odds"
-      }
-    ],
-    "caveat": "Prices retrieved retrospectively after racing. This is a best-available-market hypothetical, not a contemporaneously accepted bet. Archived bookmaker offers not independently guaranteed executable or BOG eligible."
-  },
-  "previousDayResultsReview": {
-    "date": "2026-10-13",
-    "verifiedAt": "2026-10-14T17:32:28.864Z",
-    "sourceName": "Sporting Life weighed-in full results",
-    "selected": [
-      {
-        "horse": "King Of Persia",
-        "course": "Leicester",
-        "time": "13:24",
-        "category": "WIN",
-        "position": 1,
-        "sp": "6/1",
-        "earlyOdds": "9/2",
-        "paperBetRecorded": true,
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943874/every-race-live-on-racing-tv-nursery"
-      },
-      {
-        "horse": "Donnie Azoff",
-        "course": "Hereford",
-        "time": "15:30",
-        "category": "WIN",
-        "position": 2,
-        "sp": "11/4",
-        "earlyOdds": "3/1",
-        "paperBetRecorded": true,
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/hereford/943160/bettingbet-free-bets-handicap-hurdle"
-      },
-      {
-        "horse": "Oviedo",
-        "course": "Leicester",
-        "time": "16:14",
-        "category": "WIN",
-        "position": 5,
-        "sp": "2/1f",
-        "earlyOdds": "2/1",
-        "paperBetRecorded": true,
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943182/christmas-parties-at-leicester-racecourse-book-now-handicap"
-      },
-      {
-        "horse": "Sargent Dennis",
-        "course": "Leicester",
-        "time": "15:39",
-        "category": "Longshot",
-        "position": 9,
-        "sp": "18/1",
-        "earlyOdds": "22/1",
-        "paperBetRecorded": false,
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943181/join-racing-tv-now-handicap"
-      },
-      {
-        "horse": "Kodi Lion",
-        "course": "Leicester",
-        "time": "16:47",
-        "category": "Midshot",
-        "position": 5,
-        "sp": "7/1",
-        "earlyOdds": "9/1",
-        "paperBetRecorded": false,
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943183/happy-80th-reg-ling-handicap"
-      },
-      {
-        "horse": "Charles Morin",
-        "course": "Wolverhampton",
-        "time": "20:30",
-        "category": "Midshot",
-        "position": 5,
-        "sp": "22/1",
-        "earlyOdds": "18/1",
-        "paperBetRecorded": false,
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/wolverhampton/943177/cavani-raceday-style-handicap"
-      }
-    ],
-    "removed": [
-      {
-        "horse": "Notimetotakeoff",
-        "course": "Leicester",
-        "time": "13:24",
-        "position": 3,
-        "sp": "11/2",
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943874/every-race-live-on-racing-tv-nursery"
-      },
-      {
-        "horse": "Dashing Dick",
-        "course": "Leicester",
-        "time": "15:39",
-        "position": 2,
-        "sp": "5/1",
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943181/join-racing-tv-now-handicap"
-      },
-      {
-        "horse": "Fenlander",
-        "course": "Leicester",
-        "time": "15:39",
-        "position": 3,
-        "sp": "13/2",
-        "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943181/join-racing-tv-now-handicap"
-      }
-    ],
-    "summary": "13 October: 1 winner (King Of Persia) from 6 featured selections; 1 winner from 3 WIN picks. Donnie Azoff finished second; remaining four featured runners unplaced. Three excluded runners placed across two races, which is diagnostic only — no paper bets were retrospectively added.",
-    "sourceLandingUrl": "https://www.sportinglife.com/racing/results/yesterday",
-    "evidenceNote": "Official Sporting Life results cross-checked against the original featured Oct13 candidates. Only 3 WIN picks had pre-existing £10 paper bets; the 3 mid/long watch runners were not placed as hypothetical ledger bets."
+    "reviewedAt": "2026-10-14T21:08:21.657Z",
+    "status": "OCT15_NEXT_DAY_SELECTIONS_PUBLISHED",
+    "note": "Evidence-led 40-race screening and 6 published selections before first off 12:55 on 15 October. NAP Shifra, NB Nouvel Espoir. No price-derived confidence, no forced longshot/Lucky15; prior day result data preserved in ledger history."
   }
 }
