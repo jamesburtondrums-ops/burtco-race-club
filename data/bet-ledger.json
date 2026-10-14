@@ -2194,5 +2194,109 @@
     "priceBasis": "observed_published_early_quote",
     "source": "Pre-race Racing TV and BetHQ bookmaker comparison on 14 October; simulation only",
     "qualifier": "Selection and price recorded before races. Simulated best of quoted early vs SP only if SP is later greater; bookmaker eligibility not assumed."
-  }
+  },
+  "researchWatchHistory": [
+    {
+      "date": "2026-10-13",
+      "verifiedAt": "2026-10-14T17:32:28.864Z",
+      "sourceName": "Sporting Life weighed-in full results",
+      "selected": [
+        {
+          "horse": "King Of Persia",
+          "course": "Leicester",
+          "time": "13:24",
+          "category": "WIN",
+          "position": 1,
+          "sp": "6/1",
+          "earlyOdds": "9/2",
+          "paperBetRecorded": true,
+          "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943874/every-race-live-on-racing-tv-nursery"
+        },
+        {
+          "horse": "Donnie Azoff",
+          "course": "Hereford",
+          "time": "15:30",
+          "category": "WIN",
+          "position": 2,
+          "sp": "11/4",
+          "earlyOdds": "3/1",
+          "paperBetRecorded": true,
+          "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/hereford/943160/bettingbet-free-bets-handicap-hurdle"
+        },
+        {
+          "horse": "Oviedo",
+          "course": "Leicester",
+          "time": "16:14",
+          "category": "WIN",
+          "position": 5,
+          "sp": "2/1f",
+          "earlyOdds": "2/1",
+          "paperBetRecorded": true,
+          "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943182/christmas-parties-at-leicester-racecourse-book-now-handicap"
+        },
+        {
+          "horse": "Sargent Dennis",
+          "course": "Leicester",
+          "time": "15:39",
+          "category": "Longshot",
+          "position": 9,
+          "sp": "18/1",
+          "earlyOdds": "22/1",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943181/join-racing-tv-now-handicap"
+        },
+        {
+          "horse": "Kodi Lion",
+          "course": "Leicester",
+          "time": "16:47",
+          "category": "Midshot",
+          "position": 5,
+          "sp": "7/1",
+          "earlyOdds": "9/1",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943183/happy-80th-reg-ling-handicap"
+        },
+        {
+          "horse": "Charles Morin",
+          "course": "Wolverhampton",
+          "time": "20:30",
+          "category": "Midshot",
+          "position": 5,
+          "sp": "22/1",
+          "earlyOdds": "18/1",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/wolverhampton/943177/cavani-raceday-style-handicap"
+        }
+      ],
+      "removed": [
+        {
+          "horse": "Notimetotakeoff",
+          "course": "Leicester",
+          "time": "13:24",
+          "position": 3,
+          "sp": "11/2",
+          "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943874/every-race-live-on-racing-tv-nursery"
+        },
+        {
+          "horse": "Dashing Dick",
+          "course": "Leicester",
+          "time": "15:39",
+          "position": 2,
+          "sp": "5/1",
+          "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943181/join-racing-tv-now-handicap"
+        },
+        {
+          "horse": "Fenlander",
+          "course": "Leicester",
+          "time": "15:39",
+          "position": 3,
+          "sp": "13/2",
+          "sourceUrl": "https://www.sportinglife.com/racing/results/2026-10-13/leicester/943181/join-racing-tv-now-handicap"
+        }
+      ],
+      "summary": "13 October: 1 winner (King Of Persia) from 6 featured selections; 1 winner from 3 WIN picks. Donnie Azoff finished second; remaining four featured runners unplaced. Three excluded runners placed across two races, which is diagnostic only — no paper bets were retrospectively added.",
+      "evidenceNote": "Official Sporting Life results cross-checked against the original featured Oct13 candidates. Only 3 WIN picks had pre-existing £10 paper bets; the 3 mid/long watch runners were not placed as hypothetical ledger bets.",
+      "sourceLandingUrl": "https://www.sportinglife.com/racing/results/yesterday"
+    }
+  ]
 }
