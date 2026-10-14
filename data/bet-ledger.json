@@ -1403,10 +1403,16 @@
       "priceBasis": "early",
       "settlementOdds": null,
       "ewFraction": null,
-      "runnerCount": 10,
+      "runnerCount": 9,
       "placesPaid": null,
       "terms": "£10 virtual WIN only; simulated BOG when later official SP is higher",
-      "result": null,
+      "result": {
+        "position": 1,
+        "status": "User reported",
+        "source": "User-reported Wetherby 16:20 winner; official result still awaiting classification at check time",
+        "sourceUrl": "https://www.horseracing.net/results/wetherby/14-10-26",
+        "updatedAt": "2026-10-14T15:31:01.264Z"
+      },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1620",
       "paperOnly": true,
@@ -1560,14 +1566,14 @@
     "source": "Sporting Life Full Results"
   },
   "lastManualResultSearch": {
-    "checkedAt": "2026-10-14T15:27:24.745Z",
+    "checkedAt": "2026-10-14T15:31:01.264Z",
     "dates": [
       "2026-10-14"
     ],
-    "verifiedUpdates": 3,
+    "verifiedUpdates": 0,
     "userReportedUpdates": 1,
-    "source": "Sporting Life Green Falcon official Nottingham 15:39; HorseRacing.net Guard Your Dreams 14:55; Racing Post Viroflay NR; user Magic Box runner-up with published 14/1 quote",
-    "priceBasis": "Simulated BOG: higher of original recorded early price versus later SP for individually settled entries"
+    "source": "User-reported Seeyainthesuninn winner Wetherby 16:20; SP pending official result",
+    "priceBasis": "Original 7/2 early quote; simulated BOG uplift only after a confirmed higher SP"
   },
   "lucky15Tickets": [
     {
