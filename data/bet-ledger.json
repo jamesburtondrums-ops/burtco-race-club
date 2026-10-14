@@ -1431,12 +1431,19 @@
       "placeStake": 0,
       "selectionOdds": "15/8",
       "priceBasis": "early",
-      "settlementOdds": null,
+      "settlementOdds": "13/8 F",
       "ewFraction": null,
       "runnerCount": 7,
       "placesPaid": null,
       "terms": "£10 virtual WIN only; simulated BOG when later official SP is higher",
-      "result": null,
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "13/8 F",
+        "source": "HorseRacing.net confirmed 16:52 Wetherby weighed-in winner (official classified finish)",
+        "sourceUrl": "https://www.horseracing.net/results/wetherby/14-10-26",
+        "updatedAt": "2026-10-14T16:37:07.996Z"
+      },
       "earlyPriceSnapshotAt": "2026-10-13T23:21:00.479Z",
       "earlyPriceSource": "https://www.racingtv.com/racecards/2026-10-14/wetherby/1652",
       "paperOnly": true,
@@ -1571,14 +1578,17 @@
     "source": "Sporting Life Full Results"
   },
   "lastManualResultSearch": {
-    "checkedAt": "2026-10-14T16:28:26.349Z",
+    "checkedAt": "2026-10-14T16:37:07.996Z",
     "dates": [
       "2026-10-14"
     ],
     "verifiedUpdates": 1,
-    "source": "Racing Post confirmed Forever Glamorous NR; earlier independently verified and user-reported results remain stored on each bet.",
-    "priceBasis": "Simulated BOG for eligible settled runners; NR void with full £10 stake returned",
-    "previousCheck": "2026-10-14T15:31:01.264Z"
+    "userReportedUpdates": 0,
+    "unverifiedClaims": [
+      "Gunfighter 1st at Kempton 17:30; report preceded scheduled off, awaiting official confirmation"
+    ],
+    "source": "HorseRacing.net Wetherby official results plus user-reported but unverified Kempton claim",
+    "priceBasis": "Saved Centurion's Sister 15/8 early price beats 13/8 SP; Gunfighter 7/4 paper bet unchanged pending results"
   },
   "lucky15Tickets": [
     {
