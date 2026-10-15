@@ -223,19 +223,11 @@ for (const { group, selection } of selections) {
     console.log('Skipping unqualified new WIN paper bet: '+selection.horse);
     continue; // Historical logged entries are preserved and can still receive results.
   }
+  // Prospective research and website selections are not actual or paper bets.
+  // Only explicitly recorded existing ledger entries may be settled or updated.
   if (!entry) {
-    entry = { id, date: data.snapshotDate, course: selection.course, time: selection.time,
-      horse: selection.horse, betType, winStake: betType === 'win' ? 10 : 5,
-      placeStake: betType === 'win' ? 0 : 5,
-      selectionOdds: selection.oddsAtSelection || selection.odds,
-      priceBasis: data.snapshotDate >= '2026-10-09' ? 'early' : 'legacy',
-      settlementOdds: selection.result?.sp || null,
-      ewFraction: betType === 'each-way' ? 0.25 : null,
-      runnerCount: Number(selection.runnerCount || selection.runners || selection.fieldSize) || null,
-      placesPaid: betType === 'each-way' && Number(selection.runnerCount || selection.runners || selection.fieldSize) ? (Number(selection.runnerCount || selection.runners || selection.fieldSize) <= 4 ? 1 : Number(selection.runnerCount || selection.runners || selection.fieldSize) <= 7 ? 2 : 3) : null, terms: selection.terms || null,
-      result: selection.result || null };
-    ledger.entries.push(entry);
-    ledgerChanges++;
+    console.log('Research-only selection (no automatic paper stake): ' + selection.horse);
+    continue;
   }
   const actualCount = Number(selection.runnerCount) || null;
   if (betType === 'each-way' && actualCount && entry.runnerCount !== actualCount) {
