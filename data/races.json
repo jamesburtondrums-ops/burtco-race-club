@@ -224,6 +224,22 @@
         "checkedAt": "2026-10-15T12:23:19.627Z",
         "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
         "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 5,
+        "status": "Weighed in",
+        "sp": "7/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930835/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Soft",
+        "confirmedRunners": 13,
+        "recordedSP": "7/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
       }
     },
     {
@@ -323,6 +339,22 @@
         "checkedAt": "2026-10-15T12:23:19.627Z",
         "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
         "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "11/2",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/41/perth/2026-10-15/930229/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Soft",
+        "confirmedRunners": 6,
+        "recordedSP": "11/2",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
       }
     },
     {
@@ -422,6 +454,22 @@
         "checkedAt": "2026-10-15T12:23:19.627Z",
         "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
         "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 5,
+        "status": "Weighed in",
+        "sp": "3/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/7/brighton/2026-10-15/928581/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Good (good to soft in places)",
+        "confirmedRunners": 9,
+        "recordedSP": "3/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
       }
     },
     {
@@ -521,6 +569,21 @@
         "checkedAt": "2026-10-15T12:23:19.627Z",
         "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
         "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 1,
+        "status": "User reported — pending external verification",
+        "sp": null,
+        "source": "User reported — external result awaiting confirmation",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "User reported — external result awaiting confirmation",
+        "raceGoing": "Standard",
+        "confirmedRunners": 9,
+        "recordedSP": null,
+        "warning": "Finishing position supplied by user; SP has not been independently confirmed. Do not use as verified payment evidence."
       }
     }
   ],
@@ -574,6 +637,22 @@
         "checkedAt": "2026-10-15T12:23:19.627Z",
         "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
         "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "12/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930837/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Yielding to soft",
+        "confirmedRunners": 19,
+        "recordedSP": "12/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
       }
     },
     {
@@ -624,6 +703,22 @@
         "checkedAt": "2026-10-15T12:23:19.627Z",
         "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
         "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 9,
+        "status": "Weighed in",
+        "sp": "10/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930840/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Soft",
+        "confirmedRunners": 17,
+        "recordedSP": "10/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
       }
     }
   ],
@@ -685,6 +780,22 @@
         "checkedAt": "2026-10-15T12:23:19.627Z",
         "originalSelectionFrozenAt": "2026-10-15T08:03:40.897Z",
         "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 12,
+        "status": "Weighed in",
+        "sp": "14/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928773/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Standard",
+        "confirmedRunners": 13,
+        "recordedSP": "14/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
       }
     }
   ],
@@ -1047,5 +1158,325 @@
       "reason": "Softened Perth, extended rail distance, 194-day return, increased mark and significant rivals",
       "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z"
     }
-  ]
+  ],
+  "postRaceAudits": [
+    {
+      "asOfDate": "2026-10-15",
+      "recordedAt": "2026-10-15T21:08:45.637Z",
+      "sourceRule": "Results appended after racing; original selection ranks, early odds, timestamped reviews and prior-day data unchanged.",
+      "coverage": {
+        "originalWinNominations": 4,
+        "activeWinAtFinalReview": 3,
+        "otherEwCandidates": 2,
+        "longshotResearch": 1,
+        "totalCandidates": 7
+      },
+      "outcomes": {
+        "originalWinWinnersUserIncluded": 1,
+        "verifiedByPublisherWinners": 0,
+        "userReportedWinners": 1,
+        "totalWinnersUserIncluded": 1,
+        "topThreeFinishes": 2,
+        "nonWinners": 6
+      },
+      "strikeRateStatus": "Provisional: Yordan win user-reported; six other result positions independently verified; no source-backed Yordan SP yet.",
+      "metrics": {
+        "provisionalOverallWinnerRate": "1/7 (14.3%)",
+        "provisionalOriginalWinStrikeRate": "1/4 (25.0%)",
+        "provisionalActiveWinStrikeRate": "1/3 (33.3%)",
+        "ewWatchWinners": "0/2",
+        "longshotWinners": "0/1",
+        "placed": "Major Fortune 3rd in a 6-runner handicap chase; not a confirmed each-way bet; other E/W shortlists 6th, 9th, 12th. No bookmaker place terms assumed."
+      },
+      "runnerResults": [
+        {
+          "horse": "Nouvel Espoir",
+          "course": "Curragh",
+          "time": "13:37",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "13/2",
+          "finished": 5,
+          "sp": "7/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930835/",
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Major Fortune",
+          "course": "Perth",
+          "time": "14:30",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "11/4",
+          "finished": 3,
+          "sp": "11/2",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/41/perth/2026-10-15/930229/",
+          "lateWithdrawnWin": true
+        },
+        {
+          "horse": "Shifra",
+          "course": "Brighton",
+          "time": "15:15",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "2/1",
+          "finished": 5,
+          "sp": "3/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/7/brighton/2026-10-15/928581/",
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Yordan",
+          "course": "Southwell",
+          "time": "19:30",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "3/1",
+          "finished": 1,
+          "sp": null,
+          "source": "User reported — external result awaiting confirmation",
+          "sourceUrl": null,
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Navajo Point",
+          "course": "Curragh",
+          "time": "14:47",
+          "originCategory": "ORIGINAL_EW",
+          "selectedEarlyOdds": "15/2",
+          "finished": 6,
+          "sp": "12/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930837/",
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Mary Shoelaces",
+          "course": "Curragh",
+          "time": "16:32",
+          "originCategory": "ORIGINAL_EW",
+          "selectedEarlyOdds": "15/2",
+          "finished": 9,
+          "sp": "10/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930840/",
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Turbo Command",
+          "course": "Southwell",
+          "time": "18:00",
+          "originCategory": "LATE_ADDED_LONGSHOT",
+          "selectedEarlyOdds": "25/1",
+          "finished": 12,
+          "sp": "14/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928773/",
+          "lateWithdrawnWin": false
+        }
+      ],
+      "errorAnalysis": [
+        {
+          "horse": "Shifra",
+          "issue": "Strong recent Bath form and low draw did not transfer to Brighton's undulations and track-specific demands; raised OR and course debut were underweighted.",
+          "action": "Require independently sourced track-similarity and competitive opponent evidence for course-debut NAPs; test prospectively, not retroactive deletion."
+        },
+        {
+          "horse": "Nouvel Espoir",
+          "issue": "The repeat C&D/soft-ground winner was raised 8lb and met strong opposing form; suitability alone did not ensure ranking first.",
+          "action": "Compare revised handicap terms, rivals at equal/changed weights and recent performance levels before granting NB grade."
+        },
+        {
+          "horse": "Major Fortune",
+          "issue": "A 194-day absence, +5lb OR, equipment change and softening three-mile test predicted uncertainty; runner came third after WIN withdrawal.",
+          "action": "Keep explicit off-a-break/equipment/going interaction as confidence veto pending held-out validation; do not claim causal proof."
+        },
+        {
+          "horse": "Navajo Point",
+          "issue": "Latest handicap win on similar going was insufficient against a 19-runner field and +8lb OR; finished sixth.",
+          "action": "Quantify larger-field traffic/pace and rating jumps, verify place terms rather than treating lower field count as confidence gain."
+        },
+        {
+          "horse": "Mary Shoelaces",
+          "issue": "Recent soft-ground defeat and mixed form pointed against upgrading older C&D success; ninth on soft.",
+          "action": "Use going-specific recency and latest race fitness evidence rather than older track victories alone."
+        },
+        {
+          "horse": "Turbo Command",
+          "issue": "Three historical C&D wins and a tempting OR drop masked deteriorated recent form; finished twelfth.",
+          "action": "Strengthen outsider E/W minimum recent-performance requirement; older course record is supporting evidence only."
+        },
+        {
+          "horse": "Yordan",
+          "issue": "User-reported win after return to proven standard Tapeta / six-furlong conditions from higher-class turf race.",
+          "action": "Retain explicit demonstrated recent surface/distance suitability, but require comparison across many future races before claiming increased accuracy."
+        }
+      ],
+      "biasControls": [
+        "No after-the-fact removal of Major Fortune from ORIGINAL four published WIN picks.",
+        "No recorded or simulated wagers/profit added to previously cleared ledger.",
+        "Do not use SP as today's early price, and do not assert BOG without a documented accepted bookmaker wager.",
+        "Seven trials cannot establish statistical model improvement.",
+        "Do not use outcomes from races after the published decision when claiming pre-race feature availability."
+      ]
+    }
+  ],
+  "latestPostRaceAudit": {
+    "asOfDate": "2026-10-15",
+    "recordedAt": "2026-10-15T21:08:45.637Z",
+    "sourceRule": "Results appended after racing; original selection ranks, early odds, timestamped reviews and prior-day data unchanged.",
+    "coverage": {
+      "originalWinNominations": 4,
+      "activeWinAtFinalReview": 3,
+      "otherEwCandidates": 2,
+      "longshotResearch": 1,
+      "totalCandidates": 7
+    },
+    "outcomes": {
+      "originalWinWinnersUserIncluded": 1,
+      "verifiedByPublisherWinners": 0,
+      "userReportedWinners": 1,
+      "totalWinnersUserIncluded": 1,
+      "topThreeFinishes": 2,
+      "nonWinners": 6
+    },
+    "strikeRateStatus": "Provisional: Yordan win user-reported; six other result positions independently verified; no source-backed Yordan SP yet.",
+    "metrics": {
+      "provisionalOverallWinnerRate": "1/7 (14.3%)",
+      "provisionalOriginalWinStrikeRate": "1/4 (25.0%)",
+      "provisionalActiveWinStrikeRate": "1/3 (33.3%)",
+      "ewWatchWinners": "0/2",
+      "longshotWinners": "0/1",
+      "placed": "Major Fortune 3rd in a 6-runner handicap chase; not a confirmed each-way bet; other E/W shortlists 6th, 9th, 12th. No bookmaker place terms assumed."
+    },
+    "runnerResults": [
+      {
+        "horse": "Nouvel Espoir",
+        "course": "Curragh",
+        "time": "13:37",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "13/2",
+        "finished": 5,
+        "sp": "7/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930835/",
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Major Fortune",
+        "course": "Perth",
+        "time": "14:30",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "11/4",
+        "finished": 3,
+        "sp": "11/2",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/41/perth/2026-10-15/930229/",
+        "lateWithdrawnWin": true
+      },
+      {
+        "horse": "Shifra",
+        "course": "Brighton",
+        "time": "15:15",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "2/1",
+        "finished": 5,
+        "sp": "3/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/7/brighton/2026-10-15/928581/",
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Yordan",
+        "course": "Southwell",
+        "time": "19:30",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "3/1",
+        "finished": 1,
+        "sp": null,
+        "source": "User reported — external result awaiting confirmation",
+        "sourceUrl": null,
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Navajo Point",
+        "course": "Curragh",
+        "time": "14:47",
+        "originCategory": "ORIGINAL_EW",
+        "selectedEarlyOdds": "15/2",
+        "finished": 6,
+        "sp": "12/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930837/",
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Mary Shoelaces",
+        "course": "Curragh",
+        "time": "16:32",
+        "originCategory": "ORIGINAL_EW",
+        "selectedEarlyOdds": "15/2",
+        "finished": 9,
+        "sp": "10/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930840/",
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Turbo Command",
+        "course": "Southwell",
+        "time": "18:00",
+        "originCategory": "LATE_ADDED_LONGSHOT",
+        "selectedEarlyOdds": "25/1",
+        "finished": 12,
+        "sp": "14/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928773/",
+        "lateWithdrawnWin": false
+      }
+    ],
+    "errorAnalysis": [
+      {
+        "horse": "Shifra",
+        "issue": "Strong recent Bath form and low draw did not transfer to Brighton's undulations and track-specific demands; raised OR and course debut were underweighted.",
+        "action": "Require independently sourced track-similarity and competitive opponent evidence for course-debut NAPs; test prospectively, not retroactive deletion."
+      },
+      {
+        "horse": "Nouvel Espoir",
+        "issue": "The repeat C&D/soft-ground winner was raised 8lb and met strong opposing form; suitability alone did not ensure ranking first.",
+        "action": "Compare revised handicap terms, rivals at equal/changed weights and recent performance levels before granting NB grade."
+      },
+      {
+        "horse": "Major Fortune",
+        "issue": "A 194-day absence, +5lb OR, equipment change and softening three-mile test predicted uncertainty; runner came third after WIN withdrawal.",
+        "action": "Keep explicit off-a-break/equipment/going interaction as confidence veto pending held-out validation; do not claim causal proof."
+      },
+      {
+        "horse": "Navajo Point",
+        "issue": "Latest handicap win on similar going was insufficient against a 19-runner field and +8lb OR; finished sixth.",
+        "action": "Quantify larger-field traffic/pace and rating jumps, verify place terms rather than treating lower field count as confidence gain."
+      },
+      {
+        "horse": "Mary Shoelaces",
+        "issue": "Recent soft-ground defeat and mixed form pointed against upgrading older C&D success; ninth on soft.",
+        "action": "Use going-specific recency and latest race fitness evidence rather than older track victories alone."
+      },
+      {
+        "horse": "Turbo Command",
+        "issue": "Three historical C&D wins and a tempting OR drop masked deteriorated recent form; finished twelfth.",
+        "action": "Strengthen outsider E/W minimum recent-performance requirement; older course record is supporting evidence only."
+      },
+      {
+        "horse": "Yordan",
+        "issue": "User-reported win after return to proven standard Tapeta / six-furlong conditions from higher-class turf race.",
+        "action": "Retain explicit demonstrated recent surface/distance suitability, but require comparison across many future races before claiming increased accuracy."
+      }
+    ],
+    "biasControls": [
+      "No after-the-fact removal of Major Fortune from ORIGINAL four published WIN picks.",
+      "No recorded or simulated wagers/profit added to previously cleared ledger.",
+      "Do not use SP as today's early price, and do not assert BOG without a documented accepted bookmaker wager.",
+      "Seven trials cannot establish statistical model improvement.",
+      "Do not use outcomes from races after the published decision when claiming pre-race feature availability."
+    ]
+  }
 }
