@@ -384,9 +384,13 @@ function selectionRow(x,type){
  const k=keyOf(x,type), isMain=type==="main";
  const intro=publicSummary(x);
  const points=positivePoints(x);
- const brief='<div class="selection-brief"><p>'+escapeHtml(intro)+'</p>'+
+ const liveReview=x.raceDayReview||null;
+ const liveReviewBrief=liveReview?.headline?'<p><strong>Latest race-day check:</strong> '+escapeHtml(liveReview.headline)+'</p>':'';
+ const brief='<div class="selection-brief"><p>'+escapeHtml(intro)+'</p>'+liveReviewBrief+
    (points.length?'<ul class="selection-positives">'+points.map(p=>'<li>'+escapeHtml(p)+'</li>').join('')+'</ul>':'')+'</div>';
  const risk=x.risk||"—";
+ const liveReviewSources=liveReview?.sourceUrls?.filter(u=>typeof u==='string'&&/^https:\/\//.test(u)).slice(0,4).map((u,i)=>'<a target="_blank" rel="noopener noreferrer" href="'+escapeHtml(u)+'">Current source '+(i+1)+' ↗</a>').join(' · ')||'';
+ const liveReviewDetails=liveReview?.detail?'<div class="selection-confidence-note"><strong>Race-day recheck · '+escapeHtml(liveReview.status||'reviewed')+' · '+escapeHtml(liveReview.checkedAt?new Date(liveReview.checkedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour:'2-digit',minute:'2-digit',day:'numeric',month:'short'}):'')+'</strong><span>'+escapeHtml(liveReview.detail)+'</span>'+(liveReview?.observedPrice?'<span>Observed current odds: '+escapeHtml(liveReview.observedPrice)+' (original price preserved)</span>':'')+(liveReviewSources?'<span>'+liveReviewSources+'</span>':'')+'</div>':'';
  const special=type==="mid"?'<div class="ew-view"><strong>'+val(x.view)+'</strong><small>'+val(x.terms)+'</small></div>':type==="long"?'<div class="ew-view"><strong>'+val(x.placeView)+'</strong><small>'+val(x.terms)+'</small></div>':'';
  const typeStars=type==="mid"&&x.midStars?stars(x.midStars):type==="long"&&x.ewStars?stars(x.ewStars):'';
  const bet=(state.ledger?.entries||[]).find(e=>e.id===[state.data.snapshotDate,x.course,x.time,x.horse,type==="main"?"win":"each-way"].join("|").toLowerCase());
@@ -406,7 +410,7 @@ function selectionRow(x,type){
    '<div class="selection-odds"><span>'+((x.result?.status==='NR')?'Non-runner':'Best documented odds')+'</span><strong>'+escapeHtml((x.result?.status==='NR')?'NR':((bet&&entryPrice(bet).label)||x.bestAvailableOdds?.odds||x.currentOdds||x.odds))+'</strong></div>'+
    '<div class="selection-result">'+resultBadge(x)+'</div>'+
    '<div class="selection-chevron">⌄</div>'+brief+
- '</summary><div class="selection-details">'+betLine+typeStars+special+commonDetails(x)+
+ '</summary><div class="selection-details">'+betLine+typeStars+special+liveReviewDetails+commonDetails(x)+
    (x.confidenceTier?'<div class="selection-confidence-note"><strong>Confidence assessment</strong><span>'+escapeHtml(x.confidenceTier)+'</span></div>':'')+
    '<div class="detail-risk"><strong>Points to monitor</strong><p>'+escapeHtml(risk)+'</p></div>'+
    (x.currentOdds&&x.currentOdds!==x.odds?'<div class="source-line">Original recorded price: '+val(x.odds)+' · Morning reference price: '+val(x.currentOdds)+'</div>':'')+
