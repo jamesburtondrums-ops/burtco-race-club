@@ -23,7 +23,7 @@
     {
       "course": "Curragh",
       "races": 8,
-      "going": "Yielding straight; good to yielding round",
+      "going": "LATEST HEADLINE REPORTS DISAGREE: Racing Post straight SOFT / round YIELDING TO SOFT; Timeform straight YIELDING TO SOFT / round SOFT (rain). Check before off.",
       "code": "Flat turf",
       "first": "13:02",
       "last": "17:07"
@@ -31,7 +31,7 @@
     {
       "course": "Fontwell",
       "races": 7,
-      "going": "Good to soft, good in places hurdle course",
+      "going": "GOOD TO SOFT, good in places hurdle course (GoingStick 4.9)",
       "code": "Jumps",
       "first": "13:44",
       "last": "17:14"
@@ -39,7 +39,7 @@
     {
       "course": "Brighton",
       "races": 8,
-      "going": "Good, good to soft in places (GoingStick 5.2)",
+      "going": "GOOD, good-to-soft in places (GoingStick 5.5; all races rail +7yd)",
       "code": "Flat turf",
       "first": "13:32",
       "last": "17:25"
@@ -66,7 +66,7 @@
     {
       "course": "Curragh",
       "races": 8,
-      "going": "Yielding straight; good to yielding round",
+      "going": "Softer going reported; details differ between Racing Post and Timeform",
       "code": "Flat turf",
       "first": "13:02",
       "last": "17:07",
@@ -84,7 +84,7 @@
     {
       "course": "Brighton",
       "races": 8,
-      "going": "Good, good to soft in places",
+      "going": "GOOD, good-to-soft in places; GoingStick 5.5",
       "code": "Flat turf",
       "first": "13:32",
       "last": "17:25",
@@ -209,6 +209,23 @@
             "checkedAt": "2026-10-14T21:08:21.657Z"
           }
         }
+      },
+      "raceDayReview": {
+        "status": "RETAIN — SOFT-GROUND EVIDENCE POSITIVE",
+        "headline": "Soft straight-course ground suits known form; won this C&D on soft on 4 Oct, but now 8lb higher.",
+        "detail": "Two independent going summaries indicate materially softer Curragh conditions; exact straight/round descriptions currently differ. This horse won a 22-runner Curragh 6f handicap on soft on 4 Oct from OR70, and was second on soft-to-heavy on 30 Sep. Current OR78 plus tougher opposition (including Moltophino and Go Athletico) are the principal challenges. Remains a qualified but not guaranteed WIN contender.",
+        "fieldNow": 13,
+        "goingNow": "Curragh straight reported SOFT by Racing Post; yielding-to-soft in Timeform summary (source discrepancy)",
+        "observedPrice": "6/1–13/2",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/",
+          "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+          "https://www.irishracing.com/horse/Nouvel-Espoir-IRE/690772",
+          "https://www.racingtv.com/racecards/2026-10-15/curragh/1337"
+        ],
+        "checkedAt": "2026-10-15T08:48:23.202Z",
+        "sourceType": "Public publisher going/racecard, form and bookmaker comparison; no direct private/stable inputs",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z"
       }
     },
     {
@@ -291,6 +308,22 @@
             "checkedAt": "2026-10-14T21:08:21.657Z"
           }
         }
+      },
+      "raceDayReview": {
+        "status": "RETAIN — HEIGHTENED FITNESS/STAMINA CAUTION",
+        "headline": "Still declared; 194-day break, soft patches, light rain and +107yd rail movement remain significant.",
+        "detail": "Six declared runners; Perth reports good-to-soft, soft in places and light rain. The 14:30 chase carries +107 yards from rail movements, potentially increasing the test. The horse is making a 194-day seasonal return and lacks a documented Perth C&D win. Dan/Harry Skelton form and historic efficient jumping support consideration, but freshness and I Wish You/Chasingouttheblues are significant unknowns. Market quotes have eased from the original 11/4: price is monitored, not used to define race confidence.",
+        "fieldNow": 6,
+        "goingNow": "GOOD TO SOFT; soft in places (GoingStick 5.1), light rain; rail movement +107yd",
+        "observedPrice": "3/1–4/1",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/",
+          "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+          "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/"
+        ],
+        "checkedAt": "2026-10-15T08:48:23.202Z",
+        "sourceType": "Public publisher going/racecard, form and bookmaker comparison; no direct private/stable inputs",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z"
       }
     },
     {
@@ -374,6 +407,22 @@
             "checkedAt": "2026-10-14T21:08:21.657Z"
           }
         }
+      },
+      "raceDayReview": {
+        "status": "RETAIN — 10-RUNNER FIELD",
+        "headline": "Benavente is a non-runner; 10 remain. Course debut and 8lb rise still demand respect.",
+        "detail": "Racing Post and Timeform list Benavente as withdrawn; Racing TV lists ten runners. Brighton remains GOOD, good-to-soft in places; latest Racing Post GoingStick is 5.5 versus 5.2 in an earlier report, but that alone does not establish a specific pace impact. Shifra remains a credible NAP selection on form, although Cosmic Girl, Skimming Along, an 8lb penalty/rise and first attempt on this undulating track are meaningful risks. Observed quotes are 9/4–5/2 versus 2/1 originally.",
+        "fieldNow": 10,
+        "goingNow": "GOOD, good-to-soft in places; GoingStick 5.5; all races +7yd rails",
+        "observedPrice": "9/4–5/2",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/",
+          "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+          "https://www.racingtv.com/racecards/2026-10-15/brighton/1515"
+        ],
+        "checkedAt": "2026-10-15T08:48:23.202Z",
+        "sourceType": "Public publisher going/racecard, form and bookmaker comparison; no direct private/stable inputs",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z"
       }
     },
     {
@@ -457,6 +506,21 @@
             "checkedAt": "2026-10-14T21:08:21.657Z"
           }
         }
+      },
+      "raceDayReview": {
+        "status": "RETAIN — NO MATERIAL CONDITIONS CHANGE",
+        "headline": "Nine remain on Standard Tapeta; racing suitability unchanged, though the main rivals are strong.",
+        "detail": "Nine-runner Southwell 19:30 handicap remains on STANDARD Tapeta; no selected horse is withdrawn. Yordan's past two Tapeta successes still support the return to this 6f surface after a tougher turf assignment, but Return Of The Gods and New Image remain credible opposition. Draw 8 warrants monitoring without unsupported claims of a proven stall bias. Observed bookmaker comparisons show 5/2–11/4 versus the original 3/1.",
+        "fieldNow": 9,
+        "goingNow": "STANDARD Tapeta",
+        "observedPrice": "5/2–11/4",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/",
+          "https://www.racingtv.com/racecards/2026-10-15/southwell/1930"
+        ],
+        "checkedAt": "2026-10-15T08:48:23.202Z",
+        "sourceType": "Public publisher going/racecard, form and bookmaker comparison; no direct private/stable inputs",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z"
       }
     }
   ],
@@ -494,7 +558,24 @@
       "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
       "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
       "view": "MIDSHOT / E/W WATCH",
-      "terms": "£5 WIN + £5 PLACE hypothetical paper bet at 1/4 odds top three; a real bookmaker may offer different paid places and fractions. Not a calibrated recommendation."
+      "terms": "£5 WIN + £5 PLACE hypothetical paper bet at 1/4 odds top three; a real bookmaker may offer different paid places and fractions. Not a calibrated recommendation.",
+      "raceDayReview": {
+        "status": "RETAIN E/W — SOFTER GROUND SUPPORTIVE",
+        "headline": "Won over 9f on yielding-to-soft in September; Moyassr withdrawn, field now 21.",
+        "detail": "Racing Post non-runners and Racing TV confirm Moyassr's withdrawal, leaving 21. Racing Post now describes the round course as yielding-to-soft, Timeform lists soft; both are wetter than earlier good-to-yielding. Navajo Point won a Gowran Park 9f handicap on yielding-to-soft on 19 Sep, and trainer comments favour continuing on softer ground. Still an E/W-only contender: OR70 is 8lb above his last winning mark, first-time cheekpieces are unknown and 21 runners create traffic/pace risks. Check provider-specific place terms; Racing TV shows differing extra-place arrangements.",
+        "fieldNow": 21,
+        "goingNow": "Curragh round reported YIELDING TO SOFT (Racing Post); SOFT (Timeform)",
+        "observedPrice": "around 8/1",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/",
+          "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+          "https://www.irishracing.com/horse/Navajo-Point-%28IRE%29/779089",
+          "https://www.racingtv.com/racecards/2026-10-15/curragh/1447"
+        ],
+        "checkedAt": "2026-10-15T08:48:23.202Z",
+        "sourceType": "Public publisher going/racecard, form and bookmaker comparison; no direct private/stable inputs",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z"
+      }
     },
     {
       "horse": "Mary Shoelaces",
@@ -529,7 +610,23 @@
       "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
       "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
       "view": "MIDSHOT / E/W WATCH",
-      "terms": "£5 WIN + £5 PLACE hypothetical paper bet at 1/4 odds top three; a real bookmaker may offer different paid places and fractions. Not a calibrated recommendation."
+      "terms": "£5 WIN + £5 PLACE hypothetical paper bet at 1/4 odds top three; a real bookmaker may offer different paid places and fractions. Not a calibrated recommendation.",
+      "raceDayReview": {
+        "status": "CONDITIONAL E/W — GROUND PROFILE MIXED",
+        "headline": "Softer Curragh sprint ground is a caution: past wins include yielding, but a recent soft-ground run disappointed.",
+        "detail": "Still one of 17 declared over 5f. The Curragh straight is reported SOFT by Racing Post and yielding-to-soft by Timeform; this differs from the original yielding review. Positives: course-and-distance success on yielding (16 Oct 2025) and a Good-to-Soft Newmarket win (Aug 2025). Negative: sixth of six over 5f on soft at Down Royal (19 Jun 2026). Stall 1 and claim may help, but a contested sprint and mixed soft form prevent stronger confidence. Observed prices 8/1–17/2; retain only as a conditional E/W research watch.",
+        "fieldNow": 17,
+        "goingNow": "Curragh straight reported SOFT (Racing Post); YIELDING TO SOFT (Timeform)",
+        "observedPrice": "8/1–17/2",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/",
+          "https://www.irishracing.com/horse/Mary-Shoelaces-IRE/680475",
+          "https://www.racingtv.com/racecards/2026-10-15/curragh/1632"
+        ],
+        "checkedAt": "2026-10-15T08:48:23.202Z",
+        "sourceType": "Public publisher going/racecard, form and bookmaker comparison; no direct private/stable inputs",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z"
+      }
     }
   ],
   "longshotsToday": [
@@ -574,7 +671,23 @@
       "earlyOddsLockedAt": "2026-10-15T08:03:40.897Z",
       "reviewedAt": "2026-10-15T08:03:40.897Z",
       "researchOnly": true,
-      "paperOnly": false
+      "paperOnly": false,
+      "raceDayReview": {
+        "status": "RETAIN — HIGH-RISK OUTSIDER ONLY",
+        "headline": "Lady V is out, reducing the field to 13. C&D/handicap case remains but poor recent form is a major concern.",
+        "detail": "Racing Post, Timeform and Racing TV all list Lady V as a non-runner in the 18:00 Southwell handicap; Racing TV shows 13 runners, STANDARD Tapeta. Turbo Command's three course-and-distance wins and OR48 versus past winning marks remain genuine supporting evidence. However, recent form 923650, age nine and a weaker trainer record still make this a speculative E/W research watch, not a confident WIN selection. Quotes around 22/1–28/1 observed (original 25/1 retained); any extra places are bookmaker-specific, not guaranteed.",
+        "fieldNow": 13,
+        "goingNow": "STANDARD Tapeta",
+        "observedPrice": "22/1–28/1",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/",
+          "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+          "https://www.racingtv.com/racecards/2026-10-15/southwell/1800"
+        ],
+        "checkedAt": "2026-10-15T08:48:23.202Z",
+        "sourceType": "Public publisher going/racecard, form and bookmaker comparison; no direct private/stable inputs",
+        "originalSelectionFrozenAt": "2026-10-15T08:03:40.897Z"
+      }
     }
   ],
   "lucky15Only": [],
@@ -756,69 +869,140 @@
         "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/"
       ],
       "note": "Raceday rechecks complement, but do not rewrite, the timestamp-frozen pre-race assessment; published conditions are not private meteorological observations or guaranteed going at off."
+    },
+    {
+      "checkedAt": "2026-10-15T08:48:23.202Z",
+      "type": "raceday-independent-recheck",
+      "selectionChanges": 0,
+      "reviewNotesAdded": 7,
+      "selectionsReviewed": [
+        "Nouvel Espoir",
+        "Major Fortune",
+        "Shifra",
+        "Yordan",
+        "Navajo Point",
+        "Mary Shoelaces",
+        "Turbo Command"
+      ],
+      "outcome": "Seven published candidates remain in their existing sections; Mary Shoelaces conditional E/W only; Curragh softer going favours documented form of Nouvel Espoir and Navajo Point. No new horses promoted and no paper stakes created.",
+      "reportedConditions": {
+        "Brighton": "GOOD, good-to-soft in places (GoingStick 5.5); Benavente NR; Shifra race now 10",
+        "Curragh": "Racing Post: straight SOFT, round YIELDING TO SOFT. Timeform: straight YIELDING TO SOFT, round SOFT. Sources disagree on exact extent of softening; earlier yielding/good-to-yielding snapshot kept unchanged.",
+        "Perth": "GOOD TO SOFT, soft in places; light rain; rail +107yd at 14:30",
+        "Southwell": "STANDARD Tapeta; Lady V NR (18:00 now 13)",
+        "Fontwell": "GOOD TO SOFT, good in places (GoingStick 4.9)",
+        "nonRunnerForSelectedHorse": false
+      },
+      "notableChanges": [
+        {
+          "horse": "Nouvel Espoir",
+          "type": "ground",
+          "interpretation": "New soft report is consistent with last Curragh C&D soft-ground win on 4 Oct; OR +8lb is the key counterweight"
+        },
+        {
+          "horse": "Navajo Point",
+          "type": "going and withdrawn rival",
+          "interpretation": "Won last 9f start on yielding-to-soft; Moyassr NR and 21 runners confirmed; handicap rise +8lb"
+        },
+        {
+          "horse": "Mary Shoelaces",
+          "type": "ground ambiguity",
+          "interpretation": "Mixed soft-ground record; keep E/W conditional"
+        },
+        {
+          "horse": "Shifra",
+          "type": "withdrawal",
+          "interpretation": "Benavente NR and 10 runners; first Brighton attempt and higher handicap mark remain"
+        },
+        {
+          "horse": "Turbo Command",
+          "type": "withdrawal",
+          "interpretation": "Lady V NR and 13 runners; remains speculative outsider"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.racingpost.com/non-runners/",
+        "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+        "https://www.irishracing.com/horse/Nouvel-Espoir-IRE/690772",
+        "https://www.racingtv.com/racecards/2026-10-15/curragh/1337",
+        "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+        "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/",
+        "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+        "https://www.racingtv.com/racecards/2026-10-15/southwell/1930",
+        "https://www.irishracing.com/horse/Navajo-Point-%28IRE%29/779089",
+        "https://www.racingtv.com/racecards/2026-10-15/curragh/1447",
+        "https://www.irishracing.com/horse/Mary-Shoelaces-IRE/680475",
+        "https://www.racingtv.com/racecards/2026-10-15/curragh/1632",
+        "https://www.racingtv.com/racecards/2026-10-15/southwell/1800"
+      ],
+      "note": "Live rechecks are supplementary and time-stamped; original early odds, ratings evidence and pre-race assessments remain frozen. Some publishers show cached original going in individual card headers. Bookmaker price comparisons are observations and may move; no guarantee of accepted bets or each-way places."
     }
   ],
   "latestRacedayRecheck": {
-    "checkedAt": "2026-10-15T07:37:56.868Z",
+    "checkedAt": "2026-10-15T08:48:23.202Z",
     "type": "raceday-independent-recheck",
     "selectionChanges": 0,
+    "reviewNotesAdded": 7,
     "selectionsReviewed": [
-      "Shifra",
       "Nouvel Espoir",
       "Major Fortune",
+      "Shifra",
       "Yordan",
       "Navajo Point",
-      "Mary Shoelaces"
+      "Mary Shoelaces",
+      "Turbo Command"
     ],
-    "outcome": "All six originally published candidates still declared at the time sources were checked; no unsupported new selections or automatic wagers. Keep risks visible and recheck nearer off.",
+    "outcome": "Seven published candidates remain in their existing sections; Mary Shoelaces conditional E/W only; Curragh softer going favours documented form of Nouvel Espoir and Navajo Point. No new horses promoted and no paper stakes created.",
     "reportedConditions": {
-      "Brighton": "GOOD, good to soft in places; GoingStick 5.2; race rail +7yd",
-      "Curragh": "Straight YIELDING, round GOOD TO YIELDING; rain reported",
-      "Perth": "GOOD TO SOFT, soft in places; GoingStick 5.1; 14:30 race rail movement +107yd; light rain",
-      "Southwell": "STANDARD Tapeta"
+      "Brighton": "GOOD, good-to-soft in places (GoingStick 5.5); Benavente NR; Shifra race now 10",
+      "Curragh": "Racing Post: straight SOFT, round YIELDING TO SOFT. Timeform: straight YIELDING TO SOFT, round SOFT. Sources disagree on exact extent of softening; earlier yielding/good-to-yielding snapshot kept unchanged.",
+      "Perth": "GOOD TO SOFT, soft in places; light rain; rail +107yd at 14:30",
+      "Southwell": "STANDARD Tapeta; Lady V NR (18:00 now 13)",
+      "Fontwell": "GOOD TO SOFT, good in places (GoingStick 4.9)",
+      "nonRunnerForSelectedHorse": false
     },
-    "watches": [
-      {
-        "horse": "Major Fortune",
-        "severity": "heightened-monitoring",
-        "reason": "Perth's 14:30 rail adds 107yd and going now includes soft patches; light rain and 194-day layoff leave stamina/fitness sensitivity unresolved."
-      },
-      {
-        "horse": "Shifra",
-        "severity": "monitor",
-        "reason": "8lb handicap rise and Brighton debut remain relevant; currently declared on GOOD, good to soft in places."
-      },
+    "notableChanges": [
       {
         "horse": "Nouvel Espoir",
-        "severity": "monitor",
-        "reason": "13-runner Curragh straight 6f on YIELDING; rival Go Athletico's revised terms require attention."
-      },
-      {
-        "horse": "Yordan",
-        "severity": "monitor",
-        "reason": "Nine declared on STANDARD Tapeta; serious rivals include Return Of The Gods, Town Queen and New Image; no forecast price is interpreted as proof of probability."
+        "type": "ground",
+        "interpretation": "New soft report is consistent with last Curragh C&D soft-ground win on 4 Oct; OR +8lb is the key counterweight"
       },
       {
         "horse": "Navajo Point",
-        "severity": "monitor",
-        "reason": "21 declared in the 1m1f handicap; published card lists first-time cheekpieces; each-way placed terms need confirmation."
+        "type": "going and withdrawn rival",
+        "interpretation": "Won last 9f start on yielding-to-soft; Moyassr NR and 21 runners confirmed; handicap rise +8lb"
       },
       {
         "horse": "Mary Shoelaces",
-        "severity": "monitor",
-        "reason": "17 declared over Curragh 5f on YIELDING; recent form and actual paid place terms must be checked."
+        "type": "ground ambiguity",
+        "interpretation": "Mixed soft-ground record; keep E/W conditional"
+      },
+      {
+        "horse": "Shifra",
+        "type": "withdrawal",
+        "interpretation": "Benavente NR and 10 runners; first Brighton attempt and higher handicap mark remain"
+      },
+      {
+        "horse": "Turbo Command",
+        "type": "withdrawal",
+        "interpretation": "Lady V NR and 13 runners; remains speculative outsider"
       }
     ],
-    "verifiedNonRunnerStatement": "Racing Post non-runner page did not list any of the six selected horses during this check; withdrawal information can change after publication.",
-    "urls": [
+    "sourceUrls": [
       "https://www.racingpost.com/non-runners/",
       "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+      "https://www.irishracing.com/horse/Nouvel-Espoir-IRE/690772",
+      "https://www.racingtv.com/racecards/2026-10-15/curragh/1337",
+      "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
       "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/",
-      "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
-      "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930837/",
-      "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930840/",
-      "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/"
+      "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+      "https://www.racingtv.com/racecards/2026-10-15/southwell/1930",
+      "https://www.irishracing.com/horse/Navajo-Point-%28IRE%29/779089",
+      "https://www.racingtv.com/racecards/2026-10-15/curragh/1447",
+      "https://www.irishracing.com/horse/Mary-Shoelaces-IRE/680475",
+      "https://www.racingtv.com/racecards/2026-10-15/curragh/1632",
+      "https://www.racingtv.com/racecards/2026-10-15/southwell/1800"
     ],
-    "note": "Raceday rechecks complement, but do not rewrite, the timestamp-frozen pre-race assessment; published conditions are not private meteorological observations or guaranteed going at off."
+    "note": "Live rechecks are supplementary and time-stamped; original early odds, ratings evidence and pre-race assessments remain frozen. Some publishers show cached original going in individual card headers. Bookmaker price comparisons are observations and may move; no guarantee of accepted bets or each-way places."
   }
 }
