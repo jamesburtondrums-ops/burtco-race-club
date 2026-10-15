@@ -7,7 +7,7 @@
     "races": 40,
     "scope": "Forty scheduled races reviewed across five declared meetings. All shortlisted horses reviewed for past form, race suitability, published odds and at least one credible opponent. Does not claim an exhaustive independent review of every runner's lifetime data.",
     "publishedDate": "2026-10-15",
-    "selectedIndividuals": 6,
+    "selectedIndividuals": 7,
     "qualifiedWins": 4,
     "winConfidenceMethod": "Documented horse/race evidence supports Strong/Solid editorial shortlist, odds excluded from race-confidence rating."
   },
@@ -532,14 +532,58 @@
       "terms": "£5 WIN + £5 PLACE hypothetical paper bet at 1/4 odds top three; a real bookmaker may offer different paid places and fractions. Not a calibrated recommendation."
     }
   ],
-  "longshotsToday": [],
+  "longshotsToday": [
+    {
+      "horse": "Turbo Command",
+      "course": "Southwell",
+      "time": "18:00",
+      "odds": "25/1",
+      "oddsAtSelection": "25/1",
+      "trainer": "Alison Hamilton",
+      "jockey": "Paul Mulrennan",
+      "or": 48,
+      "ts": 49,
+      "rpr": 68,
+      "runnerCount": 14,
+      "going": "Standard Tapeta",
+      "distance": "7f 14y",
+      "draw": 7,
+      "tier": "OUTSIDER / E/W WATCH",
+      "confidenceTier": "SPECULATIVE EACH-WAY — NOT A HIGH-CONFIDENCE WIN",
+      "summary": "Three Southwell course-and-distance wins, a May runner-up over this exact trip, and a handicap mark of 48 versus previous winning ratings of 54–62 give Turbo Command an evidence-backed outsider case, provided he can recover his form and secure a favourable prominent position.",
+      "reason": "Three Southwell course-and-distance wins, a May runner-up over this exact trip, and a handicap mark of 48 versus previous winning ratings of 54–62 give Turbo Command an evidence-backed outsider case, provided he can recover his form and secure a favourable prominent position.",
+      "positivePoints": [
+        "Won three times at Southwell over this course and distance",
+        "OR 48: previous wins from 54, 57, 58 and 62",
+        "Second here on 7 May 2026 off OR 50; reunited with Paul Mulrennan",
+        "Usually races prominently; stall 7 of 14"
+      ],
+      "risk": "High risk: nine years old and recent form 923650, including 11th of 12 at Newcastle on 25 September (8.44 lengths beaten), plus a below-par Southwell sixth on 27 August. Trainer's recent win percentage is low and competition for prominent positions could blunt his pace. No demonstrated statistical edge or reliable win probability.",
+      "tags": [
+        "3x Southwell C&D wins",
+        "Handicap mark below previous wins",
+        "Paul Mulrennan partnership",
+        "Front-running/pace and recent form risks"
+      ],
+      "placeView": "SPECULATIVE E/W WATCH — 25/1",
+      "terms": "Research-only watch; no real or paper bet. Observed quotes near 25/1. Some markets show 1/5 odds for four places in a 14-runner handicap; recheck bookmaker-specific terms and non-runners before the off. Not a confident WIN recommendation.",
+      "source": "15 October 2026 form and handicap review (IrishRacing/Racing Post/HorseRacing.net)",
+      "sourceUrl": "https://www.irishracing.com/racecards/Thu-15th-Oct-2026/Southwell/1800",
+      "priceSource": "https://www.horseracing.net/southwell/15-10-26/18%3A00",
+      "selectionPublishedAt": "2026-10-15T08:03:40.897Z",
+      "earlyOddsLockedAt": "2026-10-15T08:03:40.897Z",
+      "reviewedAt": "2026-10-15T08:03:40.897Z",
+      "researchOnly": true,
+      "paperOnly": false
+    }
+  ],
   "lucky15Only": [],
   "selectionPolicy": {
     "avoidOddsOn": true,
     "minimumWinOdds": "1/1",
     "winCandidates": 4,
     "qualifiedWinCandidates": 4,
-    "numLongshots": 0,
+    "numLongshots": 1,
     "winQualificationRule": "Documented current form and a credible match to going/surface/distance, with class/opposition and fitness or trainer/jockey evidence verified from independent sources. Moderate risk is allowed but must be disclosed. Odds do not establish win confidence.",
     "rationale": "Avoid confusing favourites with confidence; do not overreact to one day's successes. Prefer repeatable conditions and expose unknowns such as long absences or handicap raises."
   },
@@ -551,8 +595,8 @@
   },
   "longshotsPolicy": {
     "minOdds": "20/1",
-    "publicNote": "No horse priced at 20/1+ met a sufficiently supported recent-form and conditions threshold today. An empty list is preferable to fabricated confidence.",
-    "priceRule": "No speculative longshot forced."
+    "publicNote": "One 25/1 outsider has an evidence-based course/handicap case but is a speculative E/W research watch, not a high-confidence tip. No runner is promoted simply because the price is big.",
+    "priceRule": "Published 20/1+ prices are pre-race source quotes; never treat long odds as proof of win probability. Research-only: no stake recorded."
   },
   "winNominations": [
     {
@@ -597,14 +641,16 @@
       "Five declared meetings and observed course going",
       "Published early price for all six choices",
       "Recent form, rated ability, trip/surface and named rivals for every choice",
-      "One pick per distinct race and source-backed pre-race freeze"
+      "One pick per distinct race and source-backed pre-race freeze",
+      "15 Oct morning longshot check: Turbo Command Southwell C&D, previous winning ORs and independent observed price"
     ],
     "unverified": [
       "All-runner proprietary sectional data not available",
       "Future rain and revised race-day going unknown",
       "Tomorrow's final non-runner/declaration changes not known",
       "No genuine bookmaker wager or universal BOG eligibility assumed",
-      "No backtested proof that editorial changes materially improve accuracy"
+      "No backtested proof that editorial changes materially improve accuracy",
+      "No quantified speed/sectional advantage or verified pace map for 18:00 Southwell; 25/1 outsider has material recent-form risk"
     ]
   },
   "recentPerformanceReview": {
@@ -643,7 +689,9 @@
   "researchSelectionUpdate": {
     "reviewedAt": "2026-10-14T21:08:21.657Z",
     "status": "OCT15_NEXT_DAY_SELECTIONS_PUBLISHED",
-    "note": "Evidence-led 40-race screening and 6 published selections before first off 12:55 on 15 October. NAP Shifra, NB Nouvel Espoir. No price-derived confidence, no forced longshot/Lucky15; prior day result data preserved in ledger history."
+    "note": "Evidence-led 40-race screening and 6 published selections before first off 12:55 on 15 October. NAP Shifra, NB Nouvel Espoir. No price-derived confidence, no forced longshot/Lucky15; prior day result data preserved in ledger history.",
+    "longshotReviewedAt": "2026-10-15T08:03:40.897Z",
+    "longshotPublication": "Added 18:00 Southwell Turbo Command at 25/1 as a speculative research-only each-way watch from verified course/mark and trainer-jockey evidence. Risks disclosed. Initial overnight shortlist preserved; no paper stake."
   },
   "raceDayRechecks": [
     {
