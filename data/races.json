@@ -15,7 +15,7 @@
     {
       "course": "Perth",
       "races": 8,
-      "going": "Good to soft (monitor rain)",
+      "going": "Good to soft, soft in places (GoingStick 5.1; light rain; 14:30 rails +107yd)",
       "code": "Jumps",
       "first": "12:55",
       "last": "16:50"
@@ -39,7 +39,7 @@
     {
       "course": "Brighton",
       "races": 8,
-      "going": "Good, good to soft in places",
+      "going": "Good, good to soft in places (GoingStick 5.2)",
       "code": "Flat turf",
       "first": "13:32",
       "last": "17:25"
@@ -644,5 +644,133 @@
     "reviewedAt": "2026-10-14T21:08:21.657Z",
     "status": "OCT15_NEXT_DAY_SELECTIONS_PUBLISHED",
     "note": "Evidence-led 40-race screening and 6 published selections before first off 12:55 on 15 October. NAP Shifra, NB Nouvel Espoir. No price-derived confidence, no forced longshot/Lucky15; prior day result data preserved in ledger history."
+  },
+  "raceDayRechecks": [
+    {
+      "checkedAt": "2026-10-15T07:37:56.868Z",
+      "type": "raceday-independent-recheck",
+      "selectionChanges": 0,
+      "selectionsReviewed": [
+        "Shifra",
+        "Nouvel Espoir",
+        "Major Fortune",
+        "Yordan",
+        "Navajo Point",
+        "Mary Shoelaces"
+      ],
+      "outcome": "All six originally published candidates still declared at the time sources were checked; no unsupported new selections or automatic wagers. Keep risks visible and recheck nearer off.",
+      "reportedConditions": {
+        "Brighton": "GOOD, good to soft in places; GoingStick 5.2; race rail +7yd",
+        "Curragh": "Straight YIELDING, round GOOD TO YIELDING; rain reported",
+        "Perth": "GOOD TO SOFT, soft in places; GoingStick 5.1; 14:30 race rail movement +107yd; light rain",
+        "Southwell": "STANDARD Tapeta"
+      },
+      "watches": [
+        {
+          "horse": "Major Fortune",
+          "severity": "heightened-monitoring",
+          "reason": "Perth's 14:30 rail adds 107yd and going now includes soft patches; light rain and 194-day layoff leave stamina/fitness sensitivity unresolved."
+        },
+        {
+          "horse": "Shifra",
+          "severity": "monitor",
+          "reason": "8lb handicap rise and Brighton debut remain relevant; currently declared on GOOD, good to soft in places."
+        },
+        {
+          "horse": "Nouvel Espoir",
+          "severity": "monitor",
+          "reason": "13-runner Curragh straight 6f on YIELDING; rival Go Athletico's revised terms require attention."
+        },
+        {
+          "horse": "Yordan",
+          "severity": "monitor",
+          "reason": "Nine declared on STANDARD Tapeta; serious rivals include Return Of The Gods, Town Queen and New Image; no forecast price is interpreted as proof of probability."
+        },
+        {
+          "horse": "Navajo Point",
+          "severity": "monitor",
+          "reason": "21 declared in the 1m1f handicap; published card lists first-time cheekpieces; each-way placed terms need confirmation."
+        },
+        {
+          "horse": "Mary Shoelaces",
+          "severity": "monitor",
+          "reason": "17 declared over Curragh 5f on YIELDING; recent form and actual paid place terms must be checked."
+        }
+      ],
+      "verifiedNonRunnerStatement": "Racing Post non-runner page did not list any of the six selected horses during this check; withdrawal information can change after publication.",
+      "urls": [
+        "https://www.racingpost.com/non-runners/",
+        "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+        "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/",
+        "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+        "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930837/",
+        "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930840/",
+        "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/"
+      ],
+      "note": "Raceday rechecks complement, but do not rewrite, the timestamp-frozen pre-race assessment; published conditions are not private meteorological observations or guaranteed going at off."
+    }
+  ],
+  "latestRacedayRecheck": {
+    "checkedAt": "2026-10-15T07:37:56.868Z",
+    "type": "raceday-independent-recheck",
+    "selectionChanges": 0,
+    "selectionsReviewed": [
+      "Shifra",
+      "Nouvel Espoir",
+      "Major Fortune",
+      "Yordan",
+      "Navajo Point",
+      "Mary Shoelaces"
+    ],
+    "outcome": "All six originally published candidates still declared at the time sources were checked; no unsupported new selections or automatic wagers. Keep risks visible and recheck nearer off.",
+    "reportedConditions": {
+      "Brighton": "GOOD, good to soft in places; GoingStick 5.2; race rail +7yd",
+      "Curragh": "Straight YIELDING, round GOOD TO YIELDING; rain reported",
+      "Perth": "GOOD TO SOFT, soft in places; GoingStick 5.1; 14:30 race rail movement +107yd; light rain",
+      "Southwell": "STANDARD Tapeta"
+    },
+    "watches": [
+      {
+        "horse": "Major Fortune",
+        "severity": "heightened-monitoring",
+        "reason": "Perth's 14:30 rail adds 107yd and going now includes soft patches; light rain and 194-day layoff leave stamina/fitness sensitivity unresolved."
+      },
+      {
+        "horse": "Shifra",
+        "severity": "monitor",
+        "reason": "8lb handicap rise and Brighton debut remain relevant; currently declared on GOOD, good to soft in places."
+      },
+      {
+        "horse": "Nouvel Espoir",
+        "severity": "monitor",
+        "reason": "13-runner Curragh straight 6f on YIELDING; rival Go Athletico's revised terms require attention."
+      },
+      {
+        "horse": "Yordan",
+        "severity": "monitor",
+        "reason": "Nine declared on STANDARD Tapeta; serious rivals include Return Of The Gods, Town Queen and New Image; no forecast price is interpreted as proof of probability."
+      },
+      {
+        "horse": "Navajo Point",
+        "severity": "monitor",
+        "reason": "21 declared in the 1m1f handicap; published card lists first-time cheekpieces; each-way placed terms need confirmation."
+      },
+      {
+        "horse": "Mary Shoelaces",
+        "severity": "monitor",
+        "reason": "17 declared over Curragh 5f on YIELDING; recent form and actual paid place terms must be checked."
+      }
+    ],
+    "verifiedNonRunnerStatement": "Racing Post non-runner page did not list any of the six selected horses during this check; withdrawal information can change after publication.",
+    "urls": [
+      "https://www.racingpost.com/non-runners/",
+      "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+      "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/",
+      "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+      "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930837/",
+      "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930840/",
+      "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/"
+    ],
+    "note": "Raceday rechecks complement, but do not rewrite, the timestamp-frozen pre-race assessment; published conditions are not private meteorological observations or guaranteed going at off."
   }
 }
