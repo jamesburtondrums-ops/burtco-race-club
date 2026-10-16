@@ -226,7 +226,7 @@
       "horse": "Service Minimum",
       "course": "Uttoxeter",
       "time": "15:12",
-      "odds": "15/8",
+      "odds": "9/4",
       "trainer": "Dan Skelton",
       "jockey": "Harry Skelton",
       "or": 132,
@@ -243,7 +243,7 @@
       ],
       "risk": "Highest-weighted runner at 12st on OR132 in a Class 2 race; Miss Maverick is a C&D winner and Seamoon Story returns from a break. 15/8 is a published forecast, not a verified accepted bet.",
       "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
-      "priceSource": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/betting-odds/",
+      "priceSource": "https://www.horseracing.net/uttoxeter/16-10-26/15:12",
       "tier": "SOLID",
       "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
       "reason": "Three wins from the last four completed starts and a recent Newton Abbot success support her progression; the Skeltons' partnership is strong, but 12st and better-class rivals demand caution.",
@@ -254,7 +254,7 @@
       ],
       "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
       "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
-      "priceBasis": "observed pre-race reference quote, not proof of bookmaker acceptance",
+      "priceBasis": "Observed 9/4 bookmaker quote, distinct from 15/8 Racing Post published forecast",
       "winAssessment": {
         "decision": "win-contender",
         "reviewedAt": "2026-10-16T09:32:39.683Z",
@@ -304,10 +304,11 @@
         }
       },
       "raceDayReview": {
-        "status": "PUBLISHED AFTER 16 OCT GOING / RUNNER REVIEW",
+        "status": "WIN RETAIN — UPDATED BOOKMAKER OBSERVATION",
         "checkedAt": "2026-10-16T09:32:39.683Z",
         "headline": "Highest-weighted runner at 12st on OR132 in a Class 2 race; Miss Maverick is a C&D winner and Seamoon Story returns from a break. 15/8 is a published forecast, not a verified accepted bet.",
-        "sourceType": "time-of-review sources; changes require a fresh check"
+        "sourceType": "time-of-review sources; changes require a fresh check",
+        "observedPrice": "9/4 bookmaker (forecast 15/8)"
       }
     },
     {
@@ -574,14 +575,12 @@
         "headline": "Last third was in only a five-runner race and the preceding 0-5 form raises consistency concerns; Houndhill and Sergeant Mayer provide stronger recent opposition.",
         "sourceType": "verified dated racecard and odds"
       }
-    }
-  ],
-  "longshotsToday": [
+    },
     {
       "horse": "Our Absent Friends",
       "course": "Haydock",
       "time": "17:07",
-      "odds": "20/1",
+      "odds": "12/1",
       "trainer": "Tristan Davidson",
       "jockey": "Jason Hart",
       "or": 73,
@@ -590,7 +589,7 @@
       "going": "HEAVY",
       "distance": "5f",
       "raceClass": "Class 5 handicap",
-      "tier": "OUTSIDER / E/W WATCH",
+      "tier": "VALUE WATCH",
       "summary": "A previous Haydock five-furlong course-and-distance winner with a recent Redcar runner-up finish; the documented current form is stronger than many 20/1 outsiders, but heavy ground remains an important question.",
       "positivePoints": [
         "Previously won this Haydock C&D",
@@ -599,7 +598,7 @@
       ],
       "risk": "Heavy ground suitability not independently confirmed for the latest evidence, and Irish Nectar arrives off a big-field win; this is explicitly a speculative longshot, not a confident selection.",
       "sourceUrl": "https://www.racingpost.com/racecards/23/haydock/2026-10-16/928590/",
-      "priceSource": "https://www.horseracing.net/haydock/16-10-26",
+      "priceSource": "https://www.horseracing.net/haydock/16-10-26/17:07",
       "confidenceTier": "SPECULATIVE EACH-WAY CANDIDATE — NOT A CONFIDENT WIN",
       "reason": "A previous Haydock five-furlong course-and-distance winner with a recent Redcar runner-up finish; the documented current form is stronger than many 20/1 outsiders, but heavy ground remains an important question.",
       "tags": [
@@ -609,35 +608,38 @@
       ],
       "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
       "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
-      "priceBasis": "published pre-race market observation; no actual wager",
+      "priceBasis": "Bookmaker 12/1 each-way quotes from race-day comparison; a 20/1 WIN ONLY quote is not eligible for the 20/1+ EW longshots category",
       "raceDayReview": {
-        "status": "PRE-RACE E/W WATCH",
+        "status": "DOWNGRADED FROM 20/1+ LONGSHOT TO 12/1 MIDSHOT — 20/1 OFFER WIN ONLY",
         "checkedAt": "2026-10-16T09:32:39.683Z",
         "headline": "Heavy ground suitability not independently confirmed for the latest evidence, and Irish Nectar arrives off a big-field win; this is explicitly a speculative longshot, not a confident selection.",
-        "sourceType": "verified dated racecard and odds"
+        "sourceType": "verified dated racecard and odds",
+        "observedPrice": "12/1 each-way",
+        "withdrawnLongshotReason": "20/1 available only win-only, not 20/1 with place terms"
       }
     }
   ],
+  "longshotsToday": [],
   "lucky15Only": [],
   "selectionPolicy": {
     "avoidOddsOn": true,
     "minimumWinOdds": "1/1",
     "winCandidates": 4,
     "qualifiedWinCandidates": 4,
-    "numLongshots": 1,
+    "numLongshots": 0,
     "winQualificationRule": "Min 3 of 4 core factors independently sourced, mandatory current form/going/trip, named strong rival and risk review; odds not a confidence factor.",
     "rationale": "15 Oct result review shows rises in weights, track demands, returns from breaks, and opponent terms must be addressed rather than overweighting positive raw form."
   },
   "midshotsPolicy": {
     "minOdds": "6/1",
     "maxOdds": "18/1",
-    "publicNote": "Two qualified research-only E/W candidates in distinct races. Recent form, track suitability and drawbacks are disclosed; not a win-confidence label.",
-    "priceRule": "Only pre-race observed quotes; verify live bookmaker EW terms and final declarations; no paper stakes auto-created."
+    "publicNote": "Three evidence-based each-way research watches, all with recent competitive form. Our Absent Friends moved from Longshots because 20/1 quote was WIN ONLY and 12/1 was available with E/W terms.",
+    "priceRule": "Actual E/W offers including place terms verified separately from win-only quotes; offers change. Quotes not proof of accepted bets."
   },
   "longshotsPolicy": {
     "minOdds": "20/1",
-    "publicNote": "One evidence-led but speculative 20/1+ outsider rather than padding the list with horses in poor current form. Heavy ground is a material unresolved risk.",
-    "priceRule": "20/1 observed among published pre-race quotes, not a guaranteed executable price; no bet auto-created."
+    "publicNote": "No candidate currently meets both the 20/1+ EACH-WAY offer threshold and minimum recent form evidence. We will not fill this category with old course form or 20/1 win-only prices.",
+    "priceRule": "Must confirm an E/W-eligible offer at 20/1 or above, not merely a win-only special. No qualifying candidate at review."
   },
   "winNominations": [
     {
@@ -724,14 +726,15 @@
   },
   "researchSelectionUpdate": {
     "reviewedAt": "2026-10-16T09:32:39.683Z",
-    "status": "Four evidence-backed WIN contenders, two mid-shot each-way watches, one outsider watch. Yesterday official results archived with odds preserved; no unplaced paper tickets or wagers created.",
+    "status": "Four qualified WIN contenders, three midshot E/W watches, zero qualified 20/1+ E/W longshots; Thursday results settled in research archive without paper bets.",
     "note": "Live High Storm NR shown on Racing TV at 17:37 Haydock; model confidence based on running evidence and conditions, not favouritism.",
     "nonRunnerRecheckAt": "2026-10-16T09:36:11.381Z",
     "nonRunnersRelevant": [
       "17:37 Haydock High Storm NR -> 5 remain",
       "19:45 Newcastle Nefyn Queen NR -> 8 remain"
     ],
-    "nonRunnerSourceUrl": "https://www.racingpost.com/non-runners/2026-10-16/"
+    "nonRunnerSourceUrl": "https://www.racingpost.com/non-runners/2026-10-16/",
+    "priceCorrection": "Our Absent Friends had 20/1 WIN ONLY but max verified typical EW comparison prices 12/1; moved from Longshot to Midshot, preserve no pseudo bet."
   },
   "raceDayRechecks": [],
   "latestRacedayRecheck": null,
@@ -1965,5 +1968,6 @@
         ]
       }
     }
-  ]
+  ],
+  "pricingReviewAt": "2026-10-16T09:37:53.037Z"
 }
