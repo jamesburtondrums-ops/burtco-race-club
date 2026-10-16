@@ -1935,6 +1935,94 @@
       "summary": "13 October: 1 winner (King Of Persia) from 6 featured selections; 1 winner from 3 WIN picks. Donnie Azoff finished second; remaining four featured runners unplaced. Three excluded runners placed across two races, which is diagnostic only — no paper bets were retrospectively added.",
       "evidenceNote": "Official Sporting Life results cross-checked against the original featured Oct13 candidates. Only 3 WIN picks had pre-existing £10 paper bets; the 3 mid/long watch runners were not placed as hypothetical ledger bets.",
       "sourceLandingUrl": "https://www.sportinglife.com/racing/results/yesterday"
+    },
+    {
+      "date": "2026-10-15",
+      "verifiedAt": "2026-10-16T09:34:38.151Z",
+      "sourceName": "Racing Post official weighed-in results (including Yordan confirmation)",
+      "selected": [
+        {
+          "horse": "Yordan",
+          "course": "Southwell",
+          "time": "19:30",
+          "category": "WIN",
+          "position": 1,
+          "sp": "7/4 F",
+          "earlyOdds": "3/1",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928768/"
+        },
+        {
+          "horse": "Major Fortune",
+          "course": "Perth",
+          "time": "14:30",
+          "category": "WIN — withdrawn from active shortlist before off",
+          "position": 3,
+          "sp": "11/2",
+          "earlyOdds": "11/4",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.racingpost.com/results/41/perth/2026-10-15/930229/"
+        },
+        {
+          "horse": "Nouvel Espoir",
+          "course": "Curragh",
+          "time": "13:37",
+          "category": "WIN",
+          "position": 5,
+          "sp": "7/1",
+          "earlyOdds": "13/2",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930835/"
+        },
+        {
+          "horse": "Shifra",
+          "course": "Brighton",
+          "time": "15:15",
+          "category": "WIN",
+          "position": 5,
+          "sp": "3/1",
+          "earlyOdds": "2/1",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.racingpost.com/results/7/brighton/2026-10-15/928581/"
+        },
+        {
+          "horse": "Navajo Point",
+          "course": "Curragh",
+          "time": "14:47",
+          "category": "Midshot",
+          "position": 6,
+          "sp": "12/1",
+          "earlyOdds": "15/2",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930837/"
+        },
+        {
+          "horse": "Mary Shoelaces",
+          "course": "Curragh",
+          "time": "16:32",
+          "category": "Midshot",
+          "position": 9,
+          "sp": "10/1",
+          "earlyOdds": "15/2",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930840/"
+        },
+        {
+          "horse": "Turbo Command",
+          "course": "Southwell",
+          "time": "18:00",
+          "category": "Longshot",
+          "position": 12,
+          "sp": "14/1",
+          "earlyOdds": "25/1",
+          "paperBetRecorded": false,
+          "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928773/"
+        }
+      ],
+      "removed": [],
+      "summary": "15 October: 1 winner (Yordan) from seven researched candidates (14.3%); 1/4 originally published WIN picks (25%). Major Fortune finished third but was removed from active WIN recommendations before the off and remains part of the original four-pick denominator. No other shortlisted runner placed within normal top-three classification.",
+      "evidenceNote": "Research-only results audit: none of the seven selections had a newly entered paper wager on 15 October. The original 3/1 early quote for Yordan is preserved separately from the 7/4 F SP. Paper bank, 51 older bets, settled returns and cleared bets are untouched. An actual bet cannot be inferred from a research selection.",
+      "sourceLandingUrl": "https://www.racingpost.com/results/2026-10-15/"
     }
   ],
   "clearedPaperBetIds": [
@@ -1964,5 +2052,16 @@
     "reason": "Manual clean-up: removed unresolved paper singles, pending Lucky 15, and all paper singles dated 2026-10-13",
     "removedSingles": 19,
     "removedTickets": 1
+  },
+  "latestResearchResultsAudit": {
+    "date": "2026-10-15",
+    "verifiedAt": "2026-10-16T09:34:38.151Z",
+    "picks": 7,
+    "originalWins": 4,
+    "winners": 1,
+    "originalWinWinners": 1,
+    "officialResultSources": 7,
+    "paperBetsCreated": 0,
+    "method": "Frozen published shortlist, official finishing results, distinct early quote versus SP, no retrospective bets."
   }
 }
