@@ -1,624 +1,56 @@
 {
-  "snapshotDate": "2026-10-16",
-  "verifiedAt": "2026-10-16T09:32:39.683Z",
-  "mode": "FRIDAY PRE-RACE RESEARCH — FROZEN ON PUBLICATION",
+  "snapshotDate": "2026-10-17",
+  "verifiedAt": "2026-10-16T23:19:59.818Z",
+  "mode": "BRITISH CHAMPIONS DAY — PRE-RACE EDITORIAL ASSESSMENT",
   "coverage": {
-    "meetings": 5,
-    "races": 40,
-    "scope": "40 scheduled races across five meetings; the published shortlist is reviewed for documented recent form, conditions, handicap/class suitability, and a named opponent. No assertion of exhaustive lifetime form or complete sectional analysis for every runner.",
-    "publishedDate": "2026-10-16",
+    "meetings": 1,
+    "races": 7,
+    "scope": "Seven declared Ascot races reviewed individually against course, going, distance, class, trainer/jockey, pace and named opponents. No claim of complete sectional data or calibrated outcomes.",
+    "publishedDate": "2026-10-17",
     "selectedIndividuals": 7,
-    "qualifiedWins": 4,
-    "winConfidenceMethod": "Editorial evidence standard, independent of market price; not statistically calibrated."
+    "betSelections": 7,
+    "winConfidenceMethod": "Data-led qualitative ranking; prices recorded separately and not used as form evidence."
   },
   "meetings": [
     {
-      "course": "Redcar",
-      "races": 8,
-      "going": "GOOD",
-      "code": "Flat turf",
-      "first": "13:20",
-      "last": "17:23"
-    },
-    {
-      "course": "Uttoxeter",
+      "course": "Ascot",
       "races": 7,
-      "going": "GOOD",
-      "code": "Jumps",
-      "first": "13:27",
-      "last": "16:53"
-    },
-    {
-      "course": "Haydock",
-      "races": 8,
-      "going": "HEAVY (GoingStick reported 5.0; rain; rail adjustments)",
+      "going": "GOOD (GoingStick straight 8.1, round 7.3)",
       "code": "Flat turf",
-      "first": "13:42",
-      "last": "17:37"
-    },
-    {
-      "course": "Newcastle",
-      "races": 9,
-      "going": "STANDARD Tapeta",
-      "code": "Flat all-weather",
-      "first": "16:08",
-      "last": "20:15"
-    },
-    {
-      "course": "Dundalk",
-      "races": 8,
-      "going": "STANDARD Polytrack",
-      "code": "Flat all-weather",
-      "first": "17:00",
-      "last": "20:30"
+      "first": "12:55",
+      "last": "16:35"
     }
   ],
   "racecardLinks": [
     {
-      "course": "Redcar",
-      "races": 8,
-      "going": "GOOD",
-      "code": "Flat turf",
-      "first": "13:20",
-      "last": "17:23",
-      "url": "https://www.racingpost.com/racecards/47/redcar/2026-10-16/"
-    },
-    {
-      "course": "Uttoxeter",
+      "course": "Ascot",
       "races": 7,
       "going": "GOOD",
-      "code": "Jumps",
-      "first": "13:27",
-      "last": "16:53",
-      "url": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/"
-    },
-    {
-      "course": "Haydock",
-      "races": 8,
-      "going": "HEAVY",
       "code": "Flat turf",
-      "first": "13:42",
-      "last": "17:37",
-      "url": "https://www.racingpost.com/racecards/23/haydock/2026-10-16/"
-    },
-    {
-      "course": "Newcastle",
-      "races": 9,
-      "going": "STANDARD Tapeta",
-      "code": "Flat all-weather",
-      "first": "16:08",
-      "last": "20:15",
-      "url": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/"
-    },
-    {
-      "course": "Dundalk",
-      "races": 8,
-      "going": "STANDARD Polytrack",
-      "code": "Flat all-weather",
-      "first": "17:00",
-      "last": "20:30",
-      "url": "https://www.racingpost.com/racecards/1138/dundalk-aw/2026-10-16/"
+      "first": "12:55",
+      "last": "16:35",
+      "url": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/"
     }
   ],
   "sources": [
     {
+      "name": "Sporting Life / Timeform",
+      "status": "17 October declared Ascot runners and race analysis",
+      "role": "Recent performance, class, rivals and suitable trip"
+    },
+    {
       "name": "Racing Post",
-      "status": "16 October declared cards, live going and 15 Oct official results",
-      "role": "runner counts, ORs, opponents and weighed-in outcome"
+      "status": "17 October seven-race Ascot racecard, going and non-runners",
+      "role": "Going, course distance, weights, runners and rider declarations"
     },
     {
-      "name": "Racing TV",
-      "status": "16 October declared cards and NR at Haydock",
-      "role": "rider, course evidence and High Storm non-runner"
-    },
-    {
-      "name": "HorseRacing.net",
-      "status": "16 October published cards and bookmaker tables",
-      "role": "recent form, comparisons, race suitability"
-    },
-    {
-      "name": "Timeform",
-      "status": "16 October Newcastle 16:08 and 19:45 previews",
-      "role": "in-running bias in last win, class and form"
-    },
-    {
-      "name": "IrishRacing",
-      "status": "16 October Redcar 16:12 bookmaker quote",
-      "role": "15/2 EW research price"
-    },
-    {
-      "name": "Sporting Life",
-      "status": "16 October 15:37 Redcar and Newcastle preview",
-      "role": "cross-check odds, opposition and grading"
+      "name": "At The Races",
+      "status": "17 October racecard and draw/pace context",
+      "role": "Independent course and market reference"
     }
   ],
-  "todaySelections": [
-    {
-      "horse": "Yaa Min",
-      "course": "Haydock",
-      "time": "17:37",
-      "odds": "2/1",
-      "trainer": "Hayley Burton",
-      "jockey": "Toby Moore (7lb)",
-      "or": 84,
-      "runnerCount": 5,
-      "draw": 4,
-      "going": "HEAVY",
-      "distance": "1m6f",
-      "raceClass": "Class 3 handicap, 5 runners after High Storm NR",
-      "winRank": "NAP",
-      "summary": "Dominant heavy-ground course-and-distance winner with the same 7lb-claiming jockey back aboard; proven stamina is a significant advantage, though a 6lb rise and Gone By remain threats.",
-      "positivePoints": [
-        "Won over this Haydock C&D on heavy ground 20 days ago",
-        "Made all and won convincingly under Toby Moore",
-        "Claiming rider offsets part of the new handicap burden"
-      ],
-      "risk": "Up 6lb since that win; Gone By is rated 92 and Phantom Recon may improve on handicap debut; High Storm reported non-runner by Racing TV, recheck the final field.",
-      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
-      "priceSource": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
-      "tier": "SOLID",
-      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
-      "reason": "Dominant heavy-ground course-and-distance winner with the same 7lb-claiming jockey back aboard; proven stamina is a significant advantage, though a 6lb rise and Gone By remain threats.",
-      "tags": [
-        "Won over this Haydock C&D on heavy ground 20 days ago",
-        "Made all and won convincingly under Toby Moore",
-        "Claiming rider offsets part of the new handicap burden"
-      ],
-      "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
-      "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
-      "priceBasis": "observed pre-race reference quote, not proof of bookmaker acceptance",
-      "winAssessment": {
-        "decision": "win-contender",
-        "reviewedAt": "2026-10-16T09:32:39.683Z",
-        "riskSeverity": "moderate",
-        "riskNotes": [
-          "Up 6lb since that win; Gone By is rated 92 and Phantom Recon may improve on handicap debut; High Storm reported non-runner by Racing TV, recheck the final field."
-        ],
-        "hasCriticalUnknown": false,
-        "withdrawn": false,
-        "factors": {
-          "form": {
-            "grade": "strong",
-            "finding": "Last start won decisively over the exact trip 20 days ago; recent record 633491.",
-            "sourceUrl": "https://www.horseracing.net/haydock/16-10-26",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "abilityClass": {
-            "grade": "supported",
-            "finding": "C&D winning RPR92 compared with current OR84, but the 6lb rise needs allowance.",
-            "sourceUrl": "https://www.horseracing.net/haydock/16-10-26",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "courseGoingTrip": {
-            "grade": "strong",
-            "finding": "The latest win came at Haydock over 1m6f on heavy ground, identical to declared test.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "opposition": {
-            "grade": "supported",
-            "finding": "Gone By on OR92 and unexposed Phantom Recon are major dangers; High Storm is shown NR on Racing TV.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "fitness": {
-            "grade": "strong",
-            "finding": "Raced and won 20 days previously without a long layoff.",
-            "sourceUrl": "https://www.horseracing.net/haydock/16-10-26",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "trainerJockey": {
-            "grade": "supported",
-            "finding": "Toby Moore claims 7lb for Hayley Burton, same rider as latest win.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          }
-        }
-      },
-      "raceDayReview": {
-        "status": "PUBLISHED AFTER 16 OCT GOING / RUNNER REVIEW",
-        "checkedAt": "2026-10-16T09:32:39.683Z",
-        "headline": "Up 6lb since that win; Gone By is rated 92 and Phantom Recon may improve on handicap debut; High Storm reported non-runner by Racing TV, recheck the final field.",
-        "sourceType": "time-of-review sources; changes require a fresh check"
-      }
-    },
-    {
-      "horse": "Service Minimum",
-      "course": "Uttoxeter",
-      "time": "15:12",
-      "odds": "9/4",
-      "trainer": "Dan Skelton",
-      "jockey": "Harry Skelton",
-      "or": 132,
-      "runnerCount": 6,
-      "going": "GOOD",
-      "distance": "2m3f207y",
-      "raceClass": "Class 2 handicap hurdle",
-      "winRank": null,
-      "summary": "Three wins from the last four completed starts and a recent Newton Abbot success support her progression; the Skeltons' partnership is strong, but 12st and better-class rivals demand caution.",
-      "positivePoints": [
-        "Won three of her last four starts",
-        "Latest win 28 days ago confirms fitness",
-        "Dan and Harry Skelton partnership in good stable form"
-      ],
-      "risk": "Highest-weighted runner at 12st on OR132 in a Class 2 race; Miss Maverick is a C&D winner and Seamoon Story returns from a break. 15/8 is a published forecast, not a verified accepted bet.",
-      "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
-      "priceSource": "https://www.horseracing.net/uttoxeter/16-10-26/15:12",
-      "tier": "SOLID",
-      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
-      "reason": "Three wins from the last four completed starts and a recent Newton Abbot success support her progression; the Skeltons' partnership is strong, but 12st and better-class rivals demand caution.",
-      "tags": [
-        "Won three of her last four starts",
-        "Latest win 28 days ago confirms fitness",
-        "Dan and Harry Skelton partnership in good stable form"
-      ],
-      "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
-      "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
-      "priceBasis": "Observed 9/4 bookmaker quote, distinct from 15/8 Racing Post published forecast",
-      "winAssessment": {
-        "decision": "win-contender",
-        "reviewedAt": "2026-10-16T09:32:39.683Z",
-        "riskSeverity": "moderate",
-        "riskNotes": [
-          "Highest-weighted runner at 12st on OR132 in a Class 2 race; Miss Maverick is a C&D winner and Seamoon Story returns from a break. 15/8 is a published forecast, not a verified accepted bet."
-        ],
-        "hasCriticalUnknown": false,
-        "withdrawn": false,
-        "factors": {
-          "form": {
-            "grade": "strong",
-            "finding": "Record 711-71 represents three successes in the last four completed starts.",
-            "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "abilityClass": {
-            "grade": "supported",
-            "finding": "Rated OR132 and running in 0–145 Class 2 company; must concede weight to rivals.",
-            "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "courseGoingTrip": {
-            "grade": "supported",
-            "finding": "Won at this hurdle distance previously; today's Uttoxeter going is GOOD, while exact course proof is limited.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/uttoxeter/1512",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "opposition": {
-            "grade": "strong",
-            "finding": "Six declared: Miss Maverick is a C&D winner rated 124, while Seamoon Story is rated 125 with a 7lb claim.",
-            "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "fitness": {
-            "grade": "strong",
-            "finding": "Won 28 days ago and is in active race fitness, avoiding seasonal-return risk.",
-            "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "trainerJockey": {
-            "grade": "supported",
-            "finding": "Dan and Harry Skelton represent the confirmed stable/jockey combination.",
-            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/uttoxeter/1512",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          }
-        }
-      },
-      "raceDayReview": {
-        "status": "WIN RETAIN — UPDATED BOOKMAKER OBSERVATION",
-        "checkedAt": "2026-10-16T09:32:39.683Z",
-        "headline": "Highest-weighted runner at 12st on OR132 in a Class 2 race; Miss Maverick is a C&D winner and Seamoon Story returns from a break. 15/8 is a published forecast, not a verified accepted bet.",
-        "sourceType": "time-of-review sources; changes require a fresh check",
-        "observedPrice": "9/4 bookmaker (forecast 15/8)"
-      }
-    },
-    {
-      "horse": "Farabove The Limit",
-      "course": "Newcastle",
-      "time": "16:08",
-      "odds": "11/4",
-      "trainer": "Phillip Makin",
-      "jockey": "Sam James",
-      "or": 65,
-      "runnerCount": 12,
-      "draw": 9,
-      "going": "STANDARD Tapeta",
-      "distance": "1m4f98y",
-      "raceClass": "Class 5 handicap (0–70)",
-      "winRank": "NB",
-      "summary": "Won his last two staying handicaps, including this Newcastle C&D, and overcame a pace bias latest; only 3lb higher, though Jujubella and Saxophonist offer genuine competition.",
-      "positivePoints": [
-        "Back-to-back wins, latest over this exact Newcastle C&D",
-        "Timeform notes he overcame a pace disadvantage latest",
-        "Only 3lb higher and runner-up from latest win subsequently scored"
-      ],
-      "risk": "Up 3lb and faces Jujubella, a reliable C&D winner, plus Saxophonist, an improving three-year-old; 12-runner draw and pace can materially affect the result.",
-      "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
-      "priceSource": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
-      "tier": "SOLID",
-      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
-      "reason": "Won his last two staying handicaps, including this Newcastle C&D, and overcame a pace bias latest; only 3lb higher, though Jujubella and Saxophonist offer genuine competition.",
-      "tags": [
-        "Back-to-back wins, latest over this exact Newcastle C&D",
-        "Timeform notes he overcame a pace disadvantage latest",
-        "Only 3lb higher and runner-up from latest win subsequently scored"
-      ],
-      "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
-      "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
-      "priceBasis": "observed pre-race reference quote, not proof of bookmaker acceptance",
-      "winAssessment": {
-        "decision": "win-contender",
-        "reviewedAt": "2026-10-16T09:32:39.683Z",
-        "riskSeverity": "moderate",
-        "riskNotes": [
-          "Up 3lb and faces Jujubella, a reliable C&D winner, plus Saxophonist, an improving three-year-old; 12-runner draw and pace can materially affect the result."
-        ],
-        "hasCriticalUnknown": false,
-        "withdrawn": false,
-        "factors": {
-          "form": {
-            "grade": "strong",
-            "finding": "Last two runs were victories (1m3f Carlisle and 1m4f Newcastle) after gelding.",
-            "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "abilityClass": {
-            "grade": "supported",
-            "finding": "Official mark OR65 follows the latest win by 3lb; runner-up franked that form.",
-            "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "courseGoingTrip": {
-            "grade": "strong",
-            "finding": "Won over Newcastle 1m4f98y on standard Tapeta last time.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "opposition": {
-            "grade": "strong",
-            "finding": "Jujubella has robust recent C&D record and Saxophonist holds strong 3yo middle-distance form.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "fitness": {
-            "grade": "supported",
-            "finding": "Last win 21 days ago supports current racing fitness.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "trainerJockey": {
-            "grade": "supported",
-            "finding": "Sam James and Phillip Makin declared on racecard.",
-            "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          }
-        }
-      },
-      "raceDayReview": {
-        "status": "PUBLISHED AFTER 16 OCT GOING / RUNNER REVIEW",
-        "checkedAt": "2026-10-16T09:32:39.683Z",
-        "headline": "Up 3lb and faces Jujubella, a reliable C&D winner, plus Saxophonist, an improving three-year-old; 12-runner draw and pace can materially affect the result.",
-        "sourceType": "time-of-review sources; changes require a fresh check"
-      }
-    },
-    {
-      "horse": "Lanarra",
-      "course": "Newcastle",
-      "time": "19:45",
-      "odds": "6/4",
-      "trainer": "R Mike Smith",
-      "jockey": "James Sullivan",
-      "or": 52,
-      "runnerCount": 8,
-      "draw": 6,
-      "going": "STANDARD Tapeta",
-      "distance": "7f14y",
-      "raceClass": "Class 6 handicap (0–55)",
-      "winRank": null,
-      "summary": "Recent 3rd and 2nd finishes include a narrow defeat over today's Newcastle C&D; rated just 1lb higher and meets relatively limited opposition, although Maynora remains the danger.",
-      "positivePoints": [
-        "Latest 2nd of 12 over Newcastle C&D, beaten 1¼ lengths",
-        "Recent form sequence 435132 confirms consistency",
-        "Only 1lb higher with proven stiff-track experience"
-      ],
-      "risk": "A Class 6 handicap remains unpredictable; Maynora was fourth here and could improve back at 7f. Shorter quoted price has not been used to calculate confidence.",
-      "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/931142/",
-      "priceSource": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1945/35/8",
-      "tier": "SOLID",
-      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
-      "reason": "Recent 3rd and 2nd finishes include a narrow defeat over today's Newcastle C&D; rated just 1lb higher and meets relatively limited opposition, although Maynora remains the danger.",
-      "tags": [
-        "Latest 2nd of 12 over Newcastle C&D, beaten 1¼ lengths",
-        "Recent form sequence 435132 confirms consistency",
-        "Only 1lb higher with proven stiff-track experience"
-      ],
-      "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
-      "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
-      "priceBasis": "observed pre-race reference quote, not proof of bookmaker acceptance",
-      "winAssessment": {
-        "decision": "win-contender",
-        "reviewedAt": "2026-10-16T09:32:39.683Z",
-        "riskSeverity": "moderate",
-        "riskNotes": [
-          "A Class 6 handicap remains unpredictable; Maynora was fourth here and could improve back at 7f. Shorter quoted price has not been used to calculate confidence."
-        ],
-        "hasCriticalUnknown": false,
-        "withdrawn": false,
-        "factors": {
-          "form": {
-            "grade": "strong",
-            "finding": "Recent sequence 435132 includes a third then second in successive Newcastle handicaps.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/931142/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "abilityClass": {
-            "grade": "supported",
-            "finding": "Official rating OR52 within today's 0–55 handicap with only a 1lb rise for second.",
-            "sourceUrl": "https://m.attheraces.com/racecard/Newcastle/16-October-2026/1945",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "courseGoingTrip": {
-            "grade": "strong",
-            "finding": "Ran second of 12 over this Newcastle 7f14y C&D 14 days ago, and has won at Newcastle.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/931142/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "opposition": {
-            "grade": "supported",
-            "finding": "Maynora's Newcastle fourth and Territorial Star are principal alternatives, but neither arrives with matching 7f C&D latest form.",
-            "sourceUrl": "https://www.horseracing.net/newcastle/16-10-26",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "fitness": {
-            "grade": "strong",
-            "finding": "Second at Newcastle 14 days ago in a 12-runner handicap.",
-            "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1945/35/8",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          },
-          "trainerJockey": {
-            "grade": "supported",
-            "finding": "James Sullivan and R Mike Smith booked at Newcastle.",
-            "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/931142/",
-            "checkedAt": "2026-10-16T09:32:39.683Z"
-          }
-        }
-      },
-      "raceDayReview": {
-        "status": "RETAIN WIN — NEFYN QUEEN DECLARED NON-RUNNER",
-        "checkedAt": "2026-10-16T09:32:39.683Z",
-        "headline": "8 runners following official non-runner Nefyn Queen; latest Newcastle C&D placing and 1lb mark increase remain valid.",
-        "sourceType": "time-of-review sources; changes require a fresh check",
-        "fieldNow": 8,
-        "nonRunners": [
-          "Nefyn Queen"
-        ],
-        "nonRunnerSourceUrl": "https://www.racingpost.com/non-runners/2026-10-16/"
-      }
-    }
-  ],
-  "midshotsToday": [
-    {
-      "horse": "Run This Way",
-      "course": "Redcar",
-      "time": "16:12",
-      "odds": "15/2",
-      "trainer": "Paul Midgley",
-      "jockey": "Paul Mulrennan",
-      "or": 58,
-      "runnerCount": 13,
-      "draw": 13,
-      "going": "GOOD",
-      "distance": "5f217y",
-      "raceClass": "Class 5 handicap",
-      "summary": "A twice-winner at Redcar who was beaten a short head over 6f at Ripon latest; recent placed form and OR58 support an each-way chance, although drawn widest against Mr Cool.",
-      "positivePoints": [
-        "Won two of four previous Redcar races",
-        "Latest Ripon second was beaten only a short head",
-        "Recent sequence includes third, third and second"
-      ],
-      "risk": "Wide stall 13 in a 13-runner sprint; Mr Cool and Ingleby Archie are live opponents, so pace/draw uncertainty makes this each-way rather than a confident win.",
-      "sourceUrl": "https://www.racingpost.com/racecards/47/redcar/2026-10-16/928595/",
-      "priceSource": "https://www.irishracing.com/odds-comparison/Fri-16th-Oct-2026/Redcar/1612",
-      "tier": "VALUE WATCH",
-      "confidenceTier": "SPECULATIVE EACH-WAY CANDIDATE — NOT A CONFIDENT WIN",
-      "reason": "A twice-winner at Redcar who was beaten a short head over 6f at Ripon latest; recent placed form and OR58 support an each-way chance, although drawn widest against Mr Cool.",
-      "tags": [
-        "Won two of four previous Redcar races",
-        "Latest Ripon second was beaten only a short head",
-        "Recent sequence includes third, third and second"
-      ],
-      "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
-      "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
-      "priceBasis": "published pre-race market observation; no actual wager",
-      "raceDayReview": {
-        "status": "PRE-RACE E/W WATCH",
-        "checkedAt": "2026-10-16T09:32:39.683Z",
-        "headline": "Wide stall 13 in a 13-runner sprint; Mr Cool and Ingleby Archie are live opponents, so pace/draw uncertainty makes this each-way rather than a confident win.",
-        "sourceType": "verified dated racecard and odds"
-      }
-    },
-    {
-      "horse": "Dragon Spin",
-      "course": "Redcar",
-      "time": "15:37",
-      "odds": "15/2",
-      "trainer": "Steph Hollinshead",
-      "jockey": "Dougie Costello",
-      "or": 65,
-      "runnerCount": 10,
-      "draw": 5,
-      "going": "GOOD",
-      "distance": "5f",
-      "raceClass": "Class 5 handicap",
-      "summary": "Twice successful at 5f on good ground this year and third over today's course and distance last time; worth a qualified each-way look back at a manageable mark, despite patchy intervening form.",
-      "positivePoints": [
-        "Two 5f wins on good ground this season",
-        "Last start third over Redcar 5f",
-        "OR65 provides a workable sprint handicap mark"
-      ],
-      "risk": "Last third was in only a five-runner race and the preceding 0-5 form raises consistency concerns; Houndhill and Sergeant Mayer provide stronger recent opposition.",
-      "sourceUrl": "https://www.racingpost.com/racecards/47/redcar/2026-10-16/928596/",
-      "priceSource": "https://www.sportinglife.com/racing/racecards/2026-10-16/redcar/live-show/944359/sam-hall-memorial-handicap",
-      "tier": "VALUE WATCH",
-      "confidenceTier": "SPECULATIVE EACH-WAY CANDIDATE — NOT A CONFIDENT WIN",
-      "reason": "Twice successful at 5f on good ground this year and third over today's course and distance last time; worth a qualified each-way look back at a manageable mark, despite patchy intervening form.",
-      "tags": [
-        "Two 5f wins on good ground this season",
-        "Last start third over Redcar 5f",
-        "OR65 provides a workable sprint handicap mark"
-      ],
-      "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
-      "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
-      "priceBasis": "published pre-race market observation; no actual wager",
-      "raceDayReview": {
-        "status": "PRE-RACE E/W WATCH",
-        "checkedAt": "2026-10-16T09:32:39.683Z",
-        "headline": "Last third was in only a five-runner race and the preceding 0-5 form raises consistency concerns; Houndhill and Sergeant Mayer provide stronger recent opposition.",
-        "sourceType": "verified dated racecard and odds"
-      }
-    },
-    {
-      "horse": "Our Absent Friends",
-      "course": "Haydock",
-      "time": "17:07",
-      "odds": "12/1",
-      "trainer": "Tristan Davidson",
-      "jockey": "Jason Hart",
-      "or": 73,
-      "runnerCount": 14,
-      "draw": 9,
-      "going": "HEAVY",
-      "distance": "5f",
-      "raceClass": "Class 5 handicap",
-      "tier": "VALUE WATCH",
-      "summary": "A previous Haydock five-furlong course-and-distance winner with a recent Redcar runner-up finish; the documented current form is stronger than many 20/1 outsiders, but heavy ground remains an important question.",
-      "positivePoints": [
-        "Previously won this Haydock C&D",
-        "Second of a recent Redcar sprint 13 days ago",
-        "Recent form 153392 includes two thirds and a second"
-      ],
-      "risk": "Heavy ground suitability not independently confirmed for the latest evidence, and Irish Nectar arrives off a big-field win; this is explicitly a speculative longshot, not a confident selection.",
-      "sourceUrl": "https://www.racingpost.com/racecards/23/haydock/2026-10-16/928590/",
-      "priceSource": "https://www.horseracing.net/haydock/16-10-26/17:07",
-      "confidenceTier": "SPECULATIVE EACH-WAY CANDIDATE — NOT A CONFIDENT WIN",
-      "reason": "A previous Haydock five-furlong course-and-distance winner with a recent Redcar runner-up finish; the documented current form is stronger than many 20/1 outsiders, but heavy ground remains an important question.",
-      "tags": [
-        "Previously won this Haydock C&D",
-        "Second of a recent Redcar sprint 13 days ago",
-        "Recent form 153392 includes two thirds and a second"
-      ],
-      "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
-      "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
-      "priceBasis": "Bookmaker 12/1 each-way quotes from race-day comparison; a 20/1 WIN ONLY quote is not eligible for the 20/1+ EW longshots category",
-      "raceDayReview": {
-        "status": "DOWNGRADED FROM 20/1+ LONGSHOT TO 12/1 MIDSHOT — 20/1 OFFER WIN ONLY",
-        "checkedAt": "2026-10-16T09:32:39.683Z",
-        "headline": "Heavy ground suitability not independently confirmed for the latest evidence, and Irish Nectar arrives off a big-field win; this is explicitly a speculative longshot, not a confident selection.",
-        "sourceType": "verified dated racecard and odds",
-        "observedPrice": "12/1 each-way",
-        "withdrawnLongshotReason": "20/1 available only win-only, not 20/1 with place terms"
-      }
-    }
-  ],
+  "todaySelections": [],
+  "midshotsToday": [],
   "longshotsToday": [],
   "lucky15Only": [],
   "selectionPolicy": {
@@ -664,19 +96,12 @@
     "legs": []
   },
   "selectionPresentation": {
-    "rule": "ONE_SELECTION_PER_RACE",
-    "effectiveDate": "2026-10-15",
-    "selectionCount": 6,
-    "featuredRaceCount": 6,
-    "excludedAlternatives": [
-      "Kado Sacree: chase debut after good hurdle wins",
-      "Midnight's Dream: possible 48-hour turnaround after recent win",
-      "Smoke Them Out: same Curragh 13:37 race as Nouvel Espoir"
-    ],
-    "notes": "Four WIN and two E/W watch selections; no multiple picks in a race; NAP and NB appear on WIN rows only.",
-    "dailyUpdate": "2026-10-16",
-    "postRaceArchive": "2026-10-15",
-    "paperBetStatus": "RESEARCH ONLY — NO NEW PAPER WAGERS"
+    "rule": "ONE_BET_SELECTION_PER_RACE",
+    "effectiveDate": "2026-10-17",
+    "selectionCount": 7,
+    "featuredRaceCount": 7,
+    "notes": "One single Bet Selections view; WIN or EACH WAY shown per horse. Categories WIN, Mid Shots, Longshots, Mission and E/W Lucky 15 are not used for forward public selections. Existing paper ledger unchanged.",
+    "paperBetStatus": "RESEARCH ONLY — NO NEW PAPER WAGERS OR PROFIT CREDITED"
   },
   "reviewCompleteness": {
     "asOfDate": "2026-10-16",
@@ -722,19 +147,26 @@
       "ROI of early-price fixed vs labelled simulated BOG",
       "Calibration requires prospective probability forecasts and large held-out chronological set"
     ],
-    "warning": "Existing sample too small, no measured accuracy improvement or live training claimed."
+    "warning": "Existing sample too small, no measured accuracy improvement or live training claimed.",
+    "latestReview": {
+      "2026-10-17": [
+        "Compare best candidates to all significant live rivals and examine where the rival can improve, instead of celebrating only our horse's positives.",
+        "Treat older course-and-distance wins as secondary support; foreground current speed/class performance at the actual conditions.",
+        "Include days since run, rating/weight change, and evidence for track and trip as separate explicit risk checks.",
+        "Do not increase confidence based solely on a rival non-runner; recalculate the surviving field's strengths and pace shape.",
+        "Preserve the originally published pick, reference odds, non-runners and later result without reclassifying unsuccessful bets.",
+        "Display one horse per race and its recommended WIN/EACH WAY bet type; price is not a confidence input.",
+        "Recheck declared runners, going, jockey and each-way bookmaker place terms before off; no invented certainty or profit."
+      ]
+    },
+    "calibrationStatus": "No verified, held-out backtest or proven statistically calibrated win probabilities."
   },
   "researchSelectionUpdate": {
-    "reviewedAt": "2026-10-16T09:32:39.683Z",
-    "status": "Four qualified WIN contenders, three midshot E/W watches, zero qualified 20/1+ E/W longshots; Thursday results settled in research archive without paper bets.",
-    "note": "Live High Storm NR shown on Racing TV at 17:37 Haydock; model confidence based on running evidence and conditions, not favouritism.",
-    "nonRunnerRecheckAt": "2026-10-16T09:36:11.381Z",
-    "nonRunnersRelevant": [
-      "17:37 Haydock High Storm NR -> 5 remain",
-      "19:45 Newcastle Nefyn Queen NR -> 8 remain"
-    ],
-    "nonRunnerSourceUrl": "https://www.racingpost.com/non-runners/2026-10-16/",
-    "priceCorrection": "Our Absent Friends had 20/1 WIN ONLY but max verified typical EW comparison prices 12/1; moved from Longshot to Midshot, preserve no pseudo bet."
+    "date": "2026-10-17",
+    "theme": "British Champions Day · 7 Ascot races",
+    "status": "PRE-RACE — publication snapshot",
+    "publishedAt": "2026-10-16T23:19:59.818Z",
+    "sourceRule": "Grounded research, prices may change; no real or paper wagers added."
   },
   "raceDayRechecks": [],
   "latestRacedayRecheck": null,
@@ -1967,7 +1399,817 @@
           "Do not use outcomes from races after the published decision when claiming pre-race feature availability."
         ]
       }
+    },
+    {
+      "date": "2026-10-16",
+      "verifiedAt": "2026-10-16T09:32:39.683Z",
+      "coverage": {
+        "meetings": 5,
+        "races": 40,
+        "scope": "40 scheduled races across five meetings; the published shortlist is reviewed for documented recent form, conditions, handicap/class suitability, and a named opponent. No assertion of exhaustive lifetime form or complete sectional analysis for every runner.",
+        "publishedDate": "2026-10-16",
+        "selectedIndividuals": 7,
+        "qualifiedWins": 4,
+        "winConfidenceMethod": "Editorial evidence standard, independent of market price; not statistically calibrated."
+      },
+      "meetings": [
+        {
+          "course": "Redcar",
+          "races": 8,
+          "going": "GOOD",
+          "code": "Flat turf",
+          "first": "13:20",
+          "last": "17:23"
+        },
+        {
+          "course": "Uttoxeter",
+          "races": 7,
+          "going": "GOOD",
+          "code": "Jumps",
+          "first": "13:27",
+          "last": "16:53"
+        },
+        {
+          "course": "Haydock",
+          "races": 8,
+          "going": "HEAVY (GoingStick reported 5.0; rain; rail adjustments)",
+          "code": "Flat turf",
+          "first": "13:42",
+          "last": "17:37"
+        },
+        {
+          "course": "Newcastle",
+          "races": 9,
+          "going": "STANDARD Tapeta",
+          "code": "Flat all-weather",
+          "first": "16:08",
+          "last": "20:15"
+        },
+        {
+          "course": "Dundalk",
+          "races": 8,
+          "going": "STANDARD Polytrack",
+          "code": "Flat all-weather",
+          "first": "17:00",
+          "last": "20:30"
+        }
+      ],
+      "win": [
+        {
+          "horse": "Yaa Min",
+          "course": "Haydock",
+          "time": "17:37",
+          "odds": "2/1",
+          "trainer": "Hayley Burton",
+          "jockey": "Toby Moore (7lb)",
+          "or": 84,
+          "runnerCount": 5,
+          "draw": 4,
+          "going": "HEAVY",
+          "distance": "1m6f",
+          "raceClass": "Class 3 handicap, 5 runners after High Storm NR",
+          "winRank": "NAP",
+          "summary": "Dominant heavy-ground course-and-distance winner with the same 7lb-claiming jockey back aboard; proven stamina is a significant advantage, though a 6lb rise and Gone By remain threats.",
+          "positivePoints": [
+            "Won over this Haydock C&D on heavy ground 20 days ago",
+            "Made all and won convincingly under Toby Moore",
+            "Claiming rider offsets part of the new handicap burden"
+          ],
+          "risk": "Up 6lb since that win; Gone By is rated 92 and Phantom Recon may improve on handicap debut; High Storm reported non-runner by Racing TV, recheck the final field.",
+          "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
+          "priceSource": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
+          "tier": "SOLID",
+          "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+          "reason": "Dominant heavy-ground course-and-distance winner with the same 7lb-claiming jockey back aboard; proven stamina is a significant advantage, though a 6lb rise and Gone By remain threats.",
+          "tags": [
+            "Won over this Haydock C&D on heavy ground 20 days ago",
+            "Made all and won convincingly under Toby Moore",
+            "Claiming rider offsets part of the new handicap burden"
+          ],
+          "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
+          "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
+          "priceBasis": "observed pre-race reference quote, not proof of bookmaker acceptance",
+          "winAssessment": {
+            "decision": "win-contender",
+            "reviewedAt": "2026-10-16T09:32:39.683Z",
+            "riskSeverity": "moderate",
+            "riskNotes": [
+              "Up 6lb since that win; Gone By is rated 92 and Phantom Recon may improve on handicap debut; High Storm reported non-runner by Racing TV, recheck the final field."
+            ],
+            "hasCriticalUnknown": false,
+            "withdrawn": false,
+            "factors": {
+              "form": {
+                "grade": "strong",
+                "finding": "Last start won decisively over the exact trip 20 days ago; recent record 633491.",
+                "sourceUrl": "https://www.horseracing.net/haydock/16-10-26",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "abilityClass": {
+                "grade": "supported",
+                "finding": "C&D winning RPR92 compared with current OR84, but the 6lb rise needs allowance.",
+                "sourceUrl": "https://www.horseracing.net/haydock/16-10-26",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "courseGoingTrip": {
+                "grade": "strong",
+                "finding": "The latest win came at Haydock over 1m6f on heavy ground, identical to declared test.",
+                "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "opposition": {
+                "grade": "supported",
+                "finding": "Gone By on OR92 and unexposed Phantom Recon are major dangers; High Storm is shown NR on Racing TV.",
+                "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "fitness": {
+                "grade": "strong",
+                "finding": "Raced and won 20 days previously without a long layoff.",
+                "sourceUrl": "https://www.horseracing.net/haydock/16-10-26",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "trainerJockey": {
+                "grade": "supported",
+                "finding": "Toby Moore claims 7lb for Hayley Burton, same rider as latest win.",
+                "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/haydock-park/1737",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              }
+            }
+          },
+          "raceDayReview": {
+            "status": "PUBLISHED AFTER 16 OCT GOING / RUNNER REVIEW",
+            "checkedAt": "2026-10-16T09:32:39.683Z",
+            "headline": "Up 6lb since that win; Gone By is rated 92 and Phantom Recon may improve on handicap debut; High Storm reported non-runner by Racing TV, recheck the final field.",
+            "sourceType": "time-of-review sources; changes require a fresh check"
+          }
+        },
+        {
+          "horse": "Service Minimum",
+          "course": "Uttoxeter",
+          "time": "15:12",
+          "odds": "9/4",
+          "trainer": "Dan Skelton",
+          "jockey": "Harry Skelton",
+          "or": 132,
+          "runnerCount": 6,
+          "going": "GOOD",
+          "distance": "2m3f207y",
+          "raceClass": "Class 2 handicap hurdle",
+          "winRank": null,
+          "summary": "Three wins from the last four completed starts and a recent Newton Abbot success support her progression; the Skeltons' partnership is strong, but 12st and better-class rivals demand caution.",
+          "positivePoints": [
+            "Won three of her last four starts",
+            "Latest win 28 days ago confirms fitness",
+            "Dan and Harry Skelton partnership in good stable form"
+          ],
+          "risk": "Highest-weighted runner at 12st on OR132 in a Class 2 race; Miss Maverick is a C&D winner and Seamoon Story returns from a break. 15/8 is a published forecast, not a verified accepted bet.",
+          "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
+          "priceSource": "https://www.horseracing.net/uttoxeter/16-10-26/15:12",
+          "tier": "SOLID",
+          "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+          "reason": "Three wins from the last four completed starts and a recent Newton Abbot success support her progression; the Skeltons' partnership is strong, but 12st and better-class rivals demand caution.",
+          "tags": [
+            "Won three of her last four starts",
+            "Latest win 28 days ago confirms fitness",
+            "Dan and Harry Skelton partnership in good stable form"
+          ],
+          "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
+          "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
+          "priceBasis": "Observed 9/4 bookmaker quote, distinct from 15/8 Racing Post published forecast",
+          "winAssessment": {
+            "decision": "win-contender",
+            "reviewedAt": "2026-10-16T09:32:39.683Z",
+            "riskSeverity": "moderate",
+            "riskNotes": [
+              "Highest-weighted runner at 12st on OR132 in a Class 2 race; Miss Maverick is a C&D winner and Seamoon Story returns from a break. 15/8 is a published forecast, not a verified accepted bet."
+            ],
+            "hasCriticalUnknown": false,
+            "withdrawn": false,
+            "factors": {
+              "form": {
+                "grade": "strong",
+                "finding": "Record 711-71 represents three successes in the last four completed starts.",
+                "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "abilityClass": {
+                "grade": "supported",
+                "finding": "Rated OR132 and running in 0–145 Class 2 company; must concede weight to rivals.",
+                "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "courseGoingTrip": {
+                "grade": "supported",
+                "finding": "Won at this hurdle distance previously; today's Uttoxeter going is GOOD, while exact course proof is limited.",
+                "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/uttoxeter/1512",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "opposition": {
+                "grade": "strong",
+                "finding": "Six declared: Miss Maverick is a C&D winner rated 124, while Seamoon Story is rated 125 with a 7lb claim.",
+                "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "fitness": {
+                "grade": "strong",
+                "finding": "Won 28 days ago and is in active race fitness, avoiding seasonal-return risk.",
+                "sourceUrl": "https://www.racingpost.com/racecards/84/uttoxeter/2026-10-16/928427/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "trainerJockey": {
+                "grade": "supported",
+                "finding": "Dan and Harry Skelton represent the confirmed stable/jockey combination.",
+                "sourceUrl": "https://www.racingtv.com/racecards/2026-10-16/uttoxeter/1512",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              }
+            }
+          },
+          "raceDayReview": {
+            "status": "WIN RETAIN — UPDATED BOOKMAKER OBSERVATION",
+            "checkedAt": "2026-10-16T09:32:39.683Z",
+            "headline": "Highest-weighted runner at 12st on OR132 in a Class 2 race; Miss Maverick is a C&D winner and Seamoon Story returns from a break. 15/8 is a published forecast, not a verified accepted bet.",
+            "sourceType": "time-of-review sources; changes require a fresh check",
+            "observedPrice": "9/4 bookmaker (forecast 15/8)"
+          }
+        },
+        {
+          "horse": "Farabove The Limit",
+          "course": "Newcastle",
+          "time": "16:08",
+          "odds": "11/4",
+          "trainer": "Phillip Makin",
+          "jockey": "Sam James",
+          "or": 65,
+          "runnerCount": 12,
+          "draw": 9,
+          "going": "STANDARD Tapeta",
+          "distance": "1m4f98y",
+          "raceClass": "Class 5 handicap (0–70)",
+          "winRank": "NB",
+          "summary": "Won his last two staying handicaps, including this Newcastle C&D, and overcame a pace bias latest; only 3lb higher, though Jujubella and Saxophonist offer genuine competition.",
+          "positivePoints": [
+            "Back-to-back wins, latest over this exact Newcastle C&D",
+            "Timeform notes he overcame a pace disadvantage latest",
+            "Only 3lb higher and runner-up from latest win subsequently scored"
+          ],
+          "risk": "Up 3lb and faces Jujubella, a reliable C&D winner, plus Saxophonist, an improving three-year-old; 12-runner draw and pace can materially affect the result.",
+          "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
+          "priceSource": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
+          "tier": "SOLID",
+          "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+          "reason": "Won his last two staying handicaps, including this Newcastle C&D, and overcame a pace bias latest; only 3lb higher, though Jujubella and Saxophonist offer genuine competition.",
+          "tags": [
+            "Back-to-back wins, latest over this exact Newcastle C&D",
+            "Timeform notes he overcame a pace disadvantage latest",
+            "Only 3lb higher and runner-up from latest win subsequently scored"
+          ],
+          "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
+          "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
+          "priceBasis": "observed pre-race reference quote, not proof of bookmaker acceptance",
+          "winAssessment": {
+            "decision": "win-contender",
+            "reviewedAt": "2026-10-16T09:32:39.683Z",
+            "riskSeverity": "moderate",
+            "riskNotes": [
+              "Up 3lb and faces Jujubella, a reliable C&D winner, plus Saxophonist, an improving three-year-old; 12-runner draw and pace can materially affect the result."
+            ],
+            "hasCriticalUnknown": false,
+            "withdrawn": false,
+            "factors": {
+              "form": {
+                "grade": "strong",
+                "finding": "Last two runs were victories (1m3f Carlisle and 1m4f Newcastle) after gelding.",
+                "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "abilityClass": {
+                "grade": "supported",
+                "finding": "Official mark OR65 follows the latest win by 3lb; runner-up franked that form.",
+                "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "courseGoingTrip": {
+                "grade": "strong",
+                "finding": "Won over Newcastle 1m4f98y on standard Tapeta last time.",
+                "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "opposition": {
+                "grade": "strong",
+                "finding": "Jujubella has robust recent C&D record and Saxophonist holds strong 3yo middle-distance form.",
+                "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "fitness": {
+                "grade": "supported",
+                "finding": "Last win 21 days ago supports current racing fitness.",
+                "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "trainerJockey": {
+                "grade": "supported",
+                "finding": "Sam James and Phillip Makin declared on racecard.",
+                "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1608/35/1",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              }
+            }
+          },
+          "raceDayReview": {
+            "status": "PUBLISHED AFTER 16 OCT GOING / RUNNER REVIEW",
+            "checkedAt": "2026-10-16T09:32:39.683Z",
+            "headline": "Up 3lb and faces Jujubella, a reliable C&D winner, plus Saxophonist, an improving three-year-old; 12-runner draw and pace can materially affect the result.",
+            "sourceType": "time-of-review sources; changes require a fresh check"
+          }
+        },
+        {
+          "horse": "Lanarra",
+          "course": "Newcastle",
+          "time": "19:45",
+          "odds": "6/4",
+          "trainer": "R Mike Smith",
+          "jockey": "James Sullivan",
+          "or": 52,
+          "runnerCount": 8,
+          "draw": 6,
+          "going": "STANDARD Tapeta",
+          "distance": "7f14y",
+          "raceClass": "Class 6 handicap (0–55)",
+          "winRank": null,
+          "summary": "Recent 3rd and 2nd finishes include a narrow defeat over today's Newcastle C&D; rated just 1lb higher and meets relatively limited opposition, although Maynora remains the danger.",
+          "positivePoints": [
+            "Latest 2nd of 12 over Newcastle C&D, beaten 1¼ lengths",
+            "Recent form sequence 435132 confirms consistency",
+            "Only 1lb higher with proven stiff-track experience"
+          ],
+          "risk": "A Class 6 handicap remains unpredictable; Maynora was fourth here and could improve back at 7f. Shorter quoted price has not been used to calculate confidence.",
+          "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/931142/",
+          "priceSource": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1945/35/8",
+          "tier": "SOLID",
+          "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+          "reason": "Recent 3rd and 2nd finishes include a narrow defeat over today's Newcastle C&D; rated just 1lb higher and meets relatively limited opposition, although Maynora remains the danger.",
+          "tags": [
+            "Latest 2nd of 12 over Newcastle C&D, beaten 1¼ lengths",
+            "Recent form sequence 435132 confirms consistency",
+            "Only 1lb higher with proven stiff-track experience"
+          ],
+          "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
+          "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
+          "priceBasis": "observed pre-race reference quote, not proof of bookmaker acceptance",
+          "winAssessment": {
+            "decision": "win-contender",
+            "reviewedAt": "2026-10-16T09:32:39.683Z",
+            "riskSeverity": "moderate",
+            "riskNotes": [
+              "A Class 6 handicap remains unpredictable; Maynora was fourth here and could improve back at 7f. Shorter quoted price has not been used to calculate confidence."
+            ],
+            "hasCriticalUnknown": false,
+            "withdrawn": false,
+            "factors": {
+              "form": {
+                "grade": "strong",
+                "finding": "Recent sequence 435132 includes a third then second in successive Newcastle handicaps.",
+                "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/931142/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "abilityClass": {
+                "grade": "supported",
+                "finding": "Official rating OR52 within today's 0–55 handicap with only a 1lb rise for second.",
+                "sourceUrl": "https://m.attheraces.com/racecard/Newcastle/16-October-2026/1945",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "courseGoingTrip": {
+                "grade": "strong",
+                "finding": "Ran second of 12 over this Newcastle 7f14y C&D 14 days ago, and has won at Newcastle.",
+                "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/931142/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "opposition": {
+                "grade": "supported",
+                "finding": "Maynora's Newcastle fourth and Territorial Star are principal alternatives, but neither arrives with matching 7f C&D latest form.",
+                "sourceUrl": "https://www.horseracing.net/newcastle/16-10-26",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "fitness": {
+                "grade": "strong",
+                "finding": "Second at Newcastle 14 days ago in a 12-runner handicap.",
+                "sourceUrl": "https://www.timeform.com/horse-racing/odds/newcastle/2026-10-16/1945/35/8",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              },
+              "trainerJockey": {
+                "grade": "supported",
+                "finding": "James Sullivan and R Mike Smith booked at Newcastle.",
+                "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-16/931142/",
+                "checkedAt": "2026-10-16T09:32:39.683Z"
+              }
+            }
+          },
+          "raceDayReview": {
+            "status": "RETAIN WIN — NEFYN QUEEN DECLARED NON-RUNNER",
+            "checkedAt": "2026-10-16T09:32:39.683Z",
+            "headline": "8 runners following official non-runner Nefyn Queen; latest Newcastle C&D placing and 1lb mark increase remain valid.",
+            "sourceType": "time-of-review sources; changes require a fresh check",
+            "fieldNow": 8,
+            "nonRunners": [
+              "Nefyn Queen"
+            ],
+            "nonRunnerSourceUrl": "https://www.racingpost.com/non-runners/2026-10-16/"
+          }
+        }
+      ],
+      "mid": [
+        {
+          "horse": "Run This Way",
+          "course": "Redcar",
+          "time": "16:12",
+          "odds": "15/2",
+          "trainer": "Paul Midgley",
+          "jockey": "Paul Mulrennan",
+          "or": 58,
+          "runnerCount": 13,
+          "draw": 13,
+          "going": "GOOD",
+          "distance": "5f217y",
+          "raceClass": "Class 5 handicap",
+          "summary": "A twice-winner at Redcar who was beaten a short head over 6f at Ripon latest; recent placed form and OR58 support an each-way chance, although drawn widest against Mr Cool.",
+          "positivePoints": [
+            "Won two of four previous Redcar races",
+            "Latest Ripon second was beaten only a short head",
+            "Recent sequence includes third, third and second"
+          ],
+          "risk": "Wide stall 13 in a 13-runner sprint; Mr Cool and Ingleby Archie are live opponents, so pace/draw uncertainty makes this each-way rather than a confident win.",
+          "sourceUrl": "https://www.racingpost.com/racecards/47/redcar/2026-10-16/928595/",
+          "priceSource": "https://www.irishracing.com/odds-comparison/Fri-16th-Oct-2026/Redcar/1612",
+          "tier": "VALUE WATCH",
+          "confidenceTier": "SPECULATIVE EACH-WAY CANDIDATE — NOT A CONFIDENT WIN",
+          "reason": "A twice-winner at Redcar who was beaten a short head over 6f at Ripon latest; recent placed form and OR58 support an each-way chance, although drawn widest against Mr Cool.",
+          "tags": [
+            "Won two of four previous Redcar races",
+            "Latest Ripon second was beaten only a short head",
+            "Recent sequence includes third, third and second"
+          ],
+          "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
+          "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
+          "priceBasis": "published pre-race market observation; no actual wager",
+          "raceDayReview": {
+            "status": "PRE-RACE E/W WATCH",
+            "checkedAt": "2026-10-16T09:32:39.683Z",
+            "headline": "Wide stall 13 in a 13-runner sprint; Mr Cool and Ingleby Archie are live opponents, so pace/draw uncertainty makes this each-way rather than a confident win.",
+            "sourceType": "verified dated racecard and odds"
+          }
+        },
+        {
+          "horse": "Dragon Spin",
+          "course": "Redcar",
+          "time": "15:37",
+          "odds": "15/2",
+          "trainer": "Steph Hollinshead",
+          "jockey": "Dougie Costello",
+          "or": 65,
+          "runnerCount": 10,
+          "draw": 5,
+          "going": "GOOD",
+          "distance": "5f",
+          "raceClass": "Class 5 handicap",
+          "summary": "Twice successful at 5f on good ground this year and third over today's course and distance last time; worth a qualified each-way look back at a manageable mark, despite patchy intervening form.",
+          "positivePoints": [
+            "Two 5f wins on good ground this season",
+            "Last start third over Redcar 5f",
+            "OR65 provides a workable sprint handicap mark"
+          ],
+          "risk": "Last third was in only a five-runner race and the preceding 0-5 form raises consistency concerns; Houndhill and Sergeant Mayer provide stronger recent opposition.",
+          "sourceUrl": "https://www.racingpost.com/racecards/47/redcar/2026-10-16/928596/",
+          "priceSource": "https://www.sportinglife.com/racing/racecards/2026-10-16/redcar/live-show/944359/sam-hall-memorial-handicap",
+          "tier": "VALUE WATCH",
+          "confidenceTier": "SPECULATIVE EACH-WAY CANDIDATE — NOT A CONFIDENT WIN",
+          "reason": "Twice successful at 5f on good ground this year and third over today's course and distance last time; worth a qualified each-way look back at a manageable mark, despite patchy intervening form.",
+          "tags": [
+            "Two 5f wins on good ground this season",
+            "Last start third over Redcar 5f",
+            "OR65 provides a workable sprint handicap mark"
+          ],
+          "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
+          "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
+          "priceBasis": "published pre-race market observation; no actual wager",
+          "raceDayReview": {
+            "status": "PRE-RACE E/W WATCH",
+            "checkedAt": "2026-10-16T09:32:39.683Z",
+            "headline": "Last third was in only a five-runner race and the preceding 0-5 form raises consistency concerns; Houndhill and Sergeant Mayer provide stronger recent opposition.",
+            "sourceType": "verified dated racecard and odds"
+          }
+        },
+        {
+          "horse": "Our Absent Friends",
+          "course": "Haydock",
+          "time": "17:07",
+          "odds": "12/1",
+          "trainer": "Tristan Davidson",
+          "jockey": "Jason Hart",
+          "or": 73,
+          "runnerCount": 14,
+          "draw": 9,
+          "going": "HEAVY",
+          "distance": "5f",
+          "raceClass": "Class 5 handicap",
+          "tier": "VALUE WATCH",
+          "summary": "A previous Haydock five-furlong course-and-distance winner with a recent Redcar runner-up finish; the documented current form is stronger than many 20/1 outsiders, but heavy ground remains an important question.",
+          "positivePoints": [
+            "Previously won this Haydock C&D",
+            "Second of a recent Redcar sprint 13 days ago",
+            "Recent form 153392 includes two thirds and a second"
+          ],
+          "risk": "Heavy ground suitability not independently confirmed for the latest evidence, and Irish Nectar arrives off a big-field win; this is explicitly a speculative longshot, not a confident selection.",
+          "sourceUrl": "https://www.racingpost.com/racecards/23/haydock/2026-10-16/928590/",
+          "priceSource": "https://www.horseracing.net/haydock/16-10-26/17:07",
+          "confidenceTier": "SPECULATIVE EACH-WAY CANDIDATE — NOT A CONFIDENT WIN",
+          "reason": "A previous Haydock five-furlong course-and-distance winner with a recent Redcar runner-up finish; the documented current form is stronger than many 20/1 outsiders, but heavy ground remains an important question.",
+          "tags": [
+            "Previously won this Haydock C&D",
+            "Second of a recent Redcar sprint 13 days ago",
+            "Recent form 153392 includes two thirds and a second"
+          ],
+          "selectionPublishedAt": "2026-10-16T09:32:39.683Z",
+          "earlyOddsLockedAt": "2026-10-16T09:32:39.683Z",
+          "priceBasis": "Bookmaker 12/1 each-way quotes from race-day comparison; a 20/1 WIN ONLY quote is not eligible for the 20/1+ EW longshots category",
+          "raceDayReview": {
+            "status": "DOWNGRADED FROM 20/1+ LONGSHOT TO 12/1 MIDSHOT — 20/1 OFFER WIN ONLY",
+            "checkedAt": "2026-10-16T09:32:39.683Z",
+            "headline": "Heavy ground suitability not independently confirmed for the latest evidence, and Irish Nectar arrives off a big-field win; this is explicitly a speculative longshot, not a confident selection.",
+            "sourceType": "verified dated racecard and odds",
+            "observedPrice": "12/1 each-way",
+            "withdrawnLongshotReason": "20/1 available only win-only, not 20/1 with place terms"
+          }
+        }
+      ],
+      "long": [],
+      "nom": [
+        {
+          "horse": "Yaa Min",
+          "course": "Haydock",
+          "time": "17:37",
+          "label": "NAP",
+          "status": "SOLID CONTENDER",
+          "rationale": "Dominant heavy-ground course-and-distance winner with the same 7lb-claiming jockey back aboard; proven stamina is a significant advantage, though a 6lb rise and Gone By remain threats."
+        },
+        {
+          "horse": "Farabove The Limit",
+          "course": "Newcastle",
+          "time": "16:08",
+          "label": "NB",
+          "status": "SOLID CONTENDER",
+          "rationale": "Won his last two staying handicaps, including this Newcastle C&D, and overcame a pace bias latest; only 3lb higher, though Jujubella and Saxophonist offer genuine competition."
+        }
+      ],
+      "finalAudit": {
+        "status": "2026-10-16 finishing positions user-reported and prior race-results checked; see fiveDayAnalysis",
+        "source": "Previous evening review"
+      }
     }
   ],
-  "pricingReviewAt": "2026-10-16T09:37:53.037Z"
+  "pricingReviewAt": "2026-10-16T09:37:53.037Z",
+  "betSelections": [
+    {
+      "time": "12:55",
+      "horse": "Arapaho Gold",
+      "betType": "win",
+      "odds": "11/4",
+      "jockey": "Connor Beasley",
+      "trainer": "Michael Dods",
+      "or": 110,
+      "draw": 10,
+      "runnerCount": 11,
+      "going": "GOOD",
+      "distance": "6f",
+      "raceClass": "Class 2 2yo Conditions Stakes",
+      "summary": "Gimcrack winner with four wins from five; last defeat came when giving weight to rivals in the Mill Reef, making his proven six-furlong performance a persuasive starting point.",
+      "positivePoints": [
+        "Four wins in five, including the Group 2 Gimcrack",
+        "Strong six-furlong form at this level",
+        "Latest defeat occurred when conceding weight"
+      ],
+      "risk": "Satellite Of Love is improving and Inner City Blues could bounce back from a poor Middle Park; two-year-old form can change quickly.",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-17/ascot/racecard/944546/qatar-racing-british-champions-day-two-year-old-conditions-stakes-gbb-race",
+      "course": "Ascot",
+      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+      "priceBasis": "observed pre-race reference quote, not accepted wager",
+      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED"
+    },
+    {
+      "time": "13:30",
+      "horse": "Highwayman",
+      "betType": "win",
+      "odds": "5/2",
+      "jockey": "Dylan Browne McMonagle",
+      "trainer": "Joseph Patrick O'Brien",
+      "or": 117,
+      "draw": 2,
+      "runnerCount": 10,
+      "going": "GOOD",
+      "distance": "2m",
+      "raceClass": "Group 1 Long Distance Cup",
+      "summary": "Three straight wins culminating in the St Leger; stayed on powerfully at Doncaster and gets a seven-pound weight-for-age allowance against older stayers.",
+      "positivePoints": [
+        "St Leger winner, unbeaten in last three races",
+        "Strong late stamina profile as distances increased",
+        "Seven-pound weight-for-age allowance"
+      ],
+      "risk": "First run over two miles; Caballo De Mar has proven staying ability and Gregory won emphatically over two miles last month.",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-17/ascot/racecard/932264/qatar-racing-british-champions-long-distance-cup",
+      "course": "Ascot",
+      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+      "priceBasis": "observed pre-race reference quote, not accepted wager",
+      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED"
+    },
+    {
+      "time": "14:05",
+      "horse": "Almeraq",
+      "betType": "win",
+      "odds": "5/4",
+      "jockey": "Tom Marquand",
+      "trainer": "William Haggas",
+      "or": 123,
+      "draw": 8,
+      "runnerCount": 16,
+      "going": "GOOD",
+      "distance": "6f",
+      "raceClass": "Group 1 Champions Sprint Stakes",
+      "summary": "His dominant Haydock Sprint Cup win and Royal Ascot Jubilee success establish the strongest recent six-furlong Group 1 form on both softer and faster going.",
+      "positivePoints": [
+        "Group 1 six-furlong winner at Royal Ascot on good-to-firm",
+        "Won Haydock Group 1 by four and a quarter lengths",
+        "Proven under contrasting ground conditions"
+      ],
+      "risk": "Sixteen-runner sprint has traffic and pace uncertainty; Division may be better than its recent C&D fourth and Paborus has solid Group-level form.",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-17/ascot/racecard/932263/qatar-racing-british-champions-sprint-stakes",
+      "course": "Ascot",
+      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+      "priceBasis": "observed pre-race reference quote, not accepted wager",
+      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED"
+    },
+    {
+      "time": "14:40",
+      "horse": "Kalpana",
+      "betType": "win",
+      "odds": "6/5",
+      "jockey": "Colin Keane",
+      "trainer": "Andrew Balding",
+      "or": 124,
+      "draw": 1,
+      "runnerCount": 13,
+      "going": "GOOD",
+      "distance": "1m4f",
+      "raceClass": "Group 1 Fillies & Mares Stakes",
+      "summary": "Two-time winner of this race and 2026 King George and Yorkshire Oaks winner; the class benchmark over this course and trip if recovered from her Arc effort.",
+      "positivePoints": [
+        "Won the last two renewals of this exact race",
+        "King George and Yorkshire Oaks winner in 2026",
+        "Highest official rating in the field: 124"
+      ],
+      "risk": "Only 13 days since a tough Arc campaign; Johanna Walsh has Irish Oaks class and six-pound age weight allowance.",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-17/ascot/racecard/932265/qatar-racing-british-champions-fillies-mares-stakes-group-1",
+      "course": "Ascot",
+      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+      "priceBasis": "observed pre-race reference quote, not accepted wager",
+      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED"
+    },
+    {
+      "time": "15:20",
+      "horse": "Rayif",
+      "betType": "each-way",
+      "odds": "11/2",
+      "jockey": "Christophe Soumillon",
+      "trainer": "Francis-Henri Graffard",
+      "draw": 1,
+      "runnerCount": 11,
+      "going": "GOOD",
+      "distance": "1m",
+      "raceClass": "Group 1 Queen Elizabeth II Stakes",
+      "summary": "Winner of two Group 1 miles in 2026 and two from two over the distance; his narrow defeat of Zeus Olympios at Deauville provides a meaningful field-level form line.",
+      "positivePoints": [
+        "French 2000 Guineas and Jacques le Marois winner",
+        "Unbeaten from two starts at one mile",
+        "Three-year-old weight allowance against older milers"
+      ],
+      "risk": "No established straight-Ascot-mile record; Gstaad, Talk Of New York, More Thunder and Ten Bob Tony create significant pace and finishing challenges.",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-17/ascot/racecard/932266/queen-elizabeth-ii-stakes-sponsored-by-qatar-racing-group-1-str",
+      "course": "Ascot",
+      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+      "priceBasis": "observed pre-race reference quote, not accepted wager",
+      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED"
+    },
+    {
+      "time": "16:00",
+      "horse": "Ombudsman",
+      "betType": "win",
+      "odds": "7/4",
+      "jockey": "William Buick",
+      "trainer": "John & Thady Gosden",
+      "or": 132,
+      "draw": 2,
+      "runnerCount": 6,
+      "going": "GOOD",
+      "distance": "1m2f",
+      "raceClass": "Group 1 Champion Stakes",
+      "summary": "Highest-rated contender, dominant Prince of Wales's winner at Ascot and likely better suited by good ground than the rain-softened going at York last time.",
+      "positivePoints": [
+        "Top official rating of 132",
+        "Multiple Group 1 wins in 2026, including Ascot",
+        "Stable pacemaker may ensure a suitable honest pace"
+      ],
+      "risk": "Calandagan defeated him in this race last year and returns fresh; a pacemaker does not guarantee the planned race shape.",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-17/ascot/racecard/932267/qatar-racing-champion-stakes-group-1",
+      "course": "Ascot",
+      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+      "priceBasis": "observed pre-race reference quote, not accepted wager",
+      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED"
+    },
+    {
+      "time": "16:35",
+      "horse": "Ebt's Guard",
+      "betType": "each-way",
+      "odds": "9/1",
+      "jockey": "Lewis Edmunds",
+      "trainer": "William Muir & Chris Grassick",
+      "or": 102,
+      "draw": 21,
+      "runnerCount": 20,
+      "going": "GOOD",
+      "distance": "1m",
+      "raceClass": "Class 2 Balmoral Handicap",
+      "summary": "Second in last year's Balmoral, fourth in the Royal Hunt Cup and a close Doncaster third last time; the strongest place-oriented combination of recent big-field form and course experience.",
+      "positivePoints": [
+        "Runner-up in last year's corresponding handicap",
+        "Fourth over Ascot's straight mile in June",
+        "Close third of seventeen in September"
+      ],
+      "risk": "Open twenty-runner handicap; Scoville and Gavriel have stronger recent winning form. Each-way terms must be checked with the bookmaker.",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-17/ascot/racecard/943998/balmoral-handicap-sponsored-by-qatar-racing-str",
+      "course": "Ascot",
+      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+      "priceBasis": "observed pre-race reference quote, not accepted wager",
+      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED"
+    }
+  ],
+  "fiveDayAnalysis": {
+    "period": [
+      "2026-10-12",
+      "2026-10-16"
+    ],
+    "reviewedAt": "2026-10-16T23:19:59.818Z",
+    "days": [
+      {
+        "date": "2026-10-12",
+        "auditedGroup": "Final seven-horse research shortlist",
+        "winners": 0,
+        "runners": 7,
+        "notes": "Separate earlier paper shortlist included winning Kykorock and Teoest; groups overlap and must not be pooled blindly."
+      },
+      {
+        "date": "2026-10-13",
+        "auditedGroup": "Six final named selections",
+        "winners": 1,
+        "runners": 6,
+        "notes": "King Of Persia won 6/1; Donnie Azoff second at 11/4; Oviedo finished fifth per final correction."
+      },
+      {
+        "date": "2026-10-14",
+        "auditedGroup": "Eight published; six actually ran",
+        "winners": 4,
+        "runners": 6,
+        "nonRunners": 2,
+        "notes": "Gunfighter, Centurion's Sister, Green Falcon, Seeyainthesuninn won; Magic Box second at 14/1, Guard Your Dreams PU; Viroflay and Forever Glamorous non-runners."
+      },
+      {
+        "date": "2026-10-15",
+        "auditedGroup": "Six primary selections",
+        "winners": 1,
+        "runners": 6,
+        "notes": "Yordan won; separately tracked Turbo Command also lost."
+      },
+      {
+        "date": "2026-10-16",
+        "auditedGroup": "Six retained selections",
+        "winners": 1,
+        "runners": 6,
+        "notes": "Farabove The Limit won at 3/1 SP; Yaa Min NAP last of five; Lanarra second, other retained runners unplaced; Our Absent Friends removed before the final shortlist."
+      }
+    ],
+    "caveat": "Different revisions and selection groups were used across the days, so pooled profit and calibrated accuracy cannot be inferred from the totals. Observed outcomes never justify retroactive removal.",
+    "processChanges": [
+      "Compare best candidates to all significant live rivals and examine where the rival can improve, instead of celebrating only our horse's positives.",
+      "Treat older course-and-distance wins as secondary support; foreground current speed/class performance at the actual conditions.",
+      "Include days since run, rating/weight change, and evidence for track and trip as separate explicit risk checks.",
+      "Do not increase confidence based solely on a rival non-runner; recalculate the surviving field's strengths and pace shape.",
+      "Preserve the originally published pick, reference odds, non-runners and later result without reclassifying unsuccessful bets.",
+      "Display one horse per race and its recommended WIN/EACH WAY bet type; price is not a confidence input.",
+      "Recheck declared runners, going, jockey and each-way bookmaker place terms before off; no invented certainty or profit."
+    ]
+  }
 }
