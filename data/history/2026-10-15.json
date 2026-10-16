@@ -1,0 +1,1482 @@
+{
+  "snapshotDate": "2026-10-15",
+  "verifiedAt": "2026-10-14T21:08:21.657Z",
+  "mode": "NEXT-DAY PROSPECTIVE RESEARCH — FROZEN BEFORE THE OFF",
+  "coverage": {
+    "meetings": 5,
+    "races": 40,
+    "scope": "Forty scheduled races reviewed across five declared meetings. All shortlisted horses reviewed for past form, race suitability, published odds and at least one credible opponent. Does not claim an exhaustive independent review of every runner's lifetime data.",
+    "publishedDate": "2026-10-15",
+    "selectedIndividuals": 7,
+    "qualifiedWins": 3,
+    "winConfidenceMethod": "Documented horse/race evidence supports Strong/Solid editorial shortlist, odds excluded from race-confidence rating."
+  },
+  "meetings": [
+    {
+      "course": "Perth",
+      "races": 8,
+      "going": "SOFT, good-to-soft in places (GoingStick 4.9, light rain; 14:30 rails +107yd)",
+      "code": "Jumps",
+      "first": "12:55",
+      "last": "16:50"
+    },
+    {
+      "course": "Curragh",
+      "races": 8,
+      "going": "SOFT straight; YIELDING TO SOFT round (rain)",
+      "code": "Flat turf",
+      "first": "13:02",
+      "last": "17:07"
+    },
+    {
+      "course": "Fontwell",
+      "races": 7,
+      "going": "GOOD TO SOFT, good in places hurdle course (GoingStick 4.9)",
+      "code": "Jumps",
+      "first": "13:44",
+      "last": "17:14"
+    },
+    {
+      "course": "Brighton",
+      "races": 8,
+      "going": "GOOD, good-to-soft in places (GoingStick 5.5; all races rail +7yd)",
+      "code": "Flat turf",
+      "first": "13:32",
+      "last": "17:25"
+    },
+    {
+      "course": "Southwell",
+      "races": 9,
+      "going": "Standard Tapeta",
+      "code": "Flat all-weather",
+      "first": "16:30",
+      "last": "20:30"
+    }
+  ],
+  "racecardLinks": [
+    {
+      "course": "Perth",
+      "races": 8,
+      "going": "SOFT, good-to-soft in places; GoingStick 4.9",
+      "code": "Jumps",
+      "first": "12:55",
+      "last": "16:50",
+      "url": "https://www.racingpost.com/racecards/41/perth/2026-10-15/"
+    },
+    {
+      "course": "Curragh",
+      "races": 8,
+      "going": "SOFT straight; YIELDING TO SOFT round",
+      "code": "Flat turf",
+      "first": "13:02",
+      "last": "17:07",
+      "url": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/"
+    },
+    {
+      "course": "Fontwell",
+      "races": 7,
+      "going": "Good to soft, good in places hurdle course",
+      "code": "Jumps",
+      "first": "13:44",
+      "last": "17:14",
+      "url": "https://www.racingpost.com/racecards/20/fontwell/2026-10-15/"
+    },
+    {
+      "course": "Brighton",
+      "races": 8,
+      "going": "GOOD, good-to-soft in places; GoingStick 5.5",
+      "code": "Flat turf",
+      "first": "13:32",
+      "last": "17:25",
+      "url": "https://www.racingpost.com/racecards/7/brighton/2026-10-15/"
+    },
+    {
+      "course": "Southwell",
+      "races": 9,
+      "going": "Standard Tapeta",
+      "code": "Flat all-weather",
+      "first": "16:30",
+      "last": "20:30",
+      "url": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Racing Post",
+      "status": "Pre-race cards checked 14 October",
+      "role": "Races, handicaps, runners, draw, opposition and going"
+    },
+    {
+      "name": "Sporting Life",
+      "status": "Pre-race runner form checked",
+      "role": "Recent finishing record, class, barriers and form comments"
+    },
+    {
+      "name": "Racing TV",
+      "status": "Pre-race card with bookmaker quote",
+      "role": "Rider, trainer, up-to-date UK prices"
+    },
+    {
+      "name": "StableBet",
+      "status": "Tomorrow's declared 15 Oct card; bookmaker comparison",
+      "role": "Verified Irish/Perth pre-race fractions and race fields"
+    },
+    {
+      "name": "IrishRacing",
+      "status": "Southwell live bookmaker price comparison",
+      "role": "Yordan market and main opposition"
+    }
+  ],
+  "todaySelections": [
+    {
+      "horse": "Nouvel Espoir",
+      "course": "Curragh",
+      "time": "13:37",
+      "odds": "13/2",
+      "trainer": "James M Barcoe",
+      "jockey": "Julian Pietropaolo (7lb)",
+      "or": 78,
+      "runnerCount": 13,
+      "draw": 10,
+      "going": "Yielding",
+      "distance": "6f",
+      "raceClass": "Handicap (13 runners)",
+      "winRank": "NB",
+      "tier": "SOLID",
+      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+      "summary": "A Curragh six-furlong course-and-distance winner who scored again just 11 days ago after four consecutive placed runs; the 7lb claim assists, although Moltophino and Keke make this competitive.",
+      "reason": "A Curragh six-furlong course-and-distance winner who scored again just 11 days ago after four consecutive placed runs; the 7lb claim assists, although Moltophino and Keke make this competitive.",
+      "positivePoints": [
+        "Course-and-distance winner over 6f",
+        "Form 432221: latest win, with sustained top-three results",
+        "Julian Pietropaolo claims 7lb off OR78"
+      ],
+      "risk": "A competitive 13-runner handicap on yielding ground, and a recent win may trigger a tougher mark; Moltophino and Keke have credible track/sprint form.",
+      "tags": [
+        "Course-and-distance winner over 6f",
+        "Form 432221: latest win, with sustained top-three results",
+        "Julian Pietropaolo claims 7lb off OR78"
+      ],
+      "source": "Checked 15 October Racing Post/Sporting Life/Racing TV declared racecard and independent bookmaker prices",
+      "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+      "priceSource": "https://stablebet.co.uk/racecards/curragh/",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "winAssessment": {
+        "decision": "win-contender",
+        "reviewedAt": "2026-10-14T21:08:21.657Z",
+        "riskSeverity": "moderate",
+        "riskNotes": [
+          "A competitive 13-runner handicap on yielding ground, and a recent win may trigger a tougher mark; Moltophino and Keke have credible track/sprint form."
+        ],
+        "hasCriticalUnknown": false,
+        "withdrawn": false,
+        "factors": {
+          "form": {
+            "grade": "strong",
+            "finding": "Recorded form 432221 includes a latest win eleven days ago following four consecutive places.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/curragh/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "abilityClass": {
+            "grade": "supported",
+            "finding": "Rated 78 and competitive in Irish handicaps against similarly rated six-furlong rivals.",
+            "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "courseGoingTrip": {
+            "grade": "strong",
+            "finding": "Previously won over Curragh six furlongs, so both course and distance are confirmed; current going is yielding.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/curragh/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "opposition": {
+            "grade": "supported",
+            "finding": "Moltophino has form 799213 and a Curragh C&D win; Keke is a further proven six-furlong rival.",
+            "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "fitness": {
+            "grade": "strong",
+            "finding": "Won within eleven days and thus has fresh evidence of current racing fitness and form.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/curragh/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "trainerJockey": {
+            "grade": "supported",
+            "finding": "Declared for James M Barcoe with Julian Pietropaolo's useful seven-pound allowance.",
+            "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          }
+        }
+      },
+      "raceDayReview": {
+        "status": "RETAIN WIN — STRONGER RIVALS ON REVISED TERMS",
+        "headline": "Soft ground suits, but Go Athletico reopposes on improved weight terms and Moltophino has relevant recent form.",
+        "detail": "Curragh 13:37: 13 confirmed runners, straight SOFT according to Racing Post and Racing TV. The 4 October C&D win on soft supports suitability, but an 8lb rise and a 2.5-length defeat of Go Athletico on more favourable terms cannot be treated as a repeat certainty. Racing Post tips Go Athletico and Racing TV analysis favours Moltophino. Hold original NB only as a qualified, competitive WIN possibility; not an odds-led confidence upgrade.",
+        "fieldNow": 13,
+        "goingNow": "SOFT straight course, rain",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/2026-10-15/",
+          "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+          "https://www.racingtv.com/racecards/2026-10-15/curragh/1337"
+        ],
+        "checkedAt": "2026-10-15T12:23:19.627Z",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
+        "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 5,
+        "status": "Weighed in",
+        "sp": "7/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930835/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Soft",
+        "confirmedRunners": 13,
+        "recordedSP": "7/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
+      }
+    },
+    {
+      "horse": "Major Fortune",
+      "course": "Perth",
+      "time": "14:30",
+      "odds": "11/4",
+      "trainer": "Dan Skelton",
+      "jockey": "Harry Skelton",
+      "or": 127,
+      "runnerCount": 6,
+      "going": "Good to soft (monitor rain)",
+      "distance": "2m7f180y",
+      "raceClass": "Class 3 handicap chase",
+      "winRank": null,
+      "tier": "SOLID",
+      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+      "summary": "Last-season form 81221 and an efficient jumping profile make Major Fortune a credible staying-chase contender for Dan and Harry Skelton; a 194-day return and Chasingouttheblues are the main threats.",
+      "reason": "Last-season form 81221 and an efficient jumping profile make Major Fortune a credible staying-chase contender for Dan and Harry Skelton; a 194-day return and Chasingouttheblues are the main threats.",
+      "positivePoints": [
+        "Ended last campaign with form 81221 and a victory",
+        "Strong documented jumping-efficiency record",
+        "Dan Skelton stable recorded 14 winners from 67 recent runners"
+      ],
+      "risk": "First run in 194 days, with no proven Perth C&D win; Chasingouttheblues has a distance win and Thunder Rock/I Wish You return as credible rivals. Forecast rain could soften conditions.",
+      "tags": [
+        "Ended last campaign with form 81221 and a victory",
+        "Strong documented jumping-efficiency record",
+        "Dan Skelton stable recorded 14 winners from 67 recent runners"
+      ],
+      "source": "Checked 15 October Racing Post/Sporting Life/Racing TV declared racecard and independent bookmaker prices",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+      "priceSource": "https://stablebet.co.uk/racecards/perth/",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "winAssessment": {
+        "decision": "win-contender",
+        "reviewedAt": "2026-10-14T21:08:21.657Z",
+        "riskSeverity": "moderate",
+        "riskNotes": [
+          "First run in 194 days, with no proven Perth C&D win; Chasingouttheblues has a distance win and Thunder Rock/I Wish You return as credible rivals. Forecast rain could soften conditions."
+        ],
+        "hasCriticalUnknown": false,
+        "withdrawn": false,
+        "factors": {
+          "form": {
+            "grade": "strong",
+            "finding": "Recent recorded form 81221 includes two runner-up finishes followed by a winning seasonal finale.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/perth/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "abilityClass": {
+            "grade": "strong",
+            "finding": "Official mark 127 and established Class 3 chase quality provide a supported ability baseline.",
+            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "courseGoingTrip": {
+            "grade": "supported",
+            "finding": "Has documented staying chase form close to three miles, but a Perth course-and-distance win is not verified; good-to-soft forecast must be monitored.",
+            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "opposition": {
+            "grade": "supported",
+            "finding": "Chasingouttheblues is proven at the distance; Thunder Rock and I Wish You also hold credible Class 3 form.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/perth/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "fitness": {
+            "grade": "supported",
+            "finding": "Dan Skelton 14 wins from 67 recent runners is supportive of stable form, but individual fitness after 194 days is unknown.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/perth/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "trainerJockey": {
+            "grade": "strong",
+            "finding": "Dan Skelton and Harry Skelton partnership; the trainer has 14 wins from last 67 stable starters according to current data.",
+            "sourceUrl": "https://stablebet.co.uk/racecards/perth/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          }
+        }
+      },
+      "raceDayReview": {
+        "status": "REMOVED FROM ACTIVE WIN — CONDITIONS/FITNESS UNCERTAINTY",
+        "action": "withdraw-win",
+        "headline": "Removed from confident WIN picks: SOFT ground, +107yd rails, 194-day layoff, higher mark and competitive rivals.",
+        "detail": "Perth 14:30: Latest Racing Post and Racing TV show SOFT, good-to-soft in places and GoingStick 4.9, not original good-to-soft. Course rail movement adds 107yd. Major Fortune returns after 194 days, 5lb above April winning mark, with previously used cheekpieces omitted on the current racecard. Thunder Rock and I Wish You offer serious opposition. Racing TV observed quote about 4/1 vs original 11/4. Aggregate uncertainty now breaches our current high-confidence WIN rule. This withdraws only the present recommendation: the original dated publication and odds remain unchanged.",
+        "fieldNow": 6,
+        "goingNow": "SOFT, good-to-soft in places; GoingStick 4.9; rail +107yd",
+        "observedPrice": "4/1",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/2026-10-15/",
+          "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+          "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/"
+        ],
+        "checkedAt": "2026-10-15T12:23:19.627Z",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
+        "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "11/2",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/41/perth/2026-10-15/930229/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Soft",
+        "confirmedRunners": 6,
+        "recordedSP": "11/2",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
+      }
+    },
+    {
+      "horse": "Shifra",
+      "course": "Brighton",
+      "time": "15:15",
+      "odds": "2/1",
+      "trainer": "Pat Phelan",
+      "jockey": "Paddy Bradley",
+      "or": 60,
+      "runnerCount": 11,
+      "draw": 3,
+      "going": "Good; good to soft in places",
+      "distance": "1m1f207y",
+      "raceClass": "Class 6 (0–60) handicap",
+      "winRank": "NAP",
+      "tier": "SOLID",
+      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+      "summary": "Two wins from her recent five-run sequence, including a decisive Bath handicap success over a very similar 1m2f trip, make Shifra a leading WIN case; an 8lb rise and Cosmic Girl remain concerns.",
+      "reason": "Two wins from her recent five-run sequence, including a decisive Bath handicap success over a very similar 1m2f trip, make Shifra a leading WIN case; an 8lb rise and Cosmic Girl remain concerns.",
+      "positivePoints": [
+        "Latest Bath win at approximately 1m2f was dominant",
+        "Consistent recent form 9-82121",
+        "Drawn 3 of 11, with proven winning form at this distance"
+      ],
+      "risk": "Now 8lb higher than her decisive Bath win and making a Brighton course debut; Cosmic Girl is improving and Skimming Along has course form. Softer patches could change the balance.",
+      "tags": [
+        "Latest Bath win at approximately 1m2f was dominant",
+        "Consistent recent form 9-82121",
+        "Drawn 3 of 11, with proven winning form at this distance"
+      ],
+      "source": "Checked 15 October Racing Post/Sporting Life/Racing TV declared racecard and independent bookmaker prices",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-15/brighton/racecard/943581/bet-boost-at-bet365-handicap-div-1",
+      "priceSource": "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "winAssessment": {
+        "decision": "win-contender",
+        "reviewedAt": "2026-10-14T21:08:21.657Z",
+        "riskSeverity": "moderate",
+        "riskNotes": [
+          "Now 8lb higher than her decisive Bath win and making a Brighton course debut; Cosmic Girl is improving and Skimming Along has course form. Softer patches could change the balance."
+        ],
+        "hasCriticalUnknown": false,
+        "withdrawn": false,
+        "factors": {
+          "form": {
+            "grade": "strong",
+            "finding": "Sequence 9-82121 contains two recent wins and two seconds, including a decisive latest Bath Class 6 success.",
+            "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-15/brighton/racecard/943581/bet-boost-at-bet365-handicap-div-1",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "abilityClass": {
+            "grade": "strong",
+            "finding": "Latest win was at this broad Class 6 handicap level, though the revised OR60 mark is now eight pounds higher.",
+            "sourceUrl": "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "courseGoingTrip": {
+            "grade": "supported",
+            "finding": "Successful at about one mile two furlongs, closely matching Brighton 1m1f207y; not an established Brighton course winner.",
+            "sourceUrl": "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "opposition": {
+            "grade": "supported",
+            "finding": "Cosmic Girl has progressive form and Skimming Along is a previous Brighton winner returning from placed efforts.",
+            "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-15/brighton/racecard/943581/bet-boost-at-bet365-handicap-div-1",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "fitness": {
+            "grade": "strong",
+            "finding": "Last won 32 days ago and has a recent pattern of competitive races without a long seasonal break.",
+            "sourceUrl": "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "trainerJockey": {
+            "grade": "supported",
+            "finding": "Pat Phelan is the listed trainer with Paddy Bradley booked from stall three.",
+            "sourceUrl": "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          }
+        }
+      },
+      "raceDayReview": {
+        "status": "RETAIN WIN — 10-RUNNER FIELD",
+        "headline": "Benavente NR leaves 10; 8lb higher mark, Brighton course debut and rival Cosmic Girl remain chief risks.",
+        "detail": "Brighton 15:15: Racing Post and Racing TV agree GOOD, good-to-soft in places (GoingStick 5.5, rail +7yd), and Benavente is listed as a non-runner; 10 remain. Shifra has strong recent form but is up 8lb on her Bath win and faces the first Brighton undulations attempt. Current opposition Skimming Along, Celtic Spirit and Cosmic Girl make the race competitive. Still qualifies on documented form/conditions, not on price or being the favourite.",
+        "fieldNow": 10,
+        "goingNow": "GOOD, good-to-soft in places; GoingStick 5.5; rail +7yd",
+        "observedPrice": "9/4–5/2 observed",
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/2026-10-15/",
+          "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+          "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/"
+        ],
+        "checkedAt": "2026-10-15T12:23:19.627Z",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
+        "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 5,
+        "status": "Weighed in",
+        "sp": "3/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/7/brighton/2026-10-15/928581/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Good (good to soft in places)",
+        "confirmedRunners": 9,
+        "recordedSP": "3/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
+      }
+    },
+    {
+      "horse": "Yordan",
+      "course": "Southwell",
+      "time": "19:30",
+      "odds": "3/1",
+      "trainer": "Kevin Ryan",
+      "jockey": "Kevin Stott",
+      "or": 85,
+      "runnerCount": 9,
+      "draw": 8,
+      "going": "Standard Tapeta",
+      "distance": "6f16y",
+      "raceClass": "Class 4 (0–85) handicap",
+      "winRank": null,
+      "tier": "SOLID",
+      "confidenceTier": "EVIDENCE-LED WIN CONTENDER — NOT CALIBRATED",
+      "summary": "Yordan was twice successful on Tapeta before being pitched into a tougher Ascot turf handicap; the return to a six-furlong all-weather Class 4 offers a coherent reset against in-form Return Of The Gods and New Image.",
+      "reason": "Yordan was twice successful on Tapeta before being pitched into a tougher Ascot turf handicap; the return to a six-furlong all-weather Class 4 offers a coherent reset against in-form Return Of The Gods and New Image.",
+      "positivePoints": [
+        "Two Tapeta victories preceded the Ascot defeat",
+        "Returns to proven 6f all-weather conditions",
+        "OR85 suits the Class 4 0–85 race conditions"
+      ],
+      "risk": "This nine-runner sprint has several progressive rivals: Return Of The Gods won recently, New Image bids for a C&D hat-trick and Town Queen has Southwell form. Stall 8 adds tactical uncertainty.",
+      "tags": [
+        "Two Tapeta victories preceded the Ascot defeat",
+        "Returns to proven 6f all-weather conditions",
+        "OR85 suits the Class 4 0–85 race conditions"
+      ],
+      "source": "Checked 15 October Racing Post/Sporting Life/Racing TV declared racecard and independent bookmaker prices",
+      "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+      "priceSource": "https://www.irishracing.com/odds-comparison/Thu-15th-Oct-2026/Southwell/1930",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "winAssessment": {
+        "decision": "win-contender",
+        "reviewedAt": "2026-10-14T21:08:21.657Z",
+        "riskSeverity": "moderate",
+        "riskNotes": [
+          "This nine-runner sprint has several progressive rivals: Return Of The Gods won recently, New Image bids for a C&D hat-trick and Town Queen has Southwell form. Stall 8 adds tactical uncertainty."
+        ],
+        "hasCriticalUnknown": false,
+        "withdrawn": false,
+        "factors": {
+          "form": {
+            "grade": "supported",
+            "finding": "Form sequence 2110 includes two all-weather wins then a defeat when raised markedly in class on turf at Ascot.",
+            "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "abilityClass": {
+            "grade": "strong",
+            "finding": "OR85 fits the Class 4 (0–85) conditions after a much stronger Ascot handicap.",
+            "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "courseGoingTrip": {
+            "grade": "strong",
+            "finding": "Demonstrated six-furlong ability on Tapeta before the Ascot turf switch; returns to standard Tapeta at Southwell.",
+            "sourceUrl": "https://www.irishracing.com/odds-comparison/Thu-15th-Oct-2026/Southwell/1930",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "opposition": {
+            "grade": "supported",
+            "finding": "Return Of The Gods won last time, New Image is chasing a C&D hat-trick, and Town Queen is a proven track performer.",
+            "sourceUrl": "https://www.irishracing.com/odds-comparison/Thu-15th-Oct-2026/Southwell/1930",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "fitness": {
+            "grade": "strong",
+            "finding": "Ran thirteen days ago and has relatively recent evidence of competitive fitness and pace.",
+            "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          },
+          "trainerJockey": {
+            "grade": "supported",
+            "finding": "Kevin Stott rides for trainer Kevin Ryan in a familiar sprint setting.",
+            "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/",
+            "checkedAt": "2026-10-14T21:08:21.657Z"
+          }
+        }
+      },
+      "raceDayReview": {
+        "status": "RETAIN WIN — NO MATERIAL TRACK CHANGE",
+        "headline": "Nine remain on Standard Tapeta; quality rivals New Image and Return Of The Gods still limit confidence.",
+        "detail": "Southwell 19:30: Racing Post, Racing TV and bookmaker comparison agree nine declared, STANDARD Tapeta, six furlongs. Yordan's previous Tapeta wins are genuine evidence of surface ability but New Image is seeking a course-and-distance hat-trick and Return Of The Gods arrives in winning form; neither should be discounted by Yordan's market position. Draw 8 is a tactical variable, not a quantified bias. Retain as evidence-backed WIN possibility and recheck near the off.",
+        "fieldNow": 9,
+        "goingNow": "STANDARD Tapeta",
+        "observedPrice": "about 5/2–3/1",
+        "sourceUrls": [
+          "https://www.racingtv.com/racecards/2026-10-15/southwell/1930",
+          "https://www.horseracing.net/southwell/15-10-26/19:30",
+          "https://www.racingpost.com/non-runners/2026-10-15/"
+        ],
+        "checkedAt": "2026-10-15T12:23:19.627Z",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
+        "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 1,
+        "status": "User reported — pending external verification",
+        "sp": null,
+        "source": "User reported — external result awaiting confirmation",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "User reported — external result awaiting confirmation",
+        "raceGoing": "Standard",
+        "confirmedRunners": 9,
+        "recordedSP": null,
+        "warning": "Finishing position supplied by user; SP has not been independently confirmed. Do not use as verified payment evidence."
+      }
+    }
+  ],
+  "midshotsToday": [
+    {
+      "horse": "Navajo Point",
+      "course": "Curragh",
+      "time": "14:47",
+      "odds": "15/2",
+      "trainer": "Martin Hassett",
+      "jockey": "Paddy Harnett (3lb)",
+      "or": 70,
+      "runnerCount": 22,
+      "going": "Good to yielding on round course",
+      "distance": "1m1f",
+      "draw": 7,
+      "tier": "VALUE WATCH",
+      "confidenceTier": "FORM-LED E/W WATCH — NOT CALIBRATED",
+      "summary": "Won a handicap 26 days ago and has proven form at this 1m1f distance; a draw in stall seven and Paddy Harnett's 3lb allowance support a possible place in a demanding Curragh field.",
+      "reason": "Won a handicap 26 days ago and has proven form at this 1m1f distance; a draw in stall seven and Paddy Harnett's 3lb allowance support a possible place in a demanding Curragh field.",
+      "positivePoints": [
+        "Latest-race winner (form 842101)",
+        "Won over this 1m1f distance",
+        "Paddy Harnett claims 3lb; stall 7 of 22"
+      ],
+      "risk": "Twenty-two-runner handicap is pace- and traffic-sensitive; first-time cheekpieces and rising mark add uncertainty, while Suir Monad and Lady Arwen have recent form.",
+      "tags": [
+        "Latest-race winner (form 842101)",
+        "Won over this 1m1f distance",
+        "Paddy Harnett claims 3lb; stall 7 of 22"
+      ],
+      "source": "15 October independently checked racecards and bookmaker prices",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-15/curragh/live-show/943368/dng-excellence-handicap",
+      "priceSource": "https://stablebet.co.uk/racecards/curragh/",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "view": "MIDSHOT / E/W WATCH",
+      "terms": "£5 WIN + £5 PLACE hypothetical paper bet at 1/4 odds top three; a real bookmaker may offer different paid places and fractions. Not a calibrated recommendation.",
+      "raceDayReview": {
+        "status": "RETAIN E/W — NOW 19 RUNNERS",
+        "headline": "Three confirmed withdrawals leave 19 (Moyassr, Mare Crisium, Chloe's Boy); softening supports previous 9f win.",
+        "detail": "Curragh 14:47: Racing TV lists 19 active runners, 3 non-runners out of 22 original declarations, on YIELDING TO SOFT. Racing Post aggregated card still lists 21 in some views, apparently lagging the later withdrawal updates; prioritise horse-level Racing TV NR marks. Navajo Point previously won 9f on yielding-to-soft, but is 8lb higher and first-time cheekpieces introduce uncertainty. Retain each-way only, with final bookmaker paid places/fractions separately verified.",
+        "fieldNow": 19,
+        "goingNow": "YIELDING TO SOFT (round course)",
+        "observedPrice": "about 7/1–17/2",
+        "sourceUrls": [
+          "https://www.racingtv.com/racecards/2026-10-15/curragh/1447",
+          "https://www.racingpost.com/non-runners/2026-10-15/",
+          "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930837/"
+        ],
+        "checkedAt": "2026-10-15T12:23:19.627Z",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
+        "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "12/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930837/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Yielding to soft",
+        "confirmedRunners": 19,
+        "recordedSP": "12/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
+      }
+    },
+    {
+      "horse": "Mary Shoelaces",
+      "course": "Curragh",
+      "time": "16:32",
+      "odds": "15/2",
+      "trainer": "Eddie & Patrick Harty",
+      "jockey": "Jessica O'Gorman (4lb)",
+      "or": 68,
+      "runnerCount": 17,
+      "going": "Yielding on straight course",
+      "distance": "5f",
+      "draw": 1,
+      "tier": "VALUE WATCH",
+      "confidenceTier": "FORM-LED E/W WATCH — NOT CALIBRATED",
+      "summary": "A Curragh five-furlong course-and-distance winner supported by a recent stable strike and 4lb claiming rider, Mary Shoelaces has a reasonable place case despite a less convincing last two runs.",
+      "reason": "A Curragh five-furlong course-and-distance winner supported by a recent stable strike and 4lb claiming rider, Mary Shoelaces has a reasonable place case despite a less convincing last two runs.",
+      "positivePoints": [
+        "Proven Curragh course-and-distance 5f winner",
+        "Stable 2 wins from 7 recent runners",
+        "Jessica O'Gorman claims 4lb from stall 1"
+      ],
+      "risk": "Recent results fourth and fifth after a win and 49 days off; 17-runner sprint introduces significant stall/pace uncertainty and Coincidental Glory has recent placing form.",
+      "tags": [
+        "Proven Curragh course-and-distance 5f winner",
+        "Stable 2 wins from 7 recent runners",
+        "Jessica O'Gorman claims 4lb from stall 1"
+      ],
+      "source": "15 October independently checked racecards and bookmaker prices",
+      "sourceUrl": "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+      "priceSource": "https://stablebet.co.uk/racecards/curragh/",
+      "selectionPublishedAt": "2026-10-14T21:08:21.657Z",
+      "earlyOddsLockedAt": "2026-10-14T21:08:21.657Z",
+      "view": "MIDSHOT / E/W WATCH",
+      "terms": "£5 WIN + £5 PLACE hypothetical paper bet at 1/4 odds top three; a real bookmaker may offer different paid places and fractions. Not a calibrated recommendation.",
+      "raceDayReview": {
+        "status": "CONDITIONAL E/W — SOFT-GROUND UNCERTAINTY",
+        "headline": "17-runner 5f sprint now explicitly SOFT; course win is positive but recent soft-ground defeat and sharper opposition limit conviction.",
+        "detail": "Curragh 16:32: Racing TV card lists 17 runners on SOFT and Racing Post confirms SOFT straight. Mary Shoelaces won this C&D last autumn on yielding, but was last of six on soft at Down Royal this June, and her recent form (4th, 5th) is not compelling. Cuban Grey, Steel Magnolia and Jordan Breeze offer credible alternatives. Leave as a conditional research-only E/W watch; do not promote to a confident tip or auto-stake.",
+        "fieldNow": 17,
+        "goingNow": "SOFT (straight course)",
+        "sourceUrls": [
+          "https://www.racingtv.com/racecards/2026-10-15/curragh/1632",
+          "https://www.racingpost.com/non-runners/2026-10-15/",
+          "https://www.racingpost.com/racecards/178/curragh/2026-10-15/"
+        ],
+        "checkedAt": "2026-10-15T12:23:19.627Z",
+        "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z",
+        "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 9,
+        "status": "Weighed in",
+        "sp": "10/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930840/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Soft",
+        "confirmedRunners": 17,
+        "recordedSP": "10/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
+      }
+    }
+  ],
+  "longshotsToday": [
+    {
+      "horse": "Turbo Command",
+      "course": "Southwell",
+      "time": "18:00",
+      "odds": "25/1",
+      "oddsAtSelection": "25/1",
+      "trainer": "Alison Hamilton",
+      "jockey": "Paul Mulrennan",
+      "or": 48,
+      "ts": 49,
+      "rpr": 68,
+      "runnerCount": 14,
+      "going": "Standard Tapeta",
+      "distance": "7f 14y",
+      "draw": 7,
+      "tier": "OUTSIDER / E/W WATCH",
+      "confidenceTier": "SPECULATIVE EACH-WAY — NOT A HIGH-CONFIDENCE WIN",
+      "summary": "Three Southwell course-and-distance wins, a May runner-up over this exact trip, and a handicap mark of 48 versus previous winning ratings of 54–62 give Turbo Command an evidence-backed outsider case, provided he can recover his form and secure a favourable prominent position.",
+      "reason": "Three Southwell course-and-distance wins, a May runner-up over this exact trip, and a handicap mark of 48 versus previous winning ratings of 54–62 give Turbo Command an evidence-backed outsider case, provided he can recover his form and secure a favourable prominent position.",
+      "positivePoints": [
+        "Won three times at Southwell over this course and distance",
+        "OR 48: previous wins from 54, 57, 58 and 62",
+        "Second here on 7 May 2026 off OR 50; reunited with Paul Mulrennan",
+        "Usually races prominently; stall 7 of 14"
+      ],
+      "risk": "High risk: nine years old and recent form 923650, including 11th of 12 at Newcastle on 25 September (8.44 lengths beaten), plus a below-par Southwell sixth on 27 August. Trainer's recent win percentage is low and competition for prominent positions could blunt his pace. No demonstrated statistical edge or reliable win probability.",
+      "tags": [
+        "3x Southwell C&D wins",
+        "Handicap mark below previous wins",
+        "Paul Mulrennan partnership",
+        "Front-running/pace and recent form risks"
+      ],
+      "placeView": "SPECULATIVE E/W WATCH — 25/1",
+      "terms": "Research-only watch; no real or paper bet. Observed quotes near 25/1. Some markets show 1/5 odds for four places in a 14-runner handicap; recheck bookmaker-specific terms and non-runners before the off. Not a confident WIN recommendation.",
+      "source": "15 October 2026 form and handicap review (IrishRacing/Racing Post/HorseRacing.net)",
+      "sourceUrl": "https://www.irishracing.com/racecards/Thu-15th-Oct-2026/Southwell/1800",
+      "priceSource": "https://www.horseracing.net/southwell/15-10-26/18%3A00",
+      "selectionPublishedAt": "2026-10-15T08:03:40.897Z",
+      "earlyOddsLockedAt": "2026-10-15T08:03:40.897Z",
+      "reviewedAt": "2026-10-15T08:03:40.897Z",
+      "researchOnly": true,
+      "paperOnly": false,
+      "raceDayReview": {
+        "status": "SPECULATIVE E/W — NO CONFIDENCE UPGRADE",
+        "headline": "13 remain after Lady V withdrawal; standard Tapeta and OR48 support his C&D profile but poor recent form remains.",
+        "detail": "Southwell 18:00: Racing TV shows 13 runners on STANDARD Tapeta and Lady V withdrawn. Turbo Command has three Southwell C&D victories and is lower in handicap than former winning marks, but has been well beaten lately and is nine years old. The opposition includes Midnight's Dream, Yes Waliim and Maury; without compelling recent run or independent speed edge the 20/1+ price alone is not a reason to strengthen the selection. Each-way bookmaker terms differ.",
+        "fieldNow": 13,
+        "goingNow": "STANDARD Tapeta",
+        "observedPrice": "22/1–28/1 observed",
+        "sourceUrls": [
+          "https://www.racingtv.com/racecards/2026-10-15/southwell/1800",
+          "https://www.horseracing.net/southwell/15-10-26/18:00",
+          "https://www.racingpost.com/non-runners/2026-10-15/"
+        ],
+        "checkedAt": "2026-10-15T12:23:19.627Z",
+        "originalSelectionFrozenAt": "2026-10-15T08:03:40.897Z",
+        "sourceType": "time-stamped publisher going, declared fields and form; no real-time exchange data claim"
+      },
+      "result": {
+        "position": 12,
+        "status": "Weighed in",
+        "sp": "14/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928773/",
+        "updatedAt": "2026-10-15T21:08:45.637Z"
+      },
+      "postRaceObservation": {
+        "recordedAt": "2026-10-15T21:08:45.637Z",
+        "recordSource": "Racing Post",
+        "raceGoing": "Standard",
+        "confirmedRunners": 13,
+        "recordedSP": "14/1",
+        "warning": "Published race result, separate from originally frozen pre-race analysis."
+      }
+    }
+  ],
+  "lucky15Only": [],
+  "selectionPolicy": {
+    "avoidOddsOn": true,
+    "minimumWinOdds": "1/1",
+    "winCandidates": 3,
+    "qualifiedWinCandidates": 3,
+    "numLongshots": 1,
+    "winQualificationRule": "Documented current form and a credible match to going/surface/distance, with class/opposition and fitness or trainer/jockey evidence verified from independent sources. Moderate risk is allowed but must be disclosed. Odds do not establish win confidence.",
+    "rationale": "Avoid confusing favourites with confidence; do not overreact to one day's successes. Prefer repeatable conditions and expose unknowns such as long absences or handicap raises. Race-day 15 Oct recheck withdrew Major Fortune from active confident WIN qualification while keeping original published assessment intact."
+  },
+  "midshotsPolicy": {
+    "minOdds": "6/1",
+    "maxOdds": "18/1",
+    "publicNote": "Two value-watch E/W research candidates from separate Curragh races. Odds are early reference prices, not confidence metrics.",
+    "priceRule": "Fractional quotes taken from timestamped pre-race bookmaker comparisons. Actual bookmaker place terms and accepted bet may differ."
+  },
+  "longshotsPolicy": {
+    "minOdds": "20/1",
+    "publicNote": "One 25/1 outsider has an evidence-based course/handicap case but is a speculative E/W research watch, not a high-confidence tip. No runner is promoted simply because the price is big.",
+    "priceRule": "Published 20/1+ prices are pre-race source quotes; never treat long odds as proof of win probability. Research-only: no stake recorded."
+  },
+  "winNominations": [
+    {
+      "horse": "Nouvel Espoir",
+      "course": "Curragh",
+      "time": "13:37",
+      "label": "NB",
+      "status": "SOLID CONTENDER",
+      "rationale": "A Curragh six-furlong course-and-distance winner who scored again just 11 days ago after four consecutive placed runs; the 7lb claim assists, although Moltophino and Keke make this competitive."
+    },
+    {
+      "horse": "Shifra",
+      "course": "Brighton",
+      "time": "15:15",
+      "label": "NAP",
+      "status": "SOLID CONTENDER",
+      "rationale": "Two wins from her recent five-run sequence, including a decisive Bath handicap success over a very similar 1m2f trip, make Shifra a leading WIN case; an 8lb rise and Cosmic Girl remain concerns."
+    }
+  ],
+  "latestResearchLucky15": {
+    "legs": [
+      "Navajo Point",
+      "Mary Shoelaces"
+    ],
+    "status": "Only two independent 6/1+ each-way prospects qualified. No four-leg Lucky 15 created or registered.",
+    "checkedAt": "2026-10-14T21:08:21.657Z"
+  },
+  "selectionPresentation": {
+    "rule": "ONE_SELECTION_PER_RACE",
+    "effectiveDate": "2026-10-15",
+    "selectionCount": 6,
+    "featuredRaceCount": 6,
+    "excludedAlternatives": [
+      "Kado Sacree: chase debut after good hurdle wins",
+      "Midnight's Dream: possible 48-hour turnaround after recent win",
+      "Smoke Them Out: same Curragh 13:37 race as Nouvel Espoir"
+    ],
+    "notes": "Four WIN and two E/W watch selections; no multiple picks in a race; NAP and NB appear on WIN rows only."
+  },
+  "reviewCompleteness": {
+    "verified": [
+      "Five declared meetings and observed course going",
+      "Published early price for all six choices",
+      "Recent form, rated ability, trip/surface and named rivals for every choice",
+      "One pick per distinct race and source-backed pre-race freeze",
+      "15 Oct morning longshot check: Turbo Command Southwell C&D, previous winning ORs and independent observed price"
+    ],
+    "unverified": [
+      "All-runner proprietary sectional data not available",
+      "Future rain and revised race-day going unknown",
+      "Tomorrow's final non-runner/declaration changes not known",
+      "No genuine bookmaker wager or universal BOG eligibility assumed",
+      "No backtested proof that editorial changes materially improve accuracy",
+      "No quantified speed/sectional advantage or verified pace map for 18:00 Southwell; 25/1 outsider has material recent-form risk"
+    ]
+  },
+  "recentPerformanceReview": {
+    "reviewedAt": "2026-10-14T21:08:21.657Z",
+    "previousDay": "2026-10-14",
+    "conclusion": "Gunfighter, Centurion's Sister and Seeyainthesuninn all won; Green Falcon also won as an each-way choice. Guard Your Dreams PU, Magic Box second, Viroflay/Forever Glamorous NR. Confirm pricing in ledger: original early quote and verified SP are distinct.",
+    "lessons": [
+      "Gunfighter's repeat Kempton course, distance and surface was a well-supported winning signal; retain specific compatibility review.",
+      "Centurion's Sister's recent placing form progressed into another win; a runner's latest form can be relevant without a favourite-based confidence boost.",
+      "Green Falcon won at the new two-mile trip despite pre-race uncertainty; treat unproven trip as a risk, not automatic rejection.",
+      "Guard Your Dreams was pulled up on softened ground and a seasonal return; verify live going changes and fitness before promoting returners.",
+      "Only a few races/days are recorded: do not claim 70%+ future model accuracy from one successful day."
+    ],
+    "pricing": "Paper settlements use preserved early odds or verified higher SP (simulated BOG); later better bookmaker screenshots are evidence for research only unless explicitly recorded as pre-race paper accepted quote."
+  },
+  "modelAccuracyDevelopment": {
+    "status": "SHADOW AUDIT — improved evidence capture, no statistically validated model lift",
+    "changedResearchChecks": [
+      "Course/distance/surface winner evidence separated from merely similar form",
+      "Named credible opponents and late-going changes reviewed",
+      "Seasonal first-up layoff flagged, particularly in jumps",
+      "Field size and draw/pace uncertainty assessed independently of win-price popularity",
+      "Trip increases permitted if relevant stamina indicators exist, rather than categorical rejection",
+      "Early price provenance and time frozen, with SP compared only after outcome",
+      "Ex-post horse results must never retroactively change published selection ranks"
+    ],
+    "shadowMetrics": [
+      "WIN strike and yield by predicted Strong/Solid grade",
+      "E/W top-three rate against actual paid place terms",
+      "Per-course/trip/surface/going cohorts and absence bands",
+      "ROI of early-price fixed vs labelled simulated BOG",
+      "Calibration requires prospective probability forecasts and large held-out chronological set"
+    ],
+    "warning": "Existing sample too small, no measured accuracy improvement or live training claimed."
+  },
+  "researchSelectionUpdate": {
+    "reviewedAt": "2026-10-14T21:08:21.657Z",
+    "status": "OCT15_NEXT_DAY_SELECTIONS_PUBLISHED",
+    "note": "Evidence-led 40-race screening and 6 published selections before first off 12:55 on 15 October. NAP Shifra, NB Nouvel Espoir. No price-derived confidence, no forced longshot/Lucky15; prior day result data preserved in ledger history.",
+    "longshotReviewedAt": "2026-10-15T08:03:40.897Z",
+    "longshotPublication": "Added 18:00 Southwell Turbo Command at 25/1 as a speculative research-only each-way watch from verified course/mark and trainer-jockey evidence. Risks disclosed. Initial overnight shortlist preserved; no paper stake."
+  },
+  "raceDayRechecks": [
+    {
+      "checkedAt": "2026-10-15T07:37:56.868Z",
+      "type": "raceday-independent-recheck",
+      "selectionChanges": 0,
+      "selectionsReviewed": [
+        "Shifra",
+        "Nouvel Espoir",
+        "Major Fortune",
+        "Yordan",
+        "Navajo Point",
+        "Mary Shoelaces"
+      ],
+      "outcome": "All six originally published candidates still declared at the time sources were checked; no unsupported new selections or automatic wagers. Keep risks visible and recheck nearer off.",
+      "reportedConditions": {
+        "Brighton": "GOOD, good to soft in places; GoingStick 5.2; race rail +7yd",
+        "Curragh": "Straight YIELDING, round GOOD TO YIELDING; rain reported",
+        "Perth": "GOOD TO SOFT, soft in places; GoingStick 5.1; 14:30 race rail movement +107yd; light rain",
+        "Southwell": "STANDARD Tapeta"
+      },
+      "watches": [
+        {
+          "horse": "Major Fortune",
+          "severity": "heightened-monitoring",
+          "reason": "Perth's 14:30 rail adds 107yd and going now includes soft patches; light rain and 194-day layoff leave stamina/fitness sensitivity unresolved."
+        },
+        {
+          "horse": "Shifra",
+          "severity": "monitor",
+          "reason": "8lb handicap rise and Brighton debut remain relevant; currently declared on GOOD, good to soft in places."
+        },
+        {
+          "horse": "Nouvel Espoir",
+          "severity": "monitor",
+          "reason": "13-runner Curragh straight 6f on YIELDING; rival Go Athletico's revised terms require attention."
+        },
+        {
+          "horse": "Yordan",
+          "severity": "monitor",
+          "reason": "Nine declared on STANDARD Tapeta; serious rivals include Return Of The Gods, Town Queen and New Image; no forecast price is interpreted as proof of probability."
+        },
+        {
+          "horse": "Navajo Point",
+          "severity": "monitor",
+          "reason": "21 declared in the 1m1f handicap; published card lists first-time cheekpieces; each-way placed terms need confirmation."
+        },
+        {
+          "horse": "Mary Shoelaces",
+          "severity": "monitor",
+          "reason": "17 declared over Curragh 5f on YIELDING; recent form and actual paid place terms must be checked."
+        }
+      ],
+      "verifiedNonRunnerStatement": "Racing Post non-runner page did not list any of the six selected horses during this check; withdrawal information can change after publication.",
+      "urls": [
+        "https://www.racingpost.com/non-runners/",
+        "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+        "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/",
+        "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+        "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930837/",
+        "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930840/",
+        "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-15/928768/"
+      ],
+      "note": "Raceday rechecks complement, but do not rewrite, the timestamp-frozen pre-race assessment; published conditions are not private meteorological observations or guaranteed going at off."
+    },
+    {
+      "checkedAt": "2026-10-15T08:48:23.202Z",
+      "type": "raceday-independent-recheck",
+      "selectionChanges": 0,
+      "reviewNotesAdded": 7,
+      "selectionsReviewed": [
+        "Nouvel Espoir",
+        "Major Fortune",
+        "Shifra",
+        "Yordan",
+        "Navajo Point",
+        "Mary Shoelaces",
+        "Turbo Command"
+      ],
+      "outcome": "Seven published candidates remain in their existing sections; Mary Shoelaces conditional E/W only; Curragh softer going favours documented form of Nouvel Espoir and Navajo Point. No new horses promoted and no paper stakes created.",
+      "reportedConditions": {
+        "Brighton": "GOOD, good-to-soft in places (GoingStick 5.5); Benavente NR; Shifra race now 10",
+        "Curragh": "Racing Post: straight SOFT, round YIELDING TO SOFT. Timeform: straight YIELDING TO SOFT, round SOFT. Sources disagree on exact extent of softening; earlier yielding/good-to-yielding snapshot kept unchanged.",
+        "Perth": "GOOD TO SOFT, soft in places; light rain; rail +107yd at 14:30",
+        "Southwell": "STANDARD Tapeta; Lady V NR (18:00 now 13)",
+        "Fontwell": "GOOD TO SOFT, good in places (GoingStick 4.9)",
+        "nonRunnerForSelectedHorse": false
+      },
+      "notableChanges": [
+        {
+          "horse": "Nouvel Espoir",
+          "type": "ground",
+          "interpretation": "New soft report is consistent with last Curragh C&D soft-ground win on 4 Oct; OR +8lb is the key counterweight"
+        },
+        {
+          "horse": "Navajo Point",
+          "type": "going and withdrawn rival",
+          "interpretation": "Won last 9f start on yielding-to-soft; Moyassr NR and 21 runners confirmed; handicap rise +8lb"
+        },
+        {
+          "horse": "Mary Shoelaces",
+          "type": "ground ambiguity",
+          "interpretation": "Mixed soft-ground record; keep E/W conditional"
+        },
+        {
+          "horse": "Shifra",
+          "type": "withdrawal",
+          "interpretation": "Benavente NR and 10 runners; first Brighton attempt and higher handicap mark remain"
+        },
+        {
+          "horse": "Turbo Command",
+          "type": "withdrawal",
+          "interpretation": "Lady V NR and 13 runners; remains speculative outsider"
+        }
+      ],
+      "sourceUrls": [
+        "https://www.racingpost.com/non-runners/",
+        "https://www.timeform.com/horse-racing/going-and-non-runners/today",
+        "https://www.irishracing.com/horse/Nouvel-Espoir-IRE/690772",
+        "https://www.racingtv.com/racecards/2026-10-15/curragh/1337",
+        "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+        "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/",
+        "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+        "https://www.racingtv.com/racecards/2026-10-15/southwell/1930",
+        "https://www.irishracing.com/horse/Navajo-Point-%28IRE%29/779089",
+        "https://www.racingtv.com/racecards/2026-10-15/curragh/1447",
+        "https://www.irishracing.com/horse/Mary-Shoelaces-IRE/680475",
+        "https://www.racingtv.com/racecards/2026-10-15/curragh/1632",
+        "https://www.racingtv.com/racecards/2026-10-15/southwell/1800"
+      ],
+      "note": "Live rechecks are supplementary and time-stamped; original early odds, ratings evidence and pre-race assessments remain frozen. Some publishers show cached original going in individual card headers. Bookmaker price comparisons are observations and may move; no guarantee of accepted bets or each-way places."
+    },
+    {
+      "checkedAt": "2026-10-15T12:23:19.627Z",
+      "type": "prospective-raceday-reassessment",
+      "selectionChanges": 1,
+      "selectionsReviewed": [
+        "Nouvel Espoir",
+        "Major Fortune",
+        "Shifra",
+        "Yordan",
+        "Navajo Point",
+        "Mary Shoelaces",
+        "Turbo Command"
+      ],
+      "outcome": "Major Fortune withdrawn from active confident WIN category (original frozen card preserved); three other WIN contenders retained, two conditional E/W and one speculative longshot still recorded. Curragh 14:47 field now 19 according to Racing TV; no listed selection is a confirmed NR.",
+      "sourceUrls": [
+        "https://www.racingpost.com/non-runners/2026-10-15/",
+        "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+        "https://www.racingtv.com/racecards/2026-10-15/curragh/1337",
+        "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+        "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/",
+        "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+        "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+        "https://www.racingtv.com/racecards/2026-10-15/southwell/1930",
+        "https://www.horseracing.net/southwell/15-10-26/19:30",
+        "https://www.racingtv.com/racecards/2026-10-15/curragh/1447",
+        "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930837/",
+        "https://www.racingtv.com/racecards/2026-10-15/curragh/1632",
+        "https://www.racingtv.com/racecards/2026-10-15/southwell/1800",
+        "https://www.horseracing.net/southwell/15-10-26/18:00"
+      ],
+      "confirmedNonRunners": {
+        "Brighton1515": [
+          "Benavente"
+        ],
+        "Curragh1447": [
+          "Moyassr",
+          "Mare Crisium",
+          "Chloe's Boy"
+        ],
+        "Southwell1800": [
+          "Lady V"
+        ]
+      },
+      "reportedConditions": {
+        "Perth": "SOFT, good-to-soft in places; GoingStick 4.9, rail +107yd in 14:30",
+        "Curragh": "SOFT straight, YIELDING TO SOFT round",
+        "Brighton": "GOOD, good-to-soft in places; GoingStick 5.5",
+        "Southwell": "STANDARD Tapeta"
+      },
+      "note": "Original WIN review, timestamped bookmaker quotes, research archive and separate paper ledger are unchanged. This update is a forward-looking decision before races; do not infer private stable information."
+    }
+  ],
+  "latestRacedayRecheck": {
+    "checkedAt": "2026-10-15T12:23:19.627Z",
+    "type": "prospective-raceday-reassessment",
+    "selectionChanges": 1,
+    "selectionsReviewed": [
+      "Nouvel Espoir",
+      "Major Fortune",
+      "Shifra",
+      "Yordan",
+      "Navajo Point",
+      "Mary Shoelaces",
+      "Turbo Command"
+    ],
+    "outcome": "Major Fortune withdrawn from active confident WIN category (original frozen card preserved); three other WIN contenders retained, two conditional E/W and one speculative longshot still recorded. Curragh 14:47 field now 19 according to Racing TV; no listed selection is a confirmed NR.",
+    "sourceUrls": [
+      "https://www.racingpost.com/non-runners/2026-10-15/",
+      "https://www.racingpost.com/racecards/178/curragh/2026-10-15/",
+      "https://www.racingtv.com/racecards/2026-10-15/curragh/1337",
+      "https://www.racingtv.com/racecards/2026-10-15/perth/1430",
+      "https://www.racingpost.com/racecards/41/perth/2026-10-15/930229/",
+      "https://www.racingtv.com/racecards/2026-10-15/brighton/1515",
+      "https://www.racingpost.com/racecards/7/brighton/2026-10-15/928581/",
+      "https://www.racingtv.com/racecards/2026-10-15/southwell/1930",
+      "https://www.horseracing.net/southwell/15-10-26/19:30",
+      "https://www.racingtv.com/racecards/2026-10-15/curragh/1447",
+      "https://www.racingpost.com/racecards/178/curragh/2026-10-15/930837/",
+      "https://www.racingtv.com/racecards/2026-10-15/curragh/1632",
+      "https://www.racingtv.com/racecards/2026-10-15/southwell/1800",
+      "https://www.horseracing.net/southwell/15-10-26/18:00"
+    ],
+    "confirmedNonRunners": {
+      "Brighton1515": [
+        "Benavente"
+      ],
+      "Curragh1447": [
+        "Moyassr",
+        "Mare Crisium",
+        "Chloe's Boy"
+      ],
+      "Southwell1800": [
+        "Lady V"
+      ]
+    },
+    "reportedConditions": {
+      "Perth": "SOFT, good-to-soft in places; GoingStick 4.9, rail +107yd in 14:30",
+      "Curragh": "SOFT straight, YIELDING TO SOFT round",
+      "Brighton": "GOOD, good-to-soft in places; GoingStick 5.5",
+      "Southwell": "STANDARD Tapeta"
+    },
+    "note": "Original WIN review, timestamped bookmaker quotes, research archive and separate paper ledger are unchanged. This update is a forward-looking decision before races; do not infer private stable information."
+  },
+  "raceDayDecisionLog": [
+    {
+      "checkedAt": "2026-10-15T12:23:19.627Z",
+      "horse": "Major Fortune",
+      "originalSection": "todaySelections",
+      "newStatus": "WITHDRAWN_ACTIVE_WIN",
+      "reason": "Softened Perth, extended rail distance, 194-day return, increased mark and significant rivals",
+      "originalSelectionFrozenAt": "2026-10-14T21:08:21.657Z"
+    }
+  ],
+  "postRaceAudits": [
+    {
+      "asOfDate": "2026-10-15",
+      "recordedAt": "2026-10-15T21:08:45.637Z",
+      "sourceRule": "Results appended after racing; original selection ranks, early odds, timestamped reviews and prior-day data unchanged.",
+      "coverage": {
+        "originalWinNominations": 4,
+        "activeWinAtFinalReview": 3,
+        "otherEwCandidates": 2,
+        "longshotResearch": 1,
+        "totalCandidates": 7
+      },
+      "outcomes": {
+        "originalWinWinnersUserIncluded": 1,
+        "verifiedByPublisherWinners": 0,
+        "userReportedWinners": 1,
+        "totalWinnersUserIncluded": 1,
+        "topThreeFinishes": 2,
+        "nonWinners": 6
+      },
+      "strikeRateStatus": "Provisional: Yordan win user-reported; six other result positions independently verified; no source-backed Yordan SP yet.",
+      "metrics": {
+        "provisionalOverallWinnerRate": "1/7 (14.3%)",
+        "provisionalOriginalWinStrikeRate": "1/4 (25.0%)",
+        "provisionalActiveWinStrikeRate": "1/3 (33.3%)",
+        "ewWatchWinners": "0/2",
+        "longshotWinners": "0/1",
+        "placed": "Major Fortune 3rd in a 6-runner handicap chase; not a confirmed each-way bet; other E/W shortlists 6th, 9th, 12th. No bookmaker place terms assumed."
+      },
+      "runnerResults": [
+        {
+          "horse": "Nouvel Espoir",
+          "course": "Curragh",
+          "time": "13:37",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "13/2",
+          "finished": 5,
+          "sp": "7/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930835/",
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Major Fortune",
+          "course": "Perth",
+          "time": "14:30",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "11/4",
+          "finished": 3,
+          "sp": "11/2",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/41/perth/2026-10-15/930229/",
+          "lateWithdrawnWin": true
+        },
+        {
+          "horse": "Shifra",
+          "course": "Brighton",
+          "time": "15:15",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "2/1",
+          "finished": 5,
+          "sp": "3/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/7/brighton/2026-10-15/928581/",
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Yordan",
+          "course": "Southwell",
+          "time": "19:30",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "3/1",
+          "finished": 1,
+          "sp": null,
+          "source": "User reported — external result awaiting confirmation",
+          "sourceUrl": null,
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Navajo Point",
+          "course": "Curragh",
+          "time": "14:47",
+          "originCategory": "ORIGINAL_EW",
+          "selectedEarlyOdds": "15/2",
+          "finished": 6,
+          "sp": "12/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930837/",
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Mary Shoelaces",
+          "course": "Curragh",
+          "time": "16:32",
+          "originCategory": "ORIGINAL_EW",
+          "selectedEarlyOdds": "15/2",
+          "finished": 9,
+          "sp": "10/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930840/",
+          "lateWithdrawnWin": false
+        },
+        {
+          "horse": "Turbo Command",
+          "course": "Southwell",
+          "time": "18:00",
+          "originCategory": "LATE_ADDED_LONGSHOT",
+          "selectedEarlyOdds": "25/1",
+          "finished": 12,
+          "sp": "14/1",
+          "source": "Racing Post",
+          "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928773/",
+          "lateWithdrawnWin": false
+        }
+      ],
+      "errorAnalysis": [
+        {
+          "horse": "Shifra",
+          "issue": "Strong recent Bath form and low draw did not transfer to Brighton's undulations and track-specific demands; raised OR and course debut were underweighted.",
+          "action": "Require independently sourced track-similarity and competitive opponent evidence for course-debut NAPs; test prospectively, not retroactive deletion."
+        },
+        {
+          "horse": "Nouvel Espoir",
+          "issue": "The repeat C&D/soft-ground winner was raised 8lb and met strong opposing form; suitability alone did not ensure ranking first.",
+          "action": "Compare revised handicap terms, rivals at equal/changed weights and recent performance levels before granting NB grade."
+        },
+        {
+          "horse": "Major Fortune",
+          "issue": "A 194-day absence, +5lb OR, equipment change and softening three-mile test predicted uncertainty; runner came third after WIN withdrawal.",
+          "action": "Keep explicit off-a-break/equipment/going interaction as confidence veto pending held-out validation; do not claim causal proof."
+        },
+        {
+          "horse": "Navajo Point",
+          "issue": "Latest handicap win on similar going was insufficient against a 19-runner field and +8lb OR; finished sixth.",
+          "action": "Quantify larger-field traffic/pace and rating jumps, verify place terms rather than treating lower field count as confidence gain."
+        },
+        {
+          "horse": "Mary Shoelaces",
+          "issue": "Recent soft-ground defeat and mixed form pointed against upgrading older C&D success; ninth on soft.",
+          "action": "Use going-specific recency and latest race fitness evidence rather than older track victories alone."
+        },
+        {
+          "horse": "Turbo Command",
+          "issue": "Three historical C&D wins and a tempting OR drop masked deteriorated recent form; finished twelfth.",
+          "action": "Strengthen outsider E/W minimum recent-performance requirement; older course record is supporting evidence only."
+        },
+        {
+          "horse": "Yordan",
+          "issue": "User-reported win after return to proven standard Tapeta / six-furlong conditions from higher-class turf race.",
+          "action": "Retain explicit demonstrated recent surface/distance suitability, but require comparison across many future races before claiming increased accuracy."
+        }
+      ],
+      "biasControls": [
+        "No after-the-fact removal of Major Fortune from ORIGINAL four published WIN picks.",
+        "No recorded or simulated wagers/profit added to previously cleared ledger.",
+        "Do not use SP as today's early price, and do not assert BOG without a documented accepted bookmaker wager.",
+        "Seven trials cannot establish statistical model improvement.",
+        "Do not use outcomes from races after the published decision when claiming pre-race feature availability."
+      ]
+    }
+  ],
+  "latestPostRaceAudit": {
+    "asOfDate": "2026-10-15",
+    "recordedAt": "2026-10-15T21:08:45.637Z",
+    "sourceRule": "Results appended after racing; original selection ranks, early odds, timestamped reviews and prior-day data unchanged.",
+    "coverage": {
+      "originalWinNominations": 4,
+      "activeWinAtFinalReview": 3,
+      "otherEwCandidates": 2,
+      "longshotResearch": 1,
+      "totalCandidates": 7
+    },
+    "outcomes": {
+      "originalWinWinnersUserIncluded": 1,
+      "verifiedByPublisherWinners": 0,
+      "userReportedWinners": 1,
+      "totalWinnersUserIncluded": 1,
+      "topThreeFinishes": 2,
+      "nonWinners": 6
+    },
+    "strikeRateStatus": "Provisional: Yordan win user-reported; six other result positions independently verified; no source-backed Yordan SP yet.",
+    "metrics": {
+      "provisionalOverallWinnerRate": "1/7 (14.3%)",
+      "provisionalOriginalWinStrikeRate": "1/4 (25.0%)",
+      "provisionalActiveWinStrikeRate": "1/3 (33.3%)",
+      "ewWatchWinners": "0/2",
+      "longshotWinners": "0/1",
+      "placed": "Major Fortune 3rd in a 6-runner handicap chase; not a confirmed each-way bet; other E/W shortlists 6th, 9th, 12th. No bookmaker place terms assumed."
+    },
+    "runnerResults": [
+      {
+        "horse": "Nouvel Espoir",
+        "course": "Curragh",
+        "time": "13:37",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "13/2",
+        "finished": 5,
+        "sp": "7/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930835/",
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Major Fortune",
+        "course": "Perth",
+        "time": "14:30",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "11/4",
+        "finished": 3,
+        "sp": "11/2",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/41/perth/2026-10-15/930229/",
+        "lateWithdrawnWin": true
+      },
+      {
+        "horse": "Shifra",
+        "course": "Brighton",
+        "time": "15:15",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "2/1",
+        "finished": 5,
+        "sp": "3/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/7/brighton/2026-10-15/928581/",
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Yordan",
+        "course": "Southwell",
+        "time": "19:30",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "3/1",
+        "finished": 1,
+        "sp": null,
+        "source": "User reported — external result awaiting confirmation",
+        "sourceUrl": null,
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Navajo Point",
+        "course": "Curragh",
+        "time": "14:47",
+        "originCategory": "ORIGINAL_EW",
+        "selectedEarlyOdds": "15/2",
+        "finished": 6,
+        "sp": "12/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930837/",
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Mary Shoelaces",
+        "course": "Curragh",
+        "time": "16:32",
+        "originCategory": "ORIGINAL_EW",
+        "selectedEarlyOdds": "15/2",
+        "finished": 9,
+        "sp": "10/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930840/",
+        "lateWithdrawnWin": false
+      },
+      {
+        "horse": "Turbo Command",
+        "course": "Southwell",
+        "time": "18:00",
+        "originCategory": "LATE_ADDED_LONGSHOT",
+        "selectedEarlyOdds": "25/1",
+        "finished": 12,
+        "sp": "14/1",
+        "source": "Racing Post",
+        "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928773/",
+        "lateWithdrawnWin": false
+      }
+    ],
+    "errorAnalysis": [
+      {
+        "horse": "Shifra",
+        "issue": "Strong recent Bath form and low draw did not transfer to Brighton's undulations and track-specific demands; raised OR and course debut were underweighted.",
+        "action": "Require independently sourced track-similarity and competitive opponent evidence for course-debut NAPs; test prospectively, not retroactive deletion."
+      },
+      {
+        "horse": "Nouvel Espoir",
+        "issue": "The repeat C&D/soft-ground winner was raised 8lb and met strong opposing form; suitability alone did not ensure ranking first.",
+        "action": "Compare revised handicap terms, rivals at equal/changed weights and recent performance levels before granting NB grade."
+      },
+      {
+        "horse": "Major Fortune",
+        "issue": "A 194-day absence, +5lb OR, equipment change and softening three-mile test predicted uncertainty; runner came third after WIN withdrawal.",
+        "action": "Keep explicit off-a-break/equipment/going interaction as confidence veto pending held-out validation; do not claim causal proof."
+      },
+      {
+        "horse": "Navajo Point",
+        "issue": "Latest handicap win on similar going was insufficient against a 19-runner field and +8lb OR; finished sixth.",
+        "action": "Quantify larger-field traffic/pace and rating jumps, verify place terms rather than treating lower field count as confidence gain."
+      },
+      {
+        "horse": "Mary Shoelaces",
+        "issue": "Recent soft-ground defeat and mixed form pointed against upgrading older C&D success; ninth on soft.",
+        "action": "Use going-specific recency and latest race fitness evidence rather than older track victories alone."
+      },
+      {
+        "horse": "Turbo Command",
+        "issue": "Three historical C&D wins and a tempting OR drop masked deteriorated recent form; finished twelfth.",
+        "action": "Strengthen outsider E/W minimum recent-performance requirement; older course record is supporting evidence only."
+      },
+      {
+        "horse": "Yordan",
+        "issue": "User-reported win after return to proven standard Tapeta / six-furlong conditions from higher-class turf race.",
+        "action": "Retain explicit demonstrated recent surface/distance suitability, but require comparison across many future races before claiming increased accuracy."
+      }
+    ],
+    "biasControls": [
+      "No after-the-fact removal of Major Fortune from ORIGINAL four published WIN picks.",
+      "No recorded or simulated wagers/profit added to previously cleared ledger.",
+      "Do not use SP as today's early price, and do not assert BOG without a documented accepted bookmaker wager.",
+      "Seven trials cannot establish statistical model improvement.",
+      "Do not use outcomes from races after the published decision when claiming pre-race feature availability."
+    ]
+  }
+}
