@@ -133,13 +133,13 @@ function signMoney(n){return (n<0?'-':'+')+money(Math.abs(n));}
 function applyLiveResults(){
  if(!state.data||!state.ledger||!state.live?.connected||state.live.date!==state.data.snapshotDate)return;
  const updates=state.live.updates||[];
- const groups=['todaySelections','midshotsToday','longshotsToday','lucky15Only'];
+ const groups=['betSelections','todaySelections','midshotsToday','longshotsToday','lucky15Only'];
  for(const group of groups)for(const pick of state.data[group]||[]){
    const update=updates.find(u=>u.horse===pick.horse&&u.course===pick.course&&u.time===pick.time);
    if(!update)continue;
    pick.result={...pick.result,...update.result,source:state.live.source,updatedAt:state.live.checkedAt};
    if(Number(update.runnerCount)>0)pick.runnerCount=Number(update.runnerCount);
-   const type=group==='todaySelections'?'win':'each-way';
+   const type=group==='betSelections'?(pick.betType==='each-way'?'each-way':'win'):group==='todaySelections'?'win':'each-way';
    const id=[state.data.snapshotDate,pick.course,pick.time,pick.horse,type].join('|').toLowerCase();
    const entry=state.ledger.entries.find(e=>e.id===id);
    if(entry){
@@ -154,14 +154,14 @@ const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','
 const webKey=(date,course,time,horse)=>[date,course,time,horse].join('|').toLowerCase();
 function applyWebConfirmations(){
  if(!state.data||!state.ledger)return;
- for(const group of ['todaySelections','midshotsToday','longshotsToday','lucky15Only'])
+ for(const group of ['betSelections','todaySelections','midshotsToday','longshotsToday','lucky15Only'])
   for(const pick of state.data[group]||[]){
    if(pick.result?.position)continue;
    const confirmed=state.webConfirmed[webKey(state.data.snapshotDate,pick.course,pick.time,pick.horse)];
    if(!confirmed||!Number(confirmed.position))continue;
    pick.result={position:confirmed.position,status:'Weighed in',source:confirmed.source,
     sourceUrl:confirmed.verifiedUrls?.[0]||'',updatedAt:confirmed.checkedAt};
-   const type=group==='todaySelections'?'win':'each-way';
+   const type=group==='betSelections'?(pick.betType==='each-way'?'each-way':'win'):group==='todaySelections'?'win':'each-way';
    const betId=[state.data.snapshotDate,pick.course,pick.time,pick.horse,type].join('|').toLowerCase();
    const entry=state.ledger.entries.find(e=>e.id===betId);
    if(entry&&!entry.result?.position)entry.result={...pick.result};
@@ -360,7 +360,7 @@ function exclusiveSelectionGroups(){
  return featured;
 }
 
-function nav(){const upcoming=state.data?.snapshotDate>new Date().toLocaleDateString("en-CA",{timeZone:"Europe/London"});return [["today",upcoming?"Tomorrow":"Today"],["midshots","Mid Shots 6/1–18/1"],["longshots","Longshots 20/1+"],["lucky15","E/W Lucky 15"],["racecards","All runners"],["history","Results history"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
+function nav(){return [["today","Bet Selections"],["racecards","All runners"],["history","Results history"],["sources","Sources"]].map(([v,t])=>'<button class="'+(state.view===v?'active':'')+'" data-view="'+v+'">'+t+'</button>').join("")}
 function filters(){const x=["ALL","PRIME","STRONG","CONDITIONAL","WATCH"];return '<div class="meeting-tabs">'+x.map(f=>'<button data-filter="'+f+'" class="'+(state.filter===f?'active':'')+'">'+f+'</button>').join("")+'</div>'}
 function resultBadge(x){const r=resultInfo(x);return r?'<span class="result-badge '+r.cls+'">'+r.text+'</span>':''}
 function summaryBadges(x,type){
@@ -440,18 +440,21 @@ function missedSelectionsReview(){
  '<p class="meta">One horse per featured race remains the rule. Outcomes reported by the user are labelled separately from independently verified racing results.</p></section>';
 }
 function today(){
- const d=state.data||{}, vetted=exclusiveSelectionGroups().todaySelections;
- const ranking=x=>x.winRank==='NAP'?0:x.winRank==='NB'?1:2;
- const picks=[...vetted].sort((a,b)=>ranking(a)-ranking(b)||timeValue(a.time)-timeValue(b.time));
- const withdrawn=(d.todaySelections||[]).filter(x=>x.raceDayReview?.action==='withdraw-win');
- const withdrawnNotes=withdrawn.length?'<section class="panel"><h3>Removed after race-day recheck</h3><p>Originally published WIN selections remain preserved as historical records. The following runner no longer meets the current forward-looking confidence threshold:</p>'+withdrawn.map(x=>'<p><strong>'+escapeHtml(x.horse)+'</strong> · '+escapeHtml(x.course)+' '+escapeHtml(x.time)+' · '+escapeHtml(x.raceDayReview?.headline||'Race-day downgrade')+'</p>').join('')+'</section>':'';
- const underReview=(d.todaySelections||[]).length-vetted.length;
- return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(String(d.snapshotDate||"").toUpperCase())+' · GB + IRE</div>'+
- '<h2>WIN selections</h2>'+
- '<p>One horse per race. NAP and NB are marked directly on their selection rows, with the positive evidence and the risks underneath. Race confidence is based on form and conditions, not price.</p></div>'+
- '<div class="quick-stats"><span><b>'+val(d.coverage?.races)+'</b> scheduled races</span>'+
- '<span><b>'+picks.length+'</b> WIN selections</span>'+(underReview?'<span><b>'+underReview+'</b> not displayed</span>':'')+'</div></section>'+
- (picks.length?'<div class="selection-list">'+picks.map(x=>selectionRow(x,"main")).join("")+'</div>':'<div class="panel"><p class="meta">No current contenders meet the published WIN evidence standard.</p></div>')+withdrawnNotes+missedSelectionsReview();
+ const d=state.data||{}, picks=chronological(d.betSelections||[]);
+ const review=d.fiveDayAnalysis||null;
+ const audit=review?'<section class="panel bet-audit"><h3>Five-day model review</h3><p>12–16 October: the key correction is that older course history, rival withdrawals and market moves must not outweigh current class, weight, going, pace and opponent assessment.</p><div class="bet-audit-days">'+(review.days||[]).map(day=>'<span><strong>'+escapeHtml(day.date.slice(5))+'</strong> '+day.winners+'/'+day.runners+' winners</span>').join('')+'</div><p class="meta">Monday had a separate earlier selection list. Wednesday excludes two non-runners. Five days of changing shortlists do not establish a calibrated forecast, and historical paper bets are unchanged.</p></section>':'';
+ const cards=picks.map(x=>{
+  const isEw=x.betType==='each-way',points=(x.positivePoints||[]).map(p=>'<li>'+escapeHtml(p)+'</li>').join('');
+  return '<article class="bet-selection-card"><div class="bet-selection-top"><span class="bet-selection-time">'+escapeHtml(x.time)+'</span><span class="bet-selection-type '+(isEw?'is-ew':'is-win')+'">'+(isEw?'EACH WAY':'WIN')+'</span></div>'+
+  '<div class="bet-selection-main"><div><h3>'+escapeHtml(x.horse)+'</h3><p>'+escapeHtml(x.raceClass)+' · '+escapeHtml(x.distance)+' · '+escapeHtml(x.going)+'</p></div><div class="bet-selection-price"><span>Reference odds</span><strong>'+escapeHtml(x.odds)+'</strong></div></div>'+
+  '<div class="bet-selection-meta"><span>Jockey: '+escapeHtml(x.jockey)+'</span><span>Trainer: '+escapeHtml(x.trainer)+'</span><span>Field: '+escapeHtml(x.runnerCount)+'</span></div>'+
+  '<p class="bet-selection-summary">'+escapeHtml(x.summary)+'</p>'+
+  '<details class="bet-selection-details"><summary>Form positives and opposition check</summary><ul>'+points+'</ul><p><strong>Risk and closest rivals:</strong> '+escapeHtml(x.risk)+'</p></details>'+
+  '<div class="bet-selection-bottom">'+resultBadge(x)+'<a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Racecard and form ↗</a>'+(isEw?'<small>Check bookmaker each-way place terms</small>':'')+'</div></article>';
+ }).join('');
+ return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(d.snapshotDate||'')+' · ASCOT CHAMPIONS DAY</div><h2>Bet Selections</h2><p>One horse per race, with the bet type shown directly beside each selection. Horse/race data determines confidence, independently of price or favouritism.</p></div><div class="quick-stats"><span><b>'+picks.length+'</b> selections</span><span><b>'+picks.filter(p=>p.betType==='win').length+'</b> WIN</span><span><b>'+picks.filter(p=>p.betType==='each-way').length+'</b> EACH WAY</span></div></section>'+
+  '<div class="bet-selection-notice">PRE-RACE RESEARCH · Current going: GOOD. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.</div>'+
+  '<div class="bet-selection-grid">'+(cards||'<div class="panel">No selections published yet.</div>')+'</div>'+audit;
 }
 function midshots(){const d=state.data||{},ms=exclusiveSelectionGroups().midshotsToday;return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> unique race selections</span><span><b>6/1–18/1</b> reference price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No distinct mid-shot selection currently qualifies.") }
 function longshots(){const d=state.data||{},ls=exclusiveSelectionGroups().longshotsToday;return '<section class="page-intro long-intro"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p><div class="quick-stats"><span><b>'+ls.length+'</b> unique race selections</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum reference price</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No distinct longshot selection currently qualifies.") }
@@ -492,11 +495,11 @@ function allRunners(){
 function sources(){return '<div class="section-head"><div><h3>Sources</h3><p>Current research and cross-check sources.</p></div></div><div class="source-grid">'+(state.data.sources||[]).map(s=>'<div class="source-card"><h4>'+s.name+'</h4><p><strong>'+s.status+'</strong><br>'+s.role+'</p></div>').join("")+'</div>'}
 function rememberOpen(){state.openKeys=new Set([...document.querySelectorAll('.selection-row[open]')].map(x=>x.dataset.key))}
 function restoreOpen(){(state.openKeys||new Set()).forEach(k=>{const el=[...document.querySelectorAll('.selection-row')].find(x=>x.dataset.key===k);if(el)el.open=true})}
-function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():state.view==="lucky15"?lucky15Page():state.view==="racecards"?allRunners():state.view==="history"?history():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Daily GB + IRE selections</small></div></div><div class="nav">'+nav()+'</div><a class="office-entry" href="./backoffice.html" aria-label="Open PIN-protected back office">Back Office ↗</a></div></header><main class="main">'+tracker()+(state.data?.lucky15Plan&&state.view!=="lucky15"?'<div class="l15-shortcut">E/W Lucky 15 prepared · four runners · £30 paper ticket <button data-view="lucky15">View ticket →</button></div>':'')+liveStatus()+searchPanel()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
+function render(){if(!state.data)return;rememberOpen();const body=state.view==="today"?today():state.view==="midshots"?midshots():state.view==="longshots"?longshots():state.view==="lucky15"?lucky15Page():state.view==="racecards"?allRunners():state.view==="history"?history():sources();document.querySelector("#app").innerHTML='<header class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">R</div><div><h1>Racing Intelligence</h1><small>Ascot Champions Day · Bet Selections</small></div></div><div class="nav">'+nav()+'</div><a class="office-entry" href="./backoffice.html" aria-label="Open PIN-protected back office">Back Office ↗</a></div></header><main class="main">'+tracker()+(state.data?.lucky15Plan&&state.view!=="lucky15"?'<div class="l15-shortcut">E/W Lucky 15 prepared · four runners · £30 paper ticket <button data-view="lucky15">View ticket →</button></div>':'')+liveStatus()+searchPanel()+body+'<div class="footer-note">'+(state.data.liveFeed?.refreshedAt?'Racing feed checked: '+new Date(state.data.liveFeed.refreshedAt).toLocaleString('en-GB',{timeZone:'Europe/London',hour12:false})+' · '+(state.data.liveFeed.provider||'Connected source')+'. ':'Results have been verified against public racing websites where available. Automatic website data collection is not enabled. Prices may be stale. ')+'Displayed selections and results are preserved from the last published snapshot.</div></main>';bind();restoreOpen()}
 function bind(){document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render()});document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;render()});document.querySelector("[data-refresh-results]")?.addEventListener("click",refreshResults)}
 function knownResultSignature(){
  if(!state.data||!state.ledger)return '';
- const picks=['todaySelections','midshotsToday','longshotsToday','lucky15Only'].flatMap(group=>(state.data[group]||[]).map(x=>[group,x.horse,x.course,x.time,x.result?.position??'',x.result?.status??'',x.result?.sp??'',x.runnerCount??'']));
+ const picks=['betSelections','todaySelections','midshotsToday','longshotsToday','lucky15Only'].flatMap(group=>(state.data[group]||[]).map(x=>[group,x.horse,x.course,x.time,x.result?.position??'',x.result?.status??'',x.result?.sp??'',x.runnerCount??'']));
  const ledgerResults=(state.ledger.entries||[]).map(e=>[e.id,e.result?.position??'',e.result?.status??'',e.result?.sp??'',e.settlementOdds??'',e.runnerCount??'']);
  return JSON.stringify([picks,ledgerResults]);
 }
@@ -530,7 +533,7 @@ async function refreshResults(){
 function preservePublishedHistory(incoming,previous){
  if(!previous||incoming?.snapshotDate!==previous?.snapshotDate)return incoming;
  const key=x=>[x.horse,x.course,x.time].join('|').toLowerCase();
- for(const group of ['todaySelections','midshotsToday','longshotsToday']){
+ for(const group of ['betSelections','todaySelections','midshotsToday','longshotsToday']){
   const next=incoming[group]||[],old=previous[group]||[],known=new Map(next.map(x=>[key(x),x]));
   for(const prior of old){
    if(prior.restoredFromPreviousVersion)continue;
