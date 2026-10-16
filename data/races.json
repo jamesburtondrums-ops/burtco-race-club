@@ -407,7 +407,7 @@
       "trainer": "R Mike Smith",
       "jockey": "James Sullivan",
       "or": 52,
-      "runnerCount": 9,
+      "runnerCount": 8,
       "draw": 6,
       "going": "STANDARD Tapeta",
       "distance": "7f14y",
@@ -482,10 +482,15 @@
         }
       },
       "raceDayReview": {
-        "status": "PUBLISHED AFTER 16 OCT GOING / RUNNER REVIEW",
+        "status": "RETAIN WIN — NEFYN QUEEN DECLARED NON-RUNNER",
         "checkedAt": "2026-10-16T09:32:39.683Z",
-        "headline": "A Class 6 handicap remains unpredictable; Maynora was fourth here and could improve back at 7f. Shorter quoted price has not been used to calculate confidence.",
-        "sourceType": "time-of-review sources; changes require a fresh check"
+        "headline": "8 runners following official non-runner Nefyn Queen; latest Newcastle C&D placing and 1lb mark increase remain valid.",
+        "sourceType": "time-of-review sources; changes require a fresh check",
+        "fieldNow": 8,
+        "nonRunners": [
+          "Nefyn Queen"
+        ],
+        "nonRunnerSourceUrl": "https://www.racingpost.com/non-runners/2026-10-16/"
       }
     }
   ],
@@ -720,7 +725,13 @@
   "researchSelectionUpdate": {
     "reviewedAt": "2026-10-16T09:32:39.683Z",
     "status": "Four evidence-backed WIN contenders, two mid-shot each-way watches, one outsider watch. Yesterday official results archived with odds preserved; no unplaced paper tickets or wagers created.",
-    "note": "Live High Storm NR shown on Racing TV at 17:37 Haydock; model confidence based on running evidence and conditions, not favouritism."
+    "note": "Live High Storm NR shown on Racing TV at 17:37 Haydock; model confidence based on running evidence and conditions, not favouritism.",
+    "nonRunnerRecheckAt": "2026-10-16T09:36:11.381Z",
+    "nonRunnersRelevant": [
+      "17:37 Haydock High Storm NR -> 5 remain",
+      "19:45 Newcastle Nefyn Queen NR -> 8 remain"
+    ],
+    "nonRunnerSourceUrl": "https://www.racingpost.com/non-runners/2026-10-16/"
   },
   "raceDayRechecks": [],
   "latestRacedayRecheck": null,
