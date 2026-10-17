@@ -422,3 +422,8 @@
 .bet-audit-days strong{color:var(--green);margin-right:5px}
 @media(max-width:900px){.bet-selection-grid{grid-template-columns:1fr}}
 @media(max-width:540px){.bet-selection-card{padding:16px}.bet-selection-main h3{font-size:23px}.bet-selection-price strong{font-size:22px}.bet-selection-meta{gap:4px 11px}}
+
+.bet-selection-price small{display:block;color:var(--muted);font-size:10px;margin-top:3px;font-weight:500}
+.bet-morning-label{display:block;color:var(--green);font-weight:700;letter-spacing:.02em;font-size:10px;margin:0 0 12px}
+.bet-comparison{margin:10px 0;padding:9px 10px;border:1px solid var(--line);background:#f4f6f1;border-radius:8px;font-size:11px;line-height:1.6}
+.bet-nonrunner{display:inline-block;background:#f9e9e3;color:#824a32;padding:5px 8px;border-radius:7px;font-size:11px;font-weight:700}
