@@ -445,13 +445,20 @@ function today(){
  const audit=review?'<section class="panel bet-audit"><h3>Five-day model review</h3><p>12–16 October: the key correction is that older course history, rival withdrawals and market moves must not outweigh current class, weight, going, pace and opponent assessment.</p><div class="bet-audit-days">'+(review.days||[]).map(day=>'<span><strong>'+escapeHtml(day.date.slice(5))+'</strong> '+day.winners+'/'+day.runners+' winners</span>').join('')+'</div><p class="meta">Monday had a separate earlier selection list. Wednesday excludes two non-runners. Five days of changing shortlists do not establish a calibrated forecast, and historical paper bets are unchanged.</p></section>':'';
  const cards=picks.map(x=>{
   const isEw=x.betType==='each-way',points=(x.positivePoints||[]).map(p=>'<li>'+escapeHtml(p)+'</li>').join('');
+  const review=x.raceDayReview||null;
+  const analysis=review?.headline||x.summary;
+  const risks=review?.detail||x.risk;
+  const rivals=review?.rivals?.length?'<div class="bet-comparison"><b>Closest ratings:</b> '+review.rivals.map(r=>escapeHtml(r.horse)+' (OR '+escapeHtml(r.or)+' / RPR '+escapeHtml(r.rpr)+')').join(' · ')+'</div>':'';
+  const nonRunners=review?.nonRunners?.length?'<span class="bet-nonrunner">Confirmed NR: '+review.nonRunners.map(escapeHtml).join(', ')+'</span>':'';
+  const isUpdated=x.currentOdds&&x.currentOdds!==x.odds;
+  const morningLabel=review?.checkedAt?'<small class="bet-morning-label">Morning form and field rechecked · '+new Date(review.checkedAt).toLocaleTimeString('en-GB',{timeZone:'Europe/London',hour:'2-digit',minute:'2-digit'})+'</small>':'';
   return '<article class="bet-selection-card"><div class="bet-selection-top"><span class="bet-selection-time">'+escapeHtml(x.time)+'</span><span class="bet-selection-type '+(isEw?'is-ew':'is-win')+'">'+(isEw?'EACH WAY':'WIN')+'</span></div>'+
-  '<div class="bet-selection-main"><div><h3>'+escapeHtml(x.horse)+'</h3><p>'+escapeHtml(x.raceClass)+' · '+escapeHtml(x.distance)+' · '+escapeHtml(x.going)+'</p></div><div class="bet-selection-price"><span>Reference odds</span><strong>'+escapeHtml(x.odds)+'</strong></div></div>'+
-  '<div class="bet-selection-meta"><span>Jockey: '+escapeHtml(x.jockey)+'</span><span>Trainer: '+escapeHtml(x.trainer)+'</span><span>Field: '+escapeHtml(x.runnerCount)+'</span></div>'+
-  '<p class="bet-selection-summary">'+escapeHtml(x.summary)+'</p>'+
-  '<details class="bet-selection-details"><summary>Form positives and opposition check</summary><ul>'+points+'</ul><p><strong>Risk and closest rivals:</strong> '+escapeHtml(x.risk)+'</p></details>'+
-  '<div class="bet-selection-bottom">'+resultBadge(x)+'<a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Racecard and form ↗</a>'+(isEw?'<small>Check bookmaker each-way place terms</small>':'')+'</div></article>';
- }).join('');
+  '<div class="bet-selection-main"><div><h3>'+escapeHtml(x.horse)+'</h3><p>'+escapeHtml(x.raceClass)+' · '+escapeHtml(x.distance)+' · '+escapeHtml(x.going)+'</p></div><div class="bet-selection-price"><span>Morning quote</span><strong>'+escapeHtml(x.currentOdds||x.odds)+'</strong>'+(isUpdated?'<small>Previously '+escapeHtml(x.odds)+'</small>':'')+'</div></div>'+
+  '<div class="bet-selection-meta"><span>Jockey: '+escapeHtml(x.jockey)+'</span><span>Trainer: '+escapeHtml(x.trainer)+'</span><span>Field: '+escapeHtml(x.runnerCount)+'</span>'+(x.or!==undefined?'<span>OR '+escapeHtml(x.or)+'</span>':'')+(x.rpr!==undefined?'<span>RPR '+escapeHtml(x.rpr)+'</span>':'')+'</div>'+
+  '<p class="bet-selection-summary">'+escapeHtml(analysis)+'</p>'+morningLabel+
+  '<details class="bet-selection-details"><summary>Evidence, rivals and risks</summary><ul>'+points+'</ul>'+rivals+'<p><strong>Assessment risk:</strong> '+escapeHtml(risks)+'</p></details>'+
+  '<div class="bet-selection-bottom">'+nonRunners+resultBadge(x)+'<a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Racecard data ↗</a>'+(isEw?'<small>Check bookmaker each-way terms and paid places</small>':'')+'</div></article>';
+ }).join('');;
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(d.snapshotDate||'')+' · ASCOT CHAMPIONS DAY</div><h2>Bet Selections</h2><p>One horse per race, with the bet type shown directly beside each selection. Horse/race data determines confidence, independently of price or favouritism.</p></div><div class="quick-stats"><span><b>'+picks.length+'</b> selections</span><span><b>'+picks.filter(p=>p.betType==='win').length+'</b> WIN</span><span><b>'+picks.filter(p=>p.betType==='each-way').length+'</b> EACH WAY</span></div></section>'+
   '<div class="bet-selection-notice">PRE-RACE RESEARCH · Current going: GOOD. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.</div>'+
   '<div class="bet-selection-grid">'+(cards||'<div class="panel">No selections published yet.</div>')+'</div>'+audit;
