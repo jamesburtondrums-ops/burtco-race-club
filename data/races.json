@@ -1,52 +1,144 @@
 {
-  "snapshotDate": "2026-10-17",
-  "verifiedAt": "2026-10-16T23:19:59.818Z",
-  "mode": "BRITISH CHAMPIONS DAY — PRE-RACE EDITORIAL ASSESSMENT",
+  "snapshotDate": "2026-10-19",
+  "verifiedAt": "2026-10-19T11:51:04.667Z",
+  "mode": "MONDAY 19 OCTOBER 2026 — FROZEN PRE-RACE EVIDENCE RESEARCH, NO AUTOMATIC WAGER",
   "coverage": {
-    "meetings": 1,
-    "races": 7,
-    "scope": "Seven Ascot runners rechecked against independent comparisons of official ratings, RPR, TS, class, trip, age allowances, current going and declared opposition. Published tipster verdicts ignored; no full sectional dataset.",
-    "publishedDate": "2026-10-17",
+    "meetings": 6,
+    "races": 47,
+    "scope": "47 UK/Ireland races listed on Oct 19 cards; candidates shortlisted across official racecards and rechecked against published going, runners, recent form, handicap terms and named rival form. Not a claim of exhaustive horse-by-horse sectional backtest.",
+    "publishedDate": "2026-10-19",
     "selectedIndividuals": 7,
     "betSelections": 7,
-    "winConfidenceMethod": "Data-led qualitative ranking; prices recorded separately and not used as form evidence."
+    "winCandidates": 5,
+    "ewCandidates": 2,
+    "winConfidenceMethod": "Qualitative independent comparison of OR, RPR, fitness, course/distance/surface, current going, handicap shifts, opposition and published odds separately."
   },
   "meetings": [
     {
-      "course": "Ascot",
-      "races": 7,
-      "going": "GOOD (GoingStick straight 8.1, round 7.3)",
+      "course": "Bath",
+      "races": 8,
+      "going": "GOOD TO SOFT, good in places",
       "code": "Flat turf",
-      "first": "12:55",
-      "last": "16:35"
+      "first": "13:47",
+      "last": "17:22"
+    },
+    {
+      "course": "Gowran Park",
+      "races": 8,
+      "going": "YIELDING",
+      "code": "Flat turf",
+      "first": "13:40",
+      "last": "17:10"
+    },
+    {
+      "course": "Plumpton",
+      "races": 7,
+      "going": "GOOD, good to soft in places hurdle; chase good to firm in places",
+      "code": "Jumps",
+      "first": "14:00",
+      "last": "17:05"
+    },
+    {
+      "course": "Pontefract",
+      "races": 7,
+      "going": "SOFT",
+      "code": "Flat turf",
+      "first": "13:53",
+      "last": "16:55"
+    },
+    {
+      "course": "Southwell",
+      "races": 8,
+      "going": "STANDARD Tapeta",
+      "code": "Flat all-weather",
+      "first": "17:00",
+      "last": "20:30"
+    },
+    {
+      "course": "Wolverhampton",
+      "races": 9,
+      "going": "STANDARD Tapeta",
+      "code": "Flat all-weather",
+      "first": "16:15",
+      "last": "20:15"
     }
   ],
   "racecardLinks": [
     {
-      "course": "Ascot",
+      "course": "Bath",
+      "races": 8,
+      "going": "GOOD TO SOFT",
+      "code": "Flat turf",
+      "first": "13:47",
+      "last": "17:22",
+      "url": "https://www.racingpost.com/racecards/5/bath/2026-10-19/"
+    },
+    {
+      "course": "Gowran Park",
+      "races": 8,
+      "going": "YIELDING",
+      "code": "Flat turf",
+      "first": "13:40",
+      "last": "17:10",
+      "url": "https://www.racingpost.com/racecards/184/gowran-park/2026-10-19/"
+    },
+    {
+      "course": "Plumpton",
       "races": 7,
       "going": "GOOD",
+      "code": "Jumps",
+      "first": "14:00",
+      "last": "17:05",
+      "url": "https://www.racingpost.com/racecards/44/plumpton/2026-10-19/"
+    },
+    {
+      "course": "Pontefract",
+      "races": 7,
+      "going": "SOFT",
       "code": "Flat turf",
-      "first": "12:55",
-      "last": "16:35",
-      "url": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/"
+      "first": "13:53",
+      "last": "16:55",
+      "url": "https://www.racingpost.com/racecards/46/pontefract/2026-10-19/"
+    },
+    {
+      "course": "Southwell",
+      "races": 8,
+      "going": "STANDARD Tapeta",
+      "code": "Flat all-weather",
+      "first": "17:00",
+      "last": "20:30",
+      "url": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/"
+    },
+    {
+      "course": "Wolverhampton",
+      "races": 9,
+      "going": "STANDARD Tapeta",
+      "code": "Flat all-weather",
+      "first": "16:15",
+      "last": "20:15",
+      "url": "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/"
     }
   ],
   "sources": [
     {
-      "name": "Racing Post racecards",
-      "status": "17 October 2026 morning runner ratings and weights",
-      "role": "Raw OR, TS, RPR, runner declarations and course flags only — tipster verdicts excluded"
+      "name": "Racing Post",
+      "status": "19 October live declarations, ORs, RPRs, actual going/non-runners",
+      "role": "Races, field size, trainers and riders, last-6 form, rivals and nonrunners"
     },
     {
-      "name": "Sporting Life fast cards",
-      "status": "17 October 2026 declarations and non-runners",
-      "role": "Horse-by-horse recent form figures and runner status only — tipping language excluded"
+      "name": "Timeform",
+      "status": "19 October pre-race quote comparisons and recorded runner histories",
+      "role": "Recent form, course/trip records, price observations separately from selection rating"
     },
     {
-      "name": "At The Races",
-      "status": "17 October 2026 morning going, odds and 12-runner Fillies & Mares update",
-      "role": "Independent prices and non-runner corroboration; odds not used as confidence evidence"
+      "name": "Sporting Life",
+      "status": "19 October live card and odds snapshots",
+      "role": "Cross-check confirmed runners, recent class/weight and odds"
+    },
+    {
+      "name": "Oddschecker",
+      "status": "19 October pre-race bookmaker quotes",
+      "role": "Price check only; offered terms and validity may change."
     }
   ],
   "todaySelections": [],
@@ -56,11 +148,11 @@
   "selectionPolicy": {
     "avoidOddsOn": true,
     "minimumWinOdds": "1/1",
-    "winCandidates": 4,
-    "qualifiedWinCandidates": 4,
+    "winCandidates": 5,
+    "qualifiedWinCandidates": 5,
     "numLongshots": 0,
-    "winQualificationRule": "Min 3 of 4 core factors independently sourced, mandatory current form/going/trip, named strong rival and risk review; odds not a confidence factor.",
-    "rationale": "15 Oct result review shows rises in weights, track demands, returns from breaks, and opponent terms must be addressed rather than overweighting positive raw form."
+    "winQualificationRule": "Strong current race-conditions suitability and positive recent results against named credible rivals. Avoid unexplained long layoffs, sharp class leaps and older track wins without current evidence. Confidence does not derive from betting price.",
+    "rationale": "No forced 20/1 candidates: odds alone do not qualify a value bet; only two distinct E/W watches recorded."
   },
   "midshotsPolicy": {
     "minOdds": "6/1",
@@ -75,45 +167,48 @@
   },
   "winNominations": [
     {
-      "horse": "Yaa Min",
-      "course": "Haydock",
-      "time": "17:37",
+      "horse": "Go Lockers Go",
+      "time": "18:00",
+      "course": "Southwell",
       "label": "NAP",
-      "status": "SOLID CONTENDER",
-      "rationale": "Dominant heavy-ground course-and-distance winner with the same 7lb-claiming jockey back aboard; proven stamina is a significant advantage, though a 6lb rise and Gone By remain threats."
+      "rationale": "Back-to-back wins, including over Southwell's exact course and distance nine days ago, with just a one-pound rise in the mark; the return to a known successful setup is the strongest case today."
     },
     {
-      "horse": "Farabove The Limit",
-      "course": "Newcastle",
-      "time": "16:08",
+      "horse": "The Anthony Gover",
+      "time": "19:15",
+      "course": "Wolverhampton",
       "label": "NB",
-      "status": "SOLID CONTENDER",
-      "rationale": "Won his last two staying handicaps, including this Newcastle C&D, and overcame a pace bias latest; only 3lb higher, though Jujubella and Saxophonist offer genuine competition."
+      "rationale": "Won twice over this C&D before finishing third by only one length at the same track; a better stall-five draw and 5lb claimer aid the return to proven conditions."
     }
   ],
   "latestResearchLucky15": {
-    "status": "NO QUALIFIED LUCKY 15 — insufficient distinct verified 6/1+ each-way legs under current evidence standard",
-    "legs": []
+    "legs": [],
+    "status": "No new lucky 15 constructed; not enough independent 6/1+ each-way legs under evidence rules."
   },
   "selectionPresentation": {
     "rule": "ONE_BET_SELECTION_PER_RACE",
-    "effectiveDate": "2026-10-17",
+    "effectiveDate": "2026-10-19",
     "selectionCount": 7,
     "featuredRaceCount": 7,
-    "notes": "One single Bet Selections view; WIN or EACH WAY shown per horse. Categories WIN, Mid Shots, Longshots, Mission and E/W Lucky 15 are not used for forward public selections. Existing paper ledger unchanged.",
+    "notes": "Single bet selections list with Win / Each Way on each horse, in chronological order. No separate categories, and NAP/NB are recommendation ranks rather than market-driven categories.",
     "paperBetStatus": "RESEARCH ONLY — NO NEW PAPER WAGERS OR PROFIT CREDITED"
   },
   "reviewCompleteness": {
-    "asOfDate": "2026-10-16",
-    "reviewedAt": "2026-10-16T09:32:39.683Z",
-    "status": "Shortlist independently checked; not an exhaustive review of all 404 declared horses.",
+    "asOfDate": "2026-10-19",
+    "reviewedAt": "2026-10-19T11:51:04.667Z",
+    "status": "Seven carefully screened runners; not a full independent scoring run over all ~490 declared runners.",
     "checks": [
-      "Going, class, distance, recent form, OR movement, meaningful opposition, rider/claim, non-runners and pre-race quotes"
+      "Racing Post current going and non-runners",
+      "Positive last-6 form and recent race fitness",
+      "Trip / surface and course evidence, plus track character",
+      "Handicap OR shift and claiming allowance",
+      "Named rival OR/RPR and credible recent form",
+      "Bookmaker odds separate from form"
     ],
     "blindspots": [
-      "No comparable verified race-level sectional speed measures for all runners",
-      "AW lane pace/draw variability not yet quantified",
-      "Further going and non-runner updates can alter selection assessment"
+      "Different race-day times can affect prices, runners and ground",
+      "No current sectionals coverage across all 47 races",
+      "Uncertainty for Bath undulations and jumps pace"
     ]
   },
   "recentPerformanceReview": {
@@ -162,22 +257,99 @@
     "calibrationStatus": "No verified, held-out backtest or proven statistically calibrated win probabilities."
   },
   "researchSelectionUpdate": {
-    "date": "2026-10-17",
-    "theme": "British Champions Day · 7 Ascot races",
-    "status": "PRE-RACE — publication snapshot",
-    "publishedAt": "2026-10-16T23:19:59.818Z",
-    "sourceRule": "Grounded research, prices may change; no real or paper wagers added."
+    "reviewedAt": "2026-10-19T11:51:04.667Z",
+    "status": "Seven Oct 19 candidates published across Bath, Plumpton, Southwell, Wolverhampton. Five WIN and two EACH-WAY. No confirmed bookmaker wagers.",
+    "note": "Avoided King Of Persia (+6lb penalty, new soft conditions), Silverella (soft ground vs last C&D win on good), Meydaan (7 months off and odds-on), short-priced novices, unproven 20/1 outsiders."
   },
-  "raceDayRechecks": [],
-  "latestRacedayRecheck": null,
-  "raceDayDecisionLog": [
+  "raceDayRechecks": [
     {
-      "date": "2026-10-17",
-      "time": "2026-10-17T09:02:23.384Z",
-      "action": "MORNING_RECHECK_ALL_SEVEN",
-      "details": "Retain original seven runner selections after raw ratings, weight, going, opposition review. Correct NR interpretation: Opportunity remains declared; Johanna Walsh and Crown Of Oaks withdrawn. No new paper bets."
+      "updatedAt": "2026-10-19T11:51:04.667Z",
+      "meetingCount": 6,
+      "scheduledRaces": 47,
+      "going": {
+        "Bath": "GOOD TO SOFT, good in places",
+        "Gowran Park": "YIELDING",
+        "Plumpton": "GOOD, good to soft in places hurdle; chase good to firm in places",
+        "Pontefract": "SOFT",
+        "Southwell": "STANDARD Tapeta",
+        "Wolverhampton": "STANDARD Tapeta"
+      },
+      "confirmedNonRunners": [
+        {
+          "horse": "Beorma",
+          "race": "15:30 Plumpton",
+          "source": "https://www.racingpost.com/non-runners/2026-10-19/"
+        },
+        {
+          "horse": "Dandana",
+          "race": "18:15 Wolverhampton",
+          "source": "https://www.racingpost.com/non-runners/2026-10-19/"
+        }
+      ],
+      "adjustments": [
+        {
+          "course": "Plumpton",
+          "time": "15:30",
+          "currentRunners": 5,
+          "note": "Beorma NR"
+        },
+        {
+          "course": "Wolverhampton",
+          "time": "18:15",
+          "currentRunners": 12,
+          "note": "Dandana NR"
+        }
+      ],
+      "unmodifiedPicks": 7,
+      "changedPicks": 0,
+      "methodology": "No direct use of published tipster selections or verdicts; reason independently from ratings, going, current form, course and trip, rider allowances and opposition. Odds displayed as separate evidence.",
+      "dataLimitations": "No evidence of calibrated probabilities or exhaustive sectional coverage; latest price may move."
     }
   ],
+  "latestRacedayRecheck": {
+    "updatedAt": "2026-10-19T11:51:04.667Z",
+    "meetingCount": 6,
+    "scheduledRaces": 47,
+    "going": {
+      "Bath": "GOOD TO SOFT, good in places",
+      "Gowran Park": "YIELDING",
+      "Plumpton": "GOOD, good to soft in places hurdle; chase good to firm in places",
+      "Pontefract": "SOFT",
+      "Southwell": "STANDARD Tapeta",
+      "Wolverhampton": "STANDARD Tapeta"
+    },
+    "confirmedNonRunners": [
+      {
+        "horse": "Beorma",
+        "race": "15:30 Plumpton",
+        "source": "https://www.racingpost.com/non-runners/2026-10-19/"
+      },
+      {
+        "horse": "Dandana",
+        "race": "18:15 Wolverhampton",
+        "source": "https://www.racingpost.com/non-runners/2026-10-19/"
+      }
+    ],
+    "adjustments": [
+      {
+        "course": "Plumpton",
+        "time": "15:30",
+        "currentRunners": 5,
+        "note": "Beorma NR"
+      },
+      {
+        "course": "Wolverhampton",
+        "time": "18:15",
+        "currentRunners": 12,
+        "note": "Dandana NR"
+      }
+    ],
+    "unmodifiedPicks": 7,
+    "changedPicks": 0,
+    "methodology": "No direct use of published tipster selections or verdicts; reason independently from ratings, going, current form, course and trip, rider allowances and opposition. Odds displayed as separate evidence.",
+    "dataLimitations": "No evidence of calibrated probabilities or exhaustive sectional coverage; latest price may move."
+  },
+  "raceDayDecisionLog": [],
   "postRaceAudits": [
     {
       "asOfDate": "2026-10-15",
@@ -1971,418 +2143,999 @@
         "status": "2026-10-16 finishing positions user-reported and prior race-results checked; see fiveDayAnalysis",
         "source": "Previous evening review"
       }
-    }
-  ],
-  "pricingReviewAt": "2026-10-16T09:37:53.037Z",
-  "betSelections": [
+    },
     {
-      "time": "12:55",
-      "horse": "Arapaho Gold",
-      "betType": "win",
-      "odds": "11/4",
-      "jockey": "Connor Beasley",
-      "trainer": "Michael Dods",
-      "or": 110,
-      "draw": 10,
-      "runnerCount": 11,
-      "going": "GOOD",
-      "distance": "6f",
-      "raceClass": "Class 2 2yo Conditions Stakes",
-      "summary": "Gimcrack winner with four wins from five; last defeat came when giving weight to rivals in the Mill Reef, making his proven six-furlong performance a persuasive starting point.",
-      "positivePoints": [
-        "Four wins in five, including the Group 2 Gimcrack",
-        "Strong six-furlong form at this level",
-        "Latest defeat occurred when conceding weight"
+      "date": "2026-10-17",
+      "verifiedAt": "2026-10-16T23:19:59.818Z",
+      "coverage": {
+        "meetings": 1,
+        "races": 7,
+        "scope": "Seven Ascot runners rechecked against independent comparisons of official ratings, RPR, TS, class, trip, age allowances, current going and declared opposition. Published tipster verdicts ignored; no full sectional dataset.",
+        "publishedDate": "2026-10-17",
+        "selectedIndividuals": 7,
+        "betSelections": 7,
+        "winConfidenceMethod": "Data-led qualitative ranking; prices recorded separately and not used as form evidence."
+      },
+      "meetings": [
+        {
+          "course": "Ascot",
+          "races": 7,
+          "going": "GOOD (GoingStick straight 8.1, round 7.3)",
+          "code": "Flat turf",
+          "first": "12:55",
+          "last": "16:35"
+        }
       ],
-      "risk": "Satellite Of Love is improving and Inner City Blues could bounce back from a poor Middle Park; two-year-old form can change quickly.",
-      "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/928599/",
-      "course": "Ascot",
-      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
-      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
-      "priceBasis": "observed pre-race reference quote, not accepted wager",
-      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
-      "ts": 113,
-      "rpr": 117,
-      "currentOdds": "3/1",
-      "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
-      "currentOddsSource": "At The Races 17 October morning odds table",
-      "raceDayReview": {
-        "status": "RECHECKED — RETAIN",
-        "checkedAt": "2026-10-17T09:02:23.384Z",
-        "headline": "Our strongest six-furlong juvenile on the available figures: OR110/RPR117 against Inner City Blues 109/112, Satellite Of Love 105/112 and Night In Vegas 102/110, all carrying the same 9st7lb. Four wins from five starts; latest third is a reminder that the advantage is not decisive.",
-        "detail": "Inner City Blues may rebound from the Middle Park and Night In Vegas has three recent wins including over this course and distance. Avoid treating the high draw as a proven advantage.",
-        "action": "retain",
-        "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/2/ascot/2026-10-17/928599/",
-          "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
-        ],
-        "rivals": [
+      "betSelections": [
+        {
+          "time": "12:55",
+          "horse": "Arapaho Gold",
+          "betType": "win",
+          "odds": "11/4",
+          "jockey": "Connor Beasley",
+          "trainer": "Michael Dods",
+          "or": 110,
+          "draw": 10,
+          "runnerCount": 11,
+          "going": "GOOD",
+          "distance": "6f",
+          "raceClass": "Class 2 2yo Conditions Stakes",
+          "summary": "Gimcrack winner with four wins from five; last defeat came when giving weight to rivals in the Mill Reef, making his proven six-furlong performance a persuasive starting point.",
+          "positivePoints": [
+            "Four wins in five, including the Group 2 Gimcrack",
+            "Strong six-furlong form at this level",
+            "Latest defeat occurred when conceding weight"
+          ],
+          "risk": "Satellite Of Love is improving and Inner City Blues could bounce back from a poor Middle Park; two-year-old form can change quickly.",
+          "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/928599/",
+          "course": "Ascot",
+          "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+          "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+          "priceBasis": "observed pre-race reference quote, not accepted wager",
+          "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
+          "ts": 113,
+          "rpr": 117,
+          "currentOdds": "3/1",
+          "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
+          "currentOddsSource": "At The Races 17 October morning odds table",
+          "raceDayReview": {
+            "status": "RECHECKED — RETAIN",
+            "checkedAt": "2026-10-17T09:02:23.384Z",
+            "headline": "Our strongest six-furlong juvenile on the available figures: OR110/RPR117 against Inner City Blues 109/112, Satellite Of Love 105/112 and Night In Vegas 102/110, all carrying the same 9st7lb. Four wins from five starts; latest third is a reminder that the advantage is not decisive.",
+            "detail": "Inner City Blues may rebound from the Middle Park and Night In Vegas has three recent wins including over this course and distance. Avoid treating the high draw as a proven advantage.",
+            "action": "retain",
+            "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/2/ascot/2026-10-17/928599/",
+              "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+            ],
+            "rivals": [
+              {
+                "horse": "Inner City Blues",
+                "or": 109,
+                "rpr": 112
+              },
+              {
+                "horse": "Satellite Of Love",
+                "or": 105,
+                "rpr": 112
+              },
+              {
+                "horse": "Night In Vegas",
+                "or": 102,
+                "rpr": 110
+              }
+            ],
+            "nonRunners": [],
+            "observedPrice": "3/1"
+          }
+        },
+        {
+          "time": "13:30",
+          "horse": "Highwayman",
+          "betType": "win",
+          "odds": "5/2",
+          "jockey": "Dylan Browne McMonagle",
+          "trainer": "Joseph Patrick O'Brien",
+          "or": 117,
+          "draw": 2,
+          "runnerCount": 10,
+          "going": "GOOD",
+          "distance": "2m",
+          "raceClass": "Group 1 Long Distance Cup",
+          "summary": "Three straight wins culminating in the St Leger; stayed on powerfully at Doncaster and gets a seven-pound weight-for-age allowance against older stayers.",
+          "positivePoints": [
+            "St Leger winner, unbeaten in last three races",
+            "Strong late stamina profile as distances increased",
+            "Seven-pound weight-for-age allowance"
+          ],
+          "risk": "First run over two miles; Caballo De Mar has proven staying ability and Gregory won emphatically over two miles last month.",
+          "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925078/",
+          "course": "Ascot",
+          "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+          "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+          "priceBasis": "observed pre-race reference quote, not accepted wager",
+          "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
+          "ts": 115,
+          "rpr": 121,
+          "currentOdds": "5/2",
+          "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
+          "currentOddsSource": "At The Races 17 October morning odds table",
+          "raceDayReview": {
+            "status": "RECHECKED — RETAIN",
+            "checkedAt": "2026-10-17T09:02:23.384Z",
+            "headline": "Highwayman's OR117 equals Caballo De Mar's OR117, but he carries 9st2lb against the older horses' 9st9lb. His three consecutive wins culminated at 1m6½f. The 7lb age allowance partly offsets the lower recorded RPR121 against Caballo's RPR126.",
+            "detail": "First attempt at two miles and Caballo De Mar is proven at longer trips. Gregory (OR115/RPR122) comes off two wins and has proven staying form. Opportunity remains a declared runner.",
+            "action": "retain",
+            "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925078/",
+              "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+            ],
+            "rivals": [
+              {
+                "horse": "Caballo De Mar",
+                "or": 117,
+                "rpr": 126
+              },
+              {
+                "horse": "Gregory",
+                "or": 115,
+                "rpr": 122
+              }
+            ],
+            "nonRunners": [],
+            "observedPrice": "5/2"
+          }
+        },
+        {
+          "time": "14:05",
+          "horse": "Almeraq",
+          "betType": "win",
+          "odds": "5/4",
+          "jockey": "Tom Marquand",
+          "trainer": "William Haggas",
+          "or": 123,
+          "draw": 8,
+          "runnerCount": 16,
+          "going": "GOOD",
+          "distance": "6f",
+          "raceClass": "Group 1 Champions Sprint Stakes",
+          "summary": "His dominant Haydock Sprint Cup win and Royal Ascot Jubilee success establish the strongest recent six-furlong Group 1 form on both softer and faster going.",
+          "positivePoints": [
+            "Group 1 six-furlong winner at Royal Ascot on good-to-firm",
+            "Won Haydock Group 1 by four and a quarter lengths",
+            "Proven under contrasting ground conditions"
+          ],
+          "risk": "Sixteen-runner sprint has traffic and pace uncertainty; Division may be better than its recent C&D fourth and Paborus has solid Group-level form.",
+          "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925077/",
+          "course": "Ascot",
+          "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+          "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+          "priceBasis": "observed pre-race reference quote, not accepted wager",
+          "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
+          "ts": 117,
+          "rpr": 132,
+          "currentOdds": "5/4",
+          "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
+          "currentOddsSource": "At The Races 17 October morning odds table",
+          "raceDayReview": {
+            "status": "RECHECKED — RETAIN",
+            "checkedAt": "2026-10-17T09:02:23.384Z",
+            "headline": "Almeraq's OR123/RPR132 leads strong alternatives Kind Of Blue OR111/RPR127 and Paborus OR113/RPR124. His dominant Haydock Group 1 win and prior Ascot Group 1 performance over six furlongs demonstrate conditions and class fit.",
+            "detail": "Sixteen runners make pace and traffic important. Kind Of Blue has a recent win and Paborus was second to Almeraq last time; a rating lead is not a guarantee of a clear passage.",
+            "action": "retain",
+            "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925077/",
+              "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+            ],
+            "rivals": [
+              {
+                "horse": "Kind Of Blue",
+                "or": 111,
+                "rpr": 127
+              },
+              {
+                "horse": "Paborus",
+                "or": 113,
+                "rpr": 124
+              }
+            ],
+            "nonRunners": [],
+            "observedPrice": "5/4"
+          }
+        },
+        {
+          "time": "14:40",
+          "horse": "Kalpana",
+          "betType": "win",
+          "odds": "6/5",
+          "jockey": "Colin Keane",
+          "trainer": "Andrew Balding",
+          "or": 124,
+          "draw": 1,
+          "runnerCount": 12,
+          "going": "GOOD",
+          "distance": "1m4f",
+          "raceClass": "Group 1 Fillies & Mares Stakes",
+          "summary": "Two-time winner of this race and 2026 King George and Yorkshire Oaks winner; the class benchmark over this course and trip if recovered from her Arc effort.",
+          "positivePoints": [
+            "Won the last two renewals of this exact race",
+            "King George and Yorkshire Oaks winner in 2026",
+            "Highest official rating in the field: 124"
+          ],
+          "risk": "Only 13 days since a tough Arc campaign; Johanna Walsh has Irish Oaks class and six-pound age weight allowance.",
+          "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925079/",
+          "course": "Ascot",
+          "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+          "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+          "priceBasis": "observed pre-race reference quote, not accepted wager",
+          "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
+          "ts": 128,
+          "rpr": 131,
+          "currentOdds": "11/10",
+          "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
+          "currentOddsSource": "At The Races 17 October morning odds table",
+          "raceDayReview": {
+            "status": "RECHECKED — RETAIN",
+            "checkedAt": "2026-10-17T09:02:23.384Z",
+            "headline": "Kalpana retains the best overall rating (OR124, TS128, RPR131) and has two previous course-and-distance wins in this race. Minnie Hauk (OR119/RPR129) and 3yo Sparan Nua (OR118/RPR127, receives six pounds) remain the principal numerical threats.",
+            "detail": "Just 13 days after finishing fifth in the Arc, a substantial recovery unknown. Johanna Walsh is listed as a non-runner by Sporting Life and At The Races; the change reduces the field but is NOT grounds to upgrade the model's confidence by itself.",
+            "action": "retain",
+            "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925079/",
+              "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+            ],
+            "rivals": [
+              {
+                "horse": "Minnie Hauk",
+                "or": 119,
+                "rpr": 129
+              },
+              {
+                "horse": "Sparan Nua",
+                "or": 118,
+                "rpr": 127
+              }
+            ],
+            "nonRunners": [
+              "Johanna Walsh"
+            ],
+            "observedPrice": "11/10"
+          }
+        },
+        {
+          "time": "15:20",
+          "horse": "Rayif",
+          "betType": "each-way",
+          "odds": "11/2",
+          "jockey": "Christophe Soumillon",
+          "trainer": "Francis-Henri Graffard",
+          "draw": 1,
+          "runnerCount": 11,
+          "going": "GOOD",
+          "distance": "1m",
+          "raceClass": "Group 1 Queen Elizabeth II Stakes",
+          "summary": "Winner of two Group 1 miles in 2026 and two from two over the distance; his narrow defeat of Zeus Olympios at Deauville provides a meaningful field-level form line.",
+          "positivePoints": [
+            "French 2000 Guineas and Jacques le Marois winner",
+            "Unbeaten from two starts at one mile",
+            "Three-year-old weight allowance against older milers"
+          ],
+          "risk": "No established straight-Ascot-mile record; Gstaad, Talk Of New York, More Thunder and Ten Bob Tony create significant pace and finishing challenges.",
+          "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925076/",
+          "course": "Ascot",
+          "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+          "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+          "priceBasis": "observed pre-race reference quote, not accepted wager",
+          "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
+          "or": 120,
+          "ts": 123,
+          "rpr": 131,
+          "currentOdds": "6/1",
+          "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
+          "currentOddsSource": "At The Races 17 October morning odds table",
+          "raceDayReview": {
+            "status": "RECHECKED — RETAIN",
+            "checkedAt": "2026-10-17T09:02:23.384Z",
+            "headline": "Rayif (OR120/RPR131) matches Talk Of New York's peak RPR131 and has two Group 1 victories at the mile. Gstaad is a stronger rival on pure ratings (OR125/RPR133), so Rayif is a place-oriented each-way selection rather than being presented as superior to the field on every measure.",
+            "detail": "Gstaad is rated five pounds higher and has Ascot form; Talk Of New York is equally rated and won 22 days ago. Rayif has not raced for 62 days and must handle Ascot's straight mile.",
+            "action": "retain",
+            "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925076/",
+              "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+            ],
+            "rivals": [
+              {
+                "horse": "Gstaad",
+                "or": 125,
+                "rpr": 133
+              },
+              {
+                "horse": "Talk Of New York",
+                "or": 120,
+                "rpr": 131
+              }
+            ],
+            "nonRunners": [],
+            "observedPrice": "6/1"
+          }
+        },
+        {
+          "time": "16:00",
+          "horse": "Ombudsman",
+          "betType": "win",
+          "odds": "7/4",
+          "jockey": "William Buick",
+          "trainer": "John & Thady Gosden",
+          "or": 132,
+          "draw": 2,
+          "runnerCount": 6,
+          "going": "GOOD",
+          "distance": "1m2f",
+          "raceClass": "Group 1 Champion Stakes",
+          "summary": "Highest-rated contender, dominant Prince of Wales's winner at Ascot and likely better suited by good ground than the rain-softened going at York last time.",
+          "positivePoints": [
+            "Top official rating of 132",
+            "Multiple Group 1 wins in 2026, including Ascot",
+            "Stable pacemaker may ensure a suitable honest pace"
+          ],
+          "risk": "Calandagan defeated him in this race last year and returns fresh; a pacemaker does not guarantee the planned race shape.",
+          "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925075/",
+          "course": "Ascot",
+          "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+          "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+          "priceBasis": "observed pre-race reference quote, not accepted wager",
+          "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
+          "ts": 122,
+          "rpr": 140,
+          "currentOdds": "15/8",
+          "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
+          "currentOddsSource": "At The Races 17 October morning odds table",
+          "raceDayReview": {
+            "status": "RECHECKED — RETAIN",
+            "checkedAt": "2026-10-17T09:02:23.384Z",
+            "headline": "Ombudsman leads the field with OR132/RPR140, compared with Calandagan's OR127/RPR138 at identical 9st7lb weights. The Ascot Group 1 win over this course/distance and performance on good ground outweigh his latest softer-ground York disappointment in this assessment.",
+            "detail": "Calandagan won this race last year and has a higher TS125 than Ombudsman's TS122. Ombudsman was fourth at York last start; race shape and recovery of both runners remain credible uncertainty.",
+            "action": "retain",
+            "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925075/",
+              "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+            ],
+            "rivals": [
+              {
+                "horse": "Calandagan",
+                "or": 127,
+                "rpr": 138
+              }
+            ],
+            "nonRunners": [],
+            "observedPrice": "15/8"
+          }
+        },
+        {
+          "time": "16:35",
+          "horse": "Ebt's Guard",
+          "betType": "each-way",
+          "odds": "9/1",
+          "jockey": "Lewis Edmunds",
+          "trainer": "William Muir & Chris Grassick",
+          "or": 102,
+          "draw": 21,
+          "runnerCount": 20,
+          "going": "GOOD",
+          "distance": "1m",
+          "raceClass": "Class 2 Balmoral Handicap",
+          "summary": "Second in last year's Balmoral, fourth in the Royal Hunt Cup and a close Doncaster third last time; the strongest place-oriented combination of recent big-field form and course experience.",
+          "positivePoints": [
+            "Runner-up in last year's corresponding handicap",
+            "Fourth over Ascot's straight mile in June",
+            "Close third of seventeen in September"
+          ],
+          "risk": "Open twenty-runner handicap; Scoville and Gavriel have stronger recent winning form. Each-way terms must be checked with the bookmaker.",
+          "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/927660/",
+          "course": "Ascot",
+          "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
+          "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
+          "priceBasis": "observed pre-race reference quote, not accepted wager",
+          "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
+          "ts": 107,
+          "rpr": 121,
+          "currentOdds": "9/1",
+          "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
+          "currentOddsSource": "At The Races 17 October morning odds table",
+          "raceDayReview": {
+            "status": "RECHECKED — RETAIN",
+            "checkedAt": "2026-10-17T09:02:23.384Z",
+            "headline": "Ebt's Guard (OR102/RPR121) has a recent third in a 17-runner handicap plus proven Ascot big-field form: fourth in the Hunt Cup and runner-up in this Balmoral last year. Scoville (OR99/RPR121) and Gavriel (OR101/RPR121) have comparable ratings but less of that exact race-history evidence.",
+            "detail": "Big-field 20-runner mile and stall 21 create major tactical uncertainty. Scoville is 3lb lower-rated and has a more recent win; high-stall pace distribution may determine whether Ebt's Guard obtains a tow. Crown Of Oaks is a confirmed non-runner.",
+            "action": "retain",
+            "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/2/ascot/2026-10-17/927660/",
+              "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+            ],
+            "rivals": [
+              {
+                "horse": "Scoville",
+                "or": 99,
+                "rpr": 121
+              },
+              {
+                "horse": "Gavriel",
+                "or": 101,
+                "rpr": 121
+              }
+            ],
+            "nonRunners": [
+              "Crown Of Oaks"
+            ],
+            "observedPrice": "9/1"
+          }
+        }
+      ],
+      "winNominations": [
+        {
+          "horse": "Yaa Min",
+          "course": "Haydock",
+          "time": "17:37",
+          "label": "NAP",
+          "status": "SOLID CONTENDER",
+          "rationale": "Dominant heavy-ground course-and-distance winner with the same 7lb-claiming jockey back aboard; proven stamina is a significant advantage, though a 6lb rise and Gone By remain threats."
+        },
+        {
+          "horse": "Farabove The Limit",
+          "course": "Newcastle",
+          "time": "16:08",
+          "label": "NB",
+          "status": "SOLID CONTENDER",
+          "rationale": "Won his last two staying handicaps, including this Newcastle C&D, and overcame a pace bias latest; only 3lb higher, though Jujubella and Saxophonist offer genuine competition."
+        }
+      ],
+      "morningRecheck": {
+        "updatedAt": "2026-10-17T09:02:23.384Z",
+        "meetingCount": 1,
+        "scheduledRaces": 7,
+        "going": {
+          "Ascot": "GOOD, GoingStick straight 8.1 / round 7.3"
+        },
+        "confirmedNonRunners": [
           {
-            "horse": "Inner City Blues",
-            "or": 109,
-            "rpr": 112
+            "horse": "Johanna Walsh",
+            "race": "14:40",
+            "sources": [
+              "Sporting Life fast card",
+              "At The Races live 12-runner card"
+            ]
           },
           {
-            "horse": "Satellite Of Love",
-            "or": 105,
-            "rpr": 112
-          },
-          {
-            "horse": "Night In Vegas",
-            "or": 102,
-            "rpr": 110
+            "horse": "Crown Of Oaks",
+            "race": "16:35",
+            "sources": [
+              "Racing Post live card",
+              "Sporting Life fast card"
+            ]
           }
         ],
+        "incorrectPreliminaryNonRunner": "Opportunity remains a runner in 13:30; do not treat the initial mention as confirmed.",
+        "adjustments": [
+          {
+            "course": "Ascot",
+            "time": "14:40",
+            "oldRunners": 13,
+            "currentRunners": 12,
+            "note": "Johanna Walsh NR"
+          },
+          {
+            "course": "Ascot",
+            "time": "16:35",
+            "oldRunners": 21,
+            "currentRunners": 20,
+            "note": "Crown Of Oaks NR"
+          }
+        ],
+        "unmodifiedPicks": 7,
+        "changedPicks": 0,
+        "methodology": "No tip-text inputs. Compare OR, RPR, TS, age allowances, recent form, historical course/going suitability and named rival strength; market quotes shown but excluded from confidence scoring.",
+        "dataLimitations": "Published ratings summarize past performances, not a licensed sectionals-based or calibrated win-probability model."
+      },
+      "selectionPresentation": {
+        "rule": "ONE_BET_SELECTION_PER_RACE",
+        "effectiveDate": "2026-10-17",
+        "selectionCount": 7,
+        "featuredRaceCount": 7,
+        "notes": "One single Bet Selections view; WIN or EACH WAY shown per horse. Categories WIN, Mid Shots, Longshots, Mission and E/W Lucky 15 are not used for forward public selections. Existing paper ledger unchanged.",
+        "paperBetStatus": "RESEARCH ONLY — NO NEW PAPER WAGERS OR PROFIT CREDITED"
+      }
+    }
+  ],
+  "pricingReviewAt": "2026-10-19T11:51:04.667Z",
+  "betSelections": [
+    {
+      "time": "14:17",
+      "course": "Bath",
+      "horse": "Dreams Galore",
+      "betType": "win",
+      "odds": "3/1",
+      "jockey": "Harry Vigors (5lb)",
+      "trainer": "Ollie Sangster",
+      "or": 75,
+      "ts": 73,
+      "rpr": 80,
+      "draw": 3,
+      "runnerCount": 10,
+      "going": "GOOD TO SOFT, good in places",
+      "distance": "5f10y",
+      "raceClass": "Class 5 Nursery (2yo)",
+      "summary": "Three wins from the last four handicap starts over sprint trips; the 5lb rider claim offsets the recent 4lb rise and a low draw helps, but the stiff undulating Bath track and rain-eased turf are fresh tests.",
+      "positivePoints": [
+        "Three nursery wins from last four starts, form 471131",
+        "Latest win came at 5f on 5 October; off just 14 days",
+        "Rated OR75 with 5lb claim against a 4lb rise and stall three"
+      ],
+      "risk": "Last victory was on Wolverhampton Tapeta, not Bath turf; ground may ride softer than earlier forecasts and lightly raced Chief Minister (recent 6f soft second) could improve. Do not upgrade because favourite.",
+      "sourceUrl": "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/",
+      "priceSource": "https://www.timeform.com/horse-racing/odds/bath/2026-10-19/1417/4/2/mj-church-nursery-handicap",
+      "rivals": [
+        {
+          "horse": "Chief Minister",
+          "or": 69,
+          "rpr": 80
+        },
+        {
+          "horse": "Perigord Noir",
+          "or": 71,
+          "rpr": 77
+        }
+      ],
+      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
+      "raceDayReview": {
+        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+        "checkedAt": "2026-10-19T11:51:04.667Z",
+        "headline": "Three wins from the last four handicap starts over sprint trips; the 5lb rider claim offsets the recent 4lb rise and a low draw helps, but the stiff undulating Bath track and rain-eased turf are fresh tests.",
+        "detail": "Last victory was on Wolverhampton Tapeta, not Bath turf; ground may ride softer than earlier forecasts and lightly raced Chief Minister (recent 6f soft second) could improve. Do not upgrade because favourite.",
+        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+        "sourceUrls": [
+          "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/",
+          "https://www.timeform.com/horse-racing/odds/bath/2026-10-19/1417/4/2/mj-church-nursery-handicap",
+          "https://www.racingpost.com/non-runners/2026-10-19/"
+        ],
         "nonRunners": [],
+        "rivals": [
+          {
+            "horse": "Chief Minister",
+            "or": 69,
+            "rpr": 80
+          },
+          {
+            "horse": "Perigord Noir",
+            "or": 71,
+            "rpr": 77
+          }
+        ],
         "observedPrice": "3/1"
       }
     },
     {
-      "time": "13:30",
-      "horse": "Highwayman",
+      "time": "15:30",
+      "course": "Plumpton",
+      "horse": "Nap Hand",
       "betType": "win",
-      "odds": "5/2",
-      "jockey": "Dylan Browne McMonagle",
-      "trainer": "Joseph Patrick O'Brien",
+      "odds": "11/4",
+      "jockey": "Freddie Gordon",
+      "trainer": "Chris Gordon",
       "or": 117,
-      "draw": 2,
-      "runnerCount": 10,
-      "going": "GOOD",
-      "distance": "2m",
-      "raceClass": "Group 1 Long Distance Cup",
-      "summary": "Three straight wins culminating in the St Leger; stayed on powerfully at Doncaster and gets a seven-pound weight-for-age allowance against older stayers.",
+      "ts": 106,
+      "rpr": 119,
+      "runnerCount": 5,
+      "going": "GOOD on hurdle course; good to soft in places",
+      "distance": "1m7f195y",
+      "raceClass": "Class 4 Handicap Hurdle",
+      "summary": "Won over this two-mile distance in August and was only four lengths behind when fourth over today's Plumpton C&D 29 days ago; returns fit against several runners with long absences.",
       "positivePoints": [
-        "St Leger winner, unbeaten in last three races",
-        "Strong late stamina profile as distances increased",
-        "Seven-pound weight-for-age allowance"
+        "Recent hurdle record 8-2214 includes win and two seconds",
+        "Ran over today's exact C&D only 29 days ago",
+        "Top OR117, compared with rival Basilette OR104 and Sixty Plus OR115"
       ],
-      "risk": "First run over two miles; Caballo De Mar has proven staying ability and Gregory won emphatically over two miles last month.",
-      "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925078/",
-      "course": "Ascot",
-      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
-      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
-      "priceBasis": "observed pre-race reference quote, not accepted wager",
-      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
-      "ts": 115,
-      "rpr": 121,
-      "currentOdds": "5/2",
-      "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
-      "currentOddsSource": "At The Races 17 October morning odds table",
+      "risk": "Carries 12st; strong opponent Basilette is much lighter and has RPR122, Sixty Plus ran 6 days ago with a 5lb claimer. Beorma officially withdrawn leaving 5; rider needs to settle horse better than latest C&D run.",
+      "sourceUrl": "https://www.racingpost.com/racecards/44/plumpton/2026-10-19/929247/",
+      "priceSource": "https://www.sportinglife.com/racing/racecards/2026-10-19/plumpton/racecard/944228/bet-goodwin-handicap-hurdle",
+      "nonRunners": [
+        "Beorma"
+      ],
+      "rivals": [
+        {
+          "horse": "Sixty Plus",
+          "or": 115,
+          "rpr": 116
+        },
+        {
+          "horse": "Basilette",
+          "or": 104,
+          "rpr": 122
+        }
+      ],
+      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
       "raceDayReview": {
-        "status": "RECHECKED — RETAIN",
-        "checkedAt": "2026-10-17T09:02:23.384Z",
-        "headline": "Highwayman's OR117 equals Caballo De Mar's OR117, but he carries 9st2lb against the older horses' 9st9lb. His three consecutive wins culminated at 1m6½f. The 7lb age allowance partly offsets the lower recorded RPR121 against Caballo's RPR126.",
-        "detail": "First attempt at two miles and Caballo De Mar is proven at longer trips. Gregory (OR115/RPR122) comes off two wins and has proven staying form. Opportunity remains a declared runner.",
-        "action": "retain",
-        "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+        "checkedAt": "2026-10-19T11:51:04.667Z",
+        "headline": "Won over this two-mile distance in August and was only four lengths behind when fourth over today's Plumpton C&D 29 days ago; returns fit against several runners with long absences.",
+        "detail": "Carries 12st; strong opponent Basilette is much lighter and has RPR122, Sixty Plus ran 6 days ago with a 5lb claimer. Beorma officially withdrawn leaving 5; rider needs to settle horse better than latest C&D run.",
+        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
         "sourceUrls": [
-          "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925078/",
-          "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+          "https://www.racingpost.com/racecards/44/plumpton/2026-10-19/929247/",
+          "https://www.sportinglife.com/racing/racecards/2026-10-19/plumpton/racecard/944228/bet-goodwin-handicap-hurdle",
+          "https://www.racingpost.com/non-runners/2026-10-19/"
+        ],
+        "nonRunners": [
+          "Beorma"
         ],
         "rivals": [
           {
-            "horse": "Caballo De Mar",
-            "or": 117,
-            "rpr": 126
+            "horse": "Sixty Plus",
+            "or": 115,
+            "rpr": 116
           },
           {
-            "horse": "Gregory",
-            "or": 115,
+            "horse": "Basilette",
+            "or": 104,
             "rpr": 122
           }
         ],
+        "observedPrice": "11/4"
+      }
+    },
+    {
+      "time": "17:00",
+      "course": "Southwell",
+      "horse": "Rosemary's Rose",
+      "betType": "each-way",
+      "odds": "11/2",
+      "jockey": "Jack Dace",
+      "trainer": "Rod Millman",
+      "or": 59,
+      "ts": 54,
+      "rpr": 71,
+      "draw": 7,
+      "runnerCount": 10,
+      "going": "STANDARD Tapeta",
+      "distance": "7f14y",
+      "raceClass": "Class 6 Apprentice Handicap",
+      "summary": "Four top-three finishes in her last six starts, including a latest second, make her a place-oriented runner; she has two past all-weather wins, although neither was over today's 7f trip.",
+      "positivePoints": [
+        "Recent form 223352, four top-three results in six runs",
+        "Two all-weather wins at longer trips earlier in 2026",
+        "Recent fitness evidenced by 22-day turnaround"
+      ],
+      "risk": "No career win from six starts over this 7f distance and only one previous Southwell appearance; Burford Beauty and Distillate both won last time. Check at least 3 paid places and odds before any each-way bet.",
+      "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929537/",
+      "priceSource": "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/17%3A00/winner",
+      "rivals": [
+        {
+          "horse": "Burford Beauty",
+          "or": 60,
+          "rpr": 73
+        },
+        {
+          "horse": "Distillate",
+          "or": 52,
+          "rpr": 73
+        }
+      ],
+      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+      "confidenceTier": "EVIDENCE-LED EACH-WAY CANDIDATE — NOT CALIBRATED",
+      "raceDayReview": {
+        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+        "checkedAt": "2026-10-19T11:51:04.667Z",
+        "headline": "Four top-three finishes in her last six starts, including a latest second, make her a place-oriented runner; she has two past all-weather wins, although neither was over today's 7f trip.",
+        "detail": "No career win from six starts over this 7f distance and only one previous Southwell appearance; Burford Beauty and Distillate both won last time. Check at least 3 paid places and odds before any each-way bet.",
+        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+        "sourceUrls": [
+          "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929537/",
+          "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/17%3A00/winner",
+          "https://www.racingpost.com/non-runners/2026-10-19/"
+        ],
         "nonRunners": [],
+        "rivals": [
+          {
+            "horse": "Burford Beauty",
+            "or": 60,
+            "rpr": 73
+          },
+          {
+            "horse": "Distillate",
+            "or": 52,
+            "rpr": 73
+          }
+        ],
+        "observedPrice": "11/2"
+      }
+    },
+    {
+      "time": "18:00",
+      "course": "Southwell",
+      "horse": "Go Lockers Go",
+      "betType": "win",
+      "winRank": "NAP",
+      "odds": "5/2",
+      "jockey": "Callum Shepherd",
+      "trainer": "Michael Bell",
+      "or": 70,
+      "ts": 61,
+      "rpr": 79,
+      "draw": 4,
+      "runnerCount": 10,
+      "going": "STANDARD Tapeta",
+      "distance": "6f16y",
+      "raceClass": "Class 5 Handicap (0–70)",
+      "summary": "Back-to-back wins, including over Southwell's exact course and distance nine days ago, with just a one-pound rise in the mark; the return to a known successful setup is the strongest case today.",
+      "positivePoints": [
+        "Back-to-back wins, including Southwell C&D 9 days ago",
+        "Only 1lb higher since latest win; now OR70",
+        "RPR79 compares favorably with Massimo Blue's RPR77"
+      ],
+      "risk": "Massimo Blue has won twice over this C&D and has a near-matching rating (OR70); a 10-runner sprint can be decided by the pace map or an awkward break. Neither quote nor favouritism raises race confidence.",
+      "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/",
+      "priceSource": "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/1800/47/3",
+      "rivals": [
+        {
+          "horse": "Massimo Blue",
+          "or": 70,
+          "rpr": 77
+        },
+        {
+          "horse": "Jenever",
+          "or": 69,
+          "rpr": 80
+        }
+      ],
+      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
+      "raceDayReview": {
+        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+        "checkedAt": "2026-10-19T11:51:04.667Z",
+        "headline": "Back-to-back wins, including over Southwell's exact course and distance nine days ago, with just a one-pound rise in the mark; the return to a known successful setup is the strongest case today.",
+        "detail": "Massimo Blue has won twice over this C&D and has a near-matching rating (OR70); a 10-runner sprint can be decided by the pace map or an awkward break. Neither quote nor favouritism raises race confidence.",
+        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+        "sourceUrls": [
+          "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/",
+          "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/1800/47/3",
+          "https://www.racingpost.com/non-runners/2026-10-19/"
+        ],
+        "nonRunners": [],
+        "rivals": [
+          {
+            "horse": "Massimo Blue",
+            "or": 70,
+            "rpr": 77
+          },
+          {
+            "horse": "Jenever",
+            "or": 69,
+            "rpr": 80
+          }
+        ],
         "observedPrice": "5/2"
       }
     },
     {
-      "time": "14:05",
-      "horse": "Almeraq",
-      "betType": "win",
-      "odds": "5/4",
-      "jockey": "Tom Marquand",
-      "trainer": "William Haggas",
-      "or": 123,
-      "draw": 8,
-      "runnerCount": 16,
-      "going": "GOOD",
-      "distance": "6f",
-      "raceClass": "Group 1 Champions Sprint Stakes",
-      "summary": "His dominant Haydock Sprint Cup win and Royal Ascot Jubilee success establish the strongest recent six-furlong Group 1 form on both softer and faster going.",
-      "positivePoints": [
-        "Group 1 six-furlong winner at Royal Ascot on good-to-firm",
-        "Won Haydock Group 1 by four and a quarter lengths",
-        "Proven under contrasting ground conditions"
-      ],
-      "risk": "Sixteen-runner sprint has traffic and pace uncertainty; Division may be better than its recent C&D fourth and Paborus has solid Group-level form.",
-      "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925077/",
-      "course": "Ascot",
-      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
-      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
-      "priceBasis": "observed pre-race reference quote, not accepted wager",
-      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
-      "ts": 117,
-      "rpr": 132,
-      "currentOdds": "5/4",
-      "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
-      "currentOddsSource": "At The Races 17 October morning odds table",
-      "raceDayReview": {
-        "status": "RECHECKED — RETAIN",
-        "checkedAt": "2026-10-17T09:02:23.384Z",
-        "headline": "Almeraq's OR123/RPR132 leads strong alternatives Kind Of Blue OR111/RPR127 and Paborus OR113/RPR124. His dominant Haydock Group 1 win and prior Ascot Group 1 performance over six furlongs demonstrate conditions and class fit.",
-        "detail": "Sixteen runners make pace and traffic important. Kind Of Blue has a recent win and Paborus was second to Almeraq last time; a rating lead is not a guarantee of a clear passage.",
-        "action": "retain",
-        "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925077/",
-          "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
-        ],
-        "rivals": [
-          {
-            "horse": "Kind Of Blue",
-            "or": 111,
-            "rpr": 127
-          },
-          {
-            "horse": "Paborus",
-            "or": 113,
-            "rpr": 124
-          }
-        ],
-        "nonRunners": [],
-        "observedPrice": "5/4"
-      }
-    },
-    {
-      "time": "14:40",
-      "horse": "Kalpana",
-      "betType": "win",
-      "odds": "6/5",
-      "jockey": "Colin Keane",
-      "trainer": "Andrew Balding",
-      "or": 124,
-      "draw": 1,
+      "time": "18:15",
+      "course": "Wolverhampton",
+      "horse": "Style King",
+      "betType": "each-way",
+      "odds": "15/2",
+      "jockey": "Harry Davies",
+      "trainer": "Chris Dwyer",
+      "or": 74,
+      "ts": 81,
+      "rpr": 96,
+      "draw": 10,
       "runnerCount": 12,
-      "going": "GOOD",
-      "distance": "1m4f",
-      "raceClass": "Group 1 Fillies & Mares Stakes",
-      "summary": "Two-time winner of this race and 2026 King George and Yorkshire Oaks winner; the class benchmark over this course and trip if recovered from her Arc effort.",
+      "going": "STANDARD Tapeta",
+      "distance": "6f20y",
+      "raceClass": "Class 3 Handicap (0–90)",
+      "summary": "Three sprint wins since July, including an all-the-way C&D win 17 days ago, supply strong contemporary course-and-distance proof at an each-way price despite the higher grade.",
       "positivePoints": [
-        "Won the last two renewals of this exact race",
-        "King George and Yorkshire Oaks winner in 2026",
-        "Highest official rating in the field: 124"
+        "Three recent victories, latest over exact Wolverhampton C&D",
+        "Recent form 122101 with repeated competitive results",
+        "RPR96 despite comparatively low mark OR74"
       ],
-      "risk": "Only 13 days since a tough Arc campaign; Johanna Walsh has Irish Oaks class and six-pound age weight allowance.",
-      "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925079/",
-      "course": "Ascot",
-      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
-      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
-      "priceBasis": "observed pre-race reference quote, not accepted wager",
-      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
-      "ts": 128,
-      "rpr": 131,
-      "currentOdds": "11/10",
-      "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
-      "currentOddsSource": "At The Races 17 October morning odds table",
+      "risk": "Up 7lb for latest success and now faces Class 3 opposition; stall 10 and likely pace pressure from other front-runners are significant risks. Dandana is an official NR (12 remain). E/W terms must be bookmaker-verified.",
+      "sourceUrl": "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/",
+      "priceSource": "https://www.sportinglife.com/racing/racecards/2026-10-19/wolverhampton/live-show/944220/cavani-best-dressed-handicap",
+      "nonRunners": [
+        "Dandana"
+      ],
+      "rivals": [
+        {
+          "horse": "Knebworth",
+          "or": 86,
+          "rpr": 98
+        },
+        {
+          "horse": "Kind Touch",
+          "or": 86,
+          "rpr": 95
+        }
+      ],
+      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+      "confidenceTier": "EVIDENCE-LED EACH-WAY CANDIDATE — NOT CALIBRATED",
       "raceDayReview": {
-        "status": "RECHECKED — RETAIN",
-        "checkedAt": "2026-10-17T09:02:23.384Z",
-        "headline": "Kalpana retains the best overall rating (OR124, TS128, RPR131) and has two previous course-and-distance wins in this race. Minnie Hauk (OR119/RPR129) and 3yo Sparan Nua (OR118/RPR127, receives six pounds) remain the principal numerical threats.",
-        "detail": "Just 13 days after finishing fifth in the Arc, a substantial recovery unknown. Johanna Walsh is listed as a non-runner by Sporting Life and At The Races; the change reduces the field but is NOT grounds to upgrade the model's confidence by itself.",
-        "action": "retain",
-        "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+        "checkedAt": "2026-10-19T11:51:04.667Z",
+        "headline": "Three sprint wins since July, including an all-the-way C&D win 17 days ago, supply strong contemporary course-and-distance proof at an each-way price despite the higher grade.",
+        "detail": "Up 7lb for latest success and now faces Class 3 opposition; stall 10 and likely pace pressure from other front-runners are significant risks. Dandana is an official NR (12 remain). E/W terms must be bookmaker-verified.",
+        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
         "sourceUrls": [
-          "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925079/",
-          "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
-        ],
-        "rivals": [
-          {
-            "horse": "Minnie Hauk",
-            "or": 119,
-            "rpr": 129
-          },
-          {
-            "horse": "Sparan Nua",
-            "or": 118,
-            "rpr": 127
-          }
+          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/",
+          "https://www.sportinglife.com/racing/racecards/2026-10-19/wolverhampton/live-show/944220/cavani-best-dressed-handicap",
+          "https://www.racingpost.com/non-runners/2026-10-19/"
         ],
         "nonRunners": [
-          "Johanna Walsh"
-        ],
-        "observedPrice": "11/10"
-      }
-    },
-    {
-      "time": "15:20",
-      "horse": "Rayif",
-      "betType": "each-way",
-      "odds": "11/2",
-      "jockey": "Christophe Soumillon",
-      "trainer": "Francis-Henri Graffard",
-      "draw": 1,
-      "runnerCount": 11,
-      "going": "GOOD",
-      "distance": "1m",
-      "raceClass": "Group 1 Queen Elizabeth II Stakes",
-      "summary": "Winner of two Group 1 miles in 2026 and two from two over the distance; his narrow defeat of Zeus Olympios at Deauville provides a meaningful field-level form line.",
-      "positivePoints": [
-        "French 2000 Guineas and Jacques le Marois winner",
-        "Unbeaten from two starts at one mile",
-        "Three-year-old weight allowance against older milers"
-      ],
-      "risk": "No established straight-Ascot-mile record; Gstaad, Talk Of New York, More Thunder and Ten Bob Tony create significant pace and finishing challenges.",
-      "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925076/",
-      "course": "Ascot",
-      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
-      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
-      "priceBasis": "observed pre-race reference quote, not accepted wager",
-      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
-      "or": 120,
-      "ts": 123,
-      "rpr": 131,
-      "currentOdds": "6/1",
-      "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
-      "currentOddsSource": "At The Races 17 October morning odds table",
-      "raceDayReview": {
-        "status": "RECHECKED — RETAIN",
-        "checkedAt": "2026-10-17T09:02:23.384Z",
-        "headline": "Rayif (OR120/RPR131) matches Talk Of New York's peak RPR131 and has two Group 1 victories at the mile. Gstaad is a stronger rival on pure ratings (OR125/RPR133), so Rayif is a place-oriented each-way selection rather than being presented as superior to the field on every measure.",
-        "detail": "Gstaad is rated five pounds higher and has Ascot form; Talk Of New York is equally rated and won 22 days ago. Rayif has not raced for 62 days and must handle Ascot's straight mile.",
-        "action": "retain",
-        "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925076/",
-          "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+          "Dandana"
         ],
         "rivals": [
           {
-            "horse": "Gstaad",
-            "or": 125,
-            "rpr": 133
+            "horse": "Knebworth",
+            "or": 86,
+            "rpr": 98
           },
           {
-            "horse": "Talk Of New York",
-            "or": 120,
-            "rpr": 131
+            "horse": "Kind Touch",
+            "or": 86,
+            "rpr": 95
           }
         ],
-        "nonRunners": [],
-        "observedPrice": "6/1"
+        "observedPrice": "15/2"
       }
     },
     {
-      "time": "16:00",
-      "horse": "Ombudsman",
+      "time": "19:15",
+      "course": "Wolverhampton",
+      "horse": "The Anthony Gover",
       "betType": "win",
-      "odds": "7/4",
-      "jockey": "William Buick",
-      "trainer": "John & Thady Gosden",
-      "or": 132,
-      "draw": 2,
-      "runnerCount": 6,
-      "going": "GOOD",
-      "distance": "1m2f",
-      "raceClass": "Group 1 Champion Stakes",
-      "summary": "Highest-rated contender, dominant Prince of Wales's winner at Ascot and likely better suited by good ground than the rain-softened going at York last time.",
+      "winRank": "NB",
+      "odds": "10/3",
+      "jockey": "Cian Horgan (5lb)",
+      "trainer": "Dr Richard Newland",
+      "or": 67,
+      "draw": 5,
+      "runnerCount": 11,
+      "going": "STANDARD Tapeta",
+      "distance": "1m1f104y",
+      "raceClass": "Class 5 Handicap (0–70)",
+      "summary": "Won twice over this C&D before finishing third by only one length at the same track; a better stall-five draw and 5lb claimer aid the return to proven conditions.",
       "positivePoints": [
-        "Top official rating of 132",
-        "Multiple Group 1 wins in 2026, including Ascot",
-        "Stable pacemaker may ensure a suitable honest pace"
+        "Two wins over this Wolverhampton C&D in last three outings",
+        "One-length C&D third latest shows handicap still workable",
+        "5lb claim and middle draw five avoid obvious top-weight or wide-stall drawbacks"
       ],
-      "risk": "Calandagan defeated him in this race last year and returns fresh; a pacemaker does not guarantee the planned race shape.",
-      "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925075/",
-      "course": "Ascot",
-      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
-      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
-      "priceBasis": "observed pre-race reference quote, not accepted wager",
-      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
-      "ts": 122,
-      "rpr": 140,
-      "currentOdds": "15/8",
-      "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
-      "currentOddsSource": "At The Races 17 October morning odds table",
+      "risk": "Albertini Star won recently at Sandown and could improve at this trip but has less established Wolverhampton Tapeta evidence; Moonjid has stronger OR70 and recent placed form. Avoid assuming repeat victories inevitable.",
+      "sourceUrl": "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/",
+      "priceSource": "https://www.timeform.com/horse-racing/odds/wolverhampton/2026-10-19/1915/58/7",
+      "rivals": [
+        {
+          "horse": "Albertini Star",
+          "or": 68,
+          "rpr": 80
+        },
+        {
+          "horse": "Moonjid",
+          "or": 70,
+          "rpr": 78
+        }
+      ],
+      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
       "raceDayReview": {
-        "status": "RECHECKED — RETAIN",
-        "checkedAt": "2026-10-17T09:02:23.384Z",
-        "headline": "Ombudsman leads the field with OR132/RPR140, compared with Calandagan's OR127/RPR138 at identical 9st7lb weights. The Ascot Group 1 win over this course/distance and performance on good ground outweigh his latest softer-ground York disappointment in this assessment.",
-        "detail": "Calandagan won this race last year and has a higher TS125 than Ombudsman's TS122. Ombudsman was fourth at York last start; race shape and recovery of both runners remain credible uncertainty.",
-        "action": "retain",
-        "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+        "checkedAt": "2026-10-19T11:51:04.667Z",
+        "headline": "Won twice over this C&D before finishing third by only one length at the same track; a better stall-five draw and 5lb claimer aid the return to proven conditions.",
+        "detail": "Albertini Star won recently at Sandown and could improve at this trip but has less established Wolverhampton Tapeta evidence; Moonjid has stronger OR70 and recent placed form. Avoid assuming repeat victories inevitable.",
+        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
         "sourceUrls": [
-          "https://www.racingpost.com/racecards/2/ascot/2026-10-17/925075/",
-          "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
-        ],
-        "rivals": [
-          {
-            "horse": "Calandagan",
-            "or": 127,
-            "rpr": 138
-          }
+          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/",
+          "https://www.timeform.com/horse-racing/odds/wolverhampton/2026-10-19/1915/58/7",
+          "https://www.racingpost.com/non-runners/2026-10-19/"
         ],
         "nonRunners": [],
-        "observedPrice": "15/8"
+        "rivals": [
+          {
+            "horse": "Albertini Star",
+            "or": 68,
+            "rpr": 80
+          },
+          {
+            "horse": "Moonjid",
+            "or": 70,
+            "rpr": 78
+          }
+        ],
+        "observedPrice": "10/3"
       }
     },
     {
-      "time": "16:35",
-      "horse": "Ebt's Guard",
-      "betType": "each-way",
-      "odds": "9/1",
-      "jockey": "Lewis Edmunds",
-      "trainer": "William Muir & Chris Grassick",
-      "or": 102,
-      "draw": 21,
-      "runnerCount": 20,
-      "going": "GOOD",
-      "distance": "1m",
-      "raceClass": "Class 2 Balmoral Handicap",
-      "summary": "Second in last year's Balmoral, fourth in the Royal Hunt Cup and a close Doncaster third last time; the strongest place-oriented combination of recent big-field form and course experience.",
+      "time": "20:30",
+      "course": "Southwell",
+      "horse": "Spec Of Light",
+      "betType": "win",
+      "odds": "9/4",
+      "jockey": "Rose Dawes (3lb)",
+      "trainer": "Tony Forbes",
+      "or": 57,
+      "draw": 7,
+      "runnerCount": 9,
+      "going": "STANDARD Tapeta",
+      "distance": "1m3f23y",
+      "raceClass": "Class 6 Handicap (0–60)",
+      "summary": "Won over this precise C&D thirteen days ago, and the second and seventh from that race subsequently won; only four pounds higher, with a three-pound claim.",
       "positivePoints": [
-        "Runner-up in last year's corresponding handicap",
-        "Fourth over Ascot's straight mile in June",
-        "Close third of seventeen in September"
+        "Won latest Southwell C&D race 13 days ago",
+        "Two subsequent winners strengthen the latest form line",
+        "OR57 after 4lb rise, with Rose Dawes claiming 3lb"
       ],
-      "risk": "Open twenty-runner handicap; Scoville and Gavriel have stronger recent winning form. Each-way terms must be checked with the bookmaker.",
-      "sourceUrl": "https://www.racingpost.com/racecards/2/ascot/2026-10-17/927660/",
-      "course": "Ascot",
-      "source": "Sporting Life declared racecard / Timeform form notes, cross-checked Racing Post",
-      "selectionPublishedAt": "2026-10-16T23:19:59.818Z",
-      "priceBasis": "observed pre-race reference quote, not accepted wager",
-      "confidenceTier": "FORM ASSESSMENT — NOT CALIBRATED",
-      "ts": 107,
-      "rpr": 121,
-      "currentOdds": "9/1",
-      "currentOddsCheckedAt": "2026-10-17T09:02:23.384Z",
-      "currentOddsSource": "At The Races 17 October morning odds table",
+      "risk": "Had a favorable front-running setup last time and may not reproduce it from stall seven; We've Got This ran second at Newcastle recently, while a 4lb higher rating still erodes the earlier advantage.",
+      "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929536/",
+      "priceSource": "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/2030/47/8",
+      "rivals": [
+        {
+          "horse": "We've Got This",
+          "or": 59,
+          "rpr": 71
+        },
+        {
+          "horse": "Symphony's Song",
+          "or": 57,
+          "rpr": 70
+        }
+      ],
+      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
       "raceDayReview": {
-        "status": "RECHECKED — RETAIN",
-        "checkedAt": "2026-10-17T09:02:23.384Z",
-        "headline": "Ebt's Guard (OR102/RPR121) has a recent third in a 17-runner handicap plus proven Ascot big-field form: fourth in the Hunt Cup and runner-up in this Balmoral last year. Scoville (OR99/RPR121) and Gavriel (OR101/RPR121) have comparable ratings but less of that exact race-history evidence.",
-        "detail": "Big-field 20-runner mile and stall 21 create major tactical uncertainty. Scoville is 3lb lower-rated and has a more recent win; high-stall pace distribution may determine whether Ebt's Guard obtains a tow. Crown Of Oaks is a confirmed non-runner.",
-        "action": "retain",
-        "sourceType": "independent reasoning from published runner, rating, age, weight, form and surface data",
+        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+        "checkedAt": "2026-10-19T11:51:04.667Z",
+        "headline": "Won over this precise C&D thirteen days ago, and the second and seventh from that race subsequently won; only four pounds higher, with a three-pound claim.",
+        "detail": "Had a favorable front-running setup last time and may not reproduce it from stall seven; We've Got This ran second at Newcastle recently, while a 4lb higher rating still erodes the earlier advantage.",
+        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
         "sourceUrls": [
-          "https://www.racingpost.com/racecards/2/ascot/2026-10-17/927660/",
-          "https://www.sportinglife.com/racing/fast-cards/120652/2026-10-17/ascot"
+          "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929536/",
+          "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/2030/47/8",
+          "https://www.racingpost.com/non-runners/2026-10-19/"
         ],
+        "nonRunners": [],
         "rivals": [
           {
-            "horse": "Scoville",
-            "or": 99,
-            "rpr": 121
+            "horse": "We've Got This",
+            "or": 59,
+            "rpr": 71
           },
           {
-            "horse": "Gavriel",
-            "or": 101,
-            "rpr": 121
+            "horse": "Symphony's Song",
+            "or": 57,
+            "rpr": 70
           }
         ],
-        "nonRunners": [
-          "Crown Of Oaks"
-        ],
-        "observedPrice": "9/1"
+        "observedPrice": "9/4"
       }
     }
   ],
@@ -2442,50 +3195,46 @@
     ]
   },
   "morningRecheck": {
-    "updatedAt": "2026-10-17T09:02:23.384Z",
-    "meetingCount": 1,
-    "scheduledRaces": 7,
+    "updatedAt": "2026-10-19T11:51:04.667Z",
+    "meetingCount": 6,
+    "scheduledRaces": 47,
     "going": {
-      "Ascot": "GOOD, GoingStick straight 8.1 / round 7.3"
+      "Bath": "GOOD TO SOFT, good in places",
+      "Gowran Park": "YIELDING",
+      "Plumpton": "GOOD, good to soft in places hurdle; chase good to firm in places",
+      "Pontefract": "SOFT",
+      "Southwell": "STANDARD Tapeta",
+      "Wolverhampton": "STANDARD Tapeta"
     },
     "confirmedNonRunners": [
       {
-        "horse": "Johanna Walsh",
-        "race": "14:40",
-        "sources": [
-          "Sporting Life fast card",
-          "At The Races live 12-runner card"
-        ]
+        "horse": "Beorma",
+        "race": "15:30 Plumpton",
+        "source": "https://www.racingpost.com/non-runners/2026-10-19/"
       },
       {
-        "horse": "Crown Of Oaks",
-        "race": "16:35",
-        "sources": [
-          "Racing Post live card",
-          "Sporting Life fast card"
-        ]
+        "horse": "Dandana",
+        "race": "18:15 Wolverhampton",
+        "source": "https://www.racingpost.com/non-runners/2026-10-19/"
       }
     ],
-    "incorrectPreliminaryNonRunner": "Opportunity remains a runner in 13:30; do not treat the initial mention as confirmed.",
     "adjustments": [
       {
-        "course": "Ascot",
-        "time": "14:40",
-        "oldRunners": 13,
-        "currentRunners": 12,
-        "note": "Johanna Walsh NR"
+        "course": "Plumpton",
+        "time": "15:30",
+        "currentRunners": 5,
+        "note": "Beorma NR"
       },
       {
-        "course": "Ascot",
-        "time": "16:35",
-        "oldRunners": 21,
-        "currentRunners": 20,
-        "note": "Crown Of Oaks NR"
+        "course": "Wolverhampton",
+        "time": "18:15",
+        "currentRunners": 12,
+        "note": "Dandana NR"
       }
     ],
     "unmodifiedPicks": 7,
     "changedPicks": 0,
-    "methodology": "No tip-text inputs. Compare OR, RPR, TS, age allowances, recent form, historical course/going suitability and named rival strength; market quotes shown but excluded from confidence scoring.",
-    "dataLimitations": "Published ratings summarize past performances, not a licensed sectionals-based or calibrated win-probability model."
+    "methodology": "No direct use of published tipster selections or verdicts; reason independently from ratings, going, current form, course and trip, rider allowances and opposition. Odds displayed as separate evidence.",
+    "dataLimitations": "No evidence of calibrated probabilities or exhaustive sectional coverage; latest price may move."
   }
 }
