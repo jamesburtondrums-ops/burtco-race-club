@@ -349,7 +349,62 @@
     "methodology": "No direct use of published tipster selections or verdicts; reason independently from ratings, going, current form, course and trip, rider allowances and opposition. Odds displayed as separate evidence.",
     "dataLimitations": "No evidence of calibrated probabilities or exhaustive sectional coverage; latest price may move."
   },
-  "raceDayDecisionLog": [],
+  "raceDayDecisionLog": [
+    {
+      "checkedAt": "2026-10-19T12:31:11.374Z",
+      "horse": "Dreams Galore",
+      "course": "Bath",
+      "time": "14:17",
+      "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
+      "summary": "RETAIN WIN — Enamored confirmed non-runner; field now nine. Bath remains good-to-soft (good in places), with light rain and GoingStick 5.1. No automatic upgrade: turf/soft-ground suitability is less proven than recent Tapeta form.",
+      "sourceUrls": [
+        "https://www.racingpost.com/non-runners/",
+        "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/"
+      ],
+      "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
+    },
+    {
+      "checkedAt": "2026-10-19T12:31:11.374Z",
+      "horse": "Go Lockers Go",
+      "course": "Southwell",
+      "time": "18:00",
+      "action": "RETAIN_WIN_MARKET_DIVERGENCE",
+      "summary": "RETAIN WIN (NAP) WITH MARKET-DIVERGENCE WARNING — current multi-bookmaker comparison shows approximately 6/1–15/2, versus original frozen 5/2 reference. This is a substantial unverified-cause drift, not evidence that his known C&D form has disappeared.",
+      "sourceUrls": [
+        "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/18%3A00/winner",
+        "https://www.whichbookie.co.uk/horse-racing/southwell/1800",
+        "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/"
+      ],
+      "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
+    },
+    {
+      "checkedAt": "2026-10-19T12:31:11.374Z",
+      "horse": "Style King",
+      "course": "Wolverhampton",
+      "time": "18:15",
+      "action": "WITHDRAW_EACH_WAY_FOR_FRESH_BETTING",
+      "summary": "WITHDRAWN FROM FRESH EACH-WAY RECOMMENDATIONS (POST-PUBLICATION, original snapshot retained). Later market quotes have widened from frozen 15/2 to approximately 14/1–18/1, while Class 3 opposition, a 7lb rise and stall 10 with pace pressure make the earlier place case insufficiently robust.",
+      "sourceUrls": [
+        "https://www.oddschecker.com/horse-racing/2026-10-19-wolverhampton/18%3A15/winner",
+        "https://www.whichbookie.co.uk/horse-racing/wolverhampton/1815",
+        "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/"
+      ],
+      "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
+    },
+    {
+      "checkedAt": "2026-10-19T12:31:11.374Z",
+      "horse": "The Anthony Gover",
+      "course": "Wolverhampton",
+      "time": "19:15",
+      "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
+      "summary": "RETAIN WIN — Reveur newly confirmed non-runner; ten active runners versus eleven in frozen publication. No confidence upgrade from the removal of an outsider.",
+      "sourceUrls": [
+        "https://www.racingpost.com/non-runners/",
+        "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/"
+      ],
+      "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
+    }
+  ],
   "postRaceAudits": [
     {
       "asOfDate": "2026-10-15",
@@ -2721,6 +2776,22 @@
           }
         ],
         "observedPrice": "3/1"
+      },
+      "latestRaceDayReview": {
+        "checkedAt": "2026-10-19T12:31:11.374Z",
+        "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
+        "headline": "RETAIN WIN — Enamored confirmed non-runner; field now nine. Bath remains good-to-soft (good in places), with light rain and GoingStick 5.1. No automatic upgrade: turf/soft-ground suitability is less proven than recent Tapeta form.",
+        "detail": "Original ten-runner published snapshot preserved. Enamored is not a major rated rival and her withdrawal does not remove Chief Minister or Duty's Call. Latest official going reported via Racing Post. No replacement recommended.",
+        "currentRunnerCount": 9,
+        "confirmedNonRunners": [
+          "Enamored"
+        ],
+        "latestPriceObservation": null,
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/",
+          "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/"
+        ],
+        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
       }
     },
     {
@@ -2930,6 +3001,26 @@
           }
         ],
         "observedPrice": "5/2"
+      },
+      "latestRaceDayReview": {
+        "checkedAt": "2026-10-19T12:31:11.374Z",
+        "action": "RETAIN_WIN_MARKET_DIVERGENCE",
+        "headline": "RETAIN WIN (NAP) WITH MARKET-DIVERGENCE WARNING — current multi-bookmaker comparison shows approximately 6/1–15/2, versus original frozen 5/2 reference. This is a substantial unverified-cause drift, not evidence that his known C&D form has disappeared.",
+        "detail": "Re-examined Massimo Blue (OR70, two C&D wins; quoted around 2/1–9/4), Jenever (RPR80), and Spirit Of Applause (recent 022455). Go Lockers Go won latest C&D only by a head and a 10-runner sprint remains vulnerable to break/pace. Oddschecker and WhichBookie agree on later wider prices; Timeform's earlier 5/2 is not treated as a simultaneous quote. No confidence increase or automatic removal solely on odds.",
+        "currentRunnerCount": 10,
+        "confirmedNonRunners": [],
+        "latestPriceObservation": {
+          "original": "5/2",
+          "latestRange": "6/1–15/2",
+          "source": "Oddschecker multi-bookmaker market",
+          "asOf": "2026-10-19T12:31:11.374Z"
+        },
+        "sourceUrls": [
+          "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/18%3A00/winner",
+          "https://www.whichbookie.co.uk/horse-racing/southwell/1800",
+          "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/"
+        ],
+        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
       }
     },
     {
@@ -3003,7 +3094,30 @@
           }
         ],
         "observedPrice": "15/2"
-      }
+      },
+      "latestRaceDayReview": {
+        "checkedAt": "2026-10-19T12:31:11.374Z",
+        "action": "WITHDRAW_EACH_WAY_FOR_FRESH_BETTING",
+        "headline": "WITHDRAWN FROM FRESH EACH-WAY RECOMMENDATIONS (POST-PUBLICATION, original snapshot retained). Later market quotes have widened from frozen 15/2 to approximately 14/1–18/1, while Class 3 opposition, a 7lb rise and stall 10 with pace pressure make the earlier place case insufficiently robust.",
+        "detail": "Knebworth's current official rating is 90 (not 86 as in original rival snapshot), RPR99; Kind Touch OR86/RPR96, recent seconds. Dandana remains a confirmed non-runner; 12 active. Standard each-way offers display four places at 1/5, but the extra place does not remove the elevated class/pace risks. This is a prospective withdrawal, NOT a retroactive deletion or a horse non-runner. No replacement justified from the checked field.",
+        "currentRunnerCount": 12,
+        "confirmedNonRunners": [
+          "Dandana"
+        ],
+        "latestPriceObservation": {
+          "original": "15/2",
+          "latestRange": "14/1–18/1",
+          "source": "Oddschecker and WhichBookie multi-bookmaker markets",
+          "asOf": "2026-10-19T12:31:11.374Z"
+        },
+        "sourceUrls": [
+          "https://www.oddschecker.com/horse-racing/2026-10-19-wolverhampton/18%3A15/winner",
+          "https://www.whichbookie.co.uk/horse-racing/wolverhampton/1815",
+          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/"
+        ],
+        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
+      },
+      "prospectiveBettingStatus": "WITHDRAWN_AFTER_PUBLICATION"
     },
     {
       "time": "19:15",
@@ -3070,6 +3184,22 @@
           }
         ],
         "observedPrice": "10/3"
+      },
+      "latestRaceDayReview": {
+        "checkedAt": "2026-10-19T12:31:11.374Z",
+        "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
+        "headline": "RETAIN WIN — Reveur newly confirmed non-runner; ten active runners versus eleven in frozen publication. No confidence upgrade from the removal of an outsider.",
+        "detail": "The leading live opponents Albertini Star and Moonjid remain; same Standard Tapeta, C&D and jockey claim. No demonstrated material change in pace from Reveur's removal.",
+        "currentRunnerCount": 10,
+        "confirmedNonRunners": [
+          "Reveur"
+        ],
+        "latestPriceObservation": null,
+        "sourceUrls": [
+          "https://www.racingpost.com/non-runners/",
+          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/"
+        ],
+        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
       }
     },
     {
@@ -3236,5 +3366,19 @@
     "changedPicks": 0,
     "methodology": "No direct use of published tipster selections or verdicts; reason independently from ratings, going, current form, course and trip, rider allowances and opposition. Odds displayed as separate evidence.",
     "dataLimitations": "No evidence of calibrated probabilities or exhaustive sectional coverage; latest price may move."
+  },
+  "latestReviewTimestamp": "2026-10-19T12:31:11.374Z",
+  "currentProspectiveStatus": {
+    "asOf": "2026-10-19T12:31:11.374Z",
+    "originalPublishedSelections": 7,
+    "originalWin": 5,
+    "originalEachWay": 2,
+    "activeProspectiveWin": 5,
+    "activeProspectiveEachWay": 1,
+    "withdrawnAfterPublication": [
+      "Style King"
+    ],
+    "paperBetStatus": "RESEARCH ONLY; NO WAGERS CREATED OR REINSTATED",
+    "note": "Original seven selections remain in immutable historical roster; post-publication status is separate. Excludes races after scheduled off time for fresh consideration."
   }
 }
