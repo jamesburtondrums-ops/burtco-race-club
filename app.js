@@ -439,6 +439,22 @@ function missedSelectionsReview(){
  '<div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>Horse</th><th>Finish</th><th>SP</th><th>Verification</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
  '<p class="meta">One horse per featured race remains the rule. Outcomes reported by the user are labelled separately from independently verified racing results.</p></section>';
 }
+function overnightResearchPanel(){
+ const d=state.data||{};
+ const watches=chronological(d.overnightShortlist||[]);
+ if(!watches.length)return '';
+ const cards=watches.map(x=>{
+  const ew=x.betType==='each-way';
+  const threats=(x.rivals||[]).map(r=>'<li><b>'+escapeHtml(r.horse)+'</b>: '+escapeHtml(r.whyThreat||'Further comparison required')+'</li>').join('');
+  return '<article class="bet-selection-card"><div class="bet-selection-top"><span class="bet-selection-time">'+escapeHtml(x.time)+'</span><span class="bet-selection-type '+(ew?'is-ew':'is-win')+'">'+(ew?'PROVISIONAL EACH WAY':'PROVISIONAL WIN')+'</span></div>'+
+   '<div class="bet-selection-main"><div><h3>'+escapeHtml(x.horse)+'</h3><p>'+escapeHtml(x.course)+' · '+escapeHtml(x.raceClass)+' · '+escapeHtml(x.distance)+' · '+escapeHtml(x.going)+'</p></div><div class="bet-selection-price"><span>Observed early quote</span><strong>'+escapeHtml(x.odds)+'</strong></div></div>'+
+   '<div class="bet-selection-meta"><span>Jockey: '+escapeHtml(x.jockey)+'</span><span>Trainer: '+escapeHtml(x.trainer)+'</span><span>Declared field: '+escapeHtml(x.runnerCount)+'</span><span>OR '+escapeHtml(x.or)+'</span></div>'+
+   '<p class="bet-selection-summary">'+escapeHtml(x.summary)+'</p>'+
+   '<details class="bet-selection-details"><summary>Evidence, alternative winners and risks</summary><ul>'+(x.positivePoints||[]).map(p=>'<li>'+escapeHtml(p)+'</li>').join('')+'</ul><p><strong>Other credible runners:</strong></p><ul>'+threats+'</ul><p><strong>What could go wrong:</strong> '+escapeHtml(x.risk)+'</p></details>'+
+   '<div class="bet-selection-bottom"><span>Not yet an approved Bet Selection</span><a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Full racecard ↗</a></div></article>';
+ }).join('');
+ return '<section aria-label="Provisional overnight research"><div class="page-intro"><div><div class="eyebrow">21 OCTOBER 2026 · RESEARCH ONLY</div><h2>Overnight shortlist — morning review required</h2><p>Four field-compared research watches. None is an approved bet, no NAP is assigned, and no paper or actual wager has been recorded. All five meetings are linked under All runners, but only the four shortlisted race fields were compared in depth overnight.</p></div><div class="quick-stats"><span><b>'+watches.length+'</b> provisional watches</span><span><b>0</b> approved bets</span></div></div><div class="bet-selection-grid">'+cards+'</div></section>';
+}
 function today(){
  const d=state.data||{};
  const originalPicks=chronological(d.betSelections||[]);
@@ -471,8 +487,8 @@ function today(){
   '<div class="bet-selection-bottom">'+nonRunners+resultBadge(x)+'<a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Racecard data ↗</a>'+(isEw?'<small>Check bookmaker each-way terms and paid places</small>':'')+'</div></article>';
  }).join('');;
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(d.snapshotDate||'')+' · UK & IRELAND</div><h2>Bet Selections</h2><p>One horse per race, with the bet type shown directly beside each selection. Horse/race data determines confidence, independently of price or favouritism.</p></div><div class="quick-stats"><span><b>'+picks.length+'</b> selections</span><span><b>'+picks.filter(p=>p.betType==='win').length+'</b> WIN</span><span><b>'+picks.filter(p=>p.betType==='each-way').length+'</b> EACH WAY</span></div></section>'+
-  '<div class="bet-selection-notice">'+(d.researchResultsStatus?.asOfDate===d.snapshotDate?'FINAL VERIFIED RESULTS · All '+escapeHtml(d.researchResultsStatus.originalSelections)+' runners finished. Published outcomes are shown on the selection cards; no retrospective paper wagers created.':'PRE-RACE RESEARCH · '+(d.meetings||[]).map(m=>escapeHtml(m.course)+' '+escapeHtml(m.going)).join(' · ')+'. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.')+'</div>'+
-  '<div class="bet-selection-grid">'+(cards||'<div class="panel">No selections published yet.</div>')+'</div>'+withheldNotice+historicalPanel+audit;
+  '<div class="bet-selection-notice">'+(d.overnightShortlist?.length?'OVERNIGHT SHORTLIST IS RESEARCH ONLY, NOT APPROVED BETS. Morning rechecks needed for weather, non-runners, rival form, ground and each-way terms.':d.researchResultsStatus?.asOfDate===d.snapshotDate?'FINAL VERIFIED RESULTS · All '+escapeHtml(d.researchResultsStatus.originalSelections)+' runners finished. Published outcomes are shown on the selection cards; no retrospective paper wagers created.':'PRE-RACE RESEARCH · '+(d.meetings||[]).map(m=>escapeHtml(m.course)+' '+escapeHtml(m.going)).join(' · ')+'. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.')+'</div>'+
+  '<div class="bet-selection-grid">'+(cards||(d.overnightShortlist?.length?'':'<div class="panel">No approved Bet Selections yet.</div>'))+'</div>'+overnightResearchPanel()+withheldNotice+historicalPanel+audit;
 }
 function midshots(){const d=state.data||{},ms=exclusiveSelectionGroups().midshotsToday;return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> unique race selections</span><span><b>6/1–18/1</b> reference price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No distinct mid-shot selection currently qualifies.") }
 function longshots(){const d=state.data||{},ls=exclusiveSelectionGroups().longshotsToday;return '<section class="page-intro long-intro"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p><div class="quick-stats"><span><b>'+ls.length+'</b> unique race selections</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum reference price</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No distinct longshot selection currently qualifies.") }
