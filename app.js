@@ -423,7 +423,7 @@ function morningCheckPanel(){
  const checked=review.updatedAt?new Date(review.updatedAt).toLocaleString('en-GB',{timeZone:'Europe/London',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'recently';
  const changes=(review.adjustments||[]).map(a=>escapeHtml(a.course)+' '+escapeHtml(a.time)+' · '+(a.oldRunners?('field '+a.oldRunners+' → '):'')+a.currentRunners+' declared'+(a.note?' ('+escapeHtml(a.note)+')':'')).join(' · ');
  return '<section class="morning-check"><div><strong>Morning racecard recheck</strong><span>Reviewed '+checked+' · '+review.meetingCount+' meetings / '+review.scheduledRaces+' races</span></div>'+
- '<p>Newmarket: '+escapeHtml(review.going?.Newmarket||'going to confirm')+'. York: '+escapeHtml(review.going?.York||'going to confirm')+'. '+changes+'.</p>'+
+ '<p>'+Object.entries(review.going||{}).map(([course,ground])=>escapeHtml(course)+': '+escapeHtml(ground)).join(' · ')+(changes?' · '+changes:'')+'.</p>'+
  '<small>Morning selections are conditional: late non-runners, changing ground and bookmaker odds can alter suitability. Market strength is not a guaranteed win percentage.</small></section>';
 }
 // Retrospective diagnostic only: excluded runners never become selections,
@@ -443,6 +443,8 @@ function today(){
  const d=state.data||{}, picks=chronological(d.betSelections||[]);
  const review=d.fiveDayAnalysis||null;
  const audit=review?'<section class="panel bet-audit"><h3>Earlier five-day model review</h3><p>12–16 October: the key correction is that older course history, rival withdrawals and market moves must not outweigh current class, weight, going, pace and opponent assessment.</p><div class="bet-audit-days">'+(review.days||[]).map(day=>'<span><strong>'+escapeHtml(day.date.slice(5))+'</strong> '+day.winners+'/'+day.runners+' winners</span>').join('')+'</div><p class="meta">Earlier five-day sample only; this analysis is historical, not a calibrated future forecast. Paper bet history remains unchanged.</p></section>':'';
+ const previous=d.latestPostRaceAudit?.asOfDate==="2026-10-19"?d.latestPostRaceAudit:null;
+ const historicalPanel=previous?'<section class="panel bet-audit" aria-label="Previous day research performance"><h3>19 October: verified original selections</h3><p><b>2/7 winners (28.6%)</b> across the original seven published research selections; <b>2/5 WIN (40%)</b>, plus two runner-up WIN selections and no placed each-way runners. Original later-withdrawn selections remain in the denominator.</p><p>'+previous.runnerResults.map(r=>'<span><b>'+escapeHtml(r.horse)+'</b> '+escapeHtml(ordinal(r.finished))+' ('+escapeHtml(r.sp)+' SP)</span>').join(' · ')+'</p><small>Research results, not settled paper wagers: no stakes or retrospective profit credited. This small sample does not establish improved model accuracy.</small></section>':'';
  const cards=picks.map(x=>{
   const isEw=x.betType==='each-way',points=(x.positivePoints||[]).map(p=>'<li>'+escapeHtml(p)+'</li>').join('');
   const review=x.raceDayReview||null;
@@ -460,8 +462,8 @@ function today(){
   '<div class="bet-selection-bottom">'+nonRunners+resultBadge(x)+'<a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Racecard data ↗</a>'+(isEw?'<small>Check bookmaker each-way terms and paid places</small>':'')+'</div></article>';
  }).join('');;
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(d.snapshotDate||'')+' · UK & IRELAND</div><h2>Bet Selections</h2><p>One horse per race, with the bet type shown directly beside each selection. Horse/race data determines confidence, independently of price or favouritism.</p></div><div class="quick-stats"><span><b>'+picks.length+'</b> selections</span><span><b>'+picks.filter(p=>p.betType==='win').length+'</b> WIN</span><span><b>'+picks.filter(p=>p.betType==='each-way').length+'</b> EACH WAY</span></div></section>'+
-  '<div class="bet-selection-notice">PRE-RACE RESEARCH · Going varies by track: Bath good-to-soft, Plumpton good, Pontefract soft, and both all-weather tracks standard Tapeta. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.</div>'+
-  '<div class="bet-selection-grid">'+(cards||'<div class="panel">No selections published yet.</div>')+'</div>'+audit;
+  '<div class="bet-selection-notice">PRE-RACE RESEARCH · '+(d.meetings||[]).map(m=>escapeHtml(m.course)+' '+escapeHtml(m.going)).join(' · ')+'. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.</div>'+
+  '<div class="bet-selection-grid">'+(cards||'<div class="panel">No selections published yet.</div>')+'</div>'+historicalPanel+audit;
 }
 function midshots(){const d=state.data||{},ms=exclusiveSelectionGroups().midshotsToday;return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> unique race selections</span><span><b>6/1–18/1</b> reference price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No distinct mid-shot selection currently qualifies.") }
 function longshots(){const d=state.data||{},ls=exclusiveSelectionGroups().longshotsToday;return '<section class="page-intro long-intro"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p><div class="quick-stats"><span><b>'+ls.length+'</b> unique race selections</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum reference price</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No distinct longshot selection currently qualifies.") }
@@ -489,7 +491,12 @@ function history(){
    (result?.sourceUrl?'<a href="'+escapeHtml(result.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Verify published result ↗</a>':'')+'</div></details>';
  }).join('');
  const archive=(state.ledger?.researchWatchHistory||[]).map(x=>'<section class="panel"><h3>'+escapeHtml(x.date)+' Verified results review</h3><p>'+escapeHtml(x.summary)+'</p><p>'+x.selected.map(p=>escapeHtml(p.horse)+' '+ordinal(p.position)+' ('+escapeHtml(p.sp)+' SP)').join(' · ')+'</p><small>Removed candidates are research-only; excluded from paper profit.</small></section>').join('');
- return intro+archive+'<div class="history-list">'+(rows||'<div class="panel">No recorded bets yet.</div>')+'</div>';
+ const published=state.data?.latestPostRaceAudit;
+ const researchResults=published?.runnerResults?.length?
+  '<section class="panel"><h3>'+escapeHtml(published.asOfDate)+' verified research results (not paper bets)</h3><p>'+escapeHtml(published.strikeRateStatus)+'</p>'+
+  '<div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>Course / time</th><th>Horse</th><th>Bet</th><th>Finish</th><th>Early / SP</th></tr></thead><tbody>'+
+  published.runnerResults.map(r=>'<tr><td>'+escapeHtml(r.course)+' '+escapeHtml(r.time)+'</td><td>'+escapeHtml(r.horse)+(r.lateWithdrawn?' (withdrawn from fresh E/W, preserved in original)':'')+'</td><td>'+escapeHtml(r.originCategory==='ORIGINAL_WIN'?'WIN':'EACH WAY')+'</td><td>'+escapeHtml(ordinal(r.finished))+'</td><td>'+escapeHtml(r.selectedEarlyOdds)+' / '+escapeHtml(r.sp)+'</td></tr>').join('')+'</tbody></table></div><p class="meta">No retrospective stakes or fictional profits added to the paper bank.</p></section>':'';
+ return intro+researchResults+archive+'<div class="history-list">'+(rows||'<div class="panel">No recorded bets yet.</div>')+'</div>';
 }
 
 function allRunners(){
