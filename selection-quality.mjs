@@ -84,7 +84,7 @@ export function assessUnifiedBetReadiness(pick){
        pick.winAssessment.factors.courseGoingTrip.grade!=='strong'||
        pick.winAssessment.factors.opposition.grade!=='strong'))
      return fail('NAP requires LOW risk and strong conditions and opposition evidence');
-   const p=String(pick.odds||'').match(/^(\\d+)\\s*\\/\\s*(\\d+)$/);
+   const p=String(pick.odds||'').match(/^(\d+)\s*\/\s*(\d+)$/);
    if(p&&Number(p[2])>0&&Number(p[1])/Number(p[2])<1)
      return fail('WIN quote below evens, not eligible for published selection');
    return {qualified:true,reason:'Source-backed WIN selection and opposition review completed',level:q.level};
