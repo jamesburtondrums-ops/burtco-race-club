@@ -220,12 +220,12 @@
         "Recheck declared runners, going, jockey and each-way bookmaker place terms before off; no invented certainty or profit."
       ],
       "2026-10-20": [
-        "Monday 19 Oct original frozen picks were 2/7 winners including 2/5 original WIN; withdrawals are not erased.",
-        "Win selections finishing second are failures for win strike rate, not credited winners.",
-        "Every original pick retained in retrospective denominator; research results separated from settled paper ledger.",
-        "Treat large drifts as alerts, not automatic certainty changes.",
-        "Focus current ground and rival handicap/class contrasts before selection.",
-        "No claims of validated predictive improvement from short samples."
+        "Today: one published winner from five (20%), four runners in top three (80%); only original WIN runner Wodao won (1/4).",
+        "Win-conversion matters more than top-three finishes for WIN-bet strike rate; track separately.",
+        "NAP Conquer The Breeze: major underperformance after return from successful chase form to hurdles, requiring stronger cross-discipline proof.",
+        "Danehill Star paid-place research candidate 2/12; verify bookmaker EW terms, do not credit non-existent wagers.",
+        "Preserve Wodao's observed pre-race 2/1 separately from later 6/4 SP.",
+        "Compare prospective probabilities before and after material track, weight or rival changes, not post-hoc selections."
       ]
     },
     "calibrationStatus": "No verified, held-out backtest or proven statistically calibrated win probabilities."
@@ -725,161 +725,276 @@
         "Top-two rate is not the win strike rate.",
         "Early quoted prices stay separate from SP."
       ]
+    },
+    {
+      "asOfDate": "2026-10-20",
+      "recordedAt": "2026-10-20T19:20:31.960Z",
+      "sourceRule": "Frozen pre-race research selections, unchanged race and bet type; weighed-in published results added after running. No retroactive bet stakes, profit credit or deleted selections.",
+      "coverage": {
+        "originalSelections": 5,
+        "originalWin": 4,
+        "originalEachWay": 1,
+        "nonRunnersAmongSelections": 0,
+        "afterPublicationWithdrawals": []
+      },
+      "outcomes": {
+        "winners": 1,
+        "seconds": 2,
+        "thirds": 1,
+        "unplaced": 1,
+        "winWinners": 1,
+        "eachWayPlaces": 1,
+        "topThree": 4
+      },
+      "strikeRateStatus": "Original published five: 1/5 winner (20%); WIN selections 1/4 (25%); EACH-WAY paid places 1/1 (100%, 12 runners, standard three paid places). Four of five finished top-three but only one won.",
+      "metrics": {
+        "originalOverallWinnerRate": "1/5 (20.0%)",
+        "originalWinStrikeRate": "1/4 (25.0%)",
+        "eachWayPlaceStrikeRate": "1/1 (100.0%)",
+        "topThreeRate": "4/5 (80.0%)",
+        "bettingPAndL": "NOT credited: these were research selections, no accepted or existing 20 October paper wagers."
+      },
+      "runnerResults": [
+        {
+          "horse": "Conquer The Breeze",
+          "course": "Hexham",
+          "time": "15:07",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "11/4",
+          "finished": 6,
+          "sp": "9/2",
+          "runnerCount": 9,
+          "winningHorse": "Kool Raoul",
+          "winningMargin": "20½ lengths behind winner",
+          "source": "Racing Post full result",
+          "sourceUrl": "https://www.racingpost.com/results/25/hexham/2026-10-20/929261/"
+        },
+        {
+          "horse": "Wodao",
+          "course": "Yarmouth",
+          "time": "16:38",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "2/1",
+          "finished": 1,
+          "sp": "6/4",
+          "runnerCount": 9,
+          "winningHorse": "Wodao",
+          "winningMargin": "Won by 3½ lengths",
+          "source": "Racing Post full result",
+          "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/929441/"
+        },
+        {
+          "horse": "Ernst Blofeld",
+          "course": "Newcastle (AW)",
+          "time": "16:57",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "7/2",
+          "finished": 2,
+          "sp": "4/1",
+          "runnerCount": 9,
+          "winningHorse": "Wardlaw",
+          "winningMargin": "Beaten neck",
+          "source": "Racing Post full result",
+          "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929547/"
+        },
+        {
+          "horse": "Koffee And Kale",
+          "course": "Yarmouth",
+          "time": "17:08",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "13/8",
+          "finished": 3,
+          "sp": "5/2",
+          "runnerCount": 8,
+          "winningHorse": "Rory's Royale",
+          "winningMargin": "2¼ lengths behind winner",
+          "source": "Racing Post full result",
+          "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/931339/"
+        },
+        {
+          "horse": "Danehill Star",
+          "course": "Newcastle (AW)",
+          "time": "18:00",
+          "originCategory": "ORIGINAL_EW",
+          "selectedEarlyOdds": "7/1",
+          "finished": 2,
+          "sp": "15/2",
+          "runnerCount": 12,
+          "winningHorse": "Sandy Craic",
+          "winningMargin": "Beaten ¾ length",
+          "source": "Racing Post full result",
+          "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929549/"
+        }
+      ],
+      "errorAnalysis": [
+        {
+          "horse": "Conquer The Breeze",
+          "issue": "Top-rated NAP was 6th/9, 20½ lengths behind Kool Raoul. Recent 4/5 chase-winning form and apparently favourable 108 hurdle mark did not translate into today's 2m4f hurdle result.",
+          "action": "A switch in discipline plus full 12st and stamina trip requires a specific hurdles-form check and stronger active-rival comparison before NAP ranking. Don't assume this caused the loss without race replay."
+        },
+        {
+          "horse": "Wodao",
+          "issue": "Won Class 6 Yarmouth sprint by 3½ lengths as 6/4F despite 5lb penalty and quick turnaround.",
+          "action": "Retain demonstrated recent winning ability in today's trip/class; consider class drop and handicap transition before overweighting penalty. One success does not calibrate a coefficient."
+        },
+        {
+          "horse": "Ernst Blofeld",
+          "issue": "Finished second by only a neck at Newcastle in first documented Tapeta try; 5lb claiming rider, top OR96 and current stamina form looked competitive, but Wardlaw won.",
+          "action": "Continue to evaluate course-surface translation and lightly weighted, improving opposition; a neck second is a loss for WIN strike rate."
+        },
+        {
+          "horse": "Koffee And Kale",
+          "issue": "Finished third in a soft-ground Yarmouth sprint, continuing a string of near-misses without a win.",
+          "action": "Repeated runner-up finishes alone must not justify favourite-priced WIN selections; strengthen winning-threat comparisons, and distinguish top-three probability from win probability."
+        },
+        {
+          "horse": "Danehill Star",
+          "issue": "Finished second at Newcastle behind Sandy Craic (¾ length), confirming strong place-case despite career-high OR70.",
+          "action": "Retain this as E/W place evidence, not WIN success; check live bookmaker place fraction and actual terms on every future EW recommendation."
+        }
+      ],
+      "biasControls": [
+        "No retroactively issued bookmaker or paper wagers.",
+        "All five original selections counted including sixth-placed NAP and third-placed WIN.",
+        "Each-way place success is distinct from win strike-rate.",
+        "No verified accepted odds/BOG terms, do not credit return to £1,000 bank.",
+        "A five-runner sample is not sufficient to assert improved predictive performance."
+      ]
     }
   ],
   "latestPostRaceAudit": {
-    "asOfDate": "2026-10-19",
-    "recordedAt": "2026-10-20T13:10:10.062Z",
-    "sourceRule": "Frozen seven published pre-race selections retained. Results verified after the races; subsequent withdrawal from fresh betting does not alter original strike-rate denominators. Non-runners Enamored and Reveur were NOT selections.",
+    "asOfDate": "2026-10-20",
+    "recordedAt": "2026-10-20T19:20:31.960Z",
+    "sourceRule": "Frozen pre-race research selections, unchanged race and bet type; weighed-in published results added after running. No retroactive bet stakes, profit credit or deleted selections.",
     "coverage": {
-      "originalSelections": 7,
-      "originalWin": 5,
-      "originalEachWay": 2,
+      "originalSelections": 5,
+      "originalWin": 4,
+      "originalEachWay": 1,
       "nonRunnersAmongSelections": 0,
-      "afterPublicationWithdrawals": [
-        "Style King"
-      ]
+      "afterPublicationWithdrawals": []
     },
     "outcomes": {
-      "winners": 2,
+      "winners": 1,
       "seconds": 2,
-      "unplaced": 3,
-      "winWinners": 2,
-      "eachWayPlaces": 0,
-      "topTwo": 4
+      "thirds": 1,
+      "unplaced": 1,
+      "winWinners": 1,
+      "eachWayPlaces": 1,
+      "topThree": 4
     },
-    "strikeRateStatus": "Original frozen shortlist: 2 winners from 7 runners (28.6%); WIN-only 2/5 (40.0%); EACH-WAY winners 0/2, paid-place finishes 0/2. Two runner-up WIN selections did not win.",
+    "strikeRateStatus": "Original published five: 1/5 winner (20%); WIN selections 1/4 (25%); EACH-WAY paid places 1/1 (100%, 12 runners, standard three paid places). Four of five finished top-three but only one won.",
     "metrics": {
-      "originalOverallWinnerRate": "2/7 (28.6%)",
-      "originalWinStrikeRate": "2/5 (40.0%)",
-      "eachWayPlaceStrikeRate": "0/2 (0%)",
-      "topTwoRate": "4/7 (57.1%)",
-      "bettingPAndL": "Not calculated: 19 Oct were researched selections, not paper bets"
+      "originalOverallWinnerRate": "1/5 (20.0%)",
+      "originalWinStrikeRate": "1/4 (25.0%)",
+      "eachWayPlaceStrikeRate": "1/1 (100.0%)",
+      "topThreeRate": "4/5 (80.0%)",
+      "bettingPAndL": "NOT credited: these were research selections, no accepted or existing 20 October paper wagers."
     },
     "runnerResults": [
       {
-        "horse": "Dreams Galore",
-        "course": "Bath",
-        "time": "14:17",
-        "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "3/1",
-        "finished": 2,
-        "sp": "9/2",
-        "lateWithdrawn": false,
-        "source": "Racing TV",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/bath/1417"
-      },
-      {
-        "horse": "Nap Hand",
-        "course": "Plumpton",
-        "time": "15:30",
+        "horse": "Conquer The Breeze",
+        "course": "Hexham",
+        "time": "15:07",
         "originCategory": "ORIGINAL_WIN",
         "selectedEarlyOdds": "11/4",
-        "finished": 1,
-        "sp": "15/8",
-        "lateWithdrawn": false,
-        "source": "Racing TV",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/plumpton/1530"
-      },
-      {
-        "horse": "Rosemary's Rose",
-        "course": "Southwell",
-        "time": "17:00",
-        "originCategory": "ORIGINAL_EW",
-        "selectedEarlyOdds": "11/2",
         "finished": 6,
-        "sp": "15/2",
-        "lateWithdrawn": false,
-        "source": "Racing TV",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1700"
-      },
-      {
-        "horse": "Go Lockers Go",
-        "course": "Southwell",
-        "time": "18:00",
-        "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "5/2",
-        "finished": 7,
-        "sp": "17/2",
-        "lateWithdrawn": false,
-        "source": "Racing TV",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1800"
-      },
-      {
-        "horse": "Style King",
-        "course": "Wolverhampton",
-        "time": "18:15",
-        "originCategory": "ORIGINAL_EW",
-        "selectedEarlyOdds": "15/2",
-        "finished": 11,
-        "sp": "25/1",
-        "lateWithdrawn": true,
-        "source": "Racing TV",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1815"
-      },
-      {
-        "horse": "The Anthony Gover",
-        "course": "Wolverhampton",
-        "time": "19:15",
-        "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "10/3",
-        "finished": 2,
         "sp": "9/2",
-        "lateWithdrawn": false,
-        "source": "Racing TV",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1915"
+        "runnerCount": 9,
+        "winningHorse": "Kool Raoul",
+        "winningMargin": "20½ lengths behind winner",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/25/hexham/2026-10-20/929261/"
       },
       {
-        "horse": "Spec Of Light",
-        "course": "Southwell",
-        "time": "20:30",
+        "horse": "Wodao",
+        "course": "Yarmouth",
+        "time": "16:38",
         "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "9/4",
+        "selectedEarlyOdds": "2/1",
         "finished": 1,
-        "sp": "5/4",
-        "lateWithdrawn": false,
-        "source": "Racing TV",
-        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/2030"
+        "sp": "6/4",
+        "runnerCount": 9,
+        "winningHorse": "Wodao",
+        "winningMargin": "Won by 3½ lengths",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/929441/"
+      },
+      {
+        "horse": "Ernst Blofeld",
+        "course": "Newcastle (AW)",
+        "time": "16:57",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "7/2",
+        "finished": 2,
+        "sp": "4/1",
+        "runnerCount": 9,
+        "winningHorse": "Wardlaw",
+        "winningMargin": "Beaten neck",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929547/"
+      },
+      {
+        "horse": "Koffee And Kale",
+        "course": "Yarmouth",
+        "time": "17:08",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "13/8",
+        "finished": 3,
+        "sp": "5/2",
+        "runnerCount": 8,
+        "winningHorse": "Rory's Royale",
+        "winningMargin": "2¼ lengths behind winner",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/931339/"
+      },
+      {
+        "horse": "Danehill Star",
+        "course": "Newcastle (AW)",
+        "time": "18:00",
+        "originCategory": "ORIGINAL_EW",
+        "selectedEarlyOdds": "7/1",
+        "finished": 2,
+        "sp": "15/2",
+        "runnerCount": 12,
+        "winningHorse": "Sandy Craic",
+        "winningMargin": "Beaten ¾ length",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929549/"
       }
     ],
     "errorAnalysis": [
       {
-        "horse": "Go Lockers Go",
-        "issue": "Original NAP was based on two recent wins and proven C&D but market drift from 5/2 to around 17/2 and competitive sprint opposition proved significant; finished 7th.",
-        "action": "Treat sustained sizeable market changes as a recheck trigger, not as a deterministic veto or a confidence-boosting opportunity."
+        "horse": "Conquer The Breeze",
+        "issue": "Top-rated NAP was 6th/9, 20½ lengths behind Kool Raoul. Recent 4/5 chase-winning form and apparently favourable 108 hurdle mark did not translate into today's 2m4f hurdle result.",
+        "action": "A switch in discipline plus full 12st and stamina trip requires a specific hurdles-form check and stronger active-rival comparison before NAP ranking. Don't assume this caused the loss without race replay."
       },
       {
-        "horse": "Style King",
-        "issue": "Sharp class/OR pressure and wide draw were identified at a late review; retained in original E/W denominator, finished 11th.",
-        "action": "Prioritise class and competitive rival evidence before the first publication, retain withdrawal logs without look-ahead bias."
+        "horse": "Wodao",
+        "issue": "Won Class 6 Yarmouth sprint by 3½ lengths as 6/4F despite 5lb penalty and quick turnaround.",
+        "action": "Retain demonstrated recent winning ability in today's trip/class; consider class drop and handicap transition before overweighting penalty. One success does not calibrate a coefficient."
       },
       {
-        "horse": "Dreams Galore",
-        "issue": "Promising three-from-four handicap record translated to second at Bath, but rivals adapted better to the softened turf and course.",
-        "action": "Compare ground/course translatability and expected rivals on their actual surface before naming a favourite contender."
+        "horse": "Ernst Blofeld",
+        "issue": "Finished second by only a neck at Newcastle in first documented Tapeta try; 5lb claiming rider, top OR96 and current stamina form looked competitive, but Wardlaw won.",
+        "action": "Continue to evaluate course-surface translation and lightly weighted, improving opposition; a neck second is a loss for WIN strike rate."
       },
       {
-        "horse": "The Anthony Gover",
-        "issue": "Strong Wolverhampton C&D profile produced second but not a WIN return.",
-        "action": "Do not count a near-miss as a win; preserve exact WIN outcome, and score rival strength separately."
+        "horse": "Koffee And Kale",
+        "issue": "Finished third in a soft-ground Yarmouth sprint, continuing a string of near-misses without a win.",
+        "action": "Repeated runner-up finishes alone must not justify favourite-priced WIN selections; strengthen winning-threat comparisons, and distinguish top-three probability from win probability."
       },
       {
-        "horse": "Nap Hand",
-        "issue": "Recent Plumpton C&D form and fitness held up; first.",
-        "action": "Retain recency and tested conditions as useful features pending prospective validation."
-      },
-      {
-        "horse": "Spec Of Light",
-        "issue": "Current low-grade Tapeta conditions and maintained form supported win.",
-        "action": "Review whether the demonstrated class/surface match can generalise without claiming calibration from one race."
+        "horse": "Danehill Star",
+        "issue": "Finished second at Newcastle behind Sandy Craic (¾ length), confirming strong place-case despite career-high OR70.",
+        "action": "Retain this as E/W place evidence, not WIN success; check live bookmaker place fraction and actual terms on every future EW recommendation."
       }
     ],
     "biasControls": [
-      "No retrospective paper stakes or bankroll changes.",
-      "All seven published runners, including Style King after its later withdrawal, remain in the original denominator.",
-      "Enamored and Reveur were declared non-runners elsewhere, not model selections.",
-      "Top-two rate is not the win strike rate.",
-      "Early quoted prices stay separate from SP."
+      "No retroactively issued bookmaker or paper wagers.",
+      "All five original selections counted including sixth-placed NAP and third-placed WIN.",
+      "Each-way place success is distinct from win strike-rate.",
+      "No verified accepted odds/BOG terms, do not credit return to £1,000 bank.",
+      "A five-runner sample is not sufficient to assert improved predictive performance."
     ]
   },
   "archivedRaceSnapshots": [
@@ -3910,6 +4025,577 @@
           "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
         }
       ]
+    },
+    {
+      "date": "2026-10-20",
+      "verifiedAt": "2026-10-20T13:10:10.062Z",
+      "coverage": {
+        "meetings": 4,
+        "races": 30,
+        "scope": "All four UK/Ireland racing meetings and 30 racecards linked; five evidence-led research selections (not a claim of exhaustive scoring over all declared runners).",
+        "publishedDate": "2026-10-20",
+        "selectedIndividuals": 5,
+        "betSelections": 5,
+        "winCandidates": 4,
+        "ewCandidates": 1,
+        "winConfidenceMethod": "Independent runner form, official marks, class, going, previous track/surface and rivals, and recent fitness. Odds are observed separately."
+      },
+      "meetings": [
+        {
+          "course": "Curragh",
+          "races": 7,
+          "going": "YIELDING",
+          "code": "Flat turf",
+          "first": "13:25",
+          "last": "16:45"
+        },
+        {
+          "course": "Yarmouth",
+          "races": 8,
+          "going": "SOFT",
+          "code": "Flat turf",
+          "first": "13:20",
+          "last": "17:08"
+        },
+        {
+          "course": "Hexham",
+          "races": 6,
+          "going": "GOOD",
+          "code": "Jumps",
+          "first": "14:01",
+          "last": "16:50"
+        },
+        {
+          "course": "Newcastle (AW)",
+          "races": 9,
+          "going": "STANDARD Tapeta",
+          "code": "Flat all-weather",
+          "first": "16:22",
+          "last": "20:30"
+        }
+      ],
+      "betSelections": [
+        {
+          "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+          "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+          "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+          "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+          "time": "15:07",
+          "course": "Hexham",
+          "horse": "Conquer The Breeze",
+          "betType": "win",
+          "winRank": "NAP",
+          "odds": "11/4",
+          "jockey": "Ryan Mania",
+          "trainer": "Adam Nicol",
+          "or": 108,
+          "runnerCount": 9,
+          "going": "GOOD",
+          "distance": "2m4f28y",
+          "raceClass": "Class 4 Handicap Hurdle",
+          "summary": "Four summer chase wins from five followed by a competitive Kelso second; a hurdles handicap mark around 10lb below his chase mark offers a plausible advantage, although switching disciplines is not risk-free.",
+          "positivePoints": [
+            "Recent sequence 114112 includes four chase victories and second at Kelso",
+            "Rated OR108 for this hurdles test, below recent chase marks",
+            "Fresh enough after 34 days; jockey Ryan Mania retained"
+          ],
+          "risk": "Returning to hurdles while shouldering 12st; Codger's Rock (OR104) has recent hurdle form and Well Educated is a rival. Chase form does not perfectly translate to hurdles.",
+          "rivals": [
+            {
+              "horse": "Codger's Rock",
+              "or": 104,
+              "rpr": 102
+            }
+          ],
+          "sourceUrl": "https://www.racingpost.com/racecards/25/hexham/2026-10-20/929261/",
+          "priceSource": "https://www.racingtv.com/racecards/2026-10-20/hexham/1507",
+          "raceDayReview": {
+            "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+            "checkedAt": "2026-10-20T13:10:10.062Z",
+            "headline": "Four summer chase wins from five followed by a competitive Kelso second; a hurdles handicap mark around 10lb below his chase mark offers a plausible advantage, although switching disciplines is not risk-free.",
+            "detail": "Returning to hurdles while shouldering 12st; Codger's Rock (OR104) has recent hurdle form and Well Educated is a rival. Chase form does not perfectly translate to hurdles.",
+            "rivals": [
+              {
+                "horse": "Codger's Rock",
+                "or": 104,
+                "rpr": 102
+              }
+            ],
+            "nonRunners": [],
+            "observedPrice": "11/4",
+            "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/25/hexham/2026-10-20/929261/",
+              "https://www.racingtv.com/racecards/2026-10-20/hexham/1507"
+            ]
+          },
+          "result": {
+            "position": 6,
+            "status": "Weighed in",
+            "sp": "9/2",
+            "source": "Racing Post full result; Racing TV cross-checked for leading results",
+            "sourceUrl": "https://www.racingpost.com/results/25/hexham/2026-10-20/929261/",
+            "updatedAt": "2026-10-20T19:20:31.960Z",
+            "winningHorse": "Kool Raoul",
+            "margin": "20½ lengths behind winner"
+          },
+          "resultVerification": {
+            "checkedAt": "2026-10-20T19:20:31.960Z",
+            "sourceUrl": "https://www.racingpost.com/results/25/hexham/2026-10-20/929261/",
+            "independentPublisherResults": true
+          }
+        },
+        {
+          "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+          "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+          "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+          "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+          "time": "16:38",
+          "course": "Yarmouth",
+          "horse": "Wodao",
+          "betType": "win",
+          "odds": "2/1",
+          "jockey": "David Egan",
+          "trainer": "Steph Hollinshead",
+          "or": 67,
+          "runnerCount": 9,
+          "going": "SOFT",
+          "distance": "6f3y",
+          "raceClass": "Class 6 Handicap (Div I)",
+          "summary": "Won over six furlongs at Redcar four days ago after his handicap rating fell materially from earlier career highs; the same sprint trip makes a repeat possible even with a 5lb penalty.",
+          "positivePoints": [
+            "Recent winning form over 6f; current form -96961",
+            "Competing at Class 6 after higher-grade career form",
+            "Official handicap mark 67 includes penalty and is below his former class level"
+          ],
+          "risk": "Four-day turnaround plus 5lb penalty, soft Yarmouth ground and proven opponents Campani and Rambuso Creek; pass if conditions or price worsen.",
+          "rivals": [
+            {
+              "horse": "Campani",
+              "or": 59,
+              "rpr": null
+            }
+          ],
+          "sourceUrl": "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/",
+          "priceSource": "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1638",
+          "raceDayReview": {
+            "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+            "checkedAt": "2026-10-20T13:10:10.062Z",
+            "headline": "Won over six furlongs at Redcar four days ago after his handicap rating fell materially from earlier career highs; the same sprint trip makes a repeat possible even with a 5lb penalty.",
+            "detail": "Four-day turnaround plus 5lb penalty, soft Yarmouth ground and proven opponents Campani and Rambuso Creek; pass if conditions or price worsen.",
+            "rivals": [
+              {
+                "horse": "Campani",
+                "or": 59,
+                "rpr": null
+              }
+            ],
+            "nonRunners": [],
+            "observedPrice": "2/1",
+            "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/",
+              "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1638"
+            ]
+          },
+          "result": {
+            "position": 1,
+            "status": "Weighed in",
+            "sp": "6/4",
+            "source": "Racing Post full result; Racing TV cross-checked for leading results",
+            "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/929441/",
+            "updatedAt": "2026-10-20T19:20:31.960Z",
+            "winningHorse": "Wodao",
+            "margin": "Won by 3½ lengths"
+          },
+          "resultVerification": {
+            "checkedAt": "2026-10-20T19:20:31.960Z",
+            "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/929441/",
+            "independentPublisherResults": true
+          }
+        },
+        {
+          "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+          "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+          "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+          "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+          "time": "16:57",
+          "course": "Newcastle (AW)",
+          "horse": "Ernst Blofeld",
+          "betType": "win",
+          "winRank": "NB",
+          "odds": "7/2",
+          "jockey": "Harry Vigors (5lb)",
+          "trainer": "Hamad Al Jehani",
+          "or": 96,
+          "ts": 80,
+          "rpr": 104,
+          "draw": 3,
+          "runnerCount": 9,
+          "going": "STANDARD Tapeta",
+          "distance": "1m4f98y",
+          "raceClass": "Class 3 Handicap",
+          "summary": "Proven all-weather winner, followed by a close latest Newmarket third over a similar staying trip; the 5lb claim offsets part of top weight and the current form is credible for Class 3.",
+          "positivePoints": [
+            "Two earlier Kempton Polytrack wins including at a staying trip",
+            "Recent form 175523 suggests competitive current fitness",
+            "Strong RPR104; 5lb Harry Vigors allowance"
+          ],
+          "risk": "First Newcastle Tapeta test is distinct from Kempton Polytrack; top weight and rivals Oursin (OR94) and Circus Of Rome (OR95, RPR104) are credible. No guaranteed top-rated edge.",
+          "rivals": [
+            {
+              "horse": "Circus Of Rome",
+              "or": 95,
+              "rpr": 104
+            },
+            {
+              "horse": "Oursin",
+              "or": 94,
+              "rpr": 102
+            }
+          ],
+          "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929547/",
+          "priceSource": "https://www.racingtv.com/racecards/2026-10-20/newcastle/1657",
+          "raceDayReview": {
+            "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+            "checkedAt": "2026-10-20T13:10:10.062Z",
+            "headline": "Proven all-weather winner, followed by a close latest Newmarket third over a similar staying trip; the 5lb claim offsets part of top weight and the current form is credible for Class 3.",
+            "detail": "First Newcastle Tapeta test is distinct from Kempton Polytrack; top weight and rivals Oursin (OR94) and Circus Of Rome (OR95, RPR104) are credible. No guaranteed top-rated edge.",
+            "rivals": [
+              {
+                "horse": "Circus Of Rome",
+                "or": 95,
+                "rpr": 104
+              },
+              {
+                "horse": "Oursin",
+                "or": 94,
+                "rpr": 102
+              }
+            ],
+            "nonRunners": [],
+            "observedPrice": "7/2",
+            "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929547/",
+              "https://www.racingtv.com/racecards/2026-10-20/newcastle/1657"
+            ]
+          },
+          "result": {
+            "position": 2,
+            "status": "Weighed in",
+            "sp": "4/1",
+            "source": "Racing Post full result; Racing TV cross-checked for leading results",
+            "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929547/",
+            "updatedAt": "2026-10-20T19:20:31.960Z",
+            "winningHorse": "Wardlaw",
+            "margin": "Beaten neck"
+          },
+          "resultVerification": {
+            "checkedAt": "2026-10-20T19:20:31.960Z",
+            "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929547/",
+            "independentPublisherResults": true
+          }
+        },
+        {
+          "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+          "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+          "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+          "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+          "time": "17:08",
+          "course": "Yarmouth",
+          "horse": "Koffee And Kale",
+          "betType": "win",
+          "odds": "13/8",
+          "jockey": "Billy Loughnane",
+          "trainer": "Michael Bell",
+          "or": 62,
+          "draw": 6,
+          "runnerCount": 8,
+          "going": "SOFT",
+          "distance": "6f3y",
+          "raceClass": "Class 6 Handicap (Div II)",
+          "summary": "Repeatedly competitive at sprint trips with form 642722 and only narrowly denied at Yarmouth last time; still needs to convert several near-misses and confirm effectiveness on soft turf.",
+          "positivePoints": [
+            "Three second-place finishes among last five starts",
+            "Returned to the track eight days after recent C&D-region second",
+            "Billy Loughnane booked; OR62 close to other principals"
+          ],
+          "risk": "The soft ground is important and success on it is not sufficiently established; Call Time has recent wins and second, while Rory's Royale rates OR65. Strong form does not erase the win-conversion risk. Consider passing at substantially shorter prices.",
+          "rivals": [
+            {
+              "horse": "Rory's Royale",
+              "or": 65,
+              "rpr": 73
+            },
+            {
+              "horse": "Call Time",
+              "or": 60,
+              "rpr": null
+            }
+          ],
+          "sourceUrl": "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/931339/",
+          "priceSource": "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1708",
+          "raceDayReview": {
+            "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+            "checkedAt": "2026-10-20T13:10:10.062Z",
+            "headline": "Repeatedly competitive at sprint trips with form 642722 and only narrowly denied at Yarmouth last time; still needs to convert several near-misses and confirm effectiveness on soft turf.",
+            "detail": "The soft ground is important and success on it is not sufficiently established; Call Time has recent wins and second, while Rory's Royale rates OR65. Strong form does not erase the win-conversion risk. Consider passing at substantially shorter prices.",
+            "rivals": [
+              {
+                "horse": "Rory's Royale",
+                "or": 65,
+                "rpr": 73
+              },
+              {
+                "horse": "Call Time",
+                "or": 60,
+                "rpr": null
+              }
+            ],
+            "nonRunners": [],
+            "observedPrice": "13/8",
+            "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/931339/",
+              "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1708"
+            ]
+          },
+          "result": {
+            "position": 3,
+            "status": "Weighed in",
+            "sp": "5/2",
+            "source": "Racing Post full result; Racing TV cross-checked for leading results",
+            "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/931339/",
+            "updatedAt": "2026-10-20T19:20:31.960Z",
+            "winningHorse": "Rory's Royale",
+            "margin": "2¼ lengths behind winner"
+          },
+          "resultVerification": {
+            "checkedAt": "2026-10-20T19:20:31.960Z",
+            "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/931339/",
+            "independentPublisherResults": true
+          }
+        },
+        {
+          "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+          "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+          "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+          "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+          "time": "18:00",
+          "course": "Newcastle (AW)",
+          "horse": "Danehill Star",
+          "betType": "each-way",
+          "odds": "7/1",
+          "jockey": "Marco Ghiani",
+          "trainer": "Tony Carroll",
+          "or": 70,
+          "rpr": 74,
+          "draw": 3,
+          "runnerCount": 12,
+          "going": "STANDARD Tapeta",
+          "distance": "1m5y",
+          "raceClass": "Class 5 Handicap (Div I)",
+          "summary": "A productive all-weather campaign includes proven Newcastle course-and-distance form; recent 235113 makes him a potential place contender at a sensible price, despite a career-high OR70.",
+          "positivePoints": [
+            "Established Newcastle C&D winner at one mile on Tapeta",
+            "Four victories during 2026; recent record 235113",
+            "Drawn stall three; offered price around 6/1–15/2"
+          ],
+          "risk": "Top weight and a career-high handicap rating leave limited error margin; three standard paid places for 12 runners unless bookmaker offers enhanced terms. Confirm each-way fraction and exact place terms.",
+          "rivals": [],
+          "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929549/",
+          "priceSource": "https://www.racingtv.com/racecards/2026-10-20/newcastle/1800",
+          "raceDayReview": {
+            "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+            "checkedAt": "2026-10-20T13:10:10.062Z",
+            "headline": "A productive all-weather campaign includes proven Newcastle course-and-distance form; recent 235113 makes him a potential place contender at a sensible price, despite a career-high OR70.",
+            "detail": "Top weight and a career-high handicap rating leave limited error margin; three standard paid places for 12 runners unless bookmaker offers enhanced terms. Confirm each-way fraction and exact place terms.",
+            "rivals": [],
+            "nonRunners": [],
+            "observedPrice": "7/1",
+            "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929549/",
+              "https://www.racingtv.com/racecards/2026-10-20/newcastle/1800"
+            ]
+          },
+          "result": {
+            "position": 2,
+            "status": "Weighed in",
+            "sp": "15/2",
+            "source": "Racing Post full result; Racing TV cross-checked for leading results",
+            "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929549/",
+            "updatedAt": "2026-10-20T19:20:31.960Z",
+            "winningHorse": "Sandy Craic",
+            "margin": "Beaten ¾ length"
+          },
+          "resultVerification": {
+            "checkedAt": "2026-10-20T19:20:31.960Z",
+            "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929549/",
+            "independentPublisherResults": true
+          }
+        }
+      ],
+      "winNominations": [
+        {
+          "horse": "Conquer The Breeze",
+          "time": "15:07",
+          "course": "Hexham",
+          "label": "NAP",
+          "rationale": "Recent fitness and substantial hurdles-mark advantage are the most coherent race-specific thesis."
+        },
+        {
+          "horse": "Ernst Blofeld",
+          "time": "16:57",
+          "course": "Newcastle (AW)",
+          "label": "NB",
+          "rationale": "Current staying form and claim offer an independently supported alternative despite Tapeta transition."
+        }
+      ],
+      "selectionPresentation": {
+        "rule": "ONE_BET_SELECTION_PER_RACE",
+        "effectiveDate": "2026-10-20",
+        "selectionCount": 5,
+        "featuredRaceCount": 5,
+        "notes": "Single chronological Bet Selections list: four WIN and one EACH WAY. NAP and NB are relative evidence ranks, not probability claims.",
+        "paperBetStatus": "RESEARCH ONLY — NO PAPER OR ACTUAL WAGERS CREATED"
+      },
+      "finalAudit": {
+        "asOfDate": "2026-10-20",
+        "recordedAt": "2026-10-20T19:20:31.960Z",
+        "sourceRule": "Frozen pre-race research selections, unchanged race and bet type; weighed-in published results added after running. No retroactive bet stakes, profit credit or deleted selections.",
+        "coverage": {
+          "originalSelections": 5,
+          "originalWin": 4,
+          "originalEachWay": 1,
+          "nonRunnersAmongSelections": 0,
+          "afterPublicationWithdrawals": []
+        },
+        "outcomes": {
+          "winners": 1,
+          "seconds": 2,
+          "thirds": 1,
+          "unplaced": 1,
+          "winWinners": 1,
+          "eachWayPlaces": 1,
+          "topThree": 4
+        },
+        "strikeRateStatus": "Original published five: 1/5 winner (20%); WIN selections 1/4 (25%); EACH-WAY paid places 1/1 (100%, 12 runners, standard three paid places). Four of five finished top-three but only one won.",
+        "metrics": {
+          "originalOverallWinnerRate": "1/5 (20.0%)",
+          "originalWinStrikeRate": "1/4 (25.0%)",
+          "eachWayPlaceStrikeRate": "1/1 (100.0%)",
+          "topThreeRate": "4/5 (80.0%)",
+          "bettingPAndL": "NOT credited: these were research selections, no accepted or existing 20 October paper wagers."
+        },
+        "runnerResults": [
+          {
+            "horse": "Conquer The Breeze",
+            "course": "Hexham",
+            "time": "15:07",
+            "originCategory": "ORIGINAL_WIN",
+            "selectedEarlyOdds": "11/4",
+            "finished": 6,
+            "sp": "9/2",
+            "runnerCount": 9,
+            "winningHorse": "Kool Raoul",
+            "winningMargin": "20½ lengths behind winner",
+            "source": "Racing Post full result",
+            "sourceUrl": "https://www.racingpost.com/results/25/hexham/2026-10-20/929261/"
+          },
+          {
+            "horse": "Wodao",
+            "course": "Yarmouth",
+            "time": "16:38",
+            "originCategory": "ORIGINAL_WIN",
+            "selectedEarlyOdds": "2/1",
+            "finished": 1,
+            "sp": "6/4",
+            "runnerCount": 9,
+            "winningHorse": "Wodao",
+            "winningMargin": "Won by 3½ lengths",
+            "source": "Racing Post full result",
+            "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/929441/"
+          },
+          {
+            "horse": "Ernst Blofeld",
+            "course": "Newcastle (AW)",
+            "time": "16:57",
+            "originCategory": "ORIGINAL_WIN",
+            "selectedEarlyOdds": "7/2",
+            "finished": 2,
+            "sp": "4/1",
+            "runnerCount": 9,
+            "winningHorse": "Wardlaw",
+            "winningMargin": "Beaten neck",
+            "source": "Racing Post full result",
+            "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929547/"
+          },
+          {
+            "horse": "Koffee And Kale",
+            "course": "Yarmouth",
+            "time": "17:08",
+            "originCategory": "ORIGINAL_WIN",
+            "selectedEarlyOdds": "13/8",
+            "finished": 3,
+            "sp": "5/2",
+            "runnerCount": 8,
+            "winningHorse": "Rory's Royale",
+            "winningMargin": "2¼ lengths behind winner",
+            "source": "Racing Post full result",
+            "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/931339/"
+          },
+          {
+            "horse": "Danehill Star",
+            "course": "Newcastle (AW)",
+            "time": "18:00",
+            "originCategory": "ORIGINAL_EW",
+            "selectedEarlyOdds": "7/1",
+            "finished": 2,
+            "sp": "15/2",
+            "runnerCount": 12,
+            "winningHorse": "Sandy Craic",
+            "winningMargin": "Beaten ¾ length",
+            "source": "Racing Post full result",
+            "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929549/"
+          }
+        ],
+        "errorAnalysis": [
+          {
+            "horse": "Conquer The Breeze",
+            "issue": "Top-rated NAP was 6th/9, 20½ lengths behind Kool Raoul. Recent 4/5 chase-winning form and apparently favourable 108 hurdle mark did not translate into today's 2m4f hurdle result.",
+            "action": "A switch in discipline plus full 12st and stamina trip requires a specific hurdles-form check and stronger active-rival comparison before NAP ranking. Don't assume this caused the loss without race replay."
+          },
+          {
+            "horse": "Wodao",
+            "issue": "Won Class 6 Yarmouth sprint by 3½ lengths as 6/4F despite 5lb penalty and quick turnaround.",
+            "action": "Retain demonstrated recent winning ability in today's trip/class; consider class drop and handicap transition before overweighting penalty. One success does not calibrate a coefficient."
+          },
+          {
+            "horse": "Ernst Blofeld",
+            "issue": "Finished second by only a neck at Newcastle in first documented Tapeta try; 5lb claiming rider, top OR96 and current stamina form looked competitive, but Wardlaw won.",
+            "action": "Continue to evaluate course-surface translation and lightly weighted, improving opposition; a neck second is a loss for WIN strike rate."
+          },
+          {
+            "horse": "Koffee And Kale",
+            "issue": "Finished third in a soft-ground Yarmouth sprint, continuing a string of near-misses without a win.",
+            "action": "Repeated runner-up finishes alone must not justify favourite-priced WIN selections; strengthen winning-threat comparisons, and distinguish top-three probability from win probability."
+          },
+          {
+            "horse": "Danehill Star",
+            "issue": "Finished second at Newcastle behind Sandy Craic (¾ length), confirming strong place-case despite career-high OR70.",
+            "action": "Retain this as E/W place evidence, not WIN success; check live bookmaker place fraction and actual terms on every future EW recommendation."
+          }
+        ],
+        "biasControls": [
+          "No retroactively issued bookmaker or paper wagers.",
+          "All five original selections counted including sixth-placed NAP and third-placed WIN.",
+          "Each-way place success is distinct from win strike-rate.",
+          "No verified accepted odds/BOG terms, do not credit return to £1,000 bank.",
+          "A five-runner sample is not sufficient to assert improved predictive performance."
+        ]
+      }
     }
   ],
   "pricingReviewAt": "2026-10-20T13:10:10.062Z",
@@ -3967,6 +4653,21 @@
           "https://www.racingpost.com/racecards/25/hexham/2026-10-20/929261/",
           "https://www.racingtv.com/racecards/2026-10-20/hexham/1507"
         ]
+      },
+      "result": {
+        "position": 6,
+        "status": "Weighed in",
+        "sp": "9/2",
+        "source": "Racing Post full result; Racing TV cross-checked for leading results",
+        "sourceUrl": "https://www.racingpost.com/results/25/hexham/2026-10-20/929261/",
+        "updatedAt": "2026-10-20T19:20:31.960Z",
+        "winningHorse": "Kool Raoul",
+        "margin": "20½ lengths behind winner"
+      },
+      "resultVerification": {
+        "checkedAt": "2026-10-20T19:20:31.960Z",
+        "sourceUrl": "https://www.racingpost.com/results/25/hexham/2026-10-20/929261/",
+        "independentPublisherResults": true
       }
     },
     {
@@ -3982,7 +4683,7 @@
       "jockey": "David Egan",
       "trainer": "Steph Hollinshead",
       "or": 67,
-      "runnerCount": 10,
+      "runnerCount": 9,
       "going": "SOFT",
       "distance": "6f3y",
       "raceClass": "Class 6 Handicap (Div I)",
@@ -4021,6 +4722,21 @@
           "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/",
           "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1638"
         ]
+      },
+      "result": {
+        "position": 1,
+        "status": "Weighed in",
+        "sp": "6/4",
+        "source": "Racing Post full result; Racing TV cross-checked for leading results",
+        "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/929441/",
+        "updatedAt": "2026-10-20T19:20:31.960Z",
+        "winningHorse": "Wodao",
+        "margin": "Won by 3½ lengths"
+      },
+      "resultVerification": {
+        "checkedAt": "2026-10-20T19:20:31.960Z",
+        "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/929441/",
+        "independentPublisherResults": true
       }
     },
     {
@@ -4089,6 +4805,21 @@
           "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929547/",
           "https://www.racingtv.com/racecards/2026-10-20/newcastle/1657"
         ]
+      },
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "4/1",
+        "source": "Racing Post full result; Racing TV cross-checked for leading results",
+        "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929547/",
+        "updatedAt": "2026-10-20T19:20:31.960Z",
+        "winningHorse": "Wardlaw",
+        "margin": "Beaten neck"
+      },
+      "resultVerification": {
+        "checkedAt": "2026-10-20T19:20:31.960Z",
+        "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929547/",
+        "independentPublisherResults": true
       }
     },
     {
@@ -4154,6 +4885,21 @@
           "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/931339/",
           "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1708"
         ]
+      },
+      "result": {
+        "position": 3,
+        "status": "Weighed in",
+        "sp": "5/2",
+        "source": "Racing Post full result; Racing TV cross-checked for leading results",
+        "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/931339/",
+        "updatedAt": "2026-10-20T19:20:31.960Z",
+        "winningHorse": "Rory's Royale",
+        "margin": "2¼ lengths behind winner"
+      },
+      "resultVerification": {
+        "checkedAt": "2026-10-20T19:20:31.960Z",
+        "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/931339/",
+        "independentPublisherResults": true
       }
     },
     {
@@ -4198,6 +4944,21 @@
           "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929549/",
           "https://www.racingtv.com/racecards/2026-10-20/newcastle/1800"
         ]
+      },
+      "result": {
+        "position": 2,
+        "status": "Weighed in",
+        "sp": "15/2",
+        "source": "Racing Post full result; Racing TV cross-checked for leading results",
+        "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929549/",
+        "updatedAt": "2026-10-20T19:20:31.960Z",
+        "winningHorse": "Sandy Craic",
+        "margin": "Beaten ¾ length"
+      },
+      "resultVerification": {
+        "checkedAt": "2026-10-20T19:20:31.960Z",
+        "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929549/",
+        "independentPublisherResults": true
       }
     }
   ],
@@ -4286,7 +5047,7 @@
     "methodology": "Independent runner stats and race conditions; no tipster text used as selection input.",
     "dataLimitations": "No real-time bookmaker bet placement and no verified betting slip."
   },
-  "latestReviewTimestamp": "2026-10-20T14:33:31Z",
+  "latestReviewTimestamp": "2026-10-20T19:20:31.960Z",
   "currentProspectiveStatus": {
     "asOf": "2026-10-20T14:33:31Z",
     "originalPublishedSelections": 5,
@@ -4313,5 +5074,18 @@
         ]
       }
     ]
+  },
+  "researchResultsStatus": {
+    "asOfDate": "2026-10-20",
+    "verifiedAt": "2026-10-20T19:20:31.960Z",
+    "status": "All five published selections weighed in, no active results pending.",
+    "originalSelections": 5,
+    "winPicks": 4,
+    "winners": 1,
+    "topThree": 4,
+    "eachWayPlaced": 1,
+    "source": "Racing Post verified full results",
+    "acceptedBets": 0,
+    "paperBetsAdded": 0
   }
 }
