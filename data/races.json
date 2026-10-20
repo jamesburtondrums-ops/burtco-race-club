@@ -1,144 +1,110 @@
 {
-  "snapshotDate": "2026-10-19",
-  "verifiedAt": "2026-10-19T11:51:04.667Z",
-  "mode": "MONDAY 19 OCTOBER 2026 — FROZEN PRE-RACE EVIDENCE RESEARCH, NO AUTOMATIC WAGER",
+  "snapshotDate": "2026-10-20",
+  "verifiedAt": "2026-10-20T13:10:10.062Z",
+  "mode": "TUESDAY 20 OCTOBER 2026 — VERIFIED RACE-DAY RESEARCH, NO AUTOMATIC WAGER",
   "coverage": {
-    "meetings": 6,
-    "races": 47,
-    "scope": "47 UK/Ireland races listed on Oct 19 cards; candidates shortlisted across official racecards and rechecked against published going, runners, recent form, handicap terms and named rival form. Not a claim of exhaustive horse-by-horse sectional backtest.",
-    "publishedDate": "2026-10-19",
-    "selectedIndividuals": 7,
-    "betSelections": 7,
-    "winCandidates": 5,
-    "ewCandidates": 2,
-    "winConfidenceMethod": "Qualitative independent comparison of OR, RPR, fitness, course/distance/surface, current going, handicap shifts, opposition and published odds separately."
+    "meetings": 4,
+    "races": 30,
+    "scope": "All four UK/Ireland racing meetings and 30 racecards linked; five evidence-led research selections (not a claim of exhaustive scoring over all declared runners).",
+    "publishedDate": "2026-10-20",
+    "selectedIndividuals": 5,
+    "betSelections": 5,
+    "winCandidates": 4,
+    "ewCandidates": 1,
+    "winConfidenceMethod": "Independent runner form, official marks, class, going, previous track/surface and rivals, and recent fitness. Odds are observed separately."
   },
   "meetings": [
     {
-      "course": "Bath",
-      "races": 8,
-      "going": "GOOD TO SOFT, good in places",
-      "code": "Flat turf",
-      "first": "13:47",
-      "last": "17:22"
-    },
-    {
-      "course": "Gowran Park",
-      "races": 8,
+      "course": "Curragh",
+      "races": 7,
       "going": "YIELDING",
       "code": "Flat turf",
-      "first": "13:40",
-      "last": "17:10"
+      "first": "13:25",
+      "last": "16:45"
     },
     {
-      "course": "Plumpton",
-      "races": 7,
-      "going": "GOOD, good to soft in places hurdle; chase good to firm in places",
-      "code": "Jumps",
-      "first": "14:00",
-      "last": "17:05"
-    },
-    {
-      "course": "Pontefract",
-      "races": 7,
+      "course": "Yarmouth",
+      "races": 8,
       "going": "SOFT",
       "code": "Flat turf",
-      "first": "13:53",
-      "last": "16:55"
+      "first": "13:20",
+      "last": "17:08"
     },
     {
-      "course": "Southwell",
-      "races": 8,
-      "going": "STANDARD Tapeta",
-      "code": "Flat all-weather",
-      "first": "17:00",
-      "last": "20:30"
+      "course": "Hexham",
+      "races": 6,
+      "going": "GOOD",
+      "code": "Jumps",
+      "first": "14:01",
+      "last": "16:50"
     },
     {
-      "course": "Wolverhampton",
+      "course": "Newcastle (AW)",
       "races": 9,
       "going": "STANDARD Tapeta",
       "code": "Flat all-weather",
-      "first": "16:15",
-      "last": "20:15"
+      "first": "16:22",
+      "last": "20:30"
     }
   ],
   "racecardLinks": [
     {
-      "course": "Bath",
-      "races": 8,
-      "going": "GOOD TO SOFT",
-      "code": "Flat turf",
-      "first": "13:47",
-      "last": "17:22",
-      "url": "https://www.racingpost.com/racecards/5/bath/2026-10-19/"
-    },
-    {
-      "course": "Gowran Park",
-      "races": 8,
+      "course": "Curragh",
+      "races": 7,
       "going": "YIELDING",
       "code": "Flat turf",
-      "first": "13:40",
-      "last": "17:10",
-      "url": "https://www.racingpost.com/racecards/184/gowran-park/2026-10-19/"
+      "first": "13:25",
+      "last": "16:45",
+      "url": "https://www.racingpost.com/racecards/178/curragh/2026-10-20/"
     },
     {
-      "course": "Plumpton",
-      "races": 7,
-      "going": "GOOD",
-      "code": "Jumps",
-      "first": "14:00",
-      "last": "17:05",
-      "url": "https://www.racingpost.com/racecards/44/plumpton/2026-10-19/"
-    },
-    {
-      "course": "Pontefract",
-      "races": 7,
+      "course": "Yarmouth",
+      "races": 8,
       "going": "SOFT",
       "code": "Flat turf",
-      "first": "13:53",
-      "last": "16:55",
-      "url": "https://www.racingpost.com/racecards/46/pontefract/2026-10-19/"
+      "first": "13:20",
+      "last": "17:08",
+      "url": "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/"
     },
     {
-      "course": "Southwell",
-      "races": 8,
-      "going": "STANDARD Tapeta",
-      "code": "Flat all-weather",
-      "first": "17:00",
-      "last": "20:30",
-      "url": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/"
+      "course": "Hexham",
+      "races": 6,
+      "going": "GOOD",
+      "code": "Jumps",
+      "first": "14:01",
+      "last": "16:50",
+      "url": "https://www.racingpost.com/racecards/25/hexham/2026-10-20/"
     },
     {
-      "course": "Wolverhampton",
+      "course": "Newcastle (AW)",
       "races": 9,
       "going": "STANDARD Tapeta",
       "code": "Flat all-weather",
-      "first": "16:15",
-      "last": "20:15",
-      "url": "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/"
+      "first": "16:22",
+      "last": "20:30",
+      "url": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/"
     }
   ],
   "sources": [
     {
       "name": "Racing Post",
-      "status": "19 October live declarations, ORs, RPRs, actual going/non-runners",
-      "role": "Races, field size, trainers and riders, last-6 form, rivals and nonrunners"
+      "status": "20 October racecards and official going",
+      "role": "Declared runners, jockey bookings, rating, draw, race distances, live exclusions and rivals"
     },
     {
-      "name": "Timeform",
-      "status": "19 October pre-race quote comparisons and recorded runner histories",
-      "role": "Recent form, course/trip records, price observations separately from selection rating"
+      "name": "Racing TV",
+      "status": "19 October results verified; 20 October racecards checked",
+      "role": "Weighed-in historic finishing positions and pre-race runner form; no published tipping editorial used as selection evidence"
     },
     {
       "name": "Sporting Life",
-      "status": "19 October live card and odds snapshots",
-      "role": "Cross-check confirmed runners, recent class/weight and odds"
+      "status": "20 October racecard cross-check",
+      "role": "Runners, declared terms, results and independent record confirmation"
     },
     {
-      "name": "Oddschecker",
-      "status": "19 October pre-race bookmaker quotes",
-      "role": "Price check only; offered terms and validity may change."
+      "name": "Odds comparisons",
+      "status": "Observed approximate 20 October market quotations; not accepted wagers",
+      "role": "Bet value and research price snapshot only, never used as model probability"
     }
   ],
   "todaySelections": [],
@@ -148,11 +114,11 @@
   "selectionPolicy": {
     "avoidOddsOn": true,
     "minimumWinOdds": "1/1",
-    "winCandidates": 5,
-    "qualifiedWinCandidates": 5,
+    "winCandidates": 4,
+    "qualifiedWinCandidates": 4,
     "numLongshots": 0,
-    "winQualificationRule": "Strong current race-conditions suitability and positive recent results against named credible rivals. Avoid unexplained long layoffs, sharp class leaps and older track wins without current evidence. Confidence does not derive from betting price.",
-    "rationale": "No forced 20/1 candidates: odds alone do not qualify a value bet; only two distinct E/W watches recorded."
+    "winQualificationRule": "Current fitness; track/going/trip fit; rating class shift; documented rival threat; price excluded from confidence scoring.",
+    "rationale": "Five candidates from 30 racecards; no forced selections to fill categories. No under-evens selection."
   },
   "midshotsPolicy": {
     "minOdds": "6/1",
@@ -167,48 +133,48 @@
   },
   "winNominations": [
     {
-      "horse": "Go Lockers Go",
-      "time": "18:00",
-      "course": "Southwell",
+      "horse": "Conquer The Breeze",
+      "time": "15:07",
+      "course": "Hexham",
       "label": "NAP",
-      "rationale": "Back-to-back wins, including over Southwell's exact course and distance nine days ago, with just a one-pound rise in the mark; the return to a known successful setup is the strongest case today."
+      "rationale": "Recent fitness and substantial hurdles-mark advantage are the most coherent race-specific thesis."
     },
     {
-      "horse": "The Anthony Gover",
-      "time": "19:15",
-      "course": "Wolverhampton",
+      "horse": "Ernst Blofeld",
+      "time": "16:57",
+      "course": "Newcastle (AW)",
       "label": "NB",
-      "rationale": "Won twice over this C&D before finishing third by only one length at the same track; a better stall-five draw and 5lb claimer aid the return to proven conditions."
+      "rationale": "Current staying form and claim offer an independently supported alternative despite Tapeta transition."
     }
   ],
   "latestResearchLucky15": {
     "legs": [],
-    "status": "No new lucky 15 constructed; not enough independent 6/1+ each-way legs under evidence rules."
+    "status": "No Lucky 15 issued: fewer than four independent eligible >11/2 EACH-WAY selections."
   },
   "selectionPresentation": {
     "rule": "ONE_BET_SELECTION_PER_RACE",
-    "effectiveDate": "2026-10-19",
-    "selectionCount": 7,
-    "featuredRaceCount": 7,
-    "notes": "Single bet selections list with Win / Each Way on each horse, in chronological order. No separate categories, and NAP/NB are recommendation ranks rather than market-driven categories.",
-    "paperBetStatus": "RESEARCH ONLY — NO NEW PAPER WAGERS OR PROFIT CREDITED"
+    "effectiveDate": "2026-10-20",
+    "selectionCount": 5,
+    "featuredRaceCount": 5,
+    "notes": "Single chronological Bet Selections list: four WIN and one EACH WAY. NAP and NB are relative evidence ranks, not probability claims.",
+    "paperBetStatus": "RESEARCH ONLY — NO PAPER OR ACTUAL WAGERS CREATED"
   },
   "reviewCompleteness": {
-    "asOfDate": "2026-10-19",
-    "reviewedAt": "2026-10-19T11:51:04.667Z",
-    "status": "Seven carefully screened runners; not a full independent scoring run over all ~490 declared runners.",
+    "asOfDate": "2026-10-20",
+    "reviewedAt": "2026-10-20T13:10:10.062Z",
+    "status": "Five candidate recommendations from 30 UK/IRE scheduled races; official result feed not asserted; full declared field not independently modelled horse-by-horse.",
     "checks": [
-      "Racing Post current going and non-runners",
-      "Positive last-6 form and recent race fitness",
-      "Trip / surface and course evidence, plus track character",
-      "Handicap OR shift and claiming allowance",
-      "Named rival OR/RPR and credible recent form",
-      "Bookmaker odds separate from form"
+      "Runners, jockey/trainer and official marks",
+      "Track/going/distance and class history",
+      "Last-six form and days since last run",
+      "Handicap penalties and jockey claims",
+      "Credible named opposition",
+      "Current observed price outside confidence rating"
     ],
     "blindspots": [
-      "Different race-day times can affect prices, runners and ground",
-      "No current sectionals coverage across all 47 races",
-      "Uncertainty for Bath undulations and jumps pace"
+      "Non-runner and going changes after this timestamp",
+      "No comprehensive sectional-based rating or held-out calibration",
+      "Bookmakers may alter quoted odds and E/W terms"
     ]
   },
   "recentPerformanceReview": {
@@ -225,7 +191,7 @@
     "pricing": "Yordan researched early quote remains 3/1; confirmed SP is 7/4 favourite. No paper stakes or bookmaker BOG are presumed."
   },
   "modelAccuracyDevelopment": {
-    "status": "SHADOW AUDIT — improved evidence capture, no statistically validated model lift",
+    "status": "PROSPECTIVE RULE REFINEMENT — NO VERIFIED IMPROVEMENT IN OUT-OF-SAMPLE ACCURACY",
     "changedResearchChecks": [
       "Course/distance/surface winner evidence separated from merely similar form",
       "Named credible opponents and late-going changes reviewed",
@@ -252,14 +218,22 @@
         "Preserve the originally published pick, reference odds, non-runners and later result without reclassifying unsuccessful bets.",
         "Display one horse per race and its recommended WIN/EACH WAY bet type; price is not a confidence input.",
         "Recheck declared runners, going, jockey and each-way bookmaker place terms before off; no invented certainty or profit."
+      ],
+      "2026-10-20": [
+        "Monday 19 Oct original frozen picks were 2/7 winners including 2/5 original WIN; withdrawals are not erased.",
+        "Win selections finishing second are failures for win strike rate, not credited winners.",
+        "Every original pick retained in retrospective denominator; research results separated from settled paper ledger.",
+        "Treat large drifts as alerts, not automatic certainty changes.",
+        "Focus current ground and rival handicap/class contrasts before selection.",
+        "No claims of validated predictive improvement from short samples."
       ]
     },
     "calibrationStatus": "No verified, held-out backtest or proven statistically calibrated win probabilities."
   },
   "researchSelectionUpdate": {
-    "reviewedAt": "2026-10-19T11:51:04.667Z",
-    "status": "Seven Oct 19 candidates published across Bath, Plumpton, Southwell, Wolverhampton. Five WIN and two EACH-WAY. No confirmed bookmaker wagers.",
-    "note": "Avoided King Of Persia (+6lb penalty, new soft conditions), Silverella (soft ground vs last C&D win on good), Meydaan (7 months off and odds-on), short-priced novices, unproven 20/1 outsiders."
+    "reviewedAt": "2026-10-20T13:10:10.062Z",
+    "status": "20 Oct five evidence-led candidates published across Hexham, Yarmouth and Newcastle; no accepted wagers.",
+    "note": "NAP Conquer The Breeze, NB Ernst Blofeld, plus Wodao, Koffee And Kale and E/W Danehill Star. Curragh card linked but no confident selection."
   },
   "raceDayRechecks": [
     {
@@ -304,50 +278,67 @@
       "changedPicks": 0,
       "methodology": "No direct use of published tipster selections or verdicts; reason independently from ratings, going, current form, course and trip, rider allowances and opposition. Odds displayed as separate evidence.",
       "dataLimitations": "No evidence of calibrated probabilities or exhaustive sectional coverage; latest price may move."
+    },
+    {
+      "updatedAt": "2026-10-20T13:10:10.062Z",
+      "meetingCount": 4,
+      "scheduledRaces": 30,
+      "going": {
+        "Curragh": "YIELDING",
+        "Yarmouth": "SOFT",
+        "Hexham": "GOOD",
+        "Newcastle (AW)": "STANDARD Tapeta"
+      },
+      "confirmedNonRunners": [
+        {
+          "horse": "Snuggle",
+          "race": "17:08 Yarmouth",
+          "source": "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1708"
+        }
+      ],
+      "adjustments": [
+        {
+          "course": "Yarmouth",
+          "time": "17:08",
+          "currentRunners": 8,
+          "note": "Snuggle NR; live eight-runner field"
+        }
+      ],
+      "unmodifiedPicks": 5,
+      "changedPicks": 0,
+      "methodology": "Independent runner stats and race conditions; no tipster text used as selection input.",
+      "dataLimitations": "No real-time bookmaker bet placement and no verified betting slip."
     }
   ],
   "latestRacedayRecheck": {
-    "updatedAt": "2026-10-19T11:51:04.667Z",
-    "meetingCount": 6,
-    "scheduledRaces": 47,
+    "updatedAt": "2026-10-20T13:10:10.062Z",
+    "meetingCount": 4,
+    "scheduledRaces": 30,
     "going": {
-      "Bath": "GOOD TO SOFT, good in places",
-      "Gowran Park": "YIELDING",
-      "Plumpton": "GOOD, good to soft in places hurdle; chase good to firm in places",
-      "Pontefract": "SOFT",
-      "Southwell": "STANDARD Tapeta",
-      "Wolverhampton": "STANDARD Tapeta"
+      "Curragh": "YIELDING",
+      "Yarmouth": "SOFT",
+      "Hexham": "GOOD",
+      "Newcastle (AW)": "STANDARD Tapeta"
     },
     "confirmedNonRunners": [
       {
-        "horse": "Beorma",
-        "race": "15:30 Plumpton",
-        "source": "https://www.racingpost.com/non-runners/2026-10-19/"
-      },
-      {
-        "horse": "Dandana",
-        "race": "18:15 Wolverhampton",
-        "source": "https://www.racingpost.com/non-runners/2026-10-19/"
+        "horse": "Snuggle",
+        "race": "17:08 Yarmouth",
+        "source": "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1708"
       }
     ],
     "adjustments": [
       {
-        "course": "Plumpton",
-        "time": "15:30",
-        "currentRunners": 5,
-        "note": "Beorma NR"
-      },
-      {
-        "course": "Wolverhampton",
-        "time": "18:15",
-        "currentRunners": 12,
-        "note": "Dandana NR"
+        "course": "Yarmouth",
+        "time": "17:08",
+        "currentRunners": 8,
+        "note": "Snuggle NR; live eight-runner field"
       }
     ],
-    "unmodifiedPicks": 7,
+    "unmodifiedPicks": 5,
     "changedPicks": 0,
-    "methodology": "No direct use of published tipster selections or verdicts; reason independently from ratings, going, current form, course and trip, rider allowances and opposition. Odds displayed as separate evidence.",
-    "dataLimitations": "No evidence of calibrated probabilities or exhaustive sectional coverage; latest price may move."
+    "methodology": "Independent runner stats and race conditions; no tipster text used as selection input.",
+    "dataLimitations": "No real-time bookmaker bet placement and no verified betting slip."
   },
   "raceDayDecisionLog": [
     {
@@ -564,165 +555,316 @@
         "Seven trials cannot establish statistical model improvement.",
         "Do not use outcomes from races after the published decision when claiming pre-race feature availability."
       ]
+    },
+    {
+      "asOfDate": "2026-10-19",
+      "recordedAt": "2026-10-20T13:10:10.062Z",
+      "sourceRule": "Frozen seven published pre-race selections retained. Results verified after the races; subsequent withdrawal from fresh betting does not alter original strike-rate denominators. Non-runners Enamored and Reveur were NOT selections.",
+      "coverage": {
+        "originalSelections": 7,
+        "originalWin": 5,
+        "originalEachWay": 2,
+        "nonRunnersAmongSelections": 0,
+        "afterPublicationWithdrawals": [
+          "Style King"
+        ]
+      },
+      "outcomes": {
+        "winners": 2,
+        "seconds": 2,
+        "unplaced": 3,
+        "winWinners": 2,
+        "eachWayPlaces": 0,
+        "topTwo": 4
+      },
+      "strikeRateStatus": "Original frozen shortlist: 2 winners from 7 runners (28.6%); WIN-only 2/5 (40.0%); EACH-WAY winners 0/2, paid-place finishes 0/2. Two runner-up WIN selections did not win.",
+      "metrics": {
+        "originalOverallWinnerRate": "2/7 (28.6%)",
+        "originalWinStrikeRate": "2/5 (40.0%)",
+        "eachWayPlaceStrikeRate": "0/2 (0%)",
+        "topTwoRate": "4/7 (57.1%)",
+        "bettingPAndL": "Not calculated: 19 Oct were researched selections, not paper bets"
+      },
+      "runnerResults": [
+        {
+          "horse": "Dreams Galore",
+          "course": "Bath",
+          "time": "14:17",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "3/1",
+          "finished": 2,
+          "sp": "9/2",
+          "lateWithdrawn": false,
+          "source": "Racing TV",
+          "sourceUrl": "https://www.racingtv.com/results/2026-10-19/bath/1417"
+        },
+        {
+          "horse": "Nap Hand",
+          "course": "Plumpton",
+          "time": "15:30",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "11/4",
+          "finished": 1,
+          "sp": "15/8",
+          "lateWithdrawn": false,
+          "source": "Racing TV",
+          "sourceUrl": "https://www.racingtv.com/results/2026-10-19/plumpton/1530"
+        },
+        {
+          "horse": "Rosemary's Rose",
+          "course": "Southwell",
+          "time": "17:00",
+          "originCategory": "ORIGINAL_EW",
+          "selectedEarlyOdds": "11/2",
+          "finished": 6,
+          "sp": "15/2",
+          "lateWithdrawn": false,
+          "source": "Racing TV",
+          "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1700"
+        },
+        {
+          "horse": "Go Lockers Go",
+          "course": "Southwell",
+          "time": "18:00",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "5/2",
+          "finished": 7,
+          "sp": "17/2",
+          "lateWithdrawn": false,
+          "source": "Racing TV",
+          "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1800"
+        },
+        {
+          "horse": "Style King",
+          "course": "Wolverhampton",
+          "time": "18:15",
+          "originCategory": "ORIGINAL_EW",
+          "selectedEarlyOdds": "15/2",
+          "finished": 11,
+          "sp": "25/1",
+          "lateWithdrawn": true,
+          "source": "Racing TV",
+          "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1815"
+        },
+        {
+          "horse": "The Anthony Gover",
+          "course": "Wolverhampton",
+          "time": "19:15",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "10/3",
+          "finished": 2,
+          "sp": "9/2",
+          "lateWithdrawn": false,
+          "source": "Racing TV",
+          "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1915"
+        },
+        {
+          "horse": "Spec Of Light",
+          "course": "Southwell",
+          "time": "20:30",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "9/4",
+          "finished": 1,
+          "sp": "5/4",
+          "lateWithdrawn": false,
+          "source": "Racing TV",
+          "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/2030"
+        }
+      ],
+      "errorAnalysis": [
+        {
+          "horse": "Go Lockers Go",
+          "issue": "Original NAP was based on two recent wins and proven C&D but market drift from 5/2 to around 17/2 and competitive sprint opposition proved significant; finished 7th.",
+          "action": "Treat sustained sizeable market changes as a recheck trigger, not as a deterministic veto or a confidence-boosting opportunity."
+        },
+        {
+          "horse": "Style King",
+          "issue": "Sharp class/OR pressure and wide draw were identified at a late review; retained in original E/W denominator, finished 11th.",
+          "action": "Prioritise class and competitive rival evidence before the first publication, retain withdrawal logs without look-ahead bias."
+        },
+        {
+          "horse": "Dreams Galore",
+          "issue": "Promising three-from-four handicap record translated to second at Bath, but rivals adapted better to the softened turf and course.",
+          "action": "Compare ground/course translatability and expected rivals on their actual surface before naming a favourite contender."
+        },
+        {
+          "horse": "The Anthony Gover",
+          "issue": "Strong Wolverhampton C&D profile produced second but not a WIN return.",
+          "action": "Do not count a near-miss as a win; preserve exact WIN outcome, and score rival strength separately."
+        },
+        {
+          "horse": "Nap Hand",
+          "issue": "Recent Plumpton C&D form and fitness held up; first.",
+          "action": "Retain recency and tested conditions as useful features pending prospective validation."
+        },
+        {
+          "horse": "Spec Of Light",
+          "issue": "Current low-grade Tapeta conditions and maintained form supported win.",
+          "action": "Review whether the demonstrated class/surface match can generalise without claiming calibration from one race."
+        }
+      ],
+      "biasControls": [
+        "No retrospective paper stakes or bankroll changes.",
+        "All seven published runners, including Style King after its later withdrawal, remain in the original denominator.",
+        "Enamored and Reveur were declared non-runners elsewhere, not model selections.",
+        "Top-two rate is not the win strike rate.",
+        "Early quoted prices stay separate from SP."
+      ]
     }
   ],
   "latestPostRaceAudit": {
-    "asOfDate": "2026-10-15",
-    "recordedAt": "2026-10-16T09:32:39.683Z",
-    "sourceRule": "Results appended after racing; original selection ranks, early odds, timestamped reviews and prior-day data unchanged.",
+    "asOfDate": "2026-10-19",
+    "recordedAt": "2026-10-20T13:10:10.062Z",
+    "sourceRule": "Frozen seven published pre-race selections retained. Results verified after the races; subsequent withdrawal from fresh betting does not alter original strike-rate denominators. Non-runners Enamored and Reveur were NOT selections.",
     "coverage": {
-      "originalWinNominations": 4,
-      "activeWinAtFinalReview": 3,
-      "otherEwCandidates": 2,
-      "longshotResearch": 1,
-      "totalCandidates": 7
+      "originalSelections": 7,
+      "originalWin": 5,
+      "originalEachWay": 2,
+      "nonRunnersAmongSelections": 0,
+      "afterPublicationWithdrawals": [
+        "Style King"
+      ]
     },
     "outcomes": {
-      "originalWinWinnersUserIncluded": 1,
-      "verifiedByPublisherWinners": 1,
-      "userReportedWinners": 0,
-      "totalWinnersUserIncluded": 1,
-      "topThreeFinishes": 2,
-      "nonWinners": 6
+      "winners": 2,
+      "seconds": 2,
+      "unplaced": 3,
+      "winWinners": 2,
+      "eachWayPlaces": 0,
+      "topTwo": 4
     },
-    "strikeRateStatus": "Final verified: 7 published selections, 1 winner; 4 originally published WIN picks (1 winner). Major Fortune originally shortlisted and subsequently withdrawn before the off, retained in original denominator.",
+    "strikeRateStatus": "Original frozen shortlist: 2 winners from 7 runners (28.6%); WIN-only 2/5 (40.0%); EACH-WAY winners 0/2, paid-place finishes 0/2. Two runner-up WIN selections did not win.",
     "metrics": {
-      "provisionalOverallWinnerRate": "1/7 (14.3%), now externally verified",
-      "provisionalOriginalWinStrikeRate": "1/4 (25.0%), now externally verified",
-      "provisionalActiveWinStrikeRate": "1/3 (33.3%), now externally verified",
-      "ewWatchWinners": "0/2",
-      "longshotWinners": "0/1",
-      "placed": "Major Fortune 3rd in a 6-runner handicap chase; not a confirmed each-way bet; other E/W shortlists 6th, 9th, 12th. No bookmaker place terms assumed."
+      "originalOverallWinnerRate": "2/7 (28.6%)",
+      "originalWinStrikeRate": "2/5 (40.0%)",
+      "eachWayPlaceStrikeRate": "0/2 (0%)",
+      "topTwoRate": "4/7 (57.1%)",
+      "bettingPAndL": "Not calculated: 19 Oct were researched selections, not paper bets"
     },
     "runnerResults": [
       {
-        "horse": "Nouvel Espoir",
-        "course": "Curragh",
-        "time": "13:37",
-        "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "13/2",
-        "finished": 5,
-        "sp": "7/1",
-        "source": "Racing Post",
-        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930835/",
-        "lateWithdrawnWin": false
-      },
-      {
-        "horse": "Major Fortune",
-        "course": "Perth",
-        "time": "14:30",
-        "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "11/4",
-        "finished": 3,
-        "sp": "11/2",
-        "source": "Racing Post",
-        "sourceUrl": "https://www.racingpost.com/results/41/perth/2026-10-15/930229/",
-        "lateWithdrawnWin": true
-      },
-      {
-        "horse": "Shifra",
-        "course": "Brighton",
-        "time": "15:15",
-        "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "2/1",
-        "finished": 5,
-        "sp": "3/1",
-        "source": "Racing Post",
-        "sourceUrl": "https://www.racingpost.com/results/7/brighton/2026-10-15/928581/",
-        "lateWithdrawnWin": false
-      },
-      {
-        "horse": "Yordan",
-        "course": "Southwell",
-        "time": "19:30",
+        "horse": "Dreams Galore",
+        "course": "Bath",
+        "time": "14:17",
         "originCategory": "ORIGINAL_WIN",
         "selectedEarlyOdds": "3/1",
+        "finished": 2,
+        "sp": "9/2",
+        "lateWithdrawn": false,
+        "source": "Racing TV",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/bath/1417"
+      },
+      {
+        "horse": "Nap Hand",
+        "course": "Plumpton",
+        "time": "15:30",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "11/4",
         "finished": 1,
-        "sp": "7/4 F",
-        "source": "Racing Post",
-        "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928768/",
-        "lateWithdrawnWin": false
+        "sp": "15/8",
+        "lateWithdrawn": false,
+        "source": "Racing TV",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/plumpton/1530"
       },
       {
-        "horse": "Navajo Point",
-        "course": "Curragh",
-        "time": "14:47",
+        "horse": "Rosemary's Rose",
+        "course": "Southwell",
+        "time": "17:00",
         "originCategory": "ORIGINAL_EW",
-        "selectedEarlyOdds": "15/2",
+        "selectedEarlyOdds": "11/2",
         "finished": 6,
-        "sp": "12/1",
-        "source": "Racing Post",
-        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930837/",
-        "lateWithdrawnWin": false
+        "sp": "15/2",
+        "lateWithdrawn": false,
+        "source": "Racing TV",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1700"
       },
       {
-        "horse": "Mary Shoelaces",
-        "course": "Curragh",
-        "time": "16:32",
-        "originCategory": "ORIGINAL_EW",
-        "selectedEarlyOdds": "15/2",
-        "finished": 9,
-        "sp": "10/1",
-        "source": "Racing Post",
-        "sourceUrl": "https://www.racingpost.com/results/178/curragh/2026-10-15/930840/",
-        "lateWithdrawnWin": false
-      },
-      {
-        "horse": "Turbo Command",
+        "horse": "Go Lockers Go",
         "course": "Southwell",
         "time": "18:00",
-        "originCategory": "LATE_ADDED_LONGSHOT",
-        "selectedEarlyOdds": "25/1",
-        "finished": 12,
-        "sp": "14/1",
-        "source": "Racing Post",
-        "sourceUrl": "https://www.racingpost.com/results/394/southwell-aw/2026-10-15/928773/",
-        "lateWithdrawnWin": false
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "5/2",
+        "finished": 7,
+        "sp": "17/2",
+        "lateWithdrawn": false,
+        "source": "Racing TV",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1800"
+      },
+      {
+        "horse": "Style King",
+        "course": "Wolverhampton",
+        "time": "18:15",
+        "originCategory": "ORIGINAL_EW",
+        "selectedEarlyOdds": "15/2",
+        "finished": 11,
+        "sp": "25/1",
+        "lateWithdrawn": true,
+        "source": "Racing TV",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1815"
+      },
+      {
+        "horse": "The Anthony Gover",
+        "course": "Wolverhampton",
+        "time": "19:15",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "10/3",
+        "finished": 2,
+        "sp": "9/2",
+        "lateWithdrawn": false,
+        "source": "Racing TV",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1915"
+      },
+      {
+        "horse": "Spec Of Light",
+        "course": "Southwell",
+        "time": "20:30",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "9/4",
+        "finished": 1,
+        "sp": "5/4",
+        "lateWithdrawn": false,
+        "source": "Racing TV",
+        "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/2030"
       }
     ],
     "errorAnalysis": [
       {
-        "horse": "Shifra",
-        "issue": "Strong recent Bath form and low draw did not transfer to Brighton's undulations and track-specific demands; raised OR and course debut were underweighted.",
-        "action": "Require independently sourced track-similarity and competitive opponent evidence for course-debut NAPs; test prospectively, not retroactive deletion."
+        "horse": "Go Lockers Go",
+        "issue": "Original NAP was based on two recent wins and proven C&D but market drift from 5/2 to around 17/2 and competitive sprint opposition proved significant; finished 7th.",
+        "action": "Treat sustained sizeable market changes as a recheck trigger, not as a deterministic veto or a confidence-boosting opportunity."
       },
       {
-        "horse": "Nouvel Espoir",
-        "issue": "The repeat C&D/soft-ground winner was raised 8lb and met strong opposing form; suitability alone did not ensure ranking first.",
-        "action": "Compare revised handicap terms, rivals at equal/changed weights and recent performance levels before granting NB grade."
+        "horse": "Style King",
+        "issue": "Sharp class/OR pressure and wide draw were identified at a late review; retained in original E/W denominator, finished 11th.",
+        "action": "Prioritise class and competitive rival evidence before the first publication, retain withdrawal logs without look-ahead bias."
       },
       {
-        "horse": "Major Fortune",
-        "issue": "A 194-day absence, +5lb OR, equipment change and softening three-mile test predicted uncertainty; runner came third after WIN withdrawal.",
-        "action": "Keep explicit off-a-break/equipment/going interaction as confidence veto pending held-out validation; do not claim causal proof."
+        "horse": "Dreams Galore",
+        "issue": "Promising three-from-four handicap record translated to second at Bath, but rivals adapted better to the softened turf and course.",
+        "action": "Compare ground/course translatability and expected rivals on their actual surface before naming a favourite contender."
       },
       {
-        "horse": "Navajo Point",
-        "issue": "Latest handicap win on similar going was insufficient against a 19-runner field and +8lb OR; finished sixth.",
-        "action": "Quantify larger-field traffic/pace and rating jumps, verify place terms rather than treating lower field count as confidence gain."
+        "horse": "The Anthony Gover",
+        "issue": "Strong Wolverhampton C&D profile produced second but not a WIN return.",
+        "action": "Do not count a near-miss as a win; preserve exact WIN outcome, and score rival strength separately."
       },
       {
-        "horse": "Mary Shoelaces",
-        "issue": "Recent soft-ground defeat and mixed form pointed against upgrading older C&D success; ninth on soft.",
-        "action": "Use going-specific recency and latest race fitness evidence rather than older track victories alone."
+        "horse": "Nap Hand",
+        "issue": "Recent Plumpton C&D form and fitness held up; first.",
+        "action": "Retain recency and tested conditions as useful features pending prospective validation."
       },
       {
-        "horse": "Turbo Command",
-        "issue": "Three historical C&D wins and a tempting OR drop masked deteriorated recent form; finished twelfth.",
-        "action": "Strengthen outsider E/W minimum recent-performance requirement; older course record is supporting evidence only."
-      },
-      {
-        "horse": "Yordan",
-        "issue": "Officially confirmed three-and-three-quarter-length win at Southwell on the proven standard Tapeta / six-furlong conditions following a higher-class turf outing; result supports the surface/trip hypothesis but one result is not calibration.",
-        "action": "Retain explicit demonstrated recent surface/distance suitability, but require comparison across many future races before claiming increased accuracy."
+        "horse": "Spec Of Light",
+        "issue": "Current low-grade Tapeta conditions and maintained form supported win.",
+        "action": "Review whether the demonstrated class/surface match can generalise without claiming calibration from one race."
       }
     ],
     "biasControls": [
-      "No after-the-fact removal of Major Fortune from ORIGINAL four published WIN picks.",
-      "No recorded or simulated wagers/profit added to previously cleared ledger.",
-      "Do not use SP as today's early price, and do not assert BOG without a documented accepted bookmaker wager.",
-      "Seven trials cannot establish statistical model improvement.",
-      "Do not use outcomes from races after the published decision when claiming pre-race feature availability."
+      "No retrospective paper stakes or bankroll changes.",
+      "All seven published runners, including Style King after its later withdrawal, remain in the original denominator.",
+      "Enamored and Reveur were declared non-runners elsewhere, not model selections.",
+      "Top-two rate is not the win strike rate.",
+      "Early quoted prices stay separate from SP."
     ]
   },
   "archivedRaceSnapshots": [
@@ -2706,690 +2848,1341 @@
         "notes": "One single Bet Selections view; WIN or EACH WAY shown per horse. Categories WIN, Mid Shots, Longshots, Mission and E/W Lucky 15 are not used for forward public selections. Existing paper ledger unchanged.",
         "paperBetStatus": "RESEARCH ONLY — NO NEW PAPER WAGERS OR PROFIT CREDITED"
       }
+    },
+    {
+      "date": "2026-10-19",
+      "verifiedAt": "2026-10-19T11:51:04.667Z",
+      "coverage": {
+        "meetings": 6,
+        "races": 47,
+        "scope": "47 UK/Ireland races listed on Oct 19 cards; candidates shortlisted across official racecards and rechecked against published going, runners, recent form, handicap terms and named rival form. Not a claim of exhaustive horse-by-horse sectional backtest.",
+        "publishedDate": "2026-10-19",
+        "selectedIndividuals": 7,
+        "betSelections": 7,
+        "winCandidates": 5,
+        "ewCandidates": 2,
+        "winConfidenceMethod": "Qualitative independent comparison of OR, RPR, fitness, course/distance/surface, current going, handicap shifts, opposition and published odds separately."
+      },
+      "meetings": [
+        {
+          "course": "Bath",
+          "races": 8,
+          "going": "GOOD TO SOFT, good in places",
+          "code": "Flat turf",
+          "first": "13:47",
+          "last": "17:22"
+        },
+        {
+          "course": "Gowran Park",
+          "races": 8,
+          "going": "YIELDING",
+          "code": "Flat turf",
+          "first": "13:40",
+          "last": "17:10"
+        },
+        {
+          "course": "Plumpton",
+          "races": 7,
+          "going": "GOOD, good to soft in places hurdle; chase good to firm in places",
+          "code": "Jumps",
+          "first": "14:00",
+          "last": "17:05"
+        },
+        {
+          "course": "Pontefract",
+          "races": 7,
+          "going": "SOFT",
+          "code": "Flat turf",
+          "first": "13:53",
+          "last": "16:55"
+        },
+        {
+          "course": "Southwell",
+          "races": 8,
+          "going": "STANDARD Tapeta",
+          "code": "Flat all-weather",
+          "first": "17:00",
+          "last": "20:30"
+        },
+        {
+          "course": "Wolverhampton",
+          "races": 9,
+          "going": "STANDARD Tapeta",
+          "code": "Flat all-weather",
+          "first": "16:15",
+          "last": "20:15"
+        }
+      ],
+      "betSelections": [
+        {
+          "time": "14:17",
+          "course": "Bath",
+          "horse": "Dreams Galore",
+          "betType": "win",
+          "odds": "3/1",
+          "jockey": "Harry Vigors (5lb)",
+          "trainer": "Ollie Sangster",
+          "or": 75,
+          "ts": 73,
+          "rpr": 80,
+          "draw": 3,
+          "runnerCount": 9,
+          "going": "GOOD TO SOFT, good in places",
+          "distance": "5f10y",
+          "raceClass": "Class 5 Nursery (2yo)",
+          "summary": "Three wins from the last four handicap starts over sprint trips; the 5lb rider claim offsets the recent 4lb rise and a low draw helps, but the stiff undulating Bath track and rain-eased turf are fresh tests.",
+          "positivePoints": [
+            "Three nursery wins from last four starts, form 471131",
+            "Latest win came at 5f on 5 October; off just 14 days",
+            "Rated OR75 with 5lb claim against a 4lb rise and stall three"
+          ],
+          "risk": "Last victory was on Wolverhampton Tapeta, not Bath turf; ground may ride softer than earlier forecasts and lightly raced Chief Minister (recent 6f soft second) could improve. Do not upgrade because favourite.",
+          "sourceUrl": "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/",
+          "priceSource": "https://www.timeform.com/horse-racing/odds/bath/2026-10-19/1417/4/2/mj-church-nursery-handicap",
+          "rivals": [
+            {
+              "horse": "Chief Minister",
+              "or": 69,
+              "rpr": 80
+            },
+            {
+              "horse": "Perigord Noir",
+              "or": 71,
+              "rpr": 77
+            }
+          ],
+          "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+          "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+          "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+          "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
+          "raceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T12:31:11.374Z",
+            "headline": "RETAIN WIN — Enamored confirmed non-runner; field now nine. Bath remains good-to-soft (good in places), with light rain and GoingStick 5.1. No automatic upgrade: turf/soft-ground suitability is less proven than recent Tapeta form.",
+            "detail": "Original ten-runner published snapshot preserved. Enamored is not a major rated rival and her withdrawal does not remove Chief Minister or Duty's Call. Latest official going reported via Racing Post. No replacement recommended.",
+            "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved",
+            "sourceUrls": [
+              "https://www.racingpost.com/non-runners/",
+              "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/"
+            ],
+            "nonRunners": [
+              "Enamored"
+            ],
+            "rivals": [
+              {
+                "horse": "Chief Minister",
+                "or": 69,
+                "rpr": 80
+              },
+              {
+                "horse": "Perigord Noir",
+                "or": 71,
+                "rpr": 77
+              }
+            ],
+            "observedPrice": "3/1",
+            "originalPublishedReviewPreservedAt": "originalRaceDayReview",
+            "originalPublishedAt": "2026-10-19T11:51:04.667Z",
+            "action": "RETAIN_WIN_WITH_FIELD_UPDATE"
+          },
+          "latestRaceDayReview": {
+            "checkedAt": "2026-10-19T12:31:11.374Z",
+            "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
+            "headline": "RETAIN WIN — Enamored confirmed non-runner; field now nine. Bath remains good-to-soft (good in places), with light rain and GoingStick 5.1. No automatic upgrade: turf/soft-ground suitability is less proven than recent Tapeta form.",
+            "detail": "Original ten-runner published snapshot preserved. Enamored is not a major rated rival and her withdrawal does not remove Chief Minister or Duty's Call. Latest official going reported via Racing Post. No replacement recommended.",
+            "currentRunnerCount": 9,
+            "confirmedNonRunners": [
+              "Enamored"
+            ],
+            "latestPriceObservation": null,
+            "sourceUrls": [
+              "https://www.racingpost.com/non-runners/",
+              "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/"
+            ],
+            "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
+          },
+          "originalRaceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T11:51:04.667Z",
+            "headline": "Three wins from the last four handicap starts over sprint trips; the 5lb rider claim offsets the recent 4lb rise and a low draw helps, but the stiff undulating Bath track and rain-eased turf are fresh tests.",
+            "detail": "Last victory was on Wolverhampton Tapeta, not Bath turf; ground may ride softer than earlier forecasts and lightly raced Chief Minister (recent 6f soft second) could improve. Do not upgrade because favourite.",
+            "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/",
+              "https://www.timeform.com/horse-racing/odds/bath/2026-10-19/1417/4/2/mj-church-nursery-handicap",
+              "https://www.racingpost.com/non-runners/2026-10-19/"
+            ],
+            "nonRunners": [],
+            "rivals": [
+              {
+                "horse": "Chief Minister",
+                "or": 69,
+                "rpr": 80
+              },
+              {
+                "horse": "Perigord Noir",
+                "or": 71,
+                "rpr": 77
+              }
+            ],
+            "observedPrice": "3/1"
+          },
+          "originalPublishedRunnerCount": 10,
+          "result": {
+            "position": 2,
+            "status": "Weighed in",
+            "sp": "9/2",
+            "source": "Racing TV verified published result",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/bath/1417",
+            "updatedAt": "2026-10-20T13:10:10.062Z"
+          },
+          "finalRunnerCount": 9
+        },
+        {
+          "time": "15:30",
+          "course": "Plumpton",
+          "horse": "Nap Hand",
+          "betType": "win",
+          "odds": "11/4",
+          "jockey": "Freddie Gordon",
+          "trainer": "Chris Gordon",
+          "or": 117,
+          "ts": 106,
+          "rpr": 119,
+          "runnerCount": 5,
+          "going": "GOOD on hurdle course; good to soft in places",
+          "distance": "1m7f195y",
+          "raceClass": "Class 4 Handicap Hurdle",
+          "summary": "Won over this two-mile distance in August and was only four lengths behind when fourth over today's Plumpton C&D 29 days ago; returns fit against several runners with long absences.",
+          "positivePoints": [
+            "Recent hurdle record 8-2214 includes win and two seconds",
+            "Ran over today's exact C&D only 29 days ago",
+            "Top OR117, compared with rival Basilette OR104 and Sixty Plus OR115"
+          ],
+          "risk": "Carries 12st; strong opponent Basilette is much lighter and has RPR122, Sixty Plus ran 6 days ago with a 5lb claimer. Beorma officially withdrawn leaving 5; rider needs to settle horse better than latest C&D run.",
+          "sourceUrl": "https://www.racingpost.com/racecards/44/plumpton/2026-10-19/929247/",
+          "priceSource": "https://www.sportinglife.com/racing/racecards/2026-10-19/plumpton/racecard/944228/bet-goodwin-handicap-hurdle",
+          "nonRunners": [
+            "Beorma"
+          ],
+          "rivals": [
+            {
+              "horse": "Sixty Plus",
+              "or": 115,
+              "rpr": 116
+            },
+            {
+              "horse": "Basilette",
+              "or": 104,
+              "rpr": 122
+            }
+          ],
+          "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+          "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+          "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+          "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
+          "raceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T11:51:04.667Z",
+            "headline": "Won over this two-mile distance in August and was only four lengths behind when fourth over today's Plumpton C&D 29 days ago; returns fit against several runners with long absences.",
+            "detail": "Carries 12st; strong opponent Basilette is much lighter and has RPR122, Sixty Plus ran 6 days ago with a 5lb claimer. Beorma officially withdrawn leaving 5; rider needs to settle horse better than latest C&D run.",
+            "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/44/plumpton/2026-10-19/929247/",
+              "https://www.sportinglife.com/racing/racecards/2026-10-19/plumpton/racecard/944228/bet-goodwin-handicap-hurdle",
+              "https://www.racingpost.com/non-runners/2026-10-19/"
+            ],
+            "nonRunners": [
+              "Beorma"
+            ],
+            "rivals": [
+              {
+                "horse": "Sixty Plus",
+                "or": 115,
+                "rpr": 116
+              },
+              {
+                "horse": "Basilette",
+                "or": 104,
+                "rpr": 122
+              }
+            ],
+            "observedPrice": "11/4"
+          },
+          "result": {
+            "position": 1,
+            "status": "Weighed in",
+            "sp": "15/8",
+            "source": "Racing TV verified published result",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/plumpton/1530",
+            "updatedAt": "2026-10-20T13:10:10.062Z"
+          },
+          "finalRunnerCount": 5
+        },
+        {
+          "time": "17:00",
+          "course": "Southwell",
+          "horse": "Rosemary's Rose",
+          "betType": "each-way",
+          "odds": "11/2",
+          "jockey": "Jack Dace",
+          "trainer": "Rod Millman",
+          "or": 59,
+          "ts": 54,
+          "rpr": 71,
+          "draw": 7,
+          "runnerCount": 10,
+          "going": "STANDARD Tapeta",
+          "distance": "7f14y",
+          "raceClass": "Class 6 Apprentice Handicap",
+          "summary": "Four top-three finishes in her last six starts, including a latest second, make her a place-oriented runner; she has two past all-weather wins, although neither was over today's 7f trip.",
+          "positivePoints": [
+            "Recent form 223352, four top-three results in six runs",
+            "Two all-weather wins at longer trips earlier in 2026",
+            "Recent fitness evidenced by 22-day turnaround"
+          ],
+          "risk": "No career win from six starts over this 7f distance and only one previous Southwell appearance; Burford Beauty and Distillate both won last time. Check at least 3 paid places and odds before any each-way bet.",
+          "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929537/",
+          "priceSource": "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/17%3A00/winner",
+          "rivals": [
+            {
+              "horse": "Burford Beauty",
+              "or": 60,
+              "rpr": 73
+            },
+            {
+              "horse": "Distillate",
+              "or": 52,
+              "rpr": 73
+            }
+          ],
+          "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+          "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+          "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+          "confidenceTier": "EVIDENCE-LED EACH-WAY CANDIDATE — NOT CALIBRATED",
+          "raceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T11:51:04.667Z",
+            "headline": "Four top-three finishes in her last six starts, including a latest second, make her a place-oriented runner; she has two past all-weather wins, although neither was over today's 7f trip.",
+            "detail": "No career win from six starts over this 7f distance and only one previous Southwell appearance; Burford Beauty and Distillate both won last time. Check at least 3 paid places and odds before any each-way bet.",
+            "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929537/",
+              "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/17%3A00/winner",
+              "https://www.racingpost.com/non-runners/2026-10-19/"
+            ],
+            "nonRunners": [],
+            "rivals": [
+              {
+                "horse": "Burford Beauty",
+                "or": 60,
+                "rpr": 73
+              },
+              {
+                "horse": "Distillate",
+                "or": 52,
+                "rpr": 73
+              }
+            ],
+            "observedPrice": "11/2"
+          },
+          "result": {
+            "position": 6,
+            "status": "Weighed in",
+            "sp": "15/2",
+            "source": "Racing TV verified published result",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1700",
+            "updatedAt": "2026-10-20T13:10:10.062Z"
+          },
+          "finalRunnerCount": 9
+        },
+        {
+          "time": "18:00",
+          "course": "Southwell",
+          "horse": "Go Lockers Go",
+          "betType": "win",
+          "winRank": "NAP",
+          "odds": "5/2",
+          "jockey": "Callum Shepherd",
+          "trainer": "Michael Bell",
+          "or": 70,
+          "ts": 61,
+          "rpr": 79,
+          "draw": 4,
+          "runnerCount": 10,
+          "going": "STANDARD Tapeta",
+          "distance": "6f16y",
+          "raceClass": "Class 5 Handicap (0–70)",
+          "summary": "Back-to-back wins, including over Southwell's exact course and distance nine days ago, with just a one-pound rise in the mark; the return to a known successful setup is the strongest case today.",
+          "positivePoints": [
+            "Back-to-back wins, including Southwell C&D 9 days ago",
+            "Only 1lb higher since latest win; now OR70",
+            "RPR79 compares favorably with Massimo Blue's RPR77"
+          ],
+          "risk": "Massimo Blue has won twice over this C&D and has a near-matching rating (OR70); a 10-runner sprint can be decided by the pace map or an awkward break. Neither quote nor favouritism raises race confidence.",
+          "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/",
+          "priceSource": "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/1800/47/3",
+          "rivals": [
+            {
+              "horse": "Massimo Blue",
+              "or": 70,
+              "rpr": 77
+            },
+            {
+              "horse": "Jenever",
+              "or": 69,
+              "rpr": 80
+            }
+          ],
+          "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+          "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+          "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+          "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
+          "raceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T12:31:11.374Z",
+            "headline": "RETAIN WIN (NAP) WITH MARKET-DIVERGENCE WARNING — current multi-bookmaker comparison shows approximately 6/1–15/2, versus original frozen 5/2 reference. This is a substantial unverified-cause drift, not evidence that his known C&D form has disappeared.",
+            "detail": "Re-examined Massimo Blue (OR70, two C&D wins; quoted around 2/1–9/4), Jenever (RPR80), and Spirit Of Applause (recent 022455). Go Lockers Go won latest C&D only by a head and a 10-runner sprint remains vulnerable to break/pace. Oddschecker and WhichBookie agree on later wider prices; Timeform's earlier 5/2 is not treated as a simultaneous quote. No confidence increase or automatic removal solely on odds.",
+            "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved",
+            "sourceUrls": [
+              "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/18%3A00/winner",
+              "https://www.whichbookie.co.uk/horse-racing/southwell/1800",
+              "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/"
+            ],
+            "nonRunners": [],
+            "rivals": [
+              {
+                "horse": "Massimo Blue",
+                "or": 70,
+                "rpr": 77
+              },
+              {
+                "horse": "Jenever",
+                "or": 69,
+                "rpr": 80
+              }
+            ],
+            "observedPrice": "5/2",
+            "originalPublishedReviewPreservedAt": "originalRaceDayReview",
+            "originalPublishedAt": "2026-10-19T11:51:04.667Z",
+            "action": "RETAIN_WIN_MARKET_DIVERGENCE"
+          },
+          "latestRaceDayReview": {
+            "checkedAt": "2026-10-19T12:31:11.374Z",
+            "action": "RETAIN_WIN_MARKET_DIVERGENCE",
+            "headline": "RETAIN WIN (NAP) WITH MARKET-DIVERGENCE WARNING — current multi-bookmaker comparison shows approximately 6/1–15/2, versus original frozen 5/2 reference. This is a substantial unverified-cause drift, not evidence that his known C&D form has disappeared.",
+            "detail": "Re-examined Massimo Blue (OR70, two C&D wins; quoted around 2/1–9/4), Jenever (RPR80), and Spirit Of Applause (recent 022455). Go Lockers Go won latest C&D only by a head and a 10-runner sprint remains vulnerable to break/pace. Oddschecker and WhichBookie agree on later wider prices; Timeform's earlier 5/2 is not treated as a simultaneous quote. No confidence increase or automatic removal solely on odds.",
+            "currentRunnerCount": 10,
+            "confirmedNonRunners": [],
+            "latestPriceObservation": {
+              "original": "5/2",
+              "latestRange": "6/1–15/2",
+              "source": "Oddschecker multi-bookmaker market",
+              "asOf": "2026-10-19T12:31:11.374Z"
+            },
+            "sourceUrls": [
+              "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/18%3A00/winner",
+              "https://www.whichbookie.co.uk/horse-racing/southwell/1800",
+              "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/"
+            ],
+            "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
+          },
+          "originalRaceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T11:51:04.667Z",
+            "headline": "Back-to-back wins, including over Southwell's exact course and distance nine days ago, with just a one-pound rise in the mark; the return to a known successful setup is the strongest case today.",
+            "detail": "Massimo Blue has won twice over this C&D and has a near-matching rating (OR70); a 10-runner sprint can be decided by the pace map or an awkward break. Neither quote nor favouritism raises race confidence.",
+            "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/",
+              "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/1800/47/3",
+              "https://www.racingpost.com/non-runners/2026-10-19/"
+            ],
+            "nonRunners": [],
+            "rivals": [
+              {
+                "horse": "Massimo Blue",
+                "or": 70,
+                "rpr": 77
+              },
+              {
+                "horse": "Jenever",
+                "or": 69,
+                "rpr": 80
+              }
+            ],
+            "observedPrice": "5/2"
+          },
+          "originalPublishedRunnerCount": 10,
+          "result": {
+            "position": 7,
+            "status": "Weighed in",
+            "sp": "17/2",
+            "source": "Racing TV verified published result",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1800",
+            "updatedAt": "2026-10-20T13:10:10.062Z"
+          },
+          "finalRunnerCount": 10
+        },
+        {
+          "time": "18:15",
+          "course": "Wolverhampton",
+          "horse": "Style King",
+          "betType": "each-way",
+          "odds": "15/2",
+          "jockey": "Harry Davies",
+          "trainer": "Chris Dwyer",
+          "or": 74,
+          "ts": 81,
+          "rpr": 96,
+          "draw": 10,
+          "runnerCount": 12,
+          "going": "STANDARD Tapeta",
+          "distance": "6f20y",
+          "raceClass": "Class 3 Handicap (0–90)",
+          "summary": "Three sprint wins since July, including an all-the-way C&D win 17 days ago, supply strong contemporary course-and-distance proof at an each-way price despite the higher grade.",
+          "positivePoints": [
+            "Three recent victories, latest over exact Wolverhampton C&D",
+            "Recent form 122101 with repeated competitive results",
+            "RPR96 despite comparatively low mark OR74"
+          ],
+          "risk": "Up 7lb for latest success and now faces Class 3 opposition; stall 10 and likely pace pressure from other front-runners are significant risks. Dandana is an official NR (12 remain). E/W terms must be bookmaker-verified.",
+          "sourceUrl": "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/",
+          "priceSource": "https://www.sportinglife.com/racing/racecards/2026-10-19/wolverhampton/live-show/944220/cavani-best-dressed-handicap",
+          "nonRunners": [
+            "Dandana"
+          ],
+          "rivals": [
+            {
+              "horse": "Knebworth",
+              "or": 86,
+              "rpr": 98
+            },
+            {
+              "horse": "Kind Touch",
+              "or": 86,
+              "rpr": 95
+            }
+          ],
+          "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+          "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+          "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+          "confidenceTier": "EVIDENCE-LED EACH-WAY CANDIDATE — NOT CALIBRATED",
+          "raceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T12:31:11.374Z",
+            "headline": "WITHDRAWN FROM FRESH EACH-WAY RECOMMENDATIONS (POST-PUBLICATION, original snapshot retained). Later market quotes have widened from frozen 15/2 to approximately 14/1–18/1, while Class 3 opposition, a 7lb rise and stall 10 with pace pressure make the earlier place case insufficiently robust.",
+            "detail": "Knebworth's current official rating is 90 (not 86 as in original rival snapshot), RPR99; Kind Touch OR86/RPR96, recent seconds. Dandana remains a confirmed non-runner; 12 active. Standard each-way offers display four places at 1/5, but the extra place does not remove the elevated class/pace risks. This is a prospective withdrawal, NOT a retroactive deletion or a horse non-runner. No replacement justified from the checked field.",
+            "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved",
+            "sourceUrls": [
+              "https://www.oddschecker.com/horse-racing/2026-10-19-wolverhampton/18%3A15/winner",
+              "https://www.whichbookie.co.uk/horse-racing/wolverhampton/1815",
+              "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/"
+            ],
+            "nonRunners": [
+              "Dandana"
+            ],
+            "rivals": [
+              {
+                "horse": "Knebworth",
+                "or": 90,
+                "rpr": 99
+              },
+              {
+                "horse": "Kind Touch",
+                "or": 86,
+                "rpr": 96
+              }
+            ],
+            "observedPrice": "15/2",
+            "originalPublishedReviewPreservedAt": "originalRaceDayReview",
+            "originalPublishedAt": "2026-10-19T11:51:04.667Z",
+            "action": "WITHDRAW_EACH_WAY_FOR_FRESH_BETTING"
+          },
+          "latestRaceDayReview": {
+            "checkedAt": "2026-10-19T12:31:11.374Z",
+            "action": "WITHDRAW_EACH_WAY_FOR_FRESH_BETTING",
+            "headline": "WITHDRAWN FROM FRESH EACH-WAY RECOMMENDATIONS (POST-PUBLICATION, original snapshot retained). Later market quotes have widened from frozen 15/2 to approximately 14/1–18/1, while Class 3 opposition, a 7lb rise and stall 10 with pace pressure make the earlier place case insufficiently robust.",
+            "detail": "Knebworth's current official rating is 90 (not 86 as in original rival snapshot), RPR99; Kind Touch OR86/RPR96, recent seconds. Dandana remains a confirmed non-runner; 12 active. Standard each-way offers display four places at 1/5, but the extra place does not remove the elevated class/pace risks. This is a prospective withdrawal, NOT a retroactive deletion or a horse non-runner. No replacement justified from the checked field.",
+            "currentRunnerCount": 12,
+            "confirmedNonRunners": [
+              "Dandana"
+            ],
+            "latestPriceObservation": {
+              "original": "15/2",
+              "latestRange": "14/1–18/1",
+              "source": "Oddschecker and WhichBookie multi-bookmaker markets",
+              "asOf": "2026-10-19T12:31:11.374Z"
+            },
+            "sourceUrls": [
+              "https://www.oddschecker.com/horse-racing/2026-10-19-wolverhampton/18%3A15/winner",
+              "https://www.whichbookie.co.uk/horse-racing/wolverhampton/1815",
+              "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/"
+            ],
+            "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
+          },
+          "prospectiveBettingStatus": "WITHDRAWN_AFTER_PUBLICATION",
+          "originalRaceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T11:51:04.667Z",
+            "headline": "Three sprint wins since July, including an all-the-way C&D win 17 days ago, supply strong contemporary course-and-distance proof at an each-way price despite the higher grade.",
+            "detail": "Up 7lb for latest success and now faces Class 3 opposition; stall 10 and likely pace pressure from other front-runners are significant risks. Dandana is an official NR (12 remain). E/W terms must be bookmaker-verified.",
+            "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/",
+              "https://www.sportinglife.com/racing/racecards/2026-10-19/wolverhampton/live-show/944220/cavani-best-dressed-handicap",
+              "https://www.racingpost.com/non-runners/2026-10-19/"
+            ],
+            "nonRunners": [
+              "Dandana"
+            ],
+            "rivals": [
+              {
+                "horse": "Knebworth",
+                "or": 86,
+                "rpr": 98
+              },
+              {
+                "horse": "Kind Touch",
+                "or": 86,
+                "rpr": 95
+              }
+            ],
+            "observedPrice": "15/2"
+          },
+          "originalPublishedRunnerCount": 12,
+          "result": {
+            "position": 11,
+            "status": "Weighed in",
+            "sp": "25/1",
+            "source": "Racing TV verified published result",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1815",
+            "updatedAt": "2026-10-20T13:10:10.062Z"
+          },
+          "finalRunnerCount": 12
+        },
+        {
+          "time": "19:15",
+          "course": "Wolverhampton",
+          "horse": "The Anthony Gover",
+          "betType": "win",
+          "winRank": "NB",
+          "odds": "10/3",
+          "jockey": "Cian Horgan (5lb)",
+          "trainer": "Dr Richard Newland",
+          "or": 67,
+          "draw": 5,
+          "runnerCount": 10,
+          "going": "STANDARD Tapeta",
+          "distance": "1m1f104y",
+          "raceClass": "Class 5 Handicap (0–70)",
+          "summary": "Won twice over this C&D before finishing third by only one length at the same track; a better stall-five draw and 5lb claimer aid the return to proven conditions.",
+          "positivePoints": [
+            "Two wins over this Wolverhampton C&D in last three outings",
+            "One-length C&D third latest shows handicap still workable",
+            "5lb claim and middle draw five avoid obvious top-weight or wide-stall drawbacks"
+          ],
+          "risk": "Albertini Star won recently at Sandown and could improve at this trip but has less established Wolverhampton Tapeta evidence; Moonjid has stronger OR70 and recent placed form. Avoid assuming repeat victories inevitable.",
+          "sourceUrl": "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/",
+          "priceSource": "https://www.timeform.com/horse-racing/odds/wolverhampton/2026-10-19/1915/58/7",
+          "rivals": [
+            {
+              "horse": "Albertini Star",
+              "or": 68,
+              "rpr": 80
+            },
+            {
+              "horse": "Moonjid",
+              "or": 70,
+              "rpr": 78
+            }
+          ],
+          "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+          "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+          "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+          "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
+          "raceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T12:31:11.374Z",
+            "headline": "RETAIN WIN — Reveur newly confirmed non-runner; ten active runners versus eleven in frozen publication. No confidence upgrade from the removal of an outsider.",
+            "detail": "The leading live opponents Albertini Star and Moonjid remain; same Standard Tapeta, C&D and jockey claim. No demonstrated material change in pace from Reveur's removal.",
+            "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved",
+            "sourceUrls": [
+              "https://www.racingpost.com/non-runners/",
+              "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/"
+            ],
+            "nonRunners": [
+              "Reveur"
+            ],
+            "rivals": [
+              {
+                "horse": "Albertini Star",
+                "or": 68,
+                "rpr": 80
+              },
+              {
+                "horse": "Moonjid",
+                "or": 70,
+                "rpr": 78
+              }
+            ],
+            "observedPrice": "10/3",
+            "originalPublishedReviewPreservedAt": "originalRaceDayReview",
+            "originalPublishedAt": "2026-10-19T11:51:04.667Z",
+            "action": "RETAIN_WIN_WITH_FIELD_UPDATE"
+          },
+          "latestRaceDayReview": {
+            "checkedAt": "2026-10-19T12:31:11.374Z",
+            "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
+            "headline": "RETAIN WIN — Reveur newly confirmed non-runner; ten active runners versus eleven in frozen publication. No confidence upgrade from the removal of an outsider.",
+            "detail": "The leading live opponents Albertini Star and Moonjid remain; same Standard Tapeta, C&D and jockey claim. No demonstrated material change in pace from Reveur's removal.",
+            "currentRunnerCount": 10,
+            "confirmedNonRunners": [
+              "Reveur"
+            ],
+            "latestPriceObservation": null,
+            "sourceUrls": [
+              "https://www.racingpost.com/non-runners/",
+              "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/"
+            ],
+            "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
+          },
+          "originalRaceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T11:51:04.667Z",
+            "headline": "Won twice over this C&D before finishing third by only one length at the same track; a better stall-five draw and 5lb claimer aid the return to proven conditions.",
+            "detail": "Albertini Star won recently at Sandown and could improve at this trip but has less established Wolverhampton Tapeta evidence; Moonjid has stronger OR70 and recent placed form. Avoid assuming repeat victories inevitable.",
+            "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/",
+              "https://www.timeform.com/horse-racing/odds/wolverhampton/2026-10-19/1915/58/7",
+              "https://www.racingpost.com/non-runners/2026-10-19/"
+            ],
+            "nonRunners": [],
+            "rivals": [
+              {
+                "horse": "Albertini Star",
+                "or": 68,
+                "rpr": 80
+              },
+              {
+                "horse": "Moonjid",
+                "or": 70,
+                "rpr": 78
+              }
+            ],
+            "observedPrice": "10/3"
+          },
+          "originalPublishedRunnerCount": 11,
+          "result": {
+            "position": 2,
+            "status": "Weighed in",
+            "sp": "9/2",
+            "source": "Racing TV verified published result",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1915",
+            "updatedAt": "2026-10-20T13:10:10.062Z"
+          },
+          "finalRunnerCount": 10
+        },
+        {
+          "time": "20:30",
+          "course": "Southwell",
+          "horse": "Spec Of Light",
+          "betType": "win",
+          "odds": "9/4",
+          "jockey": "Rose Dawes (3lb)",
+          "trainer": "Tony Forbes",
+          "or": 57,
+          "draw": 7,
+          "runnerCount": 9,
+          "going": "STANDARD Tapeta",
+          "distance": "1m3f23y",
+          "raceClass": "Class 6 Handicap (0–60)",
+          "summary": "Won over this precise C&D thirteen days ago, and the second and seventh from that race subsequently won; only four pounds higher, with a three-pound claim.",
+          "positivePoints": [
+            "Won latest Southwell C&D race 13 days ago",
+            "Two subsequent winners strengthen the latest form line",
+            "OR57 after 4lb rise, with Rose Dawes claiming 3lb"
+          ],
+          "risk": "Had a favorable front-running setup last time and may not reproduce it from stall seven; We've Got This ran second at Newcastle recently, while a 4lb higher rating still erodes the earlier advantage.",
+          "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929536/",
+          "priceSource": "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/2030/47/8",
+          "rivals": [
+            {
+              "horse": "We've Got This",
+              "or": 59,
+              "rpr": 71
+            },
+            {
+              "horse": "Symphony's Song",
+              "or": 57,
+              "rpr": 70
+            }
+          ],
+          "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
+          "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
+          "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
+          "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
+          "raceDayReview": {
+            "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
+            "checkedAt": "2026-10-19T11:51:04.667Z",
+            "headline": "Won over this precise C&D thirteen days ago, and the second and seventh from that race subsequently won; only four pounds higher, with a three-pound claim.",
+            "detail": "Had a favorable front-running setup last time and may not reproduce it from stall seven; We've Got This ran second at Newcastle recently, while a 4lb higher rating still erodes the earlier advantage.",
+            "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
+            "sourceUrls": [
+              "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929536/",
+              "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/2030/47/8",
+              "https://www.racingpost.com/non-runners/2026-10-19/"
+            ],
+            "nonRunners": [],
+            "rivals": [
+              {
+                "horse": "We've Got This",
+                "or": 59,
+                "rpr": 71
+              },
+              {
+                "horse": "Symphony's Song",
+                "or": 57,
+                "rpr": 70
+              }
+            ],
+            "observedPrice": "9/4"
+          },
+          "result": {
+            "position": 1,
+            "status": "Weighed in",
+            "sp": "5/4",
+            "source": "Racing TV verified published result",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/2030",
+            "updatedAt": "2026-10-20T13:10:10.062Z"
+          },
+          "finalRunnerCount": 9
+        }
+      ],
+      "winNominations": [
+        {
+          "horse": "Go Lockers Go",
+          "time": "18:00",
+          "course": "Southwell",
+          "label": "NAP",
+          "rationale": "Back-to-back wins, including over Southwell's exact course and distance nine days ago, with just a one-pound rise in the mark; the return to a known successful setup is the strongest case today."
+        },
+        {
+          "horse": "The Anthony Gover",
+          "time": "19:15",
+          "course": "Wolverhampton",
+          "label": "NB",
+          "rationale": "Won twice over this C&D before finishing third by only one length at the same track; a better stall-five draw and 5lb claimer aid the return to proven conditions."
+        }
+      ],
+      "selectionPresentation": {
+        "rule": "ONE_BET_SELECTION_PER_RACE",
+        "effectiveDate": "2026-10-19",
+        "selectionCount": 7,
+        "featuredRaceCount": 7,
+        "notes": "Single bet selections list with Win / Each Way on each horse, in chronological order. No separate categories, and NAP/NB are recommendation ranks rather than market-driven categories.",
+        "paperBetStatus": "RESEARCH ONLY — NO NEW PAPER WAGERS OR PROFIT CREDITED"
+      },
+      "finalAudit": {
+        "asOfDate": "2026-10-19",
+        "recordedAt": "2026-10-20T13:10:10.062Z",
+        "sourceRule": "Frozen seven published pre-race selections retained. Results verified after the races; subsequent withdrawal from fresh betting does not alter original strike-rate denominators. Non-runners Enamored and Reveur were NOT selections.",
+        "coverage": {
+          "originalSelections": 7,
+          "originalWin": 5,
+          "originalEachWay": 2,
+          "nonRunnersAmongSelections": 0,
+          "afterPublicationWithdrawals": [
+            "Style King"
+          ]
+        },
+        "outcomes": {
+          "winners": 2,
+          "seconds": 2,
+          "unplaced": 3,
+          "winWinners": 2,
+          "eachWayPlaces": 0,
+          "topTwo": 4
+        },
+        "strikeRateStatus": "Original frozen shortlist: 2 winners from 7 runners (28.6%); WIN-only 2/5 (40.0%); EACH-WAY winners 0/2, paid-place finishes 0/2. Two runner-up WIN selections did not win.",
+        "metrics": {
+          "originalOverallWinnerRate": "2/7 (28.6%)",
+          "originalWinStrikeRate": "2/5 (40.0%)",
+          "eachWayPlaceStrikeRate": "0/2 (0%)",
+          "topTwoRate": "4/7 (57.1%)",
+          "bettingPAndL": "Not calculated: 19 Oct were researched selections, not paper bets"
+        },
+        "runnerResults": [
+          {
+            "horse": "Dreams Galore",
+            "course": "Bath",
+            "time": "14:17",
+            "originCategory": "ORIGINAL_WIN",
+            "selectedEarlyOdds": "3/1",
+            "finished": 2,
+            "sp": "9/2",
+            "lateWithdrawn": false,
+            "source": "Racing TV",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/bath/1417"
+          },
+          {
+            "horse": "Nap Hand",
+            "course": "Plumpton",
+            "time": "15:30",
+            "originCategory": "ORIGINAL_WIN",
+            "selectedEarlyOdds": "11/4",
+            "finished": 1,
+            "sp": "15/8",
+            "lateWithdrawn": false,
+            "source": "Racing TV",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/plumpton/1530"
+          },
+          {
+            "horse": "Rosemary's Rose",
+            "course": "Southwell",
+            "time": "17:00",
+            "originCategory": "ORIGINAL_EW",
+            "selectedEarlyOdds": "11/2",
+            "finished": 6,
+            "sp": "15/2",
+            "lateWithdrawn": false,
+            "source": "Racing TV",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1700"
+          },
+          {
+            "horse": "Go Lockers Go",
+            "course": "Southwell",
+            "time": "18:00",
+            "originCategory": "ORIGINAL_WIN",
+            "selectedEarlyOdds": "5/2",
+            "finished": 7,
+            "sp": "17/2",
+            "lateWithdrawn": false,
+            "source": "Racing TV",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/1800"
+          },
+          {
+            "horse": "Style King",
+            "course": "Wolverhampton",
+            "time": "18:15",
+            "originCategory": "ORIGINAL_EW",
+            "selectedEarlyOdds": "15/2",
+            "finished": 11,
+            "sp": "25/1",
+            "lateWithdrawn": true,
+            "source": "Racing TV",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1815"
+          },
+          {
+            "horse": "The Anthony Gover",
+            "course": "Wolverhampton",
+            "time": "19:15",
+            "originCategory": "ORIGINAL_WIN",
+            "selectedEarlyOdds": "10/3",
+            "finished": 2,
+            "sp": "9/2",
+            "lateWithdrawn": false,
+            "source": "Racing TV",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/wolverhampton/1915"
+          },
+          {
+            "horse": "Spec Of Light",
+            "course": "Southwell",
+            "time": "20:30",
+            "originCategory": "ORIGINAL_WIN",
+            "selectedEarlyOdds": "9/4",
+            "finished": 1,
+            "sp": "5/4",
+            "lateWithdrawn": false,
+            "source": "Racing TV",
+            "sourceUrl": "https://www.racingtv.com/results/2026-10-19/southwell/2030"
+          }
+        ],
+        "errorAnalysis": [
+          {
+            "horse": "Go Lockers Go",
+            "issue": "Original NAP was based on two recent wins and proven C&D but market drift from 5/2 to around 17/2 and competitive sprint opposition proved significant; finished 7th.",
+            "action": "Treat sustained sizeable market changes as a recheck trigger, not as a deterministic veto or a confidence-boosting opportunity."
+          },
+          {
+            "horse": "Style King",
+            "issue": "Sharp class/OR pressure and wide draw were identified at a late review; retained in original E/W denominator, finished 11th.",
+            "action": "Prioritise class and competitive rival evidence before the first publication, retain withdrawal logs without look-ahead bias."
+          },
+          {
+            "horse": "Dreams Galore",
+            "issue": "Promising three-from-four handicap record translated to second at Bath, but rivals adapted better to the softened turf and course.",
+            "action": "Compare ground/course translatability and expected rivals on their actual surface before naming a favourite contender."
+          },
+          {
+            "horse": "The Anthony Gover",
+            "issue": "Strong Wolverhampton C&D profile produced second but not a WIN return.",
+            "action": "Do not count a near-miss as a win; preserve exact WIN outcome, and score rival strength separately."
+          },
+          {
+            "horse": "Nap Hand",
+            "issue": "Recent Plumpton C&D form and fitness held up; first.",
+            "action": "Retain recency and tested conditions as useful features pending prospective validation."
+          },
+          {
+            "horse": "Spec Of Light",
+            "issue": "Current low-grade Tapeta conditions and maintained form supported win.",
+            "action": "Review whether the demonstrated class/surface match can generalise without claiming calibration from one race."
+          }
+        ],
+        "biasControls": [
+          "No retrospective paper stakes or bankroll changes.",
+          "All seven published runners, including Style King after its later withdrawal, remain in the original denominator.",
+          "Enamored and Reveur were declared non-runners elsewhere, not model selections.",
+          "Top-two rate is not the win strike rate.",
+          "Early quoted prices stay separate from SP."
+        ]
+      },
+      "originalDecisionLog": [
+        {
+          "checkedAt": "2026-10-19T12:31:11.374Z",
+          "horse": "Dreams Galore",
+          "course": "Bath",
+          "time": "14:17",
+          "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
+          "summary": "RETAIN WIN — Enamored confirmed non-runner; field now nine. Bath remains good-to-soft (good in places), with light rain and GoingStick 5.1. No automatic upgrade: turf/soft-ground suitability is less proven than recent Tapeta form.",
+          "sourceUrls": [
+            "https://www.racingpost.com/non-runners/",
+            "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/"
+          ],
+          "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
+        },
+        {
+          "checkedAt": "2026-10-19T12:31:11.374Z",
+          "horse": "Go Lockers Go",
+          "course": "Southwell",
+          "time": "18:00",
+          "action": "RETAIN_WIN_MARKET_DIVERGENCE",
+          "summary": "RETAIN WIN (NAP) WITH MARKET-DIVERGENCE WARNING — current multi-bookmaker comparison shows approximately 6/1–15/2, versus original frozen 5/2 reference. This is a substantial unverified-cause drift, not evidence that his known C&D form has disappeared.",
+          "sourceUrls": [
+            "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/18%3A00/winner",
+            "https://www.whichbookie.co.uk/horse-racing/southwell/1800",
+            "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/"
+          ],
+          "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
+        },
+        {
+          "checkedAt": "2026-10-19T12:31:11.374Z",
+          "horse": "Style King",
+          "course": "Wolverhampton",
+          "time": "18:15",
+          "action": "WITHDRAW_EACH_WAY_FOR_FRESH_BETTING",
+          "summary": "WITHDRAWN FROM FRESH EACH-WAY RECOMMENDATIONS (POST-PUBLICATION, original snapshot retained). Later market quotes have widened from frozen 15/2 to approximately 14/1–18/1, while Class 3 opposition, a 7lb rise and stall 10 with pace pressure make the earlier place case insufficiently robust.",
+          "sourceUrls": [
+            "https://www.oddschecker.com/horse-racing/2026-10-19-wolverhampton/18%3A15/winner",
+            "https://www.whichbookie.co.uk/horse-racing/wolverhampton/1815",
+            "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/"
+          ],
+          "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
+        },
+        {
+          "checkedAt": "2026-10-19T12:31:11.374Z",
+          "horse": "The Anthony Gover",
+          "course": "Wolverhampton",
+          "time": "19:15",
+          "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
+          "summary": "RETAIN WIN — Reveur newly confirmed non-runner; ten active runners versus eleven in frozen publication. No confidence upgrade from the removal of an outsider.",
+          "sourceUrls": [
+            "https://www.racingpost.com/non-runners/",
+            "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/"
+          ],
+          "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
+        }
+      ]
     }
   ],
-  "pricingReviewAt": "2026-10-19T11:51:04.667Z",
+  "pricingReviewAt": "2026-10-20T13:10:10.062Z",
   "betSelections": [
     {
-      "time": "14:17",
-      "course": "Bath",
-      "horse": "Dreams Galore",
-      "betType": "win",
-      "odds": "3/1",
-      "jockey": "Harry Vigors (5lb)",
-      "trainer": "Ollie Sangster",
-      "or": 75,
-      "ts": 73,
-      "rpr": 80,
-      "draw": 3,
-      "runnerCount": 9,
-      "going": "GOOD TO SOFT, good in places",
-      "distance": "5f10y",
-      "raceClass": "Class 5 Nursery (2yo)",
-      "summary": "Three wins from the last four handicap starts over sprint trips; the 5lb rider claim offsets the recent 4lb rise and a low draw helps, but the stiff undulating Bath track and rain-eased turf are fresh tests.",
-      "positivePoints": [
-        "Three nursery wins from last four starts, form 471131",
-        "Latest win came at 5f on 5 October; off just 14 days",
-        "Rated OR75 with 5lb claim against a 4lb rise and stall three"
-      ],
-      "risk": "Last victory was on Wolverhampton Tapeta, not Bath turf; ground may ride softer than earlier forecasts and lightly raced Chief Minister (recent 6f soft second) could improve. Do not upgrade because favourite.",
-      "sourceUrl": "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/",
-      "priceSource": "https://www.timeform.com/horse-racing/odds/bath/2026-10-19/1417/4/2/mj-church-nursery-handicap",
-      "rivals": [
-        {
-          "horse": "Chief Minister",
-          "or": 69,
-          "rpr": 80
-        },
-        {
-          "horse": "Perigord Noir",
-          "or": 71,
-          "rpr": 77
-        }
-      ],
-      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
-      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
-      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
-      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
-      "raceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T12:31:11.374Z",
-        "headline": "RETAIN WIN — Enamored confirmed non-runner; field now nine. Bath remains good-to-soft (good in places), with light rain and GoingStick 5.1. No automatic upgrade: turf/soft-ground suitability is less proven than recent Tapeta form.",
-        "detail": "Original ten-runner published snapshot preserved. Enamored is not a major rated rival and her withdrawal does not remove Chief Minister or Duty's Call. Latest official going reported via Racing Post. No replacement recommended.",
-        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved",
-        "sourceUrls": [
-          "https://www.racingpost.com/non-runners/",
-          "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/"
-        ],
-        "nonRunners": [
-          "Enamored"
-        ],
-        "rivals": [
-          {
-            "horse": "Chief Minister",
-            "or": 69,
-            "rpr": 80
-          },
-          {
-            "horse": "Perigord Noir",
-            "or": 71,
-            "rpr": 77
-          }
-        ],
-        "observedPrice": "3/1",
-        "originalPublishedReviewPreservedAt": "originalRaceDayReview",
-        "originalPublishedAt": "2026-10-19T11:51:04.667Z",
-        "action": "RETAIN_WIN_WITH_FIELD_UPDATE"
-      },
-      "latestRaceDayReview": {
-        "checkedAt": "2026-10-19T12:31:11.374Z",
-        "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
-        "headline": "RETAIN WIN — Enamored confirmed non-runner; field now nine. Bath remains good-to-soft (good in places), with light rain and GoingStick 5.1. No automatic upgrade: turf/soft-ground suitability is less proven than recent Tapeta form.",
-        "detail": "Original ten-runner published snapshot preserved. Enamored is not a major rated rival and her withdrawal does not remove Chief Minister or Duty's Call. Latest official going reported via Racing Post. No replacement recommended.",
-        "currentRunnerCount": 9,
-        "confirmedNonRunners": [
-          "Enamored"
-        ],
-        "latestPriceObservation": null,
-        "sourceUrls": [
-          "https://www.racingpost.com/non-runners/",
-          "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/"
-        ],
-        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
-      },
-      "originalRaceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T11:51:04.667Z",
-        "headline": "Three wins from the last four handicap starts over sprint trips; the 5lb rider claim offsets the recent 4lb rise and a low draw helps, but the stiff undulating Bath track and rain-eased turf are fresh tests.",
-        "detail": "Last victory was on Wolverhampton Tapeta, not Bath turf; ground may ride softer than earlier forecasts and lightly raced Chief Minister (recent 6f soft second) could improve. Do not upgrade because favourite.",
-        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/5/bath/2026-10-19/929425/",
-          "https://www.timeform.com/horse-racing/odds/bath/2026-10-19/1417/4/2/mj-church-nursery-handicap",
-          "https://www.racingpost.com/non-runners/2026-10-19/"
-        ],
-        "nonRunners": [],
-        "rivals": [
-          {
-            "horse": "Chief Minister",
-            "or": 69,
-            "rpr": 80
-          },
-          {
-            "horse": "Perigord Noir",
-            "or": 71,
-            "rpr": 77
-          }
-        ],
-        "observedPrice": "3/1"
-      },
-      "originalPublishedRunnerCount": 10
-    },
-    {
-      "time": "15:30",
-      "course": "Plumpton",
-      "horse": "Nap Hand",
-      "betType": "win",
-      "odds": "11/4",
-      "jockey": "Freddie Gordon",
-      "trainer": "Chris Gordon",
-      "or": 117,
-      "ts": 106,
-      "rpr": 119,
-      "runnerCount": 5,
-      "going": "GOOD on hurdle course; good to soft in places",
-      "distance": "1m7f195y",
-      "raceClass": "Class 4 Handicap Hurdle",
-      "summary": "Won over this two-mile distance in August and was only four lengths behind when fourth over today's Plumpton C&D 29 days ago; returns fit against several runners with long absences.",
-      "positivePoints": [
-        "Recent hurdle record 8-2214 includes win and two seconds",
-        "Ran over today's exact C&D only 29 days ago",
-        "Top OR117, compared with rival Basilette OR104 and Sixty Plus OR115"
-      ],
-      "risk": "Carries 12st; strong opponent Basilette is much lighter and has RPR122, Sixty Plus ran 6 days ago with a 5lb claimer. Beorma officially withdrawn leaving 5; rider needs to settle horse better than latest C&D run.",
-      "sourceUrl": "https://www.racingpost.com/racecards/44/plumpton/2026-10-19/929247/",
-      "priceSource": "https://www.sportinglife.com/racing/racecards/2026-10-19/plumpton/racecard/944228/bet-goodwin-handicap-hurdle",
-      "nonRunners": [
-        "Beorma"
-      ],
-      "rivals": [
-        {
-          "horse": "Sixty Plus",
-          "or": 115,
-          "rpr": 116
-        },
-        {
-          "horse": "Basilette",
-          "or": 104,
-          "rpr": 122
-        }
-      ],
-      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
-      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
-      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
-      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
-      "raceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T11:51:04.667Z",
-        "headline": "Won over this two-mile distance in August and was only four lengths behind when fourth over today's Plumpton C&D 29 days ago; returns fit against several runners with long absences.",
-        "detail": "Carries 12st; strong opponent Basilette is much lighter and has RPR122, Sixty Plus ran 6 days ago with a 5lb claimer. Beorma officially withdrawn leaving 5; rider needs to settle horse better than latest C&D run.",
-        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/44/plumpton/2026-10-19/929247/",
-          "https://www.sportinglife.com/racing/racecards/2026-10-19/plumpton/racecard/944228/bet-goodwin-handicap-hurdle",
-          "https://www.racingpost.com/non-runners/2026-10-19/"
-        ],
-        "nonRunners": [
-          "Beorma"
-        ],
-        "rivals": [
-          {
-            "horse": "Sixty Plus",
-            "or": 115,
-            "rpr": 116
-          },
-          {
-            "horse": "Basilette",
-            "or": 104,
-            "rpr": 122
-          }
-        ],
-        "observedPrice": "11/4"
-      }
-    },
-    {
-      "time": "17:00",
-      "course": "Southwell",
-      "horse": "Rosemary's Rose",
-      "betType": "each-way",
-      "odds": "11/2",
-      "jockey": "Jack Dace",
-      "trainer": "Rod Millman",
-      "or": 59,
-      "ts": 54,
-      "rpr": 71,
-      "draw": 7,
-      "runnerCount": 10,
-      "going": "STANDARD Tapeta",
-      "distance": "7f14y",
-      "raceClass": "Class 6 Apprentice Handicap",
-      "summary": "Four top-three finishes in her last six starts, including a latest second, make her a place-oriented runner; she has two past all-weather wins, although neither was over today's 7f trip.",
-      "positivePoints": [
-        "Recent form 223352, four top-three results in six runs",
-        "Two all-weather wins at longer trips earlier in 2026",
-        "Recent fitness evidenced by 22-day turnaround"
-      ],
-      "risk": "No career win from six starts over this 7f distance and only one previous Southwell appearance; Burford Beauty and Distillate both won last time. Check at least 3 paid places and odds before any each-way bet.",
-      "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929537/",
-      "priceSource": "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/17%3A00/winner",
-      "rivals": [
-        {
-          "horse": "Burford Beauty",
-          "or": 60,
-          "rpr": 73
-        },
-        {
-          "horse": "Distillate",
-          "or": 52,
-          "rpr": 73
-        }
-      ],
-      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
-      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
-      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
-      "confidenceTier": "EVIDENCE-LED EACH-WAY CANDIDATE — NOT CALIBRATED",
-      "raceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T11:51:04.667Z",
-        "headline": "Four top-three finishes in her last six starts, including a latest second, make her a place-oriented runner; she has two past all-weather wins, although neither was over today's 7f trip.",
-        "detail": "No career win from six starts over this 7f distance and only one previous Southwell appearance; Burford Beauty and Distillate both won last time. Check at least 3 paid places and odds before any each-way bet.",
-        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929537/",
-          "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/17%3A00/winner",
-          "https://www.racingpost.com/non-runners/2026-10-19/"
-        ],
-        "nonRunners": [],
-        "rivals": [
-          {
-            "horse": "Burford Beauty",
-            "or": 60,
-            "rpr": 73
-          },
-          {
-            "horse": "Distillate",
-            "or": 52,
-            "rpr": 73
-          }
-        ],
-        "observedPrice": "11/2"
-      }
-    },
-    {
-      "time": "18:00",
-      "course": "Southwell",
-      "horse": "Go Lockers Go",
+      "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+      "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+      "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+      "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+      "time": "15:07",
+      "course": "Hexham",
+      "horse": "Conquer The Breeze",
       "betType": "win",
       "winRank": "NAP",
-      "odds": "5/2",
-      "jockey": "Callum Shepherd",
-      "trainer": "Michael Bell",
-      "or": 70,
-      "ts": 61,
-      "rpr": 79,
-      "draw": 4,
+      "odds": "11/4",
+      "jockey": "Ryan Mania",
+      "trainer": "Adam Nicol",
+      "or": 108,
+      "runnerCount": 9,
+      "going": "GOOD",
+      "distance": "2m4f28y",
+      "raceClass": "Class 4 Handicap Hurdle",
+      "summary": "Four summer chase wins from five followed by a competitive Kelso second; a hurdles handicap mark around 10lb below his chase mark offers a plausible advantage, although switching disciplines is not risk-free.",
+      "positivePoints": [
+        "Recent sequence 114112 includes four chase victories and second at Kelso",
+        "Rated OR108 for this hurdles test, below recent chase marks",
+        "Fresh enough after 34 days; jockey Ryan Mania retained"
+      ],
+      "risk": "Returning to hurdles while shouldering 12st; Codger's Rock (OR104) has recent hurdle form and Well Educated is a rival. Chase form does not perfectly translate to hurdles.",
+      "rivals": [
+        {
+          "horse": "Codger's Rock",
+          "or": 104,
+          "rpr": 102
+        }
+      ],
+      "sourceUrl": "https://www.racingpost.com/racecards/25/hexham/2026-10-20/929261/",
+      "priceSource": "https://www.racingtv.com/racecards/2026-10-20/hexham/1507",
+      "raceDayReview": {
+        "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+        "checkedAt": "2026-10-20T13:10:10.062Z",
+        "headline": "Four summer chase wins from five followed by a competitive Kelso second; a hurdles handicap mark around 10lb below his chase mark offers a plausible advantage, although switching disciplines is not risk-free.",
+        "detail": "Returning to hurdles while shouldering 12st; Codger's Rock (OR104) has recent hurdle form and Well Educated is a rival. Chase form does not perfectly translate to hurdles.",
+        "rivals": [
+          {
+            "horse": "Codger's Rock",
+            "or": 104,
+            "rpr": 102
+          }
+        ],
+        "nonRunners": [],
+        "observedPrice": "11/4",
+        "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
+        "sourceUrls": [
+          "https://www.racingpost.com/racecards/25/hexham/2026-10-20/929261/",
+          "https://www.racingtv.com/racecards/2026-10-20/hexham/1507"
+        ]
+      }
+    },
+    {
+      "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+      "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+      "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+      "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+      "time": "16:38",
+      "course": "Yarmouth",
+      "horse": "Wodao",
+      "betType": "win",
+      "odds": "2/1",
+      "jockey": "David Egan",
+      "trainer": "Steph Hollinshead",
+      "or": 67,
       "runnerCount": 10,
-      "going": "STANDARD Tapeta",
-      "distance": "6f16y",
-      "raceClass": "Class 5 Handicap (0–70)",
-      "summary": "Back-to-back wins, including over Southwell's exact course and distance nine days ago, with just a one-pound rise in the mark; the return to a known successful setup is the strongest case today.",
+      "going": "SOFT",
+      "distance": "6f3y",
+      "raceClass": "Class 6 Handicap (Div I)",
+      "summary": "Won over six furlongs at Redcar four days ago after his handicap rating fell materially from earlier career highs; the same sprint trip makes a repeat possible even with a 5lb penalty.",
       "positivePoints": [
-        "Back-to-back wins, including Southwell C&D 9 days ago",
-        "Only 1lb higher since latest win; now OR70",
-        "RPR79 compares favorably with Massimo Blue's RPR77"
+        "Recent winning form over 6f; current form -96961",
+        "Competing at Class 6 after higher-grade career form",
+        "Official handicap mark 67 includes penalty and is below his former class level"
       ],
-      "risk": "Massimo Blue has won twice over this C&D and has a near-matching rating (OR70); a 10-runner sprint can be decided by the pace map or an awkward break. Neither quote nor favouritism raises race confidence.",
-      "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/",
-      "priceSource": "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/1800/47/3",
+      "risk": "Four-day turnaround plus 5lb penalty, soft Yarmouth ground and proven opponents Campani and Rambuso Creek; pass if conditions or price worsen.",
       "rivals": [
         {
-          "horse": "Massimo Blue",
-          "or": 70,
-          "rpr": 77
-        },
-        {
-          "horse": "Jenever",
-          "or": 69,
-          "rpr": 80
+          "horse": "Campani",
+          "or": 59,
+          "rpr": null
         }
       ],
-      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
-      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
-      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
-      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
+      "sourceUrl": "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/",
+      "priceSource": "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1638",
       "raceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T12:31:11.374Z",
-        "headline": "RETAIN WIN (NAP) WITH MARKET-DIVERGENCE WARNING — current multi-bookmaker comparison shows approximately 6/1–15/2, versus original frozen 5/2 reference. This is a substantial unverified-cause drift, not evidence that his known C&D form has disappeared.",
-        "detail": "Re-examined Massimo Blue (OR70, two C&D wins; quoted around 2/1–9/4), Jenever (RPR80), and Spirit Of Applause (recent 022455). Go Lockers Go won latest C&D only by a head and a 10-runner sprint remains vulnerable to break/pace. Oddschecker and WhichBookie agree on later wider prices; Timeform's earlier 5/2 is not treated as a simultaneous quote. No confidence increase or automatic removal solely on odds.",
-        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved",
-        "sourceUrls": [
-          "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/18%3A00/winner",
-          "https://www.whichbookie.co.uk/horse-racing/southwell/1800",
-          "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/"
+        "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+        "checkedAt": "2026-10-20T13:10:10.062Z",
+        "headline": "Won over six furlongs at Redcar four days ago after his handicap rating fell materially from earlier career highs; the same sprint trip makes a repeat possible even with a 5lb penalty.",
+        "detail": "Four-day turnaround plus 5lb penalty, soft Yarmouth ground and proven opponents Campani and Rambuso Creek; pass if conditions or price worsen.",
+        "rivals": [
+          {
+            "horse": "Campani",
+            "or": 59,
+            "rpr": null
+          }
         ],
         "nonRunners": [],
-        "rivals": [
-          {
-            "horse": "Massimo Blue",
-            "or": 70,
-            "rpr": 77
-          },
-          {
-            "horse": "Jenever",
-            "or": 69,
-            "rpr": 80
-          }
-        ],
-        "observedPrice": "5/2",
-        "originalPublishedReviewPreservedAt": "originalRaceDayReview",
-        "originalPublishedAt": "2026-10-19T11:51:04.667Z",
-        "action": "RETAIN_WIN_MARKET_DIVERGENCE"
-      },
-      "latestRaceDayReview": {
-        "checkedAt": "2026-10-19T12:31:11.374Z",
-        "action": "RETAIN_WIN_MARKET_DIVERGENCE",
-        "headline": "RETAIN WIN (NAP) WITH MARKET-DIVERGENCE WARNING — current multi-bookmaker comparison shows approximately 6/1–15/2, versus original frozen 5/2 reference. This is a substantial unverified-cause drift, not evidence that his known C&D form has disappeared.",
-        "detail": "Re-examined Massimo Blue (OR70, two C&D wins; quoted around 2/1–9/4), Jenever (RPR80), and Spirit Of Applause (recent 022455). Go Lockers Go won latest C&D only by a head and a 10-runner sprint remains vulnerable to break/pace. Oddschecker and WhichBookie agree on later wider prices; Timeform's earlier 5/2 is not treated as a simultaneous quote. No confidence increase or automatic removal solely on odds.",
-        "currentRunnerCount": 10,
-        "confirmedNonRunners": [],
-        "latestPriceObservation": {
-          "original": "5/2",
-          "latestRange": "6/1–15/2",
-          "source": "Oddschecker multi-bookmaker market",
-          "asOf": "2026-10-19T12:31:11.374Z"
-        },
+        "observedPrice": "2/1",
+        "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
         "sourceUrls": [
-          "https://www.oddschecker.com/horse-racing/2026-10-19-southwell/18%3A00/winner",
-          "https://www.whichbookie.co.uk/horse-racing/southwell/1800",
-          "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/"
-        ],
-        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
-      },
-      "originalRaceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T11:51:04.667Z",
-        "headline": "Back-to-back wins, including over Southwell's exact course and distance nine days ago, with just a one-pound rise in the mark; the return to a known successful setup is the strongest case today.",
-        "detail": "Massimo Blue has won twice over this C&D and has a near-matching rating (OR70); a 10-runner sprint can be decided by the pace map or an awkward break. Neither quote nor favouritism raises race confidence.",
-        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929534/",
-          "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/1800/47/3",
-          "https://www.racingpost.com/non-runners/2026-10-19/"
-        ],
-        "nonRunners": [],
-        "rivals": [
-          {
-            "horse": "Massimo Blue",
-            "or": 70,
-            "rpr": 77
-          },
-          {
-            "horse": "Jenever",
-            "or": 69,
-            "rpr": 80
-          }
-        ],
-        "observedPrice": "5/2"
-      },
-      "originalPublishedRunnerCount": 10
+          "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/",
+          "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1638"
+        ]
+      }
     },
     {
-      "time": "18:15",
-      "course": "Wolverhampton",
-      "horse": "Style King",
-      "betType": "each-way",
-      "odds": "15/2",
-      "jockey": "Harry Davies",
-      "trainer": "Chris Dwyer",
-      "or": 74,
-      "ts": 81,
-      "rpr": 96,
-      "draw": 10,
-      "runnerCount": 12,
-      "going": "STANDARD Tapeta",
-      "distance": "6f20y",
-      "raceClass": "Class 3 Handicap (0–90)",
-      "summary": "Three sprint wins since July, including an all-the-way C&D win 17 days ago, supply strong contemporary course-and-distance proof at an each-way price despite the higher grade.",
-      "positivePoints": [
-        "Three recent victories, latest over exact Wolverhampton C&D",
-        "Recent form 122101 with repeated competitive results",
-        "RPR96 despite comparatively low mark OR74"
-      ],
-      "risk": "Up 7lb for latest success and now faces Class 3 opposition; stall 10 and likely pace pressure from other front-runners are significant risks. Dandana is an official NR (12 remain). E/W terms must be bookmaker-verified.",
-      "sourceUrl": "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/",
-      "priceSource": "https://www.sportinglife.com/racing/racecards/2026-10-19/wolverhampton/live-show/944220/cavani-best-dressed-handicap",
-      "nonRunners": [
-        "Dandana"
-      ],
-      "rivals": [
-        {
-          "horse": "Knebworth",
-          "or": 86,
-          "rpr": 98
-        },
-        {
-          "horse": "Kind Touch",
-          "or": 86,
-          "rpr": 95
-        }
-      ],
-      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
-      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
-      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
-      "confidenceTier": "EVIDENCE-LED EACH-WAY CANDIDATE — NOT CALIBRATED",
-      "raceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T12:31:11.374Z",
-        "headline": "WITHDRAWN FROM FRESH EACH-WAY RECOMMENDATIONS (POST-PUBLICATION, original snapshot retained). Later market quotes have widened from frozen 15/2 to approximately 14/1–18/1, while Class 3 opposition, a 7lb rise and stall 10 with pace pressure make the earlier place case insufficiently robust.",
-        "detail": "Knebworth's current official rating is 90 (not 86 as in original rival snapshot), RPR99; Kind Touch OR86/RPR96, recent seconds. Dandana remains a confirmed non-runner; 12 active. Standard each-way offers display four places at 1/5, but the extra place does not remove the elevated class/pace risks. This is a prospective withdrawal, NOT a retroactive deletion or a horse non-runner. No replacement justified from the checked field.",
-        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved",
-        "sourceUrls": [
-          "https://www.oddschecker.com/horse-racing/2026-10-19-wolverhampton/18%3A15/winner",
-          "https://www.whichbookie.co.uk/horse-racing/wolverhampton/1815",
-          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/"
-        ],
-        "nonRunners": [
-          "Dandana"
-        ],
-        "rivals": [
-          {
-            "horse": "Knebworth",
-            "or": 90,
-            "rpr": 99
-          },
-          {
-            "horse": "Kind Touch",
-            "or": 86,
-            "rpr": 96
-          }
-        ],
-        "observedPrice": "15/2",
-        "originalPublishedReviewPreservedAt": "originalRaceDayReview",
-        "originalPublishedAt": "2026-10-19T11:51:04.667Z",
-        "action": "WITHDRAW_EACH_WAY_FOR_FRESH_BETTING"
-      },
-      "latestRaceDayReview": {
-        "checkedAt": "2026-10-19T12:31:11.374Z",
-        "action": "WITHDRAW_EACH_WAY_FOR_FRESH_BETTING",
-        "headline": "WITHDRAWN FROM FRESH EACH-WAY RECOMMENDATIONS (POST-PUBLICATION, original snapshot retained). Later market quotes have widened from frozen 15/2 to approximately 14/1–18/1, while Class 3 opposition, a 7lb rise and stall 10 with pace pressure make the earlier place case insufficiently robust.",
-        "detail": "Knebworth's current official rating is 90 (not 86 as in original rival snapshot), RPR99; Kind Touch OR86/RPR96, recent seconds. Dandana remains a confirmed non-runner; 12 active. Standard each-way offers display four places at 1/5, but the extra place does not remove the elevated class/pace risks. This is a prospective withdrawal, NOT a retroactive deletion or a horse non-runner. No replacement justified from the checked field.",
-        "currentRunnerCount": 12,
-        "confirmedNonRunners": [
-          "Dandana"
-        ],
-        "latestPriceObservation": {
-          "original": "15/2",
-          "latestRange": "14/1–18/1",
-          "source": "Oddschecker and WhichBookie multi-bookmaker markets",
-          "asOf": "2026-10-19T12:31:11.374Z"
-        },
-        "sourceUrls": [
-          "https://www.oddschecker.com/horse-racing/2026-10-19-wolverhampton/18%3A15/winner",
-          "https://www.whichbookie.co.uk/horse-racing/wolverhampton/1815",
-          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/"
-        ],
-        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
-      },
-      "prospectiveBettingStatus": "WITHDRAWN_AFTER_PUBLICATION",
-      "originalRaceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T11:51:04.667Z",
-        "headline": "Three sprint wins since July, including an all-the-way C&D win 17 days ago, supply strong contemporary course-and-distance proof at an each-way price despite the higher grade.",
-        "detail": "Up 7lb for latest success and now faces Class 3 opposition; stall 10 and likely pace pressure from other front-runners are significant risks. Dandana is an official NR (12 remain). E/W terms must be bookmaker-verified.",
-        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929540/",
-          "https://www.sportinglife.com/racing/racecards/2026-10-19/wolverhampton/live-show/944220/cavani-best-dressed-handicap",
-          "https://www.racingpost.com/non-runners/2026-10-19/"
-        ],
-        "nonRunners": [
-          "Dandana"
-        ],
-        "rivals": [
-          {
-            "horse": "Knebworth",
-            "or": 86,
-            "rpr": 98
-          },
-          {
-            "horse": "Kind Touch",
-            "or": 86,
-            "rpr": 95
-          }
-        ],
-        "observedPrice": "15/2"
-      },
-      "originalPublishedRunnerCount": 12
-    },
-    {
-      "time": "19:15",
-      "course": "Wolverhampton",
-      "horse": "The Anthony Gover",
+      "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+      "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+      "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+      "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+      "time": "16:57",
+      "course": "Newcastle (AW)",
+      "horse": "Ernst Blofeld",
       "betType": "win",
       "winRank": "NB",
-      "odds": "10/3",
-      "jockey": "Cian Horgan (5lb)",
-      "trainer": "Dr Richard Newland",
-      "or": 67,
-      "draw": 5,
-      "runnerCount": 10,
-      "going": "STANDARD Tapeta",
-      "distance": "1m1f104y",
-      "raceClass": "Class 5 Handicap (0–70)",
-      "summary": "Won twice over this C&D before finishing third by only one length at the same track; a better stall-five draw and 5lb claimer aid the return to proven conditions.",
-      "positivePoints": [
-        "Two wins over this Wolverhampton C&D in last three outings",
-        "One-length C&D third latest shows handicap still workable",
-        "5lb claim and middle draw five avoid obvious top-weight or wide-stall drawbacks"
-      ],
-      "risk": "Albertini Star won recently at Sandown and could improve at this trip but has less established Wolverhampton Tapeta evidence; Moonjid has stronger OR70 and recent placed form. Avoid assuming repeat victories inevitable.",
-      "sourceUrl": "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/",
-      "priceSource": "https://www.timeform.com/horse-racing/odds/wolverhampton/2026-10-19/1915/58/7",
-      "rivals": [
-        {
-          "horse": "Albertini Star",
-          "or": 68,
-          "rpr": 80
-        },
-        {
-          "horse": "Moonjid",
-          "or": 70,
-          "rpr": 78
-        }
-      ],
-      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
-      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
-      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
-      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
-      "raceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T12:31:11.374Z",
-        "headline": "RETAIN WIN — Reveur newly confirmed non-runner; ten active runners versus eleven in frozen publication. No confidence upgrade from the removal of an outsider.",
-        "detail": "The leading live opponents Albertini Star and Moonjid remain; same Standard Tapeta, C&D and jockey claim. No demonstrated material change in pace from Reveur's removal.",
-        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved",
-        "sourceUrls": [
-          "https://www.racingpost.com/non-runners/",
-          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/"
-        ],
-        "nonRunners": [
-          "Reveur"
-        ],
-        "rivals": [
-          {
-            "horse": "Albertini Star",
-            "or": 68,
-            "rpr": 80
-          },
-          {
-            "horse": "Moonjid",
-            "or": 70,
-            "rpr": 78
-          }
-        ],
-        "observedPrice": "10/3",
-        "originalPublishedReviewPreservedAt": "originalRaceDayReview",
-        "originalPublishedAt": "2026-10-19T11:51:04.667Z",
-        "action": "RETAIN_WIN_WITH_FIELD_UPDATE"
-      },
-      "latestRaceDayReview": {
-        "checkedAt": "2026-10-19T12:31:11.374Z",
-        "action": "RETAIN_WIN_WITH_FIELD_UPDATE",
-        "headline": "RETAIN WIN — Reveur newly confirmed non-runner; ten active runners versus eleven in frozen publication. No confidence upgrade from the removal of an outsider.",
-        "detail": "The leading live opponents Albertini Star and Moonjid remain; same Standard Tapeta, C&D and jockey claim. No demonstrated material change in pace from Reveur's removal.",
-        "currentRunnerCount": 10,
-        "confirmedNonRunners": [
-          "Reveur"
-        ],
-        "latestPriceObservation": null,
-        "sourceUrls": [
-          "https://www.racingpost.com/non-runners/",
-          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/"
-        ],
-        "sourceType": "Post-publication independent race-day reassessment; original selection and original raceDayReview are preserved"
-      },
-      "originalRaceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T11:51:04.667Z",
-        "headline": "Won twice over this C&D before finishing third by only one length at the same track; a better stall-five draw and 5lb claimer aid the return to proven conditions.",
-        "detail": "Albertini Star won recently at Sandown and could improve at this trip but has less established Wolverhampton Tapeta evidence; Moonjid has stronger OR70 and recent placed form. Avoid assuming repeat victories inevitable.",
-        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/",
-          "https://www.timeform.com/horse-racing/odds/wolverhampton/2026-10-19/1915/58/7",
-          "https://www.racingpost.com/non-runners/2026-10-19/"
-        ],
-        "nonRunners": [],
-        "rivals": [
-          {
-            "horse": "Albertini Star",
-            "or": 68,
-            "rpr": 80
-          },
-          {
-            "horse": "Moonjid",
-            "or": 70,
-            "rpr": 78
-          }
-        ],
-        "observedPrice": "10/3"
-      },
-      "originalPublishedRunnerCount": 11
-    },
-    {
-      "time": "20:30",
-      "course": "Southwell",
-      "horse": "Spec Of Light",
-      "betType": "win",
-      "odds": "9/4",
-      "jockey": "Rose Dawes (3lb)",
-      "trainer": "Tony Forbes",
-      "or": 57,
-      "draw": 7,
+      "odds": "7/2",
+      "jockey": "Harry Vigors (5lb)",
+      "trainer": "Hamad Al Jehani",
+      "or": 96,
+      "ts": 80,
+      "rpr": 104,
+      "draw": 3,
       "runnerCount": 9,
       "going": "STANDARD Tapeta",
-      "distance": "1m3f23y",
-      "raceClass": "Class 6 Handicap (0–60)",
-      "summary": "Won over this precise C&D thirteen days ago, and the second and seventh from that race subsequently won; only four pounds higher, with a three-pound claim.",
+      "distance": "1m4f98y",
+      "raceClass": "Class 3 Handicap",
+      "summary": "Proven all-weather winner, followed by a close latest Newmarket third over a similar staying trip; the 5lb claim offsets part of top weight and the current form is credible for Class 3.",
       "positivePoints": [
-        "Won latest Southwell C&D race 13 days ago",
-        "Two subsequent winners strengthen the latest form line",
-        "OR57 after 4lb rise, with Rose Dawes claiming 3lb"
+        "Two earlier Kempton Polytrack wins including at a staying trip",
+        "Recent form 175523 suggests competitive current fitness",
+        "Strong RPR104; 5lb Harry Vigors allowance"
       ],
-      "risk": "Had a favorable front-running setup last time and may not reproduce it from stall seven; We've Got This ran second at Newcastle recently, while a 4lb higher rating still erodes the earlier advantage.",
-      "sourceUrl": "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929536/",
-      "priceSource": "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/2030/47/8",
+      "risk": "First Newcastle Tapeta test is distinct from Kempton Polytrack; top weight and rivals Oursin (OR94) and Circus Of Rome (OR95, RPR104) are credible. No guaranteed top-rated edge.",
       "rivals": [
         {
-          "horse": "We've Got This",
-          "or": 59,
-          "rpr": 71
+          "horse": "Circus Of Rome",
+          "or": 95,
+          "rpr": 104
         },
         {
-          "horse": "Symphony's Song",
-          "or": 57,
-          "rpr": 70
+          "horse": "Oursin",
+          "or": 94,
+          "rpr": 102
         }
       ],
-      "source": "Racing Post declared racecard, independent Timesform/Sporting Life data cross-checked; all published narratives ignored as tipping inputs",
-      "selectionPublishedAt": "2026-10-19T11:51:04.667Z",
-      "priceBasis": "Observed pre-race comparison price, not a guaranteed or accepted bet",
-      "confidenceTier": "EVIDENCE-LED WIN CANDIDATE — NOT CALIBRATED",
+      "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929547/",
+      "priceSource": "https://www.racingtv.com/racecards/2026-10-20/newcastle/1657",
       "raceDayReview": {
-        "status": "PUBLISHED — PRE-RACE GOING AND NON-RUNNERS CHECKED",
-        "checkedAt": "2026-10-19T11:51:04.667Z",
-        "headline": "Won over this precise C&D thirteen days ago, and the second and seventh from that race subsequently won; only four pounds higher, with a three-pound claim.",
-        "detail": "Had a favorable front-running setup last time and may not reproduce it from stall seven; We've Got This ran second at Newcastle recently, while a 4lb higher rating still erodes the earlier advantage.",
-        "sourceType": "Own independent inference from structured current form, track/going/distance, OR, rival and jockey data; no tipster narrative used",
-        "sourceUrls": [
-          "https://www.racingpost.com/racecards/394/southwell-aw/2026-10-19/929536/",
-          "https://www.timeform.com/horse-racing/odds/southwell/2026-10-19/2030/47/8",
-          "https://www.racingpost.com/non-runners/2026-10-19/"
-        ],
-        "nonRunners": [],
+        "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+        "checkedAt": "2026-10-20T13:10:10.062Z",
+        "headline": "Proven all-weather winner, followed by a close latest Newmarket third over a similar staying trip; the 5lb claim offsets part of top weight and the current form is credible for Class 3.",
+        "detail": "First Newcastle Tapeta test is distinct from Kempton Polytrack; top weight and rivals Oursin (OR94) and Circus Of Rome (OR95, RPR104) are credible. No guaranteed top-rated edge.",
         "rivals": [
           {
-            "horse": "We've Got This",
-            "or": 59,
-            "rpr": 71
+            "horse": "Circus Of Rome",
+            "or": 95,
+            "rpr": 104
           },
           {
-            "horse": "Symphony's Song",
-            "or": 57,
-            "rpr": 70
+            "horse": "Oursin",
+            "or": 94,
+            "rpr": 102
           }
         ],
-        "observedPrice": "9/4"
+        "nonRunners": [],
+        "observedPrice": "7/2",
+        "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
+        "sourceUrls": [
+          "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929547/",
+          "https://www.racingtv.com/racecards/2026-10-20/newcastle/1657"
+        ]
+      }
+    },
+    {
+      "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+      "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+      "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+      "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+      "time": "17:08",
+      "course": "Yarmouth",
+      "horse": "Koffee And Kale",
+      "betType": "win",
+      "odds": "13/8",
+      "jockey": "Billy Loughnane",
+      "trainer": "Michael Bell",
+      "or": 62,
+      "draw": 6,
+      "runnerCount": 8,
+      "going": "SOFT",
+      "distance": "6f3y",
+      "raceClass": "Class 6 Handicap (Div II)",
+      "summary": "Repeatedly competitive at sprint trips with form 642722 and only narrowly denied at Yarmouth last time; still needs to convert several near-misses and confirm effectiveness on soft turf.",
+      "positivePoints": [
+        "Three second-place finishes among last five starts",
+        "Returned to the track eight days after recent C&D-region second",
+        "Billy Loughnane booked; OR62 close to other principals"
+      ],
+      "risk": "The soft ground is important and success on it is not sufficiently established; Call Time has recent wins and second, while Rory's Royale rates OR65. Strong form does not erase the win-conversion risk. Consider passing at substantially shorter prices.",
+      "rivals": [
+        {
+          "horse": "Rory's Royale",
+          "or": 65,
+          "rpr": 73
+        },
+        {
+          "horse": "Call Time",
+          "or": 60,
+          "rpr": null
+        }
+      ],
+      "sourceUrl": "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/931339/",
+      "priceSource": "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1708",
+      "raceDayReview": {
+        "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+        "checkedAt": "2026-10-20T13:10:10.062Z",
+        "headline": "Repeatedly competitive at sprint trips with form 642722 and only narrowly denied at Yarmouth last time; still needs to convert several near-misses and confirm effectiveness on soft turf.",
+        "detail": "The soft ground is important and success on it is not sufficiently established; Call Time has recent wins and second, while Rory's Royale rates OR65. Strong form does not erase the win-conversion risk. Consider passing at substantially shorter prices.",
+        "rivals": [
+          {
+            "horse": "Rory's Royale",
+            "or": 65,
+            "rpr": 73
+          },
+          {
+            "horse": "Call Time",
+            "or": 60,
+            "rpr": null
+          }
+        ],
+        "nonRunners": [],
+        "observedPrice": "13/8",
+        "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
+        "sourceUrls": [
+          "https://www.racingpost.com/racecards/104/yarmouth/2026-10-20/931339/",
+          "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1708"
+        ]
+      }
+    },
+    {
+      "selectionPublishedAt": "2026-10-20T13:10:10.062Z",
+      "priceBasis": "Approximate observed raceday reference, not an accepted bet",
+      "source": "Independent analysis of declared form, handicap ratings, trainer and rider, going and rivals; published tipping narrative excluded from scoring",
+      "confidenceTier": "EVIDENCE-LED RESEARCH — NOT CALIBRATED",
+      "time": "18:00",
+      "course": "Newcastle (AW)",
+      "horse": "Danehill Star",
+      "betType": "each-way",
+      "odds": "7/1",
+      "jockey": "Marco Ghiani",
+      "trainer": "Tony Carroll",
+      "or": 70,
+      "rpr": 74,
+      "draw": 3,
+      "runnerCount": 12,
+      "going": "STANDARD Tapeta",
+      "distance": "1m5y",
+      "raceClass": "Class 5 Handicap (Div I)",
+      "summary": "A productive all-weather campaign includes proven Newcastle course-and-distance form; recent 235113 makes him a potential place contender at a sensible price, despite a career-high OR70.",
+      "positivePoints": [
+        "Established Newcastle C&D winner at one mile on Tapeta",
+        "Four victories during 2026; recent record 235113",
+        "Drawn stall three; offered price around 6/1–15/2"
+      ],
+      "risk": "Top weight and a career-high handicap rating leave limited error margin; three standard paid places for 12 runners unless bookmaker offers enhanced terms. Confirm each-way fraction and exact place terms.",
+      "rivals": [],
+      "sourceUrl": "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929549/",
+      "priceSource": "https://www.racingtv.com/racecards/2026-10-20/newcastle/1800",
+      "raceDayReview": {
+        "status": "RESEARCHED — RACE-DAY FIELDS CHECKED",
+        "checkedAt": "2026-10-20T13:10:10.062Z",
+        "headline": "A productive all-weather campaign includes proven Newcastle course-and-distance form; recent 235113 makes him a potential place contender at a sensible price, despite a career-high OR70.",
+        "detail": "Top weight and a career-high handicap rating leave limited error margin; three standard paid places for 12 runners unless bookmaker offers enhanced terms. Confirm each-way fraction and exact place terms.",
+        "rivals": [],
+        "nonRunners": [],
+        "observedPrice": "7/1",
+        "sourceType": "Own independent inference from official declared runner form, OR, course/trip/going and rival strength; market not a confidence input",
+        "sourceUrls": [
+          "https://www.racingpost.com/racecards/1353/newcastle-aw/2026-10-20/929549/",
+          "https://www.racingtv.com/racecards/2026-10-20/newcastle/1800"
+        ]
       }
     }
   ],
@@ -3449,60 +4242,45 @@
     ]
   },
   "morningRecheck": {
-    "updatedAt": "2026-10-19T11:51:04.667Z",
-    "meetingCount": 6,
-    "scheduledRaces": 47,
+    "updatedAt": "2026-10-20T13:10:10.062Z",
+    "meetingCount": 4,
+    "scheduledRaces": 30,
     "going": {
-      "Bath": "GOOD TO SOFT, good in places",
-      "Gowran Park": "YIELDING",
-      "Plumpton": "GOOD, good to soft in places hurdle; chase good to firm in places",
-      "Pontefract": "SOFT",
-      "Southwell": "STANDARD Tapeta",
-      "Wolverhampton": "STANDARD Tapeta"
+      "Curragh": "YIELDING",
+      "Yarmouth": "SOFT",
+      "Hexham": "GOOD",
+      "Newcastle (AW)": "STANDARD Tapeta"
     },
     "confirmedNonRunners": [
       {
-        "horse": "Beorma",
-        "race": "15:30 Plumpton",
-        "source": "https://www.racingpost.com/non-runners/2026-10-19/"
-      },
-      {
-        "horse": "Dandana",
-        "race": "18:15 Wolverhampton",
-        "source": "https://www.racingpost.com/non-runners/2026-10-19/"
+        "horse": "Snuggle",
+        "race": "17:08 Yarmouth",
+        "source": "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1708"
       }
     ],
     "adjustments": [
       {
-        "course": "Plumpton",
-        "time": "15:30",
-        "currentRunners": 5,
-        "note": "Beorma NR"
-      },
-      {
-        "course": "Wolverhampton",
-        "time": "18:15",
-        "currentRunners": 12,
-        "note": "Dandana NR"
+        "course": "Yarmouth",
+        "time": "17:08",
+        "currentRunners": 8,
+        "note": "Snuggle NR; live eight-runner field"
       }
     ],
-    "unmodifiedPicks": 7,
+    "unmodifiedPicks": 5,
     "changedPicks": 0,
-    "methodology": "No direct use of published tipster selections or verdicts; reason independently from ratings, going, current form, course and trip, rider allowances and opposition. Odds displayed as separate evidence.",
-    "dataLimitations": "No evidence of calibrated probabilities or exhaustive sectional coverage; latest price may move."
+    "methodology": "Independent runner stats and race conditions; no tipster text used as selection input.",
+    "dataLimitations": "No real-time bookmaker bet placement and no verified betting slip."
   },
-  "latestReviewTimestamp": "2026-10-19T12:31:11.374Z",
+  "latestReviewTimestamp": "2026-10-20T13:10:10.062Z",
   "currentProspectiveStatus": {
-    "asOf": "2026-10-19T12:31:11.374Z",
-    "originalPublishedSelections": 7,
-    "originalWin": 5,
-    "originalEachWay": 2,
-    "activeProspectiveWin": 5,
+    "asOf": "2026-10-20T13:10:10.062Z",
+    "originalPublishedSelections": 5,
+    "originalWin": 4,
+    "originalEachWay": 1,
+    "activeProspectiveWin": 4,
     "activeProspectiveEachWay": 1,
-    "withdrawnAfterPublication": [
-      "Style King"
-    ],
-    "paperBetStatus": "RESEARCH ONLY; NO WAGERS CREATED OR REINSTATED",
-    "note": "Original seven selections remain in immutable historical roster; post-publication status is separate. Excludes races after scheduled off time for fresh consideration."
+    "withdrawnAfterPublication": [],
+    "paperBetStatus": "RESEARCH ONLY — NO WAGERS RECORDED",
+    "note": "One selection per race. Research snapshot timestamped; recheck off times, ground and runners."
   }
 }
