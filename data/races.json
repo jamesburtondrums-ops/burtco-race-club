@@ -394,6 +394,21 @@
         "https://www.racingpost.com/racecards/513/wolverhampton-aw/2026-10-19/929542/"
       ],
       "originalSelectionPublishedAt": "2026-10-19T11:51:04.667Z"
+    },
+    {
+      "checkedAt": "2026-10-20T14:33:31Z",
+      "horse": "Ernst Blofeld",
+      "course": "Newcastle (AW)",
+      "time": "16:57",
+      "action": "REMOVE_PROSPECTIVE_NB_RANK_RETAIN_WIN_RESEARCH",
+      "summary": "Original NB confidence rank withdrawn for fresh prospective use, without changing the frozen WIN selection. Independent field review found underweighted Wardlaw (form 231222, OR77, 8st6lb, Luke Morris; three successive runner-up finishes including Kempton) and Tiernan (AW Class 3/4 placings, RPR101), alongside previously named Circus Of Rome (C&D winner, RPR104) and Oursin (2/3 AW). Ernst Blofeld retains recent form and 5lb claim but has no Newcastle Tapeta experience. No new non-runner in the race; published 7/2 remains within approximate bookmaker comparisons. This is a confidence-rank correction, not a verified probability downgrade or retrospective revision.",
+      "sourceUrls": [
+        "https://www.horseracing.net/newcastle/20-10-26/16:57",
+        "https://www.irishracing.com/glorious-goodwood/racecards/Tue-20th-Oct-2026/Newcastle/1657",
+        "https://www.sportinglife.com/racing/racecards/2026-10-20/newcastle/live-show/944382/midnite-a-next-generation-betting-app-handicap-gbbplus-race"
+      ],
+      "originalSelectionPublishedAt": "2026-10-20T13:10:10.062Z",
+      "evidenceAsOf": "2026-10-20T14:45:00+01:00"
     }
   ],
   "postRaceAudits": [
@@ -4271,16 +4286,32 @@
     "methodology": "Independent runner stats and race conditions; no tipster text used as selection input.",
     "dataLimitations": "No real-time bookmaker bet placement and no verified betting slip."
   },
-  "latestReviewTimestamp": "2026-10-20T13:10:10.062Z",
+  "latestReviewTimestamp": "2026-10-20T14:33:31Z",
   "currentProspectiveStatus": {
-    "asOf": "2026-10-20T13:10:10.062Z",
+    "asOf": "2026-10-20T14:33:31Z",
     "originalPublishedSelections": 5,
     "originalWin": 4,
     "originalEachWay": 1,
-    "activeProspectiveWin": 4,
+    "activeProspectiveWin": 3,
     "activeProspectiveEachWay": 1,
     "withdrawnAfterPublication": [],
     "paperBetStatus": "RESEARCH ONLY — NO WAGERS RECORDED",
-    "note": "One selection per race. Research snapshot timestamped; recheck off times, ground and runners."
+    "note": "Original five selection snapshots and prices unchanged. As of 15:33 BST only Wodao, Ernst Blofeld, Koffee And Kale and Danehill Star are future-off research picks; no wager created.",
+    "expiredByOffTime": [
+      "Conquer The Breeze — 15:07 Hexham"
+    ],
+    "prospectiveRankChanges": [
+      {
+        "horse": "Ernst Blofeld",
+        "originalRank": "NB",
+        "currentRank": "WIN RESEARCH ONLY — NB WITHDRAWN",
+        "at": "2026-10-20T14:33:31Z",
+        "sourceUrls": [
+          "https://www.horseracing.net/newcastle/20-10-26/16:57",
+          "https://www.irishracing.com/glorious-goodwood/racecards/Tue-20th-Oct-2026/Newcastle/1657",
+          "https://www.sportinglife.com/racing/racecards/2026-10-20/newcastle/live-show/944382/midnite-a-next-generation-betting-app-handicap-gbbplus-race"
+        ]
+      }
+    ]
   }
 }
