@@ -1,4 +1,4 @@
-import {assessWinConfidence,publicSummary,positivePoints} from './selection-quality.mjs';
+import {assessWinConfidence,assessUnifiedBetReadiness,publicSummary,positivePoints} from './selection-quality.mjs';
 const state={data:null,ledger:null,live:null,liveSerial:"",view:"today",filter:"ALL",serial:"",refreshing:false,refreshMessage:"",refreshCheckedAt:null,search:null,searchError:"",webConfirmed:{},searchCheckedAt:null};
 const val=v=>v===undefined||v===null||v===""?"—":v;
 const contextOf=x=>x.v42||x.v41||null;
@@ -440,7 +440,16 @@ function missedSelectionsReview(){
  '<p class="meta">One horse per featured race remains the rule. Outcomes reported by the user are labelled separately from independently verified racing results.</p></section>';
 }
 function today(){
- const d=state.data||{}, picks=chronological(d.betSelections||[]);
+ const d=state.data||{};
+ const originalPicks=chronological(d.betSelections||[]);
+ // Apply only to future, not-yet-settled racecards. Past/frozen picks and
+ // results are never deleted to manufacture a better retrospective strike rate.
+ const prospectiveGate=String(d.snapshotDate||'')>='2026-10-21'&&d.researchResultsStatus?.asOfDate!==d.snapshotDate;
+ const approval=originalPicks.map(p=>({pick:p,assessment:prospectiveGate?assessUnifiedBetReadiness(p):{qualified:true}}));
+ const picks=approval.filter(x=>x.assessment.qualified||x.pick.result).map(x=>x.pick);
+ const withheld=approval.filter(x=>!x.assessment.qualified&&!x.pick.result);
+ const withheldNotice=withheld.length?'<section class="panel"><h3>Research-only candidates held back: '+withheld.length+'</h3><p>These prospective horses are not approved for a published bet selection because key evidence is missing. Historical picks remain untouched.</p><ul>'+withheld.map(x=>'<li><b>'+escapeHtml(x.pick.horse)+'</b> ('+escapeHtml(x.pick.course)+' '+escapeHtml(x.pick.time)+'): '+escapeHtml(x.assessment.reason)+'</li>').join('')+'</ul></section>':'';
+
  const review=d.fiveDayAnalysis||null;
  const audit=review?'<section class="panel bet-audit"><h3>Earlier five-day model review</h3><p>12–16 October: the key correction is that older course history, rival withdrawals and market moves must not outweigh current class, weight, going, pace and opponent assessment.</p><div class="bet-audit-days">'+(review.days||[]).map(day=>'<span><strong>'+escapeHtml(day.date.slice(5))+'</strong> '+day.winners+'/'+day.runners+' winners</span>').join('')+'</div><p class="meta">Earlier five-day sample only; this analysis is historical, not a calibrated future forecast. Paper bet history remains unchanged.</p></section>':'';
  const researchAudits=(d.postRaceAudits||[]).filter(a=>a.asOfDate>="2026-10-19").sort((a,b)=>b.asOfDate.localeCompare(a.asOfDate));
@@ -463,7 +472,7 @@ function today(){
  }).join('');;
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(d.snapshotDate||'')+' · UK & IRELAND</div><h2>Bet Selections</h2><p>One horse per race, with the bet type shown directly beside each selection. Horse/race data determines confidence, independently of price or favouritism.</p></div><div class="quick-stats"><span><b>'+picks.length+'</b> selections</span><span><b>'+picks.filter(p=>p.betType==='win').length+'</b> WIN</span><span><b>'+picks.filter(p=>p.betType==='each-way').length+'</b> EACH WAY</span></div></section>'+
   '<div class="bet-selection-notice">'+(d.researchResultsStatus?.asOfDate===d.snapshotDate?'FINAL VERIFIED RESULTS · All '+escapeHtml(d.researchResultsStatus.originalSelections)+' runners finished. Published outcomes are shown on the selection cards; no retrospective paper wagers created.':'PRE-RACE RESEARCH · '+(d.meetings||[]).map(m=>escapeHtml(m.course)+' '+escapeHtml(m.going)).join(' · ')+'. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.')+'</div>'+
-  '<div class="bet-selection-grid">'+(cards||'<div class="panel">No selections published yet.</div>')+'</div>'+historicalPanel+audit;
+  '<div class="bet-selection-grid">'+(cards||'<div class="panel">No selections published yet.</div>')+'</div>'+withheldNotice+historicalPanel+audit;
 }
 function midshots(){const d=state.data||{},ms=exclusiveSelectionGroups().midshotsToday;return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> unique race selections</span><span><b>6/1–18/1</b> reference price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No distinct mid-shot selection currently qualifies.") }
 function longshots(){const d=state.data||{},ls=exclusiveSelectionGroups().longshotsToday;return '<section class="page-intro long-intro"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p><div class="quick-stats"><span><b>'+ls.length+'</b> unique race selections</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum reference price</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No distinct longshot selection currently qualifies.") }
