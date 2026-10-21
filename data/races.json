@@ -445,10 +445,26 @@
         "https://www.sportinglife.com/racing/results/2026-10-07/kempton/942179/try-unibet-s-new-improved-acca-boosts-apprentice-handicap",
         "https://www.sportinglife.com/racing/results/2026-07-02/kempton/925603/try-unibets-new-smartview-racecards-handicap"
       ]
+    },
+    {
+      "checkedAt": "2026-10-21T09:34:44Z",
+      "type": "TARGETED_PRE_OFF_RECHECK",
+      "selection": "Lots Road",
+      "action": "RETAIN_WIN_WITH_NEW_NON_RUNNER_AND_WEATHER_WATCH",
+      "sourceUrls": [
+        "https://www.racingpost.com/non-runners/2026-10-21/",
+        "https://www.racingpost.com/racecards/38/newmarket/2026-10-21/929442/",
+        "https://weather.metoffice.gov.uk/forecast/u1231qf62?new-design=false",
+        "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-21/1535/36/4"
+      ],
+      "nonRunner": "Under Arrest",
+      "publishedField": 7,
+      "provisionalLiveField": 6,
+      "originalSnapshotRetained": true
     }
   ],
   "latestRacedayRecheck": {
-    "updatedAt": "2026-10-21T09:24:51.288Z",
+    "updatedAt": "2026-10-21T09:34:44Z",
     "meetingCount": 5,
     "scheduledRaces": 37,
     "going": {
@@ -488,6 +504,12 @@
         "horse": "Footage Detectives",
         "race": "16:50 Fontwell",
         "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "Under Arrest",
+        "race": "15:35 Newmarket",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/",
+        "confirmation": "Racing Post bulletin and racecard; Timeform comparison feed not yet reconciled"
       }
     ],
     "adjustments": [
@@ -504,6 +526,15 @@
         "oldRunners": 13,
         "currentRunners": 12,
         "note": "Gladiadora NR; standard place count remains 3"
+      },
+      {
+        "course": "Newmarket",
+        "time": "15:35",
+        "horse": "Lots Road",
+        "originalRunners": 7,
+        "racingPostActiveRunners": 6,
+        "nonRunner": "Under Arrest",
+        "note": "Racing Post NR and card agree; Timeform odds feed still seven at time of check; original published field snapshot retained."
       }
     ],
     "unmodifiedPicks": 0,
@@ -514,7 +545,14 @@
       "horse": "Sovereign Glory",
       "race": "17:20 Newmarket",
       "sourceUrl": "https://www.racingpost.com/non-runners/2026-10-21/"
-    }
+    },
+    "weatherWatch": {
+      "course": "Newmarket",
+      "forecast": "Met Office heavy afternoon rain and 35-39mph gusts",
+      "officialGoing": "GOOD TO SOFT (GoingStick 6.4) per Racing Post",
+      "actualChangeConfirmed": false
+    },
+    "prospectiveSelectionsUnchanged": true
   },
   "raceDayDecisionLog": [
     {
@@ -725,6 +763,26 @@
         "https://www.sportinglife.com/racing/results/2026-01-14/kempton/898129/unibet-supports-safer-gambling-handicap",
         "https://www.sportinglife.com/racing/results/2026-10-01/nottingham/941168/construction-day-14th-oct-handicap"
       ]
+    },
+    {
+      "date": "2026-10-21",
+      "checkedAt": "2026-10-21T09:34:44Z",
+      "horse": "Lots Road",
+      "course": "Newmarket",
+      "time": "15:35",
+      "action": "RETAIN_WIN_WITH_NEW_NON_RUNNER_AND_WEATHER_WATCH",
+      "originalSelectionPublishedAt": "2026-10-21T08:17:50.719Z",
+      "originalEarlyOdds": "11/8",
+      "summary": "Racing Post's 21 Oct non-runner bulletin and live racecard mark Under Arrest as NR (7 originally declared -> 6 active). The recent Goodwood runner-up no longer opposes Lots Road; this does not automatically upgrade confidence: Girl Scout, Noble Prince and Akaraka remain credible, and the untried Newmarket 10f with 6lb penalty remains a risk. Met Office forecasts heavy rain during afternoon and gusts around 35-39mph, potentially changing the pace/ground test. Official published going remains Good to Soft (GoingStick 6.4); forecast is not an observed change. Timeform comparison still showed Under Arrest and seven runners at check, so independent feed reconciliation pending. Timeform comparison displayed 11/10 against frozen 11/8, indicative only. Retain conditional WIN research without NAP promotion; recheck ground, runner status and price before off.",
+      "sourceUrls": [
+        "https://www.racingpost.com/non-runners/2026-10-21/",
+        "https://www.racingpost.com/racecards/38/newmarket/2026-10-21/929442/",
+        "https://weather.metoffice.gov.uk/forecast/u1231qf62?new-design=false",
+        "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-21/1535/36/4"
+      ],
+      "evidenceAsOf": "2026-10-21T09:34:44Z",
+      "secondFeedAgreement": false,
+      "actualBetsPlaced": false
     }
   ],
   "postRaceAudits": [
@@ -6188,7 +6246,7 @@
       "sourceUrl": "https://www.racingpost.com/non-runners/2026-10-21/"
     }
   },
-  "latestReviewTimestamp": "2026-10-21T09:24:51.288Z",
+  "latestReviewTimestamp": "2026-10-21T09:34:44Z",
   "currentProspectiveStatus": {
     "asOf": "2026-10-21T09:24:51.288Z",
     "originalPublishedSelections": 5,
@@ -6214,7 +6272,20 @@
       "Lots Road",
       "Wolf Bay",
       "Credit Forgedd It"
-    ]
+    ],
+    "latestCheckAt": "2026-10-21T09:34:44Z",
+    "latestProspectiveRisk": {
+      "horse": "Lots Road",
+      "action": "RETAIN_WITH_CONDITIONS_WATCH",
+      "race": "15:35 Newmarket",
+      "nonRunner": "Under Arrest",
+      "racingPostActiveField": 6,
+      "officialGoing": "Good to Soft",
+      "weatherRisk": "Forecast heavy rain and strong gusts, not observed going downgrade",
+      "marketQuote": "11/10 Timeform compared with frozen 11/8",
+      "sourceReconciliation": "Racing Post confirmed NR; Timeform odds list lagged",
+      "originalPublicationFrozen": true
+    }
   },
   "researchResultsStatus": {
     "asOfDate": "2026-10-20",
