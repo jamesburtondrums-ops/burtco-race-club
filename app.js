@@ -19,6 +19,7 @@ function resultInfo(x){
  if(status&&/non.?runner|^nr$|withdrawn|scratched/i.test(status))return {text:"NR",cls:"result-nr"};
  if(status&&/void|abandon|cancel/i.test(status))return {text:String(status),cls:"result-nr"};
  if(status&&/^(F|PU|UR|BD|RO|RR|REF|DSQ|DNF|DISQ)$/i.test(status))return {text:"Result: "+status,cls:"result-finished"};
+ if(r?.disqualifiedFromFirst&&Number(r.position)===2)return {text:"Official 2nd (disqualified from 1st)",cls:"result-finished"};
  const pos=r?.position??r?.place??x.finishPosition??x.position;
  if(pos!==undefined&&pos!==null&&pos!=="")return {text:"Result: "+ordinal(pos),cls:Number(pos)===1?"result-won":"result-finished"};
  if(r?.text)return {text:r.text,cls:"result-finished"};
@@ -518,6 +519,18 @@ function fullRunnerAuditPanel(){
  return '<section aria-label="Runner-by-runner evidence audit"><h3>Full declared field — evidence available so far</h3>'+
   withdrawn+'<p class="meta"><strong>'+escapeHtml(activeCount)+' active runners</strong> from five original races ('+escapeHtml(deep?.originalFieldRunnersReviewed??56)+' original declarations). <strong>'+escapeHtml(verifiedCount)+' source-backed past-race running descriptions</strong> and '+escapeHtml(deep?.trainerJockeyPairsChecked??0)+' sampled trainer/jockey records. For other horses, racecard-level form, class, marks and risk were checked, but full prior-race running history was not independently obtainable. Complete comparable sectionals, every trainer-course record and calibrated win probabilities remain unavailable. Treat conclusions as provisional, not proven.</p>'+groups+'</section>';
 }
+function postRaceLearningPanel(){
+ const d=state.data||{},audit=d.latestPostRaceAudit;
+ if(!audit||audit.asOfDate!=="2026-10-21")return '';
+ const watch=audit.otherResearchWatchResult||null;
+ const review=(audit.errorAnalysis||[]).map(x=>'<details class="panel"><summary><strong>'+escapeHtml(x.horse)+'</strong> — '+escapeHtml(x.decision)+'</summary><p>'+escapeHtml(x.mistake)+'</p><p><b>Next change to test:</b> '+escapeHtml(x.change)+'</p></details>').join('');
+ return '<section aria-label="21 October results and learning" class="panel"><h3>21 October: official outcome vs original and final selections</h3>'+
+ '<p><strong>'+escapeHtml(audit.strikeRateStatus)+'</strong></p>'+
+ '<p>Caragio and Credit Forgedd It were reported by the user; their exact starting prices and independent official result links are awaiting confirmation. Lots Road was first past the post but officially demoted for interference — not a settled WIN.</p>'+
+ (watch?'<p><strong>Missed watch-list winner: '+escapeHtml(watch.horse)+'</strong> ('+escapeHtml(watch.sp)+' SP). It had been withdrawn before the published five and is not counted as a published successful bet.</p>':'')+
+ '<details><summary>Original analysis errors and proposed model changes</summary>'+review+'</details>'+
+ '<small>Results and early prices are stored separately; no retroactive bets, payouts, or accuracy claims.</small></section>';
+}
 function today(){
  const d=state.data||{};
  const originalPicks=chronological(d.betSelections||[]);
@@ -550,9 +563,9 @@ function today(){
   '<div class="bet-selection-bottom">'+nonRunners+resultBadge(x)+'<a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Racecard data ↗</a>'+(isEw?'<small>Check bookmaker each-way terms and paid places</small>':'')+'</div></article>';
  }).join('');;
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(d.snapshotDate||'')+' · UK & IRELAND</div><h2>Bet Selections</h2><p>One horse per race, with the bet type shown directly beside each selection. Horse/race data determines confidence, independently of price or favouritism.</p></div><div class="quick-stats"><span><b>'+picks.length+'</b> selections</span><span><b>'+picks.filter(p=>p.betType==='win').length+'</b> WIN</span><span><b>'+picks.filter(p=>p.betType==='each-way').length+'</b> EACH WAY</span></div></section>'+
-  '<div class="bet-selection-notice">'+(d.overnightShortlist?.length?'OVERNIGHT SHORTLIST IS RESEARCH ONLY, NOT APPROVED BETS. Morning rechecks needed for weather, non-runners, rival form, ground and each-way terms.':d.researchResultsStatus?.asOfDate===d.snapshotDate?'FINAL VERIFIED RESULTS · All '+escapeHtml(d.researchResultsStatus.originalSelections)+' runners finished. Published outcomes are shown on the selection cards; no retrospective paper wagers created.':'PRE-RACE RESEARCH · '+(d.meetings||[]).map(m=>escapeHtml(m.course)+' '+escapeHtml(m.going)).join(' · ')+'. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.')+'</div>'+
+  '<div class="bet-selection-notice">'+(d.overnightShortlist?.length?'OVERNIGHT SHORTLIST IS RESEARCH ONLY, NOT APPROVED BETS. Morning rechecks needed for weather, non-runners, rival form, ground and each-way terms.':d.researchResultsStatus?.asOfDate===d.snapshotDate?'FINAL RESULTS AUDIT · Original '+escapeHtml(d.researchResultsStatus.originalSelections)+' originally published picks archived. Some Kempton outcomes are user-reported pending independent verification; no retroactive paper wagers created.':'PRE-RACE RESEARCH · '+(d.meetings||[]).map(m=>escapeHtml(m.course)+' '+escapeHtml(m.going)).join(' · ')+'. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.')+'</div>'+
 '<div class="bet-selection-notice">'+(d.reviewCompleteness?.claimDeepReviewCompleted===false?'RESEARCH STATUS: Individual declared-runner racecard evidence reviewed. Deep prior-run, trainer/course, pace/draw and sectional checks NOT yet fully completed. Published selections are provisional research, not verified high-confidence wagers.':'')+'</div>'+
-    '<div class="bet-selection-grid">'+(cards||(d.overnightShortlist?.length?'':'<div class="panel">No approved Bet Selections yet.</div>'))+'</div>'+fullRunnerAuditPanel()+overnightResearchPanel()+outsiderRadarPanel()+withheldNotice+historicalPanel+audit;
+    '<div class="bet-selection-grid">'+(cards||(d.overnightShortlist?.length?'':'<div class="panel">No approved Bet Selections yet.</div>'))+'</div>'+postRaceLearningPanel()+fullRunnerAuditPanel()+overnightResearchPanel()+outsiderRadarPanel()+withheldNotice+historicalPanel+audit;
 }
 function midshots(){const d=state.data||{},ms=exclusiveSelectionGroups().midshotsToday;return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> unique race selections</span><span><b>6/1–18/1</b> reference price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No distinct mid-shot selection currently qualifies.") }
 function longshots(){const d=state.data||{},ls=exclusiveSelectionGroups().longshotsToday;return '<section class="page-intro long-intro"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p><div class="quick-stats"><span><b>'+ls.length+'</b> unique race selections</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum reference price</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No distinct longshot selection currently qualifies.") }
@@ -582,9 +595,17 @@ function history(){
  const archive=(state.ledger?.researchWatchHistory||[]).map(x=>'<section class="panel"><h3>'+escapeHtml(x.date)+' Verified results review</h3><p>'+escapeHtml(x.summary)+'</p><p>'+x.selected.map(p=>escapeHtml(p.horse)+' '+ordinal(p.position)+' ('+escapeHtml(p.sp)+' SP)').join(' · ')+'</p><small>Removed candidates are research-only; excluded from paper profit.</small></section>').join('');
  const publishedAudits=(state.data?.postRaceAudits||[]).filter(a=>a.asOfDate>="2026-10-19").sort((a,b)=>b.asOfDate.localeCompare(a.asOfDate));
  const researchResults=publishedAudits.map(published=>
-  '<section class="panel"><h3>'+escapeHtml(published.asOfDate)+' verified research results (not paper bets)</h3><p>'+escapeHtml(published.strikeRateStatus)+'</p>'+
-  '<div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>Course / time</th><th>Horse</th><th>Bet</th><th>Finish</th><th>Early / SP</th></tr></thead><tbody>'+
-  (published.runnerResults||[]).map(r=>'<tr><td>'+escapeHtml(r.course)+' '+escapeHtml(r.time)+'</td><td>'+escapeHtml(r.horse)+(r.lateWithdrawn?' (withdrawn from fresh E/W, preserved in original)':'')+'</td><td>'+escapeHtml(r.originCategory==='ORIGINAL_WIN'?'WIN':'EACH WAY')+'</td><td>'+escapeHtml(ordinal(r.finished))+'</td><td>'+escapeHtml(r.selectedEarlyOdds)+' / '+escapeHtml(r.sp)+'</td></tr>').join('')+'</tbody></table></div><p class="meta">No retrospective stakes or fictional profits added to the paper bank.</p></section>').join('');
+  '<section class="panel"><h3>'+escapeHtml(published.asOfDate)+' original research-result audit (not paper bets)</h3><p>'+escapeHtml(published.strikeRateStatus)+'</p>'+
+  '<div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>Course / time</th><th>Horse</th><th>Published bet</th><th>Official finish</th><th>Early / SP</th><th>Source status</th></tr></thead><tbody>'+
+  (published.runnerResults||[]).map(r=>'<tr><td>'+escapeHtml(r.course)+' '+escapeHtml(r.time)+'</td>'+
+   '<td>'+escapeHtml(r.horse)+(r.lateWithdrawn?' <small>(subsequently revoked, original still counted)</small>':'')+'</td>'+
+   '<td>'+escapeHtml(r.originCategory==='ORIGINAL_WIN'?'WIN':'EACH WAY')+'</td>'+
+   '<td>'+escapeHtml(ordinal(r.finished))+(r.disqualifiedFromFirst?' <strong>(first past post; disqualified)</strong>':'')+'</td>'+
+   '<td>'+escapeHtml(r.selectedEarlyOdds)+' / '+escapeHtml(r.sp)+'</td>'+
+   '<td>'+escapeHtml(r.sourceVerification||r.source||'Historical audit')+(r.sourceUrl?'<p><a href="'+escapeHtml(r.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Published result ↗</a></p>':'')+'</td></tr>').join('')+
+  '</tbody></table></div>'+
+  (published.otherResearchWatchResult?'<p><strong>Separate removed research watch:</strong> '+escapeHtml(published.otherResearchWatchResult.horse)+' won at '+escapeHtml(published.otherResearchWatchResult.sp)+' SP; never a published pick, so excluded from denominator.</p>':'')+
+  '<p class="meta">Official placings determine winner strike; physical first-past-post is recorded separately after any disqualification. No retrospective stakes or fictional profits added to the paper bank.</p></section>').join('');
  return intro+researchResults+archive+'<div class="history-list">'+(rows||'<div class="panel">No recorded bets yet.</div>')+'</div>';
 }
 
