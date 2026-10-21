@@ -179,6 +179,9 @@
       "Late non-runners, riders or field size changes",
       "Not comprehensive per-runner sectionals across all meetings",
       "Prices and place terms must be checked before a bet"
+    ],
+    "notes": [
+      "21 Oct: Additional provisional field comparison in Worcester 16:00 (8), Newmarket 17:20 (17), Kempton 19:00 (14), and Kempton 20:30 (13). Rival threats recorded. A speculative 19:00 Kempton alternative is not a separate race selection."
     ]
   },
   "recentPerformanceReview": {
@@ -237,7 +240,16 @@
   "researchSelectionUpdate": {
     "reviewedAt": "2026-10-20T23:48:28.002Z",
     "status": "21 October four provisional watches saved for morning manual review, not published as approved tips.",
-    "note": "Kelijoe WIN 7/2, Irish Rumour EACH WAY 13/2, Luna Celeste WIN 2/1, Caragio WIN 9/2. No NAP/NB or wagers."
+    "note": "Kelijoe WIN 7/2, Irish Rumour EACH WAY 13/2, Luna Celeste WIN 2/1, Caragio WIN 9/2. No NAP/NB or wagers.",
+    "outsiderReviewedAt": "2026-10-21T00:06:03.171Z",
+    "outsiderStatus": "Four more race-distinct primary long-price E/W watches; a fifth 20/1 alternative in the 19:00 Kempton race, not a second betting pick. Nothing promoted to published Bet Selections.",
+    "outsiderHorses": [
+      "Jerseygeordie",
+      "Wolf Bay",
+      "Synergism",
+      "Credit Forgedd It",
+      "Squire Danagher"
+    ]
   },
   "raceDayRechecks": [
     {
@@ -4841,6 +4853,240 @@
       "researchedAt": "2026-10-20T23:48:28.002Z",
       "notApprovedSelection": true,
       "sourceMethod": "All declared runners in the shortlisted race reviewed for current form, handicap suitability, race conditions, key rivals and value. Not a field-complete review across all meetings. Quotes are indicative, not accepted bets."
+    }
+  ],
+  "outsiderRadar": [
+    {
+      "researchDate": "2026-10-21",
+      "checkedAt": "2026-10-21T00:06:03.171Z",
+      "publicationStatus": "PROVISIONAL OUTSIDER RESEARCH ONLY — NOT APPROVED BET",
+      "noStakesRecorded": true,
+      "quotes": "Observed Sky Bet/racecard fractions, not accepted or guaranteed prices. Recheck live offers and each-way terms.",
+      "horse": "Jerseygeordie",
+      "course": "Worcester",
+      "time": "16:00",
+      "odds": "9/1",
+      "betType": "each-way watch",
+      "runnerCount": 8,
+      "rank": "PRIMARY",
+      "jockey": "Paul O'Brien",
+      "trainer": "Harry Derham",
+      "or": 106,
+      "draw": null,
+      "distance": "2m",
+      "surface": "Hurdle turf",
+      "currentGoing": "Good (raceday recheck required)",
+      "summary": "Two placed hurdle starts after winning on Flat in Jersey, raced 22 days ago. A 3yo receiving substantial age allowance (10st 8lb) against older, less race-fit rivals offers a possible handicap-debut opportunity.",
+      "positivePoints": [
+        "3yo age allowance; carries 10st 8lb versus 12st top weights",
+        "Last two hurdling runs third and second, only 22 days since latest",
+        "First handicap off OR106 with first-time tongue-tie"
+      ],
+      "risk": "Unproven in older-horse handicap company and not a hurdle winner; first-time tongue-tie is not proof of improvement. Eight runners normally pay three places under standard terms, but confirm bookmaker conditions and any non-runners.",
+      "rivals": [
+        {
+          "horse": "Mister Des Places",
+          "whyThreat": "French hurdle winner with useful experience, stable debut for Olly Murphy, OR109 and carries 11st 13lb"
+        },
+        {
+          "horse": "Limier D'arthel",
+          "whyThreat": "Promising hurdle maiden form and possible improvement on handicap debut off OR107"
+        },
+        {
+          "horse": "Leaumec De Mee",
+          "whyThreat": "Already won hurdle and trained by Dan Skelton, although returns after 236 days"
+        }
+      ],
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/worcester/racecard/944579/squarcle-sprint-handicap-hurdle",
+      "priceSource": "Sporting Life Sky Bet displayed 9/1"
+    },
+    {
+      "researchDate": "2026-10-21",
+      "checkedAt": "2026-10-21T00:06:03.171Z",
+      "publicationStatus": "PROVISIONAL OUTSIDER RESEARCH ONLY — NOT APPROVED BET",
+      "noStakesRecorded": true,
+      "quotes": "Observed Sky Bet/racecard fractions, not accepted or guaranteed prices. Recheck live offers and each-way terms.",
+      "horse": "Wolf Bay",
+      "course": "Newmarket",
+      "time": "17:20",
+      "odds": "12/1",
+      "betType": "each-way watch",
+      "runnerCount": 17,
+      "rank": "PRIMARY",
+      "jockey": "Harry Vigors (5lb)",
+      "trainer": "Alan King",
+      "or": 79,
+      "draw": 3,
+      "distance": "7f",
+      "surface": "Flat turf",
+      "currentGoing": "Good to soft (recheck)",
+      "summary": "Progression to consecutive seconds, including nine-runner Haydock 7f nursery on soft 25 days ago. OR79 and the 5lb Vigors claim give a supported place case despite a tough 17-runner field.",
+      "positivePoints": [
+        "Recent second at same 7f on soft ground",
+        "Prior second at 6f Windsor on good-to-soft",
+        "Drawn three with a 5lb jockey claim, OR79"
+      ],
+      "risk": "Still a maiden and the 17-runner field creates considerable pace/traffic uncertainty; high-rated, improving juveniles may be well ahead of shown marks. Confirm paid places; no confident WIN edge.",
+      "rivals": [
+        {
+          "horse": "Crowned",
+          "whyThreat": "Two recent 6f/7f all-weather nursery wins, but higher class and stall 17 test transfer"
+        },
+        {
+          "horse": "Rex Regum",
+          "whyThreat": "Won latest start and OR77 with improving form"
+        },
+        {
+          "horse": "Cilician",
+          "whyThreat": "Consistent class exposure; neck second at Sandown 1m, first-time blinkers and Ryan Moore"
+        }
+      ],
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/newmarket/racecard/944568/copybet-overnight-best-odds-guaranteed-nursery",
+      "priceSource": "Sporting Life Sky Bet displayed 12/1"
+    },
+    {
+      "researchDate": "2026-10-21",
+      "checkedAt": "2026-10-21T00:06:03.171Z",
+      "publicationStatus": "PROVISIONAL OUTSIDER RESEARCH ONLY — NOT APPROVED BET",
+      "noStakesRecorded": true,
+      "quotes": "Observed Sky Bet/racecard fractions, not accepted or guaranteed prices. Recheck live offers and each-way terms.",
+      "horse": "Synergism",
+      "course": "Kempton (AW)",
+      "time": "19:00",
+      "odds": "12/1",
+      "betType": "each-way watch",
+      "runnerCount": 14,
+      "rank": "PRIMARY",
+      "jockey": "Luke Morris",
+      "trainer": "Sir Mark Prescott",
+      "or": 90,
+      "draw": 5,
+      "distance": "2m",
+      "surface": "Flat Polytrack",
+      "currentGoing": "Standard to slow",
+      "summary": "Proven Kempton course-and-distance winner who finished third in the Northumberland Plate over two miles on Newcastle Tapeta. Less impressive recent turf efforts, especially on heavy ground, could exaggerate how much ability has declined.",
+      "positivePoints": [
+        "Proven 2m Kempton course-and-distance winning evidence",
+        "Placed in a stronger 2m all-weather staying handicap",
+        "Returns to synthetics after less convincing turf form; OR90"
+      ],
+      "risk": "Race fitness is established but recent finish strength was weak and OR90 may still be demanding. Strong field includes Hot Fuss, Boatswain, Level Look and Codiak. Needs real improvement on last run.",
+      "rivals": [
+        {
+          "horse": "Hot Fuss",
+          "whyThreat": "Recent two-mile Ascot winner off a 3lb higher mark"
+        },
+        {
+          "horse": "Boatswain",
+          "whyThreat": "Impressive previous all-weather two-mile handicap winner, but more mixed recent turf results"
+        },
+        {
+          "horse": "Level Look",
+          "whyThreat": "Improving young stayer with recent all-weather wins, though career-high mark"
+        },
+        {
+          "horse": "Codiak",
+          "whyThreat": "Low-mileage progressive stayer returning from layoff"
+        }
+      ],
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/kempton/racecard/944585/unibet-supports-safer-gambling-handicap-gbbplus-race",
+      "priceSource": "Sporting Life Sky Bet displayed 12/1"
+    },
+    {
+      "researchDate": "2026-10-21",
+      "checkedAt": "2026-10-21T00:06:03.171Z",
+      "publicationStatus": "PROVISIONAL OUTSIDER RESEARCH ONLY — NOT APPROVED BET",
+      "noStakesRecorded": true,
+      "quotes": "Observed Sky Bet/racecard fractions, not accepted or guaranteed prices. Recheck live offers and each-way terms.",
+      "horse": "Credit Forgedd It",
+      "course": "Kempton (AW)",
+      "time": "20:30",
+      "odds": "10/1",
+      "betType": "each-way watch",
+      "runnerCount": 13,
+      "rank": "PRIMARY",
+      "jockey": "Sean Levey",
+      "trainer": "Simon Dow",
+      "or": 59,
+      "draw": 9,
+      "distance": "7f",
+      "surface": "Flat Polytrack",
+      "currentGoing": "Standard to slow",
+      "summary": "Finished second of 14 over Kempton's exact seven-furlong course and distance only 14 days ago, closing strongly. OR59 is a career-low handicap rating and indicates credible competitiveness at this level.",
+      "positivePoints": [
+        "Latest second of 14 at exact course and distance",
+        "Current OR59 career-low with unchanged conditions",
+        "14-day recency; came home strongly late"
+      ],
+      "risk": "Still a maiden and held-up tactics leave traffic risk from stall nine. Ridger has consecutive wins; Dark Mandate is progressive and Iconic Times has winning AW form. Place case stronger than proof of winning edge.",
+      "rivals": [
+        {
+          "horse": "Ridger",
+          "whyThreat": "Two recent emphatic handicap wins and Kempton C&D winner, despite rise of 5lb"
+        },
+        {
+          "horse": "Dark Mandate",
+          "whyThreat": "Latest Wolverhampton seven-furlong winner after upward trajectory"
+        },
+        {
+          "horse": "Iconic Times",
+          "whyThreat": "Two consecutive wins before absence; returns fit uncertainty"
+        },
+        {
+          "horse": "Penfolds Grange",
+          "whyThreat": "Recent C&D second from 13 and another strong late finisher"
+        }
+      ],
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/kempton/racecard/944588/unibet-3-uniboosts-a-day-handicap",
+      "priceSource": "Sporting Life Sky Bet displayed 10/1"
+    },
+    {
+      "researchDate": "2026-10-21",
+      "checkedAt": "2026-10-21T00:06:03.171Z",
+      "publicationStatus": "PROVISIONAL OUTSIDER RESEARCH ONLY — NOT APPROVED BET",
+      "noStakesRecorded": true,
+      "quotes": "Observed Sky Bet/racecard fractions, not accepted or guaranteed prices. Recheck live offers and each-way terms.",
+      "horse": "Squire Danagher",
+      "course": "Kempton (AW)",
+      "time": "19:00",
+      "odds": "20/1",
+      "betType": "speculative each-way alternative only",
+      "runnerCount": 14,
+      "rank": "ALTERNATIVE_TO_SYNERGISM",
+      "jockey": "Charles Bishop",
+      "trainer": "Emma Lavelle",
+      "or": 88,
+      "draw": 11,
+      "distance": "2m",
+      "surface": "Flat Polytrack",
+      "currentGoing": "Standard to slow",
+      "summary": "Returned to win on the Flat at Sandown in June and finished third over 2¼ miles at Newmarket 32 days ago. Carries 9st and tries refitted blinkers; the draw and unproven Kempton setup make a 20/1 price an exploratory rather than high-confidence case.",
+      "positivePoints": [
+        "Recent 2¼m Newmarket third shows current stamina",
+        "Won on the Flat at Sandown in June",
+        "OR88 and 9st may be competitive if form transfers"
+      ],
+      "risk": "Same race as Synergism: DO NOT present as separate simultaneous selection. Kempton Polytrack suitability, stall 11 and competitive Class 2 opposition are major unknowns; price must not be a substitute for evidence.",
+      "rivals": [
+        {
+          "horse": "Synergism",
+          "whyThreat": "Alternative watch with proven Kempton C&D win"
+        },
+        {
+          "horse": "Hot Fuss",
+          "whyThreat": "Recent winner over two miles"
+        },
+        {
+          "horse": "Boatswain",
+          "whyThreat": "Recent synthetic-staying evidence"
+        },
+        {
+          "horse": "Level Look",
+          "whyThreat": "Strong recent AW staying form"
+        }
+      ],
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/kempton/racecard/944585/unibet-supports-safer-gambling-handicap-gbbplus-race",
+      "priceSource": "Sporting Life Sky Bet displayed 20/1"
     }
   ]
 }
