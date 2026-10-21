@@ -170,12 +170,13 @@
     "selectionCount": 5,
     "featuredRaceCount": 5,
     "notes": "Three retained candidates now approved after source-backed review; two new WIN runners added. No cancelled/withdrawn/secondary-watch horses appear. NAP/NB withheld because no low-risk form edge established.",
-    "paperBetStatus": "RESEARCH SELECTIONS ONLY — NO PAPER OR ACTUAL WAGERS"
+    "paperBetStatus": "RESEARCH SELECTIONS ONLY — NO PAPER OR ACTUAL WAGERS",
+    "reviewDisclosure": "Source-backed basic runner-by-runner comparison completed on all 56 declared runners, but deep prior-run and course/pace analysis is incomplete. Bet nominations must not be called independently verified high-confidence picks."
   },
   "reviewCompleteness": {
     "asOfDate": "2026-10-21",
     "reviewedAt": "2026-10-21T08:17:50.719Z",
-    "status": "5 selected races, full declared fields examined for horse-specific evidence (7+8+17+12+12 runners), with named strongest rivals, documented ground, class, handicap/rider changes and source links. Wider 37-race universe NOT comprehensively scored.",
+    "status": "2026-10-21: Individual racecard-fact assessment logged for all 56 declared runners across selected 5 races, but full independent prior-race deep dives, actual sectionals, systematic trainer-course performance and quantified win-probability calibration are NOT completed.",
     "checks": [
       "All runners in each of five selected races reviewed",
       "At least two source-cited opposing threats each",
@@ -191,7 +192,17 @@
     ],
     "notes": [
       "21 Oct: Additional provisional field comparison in Worcester 16:00 (8), Newmarket 17:20 (17), Kempton 19:00 (14), and Kempton 20:30 (13). Rival threats recorded. A speculative 19:00 Kempton alternative is not a separate race selection."
-    ]
+    ],
+    "individualRunnersAssessedAtRacecardLevel": 56,
+    "individualRacecards": 5,
+    "missingBeforeFullStrategyClaim": [
+      "Independently reconstructed pace/draw maps for every race",
+      "Past in-running notes for each of the 56 runners from race result histories",
+      "Meaningful recent stable form and course/race-type records for every trainer, and relevant jockey partnerships",
+      "Ground/trip performance beyond one-page racecard statements where materials permit",
+      "Explicit probability and sensitivity calculation across the whole live field"
+    ],
+    "claimDeepReviewCompleted": false
   },
   "recentPerformanceReview": {
     "reviewedAt": "2026-10-16T09:32:39.683Z",
@@ -5611,7 +5622,7 @@
     "methodology": "Morning independent cross-check for all nine originally named research horses; retain historical frozen prices and rationale, append dated review. Do not take direct tipping influence from published verdicts.",
     "dataLimitations": "Quotes differ across bookies, bookmaker paid places not independently confirmed, ground/runner situation can still change before the off. No exhaustive prospective scored probability estimate."
   },
-  "latestReviewTimestamp": "2026-10-21T08:17:50.719Z",
+  "latestReviewTimestamp": "2026-10-21T09:09:11.615Z",
   "currentProspectiveStatus": {
     "asOf": "2026-10-21T08:17:50.719Z",
     "originalPublishedSelections": 5,
@@ -6613,6 +6624,397 @@
       "https://www.sportinglife.com/racing/racecards/2026-10-21/fontwell/racecard/944573/tigerbetcouk-download-our-app-handicap-chase",
       "https://www.timeform.com/horse-racing/odds/newmarket/2026-10-21/1535/36/4",
       "https://www.sportinglife.com/racing/racecards/2026-10-21/kempton/racecard/944586/unibet-more-extra-place-races-handicap"
-    ]
-  }
+    ],
+    "fullFieldReviewComplete": false,
+    "racecardRunnerReviewsCompleted": 56,
+    "performanceDeepDivePending": true
+  },
+  "individualRunnerRacecardAudits": [
+    {
+      "race": "Newmarket 15:35",
+      "selectedHorse": "Lots Road",
+      "runners": 7,
+      "cardAsOf": "2026-10-21T09:09:11.610Z",
+      "sourceNature": "Published declared racecard horse form/OR, course-distance history, headgear and rider facts, independently synthesized; source tipster verdicts excluded.",
+      "assessmentLevel": "RUNNER_BY_RUNNER_RACECARD_FACT_COMPARISON — not detailed historical performance/sectional study",
+      "entries": [
+        {
+          "horse": "The Balearic Sun",
+          "or": 83,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "7f Epsom maiden win then seventh in a stronger Newbury race; highest OR83 here but steps into a first handicap and unproved 10f."
+        },
+        {
+          "horse": "Noble Prince",
+          "or": 82,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Consistent sequence of seconds and thirds, RPR84; first 10f with William Buick and recent 7-day run, but no win yet."
+        },
+        {
+          "horse": "Girl Scout",
+          "or": 82,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Two consecutive mile Haydock wins on very soft ground and strong current TS84/RPR87; new 10f is the main unknown."
+        },
+        {
+          "horse": "Lots Road",
+          "or": 75,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Won Goodwood 9f nursery by six lengths ten days ago on good-to-soft; RPR91 best recent listed, but +6lb penalty and untried 10f."
+        },
+        {
+          "horse": "Under Arrest",
+          "or": 73,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Recent nursery second six lengths behind Lots Road and third on soft at Pontefract two days ago; extra furlong may benefit stamina but quick turnaround."
+        },
+        {
+          "horse": "Akaraka",
+          "or": 72,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Improving nursery placed finishes at 1m good-to-soft and 10f soft; Ryan Moore rides, RPR86, still a maiden."
+        },
+        {
+          "horse": "Highland Girl",
+          "or": 64,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Maiden form 034, last fourth behind Girl Scout on heavy ground, lowest weight and handicap debut offer upside but limited demonstrated class."
+        }
+      ]
+    },
+    {
+      "race": "Fontwell 16:17",
+      "selectedHorse": "Daring Plan",
+      "runners": 8,
+      "cardAsOf": "2026-10-21T09:09:11.614Z",
+      "sourceNature": "Published declared racecard horse form/OR, course-distance history, headgear and rider facts, independently synthesized; source tipster verdicts excluded.",
+      "assessmentLevel": "RUNNER_BY_RUNNER_RACECARD_FACT_COMPARISON — not detailed historical performance/sectional study",
+      "entries": [
+        {
+          "horse": "Saint Arion",
+          "or": 97,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Earlier Warwick chase second suggests ability, but pulled up at Worcester nine days ago; first-time blinkers and top weight introduce major risk."
+        },
+        {
+          "horse": "Carrigmoorna Rowan",
+          "or": 96,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Runner-up over approximately 3m at Huntingdon 15 days ago off six-month break, with sound current race fitness; today softer ground still unproven."
+        },
+        {
+          "horse": "Walkinthepresent",
+          "or": 93,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Hurdle stamina winner over 3m and new chase/long 203-day seasonal return; 7lb rise after hurdling success makes fencing aptitude unknown."
+        },
+        {
+          "horse": "Daring Plan",
+          "or": 82,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Two consecutive staying handicap chase wins, most recent 4 days ago off mark82 without a penalty today; softening ground and four-day recovery are real weaknesses."
+        },
+        {
+          "horse": "Uncle Al",
+          "or": 80,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Recent second and third in 3m+ chases with a 7lb claimer; jumping mistakes historically reduce reliable win-case despite current placing form."
+        },
+        {
+          "horse": "Pooroldmackley",
+          "or": 79,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Latest 4th, 2nd and 3rd in hurdles indicate fitness; reverting to chasing on lower OR79 could help or expose jumping weakness."
+        },
+        {
+          "horse": "Hardy Buck",
+          "or": 75,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Placed in staying chases this season and has 3lb claim, but variable jumping/pace dependency make a strong win forecast difficult."
+        },
+        {
+          "horse": "Elpologreg",
+          "or": 74,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "A prior C&D chase second suggests configuration suitability, but has not run for 532 days; 5lb claim cannot establish fitness."
+        }
+      ]
+    },
+    {
+      "race": "Newmarket 17:20",
+      "selectedHorse": "Wolf Bay",
+      "runners": 17,
+      "cardAsOf": "2026-10-21T09:09:11.614Z",
+      "sourceNature": "Published declared racecard horse form/OR, course-distance history, headgear and rider facts, independently synthesized; source tipster verdicts excluded.",
+      "assessmentLevel": "RUNNER_BY_RUNNER_RACECARD_FACT_COMPARISON — not detailed historical performance/sectional study",
+      "entries": [
+        {
+          "horse": "Blessed Voyager",
+          "or": 87,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Won debut then two six-furlong seconds, hampered in Curragh 7f event 25 days ago; highest mark OR87, first nursery and new blinkers."
+        },
+        {
+          "horse": "Cilician",
+          "or": 86,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Four runner-up finishes from seven starts including a neck second over a mile; blinkers first time and Ryan Moore, still winless."
+        },
+        {
+          "horse": "Sovereign Glory",
+          "or": 84,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Won 5f maiden, then a nursery fourth over 6f before recent weaker finishes; 7f and good-to-soft require improvement."
+        },
+        {
+          "horse": "Weekend Roar",
+          "or": 84,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Won earlier Newmarket 6f and fourth at Naas, but poor latest two outings including 7f nursery; cheekpieces newly fitted."
+        },
+        {
+          "horse": "Reflect On Glory",
+          "or": 82,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Ripon six-furlong novice winner and Pontefract third in nursery, but a previous disappointing effort on good-to-soft raises going uncertainty."
+        },
+        {
+          "horse": "Whiskey Bent",
+          "or": 82,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Won 7f maiden in France, close 1m Sandown nursery fourth; equipment reinstated after racing too freely last time, stamina/race control relevant."
+        },
+        {
+          "horse": "Down To You Kid",
+          "or": 80,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Past Newmarket seven-furlong second and last Windsor six-furlong second; 86 days since last run and first nursery after gelding."
+        },
+        {
+          "horse": "Wolf Bay",
+          "or": 79,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Two latest runner-up efforts including 7f Haydock on soft; stall3 and 5lb claim improve place case but no prior win."
+        },
+        {
+          "horse": "It Dunt Marra",
+          "or": 79,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Won Lingfield 5f novice but last two 9th and unplaced in stronger/nursery races; gelded since, 7f stamina remains unknown."
+        },
+        {
+          "horse": "Crowned",
+          "or": 78,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Won last two nurseries at Southwell 6f then 7f, rising in grade here; drawn 17 so track-position and turf transfer are key."
+        },
+        {
+          "horse": "Washington Royale",
+          "or": 78,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Won Chepstow on soft and recent Nottingham third, 20-day race fitness; seven-furlong race may suit if handling this course."
+        },
+        {
+          "horse": "Mobadir",
+          "or": 78,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Back-to-back nursery wins at 6f and 7f, then fourth of six in a tougher Newmarket seven-furlong race 11 days ago; proven track conditions."
+        },
+        {
+          "horse": "Rex Regum",
+          "or": 77,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Latest emphatic Pontefract nursery win 16 days ago, with improving form 983271; track and bigger field could check progression."
+        },
+        {
+          "horse": "Capitano Josepi",
+          "or": 77,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Winning novice debut at 7f Yarmouth, then well beaten in York sales company; first nursery handicap now creates substantial rating uncertainty."
+        },
+        {
+          "horse": "Metamouse",
+          "or": 77,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Six-furlong Chester maiden win and competitive nursery efforts, latest sixth beaten only three lengths; draw16 creates route/traffic risk."
+        },
+        {
+          "horse": "Del Pearo",
+          "or": 69,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Two fourths including Newmarket 1m maiden, first nursery off OR69; lightly raced but limited evidence of winning pace."
+        },
+        {
+          "horse": "Zambezi Shark",
+          "or": 65,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Form 508 in three novice runs and first nursery off OR65; low weight but no positive 7f race result."
+        }
+      ]
+    },
+    {
+      "race": "Kempton (AW) 19:30",
+      "selectedHorse": "Caragio",
+      "runners": 12,
+      "cardAsOf": "2026-10-21T09:09:11.615Z",
+      "sourceNature": "Published declared racecard horse form/OR, course-distance history, headgear and rider facts, independently synthesized; source tipster verdicts excluded.",
+      "assessmentLevel": "RUNNER_BY_RUNNER_RACECARD_FACT_COMPARISON — not detailed historical performance/sectional study",
+      "entries": [
+        {
+          "horse": "Caragio",
+          "or": 75,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Recent Kempton seven-furlong win and previous course/six-furlong successes, but rises 6lb and drops one furlong; claimant 5lb today."
+        },
+        {
+          "horse": "Modern Times",
+          "or": 75,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Two wins this summer including Southwell and Epsom; off 48 days, equipped with returning cheekpieces and tongue strap; 6f suitable."
+        },
+        {
+          "horse": "Serenity Dream",
+          "or": 75,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Kempton 6f course-and-distance winner with form 621123 and repeated recent places; drawn2, strong race suitability."
+        },
+        {
+          "horse": "Initial Blue",
+          "or": 74,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Four wins this year and Kempton 6f course-and-distance record; last sixth, Rossa Ryan and equipment return may help."
+        },
+        {
+          "horse": "Buccabay",
+          "or": 74,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Previous Kempton 6f winner from a 4lb higher OR and RPR88, now on 74; poor most recent effort, new tongue strap, Billy Loughnane."
+        },
+        {
+          "horse": "Marlborough Place",
+          "or": 74,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Previous Irish mile winner but form 1-4590 and return to sprinting; 5lb claim offsets weight but current speed form lacks support."
+        },
+        {
+          "horse": "Hundred Caps",
+          "or": 72,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Six-furlong winner, reduced below former winning mark, prior Kempton competitive runs; recent figures 574355 no win since January."
+        },
+        {
+          "horse": "Liosa",
+          "or": 72,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Twice won Kempton 6f and returned to Polytrack with fourth 14 days ago; 5lb rider allowance offsets current OR."
+        },
+        {
+          "horse": "Royal Accord",
+          "or": 71,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Won 15-runner Nottingham 6f handicap from off pace 20 days ago; now 4lb higher, outside draw10 and different Polytrack configuration."
+        },
+        {
+          "horse": "Receipt",
+          "or": 70,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Won 7f Southwell handicap earlier this year but last two efforts weak, including last at Kempton; shortening to 6f may help pace but unproven."
+        },
+        {
+          "horse": "Elvetham",
+          "or": 68,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Recent Lingfield five-furlong winner plus earlier Kempton 6f C&D win, but recent sixth and higher class/mark ask more."
+        },
+        {
+          "horse": "Independent Expert",
+          "or": 66,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "March Naas seven-furlong winner; form 689466 and no strong evidence of thriving at this six-furlong Polytrack trip."
+        }
+      ]
+    },
+    {
+      "race": "Kempton (AW) 20:30",
+      "selectedHorse": "Credit Forgedd It",
+      "runners": 12,
+      "cardAsOf": "2026-10-21T09:09:11.615Z",
+      "sourceNature": "Published declared racecard horse form/OR, course-distance history, headgear and rider facts, independently synthesized; source tipster verdicts excluded.",
+      "assessmentLevel": "RUNNER_BY_RUNNER_RACECARD_FACT_COMPARISON — not detailed historical performance/sectional study",
+      "entries": [
+        {
+          "horse": "Penfolds Grange",
+          "or": 65,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Recent Kempton 7f C&D runner-up, strongest known OR65 and latest RPR71; visor helped finish and rider Kieren Fox."
+        },
+        {
+          "horse": "Iconic Times",
+          "or": 64,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Two last-out victories including on AW and previous C&D-winning evidence; 78-day absence raises fitness uncertainty."
+        },
+        {
+          "horse": "Travel Agent",
+          "or": 63,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Two April AW wins but six latest 775507; current OR63 may ease burdens, draw13 also raises passage risk."
+        },
+        {
+          "horse": "Berlinetta",
+          "or": 65,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Won 1m Windsor handicap in July but later finishes 4th/8th/7th, first-time cheekpieces and Billy Loughnane could improve response."
+        },
+        {
+          "horse": "Eyes Front",
+          "or": 64,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Seven-furlong Epsom winner and Kempton 7f recent third, but latest unplaced; 3lb claim and draw3 viable if form rebounds."
+        },
+        {
+          "horse": "Dark Mandate",
+          "or": 62,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Progressive recent 7f form culminating in Wolverhampton win off improving mark; now OR62 and potentially more to offer."
+        },
+        {
+          "horse": "Viking Glory",
+          "or": 61,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Won Brighton 7f wearing cheekpieces and was hampered last time, OR61; venue switch to Kempton and last two mid-pack finishes less certain."
+        },
+        {
+          "horse": "Brave Byreflection",
+          "or": 57,
+          "relativeThreat": "SECONDARY",
+          "ownReview": "Has won Kempton and at the distance and gets 3lb claim, but form -78604 and 89 days off require a rebound."
+        },
+        {
+          "horse": "Credit Forgedd It",
+          "or": 59,
+          "relativeThreat": "COMPETITIVE",
+          "ownReview": "Recent neck second of fourteen over exact Kempton 7f C&D, stays on and OR59 lowest; winless after many tries, place more plausible than win."
+        },
+        {
+          "horse": "Manhattan Mirage",
+          "or": 57,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Sequence 606775 with a recent fifth on Ffos Las six-furlong turf; little recent evidence at seven furlongs on AW."
+        },
+        {
+          "horse": "Ridger",
+          "or": 58,
+          "relativeThreat": "MAJOR",
+          "ownReview": "Consecutive seven-furlong handicaps won, latest at this course/distance, rising 5lb with Oisin Murphy aboard; strongest demonstrated WIN conversion."
+        },
+        {
+          "horse": "Pink Diamond Girl",
+          "or": 47,
+          "relativeThreat": "LESS_PROVEN",
+          "ownReview": "Low weight and OR47 but recent form 477900 suggests substantial improvement would be needed on current track/distance evidence."
+        }
+      ]
+    }
+  ]
 }
