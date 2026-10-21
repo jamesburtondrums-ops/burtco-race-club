@@ -497,14 +497,26 @@ function outsiderRadarPanel(){
  (alternative.length?'<div class="panel"><h3>Same-race alternatives</h3><p>These are not additional race picks or stakes.</p></div><div class="bet-selection-grid">'+alternative.map(card).join('')+'</div>':'')+'</section>';
 }
 function fullRunnerAuditPanel(){
- const d=state.data||{}, audits=d.individualRunnerRacecardAudits||[];
+ const d=state.data||{}, audits=d.individualRunnerRacecardAudits||[], deep=d.deepFieldVerification||null;
  if(!audits.length)return '';
- const groups=audits.map(a=>'<details class="panel bet-audit"><summary><b>'+escapeHtml(a.race)+'</b> · '+escapeHtml(a.runners)+' runners individually considered (racecard level)</summary>'+
-  '<p>Comparison uses racing form, official marks, trip and ground evidence and named risk factors. Major/competitive/secondary categories are qualitative, not calibrated winning probabilities. Full historical and pace analysis is not complete.</p>'+
-  '<div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>Runner</th><th>OR</th><th>Relative threat</th><th>Independent assessment</th></tr></thead><tbody>'+
-  (a.entries||[]).map(x=>'<tr><td>'+escapeHtml(x.horse)+'</td><td>'+escapeHtml(x.or)+'</td><td>'+escapeHtml(x.relativeThreat).replaceAll('_',' ')+'</td><td>'+escapeHtml(x.ownReview)+'</td></tr>').join('')+'</tbody></table></div>'+
-  '<a href="'+escapeHtml(a.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Original declared racecard ↗</a></details>').join('');
- return '<section aria-label="Runner-by-runner field audit"><h3>All declared runners: evidence comparison</h3><p class="meta">56 individuals across the 5 selected races. This is a racecard-level comparison only; full historical sectionals, reconstructed pace maps and deep trainer/course evidence remain outstanding.</p>'+groups+'</section>';
+ const verifiedCount=deep?.individualInRunningVerified??0, activeCount=deep?.currentDeclaredRunnersReviewed??audits.reduce((n,r)=>n+(r.activeDeclaredRunners||r.runners),0);
+ const withdrawn=deep?.removed?.length?'<div class="panel"><h3>WIN recommendations revoked after deeper evidence review</h3><p><strong>'+deep.removed.map(escapeHtml).join(' and ')+'</strong> were withdrawn from fresh betting consideration. The original five published selections remain archived for an unbiased results review; the active Bet Selections list shows only retained runners.</p></div>':'';
+ const groups=audits.map(a=>{
+  const pace=a.racePace||null, active=a.activeDeclaredRunners??a.runners;
+  const rows=(a.entries||[]).map(x=>{
+   const ev=x.previousRunEvidence||null, tr=x.trainerJockeyEvidence||null;
+   const runNote=ev?'<span>'+escapeHtml(ev.runStyle).replaceAll('_',' ')+' — '+escapeHtml(ev.description)+'</span><p><a href="'+escapeHtml(ev.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Verify past result ↗</a></p>':'<small>No independent prior-run comment retrieved; no pace position inferred</small>';
+   const stable=tr?escapeHtml(tr.trainer)+' '+escapeHtml(tr.trainerLast14Days.wins)+'/'+escapeHtml(tr.trainerLast14Days.runs)+' wins/runs · '+escapeHtml(tr.jockey)+' '+escapeHtml(tr.jockeyLast14Days.wins)+'/'+escapeHtml(tr.jockeyLast14Days.runs)+' wins/runs (last 14 days)':'<small>Current trainer/jockey statistics not independently verified</small>';
+   return '<tr><td><strong>'+escapeHtml(x.horse)+'</strong>'+(x.withdrawnToday?' <small>NR</small>':'')+'</td><td>'+escapeHtml(x.or)+'</td><td>'+escapeHtml(x.relativeThreat).replaceAll('_',' ')+'</td><td>'+escapeHtml(x.ownReview)+'</td><td>'+runNote+'</td><td>'+stable+'</td></tr>';
+  }).join('');
+  const racePace=pace?'<div class="panel" style="padding:12px;margin:10px 0"><strong>Race pace and conditions</strong><p>'+escapeHtml(pace.paceMap)+'</p><p><strong>Main concerns:</strong> '+escapeHtml(pace.stress)+'</p><small>Decision after review: '+escapeHtml(pace.decision)+'. This is a partial evidence-based pace map, not a complete sectional-speed model.</small></div>':'';
+  return '<details class="panel bet-audit"><summary><b>'+escapeHtml(a.race)+'</b> · '+escapeHtml(active)+' active declared runners ('+escapeHtml(a.runners)+' original)</summary>'+
+    racePace+'<p>All original declared horses are shown to preserve the audit. Individual previous-race comments are displayed only where retrieved and sourced, otherwise marked as missing.</p>'+
+    '<div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>Runner</th><th>OR</th><th>Relative threat</th><th>Racecard assessment</th><th>Verified recent running style</th><th>Verified trainer/jockey form</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+    (a.sourceUrl?'<a href="'+escapeHtml(a.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Racecard source ↗</a>':'')+'</details>';
+ }).join('');
+ return '<section aria-label="Runner-by-runner evidence audit"><h3>Full declared field — evidence available so far</h3>'+
+  withdrawn+'<p class="meta"><strong>'+escapeHtml(activeCount)+' active runners</strong> from five original races ('+escapeHtml(deep?.originalFieldRunnersReviewed??56)+' original declarations). <strong>'+escapeHtml(verifiedCount)+' source-backed past-race running descriptions</strong> and '+escapeHtml(deep?.trainerJockeyPairsChecked??0)+' sampled trainer/jockey records. For other horses, racecard-level form, class, marks and risk were checked, but full prior-race running history was not independently obtainable. Complete comparable sectionals, every trainer-course record and calibrated win probabilities remain unavailable. Treat conclusions as provisional, not proven.</p>'+groups+'</section>';
 }
 function today(){
  const d=state.data||{};
