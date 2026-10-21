@@ -496,6 +496,16 @@ function outsiderRadarPanel(){
  '<div class="bet-selection-grid">'+primary.map(card).join('')+'</div>'+
  (alternative.length?'<div class="panel"><h3>Same-race alternatives</h3><p>These are not additional race picks or stakes.</p></div><div class="bet-selection-grid">'+alternative.map(card).join('')+'</div>':'')+'</section>';
 }
+function fullRunnerAuditPanel(){
+ const d=state.data||{}, audits=d.individualRunnerRacecardAudits||[];
+ if(!audits.length)return '';
+ const groups=audits.map(a=>'<details class="panel bet-audit"><summary><b>'+escapeHtml(a.race)+'</b> · '+escapeHtml(a.runners)+' runners individually considered (racecard level)</summary>'+
+  '<p>Comparison uses racing form, official marks, trip and ground evidence and named risk factors. Major/competitive/secondary categories are qualitative, not calibrated winning probabilities. Full historical and pace analysis is not complete.</p>'+
+  '<div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>Runner</th><th>OR</th><th>Relative threat</th><th>Independent assessment</th></tr></thead><tbody>'+
+  (a.entries||[]).map(x=>'<tr><td>'+escapeHtml(x.horse)+'</td><td>'+escapeHtml(x.or)+'</td><td>'+escapeHtml(x.relativeThreat).replaceAll('_',' ')+'</td><td>'+escapeHtml(x.ownReview)+'</td></tr>').join('')+'</tbody></table></div>'+
+  '<a href="'+escapeHtml(a.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Original declared racecard ↗</a></details>').join('');
+ return '<section aria-label="Runner-by-runner field audit"><h3>All declared runners: evidence comparison</h3><p class="meta">56 individuals across the 5 selected races. This is a racecard-level comparison only; full historical sectionals, reconstructed pace maps and deep trainer/course evidence remain outstanding.</p>'+groups+'</section>';
+}
 function today(){
  const d=state.data||{};
  const originalPicks=chronological(d.betSelections||[]);
@@ -529,7 +539,8 @@ function today(){
  }).join('');;
  return '<section class="page-intro"><div><div class="eyebrow">'+escapeHtml(d.snapshotDate||'')+' · UK & IRELAND</div><h2>Bet Selections</h2><p>One horse per race, with the bet type shown directly beside each selection. Horse/race data determines confidence, independently of price or favouritism.</p></div><div class="quick-stats"><span><b>'+picks.length+'</b> selections</span><span><b>'+picks.filter(p=>p.betType==='win').length+'</b> WIN</span><span><b>'+picks.filter(p=>p.betType==='each-way').length+'</b> EACH WAY</span></div></section>'+
   '<div class="bet-selection-notice">'+(d.overnightShortlist?.length?'OVERNIGHT SHORTLIST IS RESEARCH ONLY, NOT APPROVED BETS. Morning rechecks needed for weather, non-runners, rival form, ground and each-way terms.':d.researchResultsStatus?.asOfDate===d.snapshotDate?'FINAL VERIFIED RESULTS · All '+escapeHtml(d.researchResultsStatus.originalSelections)+' runners finished. Published outcomes are shown on the selection cards; no retrospective paper wagers created.':'PRE-RACE RESEARCH · '+(d.meetings||[]).map(m=>escapeHtml(m.course)+' '+escapeHtml(m.going)).join(' · ')+'. Prices are observations, not accepted bets. Check non-runners, going and bookmaker place terms before the off. No new wagers have been recorded.')+'</div>'+
-  '<div class="bet-selection-grid">'+(cards||(d.overnightShortlist?.length?'':'<div class="panel">No approved Bet Selections yet.</div>'))+'</div>'+overnightResearchPanel()+outsiderRadarPanel()+withheldNotice+historicalPanel+audit;
+'<div class="bet-selection-notice">'+(d.reviewCompleteness?.claimDeepReviewCompleted===false?'RESEARCH STATUS: Individual declared-runner racecard evidence reviewed. Deep prior-run, trainer/course, pace/draw and sectional checks NOT yet fully completed. Published selections are provisional research, not verified high-confidence wagers.':'')+'</div>'+
+    '<div class="bet-selection-grid">'+(cards||(d.overnightShortlist?.length?'':'<div class="panel">No approved Bet Selections yet.</div>'))+'</div>'+fullRunnerAuditPanel()+overnightResearchPanel()+outsiderRadarPanel()+withheldNotice+historicalPanel+audit;
 }
 function midshots(){const d=state.data||{},ms=exclusiveSelectionGroups().midshotsToday;return '<section class="page-intro mid-intro"><div><div class="eyebrow">6/1–18/1 FORM + E/W RADAR</div><h2>Mid Shots</h2><p>'+val(d.midshotsPolicy?.publicNote)+'</p></div><div class="quick-stats"><span><b>'+ms.length+'</b> unique race selections</span><span><b>6/1–18/1</b> reference price band</span></div></section><div class="rule-note mid-rule">'+val(d.midshotsPolicy?.priceRule)+'</div>'+listBlock(ms,"mid","No distinct mid-shot selection currently qualifies.") }
 function longshots(){const d=state.data||{},ls=exclusiveSelectionGroups().longshotsToday;return '<section class="page-intro long-intro"><div class="eyebrow">20/1+ EACH-WAY RADAR</div><h2>Longshots</h2><p>'+val(d.longshotsPolicy?.publicNote)+'</p><div class="quick-stats"><span><b>'+ls.length+'</b> unique race selections</span><span><b>'+val(d.longshotsPolicy?.minOdds)+'</b> minimum reference price</span></div></section><div class="rule-note long-rule">'+val(d.longshotsPolicy?.priceRule)+'</div>'+listBlock(ls,"long","No distinct longshot selection currently qualifies.") }
