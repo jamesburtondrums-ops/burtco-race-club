@@ -439,35 +439,62 @@ function missedSelectionsReview(){
  '<div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>Horse</th><th>Finish</th><th>SP</th><th>Verification</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
  '<p class="meta">One horse per featured race remains the rule. Outcomes reported by the user are labelled separately from independently verified racing results.</p></section>';
 }
+function racingMorningBadge(x){
+ const review=x.morningReview;
+ if(!review)return '';
+ const status=review.status==='RETAIN'?'RETAINED RESEARCH':review.status==='DOWNGRADE'?'SECONDARY WATCH':review.status==='WITHDRAW'?'WITHDRAWN':review.status==='NON_RUNNER'?'NON-RUNNER':review.status;
+ const cls=review.status==='RETAIN'?'is-win':'is-ew';
+ return '<span class="bet-selection-type '+cls+'">'+escapeHtml(status)+'</span>';
+}
+function racingMorningUpdate(x){
+ const review=x.morningReview;
+ if(!review)return '';
+ return '<div class="panel" style="margin:12px 0;padding:14px" aria-label="21 October morning recheck">'+
+ '<strong>Morning decision: '+escapeHtml(review.label||review.status)+'</strong>'+
+ '<p>'+escapeHtml(review.summary)+'</p><small>Current going: '+escapeHtml(review.going)+' · Field: '+escapeHtml(review.field)+
+ ' · Morning price observation: '+escapeHtml(review.price)+
+ '. Prices and bookmaker paid places may change. Original overnight quote retained below.</small>'+
+ '</div>';
+}
 function overnightResearchPanel(){
- const d=state.data||{};
- const watches=chronological(d.overnightShortlist||[]);
+ const d=state.data||{}, watches=chronological(d.overnightShortlist||[]);
  if(!watches.length)return '';
  const cards=watches.map(x=>{
-  const ew=x.betType==='each-way';
+  const ew=x.betType==='each-way', review=x.morningReview;
   const threats=(x.rivals||[]).map(r=>'<li><b>'+escapeHtml(r.horse)+'</b>: '+escapeHtml(r.whyThreat||'Further comparison required')+'</li>').join('');
-  return '<article class="bet-selection-card"><div class="bet-selection-top"><span class="bet-selection-time">'+escapeHtml(x.time)+'</span><span class="bet-selection-type '+(ew?'is-ew':'is-win')+'">'+(ew?'PROVISIONAL EACH WAY':'PROVISIONAL WIN')+'</span></div>'+
-   '<div class="bet-selection-main"><div><h3>'+escapeHtml(x.horse)+'</h3><p>'+escapeHtml(x.course)+' · '+escapeHtml(x.raceClass)+' · '+escapeHtml(x.distance)+' · '+escapeHtml(x.going)+'</p></div><div class="bet-selection-price"><span>Observed early quote</span><strong>'+escapeHtml(x.odds)+'</strong></div></div>'+
-   '<div class="bet-selection-meta"><span>Jockey: '+escapeHtml(x.jockey)+'</span><span>Trainer: '+escapeHtml(x.trainer)+'</span><span>Declared field: '+escapeHtml(x.runnerCount)+'</span><span>OR '+escapeHtml(x.or)+'</span></div>'+
-   '<p class="bet-selection-summary">'+escapeHtml(x.summary)+'</p>'+
-   '<details class="bet-selection-details"><summary>Evidence, alternative winners and risks</summary><ul>'+(x.positivePoints||[]).map(p=>'<li>'+escapeHtml(p)+'</li>').join('')+'</ul><p><strong>Other credible runners:</strong></p><ul>'+threats+'</ul><p><strong>What could go wrong:</strong> '+escapeHtml(x.risk)+'</p></details>'+
-   '<div class="bet-selection-bottom"><span>Not yet an approved Bet Selection</span><a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Full racecard ↗</a></div></article>';
+  return '<article class="bet-selection-card"><div class="bet-selection-top"><span class="bet-selection-time">'+escapeHtml(x.time)+'</span>'+
+   (review?racingMorningBadge(x):'<span class="bet-selection-type '+(ew?'is-ew':'is-win')+'">'+(ew?'PROVISIONAL EACH WAY':'PROVISIONAL WIN')+'</span>')+'</div>'+
+   '<div class="bet-selection-main"><div><h3>'+escapeHtml(x.horse)+'</h3><p>'+escapeHtml(x.course)+' · '+escapeHtml(x.raceClass)+' · '+escapeHtml(x.distance)+' · '+escapeHtml(x.going)+'</p></div><div class="bet-selection-price"><span>Original overnight quote</span><strong>'+escapeHtml(x.odds)+'</strong></div></div>'+
+   racingMorningUpdate(x)+
+   '<details class="bet-selection-details"><summary>Original overnight evidence, other contenders and risks</summary>'+
+   '<div class="bet-selection-meta"><span>Jockey: '+escapeHtml(x.jockey)+'</span><span>Trainer: '+escapeHtml(x.trainer)+'</span><span>Overnight field: '+escapeHtml(x.runnerCount)+'</span><span>OR '+escapeHtml(x.or)+'</span></div>'+
+   '<p>'+escapeHtml(x.summary)+'</p><ul>'+(x.positivePoints||[]).map(p=>'<li>'+escapeHtml(p)+'</li>').join('')+'</ul>'+
+   '<p><strong>Credible rivals:</strong></p><ul>'+threats+'</ul><p><strong>Risks:</strong> '+escapeHtml(x.risk)+'</p></details>'+
+   '<div class="bet-selection-bottom"><span>'+escapeHtml(review?.status==='NON_RUNNER'?'NON-RUNNER — NO BET':review?.status==='WITHDRAW'?'WITHDRAWN — NO NEW BET':'Not an approved Bet Selection')+'</span><a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Full racecard ↗</a></div></article>';
  }).join('');
- return '<section aria-label="Provisional overnight research"><div class="page-intro"><div><div class="eyebrow">21 OCTOBER 2026 · RESEARCH ONLY</div><h2>Overnight shortlist — morning review required</h2><p>Four field-compared research watches. None is an approved bet, no NAP is assigned, and no paper or actual wager has been recorded. All five meetings are linked under All runners, but only the four shortlisted race fields were compared in depth overnight.</p></div><div class="quick-stats"><span><b>'+watches.length+'</b> provisional watches</span><span><b>0</b> approved bets</span></div></div><div class="bet-selection-grid">'+cards+'</div></section>';
+ return '<section aria-label="Overnight research and morning changes"><div class="page-intro"><div><div class="eyebrow">21 OCTOBER 2026 · INDEPENDENT REVIEW</div><h2>Overnight shortlist — morning decisions</h2><p>Original overnight research is preserved. Morning decisions reflect current going, rivals, live non-runners and observed bookmaker prices. No official bets or paper stakes are recorded.</p></div><div class="quick-stats"><span><b>3</b> primary candidates across both lists</span><span><b>0</b> approved wagers</span></div></div><div class="bet-selection-grid">'+cards+'</div></section>';
 }
-
 function outsiderRadarPanel(){
  const d=state.data||{}, watches=chronological(d.outsiderRadar||[]);
  if(!watches.length)return '';
  const primary=watches.filter(x=>x.rank==='PRIMARY');
  const alternative=watches.filter(x=>x.rank!=='PRIMARY');
- const card=x=>'<article class="bet-selection-card"><div class="bet-selection-top"><span class="bet-selection-time">'+escapeHtml(x.time)+'</span><span class="bet-selection-type is-ew">'+(x.rank==='PRIMARY'?'PROVISIONAL EACH-WAY WATCH':'SPECULATIVE SAME-RACE ALTERNATIVE')+'</span></div>'+
- '<div class="bet-selection-main"><div><h3>'+escapeHtml(x.horse)+'</h3><p>'+escapeHtml(x.course)+' · '+escapeHtml(x.distance)+' · '+escapeHtml(x.surface)+'</p></div><div class="bet-selection-price"><span>Observed overnight quote</span><strong>'+escapeHtml(x.odds)+'</strong></div></div>'+
- '<div class="bet-selection-meta"><span>Jockey: '+escapeHtml(x.jockey)+'</span><span>Trainer: '+escapeHtml(x.trainer)+'</span><span>Field: '+escapeHtml(x.runnerCount)+'</span><span>OR '+escapeHtml(x.or)+'</span></div>'+
- '<p class="bet-selection-summary">'+escapeHtml(x.summary)+'</p><details class="bet-selection-details"><summary>Evidence, rival threats and concerns</summary><ul>'+(x.positivePoints||[]).map(p=>'<li>'+escapeHtml(p)+'</li>').join('')+'</ul><p><strong>Possible winning rivals:</strong></p><ul>'+(x.rivals||[]).map(r=>'<li>'+escapeHtml(r.horse)+': '+escapeHtml(r.whyThreat)+'</li>').join('')+'</ul><p><strong>Risk:</strong> '+escapeHtml(x.risk)+'</p></details>'+
- '<div class="bet-selection-bottom"><small>'+(x.rank==='PRIMARY'?'Unapproved research — confirm morning conditions and bookmaker E/W terms':'Same race as Synergism: mutually exclusive alternative, not another bet')+'</small><a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Full racecard ↗</a></div></article>';
- return '<section aria-label="Outsider radar"><div class="page-intro"><div><div class="eyebrow">21 OCTOBER · RESEARCH ONLY</div><h2>Larger-priced runners</h2><p>Four separate races with potential 9/1–12/1 each-way runners, plus a speculative 20/1 alternative at Kempton. Nothing approved, no paper or actual bets. Check each-way terms, non-runners, weather and opposition at the manual review.</p></div><div class="quick-stats"><span><b>'+primary.length+'</b> primary watches</span><span><b>'+alternative.length+'</b> alternative</span></div></div><div class="bet-selection-grid">'+primary.map(card).join('')+'</div>'+
- (alternative.length?'<div class="panel"><h3>20/1+ alternative research</h3><p>Same race as a listed primary watch. Do not count both as separate race selections.</p></div><div class="bet-selection-grid">'+alternative.map(card).join('')+'</div>':'')+'</section>';
+ const card=x=>{
+  const review=x.morningReview;
+  return '<article class="bet-selection-card"><div class="bet-selection-top"><span class="bet-selection-time">'+escapeHtml(x.time)+'</span>'+
+  (review?racingMorningBadge(x):'<span class="bet-selection-type is-ew">'+(x.rank==='PRIMARY'?'PROVISIONAL EACH-WAY WATCH':'SPECULATIVE SAME-RACE ALTERNATIVE')+'</span>')+'</div>'+
+  '<div class="bet-selection-main"><div><h3>'+escapeHtml(x.horse)+'</h3><p>'+escapeHtml(x.course)+' · '+escapeHtml(x.distance)+' · '+escapeHtml(x.surface)+'</p></div><div class="bet-selection-price"><span>Original overnight quote</span><strong>'+escapeHtml(x.odds)+'</strong></div></div>'+
+  racingMorningUpdate(x)+
+  '<details class="bet-selection-details"><summary>Original overnight research and rival threats</summary>'+
+  '<div class="bet-selection-meta"><span>Jockey: '+escapeHtml(x.jockey)+'</span><span>Trainer: '+escapeHtml(x.trainer)+'</span><span>Original field: '+escapeHtml(x.runnerCount)+'</span><span>OR '+escapeHtml(x.or)+'</span></div>'+
+  '<p>'+escapeHtml(x.summary)+'</p><ul>'+(x.positivePoints||[]).map(p=>'<li>'+escapeHtml(p)+'</li>').join('')+'</ul>'+
+  '<p><strong>Key rival threats:</strong></p><ul>'+(x.rivals||[]).map(r=>'<li>'+escapeHtml(r.horse)+': '+escapeHtml(r.whyThreat)+'</li>').join('')+'</ul>'+
+  '<p><strong>Risks:</strong> '+escapeHtml(x.risk)+'</p></details>'+
+  '<div class="bet-selection-bottom"><small>'+escapeHtml(review?.status==='NON_RUNNER'?'Confirmed non-runner — no bet':review?.status==='WITHDRAW'?'Removed after morning check':x.rank==='PRIMARY'?'Research candidate only; bookmaker each-way places not verified':'Same 19:00 race as Synergism; not a separate approved pick')+'</small><a href="'+escapeHtml(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Racecard ↗</a></div></article>';
+ };
+ return '<section aria-label="Larger-priced candidates"><div class="page-intro"><div class="eyebrow">21 OCTOBER · MORNING-RECHECKED RESEARCH</div><h2>Larger-priced runners</h2><p>Morning statuses now show which outsiders remain credible and which were downgraded, withdrawn or declared non-runners. Original overnight odds are preserved separately; none is an approved wager.</p></div>'+
+ '<div class="bet-selection-grid">'+primary.map(card).join('')+'</div>'+
+ (alternative.length?'<div class="panel"><h3>Same-race alternatives</h3><p>These are not additional race picks or stakes.</p></div><div class="bet-selection-grid">'+alternative.map(card).join('')+'</div>':'')+'</section>';
 }
 function today(){
  const d=state.data||{};
