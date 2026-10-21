@@ -11,8 +11,14 @@
     "betSelections": 0,
     "winCandidates": 0,
     "ewCandidates": 0,
-    "provisionalResearchWatches": 4,
-    "winConfidenceMethod": "Independent conditions, current form, class/handicap, pace and credible-rival analysis, not just market order."
+    "provisionalResearchWatches": 9,
+    "winConfidenceMethod": "Independent conditions, current form, class/handicap, pace and credible-rival analysis, not just market order.",
+    "reviewedMorningAt": "2026-10-21T07:57:31.239Z",
+    "approvedSelections": 0,
+    "primaryCandidates": 3,
+    "secondaryCandidates": 2,
+    "withdrawnCandidates": 3,
+    "nonRunnerCandidates": 1
   },
   "meetings": [
     {
@@ -164,8 +170,8 @@
   },
   "reviewCompleteness": {
     "asOfDate": "2026-10-21",
-    "reviewedAt": "2026-10-20T23:48:28.002Z",
-    "status": "Complete declared fields considered for four shortlisted races; all 37 races not exhaustively ranked. Morning weather, going, non-runners and final rival comparison outstanding.",
+    "reviewedAt": "2026-10-21T07:57:31.239Z",
+    "status": "Morning verification for all 9 candidate names: declared runner counts and non-runners, market, going, main opposing class/rating/form reviewed. Not a complete mathematically scored all-field model over all 37 races.",
     "checks": [
       "Current form and race fitness for shortlisted horses",
       "Handicap OR changes and allowances",
@@ -175,10 +181,9 @@
       "Overnight candidate comparison across full fields in four selected races"
     ],
     "blindspots": [
-      "Morning ground may change",
-      "Late non-runners, riders or field size changes",
-      "Not comprehensive per-runner sectionals across all meetings",
-      "Prices and place terms must be checked before a bet"
+      "Late going/rider/field changes remain possible",
+      "No source-verified runner-by-runner pace figures or complete sectionals",
+      "Odds and paid each-way places differ by bookmaker and can change"
     ],
     "notes": [
       "21 Oct: Additional provisional field comparison in Worcester 16:00 (8), Newmarket 17:20 (17), Kempton 19:00 (14), and Kempton 20:30 (13). Rival threats recorded. A speculative 19:00 Kempton alternative is not a separate race selection."
@@ -249,7 +254,15 @@
       "Synergism",
       "Credit Forgedd It",
       "Squire Danagher"
-    ]
+    ],
+    "morningReviewAt": "2026-10-21T07:57:31.239Z",
+    "morningReviewStatus": "All 9 overnight research horses reassessed. Primary retains Caragio WIN watch, Wolf Bay and Credit Forgedd It EW watches; Kelijoe/Synergism downgraded to secondary watch, Irish Rumour/Luna Celeste/Squire Danagher withdrawn, Jerseygeordie NR. No verified published wagers or approved Bet Selections.",
+    "morningReviewCounts": {
+      "primaryRetained": 3,
+      "secondaryWatch": 2,
+      "withdrawn": 3,
+      "nonRunners": 1
+    }
   },
   "raceDayRechecks": [
     {
@@ -324,37 +337,135 @@
       "changedPicks": 0,
       "methodology": "Independent runner stats and race conditions; no tipster text used as selection input.",
       "dataLimitations": "No real-time bookmaker bet placement and no verified betting slip."
+    },
+    {
+      "updatedAt": "2026-10-21T07:57:31.239Z",
+      "meetingCount": 5,
+      "scheduledRaces": 37,
+      "going": {
+        "Fontwell": "GOOD TO SOFT, good in places on hurdle",
+        "Worcester": "GOOD TO SOFT, good in places",
+        "Navan": "YIELDING",
+        "Newmarket": "GOOD TO SOFT",
+        "Kempton (AW)": "STANDARD TO SLOW Polytrack"
+      },
+      "confirmedNonRunners": [
+        {
+          "horse": "Jerseygeordie",
+          "race": "16:00 Worcester",
+          "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+        },
+        {
+          "horse": "Gladiadora",
+          "race": "20:30 Kempton (AW)",
+          "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+        },
+        {
+          "horse": "Goodbye Earl",
+          "race": "14:15 Worcester",
+          "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+        },
+        {
+          "horse": "Cool Ocean",
+          "race": "14:50 Worcester",
+          "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+        },
+        {
+          "horse": "The Padster",
+          "race": "17:10 Worcester",
+          "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+        },
+        {
+          "horse": "Footage Detectives",
+          "race": "16:50 Fontwell",
+          "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+        }
+      ],
+      "adjustments": [
+        {
+          "course": "Worcester",
+          "time": "16:00",
+          "oldRunners": 8,
+          "currentRunners": 7,
+          "note": "Jerseygeordie NR; standard each-way terms now 2 places"
+        },
+        {
+          "course": "Kempton (AW)",
+          "time": "20:30",
+          "oldRunners": 13,
+          "currentRunners": 12,
+          "note": "Gladiadora NR; standard place count remains 3"
+        }
+      ],
+      "unmodifiedPicks": 0,
+      "changedPicks": 9,
+      "methodology": "Morning independent cross-check for all nine originally named research horses; retain historical frozen prices and rationale, append dated review. Do not take direct tipping influence from published verdicts.",
+      "dataLimitations": "Quotes differ across bookies, bookmaker paid places not independently confirmed, ground/runner situation can still change before the off. No exhaustive prospective scored probability estimate."
     }
   ],
   "latestRacedayRecheck": {
-    "updatedAt": "2026-10-20T13:10:10.062Z",
-    "meetingCount": 4,
-    "scheduledRaces": 30,
+    "updatedAt": "2026-10-21T07:57:31.239Z",
+    "meetingCount": 5,
+    "scheduledRaces": 37,
     "going": {
-      "Curragh": "YIELDING",
-      "Yarmouth": "SOFT",
-      "Hexham": "GOOD",
-      "Newcastle (AW)": "STANDARD Tapeta"
+      "Fontwell": "GOOD TO SOFT, good in places on hurdle",
+      "Worcester": "GOOD TO SOFT, good in places",
+      "Navan": "YIELDING",
+      "Newmarket": "GOOD TO SOFT",
+      "Kempton (AW)": "STANDARD TO SLOW Polytrack"
     },
     "confirmedNonRunners": [
       {
-        "horse": "Snuggle",
-        "race": "17:08 Yarmouth",
-        "source": "https://www.racingtv.com/racecards/2026-10-20/yarmouth/1708"
+        "horse": "Jerseygeordie",
+        "race": "16:00 Worcester",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "Gladiadora",
+        "race": "20:30 Kempton (AW)",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "Goodbye Earl",
+        "race": "14:15 Worcester",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "Cool Ocean",
+        "race": "14:50 Worcester",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "The Padster",
+        "race": "17:10 Worcester",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "Footage Detectives",
+        "race": "16:50 Fontwell",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
       }
     ],
     "adjustments": [
       {
-        "course": "Yarmouth",
-        "time": "17:08",
-        "currentRunners": 8,
-        "note": "Snuggle NR; live eight-runner field"
+        "course": "Worcester",
+        "time": "16:00",
+        "oldRunners": 8,
+        "currentRunners": 7,
+        "note": "Jerseygeordie NR; standard each-way terms now 2 places"
+      },
+      {
+        "course": "Kempton (AW)",
+        "time": "20:30",
+        "oldRunners": 13,
+        "currentRunners": 12,
+        "note": "Gladiadora NR; standard place count remains 3"
       }
     ],
-    "unmodifiedPicks": 5,
-    "changedPicks": 0,
-    "methodology": "Independent runner stats and race conditions; no tipster text used as selection input.",
-    "dataLimitations": "No real-time bookmaker bet placement and no verified betting slip."
+    "unmodifiedPicks": 0,
+    "changedPicks": 9,
+    "methodology": "Morning independent cross-check for all nine originally named research horses; retain historical frozen prices and rationale, append dated review. Do not take direct tipping influence from published verdicts.",
+    "dataLimitations": "Quotes differ across bookies, bookmaker paid places not independently confirmed, ground/runner situation can still change before the off. No exhaustive prospective scored probability estimate."
   },
   "raceDayDecisionLog": [
     {
@@ -425,6 +536,118 @@
       ],
       "originalSelectionPublishedAt": "2026-10-20T13:10:10.062Z",
       "evidenceAsOf": "2026-10-20T14:45:00+01:00"
+    },
+    {
+      "checkedAt": "2026-10-21T07:57:31.239Z",
+      "date": "2026-10-21",
+      "horse": "Kelijoe",
+      "action": "DOWNGRADE",
+      "summary": "7 October 2m4f Worcester second was beaten 11 lengths by Bel Ombre, and the race comment says outpaced before the last. Today's shorter 2m110y and softening ground change the test; Albie Littlewood, Kool Kid and Reinado each have positive recent chase form, despite seasonal layoffs. Retain for observation, not a confident WIN bet.",
+      "sourceUrls": [
+        "https://www.racingpost.com/racecards/101/worcester/2026-10-21/929273/",
+        "https://www.racingtv.com/results/2026-10-07/worcester/1335",
+        "https://www.oddschecker.com/horse-racing/2026-10-21-worcester/13%3A10/winner"
+      ],
+      "originalFrozenPrice": "7/2"
+    },
+    {
+      "checkedAt": "2026-10-21T07:57:31.239Z",
+      "date": "2026-10-21",
+      "horse": "Irish Rumour",
+      "action": "WITHDRAW",
+      "summary": "Two recent fifths, mark 8lb above the September Navan win, and an unconvincing value case after shortening from the overnight quote. Gerrit's Gem, Bad Boy Rizz, Happy Henry and Bay Of Supremacy remain credible. Keep historic selection/quote, but do not recommend a fresh each-way wager.",
+      "sourceUrls": [
+        "https://www.racingpost.com/racecards/193/navan/2026-10-21/931239/",
+        "https://www.oddschecker.com/horse-racing/2026-10-21-navan/15%3A17/winner?selectionName=irish-rumour"
+      ],
+      "originalFrozenPrice": "13/2"
+    },
+    {
+      "checkedAt": "2026-10-21T07:57:31.239Z",
+      "date": "2026-10-21",
+      "horse": "Luna Celeste",
+      "action": "WITHDRAW",
+      "summary": "The three career wins were on good-to-firm. Today's going is good-to-soft and Callianassa has a convincing recent soft-ground York win; Proposal is another serious threat with 12lb less weight than Luna Celeste. Shorter price offers less compensation for genuine uncertainty. Five-runner conditions would make an each-way bet especially unattractive.",
+      "sourceUrls": [
+        "https://www.racingpost.com/racecards/38/newmarket/2026-10-21/929444/",
+        "https://www.oddschecker.com/horse-racing/2026-10-21-newmarket/16%3A10/winner?selectionName=proposal"
+      ],
+      "originalFrozenPrice": "2/1"
+    },
+    {
+      "checkedAt": "2026-10-21T07:57:31.239Z",
+      "date": "2026-10-21",
+      "horse": "Caragio",
+      "action": "RETAIN",
+      "summary": "His 7 October 7f Class 5 Kempton win came by 2½ lengths, staying on after being mid-division, proving track fitness. Now 6lb higher and back at 6f, with a DIFFERENT jockey: previous winner Taryn Langley, today's Shay Farmer (5lb). Serenity Dream, Initial Blue and Hundred Caps all offer credible six-furlong competition. No NAP; still requires pace/late market check.",
+      "sourceUrls": [
+        "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-21/929558/",
+        "https://www.racingpost.com/results/1079/kempton-aw/2026-10-07/928633/",
+        "https://www.oddschecker.com/horse-racing/2026-10-21-kempton/19%3A30/winner"
+      ],
+      "originalFrozenPrice": "9/2"
+    },
+    {
+      "checkedAt": "2026-10-21T07:57:31.239Z",
+      "date": "2026-10-21",
+      "horse": "Jerseygeordie",
+      "action": "NON_RUNNER",
+      "summary": "Official non-runner at 16:00 Worcester. The eight-runner card now has seven remaining, which reduces standard each-way places from three to two; the overnight each-way rationale is void. Preserve for review only, not a selection.",
+      "sourceUrls": [
+        "https://www.racingpost.com/non-runners/2026-10-21/",
+        "https://www.racingpost.com/racecards/101/worcester/2026-10-21/929274/"
+      ],
+      "originalFrozenPrice": "9/1"
+    },
+    {
+      "checkedAt": "2026-10-21T07:57:31.239Z",
+      "date": "2026-10-21",
+      "horse": "Wolf Bay",
+      "action": "RETAIN",
+      "summary": "Last two starts were seconds, including 7f Haydock on soft; stall 3, OR79 and Harry Vigors 5lb claim remain relevant. However the 17-runner field is much stronger than a maiden: Cilician (RPR92), Crowned, Rex Regum, Mobadir, Blessed Voyager and others have winning/improving form. Retain only as a priced each-way possibility, never a strong win call. Confirm bookmaker paid places; do not assume four.",
+      "sourceUrls": [
+        "https://www.racingpost.com/racecards/38/newmarket/2026-10-21/929447/",
+        "https://www.oddschecker.com/horse-racing/2026-10-21-newmarket/17%3A20/winner"
+      ],
+      "originalFrozenPrice": "12/1"
+    },
+    {
+      "checkedAt": "2026-10-21T07:57:31.239Z",
+      "date": "2026-10-21",
+      "horse": "Synergism",
+      "action": "DOWNGRADE",
+      "summary": "Two 2m Kempton wins from 2025 and a third of 20 in this year's Northumberland Plate give a genuine surface/stamina case. But last run was third of four beaten 36 lengths at Goodwood, and Hot Fuss, Level Look, Codiak, Boatswain and Guildmaster offer formidable Class 2 competition. Only review as a conditional each-way alternative with checked paid places, not a stand-out bet.",
+      "sourceUrls": [
+        "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-21/929555/",
+        "https://betting.betfair.com/horse-racing/horse/synergism-ger/000000616376/",
+        "https://www.oddschecker.com/horse-racing/2026-10-21-kempton/19%3A00/winner"
+      ],
+      "originalFrozenPrice": "12/1"
+    },
+    {
+      "checkedAt": "2026-10-21T07:57:31.239Z",
+      "date": "2026-10-21",
+      "horse": "Credit Forgedd It",
+      "action": "RETAIN",
+      "summary": "Second of fourteen by a neck at Kempton 7f fourteen days ago off OR59, so repeat race conditions and finish strength are sound. Gladiadora now non-runner, reducing field 13→12 without changing standard three-place terms. The horse remains a maiden after 16 runs; Ridger's two wins, Dark Mandate and Penfolds Grange are serious rivals. Retain as E/W rather than WIN with odds/terms check.",
+      "sourceUrls": [
+        "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-21/929561/",
+        "https://www.racingpost.com/non-runners/2026-10-21/",
+        "https://www.oddschecker.com/horse-racing/2026-10-21-kempton/20%3A30/winner"
+      ],
+      "originalFrozenPrice": "10/1"
+    },
+    {
+      "checkedAt": "2026-10-21T07:57:31.239Z",
+      "date": "2026-10-21",
+      "horse": "Squire Danagher",
+      "action": "WITHDRAW",
+      "summary": "Recent 2m2f turf third supports stamina but lacks comparable proof on Kempton's Polytrack in a Class 2 field. Stall 11 and several better-proven AW stayers threaten; now below original 20/1 speculative threshold in observed bookmaker grid. Do not select alongside Synergism.",
+      "sourceUrls": [
+        "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-21/929555/",
+        "https://www.oddschecker.com/horse-racing/2026-10-21-kempton/19%3A00/winner"
+      ],
+      "originalFrozenPrice": "20/1"
     }
   ],
   "postRaceAudits": [
@@ -4671,18 +4894,98 @@
       "Recheck declared runners, going, jockey and each-way bookmaker place terms before off; no invented certainty or profit."
     ]
   },
-  "morningRecheck": null,
-  "latestReviewTimestamp": "2026-10-20T23:48:28.002Z",
+  "morningRecheck": {
+    "updatedAt": "2026-10-21T07:57:31.239Z",
+    "meetingCount": 5,
+    "scheduledRaces": 37,
+    "going": {
+      "Fontwell": "GOOD TO SOFT, good in places on hurdle",
+      "Worcester": "GOOD TO SOFT, good in places",
+      "Navan": "YIELDING",
+      "Newmarket": "GOOD TO SOFT",
+      "Kempton (AW)": "STANDARD TO SLOW Polytrack"
+    },
+    "confirmedNonRunners": [
+      {
+        "horse": "Jerseygeordie",
+        "race": "16:00 Worcester",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "Gladiadora",
+        "race": "20:30 Kempton (AW)",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "Goodbye Earl",
+        "race": "14:15 Worcester",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "Cool Ocean",
+        "race": "14:50 Worcester",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "The Padster",
+        "race": "17:10 Worcester",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      },
+      {
+        "horse": "Footage Detectives",
+        "race": "16:50 Fontwell",
+        "source": "https://www.racingpost.com/non-runners/2026-10-21/"
+      }
+    ],
+    "adjustments": [
+      {
+        "course": "Worcester",
+        "time": "16:00",
+        "oldRunners": 8,
+        "currentRunners": 7,
+        "note": "Jerseygeordie NR; standard each-way terms now 2 places"
+      },
+      {
+        "course": "Kempton (AW)",
+        "time": "20:30",
+        "oldRunners": 13,
+        "currentRunners": 12,
+        "note": "Gladiadora NR; standard place count remains 3"
+      }
+    ],
+    "unmodifiedPicks": 0,
+    "changedPicks": 9,
+    "methodology": "Morning independent cross-check for all nine originally named research horses; retain historical frozen prices and rationale, append dated review. Do not take direct tipping influence from published verdicts.",
+    "dataLimitations": "Quotes differ across bookies, bookmaker paid places not independently confirmed, ground/runner situation can still change before the off. No exhaustive prospective scored probability estimate."
+  },
+  "latestReviewTimestamp": "2026-10-21T07:57:31.239Z",
   "currentProspectiveStatus": {
-    "asOf": "2026-10-20T23:48:28.002Z",
+    "asOf": "2026-10-21T07:57:31.239Z",
     "originalPublishedSelections": 0,
     "originalWin": 0,
     "originalEachWay": 0,
     "activeProspectiveWin": 0,
     "activeProspectiveEachWay": 0,
     "withdrawnAfterPublication": [],
-    "paperBetStatus": "OVERNIGHT WATCHES ONLY; NO WAGERS",
-    "note": "Four provisional horses saved separately. User will request a morning review."
+    "paperBetStatus": "RESEARCH ONLY; NO BETS CREATED",
+    "note": "Four provisional horses saved separately. User will request a morning review.",
+    "primaryResearch": [
+      "Caragio",
+      "Wolf Bay",
+      "Credit Forgedd It"
+    ],
+    "secondaryResearch": [
+      "Kelijoe",
+      "Synergism"
+    ],
+    "withdrawnAfterReview": [
+      "Irish Rumour",
+      "Luna Celeste",
+      "Squire Danagher"
+    ],
+    "nonRunners": [
+      "Jerseygeordie"
+    ]
   },
   "researchResultsStatus": {
     "asOfDate": "2026-10-20",
@@ -4733,10 +5036,28 @@
         }
       ],
       "sourceUrl": "https://www.racingpost.com/racecards/101/worcester/2026-10-21/",
-      "researchStatus": "PROVISIONAL — MANUAL MORNING REVIEW REQUIRED",
+      "researchStatus": "Watch only — no approved WIN",
       "researchedAt": "2026-10-20T23:48:28.002Z",
       "notApprovedSelection": true,
-      "sourceMethod": "All declared runners in the shortlisted race reviewed for current form, handicap suitability, race conditions, key rivals and value. Not a field-complete review across all meetings. Quotes are indicative, not accepted bets."
+      "sourceMethod": "All declared runners in the shortlisted race reviewed for current form, handicap suitability, race conditions, key rivals and value. Not a field-complete review across all meetings. Quotes are indicative, not accepted bets.",
+      "morningReview": {
+        "status": "DOWNGRADE",
+        "label": "Watch only — no approved WIN",
+        "price": "approximately 10/3–7/2 in checked bookmaker grid; conflicting broader summaries",
+        "field": 9,
+        "going": "GOOD TO SOFT, good in places",
+        "summary": "7 October 2m4f Worcester second was beaten 11 lengths by Bel Ombre, and the race comment says outpaced before the last. Today's shorter 2m110y and softening ground change the test; Albie Littlewood, Kool Kid and Reinado each have positive recent chase form, despite seasonal layoffs. Retain for observation, not a confident WIN bet.",
+        "sources": [
+          "https://www.racingpost.com/racecards/101/worcester/2026-10-21/929273/",
+          "https://www.racingtv.com/results/2026-10-07/worcester/1335",
+          "https://www.oddschecker.com/horse-racing/2026-10-21-worcester/13%3A10/winner"
+        ],
+        "checkedAt": "2026-10-21T07:57:31.239Z",
+        "sourceType": "Current declared fields, Racing Post official non-runners/going, historical full results and observed bookmaker quotes; independent inference, not published tipster verdicts"
+      },
+      "currentObservedOdds": "approximately 10/3–7/2 in checked bookmaker grid; conflicting broader summaries",
+      "updatedGoing": "GOOD TO SOFT, good in places",
+      "currentRunnerCount": 9
     },
     {
       "horse": "Irish Rumour",
@@ -4773,10 +5094,27 @@
         }
       ],
       "sourceUrl": "https://www.racingpost.com/racecards/193/navan/2026-10-21/",
-      "researchStatus": "PROVISIONAL — MANUAL MORNING REVIEW REQUIRED",
+      "researchStatus": "Withdraw fresh EACH-WAY recommendation",
       "researchedAt": "2026-10-20T23:48:28.002Z",
       "notApprovedSelection": true,
-      "sourceMethod": "All declared runners in the shortlisted race reviewed for current form, handicap suitability, race conditions, key rivals and value. Not a field-complete review across all meetings. Quotes are indicative, not accepted bets."
+      "sourceMethod": "All declared runners in the shortlisted race reviewed for current form, handicap suitability, race conditions, key rivals and value. Not a field-complete review across all meetings. Quotes are indicative, not accepted bets.",
+      "morningReview": {
+        "status": "WITHDRAW",
+        "label": "Withdraw fresh EACH-WAY recommendation",
+        "price": "about 9/2–5/1 observed, from 13/2 overnight",
+        "field": 9,
+        "going": "YIELDING",
+        "summary": "Two recent fifths, mark 8lb above the September Navan win, and an unconvincing value case after shortening from the overnight quote. Gerrit's Gem, Bad Boy Rizz, Happy Henry and Bay Of Supremacy remain credible. Keep historic selection/quote, but do not recommend a fresh each-way wager.",
+        "sources": [
+          "https://www.racingpost.com/racecards/193/navan/2026-10-21/931239/",
+          "https://www.oddschecker.com/horse-racing/2026-10-21-navan/15%3A17/winner?selectionName=irish-rumour"
+        ],
+        "checkedAt": "2026-10-21T07:57:31.239Z",
+        "sourceType": "Current declared fields, Racing Post official non-runners/going, historical full results and observed bookmaker quotes; independent inference, not published tipster verdicts"
+      },
+      "currentObservedOdds": "about 9/2–5/1 observed, from 13/2 overnight",
+      "updatedGoing": "YIELDING",
+      "currentRunnerCount": 9
     },
     {
       "horse": "Luna Celeste",
@@ -4813,10 +5151,27 @@
         }
       ],
       "sourceUrl": "https://www.racingpost.com/racecards/38/newmarket/2026-10-21/929444/",
-      "researchStatus": "PROVISIONAL — MANUAL MORNING REVIEW REQUIRED",
+      "researchStatus": "Withdraw WIN recommendation",
       "researchedAt": "2026-10-20T23:48:28.002Z",
       "notApprovedSelection": true,
-      "sourceMethod": "All declared runners in the shortlisted race reviewed for current form, handicap suitability, race conditions, key rivals and value. Not a field-complete review across all meetings. Quotes are indicative, not accepted bets."
+      "sourceMethod": "All declared runners in the shortlisted race reviewed for current form, handicap suitability, race conditions, key rivals and value. Not a field-complete review across all meetings. Quotes are indicative, not accepted bets.",
+      "morningReview": {
+        "status": "WITHDRAW",
+        "label": "Withdraw WIN recommendation",
+        "price": "around 13/8–15/8 versus 2/1 overnight",
+        "field": 5,
+        "going": "GOOD TO SOFT",
+        "summary": "The three career wins were on good-to-firm. Today's going is good-to-soft and Callianassa has a convincing recent soft-ground York win; Proposal is another serious threat with 12lb less weight than Luna Celeste. Shorter price offers less compensation for genuine uncertainty. Five-runner conditions would make an each-way bet especially unattractive.",
+        "sources": [
+          "https://www.racingpost.com/racecards/38/newmarket/2026-10-21/929444/",
+          "https://www.oddschecker.com/horse-racing/2026-10-21-newmarket/16%3A10/winner?selectionName=proposal"
+        ],
+        "checkedAt": "2026-10-21T07:57:31.239Z",
+        "sourceType": "Current declared fields, Racing Post official non-runners/going, historical full results and observed bookmaker quotes; independent inference, not published tipster verdicts"
+      },
+      "currentObservedOdds": "around 13/8–15/8 versus 2/1 overnight",
+      "updatedGoing": "GOOD TO SOFT",
+      "currentRunnerCount": 5
     },
     {
       "horse": "Caragio",
@@ -4849,10 +5204,28 @@
         }
       ],
       "sourceUrl": "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-21/",
-      "researchStatus": "PROVISIONAL — MANUAL MORNING REVIEW REQUIRED",
+      "researchStatus": "Retain primary WIN research watch",
       "researchedAt": "2026-10-20T23:48:28.002Z",
       "notApprovedSelection": true,
-      "sourceMethod": "All declared runners in the shortlisted race reviewed for current form, handicap suitability, race conditions, key rivals and value. Not a field-complete review across all meetings. Quotes are indicative, not accepted bets."
+      "sourceMethod": "All declared runners in the shortlisted race reviewed for current form, handicap suitability, race conditions, key rivals and value. Not a field-complete review across all meetings. Quotes are indicative, not accepted bets.",
+      "morningReview": {
+        "status": "RETAIN",
+        "label": "Retain primary WIN research watch",
+        "price": "around 9/2–5/1, close to 9/2 overnight",
+        "field": 12,
+        "going": "STANDARD TO SLOW Polytrack",
+        "summary": "His 7 October 7f Class 5 Kempton win came by 2½ lengths, staying on after being mid-division, proving track fitness. Now 6lb higher and back at 6f, with a DIFFERENT jockey: previous winner Taryn Langley, today's Shay Farmer (5lb). Serenity Dream, Initial Blue and Hundred Caps all offer credible six-furlong competition. No NAP; still requires pace/late market check.",
+        "sources": [
+          "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-21/929558/",
+          "https://www.racingpost.com/results/1079/kempton-aw/2026-10-07/928633/",
+          "https://www.oddschecker.com/horse-racing/2026-10-21-kempton/19%3A30/winner"
+        ],
+        "checkedAt": "2026-10-21T07:57:31.239Z",
+        "sourceType": "Current declared fields, Racing Post official non-runners/going, historical full results and observed bookmaker quotes; independent inference, not published tipster verdicts"
+      },
+      "currentObservedOdds": "around 9/2–5/1, close to 9/2 overnight",
+      "updatedGoing": "STANDARD TO SLOW Polytrack",
+      "currentRunnerCount": 12
     }
   ],
   "outsiderRadar": [
@@ -4898,7 +5271,25 @@
         }
       ],
       "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/worcester/racecard/944579/squarcle-sprint-handicap-hurdle",
-      "priceSource": "Sporting Life Sky Bet displayed 9/1"
+      "priceSource": "Sporting Life Sky Bet displayed 9/1",
+      "morningReview": {
+        "status": "NON_RUNNER",
+        "label": "Confirmed non-runner — no bet",
+        "price": "9/1 overnight — no current eligible quote",
+        "field": 7,
+        "going": "GOOD TO SOFT, good in places",
+        "summary": "Official non-runner at 16:00 Worcester. The eight-runner card now has seven remaining, which reduces standard each-way places from three to two; the overnight each-way rationale is void. Preserve for review only, not a selection.",
+        "sources": [
+          "https://www.racingpost.com/non-runners/2026-10-21/",
+          "https://www.racingpost.com/racecards/101/worcester/2026-10-21/929274/"
+        ],
+        "checkedAt": "2026-10-21T07:57:31.239Z",
+        "sourceType": "Current declared fields, Racing Post official non-runners/going, historical full results and observed bookmaker quotes; independent inference, not published tipster verdicts"
+      },
+      "researchStatus": "Confirmed non-runner — no bet",
+      "currentObservedOdds": "9/1 overnight — no current eligible quote",
+      "updatedGoing": "GOOD TO SOFT, good in places",
+      "currentRunnerCount": 7
     },
     {
       "researchDate": "2026-10-21",
@@ -4942,7 +5333,25 @@
         }
       ],
       "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/newmarket/racecard/944568/copybet-overnight-best-odds-guaranteed-nursery",
-      "priceSource": "Sporting Life Sky Bet displayed 12/1"
+      "priceSource": "Sporting Life Sky Bet displayed 12/1",
+      "morningReview": {
+        "status": "RETAIN",
+        "label": "Retain primary EACH-WAY research watch",
+        "price": "roughly 10/1–12/1, from 12/1 overnight",
+        "field": 17,
+        "going": "GOOD TO SOFT",
+        "summary": "Last two starts were seconds, including 7f Haydock on soft; stall 3, OR79 and Harry Vigors 5lb claim remain relevant. However the 17-runner field is much stronger than a maiden: Cilician (RPR92), Crowned, Rex Regum, Mobadir, Blessed Voyager and others have winning/improving form. Retain only as a priced each-way possibility, never a strong win call. Confirm bookmaker paid places; do not assume four.",
+        "sources": [
+          "https://www.racingpost.com/racecards/38/newmarket/2026-10-21/929447/",
+          "https://www.oddschecker.com/horse-racing/2026-10-21-newmarket/17%3A20/winner"
+        ],
+        "checkedAt": "2026-10-21T07:57:31.239Z",
+        "sourceType": "Current declared fields, Racing Post official non-runners/going, historical full results and observed bookmaker quotes; independent inference, not published tipster verdicts"
+      },
+      "researchStatus": "Retain primary EACH-WAY research watch",
+      "currentObservedOdds": "roughly 10/1–12/1, from 12/1 overnight",
+      "updatedGoing": "GOOD TO SOFT",
+      "currentRunnerCount": 17
     },
     {
       "researchDate": "2026-10-21",
@@ -4990,7 +5399,26 @@
         }
       ],
       "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/kempton/racecard/944585/unibet-supports-safer-gambling-handicap-gbbplus-race",
-      "priceSource": "Sporting Life Sky Bet displayed 12/1"
+      "priceSource": "Sporting Life Sky Bet displayed 12/1",
+      "morningReview": {
+        "status": "DOWNGRADE",
+        "label": "Secondary watch — not a primary bet",
+        "price": "about 9/1–10/1, from 12/1 overnight",
+        "field": 14,
+        "going": "STANDARD TO SLOW Polytrack",
+        "summary": "Two 2m Kempton wins from 2025 and a third of 20 in this year's Northumberland Plate give a genuine surface/stamina case. But last run was third of four beaten 36 lengths at Goodwood, and Hot Fuss, Level Look, Codiak, Boatswain and Guildmaster offer formidable Class 2 competition. Only review as a conditional each-way alternative with checked paid places, not a stand-out bet.",
+        "sources": [
+          "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-21/929555/",
+          "https://betting.betfair.com/horse-racing/horse/synergism-ger/000000616376/",
+          "https://www.oddschecker.com/horse-racing/2026-10-21-kempton/19%3A00/winner"
+        ],
+        "checkedAt": "2026-10-21T07:57:31.239Z",
+        "sourceType": "Current declared fields, Racing Post official non-runners/going, historical full results and observed bookmaker quotes; independent inference, not published tipster verdicts"
+      },
+      "researchStatus": "Secondary watch — not a primary bet",
+      "currentObservedOdds": "about 9/1–10/1, from 12/1 overnight",
+      "updatedGoing": "STANDARD TO SLOW Polytrack",
+      "currentRunnerCount": 14
     },
     {
       "researchDate": "2026-10-21",
@@ -5038,7 +5466,26 @@
         }
       ],
       "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/kempton/racecard/944588/unibet-3-uniboosts-a-day-handicap",
-      "priceSource": "Sporting Life Sky Bet displayed 10/1"
+      "priceSource": "Sporting Life Sky Bet displayed 10/1",
+      "morningReview": {
+        "status": "RETAIN",
+        "label": "Retain primary EACH-WAY research watch",
+        "price": "10/1–11/1, close to 10/1 overnight",
+        "field": 12,
+        "going": "STANDARD TO SLOW Polytrack",
+        "summary": "Second of fourteen by a neck at Kempton 7f fourteen days ago off OR59, so repeat race conditions and finish strength are sound. Gladiadora now non-runner, reducing field 13→12 without changing standard three-place terms. The horse remains a maiden after 16 runs; Ridger's two wins, Dark Mandate and Penfolds Grange are serious rivals. Retain as E/W rather than WIN with odds/terms check.",
+        "sources": [
+          "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-21/929561/",
+          "https://www.racingpost.com/non-runners/2026-10-21/",
+          "https://www.oddschecker.com/horse-racing/2026-10-21-kempton/20%3A30/winner"
+        ],
+        "checkedAt": "2026-10-21T07:57:31.239Z",
+        "sourceType": "Current declared fields, Racing Post official non-runners/going, historical full results and observed bookmaker quotes; independent inference, not published tipster verdicts"
+      },
+      "researchStatus": "Retain primary EACH-WAY research watch",
+      "currentObservedOdds": "10/1–11/1, close to 10/1 overnight",
+      "updatedGoing": "STANDARD TO SLOW Polytrack",
+      "currentRunnerCount": 12
     },
     {
       "researchDate": "2026-10-21",
@@ -5086,7 +5533,25 @@
         }
       ],
       "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-21/kempton/racecard/944585/unibet-supports-safer-gambling-handicap-gbbplus-race",
-      "priceSource": "Sporting Life Sky Bet displayed 20/1"
+      "priceSource": "Sporting Life Sky Bet displayed 20/1",
+      "morningReview": {
+        "status": "WITHDRAW",
+        "label": "Withdraw speculative 20/1+ outsider watch",
+        "price": "14/1–18/1 currently shown, from 20/1 overnight",
+        "field": 14,
+        "going": "STANDARD TO SLOW Polytrack",
+        "summary": "Recent 2m2f turf third supports stamina but lacks comparable proof on Kempton's Polytrack in a Class 2 field. Stall 11 and several better-proven AW stayers threaten; now below original 20/1 speculative threshold in observed bookmaker grid. Do not select alongside Synergism.",
+        "sources": [
+          "https://www.racingpost.com/racecards/1079/kempton-aw/2026-10-21/929555/",
+          "https://www.oddschecker.com/horse-racing/2026-10-21-kempton/19%3A00/winner"
+        ],
+        "checkedAt": "2026-10-21T07:57:31.239Z",
+        "sourceType": "Current declared fields, Racing Post official non-runners/going, historical full results and observed bookmaker quotes; independent inference, not published tipster verdicts"
+      },
+      "researchStatus": "Withdraw speculative 20/1+ outsider watch",
+      "currentObservedOdds": "14/1–18/1 currently shown, from 20/1 overnight",
+      "updatedGoing": "STANDARD TO SLOW Polytrack",
+      "currentRunnerCount": 14
     }
   ]
 }
