@@ -100,3 +100,38 @@ export function assessUnifiedBetReadiness(pick){
  }
  return fail('Bet type must be WIN or EACH WAY');
 }
+
+
+// Future risk-driven review guard: documentation quality, not a prediction.
+// Implemented following the frozen 21 October 2026 original-vs-final audit.
+// A declining bookmaker quote is a VALUE question, not a decline in win ability.
+// Past races or previously revoked picks must never be reclassified by this helper.
+export function assessProposedRevocation(original, proposed){
+ const reject=(reason)=>({evidenceSufficient:false,action:'RETAIN_FOR_INDEPENDENT_REVIEW',reason});
+ if(!original||!textOf(original.horse)||!isTime(original.selectionPublishedAt))
+  return reject('Original dated pre-race selection is required for a fair comparison');
+ if(!proposed||!isTime(proposed.reviewedAt)||Date.parse(proposed.reviewedAt)<=Date.parse(original.selectionPublishedAt))
+  return reject('Revocation evidence must be timestamped after the original publication');
+ if(!['WIN_REVOKE','EW_REVOKE','NON_RUNNER','VALUE_REPRICE'].includes(proposed.reasonClass))
+  return reject('Specify the actual decision type and distinguish ability from price/value');
+ if(proposed.reasonClass==='VALUE_REPRICE')
+  return {evidenceSufficient:false,action:'REPRICE_ONLY',reason:'Changed odds alone cannot alter the evidence-based win/place confidence. Compare the offered price with independently estimated probability instead.'};
+ const adverse=Array.isArray(proposed.materialNewFacts)?proposed.materialNewFacts:[];
+ if(!adverse.length||adverse.some(f=>!['HIGH','CRITICAL'].includes(f.severity)||textOf(f.finding).length<24||!isUrl(f.sourceUrl)||!isTime(f.observedAt)))
+  return reject('A documented new HIGH/CRITICAL adverse fact with dated source is needed');
+ if(proposed.reasonClass==='NON_RUNNER'&&adverse.some(f=>f.factor!=='nonRunner'))
+  return reject('Non-runner reason requires a sourced official withdrawal declaration');
+ const reasons=adverse.map(f=>f.factor);
+ if(reasons.every(r=>['marketMovement','trainer14d','jockey14d'].includes(r)))
+  return reject('Market prices and recent small-sample trainer/jockey win percentages cannot alone revoke a proven racing case');
+ const positives=Array.isArray(proposed.originalPositiveEvidence)?proposed.originalPositiveEvidence:[];
+ if(proposed.reasonClass!=='NON_RUNNER'){
+  if(proposed.fullFieldRechecked!==true)return reject('The remaining entire field must be re-compared');
+  if(!positives.length||positives.some(f=>textOf(f.finding).length<24||!isUrl(f.sourceUrl)||!['STILL_VALID','MATERIALLY_INVALIDATED'].includes(f.status)))
+   return reject('Document the original strongest positive evidence and whether it still applies');
+  if(positives.every(f=>f.status==='STILL_VALID')&&adverse.every(f=>f.severity==='HIGH'))
+   return reject('Strong positives still apply; a HIGH-risk concern alone needs further assessment, not automatic revocation');
+ }
+ return {evidenceSufficient:true,action:'REVOKE_READY_FOR_HUMAN_DECISION',
+  reason:'New material adverse evidence is documented alongside original positives and field review. No accuracy guarantee.'};
+}
