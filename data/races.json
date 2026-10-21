@@ -225,7 +225,7 @@
     "pricing": "Yordan researched early quote remains 3/1; confirmed SP is 7/4 favourite. No paper stakes or bookmaker BOG are presumed."
   },
   "modelAccuracyDevelopment": {
-    "status": "PROSPECTIVE RULE REFINEMENT — NO VERIFIED IMPROVEMENT IN OUT-OF-SAMPLE ACCURACY",
+    "status": "NEW PROSPECTIVE TEST HYPOTHESES; NO CLAIM OF IMPROVED WIN-PREDICTION ACCURACY",
     "changedResearchChecks": [
       "Course/distance/surface winner evidence separated from merely similar form",
       "Named credible opponents and late-going changes reviewed",
@@ -260,14 +260,23 @@
         "Danehill Star paid-place research candidate 2/12; verify bookmaker EW terms, do not credit non-existent wagers.",
         "Preserve Wodao's observed pre-race 2/1 separately from later 6/4 SP.",
         "Compare prospective probabilities before and after material track, weight or rival changes, not post-hoc selections."
+      ],
+      "2026-10-21": [
+        "Reverse previous tendency to treat each plausible weakness as a veto: Caragio won despite top-of-mark 6lb rise and 6f shift; Irish Rumour won despite two recent fifths and price shortening.",
+        "Retain measurable course-distance and current-condition evidence; require source-backed superiority of opposition or verified invalidating condition before removing established recent winner.",
+        "Weights and claims are effective *net* racing factors; sample-size shrinkage for small trainer/jockey 14d records must be tested prospectively.",
+        "Record official placing (Lots Road second after interference DQ) separately from first-past-post ability; do not credit win or bookmaker payout unless actual bookmaker settlement documented.",
+        "Evaluate whole field for EW place chance vs exact paid places; Wolf Bay fifth in 13 missed normal or four-place enhanced terms, Credit third user-reported placed.",
+        "Never backfill Irish Rumour into five published selections; watch-only wins belong to pre-publication research-error ledger.",
+        "Test all changes chronologically on a large held-out sample, not on one day's noisy results."
       ]
     },
     "calibrationStatus": "No verified, held-out backtest or proven statistically calibrated win probabilities."
   },
   "researchSelectionUpdate": {
     "reviewedAt": "2026-10-20T23:48:28.002Z",
-    "status": "55 active runners compared with racecard data; 15 with independently documented previous in-running records and ten selected trainer/rider recent records; five original picks reduced to three",
-    "note": "Lots Road WIN, Wolf Bay EW, Credit Forgedd It EW. Daring Plan and Caragio revoked from fresh WIN but original five preserved.",
+    "status": "21 Oct results reviewed: 5 original picks 1 official/reported winner Caragio despite pre-race revocation; Lots Road DQ to official 2nd; 3 final picks zero winners, Credit third user-reported; Irish Rumour 4/1 WIN from earlier rejected EW watch.",
+    "note": "Freeze all original picks, compare final list and research watches separately. No retroactive ledger stakes.",
     "outsiderReviewedAt": "2026-10-21T00:06:03.171Z",
     "outsiderStatus": "Four more race-distinct primary long-price E/W watches; a fifth 20/1 alternative in the 19:00 Kempton race, not a second betting pick. Nothing promoted to published Bet Selections.",
     "outsiderHorses": [
@@ -286,7 +295,8 @@
       "nonRunners": 1
     },
     "finalProspectiveAt": "2026-10-21T08:17:50.719Z",
-    "lastDeepResearchAt": "2026-10-21T09:24:51.288Z"
+    "lastDeepResearchAt": "2026-10-21T09:24:51.288Z",
+    "postRaceAt": "2026-10-21T20:13:57.436Z"
   },
   "raceDayRechecks": [
     {
@@ -1234,141 +1244,460 @@
         "No verified accepted odds/BOG terms, do not credit return to £1,000 bank.",
         "A five-runner sample is not sufficient to assert improved predictive performance."
       ]
+    },
+    {
+      "asOfDate": "2026-10-21",
+      "recordedAt": "2026-10-21T20:13:57.436Z",
+      "sourceRule": "Five originally published selections counted without retrospective removal. Two WINs were prospectively revoked; user reports retained separately from independently verified official results.",
+      "coverage": {
+        "originalSelections": 5,
+        "originalWin": 3,
+        "originalEachWay": 2,
+        "afterPublicationWithdrawals": [
+          "Daring Plan",
+          "Caragio"
+        ],
+        "retainedAfterFinalReview": [
+          "Lots Road",
+          "Wolf Bay",
+          "Credit Forgedd It"
+        ]
+      },
+      "outcomes": {
+        "officialOrUserReportedWinners": 1,
+        "overallWinnerRate": "1/5",
+        "originalWinWinners": 1,
+        "originalWinWinnerRate": "1/3",
+        "firstPastPostFirsts": 2,
+        "firstPastPostRate": "2/5",
+        "officialSeconds": 2,
+        "thirds": 1,
+        "fifths": 1,
+        "eachWayPaidPlaces": 1,
+        "eachWayPlaceRate": "1/2",
+        "finalActiveWinners": 0,
+        "finalActiveSelections": 3,
+        "finalActiveEachWayPlaces": 1
+      },
+      "strikeRateStatus": "21 Oct original FIVE: 1/5 officially placed 1st (Caragio user-reported winner), 1/3 original WINs; Lots Road was first past the post but officially demoted to second after interference. 1/2 EACH-WAY selections placed (Credit Forgedd It reported third, SP not independently confirmed); Wolf Bay fifth of 13 unplaced. Final active THREE: 0/3 winners; 1/2 EACH-WAY placed.",
+      "metrics": {
+        "originalOverallWinnerRate": "1/5 (20%)",
+        "originalWinStrikeRate": "1/3 (33.3%)",
+        "onTrackFirstPastPostRate": "2/5 (40%)",
+        "originalEachWayPlaceRate": "1/2 (50%)",
+        "finalActiveOfficialWinRate": "0/3 (0%)",
+        "finalActiveEachWayPlaceRate": "1/2 (50%)",
+        "bettingPAndL": "NOT credited; no accepted bookmaker or paper wagers created."
+      },
+      "runnerResults": [
+        {
+          "horse": "Lots Road",
+          "course": "Newmarket",
+          "time": "15:35",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "11/8",
+          "finished": 2,
+          "sp": "6/5",
+          "runnerCount": 6,
+          "winningHorse": "Noble Prince",
+          "winningMargin": null,
+          "source": "Independent result",
+          "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-21/929442/",
+          "sourceVerification": "Official amended result; independently verified",
+          "lateWithdrawn": false,
+          "disqualifiedFromFirst": true,
+          "firstPastPost": 1,
+          "disqualificationReason": "Causing interference to Noble Prince; first past post by a nose, officially placed second",
+          "basis": "Result of originally published pick, not retrospectively placed bet"
+        },
+        {
+          "horse": "Daring Plan",
+          "course": "Fontwell",
+          "time": "16:17",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "2/1",
+          "finished": 2,
+          "sp": "13/8",
+          "runnerCount": 8,
+          "winningHorse": "Uncle Al",
+          "winningMargin": "33 lengths behind Uncle Al",
+          "source": "Independent result",
+          "sourceUrl": "https://www.racingpost.com/results/20/fontwell/2026-10-21/929267/",
+          "sourceVerification": "Weighed in, independently verified",
+          "lateWithdrawn": true,
+          "disqualifiedFromFirst": false,
+          "firstPastPost": 2,
+          "disqualificationReason": null,
+          "basis": "Result of originally published pick, not retrospectively placed bet"
+        },
+        {
+          "horse": "Wolf Bay",
+          "course": "Newmarket",
+          "time": "17:20",
+          "originCategory": "ORIGINAL_EW",
+          "selectedEarlyOdds": "12/1",
+          "finished": 5,
+          "sp": "7/1",
+          "runnerCount": 13,
+          "winningHorse": "Washington Royale",
+          "winningMargin": "5 lengths behind winner",
+          "source": "Independent result",
+          "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-21/929447/",
+          "sourceVerification": "Weighed in, independently verified",
+          "lateWithdrawn": false,
+          "disqualifiedFromFirst": false,
+          "firstPastPost": 5,
+          "disqualificationReason": null,
+          "basis": "Result of originally published pick, not retrospectively placed bet"
+        },
+        {
+          "horse": "Caragio",
+          "course": "Kempton (AW)",
+          "time": "19:30",
+          "originCategory": "ORIGINAL_WIN",
+          "selectedEarlyOdds": "9/2",
+          "finished": 1,
+          "sp": "Not yet verified",
+          "runnerCount": 12,
+          "winningHorse": "Caragio",
+          "winningMargin": null,
+          "source": "User-reported result",
+          "sourceUrl": null,
+          "sourceVerification": "Winner reported by user; independent full-result confirmation pending",
+          "lateWithdrawn": true,
+          "disqualifiedFromFirst": false,
+          "firstPastPost": 1,
+          "disqualificationReason": null,
+          "basis": "Result of originally published pick, not retrospectively placed bet"
+        },
+        {
+          "horse": "Credit Forgedd It",
+          "course": "Kempton (AW)",
+          "time": "20:30",
+          "originCategory": "ORIGINAL_EW",
+          "selectedEarlyOdds": "10/1",
+          "finished": 3,
+          "sp": "Not yet verified",
+          "runnerCount": 12,
+          "winningHorse": null,
+          "winningMargin": null,
+          "source": "User-reported result",
+          "sourceUrl": null,
+          "sourceVerification": "Third-place finish reported by user; independent full-result confirmation pending",
+          "lateWithdrawn": false,
+          "disqualifiedFromFirst": false,
+          "firstPastPost": 3,
+          "disqualificationReason": null,
+          "basis": "Result of originally published pick, not retrospectively placed bet"
+        }
+      ],
+      "otherResearchWatchResult": {
+        "horse": "Irish Rumour",
+        "course": "Navan",
+        "time": "15:17",
+        "originalEarlyOdds": "13/2",
+        "originalCategory": "PROVISIONAL_EACH_WAY_RESEARCH_WATCH",
+        "removedBeforeFinalPublication": true,
+        "finished": 1,
+        "sp": "4/1",
+        "source": "Racing Post full result",
+        "sourceUrl": "https://www.racingpost.com/results/193/navan/2026-10-21/931239/",
+        "note": "Not among the five officially published selections; must not be added retrospectively to their win denominator."
+      },
+      "errorAnalysis": [
+        {
+          "horse": "Caragio",
+          "decision": "WIN REVOKED; USER REPORTS WON",
+          "mistake": "Recent 7f Kempton win plus previous Kempton 6f success and a 5lb jockey claim outweighed the model's speculative short-trip and rival concerns. The 1/12 stable and 0/8 rider recent windows were tiny, overweighted negative signals.",
+          "change": "Document demonstrated at/near course-trip winning capacity and effective weight before proposing removal. Rival threats with no proof of superior winning edge are risks, not automatic vetoes."
+        },
+        {
+          "horse": "Irish Rumour",
+          "decision": "E/W WATCH WITHDRAWN; VERIFIED WON",
+          "mistake": "Known Navan 5f win versus 17 rivals, retained 7lb jockey claim, evidence of large-field competitiveness were discounted in favour of two fifths and market shortening 13/2 to around 4/1.",
+          "change": "Distinguish change in offered value from evidence of race-winning chance. Opponent and race-condition review must directly invalidate the course/distance form before strong watch removal; price alone cannot prove low win probability."
+        },
+        {
+          "horse": "Lots Road",
+          "decision": "WIN RETAINED; OFFICIALLY SECOND AFTER DQ",
+          "mistake": "Horse was first past post, but official win bet would lose without an independently confirmed first-past-the-post bookmaker concession. Need two separate outcome measures.",
+          "change": "Track official result for all win strike and stake simulations; store physical first past post only as secondary model-of-running-ability data with incident and interference flag."
+        },
+        {
+          "horse": "Daring Plan",
+          "decision": "WIN REVOKED; SECOND BY 33L",
+          "mistake": "Soft ground, four-day recovery and pace/hard jumping evidence were meaningful risks and winner Uncle Al decisively outperformed Daring Plan.",
+          "change": "Retain strong condition, freshness and jumping-fit downgrade where source-backed. 2nd place alone is not enough to score a good WIN tip, particularly after 33L defeat."
+        },
+        {
+          "horse": "Credit Forgedd It",
+          "decision": "E/W RETAINED; USER REPORTS THIRD",
+          "mistake": "Strong late C&D finish supported place likelihood; maiden status correctly limited WIN confidence.",
+          "change": "Continue distinguishing chance of place versus chance of win; bookmaker place terms and 10/1 quote must correspond to same accepted ticket."
+        },
+        {
+          "horse": "Wolf Bay",
+          "decision": "E/W RETAINED; OFFICIALLY FIFTH",
+          "mistake": "Soft 7f runner-up form did not overcome stronger nursery rivals, race split/draw and the absence of a reliable 13-runner pace map. Lost even under enhanced four-place terms.",
+          "change": "For congested two-year-old races, add pace-group and draw uncertainty as *quantified unknown* and test place-case against actual final runner count and exact bookmaker place count before qualifying EW."
+        }
+      ],
+      "prospectiveLearningPlan": {
+        "mode": "CANDIDATE_RULES_FOR_CHRONOLOGICAL_OUT_OF_SAMPLE_TEST, NOT LIVE-TRAINED WIN PROBABILITIES",
+        "rules": [
+          "Separate rating of on-track win capability, official-result/disqualification probability, and each-way place likelihood; never infer them as identical outcomes.",
+          "Positive C&D win at current class/surface, current fitness, and rider claim must be explicitly compared against negative factors before a revocation. Include winning run at prior distance, not only latest performance.",
+          "Record each downgrade with a falsifiable critical reason, observed at the time; reject candidates only for a verified material deterioration or clearly superior field, not a speculative scenario alone.",
+          "Use trainer/jockey recent form as weak supporting information if sample <20 rides/runs; never sole disqualifier. Require chronological tested evidence before deciding thresholds/weights.",
+          "Non-runners, race-day going, EW places and changing early prices trigger fresh comparison; a lower offered price is not evidence that a horse's underlying ability fell.",
+          "Store original, review, final active and research-watch cohorts separately and measure winner strike, EW paid place, first-past-post and official settlement separately. Preserve withdrawals and losing cases.",
+          "Preserve horse-by-horse factual evidence and uncertainty where pace, sectionals, trainer-course records, and stable intent cannot independently be verified. Avoid trainer-intention inventions.",
+          "Shadow-test proposed rules on subsequent new races; no claim of improved accuracy from six outcomes."
+        ],
+        "nextModelReviewFocus": [
+          "Overreactive revocation error: Caragio and Irish Rumour",
+          "Underassessed C&D evidence and effective weights",
+          "Weak small-sample trainer/jockey negative effects",
+          "Place-case false positives in large-field handicaps",
+          "Disqualification reporting and payouts"
+        ],
+        "measurement": "Walk-forward track future ORIGINAL and FINAL prospective lists, including removal reasons and all non-runner changes; compare official win rate and simulated ROI with the same frozen early prices, never use future information for earlier selections."
+      },
+      "biasControls": [
+        "Caragio remains ORIGINAL WIN even though later revoked.",
+        "Irish Rumour remains a removed overnight watch, NOT a retrospective published winning bet.",
+        "Official Lots Road result 2nd; first-past-post is separate and may not qualify for bookmaker payouts.",
+        "Known user-reported Kempton finishes do not receive invented SPs or fictitious source URLs.",
+        "Original £1,000 paper bank and 51 historic ledger rows untouched.",
+        "No claim of proven better predictive performance from a single card."
+      ]
     }
   ],
   "latestPostRaceAudit": {
-    "asOfDate": "2026-10-20",
-    "recordedAt": "2026-10-20T19:20:31.960Z",
-    "sourceRule": "Frozen pre-race research selections, unchanged race and bet type; weighed-in published results added after running. No retroactive bet stakes, profit credit or deleted selections.",
+    "asOfDate": "2026-10-21",
+    "recordedAt": "2026-10-21T20:13:57.436Z",
+    "sourceRule": "Five originally published selections counted without retrospective removal. Two WINs were prospectively revoked; user reports retained separately from independently verified official results.",
     "coverage": {
       "originalSelections": 5,
-      "originalWin": 4,
-      "originalEachWay": 1,
-      "nonRunnersAmongSelections": 0,
-      "afterPublicationWithdrawals": []
+      "originalWin": 3,
+      "originalEachWay": 2,
+      "afterPublicationWithdrawals": [
+        "Daring Plan",
+        "Caragio"
+      ],
+      "retainedAfterFinalReview": [
+        "Lots Road",
+        "Wolf Bay",
+        "Credit Forgedd It"
+      ]
     },
     "outcomes": {
-      "winners": 1,
-      "seconds": 2,
+      "officialOrUserReportedWinners": 1,
+      "overallWinnerRate": "1/5",
+      "originalWinWinners": 1,
+      "originalWinWinnerRate": "1/3",
+      "firstPastPostFirsts": 2,
+      "firstPastPostRate": "2/5",
+      "officialSeconds": 2,
       "thirds": 1,
-      "unplaced": 1,
-      "winWinners": 1,
-      "eachWayPlaces": 1,
-      "topThree": 4
+      "fifths": 1,
+      "eachWayPaidPlaces": 1,
+      "eachWayPlaceRate": "1/2",
+      "finalActiveWinners": 0,
+      "finalActiveSelections": 3,
+      "finalActiveEachWayPlaces": 1
     },
-    "strikeRateStatus": "Original published five: 1/5 winner (20%); WIN selections 1/4 (25%); EACH-WAY paid places 1/1 (100%, 12 runners, standard three paid places). Four of five finished top-three but only one won.",
+    "strikeRateStatus": "21 Oct original FIVE: 1/5 officially placed 1st (Caragio user-reported winner), 1/3 original WINs; Lots Road was first past the post but officially demoted to second after interference. 1/2 EACH-WAY selections placed (Credit Forgedd It reported third, SP not independently confirmed); Wolf Bay fifth of 13 unplaced. Final active THREE: 0/3 winners; 1/2 EACH-WAY placed.",
     "metrics": {
-      "originalOverallWinnerRate": "1/5 (20.0%)",
-      "originalWinStrikeRate": "1/4 (25.0%)",
-      "eachWayPlaceStrikeRate": "1/1 (100.0%)",
-      "topThreeRate": "4/5 (80.0%)",
-      "bettingPAndL": "NOT credited: these were research selections, no accepted or existing 20 October paper wagers."
+      "originalOverallWinnerRate": "1/5 (20%)",
+      "originalWinStrikeRate": "1/3 (33.3%)",
+      "onTrackFirstPastPostRate": "2/5 (40%)",
+      "originalEachWayPlaceRate": "1/2 (50%)",
+      "finalActiveOfficialWinRate": "0/3 (0%)",
+      "finalActiveEachWayPlaceRate": "1/2 (50%)",
+      "bettingPAndL": "NOT credited; no accepted bookmaker or paper wagers created."
     },
     "runnerResults": [
       {
-        "horse": "Conquer The Breeze",
-        "course": "Hexham",
-        "time": "15:07",
+        "horse": "Lots Road",
+        "course": "Newmarket",
+        "time": "15:35",
         "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "11/4",
-        "finished": 6,
-        "sp": "9/2",
-        "runnerCount": 9,
-        "winningHorse": "Kool Raoul",
-        "winningMargin": "20½ lengths behind winner",
-        "source": "Racing Post full result",
-        "sourceUrl": "https://www.racingpost.com/results/25/hexham/2026-10-20/929261/"
+        "selectedEarlyOdds": "11/8",
+        "finished": 2,
+        "sp": "6/5",
+        "runnerCount": 6,
+        "winningHorse": "Noble Prince",
+        "winningMargin": null,
+        "source": "Independent result",
+        "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-21/929442/",
+        "sourceVerification": "Official amended result; independently verified",
+        "lateWithdrawn": false,
+        "disqualifiedFromFirst": true,
+        "firstPastPost": 1,
+        "disqualificationReason": "Causing interference to Noble Prince; first past post by a nose, officially placed second",
+        "basis": "Result of originally published pick, not retrospectively placed bet"
       },
       {
-        "horse": "Wodao",
-        "course": "Yarmouth",
-        "time": "16:38",
+        "horse": "Daring Plan",
+        "course": "Fontwell",
+        "time": "16:17",
         "originCategory": "ORIGINAL_WIN",
         "selectedEarlyOdds": "2/1",
-        "finished": 1,
-        "sp": "6/4",
-        "runnerCount": 9,
-        "winningHorse": "Wodao",
-        "winningMargin": "Won by 3½ lengths",
-        "source": "Racing Post full result",
-        "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/929441/"
-      },
-      {
-        "horse": "Ernst Blofeld",
-        "course": "Newcastle (AW)",
-        "time": "16:57",
-        "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "7/2",
         "finished": 2,
-        "sp": "4/1",
-        "runnerCount": 9,
-        "winningHorse": "Wardlaw",
-        "winningMargin": "Beaten neck",
-        "source": "Racing Post full result",
-        "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929547/"
-      },
-      {
-        "horse": "Koffee And Kale",
-        "course": "Yarmouth",
-        "time": "17:08",
-        "originCategory": "ORIGINAL_WIN",
-        "selectedEarlyOdds": "13/8",
-        "finished": 3,
-        "sp": "5/2",
+        "sp": "13/8",
         "runnerCount": 8,
-        "winningHorse": "Rory's Royale",
-        "winningMargin": "2¼ lengths behind winner",
-        "source": "Racing Post full result",
-        "sourceUrl": "https://www.racingpost.com/results/104/yarmouth/2026-10-20/931339/"
+        "winningHorse": "Uncle Al",
+        "winningMargin": "33 lengths behind Uncle Al",
+        "source": "Independent result",
+        "sourceUrl": "https://www.racingpost.com/results/20/fontwell/2026-10-21/929267/",
+        "sourceVerification": "Weighed in, independently verified",
+        "lateWithdrawn": true,
+        "disqualifiedFromFirst": false,
+        "firstPastPost": 2,
+        "disqualificationReason": null,
+        "basis": "Result of originally published pick, not retrospectively placed bet"
       },
       {
-        "horse": "Danehill Star",
-        "course": "Newcastle (AW)",
-        "time": "18:00",
+        "horse": "Wolf Bay",
+        "course": "Newmarket",
+        "time": "17:20",
         "originCategory": "ORIGINAL_EW",
-        "selectedEarlyOdds": "7/1",
-        "finished": 2,
-        "sp": "15/2",
+        "selectedEarlyOdds": "12/1",
+        "finished": 5,
+        "sp": "7/1",
+        "runnerCount": 13,
+        "winningHorse": "Washington Royale",
+        "winningMargin": "5 lengths behind winner",
+        "source": "Independent result",
+        "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-21/929447/",
+        "sourceVerification": "Weighed in, independently verified",
+        "lateWithdrawn": false,
+        "disqualifiedFromFirst": false,
+        "firstPastPost": 5,
+        "disqualificationReason": null,
+        "basis": "Result of originally published pick, not retrospectively placed bet"
+      },
+      {
+        "horse": "Caragio",
+        "course": "Kempton (AW)",
+        "time": "19:30",
+        "originCategory": "ORIGINAL_WIN",
+        "selectedEarlyOdds": "9/2",
+        "finished": 1,
+        "sp": "Not yet verified",
         "runnerCount": 12,
-        "winningHorse": "Sandy Craic",
-        "winningMargin": "Beaten ¾ length",
-        "source": "Racing Post full result",
-        "sourceUrl": "https://www.racingpost.com/results/1353/newcastle-aw/2026-10-20/929549/"
+        "winningHorse": "Caragio",
+        "winningMargin": null,
+        "source": "User-reported result",
+        "sourceUrl": null,
+        "sourceVerification": "Winner reported by user; independent full-result confirmation pending",
+        "lateWithdrawn": true,
+        "disqualifiedFromFirst": false,
+        "firstPastPost": 1,
+        "disqualificationReason": null,
+        "basis": "Result of originally published pick, not retrospectively placed bet"
+      },
+      {
+        "horse": "Credit Forgedd It",
+        "course": "Kempton (AW)",
+        "time": "20:30",
+        "originCategory": "ORIGINAL_EW",
+        "selectedEarlyOdds": "10/1",
+        "finished": 3,
+        "sp": "Not yet verified",
+        "runnerCount": 12,
+        "winningHorse": null,
+        "winningMargin": null,
+        "source": "User-reported result",
+        "sourceUrl": null,
+        "sourceVerification": "Third-place finish reported by user; independent full-result confirmation pending",
+        "lateWithdrawn": false,
+        "disqualifiedFromFirst": false,
+        "firstPastPost": 3,
+        "disqualificationReason": null,
+        "basis": "Result of originally published pick, not retrospectively placed bet"
       }
     ],
+    "otherResearchWatchResult": {
+      "horse": "Irish Rumour",
+      "course": "Navan",
+      "time": "15:17",
+      "originalEarlyOdds": "13/2",
+      "originalCategory": "PROVISIONAL_EACH_WAY_RESEARCH_WATCH",
+      "removedBeforeFinalPublication": true,
+      "finished": 1,
+      "sp": "4/1",
+      "source": "Racing Post full result",
+      "sourceUrl": "https://www.racingpost.com/results/193/navan/2026-10-21/931239/",
+      "note": "Not among the five officially published selections; must not be added retrospectively to their win denominator."
+    },
     "errorAnalysis": [
       {
-        "horse": "Conquer The Breeze",
-        "issue": "Top-rated NAP was 6th/9, 20½ lengths behind Kool Raoul. Recent 4/5 chase-winning form and apparently favourable 108 hurdle mark did not translate into today's 2m4f hurdle result.",
-        "action": "A switch in discipline plus full 12st and stamina trip requires a specific hurdles-form check and stronger active-rival comparison before NAP ranking. Don't assume this caused the loss without race replay."
+        "horse": "Caragio",
+        "decision": "WIN REVOKED; USER REPORTS WON",
+        "mistake": "Recent 7f Kempton win plus previous Kempton 6f success and a 5lb jockey claim outweighed the model's speculative short-trip and rival concerns. The 1/12 stable and 0/8 rider recent windows were tiny, overweighted negative signals.",
+        "change": "Document demonstrated at/near course-trip winning capacity and effective weight before proposing removal. Rival threats with no proof of superior winning edge are risks, not automatic vetoes."
       },
       {
-        "horse": "Wodao",
-        "issue": "Won Class 6 Yarmouth sprint by 3½ lengths as 6/4F despite 5lb penalty and quick turnaround.",
-        "action": "Retain demonstrated recent winning ability in today's trip/class; consider class drop and handicap transition before overweighting penalty. One success does not calibrate a coefficient."
+        "horse": "Irish Rumour",
+        "decision": "E/W WATCH WITHDRAWN; VERIFIED WON",
+        "mistake": "Known Navan 5f win versus 17 rivals, retained 7lb jockey claim, evidence of large-field competitiveness were discounted in favour of two fifths and market shortening 13/2 to around 4/1.",
+        "change": "Distinguish change in offered value from evidence of race-winning chance. Opponent and race-condition review must directly invalidate the course/distance form before strong watch removal; price alone cannot prove low win probability."
       },
       {
-        "horse": "Ernst Blofeld",
-        "issue": "Finished second by only a neck at Newcastle in first documented Tapeta try; 5lb claiming rider, top OR96 and current stamina form looked competitive, but Wardlaw won.",
-        "action": "Continue to evaluate course-surface translation and lightly weighted, improving opposition; a neck second is a loss for WIN strike rate."
+        "horse": "Lots Road",
+        "decision": "WIN RETAINED; OFFICIALLY SECOND AFTER DQ",
+        "mistake": "Horse was first past post, but official win bet would lose without an independently confirmed first-past-the-post bookmaker concession. Need two separate outcome measures.",
+        "change": "Track official result for all win strike and stake simulations; store physical first past post only as secondary model-of-running-ability data with incident and interference flag."
       },
       {
-        "horse": "Koffee And Kale",
-        "issue": "Finished third in a soft-ground Yarmouth sprint, continuing a string of near-misses without a win.",
-        "action": "Repeated runner-up finishes alone must not justify favourite-priced WIN selections; strengthen winning-threat comparisons, and distinguish top-three probability from win probability."
+        "horse": "Daring Plan",
+        "decision": "WIN REVOKED; SECOND BY 33L",
+        "mistake": "Soft ground, four-day recovery and pace/hard jumping evidence were meaningful risks and winner Uncle Al decisively outperformed Daring Plan.",
+        "change": "Retain strong condition, freshness and jumping-fit downgrade where source-backed. 2nd place alone is not enough to score a good WIN tip, particularly after 33L defeat."
       },
       {
-        "horse": "Danehill Star",
-        "issue": "Finished second at Newcastle behind Sandy Craic (¾ length), confirming strong place-case despite career-high OR70.",
-        "action": "Retain this as E/W place evidence, not WIN success; check live bookmaker place fraction and actual terms on every future EW recommendation."
+        "horse": "Credit Forgedd It",
+        "decision": "E/W RETAINED; USER REPORTS THIRD",
+        "mistake": "Strong late C&D finish supported place likelihood; maiden status correctly limited WIN confidence.",
+        "change": "Continue distinguishing chance of place versus chance of win; bookmaker place terms and 10/1 quote must correspond to same accepted ticket."
+      },
+      {
+        "horse": "Wolf Bay",
+        "decision": "E/W RETAINED; OFFICIALLY FIFTH",
+        "mistake": "Soft 7f runner-up form did not overcome stronger nursery rivals, race split/draw and the absence of a reliable 13-runner pace map. Lost even under enhanced four-place terms.",
+        "change": "For congested two-year-old races, add pace-group and draw uncertainty as *quantified unknown* and test place-case against actual final runner count and exact bookmaker place count before qualifying EW."
       }
     ],
+    "prospectiveLearningPlan": {
+      "mode": "CANDIDATE_RULES_FOR_CHRONOLOGICAL_OUT_OF_SAMPLE_TEST, NOT LIVE-TRAINED WIN PROBABILITIES",
+      "rules": [
+        "Separate rating of on-track win capability, official-result/disqualification probability, and each-way place likelihood; never infer them as identical outcomes.",
+        "Positive C&D win at current class/surface, current fitness, and rider claim must be explicitly compared against negative factors before a revocation. Include winning run at prior distance, not only latest performance.",
+        "Record each downgrade with a falsifiable critical reason, observed at the time; reject candidates only for a verified material deterioration or clearly superior field, not a speculative scenario alone.",
+        "Use trainer/jockey recent form as weak supporting information if sample <20 rides/runs; never sole disqualifier. Require chronological tested evidence before deciding thresholds/weights.",
+        "Non-runners, race-day going, EW places and changing early prices trigger fresh comparison; a lower offered price is not evidence that a horse's underlying ability fell.",
+        "Store original, review, final active and research-watch cohorts separately and measure winner strike, EW paid place, first-past-post and official settlement separately. Preserve withdrawals and losing cases.",
+        "Preserve horse-by-horse factual evidence and uncertainty where pace, sectionals, trainer-course records, and stable intent cannot independently be verified. Avoid trainer-intention inventions.",
+        "Shadow-test proposed rules on subsequent new races; no claim of improved accuracy from six outcomes."
+      ],
+      "nextModelReviewFocus": [
+        "Overreactive revocation error: Caragio and Irish Rumour",
+        "Underassessed C&D evidence and effective weights",
+        "Weak small-sample trainer/jockey negative effects",
+        "Place-case false positives in large-field handicaps",
+        "Disqualification reporting and payouts"
+      ],
+      "measurement": "Walk-forward track future ORIGINAL and FINAL prospective lists, including removal reasons and all non-runner changes; compare official win rate and simulated ROI with the same frozen early prices, never use future information for earlier selections."
+    },
     "biasControls": [
-      "No retroactively issued bookmaker or paper wagers.",
-      "All five original selections counted including sixth-placed NAP and third-placed WIN.",
-      "Each-way place success is distinct from win strike-rate.",
-      "No verified accepted odds/BOG terms, do not credit return to £1,000 bank.",
-      "A five-runner sample is not sufficient to assert improved predictive performance."
+      "Caragio remains ORIGINAL WIN even though later revoked.",
+      "Irish Rumour remains a removed overnight watch, NOT a retrospective published winning bet.",
+      "Official Lots Road result 2nd; first-past-post is separate and may not qualify for bookmaker payouts.",
+      "Known user-reported Kempton finishes do not receive invented SPs or fictitious source URLs.",
+      "Original £1,000 paper bank and 51 historic ledger rows untouched.",
+      "No claim of proven better predictive performance from a single card."
     ]
   },
   "archivedRaceSnapshots": [
@@ -5781,7 +6110,19 @@
         "historicalSourceCount": 1,
         "notes": "Full field card evaluation, but prior in-running only where published and independently retrieved. No made-up sectionals."
       },
-      "originalRunnerCount": 7
+      "originalRunnerCount": 7,
+      "result": {
+        "position": 2,
+        "status": "Official amended result; independently verified",
+        "sp": "6/5",
+        "updatedAt": "2026-10-21T20:13:57.436Z",
+        "source": "Independent result",
+        "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-21/929442/",
+        "disqualifiedFromFirst": true,
+        "firstPastPost": 1,
+        "disqualificationReason": "Causing interference to Noble Prince; first past post by a nose, officially placed second",
+        "finalRunnerCount": 6
+      }
     },
     {
       "researchDate": "2026-10-21",
@@ -5954,7 +6295,16 @@
         "historicalSourceCount": 1,
         "notes": "Full field card evaluation, but prior in-running only where published and independently retrieved. No made-up sectionals."
       },
-      "originalRunnerCount": 17
+      "originalRunnerCount": 17,
+      "result": {
+        "position": 5,
+        "status": "Weighed in, independently verified",
+        "sp": "7/1",
+        "updatedAt": "2026-10-21T20:13:57.436Z",
+        "source": "Independent result",
+        "sourceUrl": "https://www.racingpost.com/results/38/newmarket/2026-10-21/929447/",
+        "finalRunnerCount": 13
+      }
     },
     {
       "researchDate": "2026-10-21",
@@ -6119,7 +6469,14 @@
         "historicalSourceCount": 1,
         "notes": "Full field card evaluation, but prior in-running only where published and independently retrieved. No made-up sectionals."
       },
-      "originalRunnerCount": 12
+      "originalRunnerCount": 12,
+      "result": {
+        "position": 3,
+        "status": "Third-place finish reported by user; independent full-result confirmation pending",
+        "sp": "Not independently verified",
+        "updatedAt": "2026-10-21T20:13:57.436Z",
+        "source": "User-reported result"
+      }
     }
   ],
   "fiveDayAnalysis": {
@@ -6246,7 +6603,7 @@
       "sourceUrl": "https://www.racingpost.com/non-runners/2026-10-21/"
     }
   },
-  "latestReviewTimestamp": "2026-10-21T09:34:44Z",
+  "latestReviewTimestamp": "2026-10-21T20:13:57.436Z",
   "currentProspectiveStatus": {
     "asOf": "2026-10-21T09:24:51.288Z",
     "originalPublishedSelections": 5,
@@ -6288,15 +6645,16 @@
     }
   },
   "researchResultsStatus": {
-    "asOfDate": "2026-10-20",
-    "verifiedAt": "2026-10-20T19:20:31.960Z",
-    "status": "All five published selections weighed in, no active results pending.",
+    "asOfDate": "2026-10-21",
+    "verifiedAt": "2026-10-21T20:13:57.436Z",
+    "status": "Three final active picks settled; all five originally published picks auditable separately, including two revoked WINs. Kempton user-reported outcomes noted pending independent source verification.",
     "originalSelections": 5,
-    "winPicks": 4,
-    "winners": 1,
-    "topThree": 4,
-    "eachWayPlaced": 1,
-    "source": "Racing Post verified full results",
+    "officialOrUserReportedWinners": 1,
+    "firstPastPostWinners": 2,
+    "finalActiveSelections": 3,
+    "finalActiveWinners": 0,
+    "eachWayOriginalPlaces": 1,
+    "source": "Racing Post + Racing TV for Newmarket, Fontwell and Navan; direct user report for Kempton finishes",
     "acceptedBets": 0,
     "paperBetsAdded": 0
   },
@@ -6422,7 +6780,14 @@
       "currentRunnerCount": 9,
       "removedFromActiveAt": "2026-10-21T08:17:50.719Z",
       "reason": "Withdraw fresh EACH-WAY recommendation",
-      "originalGroup": "overnightShortlist"
+      "originalGroup": "overnightShortlist",
+      "postRaceOutcome": {
+        "position": 1,
+        "sp": "4/1",
+        "verification": "Weighed in, independently verified",
+        "recordedAt": "2026-10-21T20:13:57.436Z",
+        "sourceUrl": "https://www.racingpost.com/results/193/navan/2026-10-21/931239/"
+      }
     },
     {
       "horse": "Luna Celeste",
@@ -6810,7 +7175,14 @@
       "removedFromActiveAt": "2026-10-21T09:24:51.288Z",
       "reason": "Official chase going SOFT, while two recent wins were on GOOD. Soft record 0/7 on available historical surface counts, 4 days since last 3m+ win.",
       "action": "REVOKED_FROM_FRESH_BET_SELECTIONS; HISTORICAL ORIGINAL STILL COUNTED",
-      "originalGroup": "publishedBetSelections"
+      "originalGroup": "publishedBetSelections",
+      "postRaceOutcome": {
+        "position": 2,
+        "sp": "13/8",
+        "verification": "Weighed in, independently verified",
+        "recordedAt": "2026-10-21T20:13:57.436Z",
+        "sourceUrl": "https://www.racingpost.com/results/20/fontwell/2026-10-21/929267/"
+      }
     },
     {
       "horse": "Caragio",
@@ -6961,7 +7333,13 @@
       "removedFromActiveAt": "2026-10-21T09:24:51.288Z",
       "reason": "Six-pound increase after 7f win, 6f strong specialist opposition; trainer 1/12 and jockey 0/8 in last 14 days. Insufficient standout win advantage.",
       "action": "REVOKED_FROM_FRESH_BET_SELECTIONS; HISTORICAL ORIGINAL STILL COUNTED",
-      "originalGroup": "publishedBetSelections"
+      "originalGroup": "publishedBetSelections",
+      "postRaceOutcome": {
+        "position": 1,
+        "sp": null,
+        "verification": "Winner reported by user; independent full-result confirmation pending",
+        "recordedAt": "2026-10-21T20:13:57.436Z"
+      }
     }
   ],
   "researchSnapshots": [
@@ -9087,5 +9465,64 @@
     ],
     "accuracyClaim": "No demonstrated accuracy improvement, no full-field historical sectional claim",
     "modelRule": "An unfinished data source is marked missing, not estimated; strict prospective withdrawals preserved alongside frozen original selections."
-  }
+  },
+  "researchWatchOutcomeAudit": [
+    {
+      "horse": "Irish Rumour",
+      "course": "Navan",
+      "time": "15:17",
+      "originalEarlyOdds": "13/2",
+      "originalCategory": "PROVISIONAL_EACH_WAY_RESEARCH_WATCH",
+      "removedBeforeFinalPublication": true,
+      "finished": 1,
+      "sp": "4/1",
+      "source": "Racing Post full result",
+      "sourceUrl": "https://www.racingpost.com/results/193/navan/2026-10-21/931239/",
+      "note": "Not among the five officially published selections; must not be added retrospectively to their win denominator."
+    }
+  ],
+  "selectionLearningHistory": [
+    {
+      "date": "2026-10-21",
+      "recordedAt": "2026-10-21T20:13:57.436Z",
+      "observedOutcomes": {
+        "officialOrUserReportedWinners": 1,
+        "overallWinnerRate": "1/5",
+        "originalWinWinners": 1,
+        "originalWinWinnerRate": "1/3",
+        "firstPastPostFirsts": 2,
+        "firstPastPostRate": "2/5",
+        "officialSeconds": 2,
+        "thirds": 1,
+        "fifths": 1,
+        "eachWayPaidPlaces": 1,
+        "eachWayPlaceRate": "1/2",
+        "finalActiveWinners": 0,
+        "finalActiveSelections": 3,
+        "finalActiveEachWayPlaces": 1
+      },
+      "proposedChanges": {
+        "mode": "CANDIDATE_RULES_FOR_CHRONOLOGICAL_OUT_OF_SAMPLE_TEST, NOT LIVE-TRAINED WIN PROBABILITIES",
+        "rules": [
+          "Separate rating of on-track win capability, official-result/disqualification probability, and each-way place likelihood; never infer them as identical outcomes.",
+          "Positive C&D win at current class/surface, current fitness, and rider claim must be explicitly compared against negative factors before a revocation. Include winning run at prior distance, not only latest performance.",
+          "Record each downgrade with a falsifiable critical reason, observed at the time; reject candidates only for a verified material deterioration or clearly superior field, not a speculative scenario alone.",
+          "Use trainer/jockey recent form as weak supporting information if sample <20 rides/runs; never sole disqualifier. Require chronological tested evidence before deciding thresholds/weights.",
+          "Non-runners, race-day going, EW places and changing early prices trigger fresh comparison; a lower offered price is not evidence that a horse's underlying ability fell.",
+          "Store original, review, final active and research-watch cohorts separately and measure winner strike, EW paid place, first-past-post and official settlement separately. Preserve withdrawals and losing cases.",
+          "Preserve horse-by-horse factual evidence and uncertainty where pace, sectionals, trainer-course records, and stable intent cannot independently be verified. Avoid trainer-intention inventions.",
+          "Shadow-test proposed rules on subsequent new races; no claim of improved accuracy from six outcomes."
+        ],
+        "nextModelReviewFocus": [
+          "Overreactive revocation error: Caragio and Irish Rumour",
+          "Underassessed C&D evidence and effective weights",
+          "Weak small-sample trainer/jockey negative effects",
+          "Place-case false positives in large-field handicaps",
+          "Disqualification reporting and payouts"
+        ],
+        "measurement": "Walk-forward track future ORIGINAL and FINAL prospective lists, including removal reasons and all non-runner changes; compare official win rate and simulated ROI with the same frozen early prices, never use future information for earlier selections."
+      },
+      "source": "Frozen originals + independent results where available + user reported Kempton finishes"
+    }
+  ]
 }
