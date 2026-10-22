@@ -30,7 +30,7 @@ footer{font-size:12px;color:var(--sub);padding-top:14px}.error{background:#fff4e
 <div class="note"><strong>Original snapshots preserved.</strong> This is a dated prospective research shortlist, not a rewrite of published picks. Price quotes are observations, not guaranteed offers. Each-way paid places must be checked with the bookmaker.</div>
 <section id="cards" aria-label="Today selections"><p>Loading dated research selections…</p></section>
 <div class="note"><strong>No forced alternatives.</strong> Beggarman (Southwell 17:00) and Woodstream Lad (Clonmel 16:30) were not retained for fresh each-way research. Their frozen original selections remain in the historical record.</div>
-<footer>Coverage: The six selected race fields were individually screened and their runners' past-form and jockey evidence reviewed. This is not an exhaustive assessment of every UK/Ireland race today. No calibrated model win probabilities, exhaustive video sectionals, new paper bets, or actual stakes are claimed.</footer>
+<footer>Coverage: All 40 UK/Irish races and 397 active runners were first-pass screened. Eight races have field-by-field assessments, and 66 runners have three or more dated historical observations; the rest are NOT fully deep-reviewed. No calibrated model win probabilities, exhaustive video sectionals, new paper bets, or actual stakes are claimed.</footer>
 </main>
 <script type="module">
 const root=document.getElementById('cards');
@@ -49,7 +49,7 @@ try {
    const type=s.betType==='each-way'?'EACH WAY':'WIN';
    const label=expired?'OFF TIME PASSED':type;
    const ev=s.researchEvidence?'<a href="https://github.com/jamesburtondrums-ops/burtco-race-club/blob/racing-intelligence/'+encodeURI(s.researchEvidence)+'" target="_blank" rel="noopener noreferrer">Whole-field evidence ↗</a>':'';
-   article.innerHTML='<div class="card-head"><div><div class="horse">'+esc(s.horse)+'</div><div class="meta">'+esc(s.offLocal)+' · '+esc(s.course)+'</div></div><span class="bet '+(s.betType==='each-way'?'ew':'')+(expired?' expired':'')+'">'+label+'</span></div>'+
+   article.innerHTML='<div class="card-head"><div><div class="horse">'+esc(s.horse)+'</div><div class="meta">'+esc(s.offLocal)+' · '+esc(s.course)+(s.newlyAddedAfterWholeDayScanAt?' · Added after full-day scan '+esc(s.newlyAddedAfterWholeDayScanAt.slice(11,16)):'')+'</div></div><span class="bet '+(s.betType==='each-way'?'ew':'')+(expired?' expired':'')+'">'+label+'</span></div>'+
     '<div class="price">Reference quote: '+esc(s.priceObserved)+'</div>'+
     '<div class="div"></div><p><strong>Why:</strong> '+esc(s.abilityReason)+'</p>'+
     '<p class="risk"><strong>Main risk:</strong> '+esc(s.mainRisks)+'</p>'+
