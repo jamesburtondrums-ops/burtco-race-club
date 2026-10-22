@@ -12,7 +12,7 @@ Run `node scripts/audit-racing-model.mjs` from the repository root to reproduce 
 | Late-added longshot research (not an original WIN/EW bet) | 1 | 0 | 0% | Not credited |
 | **All recorded picks/research** | **24** | **5** | **20.83%** | N/A |
 
-The original WIN win-rate has a wide approximate 95% Wilson interval of 14%–56%. This dataset cannot establish statistical uplift. The normal E/W top-three result is not an actual bookmaker payout, and no stakes or ROI are credited.
+The original WIN win-rate has a wide approximate 95% Wilson interval of 16.4%–53.4%. This dataset cannot establish statistical uplift. The normal E/W top-three result is not an actual bookmaker payout, and no stakes or ROI are credited.
 
 Days 16–17 October do **not** have equally complete, standardised, independently verified outcome records in `postRaceAudits`. They are excluded rather than implicitly scored as losses. For 21 October, the stored audit marked Caragio and Credit Forgedd It as user-reported pending confirmation. Racing Post result pages now independently show Caragio **1st at 19:30** and Credit Forgedd It **3rd at 20:30**; the original historical evidence-status fields were **not rewritten**:
 - https://www.racingpost.com/results/1079/kempton-aw/2026-10-21/929558/
