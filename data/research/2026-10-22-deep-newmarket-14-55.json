@@ -1,0 +1,382 @@
+{
+  "asOf": "2026-10-22 pre-race",
+  "race": "Newmarket 14:55",
+  "going": "Soft",
+  "offTime": "14:55",
+  "originalSelection": "Beach Point",
+  "activeRunners": 10,
+  "sourceRacecard": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+  "status": "INDIVIDUAL_PAST_RUNS_AND_BOOKING_EVIDENCE_REVIEWED; NOT CALIBRATED",
+  "runners": [
+    {
+      "horse": "Tiger",
+      "jockey": "Jack Dace",
+      "claimLb": 5,
+      "trainer": "Ian Williams",
+      "racecardOfficialRating": 82,
+      "racecardWeight": "10-2",
+      "lastSixForm": "421280",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "Official mark higher than selected horse and Jack Dace 5lb claim, useful recent second",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "27 Sep 2026 Epsom ~1m4f good Flat 12/13 beaten 24.15L OR84",
+        "30 Aug 2026 Beverley ~1m2f heavy Flat 8/10 beaten 9.45L OR84",
+        "8 Aug 2026 Ayr ~1m2f good Flat 2/13 beaten 0.2L OR80; also 2 Aug Chester 1m2f win 5.5L OR75"
+      ],
+      "bookingAndHandicapReview": "Jack Dace 5lb claim offset weight but 12/13 and 8/10 in latest two starts, latter heavy 10f; solid Chester 10f win and Ayr near second in August. Low-confidence bounceback rather than ranking on raw OR82.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/tiger-france",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Tipsy Tiger",
+      "jockey": "Shane Gray",
+      "claimLb": 0,
+      "trainer": "William Stone",
+      "racecardOfficialRating": 78,
+      "racecardWeight": "9-12",
+      "lastSixForm": "34-641",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "Turf handicap winner, mixed latest couple but potentially well suited to rain-softened going",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "29 Sep 2026 Ayr ~1m2f heavy Flat 2/9 beaten about 0.05L OR74 with Shane Gray",
+        "11 Sep 2026 Sandown ~1m1f good-to-soft Flat 4/7 beaten 3.75L OR76",
+        "29 Jun 2026 Kempton ~1m3f standard-to-slow Flat 6/12 beaten 9.75L OR77"
+      ],
+      "bookingAndHandicapReview": "29 Sep Ayr heavy-ground 10f second by tiny margin, Shane Gray same today's jockey. That actual wet-surface evidence is more relevant than bare last-six digit; OR78 today +4lb vs heavy near miss. Cannot dismiss.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/tipsy-tiger",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Beach Point",
+      "jockey": "Ryan Moore",
+      "claimLb": 0,
+      "trainer": "William Knight",
+      "racecardOfficialRating": 76,
+      "racecardWeight": "9-10",
+      "lastSixForm": "844123",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "Recent Goodwood victory followed by narrow second and third; 1m2f 5yo established trip, Moore rides; stall one",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "5 Oct 2026 Yarmouth ~1m2f good Flat 3/9 beaten 0.3L OR76",
+        "10 Sep 2026 Epsom ~1m2f good Flat 2/9 beaten 0.02L OR74",
+        "28 Aug 2026 Goodwood ~1m1f good-to-firm Flat 1/7 won 0.75L OR70"
+      ],
+      "bookingAndHandicapReview": "Epsom near second and recent Yarmouth third but 6lb higher than Goodwood winning OR70. New jockey Ryan Moore; price drift to 9/1 vs original frozen 9/2, no demonstrated negative change to ability. Soft Sandown win in 2025 supports conditions.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/beach-point",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Great Blasket",
+      "jockey": "Rossa Ryan",
+      "claimLb": 0,
+      "trainer": "James Owen",
+      "racecardOfficialRating": 76,
+      "racecardWeight": "9-10",
+      "lastSixForm": "613323",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "Recent good sequence third/third after previous win, current class competitive; 10f record is weaker than at mile",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "7 Oct 2026 Nottingham ~1m2f soft Flat 3/10 beaten 1.85L OR76",
+        "16 Sep 2026 Beverley ~1m2f good Flat 2/10 beaten 1.25L OR75",
+        "25 Aug 2026 Lingfield 1m standard Flat 3/9 beaten 2L OR75; 30 Jul Nottingham mile 1/5 won 3.75L OR68"
+      ],
+      "bookingAndHandicapReview": "Nottingham 10f soft third less than 2L beaten, Beverley 10f second; James Owen stable transfer precedes renewed form; Rossa Ryan new partner. Competitive opposition with actual soft test.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/great-blasket",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Mythical Guest",
+      "jockey": "Saffie Osborne",
+      "claimLb": 0,
+      "trainer": "G Margarson",
+      "racecardOfficialRating": 75,
+      "racecardWeight": "9-9",
+      "lastSixForm": "430334",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "Newmarket regular with multiple placings, 2/10 trip but rain-softened ground record uncertain",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "5 Oct 2026 Yarmouth ~1m2f good Flat 4/9 beaten 1.05L OR76",
+        "25 Sep 2026 Newmarket Rowley ~1m1f good-to-firm Flat 3/10 beaten 3.25L OR78",
+        "15 Sep 2026 Yarmouth ~1m2f good Flat 3/7 beaten 4.25L OR78"
+      ],
+      "bookingAndHandicapReview": "Two recent ~10f races close (Yarmouth 4/9 beaten1.05L), repeated Rowley form; Saffie Osborne new jockey vs prior Jack Callan. Must not dismiss as generic midpack runner.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/mythical-guest",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Something Splendid",
+      "jockey": "Marco Ghiani",
+      "claimLb": 0,
+      "trainer": "P W Chapple-Hyam",
+      "racecardOfficialRating": 74,
+      "racecardWeight": "9-8",
+      "lastSixForm": "4-9716",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "Two earlier wins at 10f but recent finishes 9th/7th/6th",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "11 Sep 2026 Doncaster ~1m2f good-to-firm Flat 6/17 beaten 4.75L OR77",
+        "30 Aug 2026 Yarmouth ~1m2f good-to-soft Flat 1/8 won 0.1L OR72 with today's jockey Marco Ghiani",
+        "3 Jun 2026 Nottingham ~1m2f good-to-soft Flat 7/10 beaten 7.25L OR74"
+      ],
+      "bookingAndHandicapReview": "Marco Ghiani rides again having won with this horse on 30 Aug over 10f on good-to-soft off OR72; despite Doncaster sixth, mark today 74 and pace/draw still not resolved. Hidden rider-booking/going positive.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/something-splendid-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Kalokalo",
+      "jockey": "Billy Loughnane",
+      "claimLb": 0,
+      "trainer": "Charlie Hills",
+      "racecardOfficialRating": 77,
+      "racecardWeight": "9-7",
+      "lastSixForm": "121302",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "Three-year-old with two prior wins and improving handicap capacity; poor latest start is a risk",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "22 Sep 2026 Southwell 1m standard Flat 2/11 beaten 3.5L OR78",
+        "30 Jul 2026 Goodwood mile good-to-firm Flat 13/19 beaten 4.55L OR80",
+        "13 Jul 2026 Windsor mile good-to-firm Flat 3/8 beaten 2.25L OR78; 5 Jul Southwell mile win 2.25L OR72"
+      ],
+      "bookingAndHandicapReview": "Billy Loughnane fresh partnership; latest mile All Weather second and mile win, 10f stamina unverified, unlike proven 10f rivals.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/kalokalo-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Ganodin",
+      "jockey": "Charles Bishop",
+      "claimLb": 0,
+      "trainer": "Ian Williams",
+      "racecardOfficialRating": 75,
+      "racecardWeight": "9-5",
+      "lastSixForm": "813190",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "Three-year-old with former 10f win, recent two big defeats",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "10 Oct 2026 York ~1m soft Flat 18/20 beaten 28.9L OR78",
+        "12 Sep 2026 Chester ~1m soft Flat 9/9 beaten 27.2L OR81",
+        "25 May 2026 Compiegne (FR) ~1m2f Flat 1/11 prior to moving to Ian Williams"
+      ],
+      "bookingAndHandicapReview": "Two recent large defeats on SOFT at York/Chester, now good/turf return or uncertain and yard change Pantall→Ian Williams; booking Charlie Bishop not enough to explain current decline.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/ganodin-france",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Phantom Watch",
+      "jockey": "David Probert",
+      "claimLb": 0,
+      "trainer": "H Palmer",
+      "racecardOfficialRating": 75,
+      "racecardWeight": "9-5",
+      "lastSixForm": "412524",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "3yo mixed handicap form, no verified win over 10f",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "1 Oct 2026 Nottingham 1m good Flat 4/9 beaten 3.25L OR75 with David Probert",
+        "14 Sep 2026 Windsor 1m good Flat 2/12 beaten 1L OR75 with David Probert",
+        "8 Aug 2026 Haydock 1m good Flat 5/6 beaten 4.2L OR75; 26 Jun Newmarket Rowley 1m second 1L OR74"
+      ],
+      "bookingAndHandicapReview": "David Probert ridden horse to near-second and recent fourth at mile, positive established partnership. Steps up to 10f for first documented time, stamina unproven even though mark OR75 maintained.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/phantom-watch-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Arbaawy",
+      "jockey": "Sean Levey",
+      "claimLb": 0,
+      "trainer": "John Butler",
+      "racecardOfficialRating": 75,
+      "racecardWeight": "9-5",
+      "lastSixForm": "340362",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "originalRunnerReview": "Three-year-old latest runner-up but maiden after fourteen starts, needs to convert competitiveness",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "1 Oct 2026 Salisbury ~1m2f good-to-soft Flat 2/12 beaten 0.02L OR74",
+        "10 Sep 2026 Epsom ~1m good Flat 6/10 beaten 3.15L OR75",
+        "4 Aug 2026 Ffos Las mile good Flat 3/8 beaten 6.6L; career maiden after 14 prior starts"
+      ],
+      "bookingAndHandicapReview": "1 Oct Salisbury near-negligible-margin 10f second on good-to-soft represents a genuine same-conditions threat; maiden 14 starts and rider Sean Levey now new. Inability to convert is risk.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/arbaawy-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    }
+  ]
+}
