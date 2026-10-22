@@ -1,0 +1,456 @@
+{
+  "asOf": "2026-10-22 pre-race",
+  "race": "Southwell (AW) 17:00",
+  "going": "Standard Tapeta",
+  "offTime": "17:00",
+  "originalSelection": "Beggarman",
+  "activeRunners": 12,
+  "sourceRacecard": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+  "status": "INDIVIDUAL_PAST_RUNS_AND_BOOKING_EVIDENCE_REVIEWED; NOT CALIBRATED",
+  "runners": [
+    {
+      "horse": "Rubellite",
+      "jockey": "Cieren Fallon",
+      "claimLb": 0,
+      "trainer": "S Hanlon",
+      "racecardOfficialRating": 64,
+      "racecardWeight": "10-0",
+      "lastSixForm": "145173",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "4 AW wins and recent 3rd, OR64, substantial danger at 1m6f",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "8 Oct 2026 Southwell ~1m6f standard Flat 3/12 beaten 0.95L OR64",
+        "25 Sep 2026 Newcastle ~1m4f standard Flat 7/12 beaten 4.35L OR64",
+        "5 Sep 2026 Newcastle ~1m4f standard Flat 1/6 won 1.5L OR62"
+      ],
+      "bookingAndHandicapReview": "Exact Southwell ~1m6f race two weeks ago third beaten <1L at OR64, also recent Newcastle AW win OR62, leading relevant rival. Cieren Fallon booked instead of prior Donagh Murphy; strength is horse's evidence not celebrity jockey.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/rubellite-ire",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Time Turner",
+      "jockey": "Oisin Orr",
+      "claimLb": 0,
+      "trainer": "Ed Bethell",
+      "racecardOfficialRating": 64,
+      "racecardWeight": "10-0",
+      "lastSixForm": "523255",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "Recent places then fifth with OR63, needs finishing strength",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "8 Oct 2026 Southwell ~1m6f standard Flat 5/12 beaten 1.72L OR64",
+        "29 Sep 2026 Ayr ~1m7f heavy Flat 5/7 beaten 17L OR64",
+        "30 Aug 2026 Beverley ~2m heavy Flat 2/7 beaten 0.05L OR63"
+      ],
+      "bookingAndHandicapReview": "Same 8 Oct Southwell 1m6f field as Rubellite, fifth beaten only 1.72L, plus near second at Beverley 2m on heavy. Oisin Orr NEW, no verified horse-partnership history; OR64, contenders separated by under 1L.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/time-turner-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Queen Roslyn",
+      "jockey": "Jason Watson",
+      "claimLb": 0,
+      "trainer": "Brian Ellison",
+      "racecardOfficialRating": 62,
+      "racecardWeight": "9-12",
+      "lastSixForm": "-00252",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "Two recent runner-up finishes, strong staying fitness, OR62",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "11 Sep 2026 Chester 2m soft Flat 2/12 beaten 21L OR63",
+        "15 Aug 2026 Newmarket ~1m6f good-to-firm Flat 5/5 beaten 24.72L OR63",
+        "24 Jul 2026 York 2m good-to-firm Flat 2/13 beaten 0.5L OR61"
+      ],
+      "bookingAndHandicapReview": "Two recorded seconds misleading without beaten margin: Chester 2m soft second was 21L behind; York 2m second only 0.5L. Jason Watson newly booked, not proof of current place chance.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/queen-roslyn",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Vinny's Dream",
+      "jockey": "Ryan Kavanagh",
+      "claimLb": 3,
+      "trainer": "Ian Williams",
+      "racecardOfficialRating": 60,
+      "racecardWeight": "9-10",
+      "lastSixForm": "80/7-6",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "Long absence and weak recent results, very low confidence",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "29 Sep 2026 Wolverhampton ~1m4f standard Flat 6/6 beaten 85.3L OR60; return after long layoff",
+        "14 Jan 2025 Southwell ~2m standard Flat 7/8 beaten 18L OR69",
+        "Earlier 2024 Kempton ~1m3f standard Flat 10/11 beaten about 27L OR72"
+      ],
+      "bookingAndHandicapReview": "Stable change Brookhouse→Ian Williams after very long break, but latest Wolverhampton 6/6 beaten 85L and prior Southwell 7/8 by18L major negative. Ryan Kavanagh 3lb claim, unverified deep stamina rebound.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/vinnys-dream-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "O'driscoll",
+      "jockey": "Harry Vigors",
+      "claimLb": 5,
+      "trainer": "James Horton",
+      "racecardOfficialRating": 65,
+      "racecardWeight": "9-9",
+      "lastSixForm": "874",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "Only three career starts and last fourth, handicap improvement unknown",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "5 Oct 2026 Kempton ~1m3f standard-to-slow non-handicap Flat 4/7 beaten 26.25L",
+        "26 Sep 2026 Southwell ~1m3f standard non-handicap Flat 7/13 beaten 11.8L",
+        "10 Sep 2026 Lingfield 1m standard non-handicap Flat 8/8 beaten 15.2L"
+      ],
+      "bookingAndHandicapReview": "Handicap debut with Harry Vigors 5lb and first-time cheekpieces, but 3 non-handicap starts weak (4th beaten 26L over shorter); 1m6f stamina and new equipment effectiveness unknown.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/odriscoll-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Dollar's Dream",
+      "jockey": "Kevin Stott",
+      "claimLb": 0,
+      "trainer": "Philip Kirby",
+      "racecardOfficialRating": 57,
+      "racecardWeight": "9-7",
+      "lastSixForm": "-22542",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "Last second in staying handicap with five pounds less, evidence of competitiveness",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "7 May 2026 Southwell ~2m standard Flat 2/9 beaten 0.2L OR56 with today's Kevin Stott",
+        "29 Apr 2026 Southwell ~2m standard Flat 4/5 beaten 4.25L OR56",
+        "10 Mar 2026 Southwell ~1m6f standard Flat 5/6 beaten 4.6L OR57; 20 Jan same C&D 2/9 beaten 1L OR55"
+      ],
+      "bookingAndHandicapReview": "Kevin Stott SAME jockey as 7 May Southwell 2m near-win 2/9 beaten 0.2L; good relationship evidence. Has 168-day absence and 1m6f March fifth, OR57 current vs OR56 May; fitness and shorter trip risks.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/dollars-dream-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Blue Tulip",
+      "jockey": "Jason Hart",
+      "claimLb": 0,
+      "trainer": "W Muir & C Grassick",
+      "racecardOfficialRating": 63,
+      "racecardWeight": "9-7",
+      "lastSixForm": "661321",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "Progressive 3yo recent WIN over staying distance, OR63, current improver main threat",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "3 Oct 2026 Southwell ~1m6f standard Flat 1/5 won 1.75L OR58",
+        "31 Aug 2026 Southwell ~1m6f standard Flat 2/6 beaten 5.5L OR58",
+        "15 Aug 2026 Ripon ~1m4f good Flat 3/4 beaten 5.75L OR59; 30 Jul Wolverhampton 1m4f standard win OR54"
+      ],
+      "bookingAndHandicapReview": "Young improving 3yo won exact Southwell ~1m6f on 3 Oct, won Wolverhampton July too; OR63 +5lb from latest OR58 win, Jason Hart new (last winner with Jack Doughty), still strongest current-course evidence.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/blue-tulip-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Five Moons",
+      "jockey": "Callum Shepherd",
+      "claimLb": 0,
+      "trainer": "Simon Crisford",
+      "racecardOfficialRating": 62,
+      "racecardWeight": "9-6",
+      "lastSixForm": "444603",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "Lightly raced 3yo and recent third, unknown additional upside",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "12 Oct 2026 Yarmouth ~1m6f good Flat 3/11 beaten 2L OR62",
+        "27 Jul 2026 Southwell ~1m3f standard Flat 13/14 beaten 18.65L OR67",
+        "14 Jul 2026 Wolverhampton ~1m4f standard Flat 6/9 beaten 6L OR68"
+      ],
+      "bookingAndHandicapReview": "Recent Yarmouth 1m6f third 2L after freshening, but last Southwell Tapeta 13/14 at shorter trip and OR67. Now OR62 with Callum Shepherd new; first-time blinkers, unproven response.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/five-moons-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Beggarman",
+      "jockey": "Callum Hutchinson",
+      "claimLb": 0,
+      "trainer": "H Morrison",
+      "racecardOfficialRating": 56,
+      "racecardWeight": "9-6",
+      "lastSixForm": "-45240",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "4 AW wins from 25 starts; 2 wins and 6 runner-up finishes from 17 distance starts, OR56, but course 0/4 and latest Bath 11th",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "29 Sep 2026 Bath ~1m5f firm Flat 11/13 beaten 8.2L OR58",
+        "15 Aug 2026 Lingfield ~1m5f Polytrack Flat 4/9 beaten 9.75L OR59",
+        "30 Jul 2026 Nottingham ~1m6f good Flat 2/4 beaten 0.2L OR58; 7 May Southwell ~2m Tapeta 4/9 beaten 0.75L OR59"
+      ],
+      "bookingAndHandicapReview": "Four earlier AW wins recorded on Polytrack; unlike old broad 'AW' badge no winning Tapeta record, 0 places from 4 Southwell. Latest Bath 11th, Lingfield Polytrack fourth. OR56 lower than older competitive marks; outsider at 28–33/1 but place case weaker than Blue Tulip, Rubellite, Fram Castle.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/beggarman",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Sycamore Gap",
+      "jockey": "Oliver Stammers",
+      "claimLb": 0,
+      "trainer": "Grant Tuer",
+      "racecardOfficialRating": 56,
+      "racecardWeight": "9-6",
+      "lastSixForm": "21/589",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "Long layoff, recent 8th/9th and no current staying form support",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "29 Apr 2026 Musselburgh ~1m4f good Flat 9/9 beaten 52L OR56",
+        "15 Apr 2026 Southwell ~1m6f standard Flat 8/8 beaten 18L OR58",
+        "5 Apr 2026 Southwell ~1m4f standard Flat 5/10 beaten 8.5L OR58"
+      ],
+      "bookingAndHandicapReview": "Six-month layoff, two spring Southwell disappointments (8/8 exact 1m6f, 5/10), April Musselburgh last beaten52L. Oliver Stammers familiarity insufficient; OR56 lower but no evidence current form restored.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/sycamore-gap-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Fram Castle",
+      "jockey": "John Egan",
+      "claimLb": 0,
+      "trainer": "M Wigham",
+      "racecardOfficialRating": 55,
+      "racecardWeight": "9-5",
+      "lastSixForm": "8231V2",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "Won recently and latest second, OR55, stronger up-to-date form than older Beggarman",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "12 Oct 2026 Kempton ~2m standard-to-slow Flat 2/9 beaten 0.75L OR55 with today's John Egan",
+        "2 Sep 2026 Bath ~1m6f good Flat 1/10 won 0.1L OR52",
+        "8 Aug 2026 Newmarket ~1m6f firm Flat 3/6 beaten 2.45L OR53; 22 Jul Lingfield 2m 2/7 beaten 0.05L"
+      ],
+      "bookingAndHandicapReview": "Recent Kempton 2m second beaten0.75L with same John Egan, Bath 1m6f win and Lingfield 2m close. OR55 +3 from Bath OR52, comparable 1m6f/2m trip and recent staying form clearly stronger than Beggarman.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/fram-castle",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Chilli King",
+      "jockey": "George Wood",
+      "claimLb": 0,
+      "trainer": "E C Lavelle",
+      "racecardOfficialRating": 60,
+      "racecardWeight": "9-4",
+      "lastSixForm": "760",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "originalRunnerReview": "3yo maiden runs without serious placed claim yet, rating uncertain",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "26 Sep 2026 Southwell ~1m3f standard Flat 10/13 beaten 13.9L in maiden/novice; Charles Bishop",
+        "30 Apr 2026 Southwell ~1m3f standard Flat 6/8 beaten 7.85L; Andrew Mullen",
+        "5 Apr 2026 Bath ~1m2f good Flat 7/8 beaten 24.55L; David Probert"
+      ],
+      "bookingAndHandicapReview": "Just three career starts, Southwell ~1m3f 10/13 and 6/8, Bath 7/8; step to ~1m6f and handicap on OR60 with George Wood has no proven form. Could improve if pedigree supports, but no breeding/stamina check available.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/chilli-king-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    }
+  ]
+}
