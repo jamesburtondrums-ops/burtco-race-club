@@ -1,0 +1,456 @@
+{
+  "asOf": "2026-10-22 pre-race",
+  "race": "Southwell (AW) 18:30",
+  "going": "Standard Tapeta",
+  "offTime": "18:30",
+  "originalSelection": "Izzari",
+  "activeRunners": 12,
+  "sourceRacecard": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+  "status": "INDIVIDUAL_PAST_RUNS_AND_BOOKING_EVIDENCE_REVIEWED; NOT CALIBRATED",
+  "runners": [
+    {
+      "horse": "Izzari",
+      "jockey": "Cara Tuke",
+      "claimLb": 7,
+      "trainer": "Iain Jardine",
+      "racecardOfficialRating": 75,
+      "racecardWeight": "9-11",
+      "lastSixForm": "928141",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Won latest mile Southwell handicap by 4½ lengths, twice course success this season, OR75 and 7lb Cara Tuke claim",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "10 Oct 2026 Southwell 1m standard Flat 1/12 won 4.5L OR66 with today's Cara Tuke claiming 7lb",
+        "2 Oct 2026 Newcastle 1m standard Flat 4/6 beaten 4.75L OR62 with Cara Tuke",
+        "26 Sep 2026 Southwell 1m standard Flat 1/14 won 0.75L OR62 with Cara Tuke"
+      ],
+      "bookingAndHandicapReview": "Today's Cara Tuke 7lb partnered BOTH Southwell mile wins in 15 days, positive established partnership rather than assumed intent. +9lb since latest 10 Oct 4.5L winning OR66; mark 75 must be weighed against that winning margin and strong improving rivals.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/izzari-germany",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Nakaaha",
+      "jockey": "Kevin Stott",
+      "claimLb": 0,
+      "trainer": "G Harris",
+      "racecardOfficialRating": 75,
+      "racecardWeight": "9-11",
+      "lastSixForm": "610207",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Outsider form includes recent unplaced finishes, marked improvement required",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "3 Oct 2026 Southwell 1m standard Flat 7/13 beaten 8.7L OR77",
+        "31 Aug 2026 Chepstow mile soft Flat 16/16 beaten 29L OR78",
+        "6 Aug 2026 Chepstow mile good-to-firm Flat 2/7 beaten 1L OR77"
+      ],
+      "bookingAndHandicapReview": "Kevin Stott newly booked but horse 7/13 last time on today's mile Tapeta and 16/16 on soft earlier. OR75 below 77 recent; earlier Chepstow 2nd good-to-firm suggests ability, no clear current Tapeta form.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/nakaaha-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Sir Paul Ramsey",
+      "jockey": "Callum Shepherd",
+      "claimLb": 0,
+      "trainer": "Charlie Johnston",
+      "racecardOfficialRating": 74,
+      "racecardWeight": "9-10",
+      "lastSixForm": "740676",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Previous higher RPR and dropping to OR but recent poor 7/4/0/6/7/6 finishing positions",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "18 Jul 2026 Ripon 1m good Flat 6/7 beaten 16.9L OR77",
+        "29 Jun 2026 Pontefract 1m good Flat 7/7 beaten 13.9L OR79",
+        "29 Apr 2026 Pontefract 1m good Flat 6/9 beaten 6.7L OR81; 3 Apr Lingfield mile std fourth beaten1.27 OR85"
+      ],
+      "bookingAndHandicapReview": "Callum Shepherd new recent rider; current OR74 down from summer OR81, not enough to offset Ripon 6/7 by17L and Pontefract 7/7 by14L. Lingfield AW mile 4/12 beaten1.27 at OR85 in April demonstrates possible historical higher ability, but 96-day break and current fitness unknown.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/sir-paul-ramsey-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "A La Noche",
+      "jockey": "Luke Morris",
+      "claimLb": 0,
+      "trainer": "Oliver Cole",
+      "racecardOfficialRating": 73,
+      "racecardWeight": "9-9",
+      "lastSixForm": "6/9104",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Current course/circumstances possible improver, comparatively unverified recent winning evidence",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "9 Oct 2026 Kempton 1m standard-to-slow Flat 4/10 beaten 8L OR74",
+        "24 Sep 2026 Newmarket Rowley 1m good-to-firm Flat 11/12 beaten 21L OR74",
+        "3 Sep 2026 Salisbury mile good-to-soft Flat 1/8 won 3L OR67 with Oliver Hoodless"
+      ],
+      "bookingAndHandicapReview": "Luke Morris NEW booking; 3 Sep Salisbury mile good-to-soft win3L off OR67, now OR73 six pounds higher, October Kempton Polytrack 4/10 beaten8L; first-time blinkers may alter performance but no previous evidence of benefit.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/a-la-noche",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Rapide Vega",
+      "jockey": "Mikey Sheehy",
+      "claimLb": 0,
+      "trainer": "Adrian Keatley",
+      "racecardOfficialRating": 75,
+      "racecardWeight": "9-8",
+      "lastSixForm": "825125",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Recent winner and second on all-weather at mile, current form competitive",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "19 Sep 2026 Newmarket July ~1m1f good Flat 5/14 beaten 1.85L OR75",
+        "29 Aug 2026 Beverley ~1m2f soft Flat 2/8 beaten 0.2L OR73 with today's Mikey Sheehy",
+        "17 Aug 2026 Lingfield mile standard Flat 1/10 won 2.25L, rated not listed, Mikey Sheehy; trainer move Jessica Harrington→Adrian Keatley prior to win"
+      ],
+      "bookingAndHandicapReview": "Mikey Sheehy had ridden Beverley soft 10f narrow 2nd and Lingfield AW mile win—established jockey-horse partnership, trainer changed to Adrian Keatley before Lingfield win. Class 4 Newmarket fifth 1.85L, OR75 vs Beverley OR73 +2; first-time visor uncertainty. Major current rival independent of odds.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/rapide-vega-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "It'sneverjustone",
+      "jockey": "Hector Crouch",
+      "claimLb": 0,
+      "trainer": "David Loughnane",
+      "racecardOfficialRating": 72,
+      "racecardWeight": "9-8",
+      "lastSixForm": "460054",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Current handicap form mixed, could improve with pace, but no strong recent C&D evidence",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "9 Oct 2026 Kempton 1m standard-to-slow Flat 4/10 beaten 2L OR73",
+        "17 Sep 2026 Ayr 1m soft Flat 5/12 beaten 3.77L OR74",
+        "3 Sep 2026 Haydock ~1m2f good-to-soft Flat 10/13 beaten 11.97L OR76"
+      ],
+      "bookingAndHandicapReview": "Kempton slow Polytrack mile 4th only 2L behind, rather than generic modest fourth, now OR72 1lb lower. Hector Crouch booked and has ridden previous Haydock start, surface Tapeta different, pace unknown.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/itsneverjustone-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Orangesandlemons",
+      "jockey": "Oisin Orr",
+      "claimLb": 0,
+      "trainer": "Ed Bethell",
+      "racecardOfficialRating": 71,
+      "racecardWeight": "9-7",
+      "lastSixForm": "5-3897",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Consistent past ratings but patchy finishes, 8/1 and rating 75 potential threat",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "17 Sep 2026 Ayr 1m soft Flat 7/12 beaten 10L OR73",
+        "3 Jun 2026 Nottingham ~1m2f good-to-soft Flat 9/10 beaten 9.25L OR75",
+        "9 May 2026 Nottingham mile good Flat 8/11 beaten 9.7L OR77"
+      ],
+      "bookingAndHandicapReview": "Oisin Orr ridden horse previously, but current 7/12, 9/10, 8/11 form weak even though mark falling from OR77 to71. First-time visor, earlier course-distance winner mark needs date/conditions verification.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/orangesandlemons-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Decalogue",
+      "jockey": "William Carver",
+      "claimLb": 0,
+      "trainer": "Jamie Osborne",
+      "racecardOfficialRating": 73,
+      "racecardWeight": "9-6",
+      "lastSixForm": "843215",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Lightly raced handicapper with potential on first Southwell Tapeta, 9/2 and unknown surface conversion",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "29 Sep 2026 Bath ~1m2f firm Flat 5/10 beaten 2.95L OR73",
+        "14 Sep 2026 Kempton 1m standard-to-slow Flat 1/10 won 0.2L OR70 with today's William Carver",
+        "3 Sep 2026 Salisbury mile good-to-soft Flat 2/8 beaten 3L OR69"
+      ],
+      "bookingAndHandicapReview": "William Carver the SAME jockey from Kempton mile victory 14 Sep from OR70; now OR73 (+3), returns mile from Bath ~10f latest fifth beaten3L, Southwell Tapeta surface untested; credible challenge to Izzari.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/decalogue-united-states",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Piazza",
+      "jockey": "Daniel Muscutt",
+      "claimLb": 0,
+      "trainer": "Ollie Sangster",
+      "racecardOfficialRating": 72,
+      "racecardWeight": "9-5",
+      "lastSixForm": "721222",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Latest course and distance second by narrow margin, strong same-condition threat",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "6 Oct 2026 Southwell **7f** standard Flat 2/10 beaten 0.02L OR72 with today's Daniel Muscutt (NOT current Southwell mile C&D)",
+        "15 Sep 2026 Wolverhampton 7f standard Flat 2/7 beaten 0.1L OR72",
+        "30 Aug 2026 Yarmouth mile good-to-soft Flat 2/5 beaten 2.5L OR71; 19 Aug Kempton 7f standard-to-slow 1/10 won1.5L OR65 with Muscutt"
+      ],
+      "bookingAndHandicapReview": "CRITICAL CORRECTION: Latest Southwell runner-up 6 Oct was over SEVEN furlongs, NOT today's one-mile course-and-distance. Daniel Muscutt familiar and recent Kempton 7f winning partner; 3 consecutive seconds including Yarmouth mile good-to-soft, mile stamina plausible but not yet exact Southwell 1m C&D proven.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/piazza-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Leopards Rock",
+      "jockey": "Jason Watson",
+      "claimLb": 0,
+      "trainer": "Ed Bethell",
+      "racecardOfficialRating": 71,
+      "racecardWeight": "9-4",
+      "lastSixForm": "323547",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Older mid-priced outsider; less immediate course form evidence",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "29 Sep 2026 Ayr mile heavy Flat 7/8 beaten 18.25L OR72",
+        "9 Sep 2026 Carlisle ~7f good-to-soft Flat 4/10 beaten 2L OR73",
+        "29 Jul 2026 Redcar ~1m2f good Flat 5/8 beaten 8.25L OR75"
+      ],
+      "bookingAndHandicapReview": "Jason Watson booked, first-time cheekpieces, OR71 decreased from OR75, but recent heavy-ground 7/8 beaten18L and good-to-soft 7f Carlisle 4/10, weak current form.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/leopards-rock-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Mc'ted",
+      "jockey": "Alice Bond",
+      "claimLb": 5,
+      "trainer": "Martin Dunne",
+      "racecardOfficialRating": 68,
+      "racecardWeight": "9-4",
+      "lastSixForm": "031446",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Very long-priced older runner, little recent current-class winning evidence",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "11 Apr 2026 Yarmouth ~1m2f good Flat 11/13 beaten 14.7L OR71 with today's Alice Bond 5lb",
+        "25 Nov 2025 Lingfield mile standard Flat 11/12 beaten 12.9L OR72 with Alice Bond",
+        "31 Oct 2025 Newmarket Rowley ~1m1f Flat 4/14 beaten 2.8L OR67 with Alice Bond; 25 Oct 2025 Wolverhampton mile win 4.75L OR63 with Bond"
+      ],
+      "bookingAndHandicapReview": "Alice Bond 5lb has ridden a convincing Wolverhampton mile win at OR63 in Oct 2025, but most recent documented form Yarmouth April 2026 11/13 b14.7L and age/fitness gap. OR68, previous horse/jockey relationship real, not current ability.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/mc-ted",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Ecclefechan",
+      "jockey": "Christian Howarth",
+      "claimLb": 3,
+      "trainer": "John Ryan",
+      "racecardOfficialRating": 71,
+      "racecardWeight": "9-4",
+      "lastSixForm": "117905",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "originalRunnerReview": "Original published research provides racecard-level entry only; runner-specific history needs a fuller check",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "20 Oct 2026 Yarmouth ~7f soft Flat 5/9 beaten 2.3L OR71 with today's Christian Howarth 3lb",
+        "5 Oct 2026 Yarmouth mile good Flat 10/11 beaten 6.7L OR73",
+        "24 Sep 2026 Newmarket Rowley mile good-to-firm Flat 9/12 beaten 10.85L OR75 with Howarth"
+      ],
+      "bookingAndHandicapReview": "Christian Howarth 3lb same jockey from 20 Oct Yarmouth soft 7f fifth beaten2.3L, **2 days** later back from turf to Southwell Tapeta and up to mile; OR71 lowered by 4 from Sep, stamina 1m record may support but recovery and surface unknown.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/ecclefechan-united-kingdom",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and non-runners may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    }
+  ]
+}
