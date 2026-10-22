@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-22",
+  "createdAt": "2026-10-22T14:49:00+01:00",
+  "provenance": "Five course racecards from source https://www.horseracingbetting.co.uk/tracks/[course]/ on 22 October 2026. Total corroborated independently with external race programme.",
+  "expectedRaces": 40,
+  "expectedMeetings": [
+    "carlisle",
+    "clonmel",
+    "ffos-las",
+    "newmarket",
+    "southwell"
+  ],
+  "sources": [
+    {
+      "course": "carlisle",
+      "path": "data/research/2026-10-22-all-races-carlisle.json",
+      "sourceUrl": "https://www.horseracingbetting.co.uk/tracks/carlisle/"
+    },
+    {
+      "course": "clonmel",
+      "path": "data/research/2026-10-22-all-races-clonmel.json",
+      "sourceUrl": "https://www.horseracingbetting.co.uk/tracks/clonmel/"
+    },
+    {
+      "course": "ffos-las",
+      "path": "data/research/2026-10-22-all-races-ffos-las.json",
+      "sourceUrl": "https://www.horseracingbetting.co.uk/tracks/ffos-las/"
+    },
+    {
+      "course": "newmarket",
+      "path": "data/research/2026-10-22-all-races-newmarket.json",
+      "sourceUrl": "https://www.horseracingbetting.co.uk/tracks/newmarket/"
+    },
+    {
+      "course": "southwell",
+      "path": "data/research/2026-10-22-all-races-southwell.json",
+      "sourceUrl": "https://www.horseracingbetting.co.uk/tracks/southwell/"
+    }
+  ],
+  "sourceIndex": "data/research/2026-10-22-all-40-race-screen.json",
+  "status": "ALL_RACECARDS_CAPTURED; NOT_ALL_HORSES_THREE_START_DEEP_HISTORY",
+  "originalProspectiveBetLedgerProtected": true,
+  "limitations": [
+    "Racecards can have withdrawn runners and prices after snapshot.",
+    "The daily full-card feed is not automated. This manifest is dated and must be regenerated for tomorrow.",
+    "No statistical model validated from this input; form flags only."
+  ],
+  "dailyRule": "Do not publish a statement that all UK/Irish races have been checked without a complete source manifest and source reconciliation. Per-horse deep histories remain a separate requirement."
+}
