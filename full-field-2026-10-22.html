@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Racing Intelligence: individually sourced, pre-race evidence research for every active runner in six races on 22 October 2026.">
+<title>Full Field Research · Racing Intelligence · 22 October 2026</title>
+<style>
+:root{color-scheme:light;--ink:#17352c;--muted:#657d72;--bg:#f4f8f5;--line:#d7e5da;--card:#fff;--accent:#176e4b;--accent2:#dbf0e1;--sand:#f6f2e7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--accent)}.top{background:linear-gradient(115deg,#103a2c,#246e4f);color:#fff;padding:32px max(20px,calc((100vw - 1180px)/2));}.nav{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:22px}.nav a{color:#d0f1de;text-decoration:none;font-weight:600}.brand{letter-spacing:.03em;font-weight:800}.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#b2e9c6;font-weight:700}h1{font-size:clamp(27px,5vw,44px);line-height:1.1;margin:10px 0}h2{font-size:20px;margin:14px 0}p{margin:8px 0 12px}.intro{max-width:740px;color:#d4efe0;font-size:16px}.layout{max-width:1180px;margin:0 auto;padding:24px 18px 70px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:-40px 0 23px;position:relative}.metric{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:0 8px 30px #163a2410}.metric strong{font-size:27px;display:block}.metric span{font-size:12px;color:var(--muted)}.notice{border:1px solid #c9ddcd;border-radius:14px;background:#eaf4ec;padding:15px 18px;margin:16px 0}.notice strong{display:block}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:24px 0 15px}.controls label{font-size:12px;font-weight:700;color:var(--muted);display:block}.controls>div{flex:1;min-width:220px}.controls input,.controls select{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;background:#fff;font:inherit;color:var(--ink)}.race{margin:24px 0 32px}.racehead{display:flex;justify-content:space-between;align-items:start;gap:12px;flex-wrap:wrap}.racehead p{color:var(--muted);margin:0}.racehead h2{margin:0}.count{padding:5px 10px;border-radius:8px;background:#e0ebde;font-size:12px;font-weight:700}.runner{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:10px 0;overflow:hidden}.runner[open]{border-color:#9ecdb1}.runner summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:15px;justify-content:space-between}.runner summary::-webkit-details-marker{display:none}.runner summary:after{content:"＋";font-size:23px;color:var(--accent);line-height:1}.runner[open] summary:after{content:"−"}.horse{font-weight:750;font-size:16px}.sub{color:var(--muted);font-size:12px}.tag{display:inline-block;border-radius:6px;padding:3px 7px;margin-left:8px;background:var(--accent2);color:#20583a;font-size:10px;font-weight:800;letter-spacing:.03em}.tag.grey{background:#e9efea;color:#5f7166}.body{padding:0 16px 17px;border-top:1px solid var(--line)}.section-label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}.history{padding:0 0 0 20px;margin:0}.history li{margin-bottom:6px}.assessment{padding:12px 14px;background:#f0f6f1;border-left:3px solid #2a8758;border-radius:6px}.unknown{color:#5f6b65;background:var(--sand);padding:9px 12px;border-radius:7px;font-size:12px}.sources{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;font-size:13px}.disclaimer{font-size:12px;color:var(--muted);margin:20px 0}.loading{padding:24px;background:#fff;border:1px solid var(--line);border-radius:14px}.error{background:#fff0e8;border:1px solid #eac1a8;padding:16px;border-radius:10px}.empty{padding:18px;color:var(--muted)}@media(max-width:640px){.top{padding:23px 16px 60px}.layout{padding:20px 12px 44px}.metrics{grid-template-columns:repeat(3,1fr);gap:7px}.metric{padding:11px;border-radius:10px}.metric strong{font-size:22px}.metric span{font-size:11px}.racehead{display:block}.runner summary{align-items:flex-start}.tag{margin-left:4px}}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="nav"><span class="brand">RACING INTELLIGENCE / FULL FIELD</span><a href="./">← Return to selections</a></div>
+<div class="eyebrow">Evidence-first race research · 22 October 2026</div>
+<h1>Every runner investigated.</h1>
+<p class="intro">Original race results, going and trip, current handicap position, trainer and jockey bookings, prior partnerships and the evidence against each horse. Frozen research only — not a live betting recommendation.</p>
+</header>
+<main class="layout">
+<div class="metrics" aria-label="Research coverage">
+<div class="metric"><strong id="runnerCount">—</strong><span>Active runners profiled</span></div>
+<div class="metric"><strong id="raceCount">—</strong><span>Complete race fields</span></div>
+<div class="metric"><strong>0</strong><span>Recorded stakes</span></div>
+</div>
+<div class="notice"><strong id="statusTitle">Research date: 22 October 2026</strong><p id="statusText">This is a pre-race source snapshot. Past results, jockey bookings and field declarations may be superseded. The original published WIN and each-way records remain frozen, with no simulated or actual bets.</p></div>
+<div class="controls">
+<div><label for="raceFilter">Filter by race</label><select id="raceFilter"><option value="all">All six races</option></select></div>
+<div><label for="findHorse">Find runner, trainer, jockey or evidence</label><input id="findHorse" type="search" placeholder="E.g. Shaman Champion, Ryan Moore, soft…"></div>
+</div>
+<div id="content" class="loading" role="status">Loading the six sourced race dossiers…</div>
+<p class="disclaimer">Sources are cited individually under each runner. At least three previous race observations were assessed where published. Full field-wide measured pace/sectional maps, trainer–jockey combination statistics, private stable intentions and guaranteed bookmaker each-way place terms were not available for every runner; they are not silently inferred. No probabilities are calibrated. No real or paper wagers are placed.</p>
+</main>
+<script type="module">
+const files=[
+["Ffos Las · 14:36","data/research/2026-10-22-deep-ffos-las-14-36.json"],
+["Newmarket · 14:55","data/research/2026-10-22-deep-newmarket-14-55.json"],
+["Newmarket · 16:05","data/research/2026-10-22-deep-newmarket-16-05.json"],
+["Clonmel · 16:30","data/research/2026-10-22-deep-clonmel-16-30.json"],
+["Southwell · 17:00","data/research/2026-10-22-deep-southwell-aw-17-00.json"],
+["Southwell · 18:30","data/research/2026-10-22-deep-southwell-aw-18-30.json"]
+];
+const content=document.getElementById("content"),search=document.getElementById("findHorse"),filter=document.getElementById("raceFilter");
+const make=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=String(txt);return e};
+function link(label,url){const a=make("a","",label);a.href=url;a.target="_blank";a.rel="noopener noreferrer";return a}
+function appendText(node,label,text){node.append(make("div","section-label",label),make("p","",text||"Not independently established"))}
+function horseCard(p,d){const box=make("details","runner");
+const sum=make("summary"),left=make("div"),name=make("span","horse",p.horse);
+left.append(name);
+if(d.originalSelection===p.horse){left.append(make("span","tag","ORIGINAL PUBLISHED"))}
+const line=make("div","sub",(p.jockey||"Jockey unverified")+" · "+(p.trainer||"Trainer unverified")+(p.claimLb||p.jockeyClaimLb?" · "+(p.claimLb||p.jockeyClaimLb)+"lb claim":"")+(p.officialRating??p.racecardOfficialRating?" · OR "+(p.officialRating??p.racecardOfficialRating):""));
+left.append(line);sum.append(left);box.append(sum);
+const body=make("div","body");
+const runs=p.previousRuns||[];body.append(make("div","section-label","Dated previous runs"));
+const ul=make("ul","history");runs.forEach(v=>ul.append(make("li","",v)));body.append(ul);
+body.append(make("div","section-label","Independent trainer, jockey, class and handicap analysis"));
+body.append(make("p","assessment",p.bookingAndHandicapReview||p.deepDatedFinding||"Not established"));
+if(p.deepDatedFinding&&p.bookingAndHandicapReview){appendText(body,"Additional runner evidence",p.deepDatedFinding)}
+body.append(make("p","unknown","Unverified: complete measured pace map, joint trainer/jockey statistics, and live bookmaker offer/paid places."));
+const src=make("div","sources");
+if(p.sourceProfile)src.append(link("Career record ↗",p.sourceProfile));
+if(d.sourceRacecard||d.racecard)src.append(link("Racecard ↗",d.sourceRacecard||d.racecard));
+body.append(src);box.append(body);return box
+}
+const ukDate=()=>new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+let datasets=[];
+function render(){const q=search.value.trim().toLowerCase(),selected=filter.value,wrap=make("div");
+let shown=0;
+datasets.forEach((d,i)=>{if(selected!=="all"&&selected!==String(i))return;
+const list=d.runners.filter(x=>[x.horse,x.jockey,x.trainer,x.bookingAndHandicapReview,x.deepDatedFinding,...(x.previousRuns||[])].join(" ").toLowerCase().includes(q));
+if(!list.length)return;shown+=list.length;
+const section=make("section","race"),head=make("div","racehead"),title=make("div");
+title.append(make("h2","",files[i][0]),make("p","",(d.going||"Ground unverified")+" · "+(d.originalSelection?"Originally published: "+d.originalSelection:"Research-only race")+" · "+d.runners.length+" active starters in the sourced snapshot"));
+head.append(title,make("span","count",list.length+" researched"));section.append(head);
+list.forEach(p=>section.append(horseCard(p,d)));wrap.append(section)});
+content.className="";content.replaceChildren(shown?wrap:make("p","empty","No runners match the current search."));
+}
+async function load(){try{
+const xs=await Promise.all(files.map(async ([name,path])=>{const r=await fetch("./"+path,{cache:"no-store"});if(!r.ok)throw Error(name+": research data unavailable (HTTP "+r.status+")");return r.json()}));
+datasets=xs;
+document.getElementById("runnerCount").textContent=xs.reduce((n,x)=>n+x.runners.length,0);
+document.getElementById("raceCount").textContent=xs.length;
+xs.forEach((x,i)=>{const op=make("option","",files[i][0]);op.value=String(i);filter.append(op)});
+if(ukDate()!=="2026-10-22"){document.getElementById("statusTitle").textContent="Historical research — not current selections";}
+search.addEventListener("input",render);filter.addEventListener("change",render);render();
+}catch(e){content.className="error";content.textContent="Unable to load full-field research: "+e.message+". Read the original GitHub evidence files if this deployment is still processing."}}
+load();
+</script>
+</body>
+</html>
