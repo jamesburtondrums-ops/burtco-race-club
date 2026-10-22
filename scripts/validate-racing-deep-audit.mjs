@@ -24,7 +24,7 @@ for(const file of files) {
    const assessment=String(x.bookingAndHandicapReview||x.deepDatedFinding||'');
    if(recent.length>=3 && recent.every(t=>typeof t==='string'&&t.length>=24)
      &&/^https:\/\/www\.racingtv\.com\/profiles\/horse\//.test(source)
-     &&assessment.length>=65 && x.jockey && x.trainer && x.officialRating!==undefined
+     &&assessment.length>=65 && x.jockey && x.trainer && (x.officialRating!==undefined||x.racecardOfficialRating!==undefined)
      &&(x.reviewCompleteness?.atLeastThreePastStartObservations===true)) runnerResearchVerified++;
    else defects.push(file+': incomplete runner profile '+x.horse);
    if(x.reviewCompleteness?.quantitativePaceModel===true) paceMeasured++;
