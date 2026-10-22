@@ -1,0 +1,33 @@
+name: Verify full-field racing research
+
+on:
+  push:
+    branches: [racing-intelligence]
+    paths:
+      - 'data/research/2026-10-22-deep-*.json'
+      - 'scripts/validate-racing-deep-audit.mjs'
+      - 'tests/racing-deep-coverage.test.mjs'
+      - '.github/workflows/racing-full-field-depth.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-current-research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate every runner is individually researched
+        run: node scripts/validate-racing-deep-audit.mjs > full-field-audit.json
+      - name: Check frozen original and roster counts
+        run: node --test tests/racing-deep-coverage.test.mjs
+      - name: Upload reproducible evidence-completeness output
+        uses: actions/upload-artifact@v4
+        with:
+          name: racing-full-field-depth-audit
+          path: full-field-audit.json
+          retention-days: 90
