@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-22",
+  "reviewedAt": "2026-10-22T14:14:02+01:00",
+  "timeZone": "Europe/London",
+  "status": "NEW_PROSPECTIVE_RESEARCH_CALLS_ONLY",
+  "statement": "Read-only selections from independently reviewed complete fields. Not original frozen selections, not paper/actual bets. Not a claim every UK/Ireland race has been audited.",
+  "scope": {
+    "fullFieldReviewed": 6,
+    "completeRunnerProfiles": 66,
+    "daywideCoverageComplete": false
+  },
+  "originalSnapshotIntegrity": {
+    "frozenRacesJsonUnchanged": true,
+    "ledgerClearedAndUntouched": true,
+    "doNotBackdateCalls": true
+  },
+  "priceBasis": "Observed Racing TV comparison at review time; changing and not guaranteed. No accepted bookmaker bet or BOG assumed.",
+  "selections": [
+    {
+      "horse": "Great Blasket",
+      "course": "Newmarket",
+      "offLocal": "14:55",
+      "betType": "each-way",
+      "priceObserved": "6/1",
+      "priceCheckedAt": "2026-10-22T14:14:02+01:00",
+      "rank": "EACH_WAY_RESEARCH",
+      "sourceRacecard": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+      "runnerCountAtReview": 10,
+      "standardPlaceTermExpectation": "3 places at 1/5; independently confirm actual executable bookmaker offer",
+      "abilityReason": "Nottingham 1m2f soft third under 2L away and Beverley 1m2f second, current form demonstrated at trip; 6/1 offers place-case appeal.",
+      "mainRisks": "No recent winning evidence at 1m2f; Tipsy Tiger nearly won 10f heavy and Beach Point, Something Splendid have relevant recent form.",
+      "researchEvidence": "data/research/2026-10-22-deep-newmarket-14-55.json",
+      "originalPublicationStatus": "NOT_ORIGINAL_FROZEN_BET_SELECTION"
+    },
+    {
+      "horse": "The Quiet Gent",
+      "course": "Newmarket",
+      "offLocal": "16:05",
+      "betType": "win",
+      "priceObserved": "15/2",
+      "priceCheckedAt": "2026-10-22T14:14:02+01:00",
+      "rank": "PRIMARY_WIN_RESEARCH",
+      "sourceRacecard": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+      "runnerCountAtReview": 12,
+      "abilityReason": "Won Salisbury 6f on soft in Class4 for trainer Brian Toomey last run; proven current surface/distance versus rivals lacking exact going, now OR82 +3lb.",
+      "mainRisks": "James Doyle first recorded horse booking, headgear win only one-run sample; Yes I'm Mali and Sierra Sands have credible sprint ability. Pace and draw field bias not independently proven.",
+      "researchEvidence": "data/research/2026-10-22-deep-newmarket-16-05.json",
+      "originalPublicationStatus": "RESEARCH_RACE_NOT_FROZEN_BET_SELECTION"
+    },
+    {
+      "horse": "Blue Tulip",
+      "course": "Southwell",
+      "offLocal": "17:00",
+      "betType": "win",
+      "priceObserved": "10/3",
+      "priceCheckedAt": "2026-10-22T14:14:02+01:00",
+      "rank": "PRIMARY_WIN_RESEARCH",
+      "sourceRacecard": "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+      "runnerCountAtReview": 12,
+      "abilityReason": "Progressive 3yo won exact Southwell standard Tapeta 1m6f course/distance on 3 Oct, following a prior Southwell second, with proven present fitness.",
+      "mainRisks": "Current OR63 +5lb since five-runner win; Rubellite close Southwell C&D 3rd and Fram Castle in strong current staying form. Jason Hart replaces last win rider.",
+      "researchEvidence": "data/research/2026-10-22-deep-southwell-aw-17-00.json",
+      "originalPublicationStatus": "NOT_ORIGINAL_FROZEN_BET_SELECTION"
+    },
+    {
+      "horse": "Izzari",
+      "course": "Southwell",
+      "offLocal": "18:30",
+      "betType": "win",
+      "priceObserved": "9/2",
+      "priceCheckedAt": "2026-10-22T14:14:02+01:00",
+      "rank": "PRIMARY_WIN_RESEARCH",
+      "sourceRacecard": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+      "runnerCountAtReview": 11,
+      "abilityReason": "Two Southwell 1m wins within 15 days under same 7lb claiming Cara Tuke; latest won by 4½ lengths; repeat proven trainer-jockey/horse course setup.",
+      "mainRisks": "Current OR75 +9lb from latest OR66 win; Rapide Vega and Decalogue have recent wins with booked jockeys; Piazza's narrow Southwell second was 7f, not exact 1m C&D.",
+      "researchEvidence": "data/research/2026-10-22-deep-southwell-aw-18-30.json",
+      "originalPublicationStatus": "ORIGINAL_WIN_FROZEN_AS_4/1_HERE_IS_NEW_AS_OF_REVIEW"
+    }
+  ],
+  "notRecommendedForFreshResearch": [
+    {
+      "horse": "Beggarman",
+      "course": "Southwell",
+      "offLocal": "17:00",
+      "reason": "Original research each-way case overvalued older Polytrack wins. Southwell Tapeta 0/4 placed and poor recent results; strong 1m6f rivals."
+    },
+    {
+      "horse": "Woodstream Lad",
+      "course": "Clonmel",
+      "offLocal": "16:30",
+      "reason": "Only four in Killarney beginners chase win, previous Clonmel win at much shorter hurdles trip; exact current chase conditions and E/W place probability unverified."
+    }
+  ],
+  "limitations": [
+    "No validated full-field race-specific sectionals or objective trainer–jockey pair strike-rate for every runner.",
+    "No independently calibrated win/place probabilities or statistical proof of value.",
+    "Only the six historically investigated race fields are treated as deep-screened; no claim of exhaustive coverage of all meetings/races today.",
+    "Quoted bookmaker prices may change. Each-way place terms must be verified before treating a price as value.",
+    "Do not update past race selections after scheduled off time or create any wager."
+  ]
+}
