@@ -1,0 +1,308 @@
+{
+  "asOf": "2026-10-22 pre-race",
+  "race": "Ffos Las 14:36",
+  "going": "Good to Soft; soft in places",
+  "offTime": "14:36",
+  "originalSelection": "Kilwaughter",
+  "activeRunners": 8,
+  "sourceRacecard": "https://www.racingtv.com/racecards/2026-10-22/ffos-las/1436",
+  "status": "INDIVIDUAL_PAST_RUNS_AND_BOOKING_EVIDENCE_REVIEWED; NOT CALIBRATED",
+  "runners": [
+    {
+      "horse": "Kilwaughter",
+      "jockey": "Jack Stenhouse",
+      "claimLb": 7,
+      "trainer": "P Hobbs & J White",
+      "racecardOfficialRating": 125,
+      "racecardWeight": "12-0",
+      "lastSixForm": "74214-",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/ffos-las/1436",
+      "originalRunnerReview": "Newbury handicap hurdle winner and Haydock staying fourth; 190-day layoff creates fitness uncertainty",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "15 Apr 2026 Haydock 3m good Hurdle Class 2 4/10 beaten 5.25L OR125; Jack Stenhouse",
+        "28 Feb 2026 Newbury ~2m4f good-to-soft Hurdle Class 3 1/9 won 1.75L OR118; Jack Stenhouse",
+        "17 Jan 2026 Taunton ~2m3f good-to-soft Hurdle 2/13 beaten 2.25L; Jack Stenhouse"
+      ],
+      "bookingAndHandicapReview": "Same Jack Stenhouse claiming 7lb as in recent good races, rather than a novel jockey signal; 190-day absence, +7lb from Newbury win, sustained ~3m ability good but most wins on less testing going.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/kilwaughter-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Shallow River",
+      "jockey": "Lee Edwards",
+      "claimLb": 0,
+      "trainer": "Dave Roberts",
+      "racecardOfficialRating": 121,
+      "racecardWeight": "11-10",
+      "lastSixForm": "/63574",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/ffos-las/1436",
+      "originalRunnerReview": "Ran decent Hexham fourth twelve days ago; older horse has proven race fitness",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "10 Oct 2026 Hexham ~3m good Hurdle 4/6 beaten 4.6L OR122; Lee Edwards",
+        "31 Aug 2026 Cartmel ~3m1f good-to-soft Hurdle 7/7 beaten 47.5L OR125; Sean Bowen",
+        "26 Jul 2026 Uttoxeter ~2m7f good Hurdle Class 2 5/9 beaten 36.5L OR127; Sean Bowen"
+      ],
+      "bookingAndHandicapReview": "Stable switched Olly Murphy → Dave Roberts for latest Hexham fourth (first new-stable run); today's Lee Edwards remains; only 12 days between runs, race-fitness advantage, quality of latest beaten margin relative to small field.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/shallow-river-ire",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Idefix De Ciergues",
+      "jockey": "Sean Bowen",
+      "claimLb": 0,
+      "trainer": "Rebecca Curtis",
+      "racecardOfficialRating": 118,
+      "racecardWeight": "11-7",
+      "lastSixForm": "44P1-7",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/ffos-las/1436",
+      "originalRunnerReview": "Won 3m on soft at Uttoxeter, Sean Bowen booked; mixed recent form",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "8 May 2026 Market Rasen ~2m7f good-to-firm Hurdle 7/8 beaten 27.55L OR119",
+        "28 Mar 2026 Uttoxeter ~2m7f good-to-soft Hurdle 1/11 won 2L OR114; Oscar Palmer",
+        "13 Feb 2026 Chepstow ~2m7f soft Chase pulled up off OR111"
+      ],
+      "bookingAndHandicapReview": "Sean Bowen booked after Oscar Palmer won on horse; latest good-to-firm seventh and 167-day absence limit reliability; prior Uttoxeter win shows same staying distance on good-to-soft.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/idefix-de-ciergues",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Saint Palais",
+      "jockey": "Jack Quinlan",
+      "claimLb": 0,
+      "trainer": "Richard Bandey",
+      "racecardOfficialRating": 117,
+      "racecardWeight": "11-6",
+      "lastSixForm": "U5774-",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/ffos-las/1436",
+      "originalRunnerReview": "Soft-ground course and chase ability, but 220-day layoff and weaker recent hurdling",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "16 Mar 2026 Ffos Las ~2m7f heavy Chase 4/8 beaten 2.85L OR127; Harry Bannister",
+        "17 Feb 2026 Newbury ~2m7f soft Chase 7/8 beaten 13.27L OR130",
+        "20 Dec 2025 Haydock ~3m good-to-soft Hurdle 7/9 beaten 17.95L OR123; Jack Quinlan"
+      ],
+      "bookingAndHandicapReview": "Now switch back to hurdles after latest chase fourth on heavy; previous hurdle seventh over 3m; Jack Quinlan was previous hurdle rider; 220-day layoff and distinct hurdles versus chase handicap marks.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/saint-palais",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Libre De Choeur",
+      "jockey": "Ned Fox",
+      "claimLb": 3,
+      "trainer": "C Boultbee-Brooks",
+      "racecardOfficialRating": 116,
+      "racecardWeight": "11-5",
+      "lastSixForm": "52616-",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/ffos-las/1436",
+      "originalRunnerReview": "Won heavy-ground Ffos Las 3m hurdle, so direct C&D stamina and soft suitability are proven",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "28 Mar 2026 Uttoxeter ~2m7f good-to-soft Hurdle 6/11 beaten 27.25L OR117",
+        "20 Feb 2026 Ffos Las ~2m7f191yd heavy Hurdle 1/7 won 2.5L OR112",
+        "23 Jan 2026 Warwick ~3m1f soft Hurdle 6/9 beaten 15.27L OR113"
+      ],
+      "bookingAndHandicapReview": "Won at today's exact course and approximate trip on heavy in February; 208-day layoff and latest 6/11 over similar trip on good-to-soft; Ned Fox claiming 3lb not recent winning jockey.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/libre-de-choeur-france",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Moonset",
+      "jockey": "Harry Cobden",
+      "claimLb": 0,
+      "trainer": "Neil Mulholland",
+      "racecardOfficialRating": 115,
+      "racecardWeight": "11-4",
+      "lastSixForm": "11/9P-",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/ffos-las/1436",
+      "originalRunnerReview": "Past 3¼m heavy-ground wins, 238 days off and uncertain current fitness",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "26 Feb 2026 Wetherby ~3m soft Hurdle pulled up OR117",
+        "26 Dec 2025 Windsor ~3m good-to-soft Hurdle 9/9 beaten 70.75L OR121",
+        "19 Apr 2025 Newton Abbot ~3m2f heavy Hurdle 1/8 won 0.75L OR112"
+      ],
+      "bookingAndHandicapReview": "240-day-type layoff and pulled-up/last in two latest starts, but historic heavy-ground ~3m2f win; Harry Cobden a new booking, cannot assume rebound without fitness proof.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/moonset-fr",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "El Gavilan",
+      "jockey": "Tristan Durrell",
+      "claimLb": 0,
+      "trainer": "Dan Skelton",
+      "racecardOfficialRating": 111,
+      "racecardWeight": "11-0",
+      "lastSixForm": "1115P-",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/ffos-las/1436",
+      "originalRunnerReview": "Three heavy-ground course wins over shorter trip; new Skelton yard and unproven 3m make a major threat",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "12 Apr 2026 Ffos Las ~2m4f good-to-soft Hurdle pulled up OR111",
+        "16 Mar 2026 Ffos Las ~2m4f heavy Hurdle 5/8 beaten 5.45L OR111",
+        "20 Feb 2026 Ffos Las ~2m4f heavy Hurdle 1/6 won 0.2L OR106; shorter than today's ~3m"
+      ],
+      "bookingAndHandicapReview": "Three previous Ffos Las wins at shorter trips ~2m–2m4f; now nearly 3m and trainer debut for Dan Skelton with Tristan Durrell after 193-day break, prior 2m4f course pulled-up latest. Do not call proven exact C&D.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/el-gavilan-france",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "One Eye On Vegas",
+      "jockey": "Charlie Hammond",
+      "claimLb": 0,
+      "trainer": "Stuart Edmunds",
+      "racecardOfficialRating": 111,
+      "racecardWeight": "11-0",
+      "lastSixForm": "/2162-",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/ffos-las/1436",
+      "originalRunnerReview": "Three Leicester successes at 2½m and strong Edmunds stable, but 3m still less tested",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "17 Feb 2026 Newbury ~2m4f heavy Hurdle 2/12 beaten 7.5L OR111",
+        "15 Jan 2026 Windsor ~2m3f heavy Hurdle 6/12 beaten 21.2L OR113",
+        "4 Dec 2025 Leicester ~2m4f heavy Hurdle 1/6 won narrowly OR109"
+      ],
+      "bookingAndHandicapReview": "Charlie Hammond established jockey and previous ~2m4f heavy-ground win; 247d off and last documented ~3m attempt resulted 9/17, a stamina red flag.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/one-eye-on-vegas",
+      "preRaceSourceUncertainties": [
+        "Official precise current going may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Market prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    }
+  ]
+}
