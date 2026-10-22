@@ -1,0 +1,88 @@
+SOURCE https://stablebet.co.uk/racecards/clonmel/
+DATE 2026-10-22
+COURSE clonmel
+FIELDS raceIndex|horse|or|age|weight|days|claim|stall|form|goingRecord|courseRecord|distanceRecord|trainer14|trainerCourse|jockey14|drawBias|price|lastRaceSourceRead|raceTitle
+COUNT 83
+0|Ballyteigue Bay|||||7||30P-85|good:0/4|0/1|0/4|0/2|0/6|0/4||50/1|Fifth of 20 at Gowran Park 20 days ago, beaten 15 lengths.|Crottys Lake Maiden Hurdle
+0|Cayo Pirata|||||||||||||2/12||300/1|Unraced. No form and no official rating, so there is no mark for this race.|Crottys Lake Maiden Hurdle
+0|City Of Cork|||||||734-||0/0|0/1|6/57|2/16|1/12||7/1|Fourth of eight at Thurles 231 days ago, beaten 43 lengths. Hood for the first time.|Crottys Lake Maiden Hurdle
+0|Detroit Maverick||||||||good:0/1|0/1|0/2|5/37|26/119|4/15||1/1|Third of 20 at Gowran Park 20 days ago, beaten 4 lengths.|Crottys Lake Maiden Hurdle
+0|George Dundee|||||7||57-510|good:0/1|0/0|0/1||7/42|||150/1|17th of 20 at Gowran Park 20 days ago, beaten 52 lengths.|Crottys Lake Maiden Hurdle
+0|Minella Maverick|||||||0|good:0/1|0/0|0/0|0/10|11/118|3/27||150/1|10th of 16 at Listowel 32 days ago, beaten 41 lengths.|Crottys Lake Maiden Hurdle
+0|Ozark Daze|||||||6|good:0/11|0/0|0/0||0/5|0/4||100/1|Sixth of 15 at Listowel 27 days ago, beaten 44 lengths.|Crottys Lake Maiden Hurdle
+0|Rond Point|||||||F2-44|good:0/2|0/0|0/1|0/3|0/2|3/8||15/2|Fourth of 11 at Listowel 29 days ago, beaten 22 lengths.|Crottys Lake Maiden Hurdle
+0|The Yellow Capri|||||5||0||0/0|0/1||0/12|1/4||400/1|14th of 20 at Galway 16 days ago, beaten 57 lengths.|Crottys Lake Maiden Hurdle
+0|World As One|112|5|11-12|34|||-4532|good:0/5|0/1|0/3|1/17|26/63|1/5||3/1|Most recent completed run: second of 11 at Tramore 69 days ago, beaten under half a length.|Crottys Lake Maiden Hurdle
+0|Ddakji|||||7||0-986|good:0/2|0/0|0/2|||0/9||250/1|Sixth of eight at Tramore 14 days ago, beaten 19 lengths. First run at Clonmel. Hood for the first time.|Crottys Lake Maiden Hurdle
+0|Little An Often|||||7||88|good:0/2|0/0|0/0|0/8|3/17|0/4||500/1|Eighth of 11 at Fairyhouse 17 days ago, beaten 67 lengths. First run over this trip and at Clonmel.|Crottys Lake Maiden Hurdle
+1|Pahlavi|98|9|12-4|13|||P56341|good:2/24|0/2|2/16|1/10|0/46|1/6||14/1|Won at Downpatrick 13 days ago. Has won over this trip and on good ground.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Lake Chad|96|11|12-2|131|7||201-88|good:3/17|0/3|0/2||1/27|||28/1|Eighth of 14 at Downpatrick 131 days ago, beaten 18 lengths. Has won on good ground.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Glengarriff|94|5|12-0|27|||0-0038|good:0/6|0/0|0/1|||0/3||33/1|Eighth of 15 at Listowel 27 days ago, beaten 21 lengths.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Dark Lieutenant|90|5|11-10|193|7||6008U-|good:0/2|0/1|0/3|0/4|2/22|||40/1|Most recent completed run: eighth of 15 at Clonmel 210 days ago, beaten 23 lengths. Returns from 193 days off.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Hashtag Doyen|90|8|11-10|17|5||5P-403|good:0/4|0/0|0/3|0/8|3/17|0/6||15/2|Third of 16 at Fairyhouse 17 days ago, beaten 7¼ lengths.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Maxicourt|89|5|11-9|9|7||37538U|good:0/13|0/1|0/7|||||10/1|Most recent completed run: eighth of 15 at Navan 33 days ago, beaten 16 lengths.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Kelly's Cosmos|87|5|11-7|16|7||-60004|good:0/8|0/0|0/3|0/3|1/37|0/3||5/1|Fourth of 11 at Galway 16 days ago, beaten 7¾ lengths.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Old Kenmare|85|7|11-5|191|7||2|good:0/2|0/5|0/3||0/22|||33/1|Fourth of 16 at Clonmel 191 days ago, beaten 8½ lengths.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Crypto Crash|82|5|11-2|12|3||69F1R5|good:1/15|0/3|1/6|0/5|1/13|0/4||14/1|Fifth of 15 at Fairyhouse 12 days ago, beaten 15 lengths. Has won over this trip and on good ground.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Romella|82|12|11-2|18|||8770-0|good:2/15||1/12|0/2|0/38|1/5||40/1|10th of 16 at Killarney 18 days ago, beaten 20 lengths. Has won over this trip and on good ground.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Frontier Rose|81|5|11-1|17|7||086650|good:0/11|0/1|0/4|0/4||||15/1|11th of 16 at Fairyhouse 17 days ago, beaten 44 lengths.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Feet On The Ground|80|8|11-0|21|7||-367P0|good:0/8|0/1|0/3|0/3|0/4|0/3||80/1|10th of 11 at Clonmel 21 days ago, beaten 44 lengths.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Good Bye Milan|80|9|11-0|11|7||9|good:1/6|0/0||1/7||1/3||25/1|11th of 14 at Cork 11 days ago, beaten 49 lengths. Has won on good ground.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Chesterbaylad|79|5|10-13|12|7||274180|good:1/15|0/0|1/8|0/3||||45/1|10th of 15 at Fairyhouse 12 days ago, beaten 36 lengths. Has won over this trip and on good ground.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Ballyredinkingston|77|6|10-11|79|7||0|good:0/7|0/5|0/5|0/10|11/118|||10/1|Sixth of 13 at Roscommon 79 days ago, beaten 24 lengths.|Kilclooney Woods (Q.R.) Handicap Hurdle
+1|Volez Vous|76|7|10-10|21|7||P0-997|good:1/7|2/5|0/4|1/21|5/103|0/3||11/2|Seventh of 15 at Clonmel 21 days ago, beaten 13 lengths. Has won at Clonmel and on good ground.|Kilclooney Woods (Q.R.) Handicap Hurdle
+2|Ballito Beauty|||||||247|good:0/3|0/0|0/0|||0/4||100/1|Seventh of 20 at Gowran Park 20 days ago, beaten 20 lengths.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Bayswater Bloom|||||||-68783|good:0/7|0/0|0/0|1/2|0/4|0/8||125/1|Third of 14 at Punchestown 9 days ago, beaten 5¾ lengths.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Cloudy Rosie|||||7||332-43|good:0/1|0/0|0/0|||1/14||22/1|Third of eight at Tramore 14 days ago, beaten 8 lengths.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Katie Can't Count|102|6|11-7|18|||4F62|good:0/4|0/0|0/0|1/17|26/63|0/6||14/1|Second of eight at Killarney 18 days ago, beaten 5 lengths. Tongue strap for the first time.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Lyla Gift|||||||||||0/2|0/3|2/18||300/1|Unraced. No form and no official rating, so there is no mark for this race.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Red Acres Georgie|||||||77-F42|good:0/3|0/0|0/1|1/5|3/22|4/15||6/4|Second of 12 at Fairyhouse 12 days ago, beaten 6½ lengths.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Run For Power|96|6|11-7|18|||04-665|good:0/4|0/0|0/0|4/10|4/47|3/8||25/1|Fifth of eight at Killarney 18 days ago, beaten 19 lengths. Visor for the first time.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Shadonagh|||||5||45-043|good:0/3|0/0|0/1|1/20|1/22|1/5||50/1|Third of 12 at Fairyhouse 12 days ago, beaten 34 lengths.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Wicked Pleasure|||||||33-4|good:0/1|0/0|0/1|7/37|16/68|0/7||9/4|Fourth of 15 at Roscommon 24 days ago, beaten 5¾ lengths.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Cala Gracioneta|||||3||5|good:0/7|0/0|0/1|0/9|1/8|1/13||16/1|Fifth of 13 at Punchestown 9 days ago, beaten 28 lengths. First run at Clonmel; no wins from seven runs on good ground.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Senorita Diana|||||5||0-90|good:0/2|0/0|0/1|0/4|2/22|0/3||500/1|13th of 17 at Gowran Park 20 days ago, beaten 42 lengths. First run at Clonmel.|Irish Stallion Farms EBF Mares Maiden Hurdle
+2|Weaponized|90|5|11-7|28|7||228|good:0/3|0/0|0/1||0/2|0/11||16/1|Eighth of 10 at Gowran Park 20 days ago, beaten 44 lengths. First run at Clonmel; no wins from three runs on good ground.|Irish Stallion Farms EBF Mares Maiden Hurdle
+3|Ripsnorter|108|5|11-12|20|||-76810|good:2/7|0/0|0/1|0/2|1/5|4/15||18/1|14th of 14 at Gowran Park 20 days ago, beaten 51 lengths. Has won on good ground.|Mahon Falls Novice Handicap Hurdle
+3|Market Ready|105|5|11-9|67|||23-4P2|good:0/5|0/3|0/1||1/19|||6/1|Second of nine at Tramore 67 days ago, beaten 2¼ lengths.|Mahon Falls Novice Handicap Hurdle
+3|Lauro's Legend|103|6|11-7|83|5|||good:0/5|0/1|0/4|0/4|2/22|0/3||80/1|Most recent completed run: 10th of 12 at Killarney 100 days ago, beaten 40 lengths. Returns from 83 days off.|Mahon Falls Novice Handicap Hurdle
+3|Private Policy|103|8|11-7|21|7||04-151|good:2/2|1/2|0/1||1/3|0/3||5/1|Won at Clonmel 21 days ago. Has won at Clonmel and on good ground.|Mahon Falls Novice Handicap Hurdle
+3|Beyond Forgiveness|102|5|11-6|9|||P|good:0/4|0/0|0/0|0/6|0/23|2/12||20/1|Seventh of 11 at Punchestown 9 days ago, beaten 16 lengths. Hood and tongue strap for the first time.|Mahon Falls Novice Handicap Hurdle
+3|Nirisque|102|5|11-6|34||||good:0/2|0/1|0/0|7/37|16/68|0/7||20/1|Fifth of 15 at Downpatrick 34 days ago, beaten 9¼ lengths. Tongue strap for the first time.|Mahon Falls Novice Handicap Hurdle
+3|Silly Mongoose|102|5|11-6|9|5||510732|good:1/9|0/2|0/2|1/8|5/44|1/4||11/2|Second of 11 at Punchestown 9 days ago, beaten 4½ lengths. Has won on good ground.|Mahon Falls Novice Handicap Hurdle
+3|Bobby Kirova|103|4|11-5|21|||36631|good:1/6|1/1|1/1||1/2|3/27||8/1|Won at Clonmel 21 days ago. Has won over this trip and at Clonmel.|Mahon Falls Novice Handicap Hurdle
+3|Blue Johnl|98|4|11-0|26|||R49823|good:0/4|0/0|0/0|0/10|11/118|1/12||12/1|Third of 12 at Listowel 26 days ago, beaten 13 lengths.|Mahon Falls Novice Handicap Hurdle
+3|Mahler's Best|94|6|10-12|55|||90|good:0/3|0/0|0/1|1/8|5/44|1/9||25/1|Eighth of 14 at Wexford 55 days ago, beaten 35 lengths.|Mahon Falls Novice Handicap Hurdle
+3|Chemdawg|92|7|10-10|29|||1-251P|good:2/10|0/4|1/5|1/10|1/15|2/18||11/1|Most recent completed run: won at Kilbeggan 49 days ago. Has won over this trip and on good ground.|Mahon Falls Novice Handicap Hurdle
+3|Mother Ship|89|6|10-7|20|7||072219|good:1/22|0/0|0/11|1/10|0/46|1/6||11/1|Ninth of 20 at Gowran Park 20 days ago, beaten 13 lengths. Has won on good ground.|Mahon Falls Novice Handicap Hurdle
+3|Soldier Saint|87|6|10-5|9|7||548646|good:0/7|0/1|0/3|1/17|1/5|||15/2|Sixth of 17 at Punchestown 9 days ago, beaten 19 lengths. Blinkers for the first time.|Mahon Falls Novice Handicap Hurdle
+4|Sayitfirst|93|10|11-7|14|7||P-8083|good:0/15|0/0|0/1|0/4|0/4|1/5||33/1|Third of six at Tramore 14 days ago, beaten 12 lengths.|Suir Blueway Mares Steeplechase
+4|La Note Verte|135|6|11-4|29|||4-3311|good:5/8|0/0|1/1|1/17|26/63|1/5||1/9|Won at Listowel 29 days ago. Has won over this trip and on good ground.|Suir Blueway Mares Steeplechase
+4|Bynx|107|8|11-3|24|||684804|good:3/16|0/0|0/3|0/10|0/3|1/25||14/1|Fourth of 10 at Roscommon 24 days ago, beaten 34 lengths. Has won on good ground.|Suir Blueway Mares Steeplechase
+4|Littlebiggie|107|9|11-3|34|7||P-480F|good:0/13|0/1|0/2|0/3|1/10|0/5||33/1|Most recent completed run: 10th of 13 at Kilbeggan 48 days ago, beaten 31 lengths.|Suir Blueway Mares Steeplechase
+4|Ad Caelum|100|7|10-8|24|5||15PP5P|good:4/21|0/6|1/6|0/10|11/118|1/4||18/1|Most recent completed run: fifth of nine at Ballinrobe 41 days ago, beaten 28 lengths. Has won over this trip and on good ground.|Suir Blueway Mares Steeplechase
+5|Charlie Luciano|117|7|11-12|12|||142P93|good:2/15|0/0|0/4|1/29|0/6|4/15||9/2|Third of nine at Fairyhouse 12 days ago, beaten 8 lengths. Has won on good ground.|William Hill Challenge Series Handicap Steeplechase
+5|Banjaxed|112|9|11-7|19|||4486-4|good:0/5|0/0|1/2|||0/4||16/1|Fourth of six at Gowran Park 19 days ago, beaten 27 lengths. Has won over this trip.|William Hill Challenge Series Handicap Steeplechase
+5|Kings Jet|108|6|11-3|27|||-U023F|good:1/7|0/0|0/1|0/7|1/5|0/4||4/1|Most recent completed run: third of 11 at Killarney 63 days ago, beaten 2¼ lengths. Has won on good ground.|William Hill Challenge Series Handicap Steeplechase
+5|Ceroc|107|8|11-2|75|||6-2P13|good:1/16|0/2|0/5|8/41|3/23|1/12||9/2|Third of seven at Wexford 75 days ago, beaten 6¾ lengths. Has won on good ground.|William Hill Challenge Series Handicap Steeplechase
+5|Woodstream Lad|107|9|11-2|18|3||-25061|good:2/13|1/2|1/1|||1/11||13/2|Won at Killarney 18 days ago. Has won over this trip and at Clonmel.|William Hill Challenge Series Handicap Steeplechase
+5|Ned In The Park|106|7|11-1|11|5||932U53|good:0/14|1/3|0/0|0/8|1/25|0/6||9/1|Third of seven at Cork 11 days ago, beaten 25 lengths. Has won at Clonmel.|William Hill Challenge Series Handicap Steeplechase
+5|Duty Bound|105|7|11-0|75|7||2F-P5P|good:2/15|0/0|2/5|1/3|0/11|||11/1|Most recent completed run: fifth of 12 at Wexford 114 days ago, beaten 31 lengths. Has won over this trip and on good ground. Returns from 75 days off.|William Hill Challenge Series Handicap Steeplechase
+5|Gatsby Grey|103|10|10-12|12|||6PPP-7|good:0/4|0/1|0/0|1/10|1/15|2/18||20/1|Seventh of nine at Fairyhouse 12 days ago, beaten 31 lengths.|William Hill Challenge Series Handicap Steeplechase
+5|Palace Boy|100|9|10-9|14|7||-050U8|good:0/4|0/1|0/1||0/4|0/2||110/1|Eighth of 12 at Tramore 14 days ago, beaten 21 lengths.|William Hill Challenge Series Handicap Steeplechase
+5|Grange Walk|97|11|10-6|27|7||36|good:1/14|0/3|1/12|0/10|11/118|3/27||8/1|Sixth of 14 at Listowel 27 days ago, beaten 13 lengths. Has won over this trip and on good ground.|William Hill Challenge Series Handicap Steeplechase
+6|Rockstown Girl|98|8|11-12|13|3||336742|good:2/18|0/0|1/10|1/9|2/10|1/13||18/1|Second of eight at Downpatrick 13 days ago, beaten 12 lengths. Has won over this trip and on good ground. Blinkers for the first time.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Heroes Of Renown|94|12|11-8|16|7||6P2-33|good:0/1|0/0|0/0|1/10|0/46|1/6||22/1|Third of eight at Galway 16 days ago, beaten 21 lengths.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Wing Back|92|6|11-6|22|||0-967P|good:1/9|0/2|0/2|1/4|4/34|1/8||6/1|Most recent completed run: seventh of 15 at Downpatrick 52 days ago, beaten 24 lengths. Has won on good ground. Cheekpieces for the first time.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Sharetheknowledge|91|7|11-5|21|||44-045|good:0/13|0/4|0/7||0/5|1/25||10/1|Fifth of 15 at Clonmel 21 days ago, beaten 11 lengths.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Mister Loolah|90|6|11-4|18|7||76P|good:0/2|0/1|0/2|0/2|0/9|0/2||25/1|Fourth of four at Killarney 18 days ago, beaten 45 lengths.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Roccabaker|89|8|11-3|41|||3P77-9|good:0/1|0/2|1/4|0/6|0/23|2/12||12/1|Ninth of 16 at Ballinrobe 41 days ago, beaten 35 lengths. Has won over this trip.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Hit The Frame|86|7|11-0|41|||4F7-4U|good:1/8|0/0|0/2|1/3|0/11|4/15||12/1|Most recent completed run: fourth of 11 at Wexford 159 days ago, beaten 24 lengths. Has won on good ground.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Mount Shenshan|85|8|10-13|21|7||356061|good:1/11|2/6|0/6|2/11|3/37|0/4||7/2|Won at Clonmel 21 days ago. Has won at Clonmel and on good ground.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|King's Son|84|6|10-12|18|||366750|good:0/8|0/0|0/3||1/6|0/8||18/1|11th of 13 at Killarney 18 days ago, beaten 41 lengths.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Zolpharine|84|8|10-12|18|||140057|good:2/21|0/10|1/4|0/10|11/118|3/27||25/1|Seventh of 15 at Killarney 18 days ago, beaten 31 lengths. Has won over this trip and on good ground.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Thirsty Work|79|5|10-7|34|||00-027|good:0/3|0/0|0/1|1/10|1/15|2/18||11/1|Seventh of 12 at Downpatrick 34 days ago, beaten 33 lengths.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Gortmore Lady|78|6|10-6|11|7||375425|good:0/21|0/0|0/7|1/20|1/22|1/14||10/1|Fifth of 14 at Cork 11 days ago, beaten 27 lengths.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Battle Of Benburb|77|9|10-5|61|7||7PP-04|good:0/3|0/0|0/1|||||50/1|Fourth of four at Killarney 61 days ago, beaten 113 lengths.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Stily|77|6|10-5|11|||-P6664|good:0/12|0/0|0/4|0/3|0/10|||17/2|Fourth of 14 at Cork 11 days ago, beaten 13 lengths.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
+6|Finnicky Filly|72|8|10-0|11|3||650506|good:0/15|1/13|0/2|0/10|11/118|2/9||28/1|Sixth of 14 at Cork 11 days ago, beaten 32 lengths. Has won at Clonmel.|Clonmel Oil Chase Day November 5th Handicap Steeplechase
