@@ -1,0 +1,748 @@
+{
+  "date": "2026-10-22",
+  "observedAt": "2026-10-22 afternoon BST (feed fetch time not independently exposed)",
+  "numRaces": 40,
+  "numRunners": 397,
+  "sourceDetailCount": 393,
+  "sourceMismatches": [
+    {
+      "off": "14:46",
+      "horse": "Carleys Lilly"
+    },
+    {
+      "off": "16:30",
+      "horse": "Prince Palace"
+    },
+    {
+      "off": "17:05",
+      "horse": "Without Exception"
+    },
+    {
+      "off": "14:55",
+      "horse": "Tiger"
+    }
+  ],
+  "method": "Per-runner independent evidence triage from last-four finishing positions, distance, course and going win records, recency and 14-day trainer/jockey counts. Odds NEVER enter the index. No field-specific measured pace or trained probabilities.",
+  "allSources": [
+    {
+      "course": "southwell",
+      "path": "data/research/2026-10-22-enhanced-southwell.txt",
+      "sourceStats": "data/research/2026-10-22-stats-southwell.txt"
+    },
+    {
+      "course": "clonmel",
+      "path": "data/research/2026-10-22-enhanced-clonmel.txt",
+      "sourceStats": "data/research/2026-10-22-stats-clonmel.txt"
+    },
+    {
+      "course": "newmarket",
+      "path": "data/research/2026-10-22-enhanced-newmarket.txt",
+      "sourceStats": "data/research/2026-10-22-stats-newmarket.txt"
+    },
+    {
+      "course": "carlisle",
+      "path": "data/research/2026-10-22-enhanced-carlisle.txt",
+      "sourceStats": "data/research/2026-10-22-stats-carlisle.txt"
+    },
+    {
+      "course": "ffos-las",
+      "path": "data/research/2026-10-22-enhanced-ffos-las.txt",
+      "sourceStats": "data/research/2026-10-22-stats-ffos-las.txt"
+    }
+  ],
+  "races": [
+    {
+      "course": "southwell",
+      "off": "16:26",
+      "race": "Midnite A Next Generation Betting App Apprentice Handicap Stakes",
+      "active": 11,
+      "fullySourceMatched": 11,
+      "topEvidenceFlags": [
+        "Mimime",
+        "One For Harvey",
+        "Popular Dream",
+        "Fletcher's Flight"
+      ],
+      "nonRunners": [
+        "Man On A Mission",
+        "Aleppo Pepper"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "standard"
+    },
+    {
+      "course": "southwell",
+      "off": "17:00",
+      "race": "Midnite: Built For 2027 Not 2007 Handicap Stakes",
+      "active": 12,
+      "fullySourceMatched": 12,
+      "topEvidenceFlags": [
+        "Blue Tulip",
+        "Fram Castle",
+        "Rubellite",
+        "Sycamore Gap"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "standard"
+    },
+    {
+      "course": "southwell",
+      "off": "17:30",
+      "race": "Midnite Are Upping The Betting Game Handicap Stakes",
+      "active": 11,
+      "fullySourceMatched": 11,
+      "topEvidenceFlags": [
+        "Golspie",
+        "Celestias Comet",
+        "Optician",
+        "Flightofthephoenix"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "standard"
+    },
+    {
+      "course": "southwell",
+      "off": "18:00",
+      "race": "All-Weather Championship Is Back Fillies' Handicap Stakes",
+      "active": 10,
+      "fullySourceMatched": 10,
+      "topEvidenceFlags": [
+        "Filly Eilish",
+        "Medway Queen",
+        "Bofa Beach",
+        "Alterity"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "standard"
+    },
+    {
+      "course": "southwell",
+      "off": "18:30",
+      "race": "AWC Finals Day At Newcastle 26th March Handicap Stakes",
+      "active": 11,
+      "fullySourceMatched": 11,
+      "topEvidenceFlags": [
+        "Izzari",
+        "Piazza",
+        "Decalogue",
+        "Rapide Vega"
+      ],
+      "nonRunners": [
+        "Gunfighter",
+        "Ecclefechan",
+        "Calyxoh"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "standard"
+    },
+    {
+      "course": "southwell",
+      "off": "19:00",
+      "race": "AWC Season 14 Has Begun EBF Fillies' Novice Stakes (GBB Race)",
+      "active": 8,
+      "fullySourceMatched": 8,
+      "topEvidenceFlags": [
+        "Silesia",
+        "Lady Jemima",
+        "Mohaymenah",
+        "Mollisha"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "standard"
+    },
+    {
+      "course": "southwell",
+      "off": "19:30",
+      "race": "Trials Day - Lingfield 2nd Jan 2027 Fillies' Novice Stakes (GBB Race)",
+      "active": 8,
+      "fullySourceMatched": 8,
+      "topEvidenceFlags": [
+        "Pointed",
+        "Kodi Blue",
+        "Beatrice Briannie",
+        "For Ever Hopefull"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "standard"
+    },
+    {
+      "course": "southwell",
+      "off": "20:00",
+      "race": "Make The Move To Midnite Handicap Stakes (Div I)",
+      "active": 10,
+      "fullySourceMatched": 10,
+      "topEvidenceFlags": [
+        "Come On Over",
+        "Kirkdale",
+        "Farandaway",
+        "Saucy Jane"
+      ],
+      "nonRunners": [
+        "Seven Questions"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "standard"
+    },
+    {
+      "course": "southwell",
+      "off": "20:30",
+      "race": "Make The Move To Midnite Handicap Stakes (Div II)",
+      "active": 11,
+      "fullySourceMatched": 11,
+      "topEvidenceFlags": [
+        "Kiniro",
+        "French Affair",
+        "Papa Cocktail",
+        "Arduis Invicta"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "standard"
+    },
+    {
+      "course": "clonmel",
+      "off": "13:35",
+      "race": "Crottys Lake Maiden Hurdle",
+      "active": 12,
+      "fullySourceMatched": 12,
+      "topEvidenceFlags": [
+        "World As One",
+        "Detroit Maverick",
+        "George Dundee",
+        "Rond Point"
+      ],
+      "nonRunners": [
+        "Bishop Of Rome",
+        "Ilen's Dream"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good"
+    },
+    {
+      "course": "clonmel",
+      "off": "14:10",
+      "race": "Kilclooney Woods (Q.R.) Handicap Hurdle",
+      "active": 16,
+      "fullySourceMatched": 16,
+      "topEvidenceFlags": [
+        "Pahlavi",
+        "Crypto Crash",
+        "Chesterbaylad",
+        "Hashtag Doyen"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good"
+    },
+    {
+      "course": "clonmel",
+      "off": "14:46",
+      "race": "Irish Stallion Farms EBF Mares Maiden Hurdle",
+      "active": 13,
+      "fullySourceMatched": 12,
+      "topEvidenceFlags": [
+        "Cloudy Rosie",
+        "Weaponized",
+        "Wicked Pleasure",
+        "Katie Can't Count"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good"
+    },
+    {
+      "course": "clonmel",
+      "off": "15:21",
+      "race": "Mahon Falls Novice Handicap Hurdle",
+      "active": 13,
+      "fullySourceMatched": 13,
+      "topEvidenceFlags": [
+        "Bobby Kirova",
+        "Private Policy",
+        "Chemdawg",
+        "Silly Mongoose"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good"
+    },
+    {
+      "course": "clonmel",
+      "off": "15:56",
+      "race": "Suir Blueway Mares Steeplechase",
+      "active": 5,
+      "fullySourceMatched": 5,
+      "topEvidenceFlags": [
+        "La Note Verte",
+        "Sayitfirst",
+        "Bynx",
+        "Ad Caelum"
+      ],
+      "nonRunners": [
+        "Emily Love"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good"
+    },
+    {
+      "course": "clonmel",
+      "off": "16:30",
+      "race": "William Hill Challenge Series Handicap Steeplechase",
+      "active": 11,
+      "fullySourceMatched": 10,
+      "topEvidenceFlags": [
+        "Woodstream Lad",
+        "Ceroc",
+        "Ned In The Park",
+        "Grange Walk"
+      ],
+      "nonRunners": [
+        "Lambay Island"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good"
+    },
+    {
+      "course": "clonmel",
+      "off": "17:05",
+      "race": "Clonmel Oil Chase Day November 5th Handicap Steeplechase",
+      "active": 16,
+      "fullySourceMatched": 15,
+      "topEvidenceFlags": [
+        "Rockstown Girl",
+        "Heroes Of Renown",
+        "Mount Shenshan",
+        "Gortmore Lady"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good"
+    },
+    {
+      "course": "newmarket",
+      "off": "13:10",
+      "race": "CopyBet For Europa League Profit Boosts EBF Restricted Novice Stakes (For Horses In Bands B, C And D) (Div I) (GBB/GBBPlus Race)",
+      "active": 7,
+      "fullySourceMatched": 7,
+      "topEvidenceFlags": [
+        "Sydney Carton",
+        "Byzantine",
+        "Susurrus",
+        "Munajad"
+      ],
+      "nonRunners": [
+        "Wise Warrior",
+        "Cracksdown"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "soft"
+    },
+    {
+      "course": "newmarket",
+      "off": "13:45",
+      "race": "CopyBet For Europa League Profit Boosts EBF Restricted Novice Stakes (For Horses In Bands B, C And D) (Div II) (GBB/GBBPlus Race)",
+      "active": 9,
+      "fullySourceMatched": 9,
+      "topEvidenceFlags": [
+        "Happy Love",
+        "True Knight",
+        "Raise And Shine",
+        "One Nine Seven"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "soft"
+    },
+    {
+      "course": "newmarket",
+      "off": "14:20",
+      "race": "CopyBet Support Safer Gambling Fillies' Handicap Stakes",
+      "active": 15,
+      "fullySourceMatched": 15,
+      "topEvidenceFlags": [
+        "Hamda's Joy",
+        "Brighton Beach",
+        "Thursday Girl",
+        "Silent City"
+      ],
+      "nonRunners": [
+        "Kimeko Glory",
+        "Cancelled",
+        "Queen Tamara"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "soft"
+    },
+    {
+      "course": "newmarket",
+      "off": "14:55",
+      "race": "CopyBet Pay First Past The Post Handicap Stakes (GBBPlus Race)",
+      "active": 10,
+      "fullySourceMatched": 9,
+      "topEvidenceFlags": [
+        "Beach Point",
+        "Tipsy Tiger",
+        "Great Blasket",
+        "Mythical Guest"
+      ],
+      "nonRunners": [
+        "Too Hot To Tango",
+        "Triple Force",
+        "Princess Rascal"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "soft"
+    },
+    {
+      "course": "newmarket",
+      "off": "15:30",
+      "race": "CopyBet Proudly Backs UK Horse Racing Handicap Stakes",
+      "active": 12,
+      "fullySourceMatched": 12,
+      "topEvidenceFlags": [
+        "Eazy On The Eye",
+        "Ice Cube",
+        "Spirit of Breeze",
+        "Slack Bob"
+      ],
+      "nonRunners": [
+        "Caragio",
+        "Venetian Sky",
+        "Raatea"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "soft"
+    },
+    {
+      "course": "newmarket",
+      "off": "16:05",
+      "race": "CopyBet Follow Us On X Handicap Stakes",
+      "active": 12,
+      "fullySourceMatched": 12,
+      "topEvidenceFlags": [
+        "The Quiet Gent",
+        "Spring Bloom",
+        "Sierra Sands",
+        "Distant Rumble"
+      ],
+      "nonRunners": [
+        "Court Drive",
+        "Sixtygeesbaby",
+        "Star Chorus"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "soft"
+    },
+    {
+      "course": "newmarket",
+      "off": "16:40",
+      "race": "CopyBet BOG Now For Cheltenham Tomorrow Handicap Stakes",
+      "active": 7,
+      "fullySourceMatched": 7,
+      "topEvidenceFlags": [
+        "Irish Nectar",
+        "Albegone",
+        "Solar Invincible",
+        "Cameley Days"
+      ],
+      "nonRunners": [
+        "Zoustar Dreams",
+        "Holbache",
+        "Unico"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "soft"
+    },
+    {
+      "course": "newmarket",
+      "off": "17:15",
+      "race": "CopyBet Overnight Best Odds Guaranteed Apprentice Handicap Stakes",
+      "active": 14,
+      "fullySourceMatched": 14,
+      "topEvidenceFlags": [
+        "Amarachi",
+        "Guest House",
+        "Born A Rebel",
+        "Eloquencia"
+      ],
+      "nonRunners": [
+        "Beauty Generation"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "soft"
+    },
+    {
+      "course": "carlisle",
+      "off": "13:17",
+      "race": "Class Of '63: 63 Years On Novices' Hurdle Race (Go North Night Nurse Series Qualifier) (GBB Race)",
+      "active": 13,
+      "fullySourceMatched": 13,
+      "topEvidenceFlags": [
+        "Farfromaway",
+        "Watery Borren",
+        "Striking Midnight",
+        "Moorhead"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "hurdles good / chases good to firm"
+    },
+    {
+      "course": "carlisle",
+      "off": "13:52",
+      "race": "50 Years Of The Window Shop Conditional Jockeys' Handicap Hurdle Race (Go North Sea Pigeon Series Qualifier)",
+      "active": 7,
+      "fullySourceMatched": 7,
+      "topEvidenceFlags": [
+        "Winds of Winter",
+        "Sytadel",
+        "Caballo de Guerra",
+        "Magna Victor"
+      ],
+      "nonRunners": [
+        "Trust House"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "hurdles good / chases good to firm"
+    },
+    {
+      "course": "carlisle",
+      "off": "14:27",
+      "race": "Magnet, Better. By Design Handicap Steeple Chase (Challenger Staying Chase Series Qualifier) (GBB Race)",
+      "active": 5,
+      "fullySourceMatched": 5,
+      "topEvidenceFlags": [
+        "Sir Carnegie",
+        "Sean Og",
+        "Breizh River",
+        "Walk On Quest"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "hurdles good / chases good to firm"
+    },
+    {
+      "course": "carlisle",
+      "off": "15:02",
+      "race": "Race Home With Genesis Homes Handicap Hurdle Race (Div I)",
+      "active": 13,
+      "fullySourceMatched": 13,
+      "topEvidenceFlags": [
+        "Coventry",
+        "Final Straw",
+        "Am Still Here",
+        "Billable Grant"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "hurdles good / chases good to firm"
+    },
+    {
+      "course": "carlisle",
+      "off": "15:37",
+      "race": "Race Home With Genesis Homes Handicap Hurdle Race (Div II)",
+      "active": 13,
+      "fullySourceMatched": 13,
+      "topEvidenceFlags": [
+        "Royal Rhythm",
+        "Micks Jet",
+        "Drop Kick",
+        "Getaway Master"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "hurdles good / chases good to firm"
+    },
+    {
+      "course": "carlisle",
+      "off": "16:12",
+      "race": "Panoramic Hurdle Race (Listed Race) (GBB Race)",
+      "active": 8,
+      "fullySourceMatched": 8,
+      "topEvidenceFlags": [
+        "Wilful",
+        "Inner Success",
+        "Burdett Road",
+        "Dedicated Hero"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "hurdles good / chases good to firm"
+    },
+    {
+      "course": "carlisle",
+      "off": "16:45",
+      "race": "Thomas Armstrong Group 'Building The Future' Handicap Steeple Chase (Go North Monet's Garden Series Qualifier) (GBB Race)",
+      "active": 4,
+      "fullySourceMatched": 4,
+      "topEvidenceFlags": [
+        "Glory And Honour",
+        "Hello Judge",
+        "Old Gregorian",
+        "Dearkeithandkaty"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "hurdles good / chases good to firm"
+    },
+    {
+      "course": "carlisle",
+      "off": "17:20",
+      "race": "GA Wilson Plastering Open National Hunt Flat Race (Category 1 Elimination) (GBB Race)",
+      "active": 5,
+      "fullySourceMatched": 5,
+      "topEvidenceFlags": [
+        "Crystal Spectre",
+        "Junior Minister",
+        "Pony Express",
+        "Maliko Des Pins"
+      ],
+      "nonRunners": [
+        "Grey Day"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "hurdles good / chases good to firm"
+    },
+    {
+      "course": "ffos-las",
+      "off": "12:51",
+      "race": "bettingsites.co.uk Fast Withdrawal Mares' Novices' Hurdle Race (GBB Race)",
+      "active": 8,
+      "fullySourceMatched": 8,
+      "topEvidenceFlags": [
+        "Vrheligonne",
+        "Funny Hunny",
+        "Handfulofpromises",
+        "Fairy Park"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good to soft/soft"
+    },
+    {
+      "course": "ffos-las",
+      "off": "13:26",
+      "race": "bettingsites.co.uk Instant Withdrawal Novices' Hurdle Race (Div I) (GBB Race)",
+      "active": 11,
+      "fullySourceMatched": 11,
+      "topEvidenceFlags": [
+        "Sky Grove",
+        "Arms Park",
+        "Mourne Crystal",
+        "Quickkick"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good to soft/soft"
+    },
+    {
+      "course": "ffos-las",
+      "off": "14:01",
+      "race": "bettingsites.co.uk Instant Withdrawal Novices' Hurdle Race (Div II) (GBB Race)",
+      "active": 10,
+      "fullySourceMatched": 10,
+      "topEvidenceFlags": [
+        "Trojan Tale",
+        "Common Sense",
+        "Potter",
+        "The Walk"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good to soft/soft"
+    },
+    {
+      "course": "ffos-las",
+      "off": "14:36",
+      "race": "bettingsites.co.uk Same Day Payouts Handicap Hurdle Race",
+      "active": 8,
+      "fullySourceMatched": 8,
+      "topEvidenceFlags": [
+        "Moonset",
+        "Libre de Choeur",
+        "Kilwaughter",
+        "One Eye On Vegas"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good to soft/soft"
+    },
+    {
+      "course": "ffos-las",
+      "off": "15:11",
+      "race": "bettingsites.co.uk Get Paid By Uk Betting Sites Open National Hunt Flat Race (Category 2 Elimination) (GBB Race)",
+      "active": 6,
+      "fullySourceMatched": 6,
+      "topEvidenceFlags": [
+        "Pointofdifference",
+        "Jet Bay",
+        "Willow Tide",
+        "Ashford Breeze"
+      ],
+      "nonRunners": [
+        "Maya L'Abeille"
+      ],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good to soft/soft"
+    },
+    {
+      "course": "ffos-las",
+      "off": "15:46",
+      "race": "bettingsites.co.uk Fast Paying Bookmakers Novices' Limited Handicap Steeple Chase (GBB Race)",
+      "active": 7,
+      "fullySourceMatched": 7,
+      "topEvidenceFlags": [
+        "Call Me Legend",
+        "Legendary Luke",
+        "Inishcorker",
+        "Kayf Dancer"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good to soft/soft"
+    },
+    {
+      "course": "ffos-las",
+      "off": "16:20",
+      "race": "bettingsites.co.uk Quickest Withdrawal Bookies Handicap Steeple Chase",
+      "active": 9,
+      "fullySourceMatched": 9,
+      "topEvidenceFlags": [
+        "Rap Soul",
+        "Jack's Jury",
+        "The Grey Man",
+        "Ionity"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good to soft/soft"
+    },
+    {
+      "course": "ffos-las",
+      "off": "16:53",
+      "race": "bettingsites.co.uk Fast Withdrawal Handicap Steeple Chase (GBB Race)",
+      "active": 6,
+      "fullySourceMatched": 6,
+      "topEvidenceFlags": [
+        "Jaipaletemps",
+        "Joker de Mai",
+        "Doctors Hill",
+        "Excelero"
+      ],
+      "nonRunners": [],
+      "scoreType": "Unvalidated evidence triage, NOT win probability",
+      "going": "good to soft/soft"
+    }
+  ],
+  "protection": {
+    "noActualBets": true,
+    "noPaperStakes": true,
+    "frozenOriginalsPreserved": true
+  },
+  "notFullHistoricalBacktest": true
+}
