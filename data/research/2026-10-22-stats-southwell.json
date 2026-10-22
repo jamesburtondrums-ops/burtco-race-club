@@ -1,62 +1,67 @@
 {
   "course": "southwell",
-  "date": "2026-10-22",
   "source": "https://stablebet.co.uk/racecards/southwell/",
-  "asOf": "2026-10-22 afternoon; exact provider timestamp not exposed",
-  "raceSegments": [
+  "capturedAt": "2026-10-22 afternoon BST, provider update instant unavailable",
+  "races": [
     {
       "title": "Midnite A Next Generation Betting App Apprentice Handicap Stakes",
-      "entries": [
+      "claimedRunners": 11,
+      "runners": [
         {
           "horse": "Popular Dream",
-          "or": 60,
+          "officialRating": 60,
           "age": 6,
           "weight": "9-9",
-          "daysSince": 16,
+          "daysSinceLastRun": 16,
           "claimLb": 0,
-          "lastRunRead": "Won at Southwell 16 days ago. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            5,
-            32
-          ],
-          "courseRecord": [
-            5,
-            24
-          ],
-          "tripRecord": [
+          "stall": 6,
+          "readFromSource": "Won at Southwell 16 days ago. Has won over this trip and at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 5,
+            "runs": 32
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             5,
             32
           ],
           "trainer14d": null,
-          "jockey14d": [
-            0,
-            11
-          ],
           "trainerAtCourse": [
             6,
             170
           ],
-          "marginRating": 16.3,
+          "jockey14d": [
+            0,
+            11
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 10.3,
+            "overallPct": 11.4,
+            "sample": 1837
+          },
           "price": "4/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "689451"
         },
         {
           "horse": "One For Harvey",
-          "or": 59,
+          "officialRating": 59,
           "age": 4,
           "weight": "9-8",
-          "daysSince": 35,
+          "daysSinceLastRun": 35,
           "claimLb": 3,
-          "lastRunRead": "Won at Southwell 35 days ago. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            1,
-            6
-          ],
-          "courseRecord": [
-            2,
-            26
-          ],
-          "tripRecord": [
+          "stall": 11,
+          "readFromSource": "Won at Southwell 35 days ago. Has won over this trip and at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 1,
+            "runs": 6
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             2,
             9
           ],
@@ -64,35 +69,40 @@
             0,
             2
           ],
-          "jockey14d": [
-            0,
-            17
-          ],
           "trainerAtCourse": [
             2,
             26
           ],
-          "marginRating": 15.3,
-          "price": "7/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "jockey14d": [
+            0,
+            17
+          ],
+          "bias": {
+            "part": "high",
+            "winPct": 11.1,
+            "overallPct": 11.4,
+            "sample": 1837
+          },
+          "price": "10/3",
+          "rawForm": "86-541"
         },
         {
           "horse": "Twilight Madness",
-          "or": 58,
+          "officialRating": 58,
           "age": 8,
           "weight": "9-7",
-          "daysSince": 65,
+          "daysSinceLastRun": 65,
           "claimLb": 5,
-          "lastRunRead": "Sixth of eight at Lingfield 65 days ago, beaten 5¾ lengths. Has won over this trip and on standard going.",
-          "goingRecord": [
-            3,
-            21
-          ],
-          "courseRecord": [
-            0,
-            19
-          ],
-          "tripRecord": [
+          "stall": 7,
+          "readFromSource": "Sixth of eight at Lingfield 65 days ago, beaten 5¾ lengths. Has won over this trip and on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 3,
+            "runs": 21
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             1,
             10
           ],
@@ -100,146 +110,85 @@
             1,
             7
           ],
-          "jockey14d": [
-            0,
-            9
-          ],
           "trainerAtCourse": [
             0,
             19
           ],
-          "marginRating": 2.3,
+          "jockey14d": [
+            0,
+            9
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 10.3,
+            "overallPct": 11.4,
+            "sample": 1837
+          },
           "price": "9/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "198066"
         },
         {
           "horse": "Fletcher's Flight",
-          "or": 57,
+          "officialRating": 57,
           "age": 6,
           "weight": "9-6",
-          "daysSince": 19,
+          "daysSinceLastRun": 19,
           "claimLb": 0,
-          "lastRunRead": "Third of 10 at Southwell 19 days ago, beaten half a length. Has won over this trip.",
-          "goingRecord": [
-            0,
-            7
-          ],
-          "courseRecord": [
-            0,
-            2
-          ],
-          "tripRecord": [
+          "stall": 4,
+          "readFromSource": "Third of 10 at Southwell 19 days ago, beaten half a length. Has won over this trip.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 7
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             3,
             21
           ],
           "trainer14d": null,
-          "jockey14d": [
-            0,
-            14
-          ],
           "trainerAtCourse": [
             4,
             39
           ],
-          "marginRating": 12.3,
+          "jockey14d": [
+            0,
+            14
+          ],
+          "bias": {
+            "part": "low",
+            "winPct": 12.7,
+            "overallPct": 11.4,
+            "sample": 1837
+          },
           "price": "15/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "417403"
         },
-        {
-          "horse": "Desdemona",
-          "or": 56,
-          "age": 4,
-          "weight": "9-5",
-          "daysSince": 59,
-          "claimLb": 0,
-          "lastRunRead": "Eighth of nine at Windsor 59 days ago, beaten 11 lengths. Has won over this trip; first run at Southwell.",
-          "goingRecord": [
-            2,
-            11
-          ],
-          "courseRecord": [
-            1,
-            27
-          ],
-          "tripRecord": [
-            3,
-            17
-          ],
-          "trainer14d": [
-            0,
-            10
-          ],
-          "jockey14d": [
-            1,
-            21
-          ],
-          "trainerAtCourse": [
-            1,
-            27
-          ],
-          "marginRating": null,
-          "price": "35/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Mimime",
-          "or": 55,
-          "age": 3,
-          "weight": "9-4",
-          "daysSince": 26,
-          "claimLb": 7,
-          "lastRunRead": "Won at Southwell 26 days ago. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            1,
-            5
-          ],
-          "courseRecord": [
-            1,
-            4
-          ],
-          "tripRecord": [
-            1,
-            5
-          ],
-          "trainer14d": [
-            5,
-            24
-          ],
-          "jockey14d": [
-            0,
-            2
-          ],
-          "trainerAtCourse": [
-            33,
-            361
-          ],
-          "marginRating": 11.3,
-          "price": "4/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        "--- TRUNCATED --- 5 more items"
+        "--- TRUNCATED --- 7 more items"
       ]
     },
     {
       "title": "Midnite: Built For 2027 Not 2007 Handicap Stakes",
-      "entries": [
+      "claimedRunners": 12,
+      "runners": [
         {
           "horse": "Rubellite",
-          "or": 64,
+          "officialRating": 64,
           "age": 6,
           "weight": "10-0",
-          "daysSince": 14,
+          "daysSinceLastRun": 14,
           "claimLb": 0,
-          "lastRunRead": "Third of 12 at Southwell 14 days ago, beaten a length. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            9,
-            36
-          ],
-          "courseRecord": [
-            1,
-            9
-          ],
-          "tripRecord": [
+          "stall": 5,
+          "readFromSource": "Third of 12 at Southwell 14 days ago, beaten a length. Has won over this trip and at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 9,
+            "runs": 36
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             2,
             6
           ],
@@ -247,35 +196,40 @@
             2,
             8
           ],
-          "jockey14d": [
-            9,
-            51
-          ],
           "trainerAtCourse": [
             1,
             16
           ],
-          "marginRating": 12.4,
+          "jockey14d": [
+            9,
+            51
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 14.4,
+            "overallPct": 12.3,
+            "sample": 609
+          },
           "price": "8/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "145173"
         },
         {
           "horse": "Time Turner",
-          "or": 64,
+          "officialRating": 64,
           "age": 4,
           "weight": "10-0",
-          "daysSince": 14,
+          "daysSinceLastRun": 14,
           "claimLb": 0,
-          "lastRunRead": "Fifth of 12 at Southwell 14 days ago, beaten 1¾ lengths. No wins from three runs at Southwell; has won on standard going.",
-          "goingRecord": [
-            1,
-            9
-          ],
-          "courseRecord": [
-            0,
-            3
-          ],
-          "tripRecord": [
+          "stall": 7,
+          "readFromSource": "Fifth of 12 at Southwell 14 days ago, beaten 1¾ lengths. No wins from three runs at Southwell; has won on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 1,
+            "runs": 9
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             2
           ],
@@ -283,35 +237,40 @@
             1,
             23
           ],
-          "jockey14d": [
-            4,
-            29
-          ],
           "trainerAtCourse": [
             19,
             109
           ],
-          "marginRating": 10.4,
-          "price": "8/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "jockey14d": [
+            4,
+            29
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 14.4,
+            "overallPct": 12.3,
+            "sample": 609
+          },
+          "price": "15/2",
+          "rawForm": "523255"
         },
         {
           "horse": "Queen Roslyn",
-          "or": 62,
+          "officialRating": 62,
           "age": 5,
           "weight": "9-12",
-          "daysSince": 41,
+          "daysSinceLastRun": 41,
           "claimLb": 0,
-          "lastRunRead": "Second of 12 at Chester 41 days ago, beaten 21 lengths. Has won on standard going.",
-          "goingRecord": [
-            2,
-            6
-          ],
-          "courseRecord": [
-            9,
-            90
-          ],
-          "tripRecord": [
+          "stall": 4,
+          "readFromSource": "Second of 12 at Chester 41 days ago, beaten 21 lengths. Has won on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 2,
+            "runs": 6
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             2
           ],
@@ -319,179 +278,126 @@
             5,
             25
           ],
-          "jockey14d": [
-            2,
-            26
-          ],
           "trainerAtCourse": [
             9,
             90
           ],
-          "marginRating": null,
+          "jockey14d": [
+            2,
+            26
+          ],
+          "bias": {
+            "part": "low",
+            "winPct": 11.1,
+            "overallPct": 12.3,
+            "sample": 609
+          },
           "price": "4/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "-00252"
         },
         {
           "horse": "Vinny's Dream",
-          "or": 60,
+          "officialRating": 60,
           "age": 5,
           "weight": "9-10",
-          "daysSince": 23,
+          "daysSinceLastRun": 23,
           "claimLb": 3,
-          "lastRunRead": "Sixth of six at Wolverhampton 23 days ago, beaten 85 lengths.",
-          "goingRecord": [
-            0,
-            4
-          ],
-          "courseRecord": [
-            24,
-            209
-          ],
-          "tripRecord": null,
+          "stall": 6,
+          "readFromSource": "Sixth of six at Wolverhampton 23 days ago, beaten 85 lengths.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 4
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": null,
           "trainer14d": [
             0,
             23
           ],
-          "jockey14d": [
-            0,
-            9
-          ],
           "trainerAtCourse": [
             24,
             209
           ],
-          "marginRating": null,
+          "jockey14d": [
+            0,
+            9
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 14.4,
+            "overallPct": 12.3,
+            "sample": 609
+          },
           "price": "66/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "80"
         },
-        {
-          "horse": "O'Driscoll",
-          "or": 65,
-          "age": 3,
-          "weight": "9-9",
-          "daysSince": 17,
-          "claimLb": 5,
-          "lastRunRead": "Fourth of seven at Kempton Park 17 days ago, beaten 26 lengths. First run over this trip. Cheekpieces for the first time.",
-          "goingRecord": [
-            0,
-            2
-          ],
-          "courseRecord": [
-            5,
-            55
-          ],
-          "tripRecord": null,
-          "trainer14d": [
-            0,
-            7
-          ],
-          "jockey14d": [
-            1,
-            14
-          ],
-          "trainerAtCourse": [
-            5,
-            55
-          ],
-          "marginRating": null,
-          "price": "33/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Dollar's Dream",
-          "or": 57,
-          "age": 5,
-          "weight": "9-7",
-          "daysSince": 168,
-          "claimLb": 0,
-          "lastRunRead": "Second of nine at Southwell 168 days ago, beaten under half a length.",
-          "goingRecord": [
-            0,
-            8
-          ],
-          "courseRecord": [
-            0,
-            4
-          ],
-          "tripRecord": [
-            0,
-            3
-          ],
-          "trainer14d": [
-            1,
-            12
-          ],
-          "jockey14d": [
-            4,
-            27
-          ],
-          "trainerAtCourse": [
-            5,
-            98
-          ],
-          "marginRating": 6.4,
-          "price": "8/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        "--- TRUNCATED --- 6 more items"
+        "--- TRUNCATED --- 8 more items"
       ]
     },
     {
       "title": "Midnite Are Upping The Betting Game Handicap Stakes",
-      "entries": [
+      "claimedRunners": 11,
+      "runners": [
         {
           "horse": "Everyoneknowsadave",
-          "or": 75,
+          "officialRating": 75,
           "age": 4,
           "weight": "9-9",
-          "daysSince": 29,
+          "daysSinceLastRun": 29,
           "claimLb": 0,
-          "lastRunRead": "Sixth of 12 at Redcar 29 days ago, beaten 4¾ lengths. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            3,
-            13
-          ],
-          "courseRecord": [
-            2,
-            10
-          ],
-          "tripRecord": [
+          "stall": 1,
+          "readFromSource": "Sixth of 12 at Redcar 29 days ago, beaten 4¾ lengths. Has won over this trip and at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 3,
+            "runs": 13
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             2,
             7
           ],
           "trainer14d": [
             0,
             9
-          ],
-          "jockey14d": [
-            2,
-            33
           ],
           "trainerAtCourse": [
             3,
             86
           ],
-          "marginRating": 5.6,
+          "jockey14d": [
+            2,
+            33
+          ],
+          "bias": {
+            "part": "low",
+            "winPct": 11.4,
+            "overallPct": 11.5,
+            "sample": 1143
+          },
           "price": "7/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "214286"
         },
         {
           "horse": "Mao Shang Wong",
-          "or": 74,
+          "officialRating": 74,
           "age": 4,
           "weight": "9-8",
-          "daysSince": 36,
+          "daysSinceLastRun": 36,
           "claimLb": 0,
-          "lastRunRead": "Third of 10 at Beverley 36 days ago, beaten 2 lengths. First run at Southwell; has won on standard going.",
-          "goingRecord": [
-            1,
-            10
-          ],
-          "courseRecord": [
-            15,
-            151
-          ],
-          "tripRecord": [
+          "stall": 5,
+          "readFromSource": "Third of 10 at Beverley 36 days ago, beaten 2 lengths. First run at Southwell; has won on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 1,
+            "runs": 10
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             2
           ],
@@ -499,182 +405,129 @@
             4,
             49
           ],
-          "jockey14d": [
-            9,
-            51
-          ],
           "trainerAtCourse": [
             15,
             151
           ],
-          "marginRating": 9.6,
+          "jockey14d": [
+            9,
+            51
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 13.1,
+            "overallPct": 11.5,
+            "sample": 1143
+          },
           "price": "17/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "027523"
         },
         {
           "horse": "Optician",
-          "or": 74,
+          "officialRating": 74,
           "age": 6,
           "weight": "9-8",
-          "daysSince": 12,
+          "daysSinceLastRun": 12,
           "claimLb": 0,
-          "lastRunRead": "15th of 19 at York 12 days ago, beaten 46 lengths. Has won over this trip and on standard going.",
-          "goingRecord": [
-            5,
-            20
-          ],
-          "courseRecord": [
-            0,
-            4
-          ],
-          "tripRecord": [
+          "stall": 4,
+          "readFromSource": "15th of 19 at York 12 days ago, beaten 46 lengths. Has won over this trip and on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 5,
+            "runs": 20
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             1,
             6
           ],
           "trainer14d": [
             4,
             15
-          ],
-          "jockey14d": [
-            4,
-            42
           ],
           "trainerAtCourse": [
             38,
             240
           ],
-          "marginRating": null,
+          "jockey14d": [
+            4,
+            42
+          ],
+          "bias": {
+            "part": "low",
+            "winPct": 11.4,
+            "overallPct": 11.5,
+            "sample": 1143
+          },
           "price": "9/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "529320"
         },
         {
           "horse": "Sigliosa",
-          "or": 73,
+          "officialRating": 73,
           "age": 4,
           "weight": "9-7",
-          "daysSince": 15,
+          "daysSinceLastRun": 15,
           "claimLb": 0,
-          "lastRunRead": "Fourth of 10 at Nottingham 15 days ago, beaten 3 lengths. First run at Southwell.",
-          "goingRecord": null,
-          "courseRecord": [
-            1,
-            7
-          ],
-          "tripRecord": [
+          "stall": 10,
+          "readFromSource": "Fourth of 10 at Nottingham 15 days ago, beaten 3 lengths. First run at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 1
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             2
           ],
           "trainer14d": [
             0,
             2
+          ],
+          "trainerAtCourse": [
+            1,
+            7
           ],
           "jockey14d": [
             2,
             26
           ],
-          "trainerAtCourse": [
-            1,
-            7
-          ],
-          "marginRating": 6.6,
+          "bias": {
+            "part": "high",
+            "winPct": 10.3,
+            "overallPct": 11.5,
+            "sample": 1143
+          },
           "price": "9/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "53-634"
         },
-        {
-          "horse": "Flightofthephoenix",
-          "or": 73,
-          "age": 4,
-          "weight": "9-7",
-          "daysSince": 12,
-          "claimLb": 0,
-          "lastRunRead": "Fourth of 11 at Southwell 12 days ago, beaten 4¼ lengths. Has won over this trip; no wins from three runs at Southwell.",
-          "goingRecord": [
-            0,
-            9
-          ],
-          "courseRecord": [
-            0,
-            3
-          ],
-          "tripRecord": [
-            2,
-            4
-          ],
-          "trainer14d": [
-            2,
-            10
-          ],
-          "jockey14d": [
-            3,
-            40
-          ],
-          "trainerAtCourse": [
-            11,
-            65
-          ],
-          "marginRating": 4.6,
-          "price": "8/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Celestias Comet",
-          "or": 72,
-          "age": 4,
-          "weight": "9-6",
-          "daysSince": 21,
-          "claimLb": 0,
-          "lastRunRead": "Second of 14 at Nottingham 21 days ago, beaten 1¼ lengths. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            1,
-            2
-          ],
-          "courseRecord": [
-            1,
-            2
-          ],
-          "tripRecord": [
-            1,
-            3
-          ],
-          "trainer14d": [
-            0,
-            15
-          ],
-          "jockey14d": [
-            7,
-            51
-          ],
-          "trainerAtCourse": [
-            11,
-            80
-          ],
-          "marginRating": 9.6,
-          "price": "4/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        "--- TRUNCATED --- 5 more items"
+        "--- TRUNCATED --- 7 more items"
       ]
     },
     {
       "title": "All-Weather Championship Is Back Fillies' Handicap Stakes",
-      "entries": [
+      "claimedRunners": 10,
+      "runners": [
         {
           "horse": "Liberate",
-          "or": 68,
+          "officialRating": 68,
           "age": 4,
           "weight": "9-12",
-          "daysSince": 13,
+          "daysSinceLastRun": 13,
           "claimLb": 0,
-          "lastRunRead": "Seventh of 10 at Kempton Park 13 days ago, beaten 11 lengths. No wins from six runs over this trip; no wins from four runs on standard going.",
-          "goingRecord": [
-            0,
-            4
-          ],
-          "courseRecord": [
-            1,
-            16
-          ],
-          "tripRecord": [
+          "stall": 3,
+          "readFromSource": "Seventh of 10 at Kempton Park 13 days ago, beaten 11 lengths. No wins from six runs over this trip; no wins from four runs on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 4
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             6
           ],
@@ -682,32 +535,40 @@
             0,
             9
           ],
-          "jockey14d": [
-            3,
-            40
-          ],
           "trainerAtCourse": [
             1,
             16
           ],
-          "marginRating": null,
-          "price": "50/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "jockey14d": [
+            3,
+            40
+          ],
+          "bias": {
+            "part": "low",
+            "winPct": 10,
+            "overallPct": 10.4,
+            "sample": 3215
+          },
+          "price": "55/1",
+          "rawForm": "921597"
         },
         {
           "horse": "Medway Queen",
-          "or": 68,
+          "officialRating": 68,
           "age": 4,
           "weight": "9-12",
-          "daysSince": 15,
+          "daysSinceLastRun": 15,
           "claimLb": 0,
-          "lastRunRead": "Third of 13 at Nottingham 15 days ago, beaten 6¾ lengths. No wins from three runs over this trip; first run at Southwell.",
-          "goingRecord": null,
-          "courseRecord": [
-            8,
-            62
-          ],
-          "tripRecord": [
+          "stall": 5,
+          "readFromSource": "Third of 13 at Nottingham 15 days ago, beaten 6¾ lengths. No wins from three runs over this trip; first run at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 1
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             3
           ],
@@ -715,32 +576,36 @@
             2,
             12
           ],
-          "jockey14d": [
-            4,
-            42
-          ],
           "trainerAtCourse": [
             8,
             62
           ],
-          "marginRating": 1.6,
+          "jockey14d": [
+            4,
+            42
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 10.2,
+            "overallPct": 10.4,
+            "sample": 3215
+          },
           "price": "3/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "442-23"
         },
         {
           "horse": "Bofa Beach",
-          "or": 70,
+          "officialRating": 70,
           "age": 3,
           "weight": "9-11",
-          "daysSince": 17,
+          "daysSinceLastRun": 17,
           "claimLb": 0,
-          "lastRunRead": "Second of 10 at Kempton Park 17 days ago, beaten 5 lengths. No wins from four runs over this trip; first run at Southwell.",
+          "stall": 7,
+          "readFromSource": "Second of 10 at Kempton Park 17 days ago, beaten 5 lengths. No wins from four runs over this trip; first run at Southwell.",
           "goingRecord": null,
-          "courseRecord": [
-            7,
-            66
-          ],
-          "tripRecord": [
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             4
           ],
@@ -748,32 +613,36 @@
             3,
             19
           ],
-          "jockey14d": [
-            7,
-            51
-          ],
           "trainerAtCourse": [
             7,
             66
           ],
-          "marginRating": 6.6,
+          "jockey14d": [
+            7,
+            51
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 10.2,
+            "overallPct": 10.4,
+            "sample": 3215
+          },
           "price": "7/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "393022"
         },
         {
           "horse": "Alterity",
-          "or": 69,
+          "officialRating": 69,
           "age": 3,
           "weight": "9-10",
-          "daysSince": 24,
+          "daysSinceLastRun": 24,
           "claimLb": 0,
-          "lastRunRead": "10th of 10 at Brighton 24 days ago, beaten 53 lengths. Has won over this trip; first run at Southwell.",
+          "stall": 6,
+          "readFromSource": "10th of 10 at Brighton 24 days ago, beaten 53 lengths. Has won over this trip; first run at Southwell.",
           "goingRecord": null,
-          "courseRecord": [
-            20,
-            203
-          ],
-          "tripRecord": [
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             1,
             3
           ],
@@ -781,71 +650,47 @@
             3,
             38
           ],
-          "jockey14d": [
-            3,
-            36
-          ],
           "trainerAtCourse": [
             20,
             203
           ],
-          "marginRating": null,
-          "price": "50/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Al Ghariya",
-          "or": 69,
-          "age": 3,
-          "weight": "9-10",
-          "daysSince": 37,
-          "claimLb": 0,
-          "lastRunRead": "No completed run in our records, so there is no mark for this race.",
-          "goingRecord": null,
-          "courseRecord": [
-            24,
-            209
-          ],
-          "tripRecord": null,
-          "trainer14d": [
-            0,
-            23
-          ],
           "jockey14d": [
             3,
-            16
+            36
           ],
-          "trainerAtCourse": [
-            24,
-            209
-          ],
-          "marginRating": null,
-          "price": "30/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "bias": {
+            "part": "middle",
+            "winPct": 10.2,
+            "overallPct": 10.4,
+            "sample": 3215
+          },
+          "price": "50/1",
+          "rawForm": "-33160"
         },
-        "--- TRUNCATED --- 5 more items"
+        "--- TRUNCATED --- 6 more items"
       ]
     },
     {
       "title": "AWC Finals Day At Newcastle 26th March Handicap Stakes",
-      "entries": [
+      "claimedRunners": 11,
+      "runners": [
         {
           "horse": "Izzari",
-          "or": 75,
+          "officialRating": 75,
           "age": 5,
           "weight": "9-11",
-          "daysSince": 12,
+          "daysSinceLastRun": 12,
           "claimLb": 7,
-          "lastRunRead": "Won at Southwell 12 days ago. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            3,
-            10
-          ],
-          "courseRecord": [
-            2,
-            4
-          ],
-          "tripRecord": [
+          "stall": 6,
+          "readFromSource": "Won at Southwell 12 days ago. Has won over this trip and at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 3,
+            "runs": 10
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             3,
             12
           ],
@@ -853,35 +698,40 @@
             5,
             36
           ],
-          "jockey14d": [
-            1,
-            2
-          ],
           "trainerAtCourse": [
             17,
             94
           ],
-          "marginRating": 14,
+          "jockey14d": [
+            1,
+            2
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 10.2,
+            "overallPct": 10.4,
+            "sample": 3215
+          },
           "price": "4/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "928141"
         },
         {
           "horse": "Nakaaha",
-          "or": 75,
+          "officialRating": 75,
           "age": 4,
           "weight": "9-11",
-          "daysSince": 19,
+          "daysSinceLastRun": 19,
           "claimLb": 0,
-          "lastRunRead": "Seventh of 13 at Southwell 19 days ago, beaten 8¾ lengths. Has won over this trip; no wins from three runs at Southwell.",
-          "goingRecord": [
-            0,
-            3
-          ],
-          "courseRecord": [
-            0,
-            3
-          ],
-          "tripRecord": [
+          "stall": 8,
+          "readFromSource": "Seventh of 13 at Southwell 19 days ago, beaten 8¾ lengths. Has won over this trip; no wins from three runs at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 3
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             3,
             15
           ],
@@ -889,35 +739,40 @@
             2,
             14
           ],
-          "jockey14d": [
-            4,
-            27
-          ],
           "trainerAtCourse": [
             0,
             7
           ],
-          "marginRating": null,
+          "jockey14d": [
+            4,
+            27
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 10.2,
+            "overallPct": 10.4,
+            "sample": 3215
+          },
           "price": "25/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "610207"
         },
         {
           "horse": "Sir Paul Ramsey",
-          "or": 74,
+          "officialRating": 74,
           "age": 4,
           "weight": "9-10",
-          "daysSince": 96,
+          "daysSinceLastRun": 96,
           "claimLb": 0,
-          "lastRunRead": "Sixth of seven at Ripon 96 days ago, beaten 17 lengths. Has won over this trip; no wins from four runs on standard going.",
-          "goingRecord": [
-            0,
-            4
-          ],
-          "courseRecord": [
-            20,
-            203
-          ],
-          "tripRecord": [
+          "stall": 11,
+          "readFromSource": "Sixth of seven at Ripon 96 days ago, beaten 17 lengths. Has won over this trip; no wins from four runs on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 4
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             2,
             15
           ],
@@ -925,32 +780,36 @@
             3,
             38
           ],
-          "jockey14d": [
-            3,
-            36
-          ],
           "trainerAtCourse": [
             20,
             203
           ],
-          "marginRating": null,
-          "price": "13/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "jockey14d": [
+            3,
+            36
+          ],
+          "bias": {
+            "part": "high",
+            "winPct": 10.9,
+            "overallPct": 10.4,
+            "sample": 3215
+          },
+          "price": "14/1",
+          "rawForm": "740676"
         },
         {
           "horse": "A La Noche",
-          "or": 73,
+          "officialRating": 73,
           "age": 5,
           "weight": "9-9",
-          "daysSince": 13,
+          "daysSinceLastRun": 13,
           "claimLb": 0,
-          "lastRunRead": "Fourth of 10 at Kempton Park 13 days ago, beaten 8 lengths. Has won over this trip. Blinkers for the first time.",
+          "stall": 12,
+          "readFromSource": "Fourth of 10 at Kempton Park 13 days ago, beaten 8 lengths. Has won over this trip. Blinkers for the first time.",
           "goingRecord": null,
-          "courseRecord": [
-            0,
-            14
-          ],
-          "tripRecord": [
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             1,
             3
           ],
@@ -958,191 +817,186 @@
             1,
             9
           ],
+          "trainerAtCourse": [
+            0,
+            14
+          ],
           "jockey14d": [
             4,
             51
           ],
-          "trainerAtCourse": [
-            0,
-            14
-          ],
-          "marginRating": null,
+          "bias": {
+            "part": "high",
+            "winPct": 10.9,
+            "overallPct": 10.4,
+            "sample": 3215
+          },
           "price": "20/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "6"
         },
-        {
-          "horse": "Rapide Vega",
-          "or": 75,
-          "age": 3,
-          "weight": "9-8",
-          "daysSince": 33,
-          "claimLb": 0,
-          "lastRunRead": "Fifth of 14 at Newmarket 33 days ago, beaten 2 lengths. Has won over this trip; first run at Southwell. Visor for the first time.",
-          "goingRecord": null,
-          "courseRecord": [
-            5,
-            31
-          ],
-          "tripRecord": [
-            1,
-            2
-          ],
-          "trainer14d": [
-            2,
-            10
-          ],
-          "jockey14d": [
-            2,
-            14
-          ],
-          "trainerAtCourse": [
-            5,
-            31
-          ],
-          "marginRating": 10,
-          "price": "7/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        "--- TRUNCATED --- 6 more items"
+        "--- TRUNCATED --- 7 more items"
       ]
     },
     {
       "title": "AWC Season 14 Has Begun EBF Fillies' Novice Stakes (GBB Race)",
-      "entries": [
+      "claimedRunners": 8,
+      "runners": [
         {
           "horse": "Buyback",
-          "or": null,
+          "officialRating": null,
           "age": null,
           "weight": null,
-          "daysSince": null,
+          "daysSinceLastRun": null,
           "claimLb": 0,
-          "lastRunRead": "Fourth of nine at Yarmouth 37 days ago, beaten 3¼ lengths. First run over this trip and at Southwell.",
+          "stall": 5,
+          "readFromSource": "Fourth of nine at Yarmouth 37 days ago, beaten 3¼ lengths. First run over this trip and at Southwell.",
           "goingRecord": null,
-          "courseRecord": [
-            5,
-            55
-          ],
-          "tripRecord": null,
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": null,
           "trainer14d": [
             0,
             7
+          ],
+          "trainerAtCourse": [
+            5,
+            55
           ],
           "jockey14d": [
             2,
             22
           ],
-          "trainerAtCourse": [
-            5,
-            55
-          ],
-          "marginRating": null,
+          "bias": {
+            "part": "middle",
+            "winPct": 9.5,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "12/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "4"
         },
         {
           "horse": "Diamond Blue Point",
-          "or": null,
+          "officialRating": null,
           "age": null,
           "weight": null,
-          "daysSince": null,
+          "daysSinceLastRun": null,
           "claimLb": 0,
-          "lastRunRead": "Unraced. No form and no official rating, so there is no mark for this race.",
+          "stall": 8,
+          "readFromSource": "Unraced. No form and no official rating, so there is no mark for this race.",
           "goingRecord": null,
-          "courseRecord": [
-            21,
-            132
-          ],
-          "tripRecord": null,
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": null,
           "trainer14d": [
             7,
             28
+          ],
+          "trainerAtCourse": [
+            21,
+            132
           ],
           "jockey14d": [
             4,
             34
           ],
-          "trainerAtCourse": [
-            21,
-            132
-          ],
-          "marginRating": null,
+          "bias": {
+            "part": "high",
+            "winPct": 10.8,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "4/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": null
         },
         {
           "horse": "Grateful Spirit",
-          "or": null,
+          "officialRating": null,
           "age": null,
           "weight": null,
-          "daysSince": null,
+          "daysSinceLastRun": null,
           "claimLb": 0,
-          "lastRunRead": "Unraced. No form and no official rating, so there is no mark for this race.",
+          "stall": 7,
+          "readFromSource": "Unraced. No form and no official rating, so there is no mark for this race.",
           "goingRecord": null,
-          "courseRecord": [
-            32,
-            151
-          ],
-          "tripRecord": null,
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": null,
           "trainer14d": [
             7,
             44
+          ],
+          "trainerAtCourse": [
+            32,
+            151
           ],
           "jockey14d": [
             3,
             22
           ],
-          "trainerAtCourse": [
-            32,
-            151
-          ],
-          "marginRating": null,
+          "bias": {
+            "part": "high",
+            "winPct": 10.8,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "12/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": null
         },
         {
           "horse": "Lady Jemima",
-          "or": 74,
+          "officialRating": 74,
           "age": 2,
           "weight": "9-2",
-          "daysSince": 17,
+          "daysSinceLastRun": 17,
           "claimLb": 0,
-          "lastRunRead": "Fourth of five at Yarmouth 17 days ago, beaten 1¾ lengths. First run at Southwell and on standard going.",
+          "stall": 1,
+          "readFromSource": "Fourth of five at Yarmouth 17 days ago, beaten 1¾ lengths. First run at Southwell and on standard going.",
           "goingRecord": null,
-          "courseRecord": [
-            51,
-            293
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
+            0,
+            1
           ],
-          "tripRecord": null,
           "trainer14d": [
             5,
             44
+          ],
+          "trainerAtCourse": [
+            51,
+            293
           ],
           "jockey14d": [
             4,
             51
           ],
-          "trainerAtCourse": [
-            51,
-            293
-          ],
-          "marginRating": null,
+          "bias": {
+            "part": "low",
+            "winPct": 10.1,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "16/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "7624"
         },
         {
           "horse": "Mohaymenah",
-          "or": 82,
+          "officialRating": 82,
           "age": 2,
           "weight": "9-2",
-          "daysSince": 105,
+          "daysSinceLastRun": 105,
           "claimLb": 0,
-          "lastRunRead": "Fourth of five at Carlisle 105 days ago, beaten 6 lengths. First run at Southwell.",
-          "goingRecord": null,
-          "courseRecord": [
-            5,
-            46
-          ],
-          "tripRecord": [
+          "stall": 4,
+          "readFromSource": "Fourth of five at Carlisle 105 days ago, beaten 6 lengths. First run at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 1
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             2
           ],
@@ -1150,227 +1004,198 @@
             0,
             17
           ],
-          "jockey14d": [
-            1,
-            14
-          ],
           "trainerAtCourse": [
             5,
             46
           ],
-          "marginRating": null,
+          "jockey14d": [
+            1,
+            14
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 9.5,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "11/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Mollisha",
-          "or": 68,
-          "age": 2,
-          "weight": "9-2",
-          "daysSince": 20,
-          "claimLb": 0,
-          "lastRunRead": "Seventh of 12 at Newcastle 20 days ago, beaten 3¾ lengths. No wins from three runs over this trip; first run at Southwell.",
-          "goingRecord": null,
-          "courseRecord": [
-            9,
-            90
-          ],
-          "tripRecord": [
-            0,
-            3
-          ],
-          "trainer14d": [
-            5,
-            25
-          ],
-          "jockey14d": [
-            2,
-            33
-          ],
-          "trainerAtCourse": [
-            9,
-            90
-          ],
-          "marginRating": null,
-          "price": "28/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        "--- TRUNCATED --- 2 more items"
-      ]
-    },
-    {
-      "title": "Trials Day - Lingfield 2nd Jan 2027 Fillies' Novice Stakes (GBB Race)",
-      "entries": [
-        {
-          "horse": "Bang To Rights",
-          "or": null,
-          "age": null,
-          "weight": null,
-          "daysSince": null,
-          "claimLb": 0,
-          "lastRunRead": "Sixth of six at Southwell in March 2025, beaten 16 lengths. First run over this trip; no wins from three runs on standard going.",
-          "goingRecord": [
-            0,
-            3
-          ],
-          "courseRecord": [
-            0,
-            2
-          ],
-          "tripRecord": null,
-          "trainer14d": null,
-          "jockey14d": [
-            2,
-            9
-          ],
-          "trainerAtCourse": [
-            6,
-            170
-          ],
-          "marginRating": null,
-          "price": "400/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Byerley Lady",
-          "or": null,
-          "age": null,
-          "weight": null,
-          "daysSince": null,
-          "claimLb": 3,
-          "lastRunRead": "Seventh of 10 at Wolverhampton 23 days ago, beaten 11 lengths. First run over this trip and at Southwell.",
-          "goingRecord": null,
-          "courseRecord": [
-            24,
-            209
-          ],
-          "tripRecord": null,
-          "trainer14d": [
-            0,
-            23
-          ],
-          "jockey14d": [
-            0,
-            9
-          ],
-          "trainerAtCourse": [
-            24,
-            209
-          ],
-          "marginRating": null,
-          "price": "100/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Acclamique",
-          "or": null,
-          "age": null,
-          "weight": null,
-          "daysSince": null,
-          "claimLb": 0,
-          "lastRunRead": "Unraced. No form and no official rating, so there is no mark for this race.",
-          "goingRecord": null,
-          "courseRecord": [
-            10,
-            78
-          ],
-          "tripRecord": null,
-          "trainer14d": [
-            10,
-            54
-          ],
-          "jockey14d": [
-            9,
-            51
-          ],
-          "trainerAtCourse": [
-            10,
-            78
-          ],
-          "marginRating": null,
-          "price": "6/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Astronette",
-          "or": null,
-          "age": null,
-          "weight": null,
-          "daysSince": null,
-          "claimLb": 0,
-          "lastRunRead": "Fourth of eight at Kempton Park 38 days ago, beaten 2¾ lengths. First run at Southwell and on standard going.",
-          "goingRecord": null,
-          "courseRecord": [
-            5,
-            36
-          ],
-          "tripRecord": null,
-          "trainer14d": [
-            0,
-            10
-          ],
-          "jockey14d": [
-            0,
-            16
-          ],
-          "trainerAtCourse": [
-            5,
-            36
-          ],
-          "marginRating": null,
-          "price": "3/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Beatrice Briannie",
-          "or": null,
-          "age": null,
-          "weight": null,
-          "daysSince": null,
-          "claimLb": 0,
-          "lastRunRead": "Unraced. No form and no official rating, so there is no mark for this race.",
-          "goingRecord": null,
-          "courseRecord": [
-            33,
-            361
-          ],
-          "tripRecord": null,
-          "trainer14d": [
-            5,
-            24
-          ],
-          "jockey14d": [
-            4,
-            51
-          ],
-          "trainerAtCourse": [
-            33,
-            361
-          ],
-          "marginRating": null,
-          "price": "20/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "424"
         },
         "--- TRUNCATED --- 3 more items"
       ]
     },
     {
+      "title": "Trials Day - Lingfield 2nd Jan 2027 Fillies' Novice Stakes (GBB Race)",
+      "claimedRunners": 8,
+      "runners": [
+        {
+          "horse": "Bang To Rights",
+          "officialRating": null,
+          "age": null,
+          "weight": null,
+          "daysSinceLastRun": null,
+          "claimLb": 0,
+          "stall": 5,
+          "readFromSource": "Sixth of six at Southwell in March 2025, beaten 16 lengths. First run over this trip; no wins from three runs on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 3
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": null,
+          "trainer14d": null,
+          "trainerAtCourse": [
+            6,
+            170
+          ],
+          "jockey14d": [
+            2,
+            9
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 9.5,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
+          "price": "400/1",
+          "rawForm": "006-"
+        },
+        {
+          "horse": "Byerley Lady",
+          "officialRating": null,
+          "age": null,
+          "weight": null,
+          "daysSinceLastRun": null,
+          "claimLb": 3,
+          "stall": 7,
+          "readFromSource": "Seventh of 10 at Wolverhampton 23 days ago, beaten 11 lengths. First run over this trip and at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 1
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": null,
+          "trainer14d": [
+            0,
+            23
+          ],
+          "trainerAtCourse": [
+            24,
+            209
+          ],
+          "jockey14d": [
+            0,
+            9
+          ],
+          "bias": {
+            "part": "high",
+            "winPct": 10.8,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
+          "price": "100/1",
+          "rawForm": "7"
+        },
+        {
+          "horse": "Acclamique",
+          "officialRating": null,
+          "age": null,
+          "weight": null,
+          "daysSinceLastRun": null,
+          "claimLb": 0,
+          "stall": 1,
+          "readFromSource": "Unraced. No form and no official rating, so there is no mark for this race.",
+          "goingRecord": null,
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": null,
+          "trainer14d": [
+            10,
+            54
+          ],
+          "trainerAtCourse": [
+            10,
+            78
+          ],
+          "jockey14d": [
+            9,
+            51
+          ],
+          "bias": {
+            "part": "low",
+            "winPct": 10.1,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
+          "price": "6/1",
+          "rawForm": null
+        },
+        {
+          "horse": "Astronette",
+          "officialRating": null,
+          "age": null,
+          "weight": null,
+          "daysSinceLastRun": null,
+          "claimLb": 0,
+          "stall": 4,
+          "readFromSource": "Fourth of eight at Kempton Park 38 days ago, beaten 2¾ lengths. First run at Southwell and on standard going.",
+          "goingRecord": null,
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
+            0,
+            1
+          ],
+          "trainer14d": [
+            0,
+            10
+          ],
+          "trainerAtCourse": [
+            5,
+            36
+          ],
+          "jockey14d": [
+            0,
+            16
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 9.5,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
+          "price": "3/1",
+          "rawForm": "4"
+        },
+        "--- TRUNCATED --- 4 more items"
+      ]
+    },
+    {
       "title": "Make The Move To Midnite Handicap Stakes (Div I)",
-      "entries": [
+      "claimedRunners": 10,
+      "runners": [
         {
           "horse": "Hypnotised",
-          "or": 82,
+          "officialRating": 82,
           "age": 3,
           "weight": "9-13",
-          "daysSince": 26,
+          "daysSinceLastRun": 26,
           "claimLb": 0,
-          "lastRunRead": "Sixth of nine at Southwell 26 days ago, beaten 4¼ lengths. Has won at Southwell.",
-          "goingRecord": null,
-          "courseRecord": [
-            1,
-            2
-          ],
-          "tripRecord": [
+          "stall": 4,
+          "readFromSource": "Sixth of nine at Southwell 26 days ago, beaten 4¼ lengths. Has won at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 1
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             2
           ],
@@ -1378,35 +1203,40 @@
             3,
             16
           ],
-          "jockey14d": [
-            4,
-            34
-          ],
           "trainerAtCourse": [
             8,
             47
           ],
-          "marginRating": 6.3,
+          "jockey14d": [
+            4,
+            34
+          ],
+          "bias": {
+            "part": "low",
+            "winPct": 10.1,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "7/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "-72236"
         },
         {
           "horse": "Kirkdale",
-          "or": 80,
+          "officialRating": 80,
           "age": 4,
           "weight": "9-12",
-          "daysSince": 33,
+          "daysSinceLastRun": 33,
           "claimLb": 0,
-          "lastRunRead": "10th of 10 at Chester 33 days ago, beaten 7¾ lengths. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            2,
-            9
-          ],
-          "courseRecord": [
-            1,
-            3
-          ],
-          "tripRecord": [
+          "stall": 2,
+          "readFromSource": "10th of 10 at Chester 33 days ago, beaten 7¾ lengths. Has won over this trip and at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 2,
+            "runs": 9
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             2,
             9
           ],
@@ -1414,32 +1244,36 @@
             1,
             23
           ],
-          "jockey14d": [
-            4,
-            29
-          ],
           "trainerAtCourse": [
             19,
             109
           ],
-          "marginRating": null,
+          "jockey14d": [
+            4,
+            29
+          ],
+          "bias": {
+            "part": "low",
+            "winPct": 10.1,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "3/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "-41120"
         },
         {
           "horse": "Righthere Rightnow",
-          "or": 79,
+          "officialRating": 79,
           "age": 4,
           "weight": "9-11",
-          "daysSince": 34,
+          "daysSinceLastRun": 34,
           "claimLb": 0,
-          "lastRunRead": "11th of 24 at Ayr 34 days ago, beaten 7½ lengths. No wins from seven runs over this trip; first run at Southwell.",
+          "stall": 3,
+          "readFromSource": "11th of 24 at Ayr 34 days ago, beaten 7½ lengths. No wins from seven runs over this trip; first run at Southwell.",
           "goingRecord": null,
-          "courseRecord": [
-            9,
-            57
-          ],
-          "tripRecord": [
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             7
           ],
@@ -1447,35 +1281,40 @@
             0,
             13
           ],
-          "jockey14d": [
-            2,
-            33
-          ],
           "trainerAtCourse": [
             9,
             57
           ],
-          "marginRating": null,
-          "price": "10/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "jockey14d": [
+            2,
+            33
+          ],
+          "bias": {
+            "part": "low",
+            "winPct": 10.1,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
+          "price": "11/1",
+          "rawForm": "003070"
         },
         {
           "horse": "Rock Iguana",
-          "or": 77,
+          "officialRating": 77,
           "age": 4,
           "weight": "9-9",
-          "daysSince": 17,
+          "daysSinceLastRun": 17,
           "claimLb": 0,
-          "lastRunRead": "10th of 10 at Kempton Park 17 days ago, beaten 7½ lengths. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            1,
-            4
-          ],
-          "courseRecord": [
-            1,
-            2
-          ],
-          "tripRecord": [
+          "stall": 10,
+          "readFromSource": "10th of 10 at Kempton Park 17 days ago, beaten 7½ lengths. Has won over this trip and at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 1,
+            "runs": 4
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             1,
             5
           ],
@@ -1483,113 +1322,47 @@
             0,
             9
           ],
-          "jockey14d": [
-            3,
-            40
-          ],
           "trainerAtCourse": [
             1,
             16
           ],
-          "marginRating": null,
+          "jockey14d": [
+            3,
+            40
+          ],
+          "bias": {
+            "part": "high",
+            "winPct": 10.8,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "90/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "266880"
         },
-        {
-          "horse": "Saucy Jane",
-          "or": 78,
-          "age": 3,
-          "weight": "9-9",
-          "daysSince": 33,
-          "claimLb": 0,
-          "lastRunRead": "Seventh of nine at Newmarket 33 days ago, beaten 6¼ lengths. Has won over this trip.",
-          "goingRecord": [
-            0,
-            2
-          ],
-          "courseRecord": [
-            2,
-            23
-          ],
-          "tripRecord": [
-            2,
-            10
-          ],
-          "trainer14d": [
-            2,
-            7
-          ],
-          "jockey14d": [
-            4,
-            51
-          ],
-          "trainerAtCourse": [
-            2,
-            23
-          ],
-          "marginRating": null,
-          "price": "35/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Farandaway",
-          "or": 76,
-          "age": 4,
-          "weight": "9-8",
-          "daysSince": 31,
-          "claimLb": 0,
-          "lastRunRead": "Fifth of eight at Hamilton 31 days ago, beaten 5¾ lengths. Has won over this trip; no wins from six runs at Southwell.",
-          "goingRecord": [
-            1,
-            9
-          ],
-          "courseRecord": [
-            0,
-            6
-          ],
-          "tripRecord": [
-            2,
-            13
-          ],
-          "trainer14d": [
-            1,
-            13
-          ],
-          "jockey14d": [
-            1,
-            13
-          ],
-          "trainerAtCourse": [
-            13,
-            107
-          ],
-          "marginRating": null,
-          "price": "8/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        "--- TRUNCATED --- 4 more items"
+        "--- TRUNCATED --- 6 more items"
       ]
     },
     {
       "title": "Make The Move To Midnite Handicap Stakes (Div II)",
-      "entries": [
+      "claimedRunners": 11,
+      "runners": [
         {
           "horse": "Moving Force",
-          "or": 81,
+          "officialRating": 81,
           "age": 4,
           "weight": "9-13",
-          "daysSince": 17,
+          "daysSinceLastRun": 17,
           "claimLb": 0,
-          "lastRunRead": "Third of 10 at Kempton Park 17 days ago, beaten 1¼ lengths. No wins from nine runs over this trip; no wins from three runs on standard going.",
-          "goingRecord": [
-            0,
-            3
-          ],
-          "courseRecord": [
-            2,
-            82
-          ],
-          "tripRecord": [
+          "stall": 6,
+          "readFromSource": "Third of 10 at Kempton Park 17 days ago, beaten 1¼ lengths. No wins from nine runs over this trip; no wins from three runs on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 3
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             0,
             9
           ],
@@ -1597,32 +1370,40 @@
             1,
             12
           ],
-          "jockey14d": [
-            2,
-            22
-          ],
           "trainerAtCourse": [
             2,
             82
           ],
-          "marginRating": 11.6,
+          "jockey14d": [
+            2,
+            22
+          ],
+          "bias": {
+            "part": "middle",
+            "winPct": 9.5,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "9/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "287233"
         },
         {
           "horse": "French Affair",
-          "or": 81,
+          "officialRating": 81,
           "age": 3,
           "weight": "9-12",
-          "daysSince": 17,
+          "daysSinceLastRun": 17,
           "claimLb": 0,
-          "lastRunRead": "Third of nine at Kempton Park 17 days ago, beaten under half a length. Has won over this trip.",
-          "goingRecord": null,
-          "courseRecord": [
-            9,
-            92
-          ],
-          "tripRecord": [
+          "stall": 10,
+          "readFromSource": "Third of nine at Kempton Park 17 days ago, beaten under half a length. Has won over this trip.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 0,
+            "runs": 1
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             3,
             9
           ],
@@ -1630,35 +1411,40 @@
             0,
             23
           ],
-          "jockey14d": [
-            0,
-            25
-          ],
           "trainerAtCourse": [
             9,
             92
           ],
-          "marginRating": 13.6,
+          "jockey14d": [
+            0,
+            25
+          ],
+          "bias": {
+            "part": "high",
+            "winPct": 10.8,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "7/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "611353"
         },
         {
           "horse": "Papa Cocktail",
-          "or": 80,
+          "officialRating": 80,
           "age": 7,
           "weight": "9-12",
-          "daysSince": 17,
+          "daysSinceLastRun": 17,
           "claimLb": 0,
-          "lastRunRead": "11th of 12 at Pontefract 17 days ago, beaten 17 lengths. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            3,
-            20
-          ],
-          "courseRecord": [
-            1,
-            7
-          ],
-          "tripRecord": [
+          "stall": 9,
+          "readFromSource": "11th of 12 at Pontefract 17 days ago, beaten 17 lengths. Has won over this trip and at Southwell.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 3,
+            "runs": 20
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             4,
             32
           ],
@@ -1666,35 +1452,40 @@
             4,
             15
           ],
-          "jockey14d": [
-            4,
-            42
-          ],
           "trainerAtCourse": [
             38,
             240
           ],
-          "marginRating": null,
-          "price": "5/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "jockey14d": [
+            4,
+            42
+          ],
+          "bias": {
+            "part": "high",
+            "winPct": 10.8,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
+          "price": "11/2",
+          "rawForm": "364100"
         },
         {
           "horse": "Kiniro",
-          "or": 79,
+          "officialRating": 79,
           "age": 4,
           "weight": "9-11",
-          "daysSince": 15,
+          "daysSinceLastRun": 15,
           "claimLb": 0,
-          "lastRunRead": "Won at Kempton Park 15 days ago. Has won over this trip and on standard going.",
-          "goingRecord": [
-            1,
-            5
-          ],
-          "courseRecord": [
-            1,
-            7
-          ],
-          "tripRecord": [
+          "stall": 7,
+          "readFromSource": "Won at Kempton Park 15 days ago. Has won over this trip and on standard going.",
+          "goingRecord": {
+            "condition": "standard",
+            "wins": 1,
+            "runs": 5
+          },
+          "courseRecord": null,
+          "previousCourseWinnerOutsidePeriod": false,
+          "distanceRecord": [
             3,
             15
           ],
@@ -1702,87 +1493,26 @@
             0,
             2
           ],
+          "trainerAtCourse": [
+            1,
+            7
+          ],
           "jockey14d": [
             2,
             26
           ],
-          "trainerAtCourse": [
-            1,
-            7
-          ],
-          "marginRating": 11.6,
+          "bias": {
+            "part": "middle",
+            "winPct": 9.5,
+            "overallPct": 10.2,
+            "sample": 2803
+          },
           "price": "9/2",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
+          "rawForm": "283791"
         },
-        {
-          "horse": "Stanley Spencer",
-          "or": 77,
-          "age": 5,
-          "weight": "9-9",
-          "daysSince": 13,
-          "claimLb": 0,
-          "lastRunRead": "18th of 20 at York 13 days ago, beaten 12 lengths. Has won over this trip and at Southwell.",
-          "goingRecord": [
-            2,
-            11
-          ],
-          "courseRecord": [
-            2,
-            7
-          ],
-          "tripRecord": [
-            4,
-            21
-          ],
-          "trainer14d": null,
-          "jockey14d": [
-            1,
-            13
-          ],
-          "trainerAtCourse": [
-            2,
-            22
-          ],
-          "marginRating": null,
-          "price": "16/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        {
-          "horse": "Arduis Invicta",
-          "or": 78,
-          "age": 3,
-          "weight": "9-9",
-          "daysSince": 14,
-          "claimLb": 0,
-          "lastRunRead": "10th of 11 at Ayr 14 days ago, beaten 11 lengths. Has won over this trip.",
-          "goingRecord": null,
-          "courseRecord": [
-            6,
-            79
-          ],
-          "tripRecord": [
-            1,
-            13
-          ],
-          "trainer14d": [
-            1,
-            14
-          ],
-          "jockey14d": [
-            1,
-            21
-          ],
-          "trainerAtCourse": [
-            6,
-            79
-          ],
-          "marginRating": null,
-          "price": "14/1",
-          "recordSource": "https://stablebet.co.uk/racecards/southwell/"
-        },
-        "--- TRUNCATED --- 5 more items"
+        "--- TRUNCATED --- 7 more items"
       ]
     }
   ],
-  "bytes": 222016
+  "bytes": 222020
 }
