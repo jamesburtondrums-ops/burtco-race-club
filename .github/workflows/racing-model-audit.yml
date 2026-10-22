@@ -1,0 +1,36 @@
+name: Racing model accuracy audit
+
+on:
+  push:
+    branches: [racing-intelligence]
+    paths:
+      - 'data/races.json'
+      - 'selection-quality.mjs'
+      - 'scripts/audit-racing-model.mjs'
+      - 'tests/*.test.mjs'
+      - '.github/workflows/racing-model-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frozen-selection-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the racing branch
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run regression tests
+        run: node --test tests/audit-racing-model.test.mjs tests/selection-decision-guard.test.mjs
+      - name: Recalculate read-only historical metrics
+        run: node scripts/audit-racing-model.mjs > racing-model-audit.json
+      - name: Retain reproducible audit output
+        uses: actions/upload-artifact@v4
+        with:
+          name: frozen-racing-model-audit
+          path: racing-model-audit.json
+          retention-days: 90
