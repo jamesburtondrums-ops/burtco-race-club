@@ -212,9 +212,10 @@
       "previousRuns": [
         "4 Oct 2026 Killarney ~2m5f good-to-soft Chase 1/4 won 5L with Alex Harvey (different from current Shane O'Callaghan)",
         "25 Sep 2026 Listowel ~2m2f good-to-soft Hurdle 6/14 beaten 13.27L OR102",
-        "27 Jul 2026 Galway ~2m good Hurdle 12/20 beaten 24.5L OR105"
+        "27 Jul 2026 Galway ~2m good Hurdle 12/20 beaten 24.5L OR105",
+        "14 May 2026 Clonmel ~2m3f good-to-soft HURDLE 2/10 beaten 1.5L with today's Shane O'Callaghan (3lb); this was not the same chase/distance"
       ],
-      "bookingAndHandicapReview": "Killarney win recent (18d) but only 4 declared and Alex Harvey rode; today Shane O'Callaghan claims 3lb. No proven exact Clonmel chase C&D win from that evidence; OR up c.8lb vs preceding chase mark, rain remains unknown.",
+      "bookingAndHandicapReview": "Recent Killarney 2m4f180yd good-to-soft BEGINNERS CHASE 1/4 won 5L under Alex Harvey. Today's Shane O'Callaghan claims 3lb, and partnered the horse to Clonmel ~2m3f hurdle SECOND of ten beaten 1.5L on 14 May 2026 (proven horse-rider and course familiarity, BUT not chase-winning partnership). Sole prior Clonmel victory was over 2m49yd HURDLES on soft 16 May 2024 with a different rider, not today's 2m4f219yd chase. Present OR107 versus last chase handicap OR102 in 2025; do not assert exactly +8lb from the unrated Killarney chase win without official reassessment. Rain/going and opposition remain risks.",
       "sourceProfile": "https://www.racingtv.com/profiles/horse/woodstream-lad",
       "preRaceSourceUncertainties": [
         "Official precise current going and NRs may shift before off",
@@ -452,5 +453,11 @@
         "trainerJockeyPairStatistics": false
       }
     }
-  ]
+  ],
+  "researchCorrection": {
+    "checkedAt": "2026-10-22T12:04:48+01:00",
+    "courseCaveat": "Clonmel 2024 winner 2m hurdle, not 2m5f chase",
+    "jockeyCaveat": "Shane O'Callaghan partnered close Clonmel hurdle second May 2026; Alex Harvey won Killarney beginners chase Oct 2026",
+    "sourceUrl": "https://www.racingtv.com/profiles/horse/woodstream-lad"
+  }
 }
