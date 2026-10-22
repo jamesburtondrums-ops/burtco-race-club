@@ -1,0 +1,456 @@
+{
+  "asOf": "2026-10-22 pre-race",
+  "race": "Clonmel 16:30",
+  "going": "Good (rain forecast; ground recheck needed)",
+  "offTime": "16:30",
+  "originalSelection": "Woodstream Lad",
+  "activeRunners": 12,
+  "sourceRacecard": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+  "status": "INDIVIDUAL_PAST_RUNS_AND_BOOKING_EVIDENCE_REVIEWED; NOT CALIBRATED",
+  "runners": [
+    {
+      "horse": "Charlie Luciano",
+      "jockey": "Jack Kennedy",
+      "claimLb": 0,
+      "trainer": "Noel Meade",
+      "racecardOfficialRating": 117,
+      "racecardWeight": "11-12",
+      "lastSixForm": "142P93",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "Highest OR117 and RPR125, Jack Kennedy engaged, 3rd latest after weaker prior runs",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "10 Oct 2026 Fairyhouse ~3m good Chase 3/9 beaten 8L OR117",
+        "28 Sep 2026 Roscommon ~3m good-to-soft Hurdle 9/11 beaten 52L OR113",
+        "4 Sep 2026 Kilbeggan ~2m4f good-to-soft Chase pulled up OR118; 21 Aug 3m1f chase 2/8 beaten 12L OR119"
+      ],
+      "bookingAndHandicapReview": "Jack Kennedy is booked but recent chase third over 3m was ridden by another; dropping to today's ~2m5f after some poor jumps, OR117 top and rating alone not proof of superiority.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/charlie-luciano",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Banjaxed",
+      "jockey": "John Shinnick",
+      "claimLb": 0,
+      "trainer": "L Fowler",
+      "racecardOfficialRating": 112,
+      "racecardWeight": "11-7",
+      "lastSixForm": "4486-4",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "OR112 RPR126 and last 4th, may improve over staying chase trip",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "3 Oct 2026 Gowran ~2m4f good-to-soft Chase 4/6 beaten 27.25L OR114 with John Shinnick",
+        "14 Dec 2025 Navan ~2m soft Chase 6/12 beaten 33L OR120 with Shinnick",
+        "Nov 2025 Navan ~2m5f heavy Hurdle 8/19 beaten 22.5L"
+      ],
+      "bookingAndHandicapReview": "John Shinnick same recent jockey; first race back earlier October 4/6 beaten 27L, 19 days to improve fitness, OR112 below recent OR114 but has not shown current win level.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/banjaxed",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Kings Jet",
+      "jockey": "Ricky Doyle",
+      "claimLb": 0,
+      "trainer": "C W J Farrell",
+      "racecardOfficialRating": 108,
+      "racecardWeight": "11-3",
+      "lastSixForm": "-U023F",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "OR108, previous 2nd/3rd but Fell last; jumping reliability a serious factor",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "25 Sep 2026 Listowel ~2m3f good-to-soft Chase Fell OR108, ridden Ricky Doyle",
+        "20 Aug 2026 Kilbeggan ~2m4f good Chase 3/11 beaten 2.25L OR107, Ricky Doyle",
+        "8 Aug 2026 Kilbeggan ~3m1f good Chase 2/4 beaten 4L OR107, Ricky Doyle"
+      ],
+      "bookingAndHandicapReview": "Ricky Doyle established across all last three; close placed chase performances over 2m4f/3m1f have substance, recent FALL means completion/jumping reliability important; OR108 roughly steady.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/kings-jet-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Ceroc",
+      "jockey": "J J Slevin",
+      "claimLb": 0,
+      "trainer": "A Slattery",
+      "racecardOfficialRating": 107,
+      "racecardWeight": "11-2",
+      "lastSixForm": "6-2P13",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "OR107 and RPR128, win then third last two relevant, powerful rival",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "8 Aug 2026 Wexford ~3m1f good Chase 3/7 beaten 6.75L OR108, Phillip Enright",
+        "22 Jul 2026 Wexford ~3m good-to-firm Chase 1/5 won 11L OR102, Phillip Enright",
+        "30 May 2026 Listowel ~2m7f good-to-soft Hurdle pulled up; 16 May Wexford ~3m chase 2/11 beaten 9L OR102"
+      ],
+      "bookingAndHandicapReview": "Wexford 3m chase win by 11L and third offer live chasing evidence at longer trip. JJ Slevin NEW jockey instead of Phillip Enright on winning run, today's trip shorter and OR107 versus OR102 winning mark (+5lb).",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/ceroc",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Lambay Island",
+      "jockey": "Mike O'Connor",
+      "claimLb": 0,
+      "trainer": "Henry de Bromhead",
+      "racecardOfficialRating": 107,
+      "racecardWeight": "11-2",
+      "lastSixForm": "/320-0",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "Chase/handicap debut from powerful yard, little recent course-form evidence, unknown ability",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "19 Sep 2026 Navan ~2m good Hurdle 11/13 beaten 55L OR109",
+        "28 Dec 2025 Leopardstown ~2m4f good Hurdle 17/23 beaten 37L OR110",
+        "20 Nov 2025 Thurles ~2m4f good-to-soft Hurdle 2/12 beaten 5L OR109"
+      ],
+      "bookingAndHandicapReview": "Henry de Bromhead yard and Mike O'Connor appointment cannot establish horse's chase ability; listed previous starts were HURDLES, current chase debut and last hurdle effort 11/13 by 55L.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/lambay-island-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Woodstream Lad",
+      "jockey": "Shane O'Callaghan",
+      "claimLb": 3,
+      "trainer": "David O'Sullivan",
+      "racecardOfficialRating": 107,
+      "racecardWeight": "11-2",
+      "lastSixForm": "-25061",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "Won last handicap chase 18 days ago, previous Clonmel course and trip winning evidence, 3lb claiming jockey",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "4 Oct 2026 Killarney ~2m5f good-to-soft Chase 1/4 won 5L with Alex Harvey (different from current Shane O'Callaghan)",
+        "25 Sep 2026 Listowel ~2m2f good-to-soft Hurdle 6/14 beaten 13.27L OR102",
+        "27 Jul 2026 Galway ~2m good Hurdle 12/20 beaten 24.5L OR105"
+      ],
+      "bookingAndHandicapReview": "Killarney win recent (18d) but only 4 declared and Alex Harvey rode; today Shane O'Callaghan claims 3lb. No proven exact Clonmel chase C&D win from that evidence; OR up c.8lb vs preceding chase mark, rain remains unknown.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/woodstream-lad",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Ned In The Park",
+      "jockey": "D Doyle",
+      "claimLb": 5,
+      "trainer": "T Doyle",
+      "racecardOfficialRating": 106,
+      "racecardWeight": "11-1",
+      "lastSixForm": "932U53",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "Course experience and third eleven days ago, five-pound jockey claim",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "11 Oct 2026 Cork ~2m1f good Chase 3/7 beaten 25L with today's D Doyle (5lb)",
+        "8 Aug 2026 Wexford ~2m good Chase 5/6 beaten 7.75L OR109",
+        "28 Jul 2026 Galway ~2m2f good-to-soft Chase unseated rider; 30 Jun Wexford ~2m3f chase 2/14 beaten 4.5L"
+      ],
+      "bookingAndHandicapReview": "D Doyle 5lb established recent rider, fresh Cork chase 3rd but 25L beaten. Shorter chase performance inconsistent; course/trip today differs from last run, cannot infer competitiveness from 'third' without margins.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/ned-in-the-park-ireland",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Duty Bound",
+      "jockey": "Jordan Canavan",
+      "claimLb": 7,
+      "trainer": "J P Flavin",
+      "racecardOfficialRating": 105,
+      "racecardWeight": "11-0",
+      "lastSixForm": "2F-P5P",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "Rider claims seven pounds but recent pulled-up and fall in form are material doubts",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "8 Aug 2026 Wexford ~3m1f good Chase pulled up OR107",
+        "30 Jun 2026 Wexford ~2m7f good-to-soft Chase 5/12 beaten 30.95L OR108 with today's Jordan Canavan",
+        "11 May 2026 Kilbeggan ~2m4f good-to-soft Hurdle pulled up OR114"
+      ],
+      "bookingAndHandicapReview": "Jordan Canavan 7lb claim matches Wexford June ride; recent chase PU and 5/12 beaten 31L, low current chasing reliability. Date of last run conflicts between source form and some raceday fields—flag for reconciliation.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/duty-bound",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Gatsby Grey",
+      "jockey": "Phillip Enright",
+      "claimLb": 0,
+      "trainer": "O McKiernan",
+      "racecardOfficialRating": 103,
+      "racecardWeight": "10-12",
+      "lastSixForm": "6PPP-7",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "Tenth-year-old repeatedly pulled up and recent 7th, weak current chasing evidence",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "10 Oct 2026 Fairyhouse ~3m good Chase 7/9 beaten 31L OR106",
+        "21 Sep 2026 Listowel ~1m4f Flat 10/11 beaten about 20L",
+        "Late summer 2026 flat run 9/9; 24 Apr Kilbeggan ~2m6f Chase pulled up"
+      ],
+      "bookingAndHandicapReview": "Previous staying chase ability but current form: Fairyhouse 7/9 31L behind winner and intermittent poor flat runs/PUs. Phillip Enright booked; no evidence of rejuvenation.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/gatsby-grey",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Palace Boy",
+      "jockey": "Luke Burke Ott",
+      "claimLb": 7,
+      "trainer": "J F Gleeson",
+      "racecardOfficialRating": 100,
+      "racecardWeight": "10-9",
+      "lastSixForm": "-050U8",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "Former level of ability not reflected by latest unplaced starts and unseated",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "8 Oct 2026 Tramore ~2m4f good-to-soft Chase 8/12 beaten 20.7L with today's Luke Burke Ott (7lb)",
+        "25 Sep 2026 Listowel ~2m2f Hurdle unseated rider",
+        "7 Sep 2026 Galway ~2m good-to-soft Hurdle 14/20 beaten 33L"
+      ],
+      "bookingAndHandicapReview": "Luke Burke Ott 7lb was on latest eighth of twelve; apprentice allowance doesn't fix 20L current deficit or recent unseat.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/palace-boy",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Prince Palace",
+      "jockey": "Ross Sugrue",
+      "claimLb": 7,
+      "trainer": "P J Rothwell",
+      "racecardOfficialRating": 100,
+      "racecardWeight": "10-9",
+      "lastSixForm": "-057P2",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "Last race second, RPR above OR and 7lb jockey claim makes a meaningful lower-weight threat",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "6 Oct 2026 Galway ~2m6f soft Chase 2/8 beaten 10L OR100 with today's Ross Sugrue (7lb)",
+        "4 Sep 2026 Kilbeggan ~2m4f good-to-soft Chase pulled up OR104",
+        "2 Aug 2026 Galway ~2m6f good Chase 7/18 beaten 17L OR106"
+      ],
+      "bookingAndHandicapReview": "Ross Sugrue claims 7lb and partnered most recent Galway soft-ground chase second (10L behind). OR100 lower than earlier OR106; credible underweight place outsider, although consistency poor.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/prince-palace",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Grange Walk",
+      "jockey": "Daniel King",
+      "claimLb": 0,
+      "trainer": "J P Ryan",
+      "racecardOfficialRating": 97,
+      "racecardWeight": "10-6",
+      "lastSixForm": "36B776",
+      "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+      "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+      "originalRunnerReview": "Former distance winner but poor recent 6th/6th, exposed 11yo",
+      "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+      "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+      "goingTripEvidenceStatus": "NOT_VERIFIED",
+      "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+      "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR",
+      "previousRuns": [
+        "25 Sep 2026 Listowel ~2m3f good-to-soft Chase 6/14 beaten 12.75L OR100",
+        "4 Sep 2026 Kilbeggan ~2m4f good-to-soft Chase 7/13 beaten 21.25L OR103 with today's Daniel King",
+        "8 Aug 2026 Kilbeggan ~2m4f good Chase 7/8 beaten 22.45L OR106; 25 May Ballinrobe ~2m3f good Chase 3/13 beaten 6.75L"
+      ],
+      "bookingAndHandicapReview": "Daniel King known previous rider, now OR97 versus OR106 early August, dropping 9lb but 6/14 and 7/13 plus 7/8 recently imply decline; rating cut alone insufficient.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/grange-walk",
+      "preRaceSourceUncertainties": [
+        "Official precise current going and NRs may shift before off",
+        "Full race-specific pace/sectional measurement and field-relative probabilities unavailable",
+        "Bookmaker prices not predictive confidence"
+      ],
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    }
+  ]
+}
