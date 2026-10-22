@@ -1,0 +1,807 @@
+{
+  "date": "2026-10-22",
+  "source": "https://www.horseracingbetting.co.uk/tracks/ffos-las/",
+  "sourceType": "RACECARD_FORM_SCREENING_NOT_DEEP_HISTORY",
+  "course": "ffos-las",
+  "collectedAt": "2026-10-22 afternoon, exact page timestamp not supplied",
+  "races": [
+    {
+      "off": "12:51",
+      "name": "bettingsites.co.uk Fast Withdrawal Mares' Novices' Hurdle Race (GBB Race)",
+      "conditions": "Class 4· 2m 4f· Prize: £5,446",
+      "declared": 8,
+      "active": 8,
+      "runners": [
+        {
+          "horse": "Fairy Park",
+          "number": 1,
+          "jockey": "Brendan Powell",
+          "trainer": "Joe Tizzard",
+          "lastSix": "1/23-",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "100/30",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Vrheligonne",
+          "number": 7,
+          "jockey": "Ben Jones",
+          "trainer": "Ben Pauling",
+          "lastSix": "222-",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "4/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Handfulofpromises",
+          "number": 4,
+          "jockey": "Sean Houlihan",
+          "trainer": "Sheila Lewis",
+          "lastSix": "22/",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "9/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Fireball Frenzy",
+          "number": 2,
+          "jockey": "Charlie Hammond",
+          "trainer": "Stuart Edmunds",
+          "lastSix": "1P2/",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "9/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Funny Hunny",
+          "number": 3,
+          "jockey": "Tristan Durrell",
+          "trainer": "Dan Skelton",
+          "lastSix": "32/4",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "9/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Crescendo Lady",
+          "number": 8,
+          "jockey": "Kevin Brogan",
+          "trainer": "Laura Horsfall",
+          "lastSix": "5-",
+          "draw": null,
+          "weight": "10-12",
+          "marketSnapshot": "6/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Lara K",
+          "number": 5,
+          "jockey": "Conor Ring",
+          "trainer": "Mrs C. Williams",
+          "lastSix": "767",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "15/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Upton Fern",
+          "number": 6,
+          "jockey": "Robert Dunne",
+          "trainer": "Debra Hamer",
+          "lastSix": "504",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "13:26",
+      "name": "bettingsites.co.uk Instant Withdrawal Novices' Hurdle Race (Div I) (GBB Race)",
+      "conditions": "Class 4· 2m· Prize: £5,446",
+      "declared": 11,
+      "active": 11,
+      "runners": [
+        {
+          "horse": "Mourne Crystal",
+          "number": 9,
+          "jockey": "Ben Jones",
+          "trainer": "Ben Pauling",
+          "lastSix": "1-",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "5/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Arms Park",
+          "number": 2,
+          "jockey": "Adam Wedge",
+          "trainer": "Mrs C. Williams",
+          "lastSix": "231-P",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "11/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Sky Grove",
+          "number": 1,
+          "jockey": "Bryan Carver",
+          "trainer": "Laura Horsfall",
+          "lastSix": "623-1",
+          "draw": null,
+          "weight": "11-9",
+          "marketSnapshot": "6/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Quickkick",
+          "number": 5,
+          "jockey": "Sean Houlihan",
+          "trainer": "Philip Hobbs & Johnson White",
+          "lastSix": "3/431-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "6/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Global Fortune",
+          "number": 3,
+          "jockey": "Richie McLernon",
+          "trainer": "Gary Brown",
+          "lastSix": "6/108-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "15/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Spanish Stroll",
+          "number": 6,
+          "jockey": "Brendan Powell",
+          "trainer": "Joe Tizzard",
+          "lastSix": "90-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Goliath Flight",
+          "number": 7,
+          "jockey": "Charlie Todd",
+          "trainer": "Dan Skelton",
+          "lastSix": "5-7",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "One More Chrome",
+          "number": 10,
+          "jockey": "Tristan Durrell",
+          "trainer": "Dan Skelton",
+          "lastSix": "0",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "11/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Mister Forb",
+          "number": 8,
+          "jockey": "James Best",
+          "trainer": "Harriet Dickin",
+          "lastSix": "0",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "11/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Right Royal Rascal",
+          "number": 11,
+          "jockey": "Ben Poste",
+          "trainer": "Tom Symonds",
+          "lastSix": "6-",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Laios Tresor",
+          "number": 4,
+          "jockey": "Tabitha Worsley",
+          "trainer": "Georgie Howell",
+          "lastSix": "4/88-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "14:01",
+      "name": "bettingsites.co.uk Instant Withdrawal Novices' Hurdle Race (Div II) (GBB Race)",
+      "conditions": "Class 4· 2m· Prize: £5,446",
+      "declared": 10,
+      "active": 10,
+      "runners": [
+        {
+          "horse": "Common Sense",
+          "number": 2,
+          "jockey": "James Bowen",
+          "trainer": "Rebecca Curtis",
+          "lastSix": "21-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "4/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Potter",
+          "number": 4,
+          "jockey": "Liam Harrison",
+          "trainer": "Fergal O'Brien",
+          "lastSix": "1-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "9/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Trojan Tale",
+          "number": 6,
+          "jockey": "Harry Cobden",
+          "trainer": "Dan Horsford",
+          "lastSix": "13-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "5/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Navarau",
+          "number": 9,
+          "jockey": "Jack Tudor",
+          "trainer": "David Pipe",
+          "lastSix": "3-",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "11/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "The Walk",
+          "number": 5,
+          "jockey": "Brendan Powell",
+          "trainer": "Joe Tizzard",
+          "lastSix": "10-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "6/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Thunder Thief",
+          "number": 10,
+          "jockey": "Charlie Todd",
+          "trainer": "Dan Skelton",
+          "lastSix": "",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "8/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Brisky Dancer",
+          "number": 1,
+          "jockey": "Dylan Johnston",
+          "trainer": "Sam Thomas",
+          "lastSix": "65-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Tyrrhenus",
+          "number": 7,
+          "jockey": "Tristan Durrell",
+          "trainer": "Dan Skelton",
+          "lastSix": "8/",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Look Don't Stare",
+          "number": 8,
+          "jockey": "James Best",
+          "trainer": "Harriet Dickin",
+          "lastSix": "997-7",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Oatsoeasy",
+          "number": 3,
+          "jockey": "Ben Jones",
+          "trainer": "Ben Pauling",
+          "lastSix": "F/",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "14:36",
+      "name": "bettingsites.co.uk Same Day Payouts Handicap Hurdle Race",
+      "conditions": "Class 3· 3m· Prize: £5,809",
+      "declared": 8,
+      "active": 8,
+      "runners": [
+        {
+          "horse": "One Eye On Vegas",
+          "number": 8,
+          "jockey": "Charlie Hammond",
+          "trainer": "Stuart Edmunds",
+          "lastSix": "/2162-",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "11/4",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Kilwaughter",
+          "number": 1,
+          "jockey": "Jack Stenhouse(7)",
+          "trainer": "Philip Hobbs & Johnson White",
+          "lastSix": "74214-",
+          "draw": null,
+          "weight": "12-0",
+          "marketSnapshot": "100/30",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Idefix de Ciergues",
+          "number": 3,
+          "jockey": "Sean Bowen",
+          "trainer": "Rebecca Curtis",
+          "lastSix": "44P1-7",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "4/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "El Gavilan",
+          "number": 7,
+          "jockey": "Tristan Durrell",
+          "trainer": "Dan Skelton",
+          "lastSix": "1115P-",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "4/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Moonset",
+          "number": 6,
+          "jockey": "Harry Cobden",
+          "trainer": "Neil Mulholland",
+          "lastSix": "11/9P-",
+          "draw": null,
+          "weight": "11-4",
+          "marketSnapshot": "9/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Libre de Choeur",
+          "number": 5,
+          "jockey": "Ned Fox(3)",
+          "trainer": "Clive Boultbee-Brooks",
+          "lastSix": "52616-",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "5/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Saint Palais",
+          "number": 4,
+          "jockey": "Jack Quinlan",
+          "trainer": "Richard Bandey",
+          "lastSix": "U5774-",
+          "draw": null,
+          "weight": "11-6",
+          "marketSnapshot": "6/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Shallow River",
+          "number": 2,
+          "jockey": "Lee Edwards",
+          "trainer": "Dave Roberts",
+          "lastSix": "/63574",
+          "draw": null,
+          "weight": "11-10",
+          "marketSnapshot": "13/2",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "15:11",
+      "name": "bettingsites.co.uk Get Paid By Uk Betting Sites Open National Hunt Flat Race (Category 2 Elimination) (GBB Race)",
+      "conditions": "Class 5· 2m· Prize: £2,451",
+      "declared": 7,
+      "active": 6,
+      "runners": [
+        {
+          "horse": "Jet Bay",
+          "number": 1,
+          "jockey": "James Bowen",
+          "trainer": "Mickey Bowen",
+          "lastSix": "1-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "12/5",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Pointofdifference",
+          "number": 3,
+          "jockey": "Sean Bowen",
+          "trainer": "Rebecca Curtis",
+          "lastSix": "11-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "12/5",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Willow Tide",
+          "number": 4,
+          "jockey": "Liam Harrison",
+          "trainer": "Fergal O'Brien",
+          "lastSix": "F1-",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "100/30",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ashford Breeze",
+          "number": 5,
+          "jockey": "Brendan Powell",
+          "trainer": "Joe Tizzard",
+          "lastSix": "",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "9/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Poets Express",
+          "number": 2,
+          "jockey": "Ben Jones",
+          "trainer": "Ben Pauling",
+          "lastSix": "",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "5/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Mighty Rhythm",
+          "number": 6,
+          "jockey": "Ned Fox(3)",
+          "trainer": "Tom Symonds",
+          "lastSix": "9-",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "15/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Maya L'Abeille",
+          "number": 0,
+          "jockey": "James Best",
+          "trainer": "Nigel Hawke",
+          "lastSix": "9-",
+          "draw": null,
+          "weight": "10-8",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": true
+        }
+      ]
+    },
+    {
+      "off": "15:46",
+      "name": "bettingsites.co.uk Fast Paying Bookmakers Novices' Limited Handicap Steeple Chase (GBB Race)",
+      "conditions": "Class 3· 3m· Prize: £6,337",
+      "declared": 7,
+      "active": 7,
+      "runners": [
+        {
+          "horse": "Legendary Luke",
+          "number": 2,
+          "jockey": "Gavin Sheehan",
+          "trainer": "Jamie Snowden",
+          "lastSix": "21143-",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "2/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Call Me Legend",
+          "number": 4,
+          "jockey": "Jack Stenhouse(7)",
+          "trainer": "Philip Hobbs & Johnson White",
+          "lastSix": "11222-",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "85/40",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Kayf Dancer",
+          "number": 5,
+          "jockey": "James Bowen",
+          "trainer": "Mickey Bowen",
+          "lastSix": "81-624",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "9/4",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Inishcorker",
+          "number": 3,
+          "jockey": "Sean Bowen",
+          "trainer": "Rebecca Curtis",
+          "lastSix": "23222-",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "12/5",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Boultydoolin",
+          "number": 1,
+          "jockey": "Ben Jones",
+          "trainer": "Rebecca Curtis",
+          "lastSix": "3/121-",
+          "draw": null,
+          "weight": "11-10",
+          "marketSnapshot": "12/5",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Island Bridge",
+          "number": 6,
+          "jockey": "Ciaran Gethings",
+          "trainer": "Kim Bailey & Mat Nicholls",
+          "lastSix": "42223-",
+          "draw": null,
+          "weight": "10-13",
+          "marketSnapshot": "7/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Diamond Ri",
+          "number": 7,
+          "jockey": "Brendan Powell",
+          "trainer": "Joe Tizzard",
+          "lastSix": "/P0P9-",
+          "draw": null,
+          "weight": "10-12",
+          "marketSnapshot": "6/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "16:20",
+      "name": "bettingsites.co.uk Quickest Withdrawal Bookies Handicap Steeple Chase",
+      "conditions": "Class 5· 2m 3.5f· Prize: £3,961",
+      "declared": 9,
+      "active": 9,
+      "runners": [
+        {
+          "horse": "Doonbeg Don",
+          "number": 3,
+          "jockey": "Richie McLernon",
+          "trainer": "Barry Murphy",
+          "lastSix": "31027/",
+          "draw": null,
+          "weight": "11-13",
+          "marketSnapshot": "4/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Rap Soul",
+          "number": 4,
+          "jockey": "Jack Quinlan",
+          "trainer": "Richard Bandey",
+          "lastSix": "70113-",
+          "draw": null,
+          "weight": "11-8",
+          "marketSnapshot": "5/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Jack's Jury",
+          "number": 7,
+          "jockey": "Callum Pritchard",
+          "trainer": "Barry Murphy",
+          "lastSix": "35-3U1",
+          "draw": null,
+          "weight": "11-4",
+          "marketSnapshot": "5/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ionity",
+          "number": 8,
+          "jockey": "Adam Wedge",
+          "trainer": "Mrs C. Williams",
+          "lastSix": "33/32-",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "5/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Crystello",
+          "number": 2,
+          "jockey": "Paul O'Brien",
+          "trainer": "Harry Derham",
+          "lastSix": "64514-",
+          "draw": null,
+          "weight": "11-13",
+          "marketSnapshot": "5/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Gustapof",
+          "number": 5,
+          "jockey": "Sean Bowen",
+          "trainer": "Rebecca Curtis",
+          "lastSix": "P8646-",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "5/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "The Grey Man",
+          "number": 1,
+          "jockey": "James Best",
+          "trainer": "Harriet Dickin",
+          "lastSix": "UP11P-",
+          "draw": null,
+          "weight": "12-0",
+          "marketSnapshot": "11/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Love Me",
+          "number": 6,
+          "jockey": "Gavin Sheehan",
+          "trainer": "Jo Davis",
+          "lastSix": "43P53-",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "11/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Owl of Athens",
+          "number": 9,
+          "jockey": "Conor Ring",
+          "trainer": "Mrs C. Williams",
+          "lastSix": "/5781-",
+          "draw": null,
+          "weight": "10-10",
+          "marketSnapshot": "11/2",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "16:53",
+      "name": "bettingsites.co.uk Fast Withdrawal Handicap Steeple Chase (GBB Race)",
+      "conditions": "Class 3· 2m· Prize: £7,922",
+      "declared": 6,
+      "active": 6,
+      "runners": [
+        {
+          "horse": "Jaipaletemps",
+          "number": 3,
+          "jockey": "Rian Corcoran(5)",
+          "trainer": "David Pipe",
+          "lastSix": "14214-",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "12/5",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Doctors Hill",
+          "number": 6,
+          "jockey": "Sean Houlihan",
+          "trainer": "Philip Hobbs & Johnson White",
+          "lastSix": "62663-",
+          "draw": null,
+          "weight": "10-7",
+          "marketSnapshot": "100/30",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Escapeandevade",
+          "number": 1,
+          "jockey": "Calum Hogan(5)",
+          "trainer": "Harry Derham",
+          "lastSix": "12P20-",
+          "draw": null,
+          "weight": "12-0",
+          "marketSnapshot": "100/30",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Excelero",
+          "number": 2,
+          "jockey": "Ciaran Gethings",
+          "trainer": "Mrs Jane Williams",
+          "lastSix": "41444-",
+          "draw": null,
+          "weight": "11-6",
+          "marketSnapshot": "100/30",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Joker de Mai",
+          "number": 4,
+          "jockey": "Richie McLernon",
+          "trainer": "Clive Boultbee-Brooks",
+          "lastSix": "64330-",
+          "draw": null,
+          "weight": "11-3",
+          "marketSnapshot": "4/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Minella Missile",
+          "number": 5,
+          "jockey": "Adam Wedge",
+          "trainer": "Mrs C. Williams",
+          "lastSix": "55P75-",
+          "draw": null,
+          "weight": "10-11",
+          "marketSnapshot": "9/2",
+          "nonRunnerFlag": false
+        }
+      ]
+    }
+  ]
+}
