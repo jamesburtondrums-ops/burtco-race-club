@@ -368,7 +368,7 @@
         "18 Jul 2026 Newmarket Rowley 6f good-to-firm Class4 Flat 1/8 won 0.05L OR69 with today's David Probert",
         "1 Nov 2025 Newmarket Rowley 6f good-to-soft Class4 Flat 7/9 beaten 6.7L OR72"
       ],
-      "deepDatedFinding": "Previous assumption July Newmarket turf wins on different track was WRONG: RacingTV records 18 and 31 JULY both as **Nmj (Newmarket July)**, today's venue Rowley? RacingTV label Nmj Newmarket Jul, `Nmj` maybe is Newmarket July and `Nmk` Rowley? Need check exact course label in profile vs card—avoid asserting the same 6f Rowley layout. 22 Aug good 4/13 within0.8L, rider David Probert also July 18 winner; 1 Nov 2025 good-to-soft 7/9, ground risk. Check course layout difference separately.",
+      "deepDatedFinding": "Spring Bloom's 18 July and 31 July 6f Newmarket wins were at the JULY COURSE, which is distinct from today's October ROWLEY MILE. Summer 22 August was also on July Course. David Probert partnered 18 July victory, providing genuine established horse-rider evidence. 1 Nov 2025 Newmarket on good-to-soft ended 7/9 beaten 6.7L, indicating softening ground a material concern. Do not equate July C&D with today's Rowley C&D.",
       "sourceProfile": "https://www.racingtv.com/profiles/horse/spring-bloom",
       "reviewCompleteness": {
         "atLeastThreePastStartObservations": true,
@@ -457,8 +457,10 @@
     "Yes I'm Mali winning Ripon 1 Sep going was GOOD TO SOFT, not official SOFT",
     "Sierra Sands and Ryan Moore have won together twice at Newmarket, including EXACT 6f in June",
     "The Quiet Gent's trainer change predated Brighton second and Salisbury soft-ground victory, i.e. some trainer-change benefit is already evidenced",
-    "Distant Rumble Salisbury heavy 6f placing supports going potential but not a soft-ground win"
+    "Distant Rumble Salisbury heavy 6f placing supports going potential but not a soft-ground win",
+    "Newmarket July Course dates 18/31 July and 22 Aug are NOT the Rowley layout being raced on 22 Oct: fixture schedule verified separately."
   ],
   "preRaceOnly": true,
-  "noPaperStakes": true
+  "noPaperStakes": true,
+  "layoutVerification": "https://www.newmarketracingclub.com/hospitality/newmarket-fixtures/"
 }
