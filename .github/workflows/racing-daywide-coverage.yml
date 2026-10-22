@@ -1,0 +1,33 @@
+name: Racing daywide completeness check
+
+on:
+  push:
+    branches: [racing-intelligence]
+    paths:
+      - 'data/research/*-all-races-*.json'
+      - 'scripts/validate-daywide-coverage.mjs'
+      - 'scripts/screen-whole-raceday.mjs'
+      - 'tests/racing-whole-day-screen.test.mjs'
+      - '.github/workflows/racing-daywide-coverage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-research-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Require five complete contemporary meeting files
+        run: node scripts/validate-daywide-coverage.mjs data/research/2026-10-22-all-races-manifest.json > racing-daywide-coverage.json
+      - name: Verify race/runner identities and prospective append-only timestamps
+        run: node --test tests/racing-whole-day-screen.test.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: racing-daywide-coverage-2026-10-22
+          path: racing-daywide-coverage.json
+          retention-days: 90
