@@ -3,8 +3,8 @@
   "status": "RACECARD_ID_AND_CONNECTION_RECONCILIATION_ONLY",
   "selectedRaceCount": 5,
   "nonRunnerAndFieldChanges": [
-    "Newmarket 14:55: 10 active vs original 12; Princess Rascal, Too Hot To Tango and Triple Force listed NR by RacingTV, original roster mismatch should be rechecked",
-    "Southwell 18:30: 12 active vs original 13; Gunfighter NR"
+    "Newmarket 14:55: 10 currently active. Triple Force, Princess Rascal and Too Hot To Tango reported non-runners; the saved pre-race snapshot has 12 listed runners. Do not infer identical original and final declarations.",
+    "Southwell 18:30: 12 currently active. Gunfighter and Calyxoh reported non-runners; saved pre-race snapshot has 13 listed runners including Calyxoh but does not include Gunfighter."
   ],
   "allRunners": [
     {
@@ -769,7 +769,7 @@
       "race": "Southwell (AW) 18:30",
       "selectedHorse": "Izzari",
       "rosterSource": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
-      "observedRunnerCount": 11,
+      "observedRunnerCount": 12,
       "oldEntryCount": 13,
       "unmatched": [],
       "fullDeepReviewComplete": false,
@@ -955,6 +955,23 @@
           "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
           "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
           "originalRunnerReview": "Very long-priced older runner, little recent current-class winning evidence",
+          "jockeyBookingPriorPartnership": "NOT_VERIFIED",
+          "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
+          "goingTripEvidenceStatus": "NOT_VERIFIED",
+          "paceAndSectionalsEvidenceStatus": "NOT_VERIFIED",
+          "ratingsInterpretation": "Not automatically favoured by price, jockey name or OR"
+        },
+        {
+          "horse": "Ecclefechan",
+          "jockey": "Christian Howarth",
+          "claimLb": 3,
+          "trainer": "Julia Ryan",
+          "racecardOfficialRating": 71,
+          "racecardWeight": "9-4",
+          "lastSixForm": "117905",
+          "racecardObservation": "2026-10-22 racecard (timestamp not exposed in this feed)",
+          "sourceUrl": "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+          "originalRunnerReview": "Original published research provides racecard-level entry only; runner-specific history needs a fuller check",
           "jockeyBookingPriorPartnership": "NOT_VERIFIED",
           "recentRunDetailedEvidenceStatus": "NOT_VERIFIED",
           "goingTripEvidenceStatus": "NOT_VERIFIED",
