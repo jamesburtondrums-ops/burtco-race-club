@@ -7,14 +7,20 @@
   "scope": {
     "fullFieldReviewed": 6,
     "completeRunnerProfiles": 66,
-    "daywideCoverageComplete": false
+    "daywideCoverageComplete": false,
+    "racecardProgrammesScanned": 5,
+    "allRacesScreened": 40,
+    "activeRunnersFormScreened": 397,
+    "recordedNonRunnerEntries": 31,
+    "allFieldsFullyHistoricalInvestigated": false,
+    "racesWithSpecificHigherDetail": 8
   },
   "originalSnapshotIntegrity": {
     "frozenRacesJsonUnchanged": true,
     "ledgerClearedAndUntouched": true,
     "doNotBackdateCalls": true
   },
-  "priceBasis": "Observed Racing TV comparison at review time; changing and not guaranteed. No accepted bookmaker bet or BOG assumed.",
+  "priceBasis": "Initial four selections' prices frozen at 14:14. New Southwell additions separately dated 14:41. All quotes indicative source snapshots, not accepted bookmaker bets or guaranteed EW fractions.",
   "selections": [
     {
       "horse": "Great Blasket",
@@ -76,6 +82,41 @@
       "mainRisks": "Current OR75 +9lb from latest OR66 win; Rapide Vega and Decalogue have recent wins with booked jockeys; Piazza's narrow Southwell second was 7f, not exact 1m C&D.",
       "researchEvidence": "data/research/2026-10-22-deep-southwell-aw-18-30.json",
       "originalPublicationStatus": "ORIGINAL_WIN_FROZEN_AS_4/1_HERE_IS_NEW_AS_OF_REVIEW"
+    },
+    {
+      "horse": "Filly Eilish",
+      "course": "Southwell",
+      "offLocal": "18:00",
+      "betType": "win",
+      "priceObserved": "10/3 (indicative)",
+      "priceCheckedAt": "2026-10-22T14:41:54+01:00",
+      "rank": "NEW_FULL_PROGRAMME_WIN_RESEARCH",
+      "newlyAddedAfterWholeDayScanAt": "2026-10-22T14:41:54+01:00",
+      "sourceRacecard": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap",
+      "sourceProfile": "https://www.sportinglife.com/racing/profiles/horse/1214739",
+      "runnerCountAtReview": 10,
+      "abilityReason": "Won Southwell standard Tapeta mile (13 runners) on 27 July off OR64; returns from strong Musselburgh 1m1f second. Now OR68 (4lb rise), lower than the OR70 from both later Southwell fifths.",
+      "mainRisks": "Luke Morris was not the July winning jockey (S De Sousa); later two Southwell mile fifths and superior fresh form from Bofa Beach and Medway Queen mean WIN confidence is conditional.",
+      "researchEvidence": "data/research/2026-10-22-whole-field-southwell-18-00.json",
+      "originalPublicationStatus": "NEW_PROSPECTIVE_AFTER_40_RACE_SCREEN; not part of the original frozen five."
+    },
+    {
+      "horse": "Blue Orbit",
+      "course": "Southwell",
+      "offLocal": "20:30",
+      "betType": "each-way",
+      "priceObserved": "6/1 indicated (verify)",
+      "priceCheckedAt": "2026-10-22T14:41:54+01:00",
+      "rank": "NEW_FULL_PROGRAMME_EW_RESEARCH",
+      "newlyAddedAfterWholeDayScanAt": "2026-10-22T14:41:54+01:00",
+      "sourceRacecard": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/live-show/944793/make-the-move-to-midnite-handicap-div-2",
+      "sourceProfile": "https://www.sportinglife.com/racing/profiles/horse/1185545",
+      "runnerCountAtReview": 11,
+      "standardPlaceTermExpectation": "3 standard places expected for 11 runners; fraction and bookmaker-accepted EW offer unverified",
+      "abilityReason": "7 October Kempton 6f second of 11 beaten only 0.75L by Kiniro with the same Luke Morris; Blue Orbit +1lb in handicap OR73 while that winner Kiniro +4lb. Wider field has few recent same-trip form rival winners.",
+      "mainRisks": "Previous Southwell 6f seventh of 13 on 3 October and only career victory at 5f, so exact Tapeta 6f ability less secure than the Kempton Polytrack placing. French Affair has two recent wins on turf, Kiniro remains strong. Odds fluctuate considerably between feeds.",
+      "researchEvidence": "data/research/2026-10-22-whole-field-southwell-20-30.json",
+      "originalPublicationStatus": "NEW_PROSPECTIVE_AFTER_40_RACE_SCREEN; not part of the original frozen five."
     }
   ],
   "notRecommendedForFreshResearch": [
@@ -98,5 +139,30 @@
     "Only the six historically investigated race fields are treated as deep-screened; no claim of exhaustive coverage of all meetings/races today.",
     "Quoted bookmaker prices may change. Each-way place terms must be verified before treating a price as value.",
     "Do not update past race selections after scheduled off time or create any wager."
-  ]
+  ],
+  "wholeProgrammeExpansion": {
+    "reviewedAt": "2026-10-22T14:41:54+01:00",
+    "sourceIndex": "data/research/2026-10-22-all-40-race-screen.json",
+    "newSelections": 2,
+    "originalSelectionsRemainUnchanged": true,
+    "initialFourSelectionReferenceValuesPreserved": true,
+    "withheldResearchExamples": [
+      {
+        "horse": "Irish Nectar",
+        "race": "Newmarket 16:40",
+        "why": "Near-even-money price does not establish margin of value against adverse draw/penalty; some non-runner/price feeds conflict."
+      },
+      {
+        "horse": "Golden Ace",
+        "race": "Carlisle 16:12",
+        "why": "Group 1 ability evident but return after 174 days and high-class Wilful/Rubaud opposition make 6/4 less compelling."
+      },
+      {
+        "horse": "Everyoneknowsadave",
+        "race": "Southwell 17:30",
+        "why": "Proven C&D but latest Redcar sixth and multiple rivals with fresh strong form; no decisive win edge."
+      }
+    ],
+    "note": "The entire 40-race 397-runner programme has first-pass racecard screening only; research added for two later Southwell complete fields, while per-runner chronological historic runs remain incompletely verified for 331 other entrants."
+  }
 }
