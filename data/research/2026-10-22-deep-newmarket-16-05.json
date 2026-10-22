@@ -1,0 +1,464 @@
+{
+  "raceDate": "2026-10-22",
+  "localOff": "16:05",
+  "course": "Newmarket Rowley",
+  "distance": "6f",
+  "raceClass": 4,
+  "going": "Soft",
+  "declaredActive": 12,
+  "nonRunners": [
+    "Court Drive",
+    "Sixtygeesbaby",
+    "Star Chorus"
+  ],
+  "sourceRacecardUpdatedAt": "2026-10-22 09:00:47 local (ATR)",
+  "status": "ALL_12_INDIVIDUAL_RECENT_HISTORIES_AND_JOCKEY_BOOKINGS_ASSESSED",
+  "notPublishedBet": true,
+  "sourceUrls": [
+    "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+    "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605",
+    "https://www.bethq.com/horse-racing/uk/newmarket/2026-10-22/16h05/"
+  ],
+  "caveats": [
+    "No objectively verified full-race pace/sectional reconstruction",
+    "ATR flags high-draw advantage but statistical certainty for this field on soft is unverified",
+    "Bookmaker prices are timestamps/observations, not ability scores",
+    "Trainer intent and new-stable fitness are not directly observable",
+    "No actual bets or paper stakes"
+  ],
+  "runners": [
+    {
+      "horse": "Yes I'm Mali",
+      "draw": 4,
+      "officialRating": 84,
+      "jockey": "Marco Ghiani",
+      "trainer": "David O'Meara",
+      "recentForm": "Soft-ground Ripon 6f win 1 Sep; Class 2 Ripon 6f fourth 26 Sep, beaten 2.5L",
+      "goingTripClass": "3 wins at 6f; today's mark 84 is 1lb below latest; drops in class",
+      "risks": "Top weight; no win at OR84+ in small recorded sample",
+      "jockeyBooking": "No previous horse-jockey rides shown by ATR; pace unknown",
+      "assessment": "PRINCIPAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "26 Sep 2026 Ripon 6f good Class 2 Flat 4/12 beaten 2.45L OR85 (C J Whiteley)",
+        "19 Sep 2026 Newbury 7f good-to-firm Flat 11/16 beaten 4.92L OR85",
+        "1 Sep 2026 Ripon 6f **GOOD TO SOFT** Class 4 Flat 1/10 won 0.2L OR81 (Daniel Tudhope); **NOT official Soft**",
+        "18 Jul 2026 Newmarket Rowley 6f good-to-firm 2/8 beaten 0.05L OR81"
+      ],
+      "deepDatedFinding": "Previous review incorrectly equated good-to-soft 1 Sep Ripon victory with SOFT; actual current going soft is distinct. Repeated Newmarket Rowley 6f close 2nd on faster going, top weight and new Marco Ghiani after Daniel Tudhope winner.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/yes-im-mali-united-kingdom",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Sierra Sands",
+      "draw": 8,
+      "officialRating": 83,
+      "jockey": "Ryan Moore",
+      "trainer": "Ed Dunlop",
+      "recentForm": "Second over this Rowley 6f in September, beaten 4L",
+      "goingTripClass": "6f winner and previous place on comparable going",
+      "risks": "Recent C&D second still 4L behind winner; soft-ground win unproven",
+      "jockeyBooking": "Moore is an experienced booking; horse-specific repeat partnership not established",
+      "assessment": "PRINCIPAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "19 Sep 2026 Newmarket Rowley 6f good Class4 Flat 2/9 beaten 4L OR83 (Callum Shepherd)",
+        "2 Sep 2026 Kempton 7f standard-to-slow Class4 Flat 4/7 beaten 0.9L OR84",
+        "1 Aug 2026 Newmarket Rowley 7f good-to-firm Class4 Flat 4/6 beaten 5.5L OR84",
+        "10 Jul 2026 Newmarket Rowley 7f good-to-firm 1/11 won 0.2L OR82 with today's RYAN MOORE",
+        "25 Jun 2026 Newmarket Rowley **6f good 1/5 won 1L OR78 with today's RYAN MOORE**"
+      ],
+      "deepDatedFinding": "CRITICAL jockey-booking uplift: Ryan Moore ALREADY rode horse to Newmarket Rowley 6f winner 25 June and Rowley 7f winner 10 July. Clear previous successful horse-jockey partnership, not speculative 'champion jockey' factor. Latest Rowley 6f 2nd beaten4L at OR83.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/sierra-sands-ireland",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "The Quiet Gent",
+      "draw": 6,
+      "officialRating": 82,
+      "jockey": "James Doyle",
+      "trainer": "Brian Toomey",
+      "recentForm": "Won at Salisbury 6f on soft in first-time cheekpieces, beating Sergeant Pep by 1L",
+      "goingTripClass": "Ground, distance and last-run form align; only 3lb higher",
+      "risks": "Risk of small-sample first-time headgear response not repeating",
+      "jockeyBooking": "Doyle's previous horse rides not recorded in checked source",
+      "assessment": "PRINCIPAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "11 Sep 2026 Salisbury 6f **SOFT** Class4 Flat 1/8 won 1L OR79 (Callum Rodriguez)",
+        "7 Aug 2026 Brighton 5f215yd good Class4 Flat 2/10 beaten 2L OR79 (David Probert)",
+        "16 Oct 2025 Chelmsford 7f standard Class4 Flat 5/10 beaten 4.25L OR80",
+        "Change of stable Ralph Beckett → Brian Toomey before Brighton runner-up and Salisbury win; James Doyle today's FIRST documented ride"
+      ],
+      "deepDatedFinding": "Brian Toomey stable debut Brighton second then Salisbury soft 6f winner; so stable-change improvement is already evidenced and repeat trainer. James Doyle is NEW, current OR82 +3 from OR79 winner, first-time cheekpieces victory may be repeat but limited sample.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/the-quiet-gent-ireland",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Shaman Champion",
+      "draw": 3,
+      "officialRating": 82,
+      "jockey": "Billy Loughnane",
+      "trainer": "Henrietta Knight",
+      "recentForm": "13th/13 at Kempton 7f latest, beaten 15.5L after reportedly going too fast early; prior close 7f AW efforts",
+      "goingTripClass": "Placed twice on similar going; 6f placed record and drop back to turf sprint",
+      "risks": "No 6f win (0/3); first run for new stable cannot prove fitness or regained form",
+      "jockeyBooking": "Stable debut under Knight; Loughnane previously rode him to 9th in 2025 Windsor Castle Stakes; prior experience established, stable intent unknown",
+      "assessment": "OUTSIDER_WATCH",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "23 Sep 2026 Kempton 7f standard-to-slow Class4 Flat 13/13 beaten 15.32L OR83 (Joe Leavy)",
+        "2 Sep 2026 Kempton 7f standard-to-slow Class4 Flat 5/7 beaten 0.95L OR84 (Rossa Ryan)",
+        "27 Jul 2026 Southwell ~7f Tapeta Class4 Flat 3/10 beaten 0.25L OR83 (P J McDonald)",
+        "1 Aug 2025 Goodwood 6f good-to-soft/soft places Class2 nursery second of 11 beaten neck; new trainer Henrietta Knight after Clive Cox; Billy Loughnane rode previous Ascot Windsor Castle Stakes 9th/23"
+      ],
+      "deepDatedFinding": "Henrietta Knight stable FIRST run, Loughnane rode horse once to Ascot Listed 9th previously, not a recent winner. Strong 2025 Goodwood 6f good-to-soft runner-up at higher class, BUT September Kempton last 13/13 by15.3L, cannot erase this.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/shaman-champion-ireland",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Physique",
+      "draw": 5,
+      "officialRating": 80,
+      "jockey": "Grace McEntee",
+      "trainer": "Michael Fenton",
+      "recentForm": "Ninth/10 beaten 14.5L at Pontefract 6f latest; June Newmarket July win over 7f",
+      "goingTripClass": "Has won on testing ground and Class 4",
+      "risks": "No win in seven 6f attempts; Rowley is not July course",
+      "jockeyBooking": "McEntee has 1 win from 8 recorded rides with horse",
+      "assessment": "WEAK",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "5 Oct 2026 Pontefract 6f good Class3 Flat 9/10 beaten 14.3L OR82 with today's Grace McEntee",
+        "23 Sep 2026 Kempton 7f slow Class4 Flat 10/13 beaten 7.32L OR84 with McEntee",
+        "4 Sep 2026 Kempton 7f slow Class4 Flat 4/13 beaten 3.75L OR85 with McEntee",
+        "11 Jul 2026 Newmarket July 7f good-to-firm C2 12/13 beaten9.65L; earlier July 7f winning form is historical"
+      ],
+      "deepDatedFinding": "Grace McEntee familiar rider but most recent three times with her 9th, 10th, 4th; consistent rider booking isn't positive without corresponding form. Latest 6f beaten14.3L; 7f victories do not prove same 6f.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/physique",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Mo Of Cairo",
+      "draw": 14,
+      "officialRating": 79,
+      "jockey": "Toby Moore (7lb)",
+      "trainer": "Kevin Ryan",
+      "recentForm": "Fourth/13 at Redcar 5f latest beaten 2.25L; recent form includes second",
+      "goingTripClass": "7lb claim offsets carried weight; high draw may help if bias proves real",
+      "risks": "0 wins from six 6f attempts and soft-ground win unproven",
+      "jockeyBooking": "Claimed seven pounds and no prior horse partnership in ATR history",
+      "assessment": "CONDITIONAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "3 Oct 2026 Redcar 5f good Class4 Flat 4/13 beaten 2.25L OR78 (Kevin Stott)",
+        "30 Sep 2026 Musselburgh 5f good Class4 Flat 2/12 beaten 0.5L OR78 (Kevin Stott)",
+        "13 Sep 2026 Doncaster 6f good Class4 Flat 5/16 beaten 2.12L OR79 (Jack Nicholls)",
+        "20 Aug 2025 York 6f good Class2 Flat 2/19 beaten 0.1L OR81; Toby Moore 7lb new rider"
+      ],
+      "deepDatedFinding": "7lb Toby Moore claim brings lighter effective burden, but today's jockey has no previously documented rides with horse; Kevin Stott paired on 2 recent positive 5f starts, now also extends back to 6f where hasn't won. High draw possible but not causal.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/mo-of-cairo-united-kingdom",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Golden Brown",
+      "draw": 7,
+      "officialRating": 77,
+      "jockey": "Kieran Shoemark",
+      "trainer": "Ed Walker",
+      "recentForm": "Tenth/14 at Salisbury over 6f soft, beaten 6L",
+      "goingTripClass": "Has 6f and Class 4 win in record; cheekpieces now first time",
+      "risks": "0 wins from five similar-going starts; recent form poor",
+      "jockeyBooking": "Shoemark recorded 0 wins and 1 place in 3 prior rides",
+      "assessment": "WEAK",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "1 Oct 2026 Salisbury 6f GOOD TO SOFT Class4 Flat 10/14 beaten 6L OR79",
+        "19 Sep 2026 Chester 6f heavy Class4 Flat 7/10 beaten 6.15L OR80",
+        "4 Sep 2026 Ascot 7f good Class4 Flat 3/8 beaten 1.7L OR81",
+        "23 May 2026 Salisbury 6f good Flat 1/12 won 0.5L unrated maiden; first-time cheekpieces today; Shoemark has ridden horse before"
+      ],
+      "deepDatedFinding": "Fresh first-time cheekpieces, prior Salisbury 6f race win in 2026 but worse recent going-matched 6f 10/14 and heavy 7/10; same Shoemark not proven resurgence.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/golden-brown-ireland",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Space Party",
+      "draw": 2,
+      "officialRating": 77,
+      "jockey": "Nicola Currie",
+      "trainer": "Henry Candy",
+      "recentForm": "Second of nine beaten a nose on Kempton 6f AW handicap debut at OR77",
+      "goingTripClass": "Three places from four 6f starts; same jockey has 3 places in 3 rides",
+      "risks": "No wins in four; soft ground untested; stall 2 may be unfavourable if high-side bias emerges",
+      "jockeyBooking": "Currie has prior horse-specific familiarity, rather than speculative booking intent",
+      "assessment": "PRINCIPAL_PLACE",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "5 Oct 2026 Kempton 6f standard-to-slow Class4 Flat 2/9 beaten 0.02L OR77 with today's Nicola Currie",
+        "16 Aug 2026 Southwell 6f Tapeta Class4 Flat 3/10 beaten 4.5L with Nicola Currie",
+        "25 May 2026 Windsor 6f good-to-firm Class4 Flat 2/4 beaten 0.75L with Tom Marquand",
+        "24 Apr 2026 Doncaster 6f good-to-firm Class4 Flat 3/14 beaten 3.45L with Nicola Currie; zero documented SOFT runs"
+      ],
+      "deepDatedFinding": "Nicola Currie partnered latest Kempton beaten nose and Southwell third, rider familiarity REAL. Four starts four top-three and 0 wins; all prior turf tests good-to-firm, SOFT today has no empirical form proof.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/space-party-ireland",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Distant Rumble",
+      "draw": 11,
+      "officialRating": 75,
+      "jockey": "Lewis Edmunds",
+      "trainer": "Roger Teal",
+      "recentForm": "Won Windsor 6f two runs ago by 4.25L off OR68; third/10 at Bath latest at OR75",
+      "goingTripClass": "Four 6f wins; one soft-comparable going win; last third from today's mark",
+      "risks": "No Class 4 win in seven recorded starts; rise from recent winning mark",
+      "jockeyBooking": "Edmunds has one place in three horse rides; higher draw might help",
+      "assessment": "EACH_WAY_WATCH",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "29 Sep 2026 Bath ~6f firm Class5 Flat 3/10 beaten 1.25L OR75 with today's Lewis Edmunds",
+        "14 Sep 2026 Windsor 6f good Class5 Flat 1/13 won 4.25L OR68 with Marco Ghiani",
+        "7 Sep 2026 Windsor 6f good-to-firm Class5 Flat 9/13 beaten 6.4L OR68",
+        "9 Jun 2026 Salisbury 6f **HEAVY** Class5 Flat 3/10 beaten 0.7L OR70 with Oisin Murphy; soft ability as PLACE not win"
+      ],
+      "deepDatedFinding": "June Salisbury 6f HEAVY third beaten0.7L offers more relevant testing-ground evidence than initial general historical review. Today's Lewis Edmunds had Bath 3rd off today's OR75; Windsor 6f victory with Marco Ghiani was Class5 off OR68, now Class4 +7lb.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/distant-rumble-united-kingdom",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Spring Bloom",
+      "draw": 9,
+      "officialRating": 74,
+      "jockey": "David Probert",
+      "trainer": "John Butler",
+      "recentForm": "Won two Newmarket July 6f handicaps in July; fourth/13 at that track 22 August, beaten 1L",
+      "goingTripClass": "Four 6f wins; established jockey: 1 win in 3 rides",
+      "risks": "61-day gap; 0 soft-comparable wins from five; July versus Rowley is different layout",
+      "jockeyBooking": "Probert has prior winning familiarity with horse",
+      "assessment": "CONDITIONAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "22 Aug 2026 Newmarket Rowley 6f good Class4 Flat 4/13 beaten 0.8L OR74 with today's David Probert",
+        "7 Aug 2026 Newmarket Rowley 6f good-to-firm Class4 Flat 3/10 beaten 0.7L OR75",
+        "31 Jul 2026 Newmarket Rowley 6f good-to-firm Class5 Flat 1/10 won 0.2L OR71",
+        "18 Jul 2026 Newmarket Rowley 6f good-to-firm Class4 Flat 1/8 won 0.05L OR69 with today's David Probert",
+        "1 Nov 2025 Newmarket Rowley 6f good-to-soft Class4 Flat 7/9 beaten 6.7L OR72"
+      ],
+      "deepDatedFinding": "Previous assumption July Newmarket turf wins on different track was WRONG: RacingTV records 18 and 31 JULY both as **Nmj (Newmarket July)**, today's venue Rowley? RacingTV label Nmj Newmarket Jul, `Nmj` maybe is Newmarket July and `Nmk` Rowley? Need check exact course label in profile vs card—avoid asserting the same 6f Rowley layout. 22 Aug good 4/13 within0.8L, rider David Probert also July 18 winner; 1 Nov 2025 good-to-soft 7/9, ground risk. Check course layout difference separately.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/spring-bloom",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Robert Anstruther",
+      "draw": 15,
+      "officialRating": 74,
+      "jockey": "Harry Davies",
+      "trainer": "Henry Candy",
+      "recentForm": "Thirteenth/15 at Goodwood 6f latest; earlier 6f win and second",
+      "goingTripClass": "High draw and previous 6f winner are possibilities",
+      "risks": "Soft suitability unproven and Class 4 winless (0/4)",
+      "jockeyBooking": "Davies' previous rides on horse not shown in checked evidence",
+      "assessment": "CONDITIONAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "23 Sep 2026 Goodwood 6f good-to-firm Class4 Flat 13/15 beaten 7.9L OR75",
+        "31 Jul 2026 Newmarket Rowley 6f good-to-firm Class5 Flat 2/10 beaten 0.2L OR73",
+        "17 Jul 2026 Nottingham 6f good-to-firm Class5 Flat 1/7 won 2.5L OR66",
+        "29 Jun 2026 Windsor 6f good-to-firm Class5 Flat 3/9 beaten 2.5L OR67; Harry Davies new, soft untested"
+      ],
+      "deepDatedFinding": "Recent Nottingham 6f winner by 2.5L off OR66 then Newmarket 6f 2nd by0.2 OR73 demonstrates ability, BUT Goodwood recent 13th/15, OR74 and soft ground untested. Harry Davies new rider.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/robert-anstruther-united-kingdom",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    },
+    {
+      "horse": "Kimbara",
+      "draw": 1,
+      "officialRating": 71,
+      "jockey": "Saffie Osborne",
+      "trainer": "Richard Spencer",
+      "recentForm": "Seventh/13 at Yarmouth over 6f good-to-soft latest, beaten about 8L",
+      "goingTripClass": "Low weight; Osborne has two horse-specific placings from two rides",
+      "risks": "0/8 lifetime win record; latest similar ground disappointment; low draw",
+      "jockeyBooking": "Two previous places with Osborne, but current ability remains unverified",
+      "assessment": "WEAK",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ],
+      "previousRuns": [
+        "12 Oct 2026 Yarmouth 6f good Class5 Flat 7/13 beaten 8L OR71",
+        "15 Aug 2026 Lingfield 6f Polytrack standard Class5 Flat 3/8 beaten 3.8L OR72",
+        "10 Jul 2026 Newmarket Rowley 7f good-to-firm Class4 Flat 10/11 beaten 6.45L OR73",
+        "12 Jun 2026 Sandown 7f GOOD TO SOFT Class5 Flat 2/10 beaten0.5L OR72 with today's Saffie Osborne; not yet won"
+      ],
+      "deepDatedFinding": "Saffie Osborne partnered Sandown 7f good-to-soft 2/10 beaten 0.5L and Yarmouth 7f firm 3rd; actual rider familiarity but today's 6f and soft vs Sandown 7f, nearest recent Yarmouth 6f 7/13 beaten8L.",
+      "sourceProfile": "https://www.racingtv.com/profiles/horse/kimbara-united-kingdom",
+      "reviewCompleteness": {
+        "atLeastThreePastStartObservations": true,
+        "onePrimaryProfileRecordVerified": true,
+        "jockeyAndTrainerBookingIdentified": true,
+        "tripGoingMarkCompared": true,
+        "quantitativePaceModel": false,
+        "trainerJockeyPairStatistics": false
+      }
+    }
+  ],
+  "evidenceAsOf": "2026-10-22 pre-race",
+  "racecard": "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+  "modelStatus": "NO_CALIBRATED_PROBABILITIES_OR_VERIFIED_COMPLETE_SECTIONALS",
+  "correctedEarlierErrors": [
+    "Yes I'm Mali winning Ripon 1 Sep going was GOOD TO SOFT, not official SOFT",
+    "Sierra Sands and Ryan Moore have won together twice at Newmarket, including EXACT 6f in June",
+    "The Quiet Gent's trainer change predated Brighton second and Salisbury soft-ground victory, i.e. some trainer-change benefit is already evidenced",
+    "Distant Rumble Salisbury heavy 6f placing supports going potential but not a soft-ground win"
+  ],
+  "preRaceOnly": true,
+  "noPaperStakes": true
+}
