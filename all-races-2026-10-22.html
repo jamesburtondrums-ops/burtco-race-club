@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#153b32"><meta name="description" content="All 40 races and 397 active runners at the five UK and Irish horse racing meetings on Thursday 22 October 2026. First-pass independent field screening.">
+<title>Whole-day Racing Screen · Racing Intelligence</title>
+<style>
+:root{--bg:#f3f8f4;--white:#fff;--ink:#173b30;--muted:#698076;--line:#d5e4da;--green:#176444;--pale:#e6f2e9}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,"Segoe UI",sans-serif}
+header{background:linear-gradient(120deg,#123a2a,#2a6a4d);color:white;padding:25px 20px 65px}
+header>div,main{max-width:1180px;margin:auto}header h1{font-size:clamp(27px,4vw,38px);margin:20px 0 5px;line-height:1.15}header p{color:#e1f2e5;max-width:780px;font-size:15px}nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}nav a{color:#e1f4e8;text-decoration:none;font-weight:700;font-size:12px}
+main{padding:0 18px 40px}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:-42px;position:relative}.metric{background:white;border:1px solid var(--line);border-radius:14px;padding:13px 17px;box-shadow:0 10px 20px #10392b0b}.metric strong{display:block;font-size:26px}.metric small{font-size:12px;color:var(--muted)}
+.warning{border:1px solid #d1e4d7;background:#eaf3ed;padding:14px 17px;border-radius:12px;margin:17px 0}.warning strong{display:block}.filters{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;margin:20px 0}.filters>div{flex:1;min-width:170px}.filters label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:5px}.filters select,.filters input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:white;color:var(--ink);font:inherit}
+.meeting{margin:30px 0}.meeting h2{font-size:19px}.race{margin:12px 0;border:1px solid var(--line);border-radius:13px;background:white;overflow:hidden}.race summary{padding:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}.race summary::-webkit-details-marker{display:none}.race summary:after{content:"＋";font-size:19px;color:var(--green)}.race[open] summary:after{content:"−"}.off{font-weight:800}.passed{opacity:.58}.title{font-weight:650}.sub{font-size:12px;color:var(--muted)}.data{padding:0 15px 15px}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:650px;font-size:12px}th{text-align:left;color:var(--muted);font-size:11px;border-bottom:1px solid var(--line);padding:9px 7px}td{padding:8px 7px;border-bottom:1px solid #e8f0e9}tr:last-child td{border:0}.noterow{padding:9px 0;color:#6b776d;font-size:12px}.nr{background:#fcf7f1}.tag{font-weight:700;color:var(--green);font-size:11px}.source{display:flex;gap:12px;flex-wrap:wrap;padding-top:11px}.source a{color:var(--green);font-weight:650}.empty{padding:22px}.footer{color:var(--muted);font-size:12px;margin-top:30px}
+@media(max-width:650px){.summary{gap:5px}.metric{padding:9px}.metric strong{font-size:20px}.metric small{font-size:10px}.filters>div{min-width:140px}.race summary{padding:11px}}
+</style></head>
+<body>
+<header><div><nav><strong>RACING INTELLIGENCE</strong><span><a href="./">Main site ↗</a> · <a href="./selections-2026-10-22.html">Clear selections ↗</a> · <a href="./full-field-2026-10-22.html">66-runner deep review ↗</a></span></nav>
+<h1>Every race. Every declared runner.</h1><p>Five UK and Irish meetings, Thursday 22 October 2026. Complete source-derived field screening, with stricter research required before identifying actual WIN or each-way prospects.</p></div></header>
+<main><div class="summary"><div class="metric"><strong id="nMeet">5</strong><small>Meetings</small></div><div class="metric"><strong id="nRace">40</strong><small>Racecards</small></div><div class="metric"><strong id="nHorse">397</strong><small>Active runners</small></div><div class="metric"><strong id="nNr">31</strong><small>Declared NR entries</small></div></div>
+<div class="warning"><strong>What has been checked, and what hasn't</strong>All current racecards, horse identities, reported non-runners, abbreviated recent form, trainers and jockeys have been screened. The order shown inside each race is only an uncalibrated form-first research index — <b>not a probability, race ranking or recommended bet</b>. Complete dated past-run investigations exist for six races separately. No prediction or stake is created by this page.</div>
+<div class="filters"><div><label for="meeting">Meeting</label><select id="meeting"><option value="all">All courses</option></select></div><div><label for="period">Race status</label><select id="period"><option value="upcoming">Still to run</option><option value="all">All races</option><option value="passed">Past off-time</option></select></div><div><label for="query">Runner / jockey / trainer</label><input id="query" type="search" placeholder="Search all active and withdrawn..."></div></div>
+<div id="app"><p>Loading all five racing programmes…</p></div>
+<p class="footer">Racecard observations are recorded source snapshots and may be superseded by later withdrawals, going changes or revised bookmaker terms. This screen does not validate 397 complete horse histories, trainer-course splits or sectional timings. Historical original selections and the cleared paper-bet ledger are unchanged.</p>
+</main>
+<script type="module">
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]));
+const m=document.getElementById('meeting'),period=document.getElementById('period'),q=document.getElementById('query'),app=document.getElementById('app');
+const dateUK=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const timeUK=()=>new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date());
+let data=[];
+const names={'newmarket':'Newmarket','ffos-las':'Ffos Las','clonmel':'Clonmel','carlisle':'Carlisle','southwell':'Southwell'};
+function render(){
+ const now=dateUK(),clock=timeUK(),search=q.value.trim().toLowerCase(),group={},off=(r)=>now>'2026-10-22'||(now==='2026-10-22'&&clock>=r.off);
+ for(const r of data){
+   const gone=off(r);if(m.value!=='all'&&m.value!==r.course)continue;
+   if(period.value==='upcoming'&&gone||period.value==='passed'&&!gone)continue;
+   const matching=r.fullField.filter(x=>[x.horse,x.trainer,x.jockey,x.lastSix].join(' ').toLowerCase().includes(search));
+   const withdrawn=r.nonRunners.filter(x=>x.toLowerCase().includes(search));
+   if(search&&!matching.length&&!withdrawn.length)continue;
+   (group[r.course]??=[]).push({...r,visible:search?matching:r.fullField,matchedNR:search?withdrawn:r.nonRunners,gone});
+ }
+ app.innerHTML='';
+ let count=0;
+ for(const c of Object.keys(names)){
+  const rows=group[c];if(!rows?.length)continue;count+=rows.length;
+  const section=document.createElement('section');section.className='meeting';
+  section.innerHTML='<h2>'+names[c]+' <span class="sub">· '+rows.length+' races</span></h2>';
+  for(const x of rows){
+   const d=document.createElement('details');d.className='race'+(x.gone?' passed':'');
+   const show=esc(x.name),nr=x.nonRunners.length;
+   const tr=x.visible.map(p=>'<tr><td><strong>'+esc(p.horse)+'</strong></td><td>'+esc(p.lastSix)+'</td><td>'+esc(p.jockey)+'</td><td>'+esc(p.trainer)+'</td><td>'+esc(p.weight)+'</td></tr>').join('');
+   const nrRows=x.matchedNR.map(p=>'<tr class="nr"><td><strong>'+esc(p)+'</strong> (withdrawn)</td><td>NR</td><td colspan="3">Do not include in fresh selections</td></tr>').join('');
+   const qs=(x.visible.length+x.matchedNR.length);
+   d.innerHTML='<summary><div><div class="off">'+esc(x.off)+' <span class="title">'+show+'</span></div><div class="sub">'+(x.gone?'Off-time passed · ':'')+x.active+' active · '+nr+' withdrawn · '+esc(x.conditions)+'</div></div></summary>'+
+     '<div class="data"><div class="noterow">'+x.visible.length+' form-screened horses shown. This is a comparison queue, not an assessed winner list.</div>'+
+     '<div class="scroll"><table><thead><tr><th>Horse</th><th>Last-six form</th><th>Jockey</th><th>Trainer</th><th>Wt</th></tr></thead><tbody>'+tr+nrRows+'</tbody></table></div>'+
+     '<div class="source"><a target="_blank" rel="noopener noreferrer" href="'+esc(x.source)+'">Source racecard ↗</a><a target="_blank" rel="noopener noreferrer" href="selections-2026-10-22.html">Dated selections ↗</a></div></div>';
+   section.appendChild(d);
+  }
+  app.appendChild(section);
+ }
+ if(!count)app.innerHTML='<div class="empty">No races matching these filters.</div>';
+}
+try{
+ const r=await fetch('./data/research/2026-10-22-all-40-race-screen.json',{cache:'no-store'});if(!r.ok)throw Error('Racecard source not deployed: '+r.status);
+ const x=await r.json();data=x.races;
+ document.getElementById('nMeet').textContent=x.totalMeetings;document.getElementById('nRace').textContent=x.totalRaces;
+ document.getElementById('nHorse').textContent=x.totalActive;document.getElementById('nNr').textContent=x.nonRunnerEntries;
+ for(const c of Object.keys(names)){const z=document.createElement('option');z.value=c;z.textContent=names[c];m.appendChild(z)}
+ [m,period,q].forEach(el=>el.addEventListener(el===q?'input':'change',render));render();
+}catch(e){app.innerHTML='<div class="empty">Unable to load racecard screen: '+esc(e.message)+'</div>'}
+</script></body></html>
