@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-22",
+  "reviewedAt": "2026-10-22T14:37:28+01:00",
+  "race": "Southwell 20:30",
+  "offLocal": "20:30",
+  "going": "Standard Tapeta",
+  "distance": "6f17y",
+  "clazz": "Class 4 handicap",
+  "sourceRacecard": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2",
+  "sourceType": "PUBLIC_RACECARD_FORM_COMPARISON_AND_SELECTED_HORSE_PAST_RUNS",
+  "status": "WHOLE_FIELD_INDIVIDUAL_BETTER_THAN_ABBREVIATED_FORM_REVIEW; NUMERIC_PACE_AND_JOCKEY_STATS_UNKNOWN",
+  "runners": [
+    {
+      "horse": "Moving Force",
+      "officialRating": 81,
+      "jockey": "Daniel Muscutt",
+      "trainer": "Mark Loughnane",
+      "recentForm": "287233",
+      "positiveEvidence": "Three consecutive placings, latest Kempton 6f 3rd/10 17 days ago, strong present fitness",
+      "risks": "Winless since debut and carries top weight 9-13; field has winners able to progress",
+      "assessment": "STRONG_PLACE_RIVAL",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "French Affair",
+      "officialRating": 81,
+      "jockey": "Sean D Bowen",
+      "trainer": "Jennie Candlish",
+      "recentForm": "611353",
+      "positiveEvidence": "Won 26-runner Goodwood 6f then Redcar 6f for new yard, further Ayr Bronze Cup 5th on soft, Kempton 6f 3rd 2 weeks ago",
+      "risks": "Wins achieved on good-to-firm turf not Tapeta, OR81 and 9-12; AW sprint suitability to verify",
+      "assessment": "MAJOR_RIVAL",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "Papa Cocktail",
+      "officialRating": 80,
+      "jockey": "Jason Hart",
+      "trainer": "Michael Herrington",
+      "recentForm": "364100",
+      "positiveEvidence": "Won Southwell exact C&D decisively in September, useful recent surface-specific winning ability",
+      "risks": "Two consecutive subsequent poor starts, heavier mark/pace headwinds possible",
+      "assessment": "COURSE_WINNER_RISK",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "Kiniro",
+      "officialRating": 79,
+      "jockey": "Jason Watson",
+      "trainer": "Dan Horsford",
+      "recentForm": "283791",
+      "positiveEvidence": "7 Oct Kempton 6f won 11-runner handicap by 0.75L, previously beat Blue Orbit on same day; +4lb OR to79",
+      "risks": "Winning jockey Oisin Murphy replaced by Jason Watson; Southwell Tapeta (not Kempton Polytrack) suitability unproven under fresh OR",
+      "assessment": "STRONG_WIN_RIVAL_PRICE_SHORT",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "Stanley Spencer",
+      "officialRating": 77,
+      "jockey": "O McSweeney",
+      "trainer": "Fionn McSharry",
+      "recentForm": "920800",
+      "positiveEvidence": "Previous Southwell 6f C&D winner and other AW form",
+      "risks": "Since transfer last 4 starts on turf disappointing; new-stable current form weak",
+      "assessment": "VALUE_WATCH_ONLY",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "Arduis Invicta",
+      "officialRating": 78,
+      "jockey": "William Pyle",
+      "trainer": "Craig Lidster",
+      "recentForm": "409130",
+      "positiveEvidence": "Won Doncaster Class4 6f then Pontefract 3rd/14 beaten1.5L, shows recent class",
+      "risks": "Last Ayr 6f heavy 10/11; Southwell surface and this current mark uncertainty",
+      "assessment": "CONDITIONAL",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "Em Four",
+      "officialRating": 76,
+      "jockey": "William Carver",
+      "trainer": "Jamie Osborne",
+      "recentForm": "851505",
+      "positiveEvidence": "Four wins in 19 this season, last Brighton August, useful winter all-weather; Kempton 6f fifth 17d ago",
+      "risks": "Poor recent 1/5 form and high stall11 may influence tactics; does not have stronger current exact C&D than Papa Cocktail",
+      "assessment": "OUTSIDER_CONTENDER",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "Paradise Walk",
+      "officialRating": 77,
+      "jockey": "Hector Crouch",
+      "trainer": "Ralph Beckett",
+      "recentForm": "114084",
+      "positiveEvidence": "Came from rear into fourth at Southwell 5f last time; return to 6f won Nottingham earlier June, fairly well handicapped",
+      "risks": "First-time blinkers/repeat recent 4th may be horse fitness instead of improvement; known Southwell 6f course win not shown",
+      "assessment": "CONDITIONAL",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "Roberto Caro",
+      "officialRating": 73,
+      "jockey": "Mikey Sheehy",
+      "trainer": "Adrian Keatley",
+      "recentForm": "000746",
+      "positiveEvidence": "Better at Ripon September seventh and tongue strap restored",
+      "risks": "Recent results mostly unplaced, multiple weak runs",
+      "assessment": "WEAK",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "Blue Orbit",
+      "officialRating": 73,
+      "jockey": "Luke Morris",
+      "trainer": "Tom Ward",
+      "recentForm": "054672",
+      "positiveEvidence": "7 Oct Kempton Polytrack 6f 2nd/11 beaten 0.75L by Kiniro at OR72 with Luke Morris; now +1lb while Kiniro +4lb; same rider; stable 2nd run under Tom Ward",
+      "risks": "3 Oct Southwell TAPETA 6f finished 7th/13 at OR72 with different jockey; career 6f winless, only 5f win at 2yo, genuine surface win risk",
+      "assessment": "NEW_EW_CANDIDATE",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    },
+    {
+      "horse": "Army Bugler",
+      "officialRating": 73,
+      "jockey": "Edward Greatrex",
+      "trainer": "Warren Greatrex",
+      "recentForm": "147-628",
+      "positiveEvidence": "Ffos Las 6f runner-up after layoff wearing cheekpieces, indicates some talent",
+      "risks": "Subsequent Bath 6f eighth and form hasn't worked out",
+      "assessment": "WEAK",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944793/make-the-move-to-midnite-handicap-div-2"
+    }
+  ],
+  "shortlist": [
+    "Blue Orbit"
+  ],
+  "evidenceGaps": [
+    "Most opposing runners not independently reconstructed for all their prior starts; primarily source-backed individual racecard records",
+    "No objective sectionals/field-relative pace metrics",
+    "No independent calibrated win/place probability",
+    "Bookmaker EW place terms/price must be checked before fresh recommendation"
+  ],
+  "noBetsCreated": true,
+  "frozenOriginalUnchanged": true
+}
