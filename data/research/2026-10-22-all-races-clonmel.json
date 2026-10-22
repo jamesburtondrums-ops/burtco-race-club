@@ -1,0 +1,1062 @@
+{
+  "date": "2026-10-22",
+  "course": "clonmel",
+  "source": "https://www.horseracingbetting.co.uk/tracks/clonmel/",
+  "sourceType": "RACECARD_FORM_SCREENING_NOT_DEEP_HISTORY",
+  "collectedAt": "2026-10-22 afternoon, exact page timestamp unavailable",
+  "races": [
+    {
+      "off": "13:35",
+      "name": "Crottys Lake Maiden Hurdle",
+      "conditions": "2m 1f· Prize: €7,200",
+      "declared": 14,
+      "active": 12,
+      "runners": [
+        {
+          "horse": "World As One",
+          "number": 12,
+          "jockey": "Paul Townend",
+          "trainer": "Mr W. P. Mullins",
+          "lastSix": "-4532B",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "15/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Detroit Maverick",
+          "number": 5,
+          "jockey": "Jack Kennedy",
+          "trainer": "Gordon Elliott",
+          "lastSix": "/225-3",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "8/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "George Dundee",
+          "number": 6,
+          "jockey": "Danny Power(7)",
+          "trainer": "Terence O'Brien",
+          "lastSix": "57-510",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "11/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Bishop Of Rome",
+          "number": 0,
+          "jockey": "Mike O'Connor",
+          "trainer": "Henry de Bromhead",
+          "lastSix": "4",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "11/1",
+          "nonRunnerFlag": true
+        },
+        {
+          "horse": "City Of Cork",
+          "number": 4,
+          "jockey": "J J Slevin",
+          "trainer": "Joseph Patrick O'Brien",
+          "lastSix": "734-",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Rond Point",
+          "number": 10,
+          "jockey": "Philip Byrnes",
+          "trainer": "William Durkan",
+          "lastSix": "F2-44",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ozark Daze",
+          "number": 9,
+          "jockey": "Ricky Doyle",
+          "trainer": "Gearoid O'Loughlin",
+          "lastSix": "6",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Cayo Pirata",
+          "number": 3,
+          "jockey": "Danny Gilligan",
+          "trainer": "P Corcoran",
+          "lastSix": "-",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ddakji",
+          "number": 13,
+          "jockey": "Conor Smithers(7)",
+          "trainer": "Conor Houlihan",
+          "lastSix": "0-986",
+          "draw": null,
+          "weight": "11-11",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Minella Maverick",
+          "number": 8,
+          "jockey": "Daniel King",
+          "trainer": "John Patrick Ryan",
+          "lastSix": "0",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ballyteigue Bay",
+          "number": 1,
+          "jockey": "Ross Berry(7)",
+          "trainer": "J A Berry",
+          "lastSix": "30P-85",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Little An Often",
+          "number": 14,
+          "jockey": "Thomas O'Connor(7)",
+          "trainer": "Mark Fahey",
+          "lastSix": "88",
+          "draw": null,
+          "weight": "11-11",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ilen's Dream",
+          "number": 0,
+          "jockey": "Aidan Kelly",
+          "trainer": "Gearoid O'Loughlin",
+          "lastSix": "8",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": true
+        },
+        {
+          "horse": "The Yellow Capri",
+          "number": 11,
+          "jockey": "Alan O'Sullivan(5)",
+          "trainer": "Eugene M O'Sullivan",
+          "lastSix": "0",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "14:10",
+      "name": "Kilclooney Woods (Q.R.) Handicap Hurdle",
+      "conditions": "2m 1f· Prize: €6,000",
+      "declared": 16,
+      "active": 16,
+      "runners": [
+        {
+          "horse": "Pahlavi",
+          "number": 1,
+          "jockey": "Mr J L Gleeson",
+          "trainer": "John Joseph Hanlon",
+          "lastSix": "P56341",
+          "draw": null,
+          "weight": "12-4",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Chesterbaylad",
+          "number": 14,
+          "jockey": "Mr R M McParland(7)",
+          "trainer": "Ms Helen P Markham",
+          "lastSix": "274180",
+          "draw": null,
+          "weight": "10-13",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Lake Chad",
+          "number": 2,
+          "jockey": "Miss T M Condon(7)",
+          "trainer": "Philip Fenton",
+          "lastSix": "201-88",
+          "draw": null,
+          "weight": "12-2",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Hashtag Doyen",
+          "number": 5,
+          "jockey": "Mr D Doyle(5)",
+          "trainer": "Mark Fahey",
+          "lastSix": "5P-403",
+          "draw": null,
+          "weight": "11-10",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Crypto Crash",
+          "number": 9,
+          "jockey": "Mr A P Ryan(3)",
+          "trainer": "David Kenneth Budds",
+          "lastSix": "69F1R5",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Good Bye Milan",
+          "number": 13,
+          "jockey": "Miss Georgie Benson(7)",
+          "trainer": "Gillian Scott",
+          "lastSix": "9/30-0",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Maxicourt",
+          "number": 6,
+          "jockey": "Mr M J McGrath(7)",
+          "trainer": "Patrick J Duffy",
+          "lastSix": "37538U",
+          "draw": null,
+          "weight": "11-9",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Volez Vous",
+          "number": 16,
+          "jockey": "Miss P Elvin(7)",
+          "trainer": "P J Rothwell",
+          "lastSix": "P0-997",
+          "draw": null,
+          "weight": "10-10",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Old Kenmare",
+          "number": 8,
+          "jockey": "Ms A T O'Reilly(7)",
+          "trainer": "Eamon Courtney",
+          "lastSix": "2/F84-",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Dark Lieutenant",
+          "number": 4,
+          "jockey": "Mr D O'Sullivan(7)",
+          "trainer": "P A Fahy",
+          "lastSix": "6008U-",
+          "draw": null,
+          "weight": "11-10",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ballyredinkingston",
+          "number": 15,
+          "jockey": "Mr S Cotter(7)",
+          "trainer": "John Patrick Ryan",
+          "lastSix": "0B-666",
+          "draw": null,
+          "weight": "10-11",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Romella",
+          "number": 10,
+          "jockey": "Mr H C Swan",
+          "trainer": "Brendan Maurice Walsh",
+          "lastSix": "8770-0",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Glengarriff",
+          "number": 3,
+          "jockey": "Mr Finian Maguire",
+          "trainer": "Patrick Downey",
+          "lastSix": "0-0038",
+          "draw": null,
+          "weight": "12-0",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Feet On The Ground",
+          "number": 12,
+          "jockey": "Mr L P Shanahan(7)",
+          "trainer": "James William Hannon",
+          "lastSix": "-367P0",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Kelly's Cosmos",
+          "number": 7,
+          "jockey": "Mr J Dunne(7)",
+          "trainer": "Eoin Christopher McCarthy",
+          "lastSix": "-60004",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Frontier Rose",
+          "number": 11,
+          "jockey": "Mr B M Coonan(7)",
+          "trainer": "Thomas Coyle",
+          "lastSix": "086650",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "14:46",
+      "name": "Irish Stallion Farms EBF Mares Maiden Hurdle",
+      "conditions": "2m 4f· Prize: €9,000",
+      "declared": 13,
+      "active": 13,
+      "runners": [
+        {
+          "horse": "Weaponized",
+          "number": 13,
+          "jockey": "Mr R Sugrue(7)",
+          "trainer": "Sean Thomas Doyle",
+          "lastSix": "228",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Cloudy Rosie",
+          "number": 4,
+          "jockey": "Kevin Healy(7)",
+          "trainer": "Richard Morrissey",
+          "lastSix": "332-43",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Wicked Pleasure",
+          "number": 10,
+          "jockey": "Mike O'Connor",
+          "trainer": "Henry de Bromhead",
+          "lastSix": "33-4",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Katie Can't Count",
+          "number": 5,
+          "jockey": "Brian Hayes",
+          "trainer": "Mr W. P. Mullins",
+          "lastSix": "4F62",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Carleys Lilly",
+          "number": 3,
+          "jockey": "Michael Kenneally(3)",
+          "trainer": "John Patrick Ryan",
+          "lastSix": "935478",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Red Acres Georgie",
+          "number": 7,
+          "jockey": "Danny Mullins",
+          "trainer": "Anthony Mullins",
+          "lastSix": "77-F42",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Shadonagh",
+          "number": 9,
+          "jockey": "Eoghan Finegan(5)",
+          "trainer": "Ciaran Murphy",
+          "lastSix": "45-043",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ballito Beauty",
+          "number": 1,
+          "jockey": "John Shinnick",
+          "trainer": "Mrs Lorna Fowler",
+          "lastSix": "247",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Lyla Gift",
+          "number": 6,
+          "jockey": "Phillip Enright",
+          "trainer": "Patrick John Kiely",
+          "lastSix": "",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Bayswater Bloom",
+          "number": 2,
+          "jockey": "Philip Donovan",
+          "trainer": "Miss Evanna McCutcheon",
+          "lastSix": "-68783",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Cala Gracioneta",
+          "number": 11,
+          "jockey": "James Smith(3)",
+          "trainer": "Matthew J Smith",
+          "lastSix": "5",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Run For Power",
+          "number": 8,
+          "jockey": "Philip Byrnes",
+          "trainer": "C Byrnes",
+          "lastSix": "04-665",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Senorita Diana",
+          "number": 12,
+          "jockey": "Richard Condon(5)",
+          "trainer": "P A Fahy",
+          "lastSix": "0-90",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "15:21",
+      "name": "Mahon Falls Novice Handicap Hurdle",
+      "conditions": "2m 4f· Prize: €7,200",
+      "declared": 13,
+      "active": 13,
+      "runners": [
+        {
+          "horse": "Private Policy",
+          "number": 4,
+          "jockey": "Paddy Cleary(7)",
+          "trainer": "Nigel Thomas Slevin",
+          "lastSix": "04-151",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "8/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Bobby Kirova",
+          "number": 8,
+          "jockey": "Daniel King",
+          "trainer": "Michael Butler",
+          "lastSix": "36631",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "8/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Chemdawg",
+          "number": 11,
+          "jockey": "Phillip Enright",
+          "trainer": "Oliver McKiernan",
+          "lastSix": "1-251P",
+          "draw": null,
+          "weight": "10-10",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Mother Ship",
+          "number": 12,
+          "jockey": "Harry Sexton(7)",
+          "trainer": "John Joseph Hanlon",
+          "lastSix": "072219",
+          "draw": null,
+          "weight": "10-7",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Nirisque",
+          "number": 6,
+          "jockey": "Mike O'Connor",
+          "trainer": "Henry de Bromhead",
+          "lastSix": "/02-65",
+          "draw": null,
+          "weight": "11-6",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ripsnorter",
+          "number": 1,
+          "jockey": "Danny Mullins",
+          "trainer": "W J Lanigan",
+          "lastSix": "-76810",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Blue Johnl",
+          "number": 9,
+          "jockey": "J J Slevin",
+          "trainer": "John Patrick Ryan",
+          "lastSix": "R49823",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Market Ready",
+          "number": 2,
+          "jockey": "Sean O'Keeffe",
+          "trainer": "Sean Aherne",
+          "lastSix": "23-4P2",
+          "draw": null,
+          "weight": "11-9",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Silly Mongoose",
+          "number": 7,
+          "jockey": "Alan O'Sullivan(5)",
+          "trainer": "Patrick T Foley",
+          "lastSix": "510732",
+          "draw": null,
+          "weight": "11-6",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Mahler's Best",
+          "number": 10,
+          "jockey": "Simon Torrens",
+          "trainer": "Patrick T Foley",
+          "lastSix": "90/48",
+          "draw": null,
+          "weight": "10-12",
+          "marketSnapshot": "11/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Beyond Forgiveness",
+          "number": 5,
+          "jockey": "Danny Gilligan",
+          "trainer": "David Harry Kelly",
+          "lastSix": "P/6467",
+          "draw": null,
+          "weight": "11-6",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Soldier Saint",
+          "number": 13,
+          "jockey": "Ben Kennedy(7)",
+          "trainer": "Paul W Flynn",
+          "lastSix": "548646",
+          "draw": null,
+          "weight": "10-5",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Lauro's Legend",
+          "number": 3,
+          "jockey": "Richard Condon(5)",
+          "trainer": "P A Fahy",
+          "lastSix": "/03PP-",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "15:56",
+      "name": "Suir Blueway Mares Steeplechase",
+      "conditions": "2m 2.5f· Prize: €7,800",
+      "declared": 6,
+      "active": 5,
+      "runners": [
+        {
+          "horse": "La Note Verte",
+          "number": 2,
+          "jockey": "Paul Townend",
+          "trainer": "Mr W. P. Mullins",
+          "lastSix": "4-3311",
+          "draw": null,
+          "weight": "11-4",
+          "marketSnapshot": "9/4",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Emily Love",
+          "number": 0,
+          "jockey": "Jack Kennedy",
+          "trainer": "Gordon Elliott",
+          "lastSix": "-F1353",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "3/1",
+          "nonRunnerFlag": true
+        },
+        {
+          "horse": "Ad Caelum",
+          "number": 6,
+          "jockey": "Alan O'Sullivan(5)",
+          "trainer": "John Patrick Ryan",
+          "lastSix": "15PP5P",
+          "draw": null,
+          "weight": "10-8",
+          "marketSnapshot": "11/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Sayitfirst",
+          "number": 1,
+          "jockey": "Tom Kelly(7)",
+          "trainer": "Darren Collins",
+          "lastSix": "P-8083",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "6/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Bynx",
+          "number": 3,
+          "jockey": "Sean Flanagan",
+          "trainer": "Martin Hassett",
+          "lastSix": "684804",
+          "draw": null,
+          "weight": "11-3",
+          "marketSnapshot": "13/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Littlebiggie",
+          "number": 4,
+          "jockey": "Conor Clarke(7)",
+          "trainer": "Ray Hackett",
+          "lastSix": "P-480F",
+          "draw": null,
+          "weight": "11-3",
+          "marketSnapshot": "15/2",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "16:30",
+      "name": "William Hill Challenge Series Handicap Steeplechase",
+      "conditions": "2m 5f· Prize: €9,000",
+      "declared": 12,
+      "active": 11,
+      "runners": [
+        {
+          "horse": "Ceroc",
+          "number": 4,
+          "jockey": "J J Slevin",
+          "trainer": "A. Slattery",
+          "lastSix": "6-2P13",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "15/2",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Charlie Luciano",
+          "number": 1,
+          "jockey": "Jack Kennedy",
+          "trainer": "Noel Meade",
+          "lastSix": "142P93",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "8/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Kings Jet",
+          "number": 3,
+          "jockey": "Ricky Doyle",
+          "trainer": "C. W. J. Farrell",
+          "lastSix": "-U023F",
+          "draw": null,
+          "weight": "11-3",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Woodstream Lad",
+          "number": 6,
+          "jockey": "Shane O'Callaghan(3)",
+          "trainer": "David O'Sullivan",
+          "lastSix": "-25061",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "9/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Ned In The Park",
+          "number": 7,
+          "jockey": "Mr D Doyle(5)",
+          "trainer": "Timothy Doyle",
+          "lastSix": "932U53",
+          "draw": null,
+          "weight": "11-1",
+          "marketSnapshot": "10/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Lambay Island",
+          "number": 0,
+          "jockey": "Mike O'Connor",
+          "trainer": "Henry de Bromhead",
+          "lastSix": "/320-0",
+          "draw": null,
+          "weight": "11-2",
+          "marketSnapshot": "11/1",
+          "nonRunnerFlag": true
+        },
+        {
+          "horse": "Duty Bound",
+          "number": 8,
+          "jockey": "Jordan Canavan(7)",
+          "trainer": "J P Flavin",
+          "lastSix": "2F-P5P",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "11/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Prince Palace",
+          "number": 11,
+          "jockey": "Mr R Sugrue(7)",
+          "trainer": "P J Rothwell",
+          "lastSix": "-057P2",
+          "draw": null,
+          "weight": "10-9",
+          "marketSnapshot": "11/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Grange Walk",
+          "number": 12,
+          "jockey": "Daniel King",
+          "trainer": "John Patrick Ryan",
+          "lastSix": "36B776",
+          "draw": null,
+          "weight": "10-6",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Banjaxed",
+          "number": 2,
+          "jockey": "John Shinnick",
+          "trainer": "Mrs Lorna Fowler",
+          "lastSix": "4486-4",
+          "draw": null,
+          "weight": "11-7",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Gatsby Grey",
+          "number": 9,
+          "jockey": "Phillip Enright",
+          "trainer": "Oliver McKiernan",
+          "lastSix": "6PPP-7",
+          "draw": null,
+          "weight": "10-12",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Palace Boy",
+          "number": 10,
+          "jockey": "Luke Burke Ott(7)",
+          "trainer": "John F Gleeson",
+          "lastSix": "-050U8",
+          "draw": null,
+          "weight": "10-9",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    },
+    {
+      "off": "17:05",
+      "name": "Clonmel Oil Chase Day November 5th Handicap Steeplechase",
+      "conditions": "2m 5f· Prize: €6,000",
+      "declared": 16,
+      "active": 16,
+      "runners": [
+        {
+          "horse": "Heroes Of Renown",
+          "number": 2,
+          "jockey": "Harry Sexton(7)",
+          "trainer": "John Joseph Hanlon",
+          "lastSix": "6P2-33",
+          "draw": null,
+          "weight": "11-8",
+          "marketSnapshot": "14/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Rockstown Girl",
+          "number": 1,
+          "jockey": "James Smith(3)",
+          "trainer": "A. McCann",
+          "lastSix": "336742",
+          "draw": null,
+          "weight": "11-12",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Gortmore Lady",
+          "number": 13,
+          "jockey": "Kevin Healy(7)",
+          "trainer": "Ciaran Murphy",
+          "lastSix": "375425",
+          "draw": null,
+          "weight": "10-6",
+          "marketSnapshot": "16/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Thirsty Work",
+          "number": 12,
+          "jockey": "Phillip Enright",
+          "trainer": "Oliver McKiernan",
+          "lastSix": "00-027",
+          "draw": null,
+          "weight": "10-7",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Without Exception",
+          "number": 11,
+          "jockey": "Mr R Sugrue(7)",
+          "trainer": "P J Rothwell",
+          "lastSix": "203P4-",
+          "draw": null,
+          "weight": "10-8",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Mount Shenshan",
+          "number": 8,
+          "jockey": "Sean Cleary-Farrell(7)",
+          "trainer": "Thomas Mullins",
+          "lastSix": "356061",
+          "draw": null,
+          "weight": "10-13",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Hit The Frame",
+          "number": 7,
+          "jockey": "Danny Mullins",
+          "trainer": "J P Flavin",
+          "lastSix": "4F7-4U",
+          "draw": null,
+          "weight": "11-0",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Zolpharine",
+          "number": 10,
+          "jockey": "Daniel King",
+          "trainer": "John Patrick Ryan",
+          "lastSix": "140057",
+          "draw": null,
+          "weight": "10-12",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Sharetheknowledge",
+          "number": 4,
+          "jockey": "Sean Flanagan",
+          "trainer": "Paul Tobin",
+          "lastSix": "44-045",
+          "draw": null,
+          "weight": "11-5",
+          "marketSnapshot": "20/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "King's Son",
+          "number": 9,
+          "jockey": "Philip Donovan",
+          "trainer": "Seamus Neville",
+          "lastSix": "366750",
+          "draw": null,
+          "weight": "10-12",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Stily",
+          "number": 15,
+          "jockey": "Sean O'Keeffe",
+          "trainer": "Michael J McDonagh",
+          "lastSix": "-P6664",
+          "draw": null,
+          "weight": "10-5",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Finnicky Filly",
+          "number": 16,
+          "jockey": "Michael Kenneally(3)",
+          "trainer": "John Patrick Ryan",
+          "lastSix": "650506",
+          "draw": null,
+          "weight": "10-0",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Wing Back",
+          "number": 3,
+          "jockey": "Aidan Kelly",
+          "trainer": "S Curling",
+          "lastSix": "0-967P",
+          "draw": null,
+          "weight": "11-6",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Mister Loolah",
+          "number": 5,
+          "jockey": "Luke Burke Ott(7)",
+          "trainer": "Alexander Ott",
+          "lastSix": "76PB-4",
+          "draw": null,
+          "weight": "11-4",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Roccabaker",
+          "number": 6,
+          "jockey": "Danny Gilligan",
+          "trainer": "David Harry Kelly",
+          "lastSix": "3P77-9",
+          "draw": null,
+          "weight": "11-3",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        },
+        {
+          "horse": "Battle Of Benburb",
+          "number": 14,
+          "jockey": "Mr P Verling(7)",
+          "trainer": "Patrick Michael Verling",
+          "lastSix": "7PP-04",
+          "draw": null,
+          "weight": "10-5",
+          "marketSnapshot": "25/1",
+          "nonRunnerFlag": false
+        }
+      ]
+    }
+  ]
+}
