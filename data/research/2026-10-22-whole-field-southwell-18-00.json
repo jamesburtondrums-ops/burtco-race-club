@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-22",
+  "reviewedAt": "2026-10-22T14:37:28+01:00",
+  "race": "Southwell 18:00",
+  "offLocal": "18:00",
+  "going": "Standard Tapeta",
+  "distance": "1m14y",
+  "clazz": "Class 5 fillies handicap",
+  "sourceRacecard": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap",
+  "sourceType": "PUBLIC_RACECARD_FORM_COMPARISON_AND_SELECTED_HORSE_PAST_RUNS",
+  "status": "WHOLE_FIELD_INDIVIDUAL_BETTER_THAN_ABBREVIATED_FORM_REVIEW; NUMERIC_PACE_AND_JOCKEY_STATS_UNKNOWN",
+  "runners": [
+    {
+      "horse": "Liberate",
+      "officialRating": 68,
+      "jockey": "Finley Marsh",
+      "trainer": "J & S Best",
+      "recentForm": "921597",
+      "positiveEvidence": "Brighton 1m2f turf winner on second new-stable run in August; since 5th/9th/7th; latest all-weather mile at Kempton lacked finish",
+      "risks": "No proven repeat of Brighton win over Southwell Tapeta mile, exposed 4yo",
+      "assessment": "LESS_SUPPORTED",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    },
+    {
+      "horse": "Medway Queen",
+      "officialRating": 68,
+      "jockey": "Jason Hart",
+      "trainer": "W Muir & C Grassick",
+      "recentForm": "2442-23",
+      "positiveEvidence": "Maiden but return from long layoff produced close second at Sandown mile; Nottingham 1m2f third beaten ~6¾L",
+      "risks": "No career WIN in limited starts; first Southwell Tapeta mile and class transition still uncertain",
+      "assessment": "MAJOR_RIVAL",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    },
+    {
+      "horse": "Bofa Beach",
+      "officialRating": 70,
+      "jockey": "David Egan",
+      "trainer": "John Butler",
+      "recentForm": "393022",
+      "positiveEvidence": "Unexposed 3yo second twice latest at Kempton 1m, has improved for new yard",
+      "risks": "No previous recorded Southwell 1m win; has failed to convert latest two seconds; OR70 top of 3yo cohort",
+      "assessment": "MAJOR_RIVAL",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    },
+    {
+      "horse": "Alterity",
+      "officialRating": 69,
+      "jockey": "Callum Shepherd",
+      "trainer": "Charlie Johnston",
+      "recentForm": "5-33160",
+      "positiveEvidence": "Recent Ripon 1m maiden winner, likely early front-runner",
+      "risks": "Last two handicaps 6th and last; first AW, mark/pace-pressure unknown",
+      "assessment": "PACE_INTEREST_NOT_WIN",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    },
+    {
+      "horse": "Al Ghariya",
+      "officialRating": 69,
+      "jockey": "Edward Greatrex",
+      "trainer": "Ian Williams",
+      "recentForm": "07106",
+      "positiveEvidence": "French ~1m4f winner this summer, potential baseline stamina",
+      "risks": "Last two French races below previous level and British 1m handicap debut with surface and trip switch",
+      "assessment": "UNPROVEN",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    },
+    {
+      "horse": "If I Could Dream",
+      "officialRating": 68,
+      "jockey": "Cieren Fallon",
+      "trainer": "Sean Hanlon",
+      "recentForm": "03-0930",
+      "positiveEvidence": "Wolverhampton 8.5f third behind next-time-out winners under cheekpieces for previous yard; cheekpieces return",
+      "risks": "Pulled hard and disappointed in latest Newcastle AW; newly moved yards, current pace/rider combination unproven",
+      "assessment": "OUTSIDER_RECHECK_ONLY",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    },
+    {
+      "horse": "Filly Eilish",
+      "officialRating": 68,
+      "jockey": "Luke Morris",
+      "trainer": "Ivan Furtado",
+      "recentForm": "615542",
+      "positiveEvidence": "27 Jul Southwell 1m standard won 1/13 off OR64 with Silvestre de Sousa; latest 12 Oct Musselburgh ~9f good-to-soft 2/8 off OR68; exact trip/track winner",
+      "risks": "Now +4lb from Southwell win and 5th/5th over same C&D in August at OR70; Luke Morris has no clearly confirmed recent ride with horse",
+      "assessment": "NEW_WIN_CANDIDATE",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    },
+    {
+      "horse": "Imola",
+      "officialRating": 62,
+      "jockey": "Alex Jary (3lb)",
+      "trainer": "Joey Ramsden",
+      "recentForm": "146004",
+      "positiveEvidence": "Three prior 2026 AW wins including Southwell mile C&D; latest Newcastle mile fourth in better shape, now back on successful OR62",
+      "risks": "Recent midfield/unplaced runs before latest; jockey 3lb claim may help but not same C&D win proven",
+      "assessment": "VALUE_OUTSIDER_WATCH",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    },
+    {
+      "horse": "Blue Celestial",
+      "officialRating": 63,
+      "jockey": "Hector Crouch",
+      "trainer": "James Tate",
+      "recentForm": "436224",
+      "positiveEvidence": "Mile Southwell second behind progressive rival in August, Wolverhampton two prior seconds; recent Wolverhampton fourth beaten ~3¼L, 1lb relief",
+      "risks": "Maiden, sixty-five-day gap since latest, present ability versus improved rivals unclear",
+      "assessment": "STRONG_PLACE_RIVAL",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    },
+    {
+      "horse": "Gilleangirl",
+      "officialRating": 50,
+      "jockey": "Kieran O'Neill",
+      "trainer": "Ivan Furtado",
+      "recentForm": "5-87470",
+      "positiveEvidence": "Fourth on Southwell mile handicap debut, now returns to mile",
+      "risks": "Subsequent poor handicaps at longer distances, still no win and first-time cheekpieces uncertain",
+      "assessment": "WEAK",
+      "sourceUrl": "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/racecard/944788/all-weather-championship-is-back-fillies-handicap"
+    }
+  ],
+  "shortlist": [
+    "Filly Eilish"
+  ],
+  "evidenceGaps": [
+    "Most opposing runners not independently reconstructed for all their prior starts; primarily source-backed individual racecard records",
+    "No objective sectionals/field-relative pace metrics",
+    "No independent calibrated win/place probability",
+    "Bookmaker EW place terms/price must be checked before fresh recommendation"
+  ],
+  "noBetsCreated": true,
+  "frozenOriginalUnchanged": true
+}
