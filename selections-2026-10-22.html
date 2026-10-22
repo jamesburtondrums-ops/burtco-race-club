@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#153b32"><title>Today's Clear Selections · Racing Intelligence</title>
+<style>
+:root{color-scheme:light;--green:#164633;--g2:#1f724f;--bg:#f3f7f4;--txt:#163b2f;--sub:#688076;--stroke:#dae7dd}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.5 system-ui,"Segoe UI",sans-serif}a{color:var(--g2)}
+header{background:linear-gradient(115deg,#113b2b,#287350);color:white;padding:24px 18px 76px}
+header>div,main{max-width:960px;margin:auto}nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;font-weight:650}nav a{color:#e2ffec;text-decoration:none}
+h1{margin:25px 0 8px;font-size:clamp(28px,5vw,40px);letter-spacing:-.03em;line-height:1.16}header p{color:#daece0;max-width:720px}
+main{padding:0 18px 45px}.summary{display:flex;gap:9px;flex-wrap:wrap;margin-top:-44px;margin-bottom:17px;position:relative}
+.stat{flex:1;min-width:145px;border:1px solid var(--stroke);background:white;border-radius:13px;padding:13px 16px}
+.stat strong{font-size:23px;display:block}.stat span{font-size:12px;color:var(--sub)}
+.note{border:1px solid var(--stroke);padding:13px 15px;background:#e6f1e9;border-radius:11px;color:#24543f;margin:15px 0}
+.card{margin:13px 0;border-radius:15px;border:1px solid var(--stroke);background:white;padding:17px;box-shadow:0 7px 22px #163b2b08}
+.card.expired{opacity:.63}.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.horse{font-weight:800;font-size:20px;line-height:1.15;letter-spacing:-.012em}
+.meta{color:var(--sub);font-size:13px;margin-top:5px}
+.bet{font-size:11px;font-weight:800;letter-spacing:.035em;border:1px solid #c1dec9;background:#e7f5e9;border-radius:7px;padding:6px 9px;white-space:nowrap}
+.bet.ew{background:#eaeefa;border-color:#cfdbf3;color:#355b7a}.bet.expired{background:#e9eeea;color:#64746b;border-color:var(--stroke)}
+.price{font-weight:750;font-size:17px;color:var(--g2);padding:7px 0 0}
+.risk{color:#66756a}.small{color:var(--sub);font-size:12px}.div{height:1px;background:var(--stroke);margin:14px 0}.source{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;font-weight:600}
+footer{font-size:12px;color:var(--sub);padding-top:14px}.error{background:#fff4ec;border:1px solid #edceac;border-radius:12px;padding:18px}
+@media(max-width:570px){.card{padding:13px}.horse{font-size:18px}.price{font-size:15px}.summary{gap:6px}.stat{padding:10px}.stat strong{font-size:21px}}
+</style></head><body>
+<header><div><nav><strong>RACING INTELLIGENCE</strong><span><a href="./">Full website ↗</a> · <a href="./full-field-2026-10-22.html">66-runner research ↗</a></span></nav>
+<h1>Clear selections. No filler.</h1>
+<p>Thursday 22 October 2026 · Independent whole-field evidence from six investigated races · No forced selection where the data is weak.</p></div></header>
+<main>
+<div class="summary"><div class="stat"><strong id="total">4</strong><span>Research selections</span></div><div class="stat"><strong id="active">—</strong><span>Still to run</span></div><div class="stat"><strong>£0</strong><span>Bets / stakes created</span></div></div>
+<div class="note"><strong>Original snapshots preserved.</strong> This is a dated prospective research shortlist, not a rewrite of published picks. Price quotes are observations, not guaranteed offers. Each-way paid places must be checked with the bookmaker.</div>
+<section id="cards" aria-label="Today selections"><p>Loading dated research selections…</p></section>
+<div class="note"><strong>No forced alternatives.</strong> Beggarman (Southwell 17:00) and Woodstream Lad (Clonmel 16:30) were not retained for fresh each-way research. Their frozen original selections remain in the historical record.</div>
+<footer>Coverage: The six selected race fields were individually screened and their runners' past-form and jockey evidence reviewed. This is not an exhaustive assessment of every UK/Ireland race today. No calibrated model win probabilities, exhaustive video sectionals, new paper bets, or actual stakes are claimed.</footer>
+</main>
+<script type="module">
+const root=document.getElementById('cards');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const dateInLondon=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const clockInLondon=()=>new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date());
+try {
+ const res=await fetch('./data/research/2026-10-22-clear-selections.json',{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);
+ const data=await res.json();
+ let still=0;
+ root.replaceChildren();
+ for(const s of data.selections) {
+   const expired=dateInLondon()>data.date || (dateInLondon()===data.date && clockInLondon()>=s.offLocal);
+   if(!expired)still++;
+   const article=document.createElement('article');article.className='card'+(expired?' expired':'');
+   const type=s.betType==='each-way'?'EACH WAY':'WIN';
+   const label=expired?'OFF TIME PASSED':type;
+   const ev=s.researchEvidence?'<a href="https://github.com/jamesburtondrums-ops/burtco-race-club/blob/racing-intelligence/'+encodeURI(s.researchEvidence)+'" target="_blank" rel="noopener noreferrer">Whole-field evidence ↗</a>':'';
+   article.innerHTML='<div class="card-head"><div><div class="horse">'+esc(s.horse)+'</div><div class="meta">'+esc(s.offLocal)+' · '+esc(s.course)+'</div></div><span class="bet '+(s.betType==='each-way'?'ew':'')+(expired?' expired':'')+'">'+label+'</span></div>'+
+    '<div class="price">Reference quote: '+esc(s.priceObserved)+'</div>'+
+    '<div class="div"></div><p><strong>Why:</strong> '+esc(s.abilityReason)+'</p>'+
+    '<p class="risk"><strong>Main risk:</strong> '+esc(s.mainRisks)+'</p>'+
+    (s.standardPlaceTermExpectation?'<p class="small">Each-way: '+esc(s.standardPlaceTermExpectation)+'</p>':'')+
+    '<div class="source"><a href="'+esc(s.sourceRacecard)+'" target="_blank" rel="noopener noreferrer">Racecard ↗</a>'+ev+'</div>';
+   root.append(article);
+ }
+ document.getElementById('total').textContent=data.selections.length;
+ document.getElementById('active').textContent=still;
+} catch(e) {root.innerHTML='<div class="error">The latest research could not be loaded: '+esc(e.message)+'. Check the <a href="https://github.com/jamesburtondrums-ops/burtco-race-club/blob/racing-intelligence/data/research/2026-10-22-clear-selections.json">dated GitHub record</a>.</div>'}
+</script></body></html>
