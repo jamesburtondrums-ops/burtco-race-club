@@ -64,3 +64,18 @@ The prospectively added Filly Eilish and Blue Orbit research selections retain s
 ## Production next step
 
 Connect licensed racecard + pedigree data, sectional/tracking data, and a live odds/exchange feed. Then calculate model fair odds and value gaps from calibrated historical models instead of demo labels.
+
+
+### All 397 horses evidence screening (22 October 2026)
+
+The [all-horse research page](https://racing-intelligence.pages.dev/all-horses-2026-10-22.html) provides **397 individual field-relative evidence screens** in 40 races. The evidence was collected across five independently supplied meeting cards and a secondary stat source.
+
+- Each [`data/research/2026-10-22-enhanced-{course}.txt`](data/research/) file records active horse identity, full last-six finishing string, trainer/jockey, any official mark, prior course/trip/going records, days since last run, claims, race-relative evidence flags and concrete counterarguments.
+- All 397 source horse identities were preserved; **393** match the secondary per-horse stat source. **Four require manual source reconciliation:** Tiger (Newmarket 14:55), Carleys Lilly (Clonmel 14:46), Prince Palace (Clonmel 16:30), and Without Exception (Clonmel 17:05). The missing secondary entries are **not** classified as official withdrawals.
+- The scoring index is **not** a betting probability and ignores bookmaker prices. Weight/ratings are not treated as independent proof of handicap superiority. Trainer/jockey 14-day samples only influence triage when denominator thresholds are met.
+- Racing form parsing explicitly preserves `/` season breaks and treats `B` (brought down) and `V` (void) separately. Prior misread examples (Sycamore Gap, Micks Jet and Fram Castle) are regression-checked.
+- Test: `node scripts/validate-all-horses-2026-10-22.mjs`. GitHub Actions: `.github/workflows/racing-397-runner-audit.yml`.
+- The process **does not** replace full runner-by-runner dated video histories, race pace maps, statistically established horse–jockey partnership comparisons or held-out probability backtests. The six earlier complete-history race dossiers remain a distinct deeper evidence tier. The 397 profile coverage is date-specific and must not be silently represented as daily live automation.
+
+No alteration to original frozen published selections, past results, betting history or the cleared paper-bet ledger was made by this screen.
+
