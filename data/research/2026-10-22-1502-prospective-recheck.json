@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-22",
+  "checkedAt": "2026-10-22T15:02:05+01:00",
+  "kind": "prospective-raceday-review",
+  "originalPublication": "2026-10-21T20:33:12.519Z",
+  "originalFrozenSelectionsPreserved": true,
+  "originalRacesJsonUnchanged": true,
+  "clearedPaperBetLedgerUnchanged": true,
+  "noWagersCreated": true,
+  "findings": [
+    {
+      "horse": "Woodstream Lad",
+      "course": "Clonmel",
+      "off": "16:30",
+      "status": "WITHHOLD_EACH_WAY",
+      "newNonRunner": "Prince Palace",
+      "allNonRunners": [
+        "Lambay Island",
+        "Prince Palace"
+      ],
+      "activeField": 10,
+      "originalField": 12,
+      "market": "Racing TV 5/1 to 13/2; original 15/2",
+      "risk": "Actual paid places and matched bookmaker each-way terms not verified. Rivals Charlie Luciano, Kings Jet and Ceroc remain."
+    },
+    {
+      "horse": "Beggarman",
+      "course": "Southwell",
+      "off": "17:00",
+      "status": "WITHHOLD_EACH_WAY",
+      "market": "Racing TV 28/1 to 33/1; original 28/1",
+      "risk": "Weak current place case and no verified matching bookmaker each-way terms."
+    },
+    {
+      "horse": "Izzari",
+      "course": "Southwell",
+      "off": "18:30",
+      "status": "RETAIN_PROVISIONAL",
+      "allNonRunners": [
+        "Gunfighter",
+        "Calyxoh",
+        "Ecclefechan"
+      ],
+      "activeField": 11,
+      "market": "Racing TV 9/2; original 4/1",
+      "risk": "9lb rise, 7lb claiming rider and remaining opposition; no automatic upgrade."
+    },
+    {
+      "horse": "Kilwaughter",
+      "off": "14:36",
+      "status": "PAST_OFF_NO_NEW_BETS"
+    },
+    {
+      "horse": "Beach Point",
+      "off": "14:55",
+      "status": "PAST_OFF_NO_NEW_BETS"
+    }
+  ],
+  "sources": [
+    "https://www.racingpost.com/non-runners/2026-10-22/",
+    "https://www.racingtv.com/racecards/2026-10-22/clonmel/1630",
+    "https://www.racingtv.com/racecards/2026-10-22/southwell/1700",
+    "https://www.racingtv.com/racecards/2026-10-22/southwell/1830"
+  ],
+  "limitations": [
+    "No independently timestamped new rainfall measurement",
+    "No confirmed bookmaker-specific paid place terms",
+    "Prospective data/races.json update blocked by connector safety checks",
+    "No production deployment verification"
+  ]
+}
