@@ -1,0 +1,31 @@
+name: Verify all 397 horse evidence profiles
+
+on:
+  push:
+    branches: [racing-intelligence]
+    paths:
+      - 'data/research/2026-10-22-enhanced-*.txt'
+      - 'data/research/2026-10-22-stats-*.txt'
+      - 'scripts/validate-all-horses-2026-10-22.mjs'
+      - '.github/workflows/racing-397-runner-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-independent-runner-screen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check all race fields, every profile and non-finishing form codes
+        run: node scripts/validate-all-horses-2026-10-22.mjs > all-runner-evidence-audit.json
+      - name: Save source completeness report
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-runner-evidence-2026-10-22
+          path: all-runner-evidence-audit.json
+          retention-days: 90
