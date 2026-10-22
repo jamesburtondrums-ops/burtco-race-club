@@ -965,7 +965,7 @@
           "horse": "Ecclefechan",
           "jockey": "Christian Howarth",
           "claimLb": 3,
-          "trainer": "Julia Ryan",
+          "trainer": "John Ryan",
           "racecardOfficialRating": 71,
           "racecardWeight": "9-4",
           "lastSixForm": "117905",
@@ -982,5 +982,23 @@
     }
   ],
   "method": "Each horse now has current declared jockey/trainer/claim/form-string and original review mapped where identity matches. Partnership stats, specific last-three runs, speed/pace, going, suitability and ground-truth of scratchings still REQUIRE separate evidence; no new selection approved on this record.",
-  "originalFrozenUnchanged": true
+  "originalFrozenUnchanged": true,
+  "racecardDiscrepancies": [
+    {
+      "race": "Newmarket 14:55",
+      "description": "Racing TV marks Princess Rascal, Too Hot To Tango and Triple Force as non-runners, leaving 10; Racing Post showed only Triple Force non-runner when checked. Prefer later updated card, retain discrepancy.",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1455",
+        "https://www.racingpost.com/racecards/38/newmarket/2026-10-22/929449/compact-view/"
+      ]
+    },
+    {
+      "race": "Southwell 18:30",
+      "description": "Racing TV marks Calyxoh and Gunfighter non-runners (12 starters); Sporting Life/Racing Post showed Gunfighter only at time of comparison, with 13. Source feeds are asynchronous, do not imply that their prices and place terms are synchronized.",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/southwell/1830",
+        "https://www.sportinglife.com/racing/racecards/2026-10-22/southwell/live-show/944789/awc-finals-day-at-newcastle-26th-march-handicap"
+      ]
+    }
+  ]
 }
