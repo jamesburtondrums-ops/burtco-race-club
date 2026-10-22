@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-22",
+  "observedAt": "2026-10-22T12:04:48+01:00",
+  "frozenOriginalRaceDataBlobSHA": "19d003f530070cceffb3743ed79ce04137370658",
+  "frozenOriginalSelections": [
+    {
+      "horse": "Kilwaughter",
+      "course": "Ffos Las",
+      "offLocal": "14:36",
+      "betType": "win",
+      "referenceOdds": "2/1",
+      "publishedAt": "2026-10-21T20:33:12.519Z"
+    },
+    {
+      "horse": "Beach Point",
+      "course": "Newmarket",
+      "offLocal": "14:55",
+      "betType": "win",
+      "referenceOdds": "9/2",
+      "publishedAt": "2026-10-21T20:33:12.519Z"
+    },
+    {
+      "horse": "Woodstream Lad",
+      "course": "Clonmel",
+      "offLocal": "16:30",
+      "betType": "each-way",
+      "referenceOdds": "15/2",
+      "publishedAt": "2026-10-21T20:33:12.519Z"
+    },
+    {
+      "horse": "Beggarman",
+      "course": "Southwell (AW)",
+      "offLocal": "17:00",
+      "betType": "each-way",
+      "referenceOdds": "28/1",
+      "publishedAt": "2026-10-21T20:33:12.519Z"
+    },
+    {
+      "horse": "Izzari",
+      "course": "Southwell (AW)",
+      "offLocal": "18:30",
+      "betType": "win",
+      "referenceOdds": "4/1",
+      "publishedAt": "2026-10-21T20:33:12.519Z"
+    }
+  ],
+  "status": "PRE_RACE_INDEPENDENT_FIELD_RESEARCH_ONLY",
+  "lineage": "This is later research evidence, not replacement for pre-publication knowledge.",
+  "scope": 6,
+  "assessments": [
+    {
+      "race": "Ffos Las",
+      "offLocal": "14:36",
+      "publishedSelection": "Kilwaughter",
+      "originalBetType": "win",
+      "decision": "RETAIN_ORIGINAL_ABILITY_CASE_CONDITIONALLY",
+      "abilityChanged": false,
+      "valueDecision": "NO_RELIABLE_NEW_PRICE_CONCLUSION",
+      "strongestEvidence": [
+        "Newbury ~2m4f hurdle victory with today's Jack Stenhouse in February off OR118",
+        "Haydock 3m Class2 fourth beaten 5.25L from OR125"
+      ],
+      "counterEvidence": [
+        "190-day layoff; cannot know stable fitness",
+        "El Gavilan owns three Ffos Las wins but not at today's 3m and switches yards",
+        "Shallow River ran recently, Libre De Choeur won at same course around today's staying trip on heavy"
+      ],
+      "ground": "Good to Soft, soft in places; hurdle 5.9 GoingStick reported, track rail +38 yards reported",
+      "sourceUrls": [
+        "https://www.racingtv.com/profiles/horse/kilwaughter-ireland",
+        "https://www.racingtv.com/profiles/horse/libre-de-choeur-france",
+        "https://www.horseracing.net/ffos-las/22-10-26"
+      ]
+    },
+    {
+      "race": "Newmarket",
+      "offLocal": "14:55",
+      "publishedSelection": "Beach Point",
+      "originalBetType": "win",
+      "decision": "RETAIN_ABILITY_RESEARCH_BUT_NO_CONFIDENCE_UPGRADE",
+      "abilityChanged": false,
+      "valueDecision": "BOOKMAKER_DRIFT_OBSERVED_NOT_A_CONFIDENCE_VARIABLE",
+      "strongestEvidence": [
+        "Yarmouth 1m2f third beaten 0.3L at OR76 and Epsom almost-dead-heat 10f second",
+        "Previously won 10f on soft (Sandown 2025), supporting ground"
+      ],
+      "counterEvidence": [
+        "Beach Point off OR76 versus Goodwood prior OR70 winning mark",
+        "Great Blasket a current soft-ground 10f third beaten under2L",
+        "Tipsy Tiger a recent heavy-ground 10f near-second",
+        "Something Splendid won a good-to-soft 10f race under today's Marco Ghiani"
+      ],
+      "ground": "Soft, 10 active runners in current RacingTV card (other feeds may lag)",
+      "sourceUrls": [
+        "https://www.racingtv.com/profiles/horse/beach-point",
+        "https://www.racingtv.com/profiles/horse/great-blasket",
+        "https://www.racingtv.com/profiles/horse/tipsy-tiger",
+        "https://www.racingtv.com/profiles/horse/something-splendid-united-kingdom"
+      ]
+    },
+    {
+      "race": "Newmarket",
+      "offLocal": "16:05",
+      "publishedSelection": null,
+      "originalBetType": null,
+      "decision": "RESEARCH_ONLY_NO_NEW_SELECTION_PUBLISHED",
+      "abilityChanged": null,
+      "valueDecision": "NOT_ASSESSED_AS_EXECUTABLE",
+      "strongestEvidence": [
+        "The Quiet Gent won recent 6f soft for new trainer Brian Toomey",
+        "Yes I'm Mali won 6f good-to-soft at Ripon and has near placings at Newmarket",
+        "Sierra Sands previously won twice with today's Ryan Moore at Newmarket July Course, 6f and 7f; today Rowley differs",
+        "Distant Rumble heavy 6f close third and recent 6f win"
+      ],
+      "counterEvidence": [
+        "Shaman Champion first Henrietta Knight run but finished last by 15.32L latest; Billy Loughnane previously rode a ninth at Ascot",
+        "Space Party 4/4 top-three but no soft experience and no win",
+        "Low/high draw bias and pace mismatch remain unquantified"
+      ],
+      "ground": "Soft, 12 active runners",
+      "sourceUrls": [
+        "https://www.racingtv.com/profiles/horse/sierra-sands-ireland",
+        "https://www.racingtv.com/profiles/horse/the-quiet-gent-ireland",
+        "https://www.racingtv.com/profiles/horse/shaman-champion-ireland",
+        "https://www.newmarketracingclub.com/hospitality/newmarket-fixtures/"
+      ]
+    },
+    {
+      "race": "Clonmel",
+      "offLocal": "16:30",
+      "publishedSelection": "Woodstream Lad",
+      "originalBetType": "each-way",
+      "decision": "SUSPEND_FRESH_EW_PENDING_GOING_AND_PLACE_PROBABILITY",
+      "abilityChanged": false,
+      "valueDecision": "EACH_WAY_PLACE_TERMS_UNVERIFIED",
+      "strongestEvidence": [
+        "4 Oct Killarney 2m4f180yd chase won 5L, field only four",
+        "Shane O'Callaghan 3lb previously partnered Clonmel 2m3f hurdle second beaten1.5L in May 2026",
+        "2024 Clonmel 2m soft hurdle WIN proves track experience, NOT today's chase C&D"
+      ],
+      "counterEvidence": [
+        "Recent chase winner partnered by Alex Harvey, not today's claimant",
+        "Current OR107; no supported exact +8lb relative to unrated Killarney beginners chase",
+        "Ceroc latest chase victory 11L and Prince Palace recent chase second with same 7lb claimant",
+        "Heavy rain forecast may alter official GOOD chase going"
+      ],
+      "ground": "Good at last published Clonmel chase going; heavy rain weather risk",
+      "sourceUrls": [
+        "https://www.racingtv.com/profiles/horse/woodstream-lad",
+        "https://www.racingpost.com/racecards/177/clonmel/2026-10-22/931248/",
+        "https://www.racingtv.com/profiles/horse/ceroc",
+        "https://www.racingtv.com/profiles/horse/prince-palace"
+      ]
+    },
+    {
+      "race": "Southwell (AW)",
+      "offLocal": "17:00",
+      "publishedSelection": "Beggarman",
+      "originalBetType": "each-way",
+      "decision": "SUSPEND_FRESH_EW_FOR_WEAK_CURRENT_SURFACE_PLACE_CASE",
+      "abilityChanged": false,
+      "valueDecision": "EACH_WAY_PLACES_NOT_VERIFIED_FOR_SELECTED_PRICE",
+      "strongestEvidence": [
+        "Earlier staying ability with Nottingham 1m6f near-second July off OR58",
+        "Current OR56 can be competitive if old ability returns"
+      ],
+      "counterEvidence": [
+        "All four older AW victories were on Polytrack, without established Southwell Tapeta win",
+        "Recent Bath 11/13, Lingfield Polytrack 4/9 beaten 9.75L",
+        "Blue Tulip won exact 1m6f Southwell 3 Oct, Rubellite third at today's C&D <1L away, Fram Castle recent staying 2nd with same John Egan"
+      ],
+      "ground": "Standard Tapeta, 12 active runners",
+      "sourceUrls": [
+        "https://www.racingtv.com/profiles/horse/beggarman",
+        "https://www.racingtv.com/profiles/horse/blue-tulip-ireland",
+        "https://www.racingtv.com/profiles/horse/rubellite-ire",
+        "https://www.racingtv.com/profiles/horse/fram-castle"
+      ]
+    },
+    {
+      "race": "Southwell (AW)",
+      "offLocal": "18:30",
+      "publishedSelection": "Izzari",
+      "originalBetType": "win",
+      "decision": "RETAIN_ABILITY_WITH_VERIFIED_RIDER_FORM_AND_WEIGHT_WARNING",
+      "abilityChanged": false,
+      "valueDecision": "NO_CURRENT_EXECUTABLE_PRICE_VERIFIED",
+      "strongestEvidence": [
+        "Won Southwell standard mile by 4.5L on 10 Oct with today's Cara Tuke claiming 7lb",
+        "Won same Southwell mile on 26 Sep with same Cara Tuke: actual repeat booking proven"
+      ],
+      "counterEvidence": [
+        "Current OR75 is +9lb higher than last winning OR66",
+        "Rapide Vega has won with today's Mikey Sheehy at Lingfield and placed on soft",
+        "Decalogue won Kempton AW mile under today's William Carver",
+        "Piazza's previous Southwell near-second was over 7f, not today's 1m; correct inaccurate C&D claim"
+      ],
+      "ground": "Standard Tapeta; 12 active RacingTV runners, other sources stale",
+      "sourceUrls": [
+        "https://www.racingtv.com/profiles/horse/izzari-germany",
+        "https://www.racingtv.com/profiles/horse/rapide-vega-ireland",
+        "https://www.racingtv.com/profiles/horse/decalogue-united-states",
+        "https://www.racingtv.com/profiles/horse/piazza-united-kingdom"
+      ]
+    }
+  ],
+  "noPaperOrActualBets": true,
+  "noRetroactiveResults": true,
+  "notApprovedNewStakes": true,
+  "needsFurther": [
+    "Before off, reconcile official ground reports and last-minute scratches",
+    "Verify bookmaker EW price + paid places together; not derived from racecard base odds",
+    "No comprehensive measured pace maps or statistically calibrated win/place probabilities; avoid pretending score uncertainty resolved"
+  ],
+  "historicalState": "data/races.json unchanged by this review; ledger untouched"
+}
