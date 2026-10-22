@@ -1,0 +1,259 @@
+{
+  "raceDate": "2026-10-22",
+  "localOff": "16:05",
+  "course": "Newmarket Rowley",
+  "distance": "6f",
+  "raceClass": 4,
+  "going": "Soft",
+  "declaredActive": 12,
+  "nonRunners": [
+    "Court Drive",
+    "Sixtygeesbaby",
+    "Star Chorus"
+  ],
+  "sourceRacecardUpdatedAt": "2026-10-22 09:00:47 local (ATR)",
+  "status": "PROSPECTIVE_RESEARCH_ONLY",
+  "notPublishedBet": true,
+  "sourceUrls": [
+    "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+    "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605",
+    "https://www.bethq.com/horse-racing/uk/newmarket/2026-10-22/16h05/"
+  ],
+  "caveats": [
+    "No objectively verified full-race pace/sectional reconstruction",
+    "ATR flags high-draw advantage but statistical certainty for this field on soft is unverified",
+    "Bookmaker prices are timestamps/observations, not ability scores",
+    "Trainer intent and new-stable fitness are not directly observable",
+    "No actual bets or paper stakes"
+  ],
+  "runners": [
+    {
+      "horse": "Yes I'm Mali",
+      "draw": 4,
+      "officialRating": 84,
+      "jockey": "Marco Ghiani",
+      "trainer": "David O'Meara",
+      "recentForm": "Soft-ground Ripon 6f win 1 Sep; Class 2 Ripon 6f fourth 26 Sep, beaten 2.5L",
+      "goingTripClass": "3 wins at 6f; today's mark 84 is 1lb below latest; drops in class",
+      "risks": "Top weight; no win at OR84+ in small recorded sample",
+      "jockeyBooking": "No previous horse-jockey rides shown by ATR; pace unknown",
+      "assessment": "PRINCIPAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Sierra Sands",
+      "draw": 8,
+      "officialRating": 83,
+      "jockey": "Ryan Moore",
+      "trainer": "Ed Dunlop",
+      "recentForm": "Second over this Rowley 6f in September, beaten 4L",
+      "goingTripClass": "6f winner and previous place on comparable going",
+      "risks": "Recent C&D second still 4L behind winner; soft-ground win unproven",
+      "jockeyBooking": "Moore is an experienced booking; horse-specific repeat partnership not established",
+      "assessment": "PRINCIPAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "The Quiet Gent",
+      "draw": 6,
+      "officialRating": 82,
+      "jockey": "James Doyle",
+      "trainer": "Brian Toomey",
+      "recentForm": "Won at Salisbury 6f on soft in first-time cheekpieces, beating Sergeant Pep by 1L",
+      "goingTripClass": "Ground, distance and last-run form align; only 3lb higher",
+      "risks": "Risk of small-sample first-time headgear response not repeating",
+      "jockeyBooking": "Doyle's previous horse rides not recorded in checked source",
+      "assessment": "PRINCIPAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Shaman Champion",
+      "draw": 3,
+      "officialRating": 82,
+      "jockey": "Billy Loughnane",
+      "trainer": "Henrietta Knight",
+      "recentForm": "13th/13 at Kempton 7f latest, beaten 15.5L after reportedly going too fast early; prior close 7f AW efforts",
+      "goingTripClass": "Placed twice on similar going; 6f placed record and drop back to turf sprint",
+      "risks": "No 6f win (0/3); first run for new stable cannot prove fitness or regained form",
+      "jockeyBooking": "Stable debut under Knight; Loughnane previously rode him to 9th in 2025 Windsor Castle Stakes; prior experience established, stable intent unknown",
+      "assessment": "OUTSIDER_WATCH",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Physique",
+      "draw": 5,
+      "officialRating": 80,
+      "jockey": "Grace McEntee",
+      "trainer": "Michael Fenton",
+      "recentForm": "Ninth/10 beaten 14.5L at Pontefract 6f latest; June Newmarket July win over 7f",
+      "goingTripClass": "Has won on testing ground and Class 4",
+      "risks": "No win in seven 6f attempts; Rowley is not July course",
+      "jockeyBooking": "McEntee has 1 win from 8 recorded rides with horse",
+      "assessment": "WEAK",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Mo Of Cairo",
+      "draw": 14,
+      "officialRating": 79,
+      "jockey": "Toby Moore (7lb)",
+      "trainer": "Kevin Ryan",
+      "recentForm": "Fourth/13 at Redcar 5f latest beaten 2.25L; recent form includes second",
+      "goingTripClass": "7lb claim offsets carried weight; high draw may help if bias proves real",
+      "risks": "0 wins from six 6f attempts and soft-ground win unproven",
+      "jockeyBooking": "Claimed seven pounds and no prior horse partnership in ATR history",
+      "assessment": "CONDITIONAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Golden Brown",
+      "draw": 7,
+      "officialRating": 77,
+      "jockey": "Kieran Shoemark",
+      "trainer": "Ed Walker",
+      "recentForm": "Tenth/14 at Salisbury over 6f soft, beaten 6L",
+      "goingTripClass": "Has 6f and Class 4 win in record; cheekpieces now first time",
+      "risks": "0 wins from five similar-going starts; recent form poor",
+      "jockeyBooking": "Shoemark recorded 0 wins and 1 place in 3 prior rides",
+      "assessment": "WEAK",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Space Party",
+      "draw": 2,
+      "officialRating": 77,
+      "jockey": "Nicola Currie",
+      "trainer": "Henry Candy",
+      "recentForm": "Second of nine beaten a nose on Kempton 6f AW handicap debut at OR77",
+      "goingTripClass": "Three places from four 6f starts; same jockey has 3 places in 3 rides",
+      "risks": "No wins in four; soft ground untested; stall 2 may be unfavourable if high-side bias emerges",
+      "jockeyBooking": "Currie has prior horse-specific familiarity, rather than speculative booking intent",
+      "assessment": "PRINCIPAL_PLACE",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Distant Rumble",
+      "draw": 11,
+      "officialRating": 75,
+      "jockey": "Lewis Edmunds",
+      "trainer": "Roger Teal",
+      "recentForm": "Won Windsor 6f two runs ago by 4.25L off OR68; third/10 at Bath latest at OR75",
+      "goingTripClass": "Four 6f wins; one soft-comparable going win; last third from today's mark",
+      "risks": "No Class 4 win in seven recorded starts; rise from recent winning mark",
+      "jockeyBooking": "Edmunds has one place in three horse rides; higher draw might help",
+      "assessment": "EACH_WAY_WATCH",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Spring Bloom",
+      "draw": 9,
+      "officialRating": 74,
+      "jockey": "David Probert",
+      "trainer": "John Butler",
+      "recentForm": "Won two Newmarket July 6f handicaps in July; fourth/13 at that track 22 August, beaten 1L",
+      "goingTripClass": "Four 6f wins; established jockey: 1 win in 3 rides",
+      "risks": "61-day gap; 0 soft-comparable wins from five; July versus Rowley is different layout",
+      "jockeyBooking": "Probert has prior winning familiarity with horse",
+      "assessment": "CONDITIONAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Robert Anstruther",
+      "draw": 15,
+      "officialRating": 74,
+      "jockey": "Harry Davies",
+      "trainer": "Henry Candy",
+      "recentForm": "Thirteenth/15 at Goodwood 6f latest; earlier 6f win and second",
+      "goingTripClass": "High draw and previous 6f winner are possibilities",
+      "risks": "Soft suitability unproven and Class 4 winless (0/4)",
+      "jockeyBooking": "Davies' previous rides on horse not shown in checked evidence",
+      "assessment": "CONDITIONAL",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    },
+    {
+      "horse": "Kimbara",
+      "draw": 1,
+      "officialRating": 71,
+      "jockey": "Saffie Osborne",
+      "trainer": "Richard Spencer",
+      "recentForm": "Seventh/13 at Yarmouth over 6f good-to-soft latest, beaten about 8L",
+      "goingTripClass": "Low weight; Osborne has two horse-specific placings from two rides",
+      "risks": "0/8 lifetime win record; latest similar ground disappointment; low draw",
+      "jockeyBooking": "Two previous places with Osborne, but current ability remains unverified",
+      "assessment": "WEAK",
+      "sourceUrls": [
+        "https://www.racingtv.com/racecards/2026-10-22/newmarket/1605",
+        "https://www.attheraces.com/racecard/Newmarket/22-October-2026/1605"
+      ],
+      "unverified": [
+        "Race-specific sectional pace and live trainer-course statistics"
+      ]
+    }
+  ]
+}
