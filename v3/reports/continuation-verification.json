@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-23",
+  "base_experiment_commit": "fd4d6a95b13a5f2cfe346a63e12f4bdb3c2de758",
+  "continuation_commit": "b383cf3cc88bcafc6065cfed956a79a19b11d40d",
+  "tests": {
+    "passed": 22,
+    "failed": 0,
+    "github_ci": "https://github.com/jamesburtondrums-ops/burtco-race-club/actions/runs/40008132345"
+  },
+  "dashboard_http_checks": [
+    "/ 200",
+    "/api/report 200",
+    "/api/records 200"
+  ],
+  "dashboard_javascript_syntax": "passed",
+  "final_period_reopened": false,
+  "new_predictive_improvement_claim": false,
+  "production_decision": "RETAIN_ORIGINAL",
+  "original_application_files_modified": false,
+  "environment": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0"
+  },
+  "repairs": [
+    "Workspace-independent final-period retirement",
+    "Forecast date cannot prune earlier history",
+    "Wait for all recorded races before advancing result history",
+    "Reject mixed race fields and duplicate quotes",
+    "Invalidate source index after source replacement",
+    "Recover dashboard report in a clean checkout",
+    "Explicitly separate rebuilt runtime from original evaluated model"
+  ],
+  "trained_runtime_smoke": {
+    "status": "passed",
+    "synthetic_fixture_only": true,
+    "complete_field_ranking": true,
+    "probability_sum": 1,
+    "immutable_forecast_record": true,
+    "independent_predictive_evidence": false
+  },
+  "runtime": {
+    "status": "REBUILT_EXPERIMENTAL_NOT_INDEPENDENTLY_EVALUATED",
+    "created_at": "2026-10-23T19:03:50.435211+00:00",
+    "selected_from": "Recorded development validation decision; no model comparison rerun.",
+    "model_hash": "bb669dfa24d5a667560ca785647bd7b2bdf619ce80c8766b0e6799584eb96218",
+    "history_hash": "864e73410f6f19404ba323ae158a18c7b226f000f1f3d00f640b61b871f3616a",
+    "original_evaluated_model_hash": "2bbd1edc9a542bec51be0f66a70312eaab698322d32319e826c523edfc364056",
+    "historical_report_applies_to_runtime": false,
+    "development_races": 31260,
+    "training_end": "2026-05-27",
+    "history_as_of": "2026-10-22",
+    "final_period_reopened": false,
+    "promotion": "RETAIN_ORIGINAL",
+    "source_hash": "d437590771d395db0e43ca1c9cfac83fa384de631cc1f1b48671a3aa1d522d2d"
+  }
+}
