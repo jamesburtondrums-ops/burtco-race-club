@@ -1,0 +1,455 @@
+{
+  "files": [
+    {
+      "path": "data/archive/2026-10-08-ledger.json",
+      "sha256": "cecd8df21c71bcdc7646537384497b095373aa11b8a71bda268c8a9d32ff4e47",
+      "bytes": 17586,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/archive/2026-10-08-races.json",
+      "sha256": "c8873410fdb9befac23f38e94c8a114178b36f8575fa2bb37cb884e208d85e8d",
+      "bytes": 49210,
+      "recorded_timestamps": {
+        "verifiedAt": "2026-10-08T13:35:00+01:00"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/archive/2026-10-09-before-evens-filter.json",
+      "sha256": "e9f9f2f760b8926060f4483eecd3f176315e94a54afbd53d5135181f19e9813b",
+      "bytes": 31239,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/archive/2026-10-09-ledger.json",
+      "sha256": "176cd1bbe6b7e9cae5b4ad62afa0fa35a1f85f7e4022354a6f007c4e86753d6b",
+      "bytes": 33726,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/archive/2026-10-09-races.json",
+      "sha256": "d8b7edd9b90745478c8b344f485f56f9ed7a6c4d7e9ce82286f54dc53be873a3",
+      "bytes": 42959,
+      "recorded_timestamps": {
+        "verifiedAt": "2026-10-09T07:33:11.997Z"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/archive/2026-10-10-ledger.json",
+      "sha256": "477158b5f13d72248f767cf69ac714d303bd3bc2589f0f99da8f0f5f426dbe73",
+      "bytes": 45474,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/archive/2026-10-10-races.json",
+      "sha256": "06e4627cb584eb866432dac8272fb6e9991ed743c384ffb8ca62fd2cf7cec6f5",
+      "bytes": 33808,
+      "recorded_timestamps": {
+        "verifiedAt": "2026-10-10T08:05:20.951Z"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/archive/2026-10-14-cleared-paper-bets.json",
+      "sha256": "4ee225c807e0ed392b679a9933bc29af08cb568afc8b0b5bdf2936b141a06329",
+      "bytes": 19528,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/bet-ledger.json",
+      "sha256": "54a1367e671cd8e6ea20bf394e62ca6a5ad9c8e0bc55ee1a5cd3c3e7e38a771f",
+      "bytes": 76063,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/history/2026-10-15.json",
+      "sha256": "74f74b0084849249e88b1a4e75f39271e91ce6b32f375b278c1a7277635ec9dc",
+      "bytes": 76620,
+      "recorded_timestamps": {
+        "verifiedAt": "2026-10-14T21:08:21.657Z"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/races.json",
+      "sha256": "279a9345af71d66f4c9e316bf15b6fae6aeeee0a9156c1ceb489b5c1a51611c0",
+      "bytes": 468534,
+      "recorded_timestamps": {
+        "verifiedAt": "2026-10-21T20:33:12.519Z"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/racing.json",
+      "sha256": "5d530ac4a4aa7605a83c0ee69fa1076b0b0f44b7496379cb9d7f9a61517b3816",
+      "bytes": 14390,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-1502-prospective-recheck.json",
+      "sha256": "52eaf8d7d778dba69e8715976caabe67551ed8671b9aab618e3b4397a1426478",
+      "bytes": 2322,
+      "recorded_timestamps": {
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-all-40-race-screen.json",
+      "sha256": "7ea490bbc5d4e7f1249a18b37c013a3878a1d14c88947b4c65e03696aaa4ab20",
+      "bytes": 334824,
+      "recorded_timestamps": {
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-all-races-carlisle.json",
+      "sha256": "b791afbb95a2d66724bc425121bdf7432cdfa6f13c6bcc6b2869da2b46f14208",
+      "bytes": 24737,
+      "recorded_timestamps": {
+        "collectedAt": "2026-10-22 early afternoon; exact page timestamp unavailable",
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-all-races-clonmel.json",
+      "sha256": "379a55deb10982fba697ac1519fffe3c05c49537fafc12f893e04e42aad8d5c0",
+      "bytes": 30615,
+      "recorded_timestamps": {
+        "collectedAt": "2026-10-22 afternoon, exact page timestamp unavailable",
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-all-races-ffos-las.json",
+      "sha256": "cad41f63eb1e63bf7fa2d48e580eca29a90016860bf539481e8075ce418655c1",
+      "bytes": 23155,
+      "recorded_timestamps": {
+        "collectedAt": "2026-10-22 afternoon, exact page timestamp not supplied",
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-all-races-manifest.json",
+      "sha256": "14e8d0ef4067d07b830389ed773c61badb227ec98336e2553afedaf242e35c27",
+      "bytes": 2053,
+      "recorded_timestamps": {
+        "createdAt": "2026-10-22T14:47:41+01:00",
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-all-races-newmarket.json",
+      "sha256": "057bff51661f6eeb805fe9201882ef753a1ab3afd8e74993bf4be4905657b2a1",
+      "bytes": 34924,
+      "recorded_timestamps": {
+        "collectedAt": "2026-10-22 afternoon, exact page timestamp not supplied",
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-all-races-southwell.json",
+      "sha256": "037e08dbc96b33c582bc9e3736b3d47e475d8d834301621546266144a6b25234",
+      "bytes": 33215,
+      "recorded_timestamps": {
+        "collectedAt": "2026-10-22 afternoon, exact page timestamp not supplied",
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-clear-selections.json",
+      "sha256": "326e40a176f9fa1c7822ff86ad606ff9096f679c13f04445d4050cc4b075f833",
+      "bytes": 9955,
+      "recorded_timestamps": {
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-deep-clonmel-16-30.json",
+      "sha256": "793a348391776d12b88968aa8eab69e6bfeb6c69627dbd2887df609024b6ca28",
+      "bytes": 25992,
+      "recorded_timestamps": {
+        "asOf": "2026-10-22 pre-race"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-deep-ffos-las-14-36.json",
+      "sha256": "262c9612c0efefb86bf26c64e23ffa66a9dff91193f22c3f8f702912df697124",
+      "bytes": 16625,
+      "recorded_timestamps": {
+        "asOf": "2026-10-22 pre-race"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-deep-newmarket-14-55.json",
+      "sha256": "eda795ab8a80ee3eb87220c8cc753abefa32eb9527016d9d80c9f734247c5b74",
+      "bytes": 20627,
+      "recorded_timestamps": {
+        "asOf": "2026-10-22 pre-race"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-deep-newmarket-16-05.json",
+      "sha256": "fb8045b10b488b7599289c8bd6b51fbd4997f616913856a3a07906fa85e0cf2e",
+      "bytes": 25898,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-deep-southwell-aw-17-00.json",
+      "sha256": "9a130dcb0b9ac770d1ead43e0b9d11d0796946a0d363bbf4ee2365098838b5bd",
+      "bytes": 24879,
+      "recorded_timestamps": {
+        "asOf": "2026-10-22 pre-race"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-deep-southwell-aw-18-30.json",
+      "sha256": "6c4c82e75101eee1932e6cb4d2be2314167bc356715f3935ec57961a99953675",
+      "bytes": 25739,
+      "recorded_timestamps": {
+        "asOf": "2026-10-22 pre-race"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-enhanced-screen-summary.json",
+      "sha256": "05c451186408e45a5f590791983f78bb9f0803ad09f61b24a05b7d2ff366f8ca",
+      "bytes": 21578,
+      "recorded_timestamps": {
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-independent-field-reassessments.json",
+      "sha256": "395458ba904b2971ae2c3205531fa41764f1dd3c6edf3f1a01c94f1f98be396a",
+      "bytes": 9708,
+      "recorded_timestamps": {
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-newmarket-1605.json",
+      "sha256": "d238c900bf3cb2ebb955712515f33d339518fc6d338c97b7e1efc8312a1efa72",
+      "bytes": 11347,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-selected-races-jockey-bookings.json",
+      "sha256": "67ac009e5e45a01fb50dd95460fc9a588832efd3b31b99955f62a718eae459f6",
+      "bytes": 52507,
+      "recorded_timestamps": {
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-stats-southwell.json",
+      "sha256": "d362c22ad026835b64fea58c23ce8b424f22defe02a247f6edcb6231dd8feea5",
+      "bytes": 45989,
+      "recorded_timestamps": {
+        "asOf": "2026-10-22 afternoon; source precise update time not provided"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-whole-field-southwell-18-00.json",
+      "sha256": "d11557627f4be8d9aa5f5edf5495b1f9de93b0b2ba440ab950da21172321daf3",
+      "bytes": 7252,
+      "recorded_timestamps": {
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/2026-10-22-whole-field-southwell-20-30.json",
+      "sha256": "60a0db9e97436cf668481c67cdf981a567962dbeed08e428707ced770f1b2e2c",
+      "bytes": 7623,
+      "recorded_timestamps": {
+        "date": "2026-10-22"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/development-plan.json",
+      "sha256": "52acb1c3e90173290ee577ee738f125769e3d1829be9a6766ed7c7dcf9932de4",
+      "bytes": 4807,
+      "recorded_timestamps": {
+        "asOf": "2026-10-11"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "data/research/prior-runs.json",
+      "sha256": "296033b74c554a45ffbc9542512483f837d70982544e68f415355afb2ccfb2d2",
+      "bytes": 2320,
+      "recorded_timestamps": {
+        "updatedAt": null
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "functions/_private/backoffice-history.json",
+      "sha256": "d5b4ba7e8544b5c7c49cf9e6c7bd80ad38d64ea74bef0a7949e1c626493e0be4",
+      "bytes": 5702,
+      "recorded_timestamps": {
+        "createdAt": "2026-10-09T07:46:49.956Z"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "functions/_private/racing-historical-runs.json",
+      "sha256": "b66eb300426c8def212d39df35e76953f77967e4fd25d1f9678982635d6c1bd2",
+      "bytes": 268,
+      "recorded_timestamps": {
+        "asOf": "2026-10-09"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "functions/_private/racing-manual-sectionals-example.json",
+      "sha256": "ebebaac740a84cd6bc603272cc99fad5387055f46716e9e2a23ee2ef161745be",
+      "bytes": 10222,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "functions/_private/racing-research-journal.json",
+      "sha256": "00881219d21304b14fb8dc439e215a519a2e98072594965c3747b56cccece14f",
+      "bytes": 6405,
+      "recorded_timestamps": {
+        "createdAt": "2026-10-09T08:00:34.483Z",
+        "updatedAt": "2026-10-09T08:00:34.483Z"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "functions/_private/racing-third-party-observations.json",
+      "sha256": "f664523517d24b28c387cdb0c0f5238ffd89cebbc5532a9530e2118b128c176f",
+      "bytes": 262,
+      "recorded_timestamps": {
+        "updatedAt": null
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "functions/_private/racing-third-party-sources.json",
+      "sha256": "1e9e6743ad039ed846e322a29feafef3e849f6af13aadc4691cc67de5715aefa",
+      "bytes": 2745,
+      "recorded_timestamps": {
+        "asOf": "2026-10-11"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "functions/_private/racing-track-profiles.json",
+      "sha256": "0605506d4cc2b437ab6c1c6bc5455d589fa05c15c85393945e2f5daa32a9ce97",
+      "bytes": 18279,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "research/coverage/2026-10-10.json",
+      "sha256": "d771fe11fb765b111ed17d6e3f41ee6f4f538f6b304b1d1ebc480e3ccd79c3db",
+      "bytes": 1306,
+      "recorded_timestamps": {
+        "date": "2026-10-10"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "research/output/deep_walkforward_backtest.json",
+      "sha256": "d1d461a29b64621689b51cc08b4f4f498b0d808c032f93decc4f9729a3ee37ca",
+      "bytes": 36548,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "research/output/historical_backtest.json",
+      "sha256": "6008a9b7712b17c799719b27125c98a164749cac8117e2abab1a550a8f90e2f6",
+      "bytes": 27753,
+      "recorded_timestamps": {},
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "research/reviews/2026-10-09-dundalk-1930.json",
+      "sha256": "57dcd5e94af6df0a7b557ba6405c602a1039acda74981ee8ef6dcfdc1af24cc8",
+      "bytes": 855,
+      "recorded_timestamps": {
+        "date": "2026-10-09"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "research/reviews/2026-10-09-dundalk-2030.json",
+      "sha256": "4d48c180704608185dd61176981088d738527d69f0404014d939d552e433d80a",
+      "bytes": 809,
+      "recorded_timestamps": {
+        "date": "2026-10-09"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "research/reviews/2026-10-09-newmarket-1315.json",
+      "sha256": "4b77798ee3ac02cc520f39e25e6c7bfcd149cb8bb35e70044f9ca14d32521185",
+      "bytes": 663,
+      "recorded_timestamps": {
+        "date": "2026-10-09"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "research/reviews/2026-10-09-york-1330.json",
+      "sha256": "42ae402f97141a1463cf328390a6883ce8afce7d05987a185c00c42bda0ef941",
+      "bytes": 730,
+      "recorded_timestamps": {
+        "date": "2026-10-09"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "research/reviews/2026-10-10-index.json",
+      "sha256": "fba1e033e94c8322e55e55ccfc786c3a2efa49f0241d2561d121672c6ed35d89",
+      "bytes": 277,
+      "recorded_timestamps": {
+        "date": "2026-10-10"
+      },
+      "independently_verified_point_in_time": false
+    },
+    {
+      "path": "research/reviews/2026-10-10-naas-precard-index.json",
+      "sha256": "bc835aa55790540abe8cedba200a033c31200a4fa3e18a4ef090679435a2b5c9",
+      "bytes": 508,
+      "recorded_timestamps": {
+        "date": "2026-10-10"
+      },
+      "independently_verified_point_in_time": false
+    }
+  ],
+  "file_count": 52,
+  "source_policy": "Retain original records. Dates and git commit times alone do not certify pre-race publication or field completeness."
+}

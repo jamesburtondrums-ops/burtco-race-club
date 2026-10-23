@@ -1,0 +1,23 @@
+{
+  "version": "v3-2026-10-23-a",
+  "history_start": "2015-01-01",
+  "learning_start": "2019-01-01",
+  "training_end": "2023-12-31",
+  "validation_end": "2026-05-27",
+  "final_start": "2026-06-04",
+  "final_end": "2026-09-30",
+  "embargo_days": 7,
+  "development_sample_modulus": 3,
+  "seed": 61023,
+  "folds": [
+    ["2020-12-31", "2021-01-08", "2021-12-31"],
+    ["2021-12-31", "2022-01-08", "2022-12-31"],
+    ["2022-12-31", "2023-01-08", "2023-12-31"]
+  ],
+  "candidates": ["logistic", "race_softmax", "boosted_small", "boosted_deep", "boosted_no_handicap", "boosted_no_connections", "specialists", "ensemble"],
+  "temperature_grid": [0.7, 0.85, 1.0, 1.2, 1.5, 2.0],
+  "minimum_final_races": 1000,
+  "promotion": "Paired day-block bootstrap 95% lower bound above zero for top-one improvement and log-loss improvement against a timestamped complete pre-race market; no material Brier regression; proven point-in-time source provenance. Original process requires identical-race frozen predictions. Never automatic production deployment.",
+  "retired_test_periods": ["2015-01-01/2026-05-27", "2026-10-01/2026-10-22"],
+  "source_policy": "The retrospective archive supports provisional experiments only. A final archive test never certifies historical declaration timing or contemporaneous rating versions. Current-race SP, RPR, TS, finishing time, margin and comment are excluded from all model features. Same-day results are embargoed from historical features. Final-period results may update later-race history only after the day ends; model parameters and calibration remain frozen."
+}

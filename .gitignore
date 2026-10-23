@@ -1,0 +1,6 @@
+.venv-v3/
+__pycache__/
+.pytest_cache/
+pytest-cache-files-*/
+v3/workspace/
+*.pyc

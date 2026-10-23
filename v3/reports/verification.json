@@ -1,0 +1,42 @@
+{
+  "v3_tests": {
+    "passed": 14,
+    "failed": 0,
+    "scope": [
+      "chronology",
+      "future outcome exclusion",
+      "same-day embargo",
+      "complete fields",
+      "code separation",
+      "race-balanced metrics",
+      "immutable ledger",
+      "timestamp enforcement",
+      "final one-use",
+      "configuration tamper check",
+      "forecast/result end-to-end"
+    ]
+  },
+  "inherited_site_tests": {
+    "total": 43,
+    "passed": 36,
+    "failed": 7,
+    "source_files_modified": false,
+    "notes": "Existing fixtures include stale dates, old ledger expectations, and selection-validation discrepancies. Original tests and application code are preserved."
+  },
+  "source_order_audit": {
+    "raw_rows": 1904226,
+    "original_date_regressions": 36,
+    "replay_order": "date, race ID, original row sequence; all results delayed until next day",
+    "raw_source_preserved": true,
+    "outcome_features_excluded_from_index": [
+      "rpr",
+      "ts",
+      "comment",
+      "time",
+      "btn",
+      "ovr_btn"
+    ]
+  },
+  "final_period_retired": true,
+  "promotion": "RETAIN_ORIGINAL"
+}

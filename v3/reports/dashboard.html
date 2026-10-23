@@ -1,0 +1,3891 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Racing Intelligence · v3 development</title>
+<style>
+:root{--ink:#193b30;--muted:#64746d;--line:#d9dfd6;--paper:#f2f4ed;--card:#fffef9;--gold:#a78237;--mint:#dcebdc;--amber:#f7edd7}*{box-sizing:border-box}body{margin:0;font:15px/1.55 system-ui,sans-serif;color:var(--ink);background:var(--paper)}header{background:var(--ink);color:#fffef9;padding:24px max(24px,calc((100vw - 1220px)/2));display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font:26px Georgia,serif;letter-spacing:-.5px}.brand small{display:block;font:11px system-ui,sans-serif;text-transform:uppercase;letter-spacing:2px;color:#b4cabd}.tag{font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:8px 12px;border:1px solid #8fa697;border-radius:4px}main{max-width:1268px;margin:auto;padding:32px 24px 60px}.eyebrow{color:var(--gold);font-size:11px;font-weight:750;letter-spacing:1.8px;text-transform:uppercase}h1{font:42px/1.15 Georgia,serif;margin:8px 0 12px}h2{font:25px Georgia,serif;margin:0 0 8px}h3{font-size:14px;margin:0 0 14px}p{margin:8px 0;color:var(--muted)}.lead{max-width:780px}nav{display:flex;gap:6px;border-bottom:1px solid var(--line);margin:28px 0 24px}button{font:inherit;cursor:pointer;border:1px solid var(--line);padding:10px 16px;border-radius:4px;background:var(--card);color:var(--ink)}nav button{border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent}nav button[aria-selected=true]{border-bottom-color:var(--ink);font-weight:700}.primary{background:var(--ink);color:white;border-color:var(--ink)}button:disabled{opacity:.6;cursor:wait}.notice{background:var(--amber);border-left:3px solid var(--gold);padding:15px 18px;margin-bottom:22px}.notice p{color:#765f2e;font-size:13px}.notice strong{font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:7px;padding:24px}.metric{font:36px Georgia,serif;margin:9px 0 3px}.sub{font-size:12px;color:var(--muted)}.row{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;margin-top:20px}.section{margin-top:20px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap}th{text-align:left;color:var(--muted);font-weight:500;border-bottom:1px solid var(--line);padding:12px 10px}td{padding:12px 10px;border-bottom:1px solid #e8ece5}th:first-child,td:first-child{padding-left:0}.chosen{background:#ecf3e7}.pill{font-size:10px;padding:3px 7px;background:var(--mint);border-radius:3px;letter-spacing:.5px}.barrow{display:grid;grid-template-columns:130px 1fr 48px;gap:12px;align-items:center;margin:20px 0;font-size:12px}.track{height:16px;background:#e9eee5;border-radius:2px;overflow:hidden}.fill{height:100%;background:#527c5d}.fill.alt{background:#b7c9ae}.fill.market{background:var(--gold)}svg{max-width:100%;height:auto}.panel[hidden]{display:none}.statusline{display:flex;gap:15px;align-items:center;justify-content:space-between;margin:0 0 18px}.list{padding-left:18px;color:var(--muted);font-size:13px}.list li{margin:7px 0}textarea{width:100%;min-height:230px;background:#f6f8f2;border:1px solid var(--line);border-radius:4px;padding:14px;font:12px/1.6 ui-monospace,monospace;color:var(--ink);resize:vertical}label{display:block;font-weight:650;font-size:13px;margin:16px 0 8px}input[type=file]{display:block;margin:10px 0 16px;max-width:100%}.output{white-space:pre-wrap;font:12px/1.65 ui-monospace,monospace;max-height:440px;overflow:auto}.error{color:#9b3c30}.split{display:flex;align-items:center;margin:18px 0;height:32px}.split span{height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.5px;color:white}.split .train{background:#315f48;flex:6}.split .valid{background:#7d9877;flex:2}.split .test{background:var(--gold);flex:1.2}details{font-size:13px;margin-top:15px}summary{cursor:pointer;color:var(--ink)}code{font-size:12px;overflow-wrap:anywhere}footer{font-size:11px;margin-top:28px;border-top:1px solid var(--line);padding-top:17px;color:var(--muted)}.mobile{display:none}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}h1{font-size:34px}.tag{display:none}}@media(max-width:450px){main{padding:24px 16px}.card{padding:18px}.metric{font-size:29px}nav button{padding:10px;font-size:13px}.barrow{grid-template-columns:105px 1fr 42px}}
+</style></head><body><header><div class="brand"><small>Research & prediction lab</small>Racing Intelligence</div><span class="tag">v3 · saved experiment report</span></header>
+<main><span class="eyebrow">Evidence before promotion</span><h1>Learn. Replay. Prove.</h1><p class="lead">Follow the model from earlier races to a reserved later period. Every runner receives a probability; every promotion decision must earn its evidence.</p>
+<nav aria-label="Development dashboard"><button aria-selected="true" data-tab="validation">Validation lab</button><button aria-selected="false" disabled title="Use the live local dashboard for prediction tools" data-tab="future">Future racecards</button><button aria-selected="false" disabled title="Use the live local dashboard for prediction tools" data-tab="records">Prediction records</button></nav>
+<section id="validation" class="panel"><div id="summary"><p>Loading experiment records…</p></div></section>
+<section id="future" class="panel" hidden><div class="notice"><strong>Experimental forecasts</strong><p>The trained candidate uses archive data. Temperature calibration is fitted on development races; prospective accuracy remains unproven.</p></div><div class="row"><div class="card"><h2>Freeze a future forecast</h2><p>Import the complete declared field with source publication, observation and race times. Forecasts must be recorded before the cutoff.</p><label for="cardfile">Complete racecard JSON</label><input id="cardfile" type="file" accept=".json,application/json"><textarea id="cardinput" aria-label="Racecard JSON" spellcheck="false" placeholder="Import a timestamped racecard JSON file, or paste its contents here."></textarea><p class="sub">Required envelope: race_id, cutoff, off_at, published_at, observed_at, source_url, declared_runner_count, runners. Optional market quotes stay separate from ability inputs.</p><button class="primary" id="freeze">Rank all runners & freeze</button><details><summary>Runner fields and market quotes</summary><p>Runner fields: horse, trainer, jockey, sire, course, type, race_name, class, going, dist, or, age, sex, wgt, hg, draw.</p><p>Market entry: horse, decimal_odds, observed_at. All timestamps need an explicit timezone. Outcomes and current performance figures are rejected.</p></details></div><div class="card"><h2>Runner probabilities</h2><p>Frozen winner, strongest opposition and estimated value appear here.</p><div id="forecast" aria-live="polite"></div></div></div></section>
+<section id="records" class="panel" hidden><div class="statusline"><div><h2>Immutable recordbook</h2><p>Forecasts and official outcomes remain separate, linked records.</p></div><button id="reload">Refresh records</button></div><div id="recordlist" class="card"></div><div class="card section"><h2>Attach an official result</h2><p>Import race_id, status: OFFICIAL, source_url, published_at, observed_at, and finishes: a horse-to-position mapping. Use 0 for a non-finisher. A result requires an existing frozen forecast.</p><input id="resultfile" type="file" accept=".json,application/json" aria-label="Official result JSON"><textarea id="resultinput" aria-label="Official result JSON" placeholder="Paste official result JSON" spellcheck="false"></textarea><button id="resultbutton" class="primary">Record official result</button><p id="resultstatus" aria-live="polite"></p></div></section>
+<footer>Development branch: racing-intelligence-v3 · Race log loss and Brier scores give every race equal weight. Top-three finishing frequency does not represent bookmaker paid places. Original production model retained.</footer></main>
+<script>
+const $=s=>document.querySelector(s),e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),pct=x=>x==null?'—':(x*100).toFixed(1)+'%',num=x=>x==null?'—':Number(x).toLocaleString('en-GB'),dec=x=>x==null?'—':Number(x).toFixed(3);
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('.panel').forEach(x=>x.hidden=x.id!==b.dataset.tab);if(b.dataset.tab==='records')loadRecords()});
+function chart(rows){return rows.filter(r=>r[1]).map(([name,m,cl])=>`<div class="barrow"><span>${e(name)}</span><div class="track"><div class="fill ${cl||''}" style="width:${Math.min(100,m.top_one*200)}%"></div></div><b>${pct(m.top_one)}</b></div>`).join('')}
+function calibration(m){if(!m)return '<p>Awaiting final evaluation.</p>';let points=m.calibration.map(b=>`${42+b.predicted*320},${265-b.observed*230}`).join(' ');return `<svg viewBox="0 0 410 300" role="img" aria-label="Calibration plot comparing predicted probabilities with observed win frequencies"><path d="M42 25V265H370" fill="none" stroke="#c2ccbf"/><path d="M42 265L362 35" stroke="#c2ccbf" stroke-dasharray="5 5"/><polyline points="${points}" fill="none" stroke="#315f48" stroke-width="3"/>${m.calibration.map(b=>`<circle cx="${42+b.predicted*320}" cy="${265-b.observed*230}" r="4" fill="#a78237"><title>${b.count} runners; predicted ${pct(b.predicted)}, observed ${pct(b.observed)}</title></circle>`).join('')}<text x="150" y="291" fill="#64746d" font-size="11">Predicted win probability</text><text x="42" y="280" fill="#64746d" font-size="10">0%</text><text x="345" y="280" fill="#64746d" font-size="10">100%</text></svg>`}
+async function loadReport(){try{const b=await Promise.resolve({
+  "title": "Racing Intelligence v3",
+  "production_decision": "RETAIN_ORIGINAL",
+  "audit": {
+    "first_source_day": "2015-01-01",
+    "last_processed_day": "2026-09-30",
+    "development_races": 31260,
+    "reserved_final_races": 4785,
+    "race_type_counts": {
+      "development_jumps": 12230,
+      "development_aw": 7659,
+      "development_turf": 11371,
+      "final_turf": 3205,
+      "final_jumps": 907,
+      "final_aw": 673
+    },
+    "excluded_races": {
+      "outside_gb_ire": 43801,
+      "incomplete_starter_field": 4,
+      "no_single_official_winner": 300,
+      "fewer_than_two_starters": 21
+    },
+    "all_features_use_results_from_earlier_days_only": true,
+    "complete_starters_only": true,
+    "complete_declarations_verified": false,
+    "source_timestamps_verified": false,
+    "excluded_features": [
+      "current_rpr",
+      "current_ts",
+      "current_sp",
+      "current_comment",
+      "current_finish_time",
+      "current_margin"
+    ],
+    "missing_feature_families": [
+      "verified pre-race performance figures",
+      "measured pace",
+      "track configuration",
+      "sectionals",
+      "equipment publication times",
+      "pre-race odds",
+      "versioned ratings"
+    ],
+    "original_model_comparison": "No matching frozen probability forecasts in archive; 25% is not a scored baseline."
+  },
+  "development": {
+    "protocol": {
+      "version": "v3-2026-10-23-a",
+      "history_start": "2015-01-01",
+      "learning_start": "2019-01-01",
+      "training_end": "2023-12-31",
+      "validation_end": "2026-05-27",
+      "final_start": "2026-06-04",
+      "final_end": "2026-09-30",
+      "embargo_days": 7,
+      "development_sample_modulus": 3,
+      "seed": 61023,
+      "folds": [
+        [
+          "2020-12-31",
+          "2021-01-08",
+          "2021-12-31"
+        ],
+        [
+          "2021-12-31",
+          "2022-01-08",
+          "2022-12-31"
+        ],
+        [
+          "2022-12-31",
+          "2023-01-08",
+          "2023-12-31"
+        ]
+      ],
+      "candidates": [
+        "logistic",
+        "race_softmax",
+        "boosted_small",
+        "boosted_deep",
+        "boosted_no_handicap",
+        "boosted_no_connections",
+        "specialists",
+        "ensemble"
+      ],
+      "temperature_grid": [
+        0.7,
+        0.85,
+        1.0,
+        1.2,
+        1.5,
+        2.0
+      ],
+      "minimum_final_races": 1000,
+      "promotion": "Paired day-block bootstrap 95% lower bound above zero for top-one improvement and log-loss improvement against a timestamped complete pre-race market; no material Brier regression; proven point-in-time source provenance. Original process requires identical-race frozen predictions. Never automatic production deployment.",
+      "retired_test_periods": [
+        "2015-01-01/2026-05-27",
+        "2026-10-01/2026-10-22"
+      ],
+      "source_policy": "The retrospective archive supports provisional experiments only. A final archive test never certifies historical declaration timing or contemporaneous rating versions. Current-race SP, RPR, TS, finishing time, margin and comment are excluded from all model features. Same-day results are embargoed from historical features. Final-period results may update later-race history only after the day ends; model parameters and calibration remain frozen."
+    },
+    "feature_columns": [
+      "age",
+      "aw",
+      "below_last_win",
+      "best_finish5",
+      "cd_top3",
+      "class_drop",
+      "course_starts",
+      "course_win",
+      "days_since_run",
+      "distance",
+      "distance_change",
+      "distance_win",
+      "draw",
+      "draw_fraction",
+      "female",
+      "field_size",
+      "going",
+      "going_win",
+      "handicap",
+      "headgear",
+      "headgear_change",
+      "horse_jockey",
+      "improvement",
+      "jockey14",
+      "jockey_all",
+      "jumps",
+      "last_finish",
+      "mark_change",
+      "mean_finish5",
+      "mean_finish5_rank",
+      "mean_finish5_vs_field",
+      "official_rating",
+      "official_rating_rank",
+      "official_rating_vs_field",
+      "prior_starts",
+      "race_class",
+      "sire_code",
+      "top3_rate5",
+      "trainer14",
+      "trainer30",
+      "trainer_all",
+      "trainer_all_rank",
+      "trainer_all_vs_field",
+      "trainer_jockey",
+      "weight",
+      "weight_rank",
+      "weight_vs_field",
+      "win_rate5",
+      "win_rate5_rank",
+      "win_rate5_vs_field"
+    ],
+    "folds": [
+      {
+        "train_end": "2020-12-31",
+        "validation_start": "2021-01-08",
+        "validation_end": "2021-12-31",
+        "models": {
+          "logistic": {
+            "races": 4425,
+            "runners": 42311,
+            "top_one": 0.2752542372881356,
+            "top_two": 0.46011299435028247,
+            "top_three": 0.6006779661016949,
+            "pick_top3": 0.5970621468926554,
+            "log_loss": 1.958255199494431,
+            "brier": 0.8218487749458147,
+            "calibration": [
+              {
+                "count": 25503,
+                "predicted": 0.054198015155330154,
+                "observed": 0.04956279653374113
+              },
+              {
+                "count": 11915,
+                "predicted": 0.14013467612507347,
+                "observed": 0.14712547209399915
+              },
+              {
+                "count": 3447,
+                "predicted": 0.24018112777995412,
+                "observed": 0.2457209167391935
+              },
+              {
+                "count": 1058,
+                "predicted": 0.3395771721682915,
+                "observed": 0.333648393194707
+              },
+              {
+                "count": 271,
+                "predicted": 0.4385722514326187,
+                "observed": 0.45387453874538747
+              },
+              {
+                "count": 89,
+                "predicted": 0.5445602886568348,
+                "observed": 0.6966292134831461
+              },
+              {
+                "count": 21,
+                "predicted": 0.6345512875743768,
+                "observed": 0.8095238095238095
+              },
+              {
+                "count": 6,
+                "predicted": 0.7426383353877211,
+                "observed": 0.8333333333333334
+              },
+              {
+                "count": 1,
+                "predicted": 0.8060049717245007,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.26789366053169733,
+                "log_loss": 1.9732026188030214,
+                "brier": 0.8249416503235059,
+                "races": 978
+              },
+              "jumps": {
+                "top_one": 0.2883435582822086,
+                "log_loss": 1.9338683567354007,
+                "brier": 0.8142454433558524,
+                "races": 1793
+              },
+              "turf": {
+                "top_one": 0.26541717049576785,
+                "log_loss": 1.975853163813137,
+                "brier": 0.8282622824557424,
+                "races": 1654
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1453,
+                "top_one": 0.3475567790777701
+              },
+              "8-11": {
+                "races": 1680,
+                "top_one": 0.256547619047619
+              },
+              "12+": {
+                "races": 1292,
+                "top_one": 0.21826625386996903
+              }
+            }
+          },
+          "race_softmax": {
+            "races": 4425,
+            "runners": 42311,
+            "top_one": 0.27299435028248586,
+            "top_two": 0.46576271186440676,
+            "top_three": 0.6072316384180791,
+            "pick_top3": 0.5984180790960452,
+            "log_loss": 1.9522346433607927,
+            "brier": 0.8203063560303614,
+            "calibration": [
+              {
+                "count": 26424,
+                "predicted": 0.053103462526730344,
+                "observed": 0.05139267332727823
+              },
+              {
+                "count": 10903,
+                "predicted": 0.1395441324915067,
+                "observed": 0.14922498394937173
+              },
+              {
+                "count": 3153,
+                "predicted": 0.24097153559219897,
+                "observed": 0.24008880431335236
+              },
+              {
+                "count": 1127,
+                "predicted": 0.3414196481494035,
+                "observed": 0.3132209405501331
+              },
+              {
+                "count": 424,
+                "predicted": 0.4418027674587418,
+                "observed": 0.3891509433962264
+              },
+              {
+                "count": 165,
+                "predicted": 0.5412344962169623,
+                "observed": 0.5272727272727272
+              },
+              {
+                "count": 78,
+                "predicted": 0.6479840029267283,
+                "observed": 0.6666666666666666
+              },
+              {
+                "count": 28,
+                "predicted": 0.742820479030721,
+                "observed": 0.6785714285714286
+              },
+              {
+                "count": 5,
+                "predicted": 0.8309625034090317,
+                "observed": 0.6
+              },
+              {
+                "count": 4,
+                "predicted": 0.9141577539257832,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2719836400817996,
+                "log_loss": 1.9598219395168037,
+                "brier": 0.820876455228367,
+                "races": 978
+              },
+              "jumps": {
+                "top_one": 0.28667038482989404,
+                "log_loss": 1.9295333073208594,
+                "brier": 0.8133105722427479,
+                "races": 1793
+              },
+              "turf": {
+                "top_one": 0.2587666263603386,
+                "log_loss": 1.9723574486080846,
+                "brier": 0.8275529602114625,
+                "races": 1654
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1453,
+                "top_one": 0.34136269786648316
+              },
+              "8-11": {
+                "races": 1680,
+                "top_one": 0.25595238095238093
+              },
+              "12+": {
+                "races": 1292,
+                "top_one": 0.21826625386996903
+              }
+            }
+          },
+          "boosted_small": {
+            "races": 4425,
+            "runners": 42311,
+            "top_one": 0.2705084745762712,
+            "top_two": 0.46418079096045195,
+            "top_three": 0.6061016949152542,
+            "pick_top3": 0.5986440677966102,
+            "log_loss": 1.9497395970631561,
+            "brier": 0.8206709961613834,
+            "calibration": [
+              {
+                "count": 25697,
+                "predicted": 0.05373394309514182,
+                "observed": 0.050044752305716624
+              },
+              {
+                "count": 11593,
+                "predicted": 0.13971967928814466,
+                "observed": 0.14603640127663245
+              },
+              {
+                "count": 3487,
+                "predicted": 0.2414683875105262,
+                "observed": 0.24605678233438485
+              },
+              {
+                "count": 1097,
+                "predicted": 0.3401092694071426,
+                "observed": 0.3281677301731996
+              },
+              {
+                "count": 308,
+                "predicted": 0.43936185015120505,
+                "observed": 0.4448051948051948
+              },
+              {
+                "count": 95,
+                "predicted": 0.5380016163571989,
+                "observed": 0.6526315789473685
+              },
+              {
+                "count": 23,
+                "predicted": 0.6320089828915846,
+                "observed": 0.8695652173913043
+              },
+              {
+                "count": 9,
+                "predicted": 0.7388058211193403,
+                "observed": 0.8888888888888888
+              },
+              {
+                "count": 2,
+                "predicted": 0.8547120553768157,
+                "observed": 0.5
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.26993865030674846,
+                "log_loss": 1.9604546128310616,
+                "brier": 0.8229393378002945,
+                "races": 978
+              },
+              "jumps": {
+                "top_one": 0.2872281093139989,
+                "log_loss": 1.9218411089040066,
+                "brier": 0.811837858074037,
+                "races": 1793
+              },
+              "turf": {
+                "top_one": 0.25272067714631197,
+                "log_loss": 1.9736469149883935,
+                "brier": 0.8289052032156503,
+                "races": 1654
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1453,
+                "top_one": 0.33654507914659326
+              },
+              "8-11": {
+                "races": 1680,
+                "top_one": 0.25833333333333336
+              },
+              "12+": {
+                "races": 1292,
+                "top_one": 0.21207430340557276
+              }
+            }
+          },
+          "boosted_deep": {
+            "races": 4425,
+            "runners": 42311,
+            "top_one": 0.2635028248587571,
+            "top_two": 0.4625988700564972,
+            "top_three": 0.6045197740112994,
+            "pick_top3": 0.5961581920903954,
+            "log_loss": 1.9466053672839554,
+            "brier": 0.8202408374269013,
+            "calibration": [
+              {
+                "count": 25785,
+                "predicted": 0.05233173940679052,
+                "observed": 0.04956369982547993
+              },
+              {
+                "count": 11341,
+                "predicted": 0.13980242440791435,
+                "observed": 0.1468124504011992
+              },
+              {
+                "count": 3518,
+                "predicted": 0.24169930628268363,
+                "observed": 0.24445707788516202
+              },
+              {
+                "count": 1152,
+                "predicted": 0.34080701535088154,
+                "observed": 0.3151041666666667
+              },
+              {
+                "count": 360,
+                "predicted": 0.43773096482442403,
+                "observed": 0.4305555555555556
+              },
+              {
+                "count": 109,
+                "predicted": 0.5413327152044715,
+                "observed": 0.6146788990825688
+              },
+              {
+                "count": 36,
+                "predicted": 0.6354976263178138,
+                "observed": 0.7777777777777778
+              },
+              {
+                "count": 8,
+                "predicted": 0.7529983602220578,
+                "observed": 1.0
+              },
+              {
+                "count": 2,
+                "predicted": 0.8643241378777536,
+                "observed": 0.5
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.26993865030674846,
+                "log_loss": 1.9528917410035889,
+                "brier": 0.8213940054588024,
+                "races": 978
+              },
+              "jumps": {
+                "top_one": 0.28555493586168434,
+                "log_loss": 1.9190294585908763,
+                "brier": 0.8116211151925059,
+                "races": 1793
+              },
+              "turf": {
+                "top_one": 0.23579201934703747,
+                "log_loss": 1.972781625318351,
+                "brier": 0.8289030887153362,
+                "races": 1654
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1453,
+                "top_one": 0.3344803854094976
+              },
+              "8-11": {
+                "races": 1680,
+                "top_one": 0.2505952380952381
+              },
+              "12+": {
+                "races": 1292,
+                "top_one": 0.20046439628482973
+              }
+            }
+          },
+          "boosted_no_handicap": {
+            "races": 4425,
+            "runners": 42311,
+            "top_one": 0.2689265536723164,
+            "top_two": 0.4592090395480226,
+            "top_three": 0.6027118644067797,
+            "pick_top3": 0.5963841807909604,
+            "log_loss": 1.9546150450097792,
+            "brier": 0.8225857844861665,
+            "calibration": [
+              {
+                "count": 25693,
+                "predicted": 0.05388001176830986,
+                "observed": 0.05036391234966722
+              },
+              {
+                "count": 11546,
+                "predicted": 0.1398585600815224,
+                "observed": 0.14567815693746752
+              },
+              {
+                "count": 3574,
+                "predicted": 0.24063373150139883,
+                "observed": 0.2420257414661444
+              },
+              {
+                "count": 1085,
+                "predicted": 0.3393479241258609,
+                "observed": 0.3382488479262673
+              },
+              {
+                "count": 296,
+                "predicted": 0.4416432564265316,
+                "observed": 0.4560810810810811
+              },
+              {
+                "count": 89,
+                "predicted": 0.5406720715989513,
+                "observed": 0.6741573033707865
+              },
+              {
+                "count": 22,
+                "predicted": 0.6425782506668916,
+                "observed": 0.7727272727272727
+              },
+              {
+                "count": 4,
+                "predicted": 0.7417338839237603,
+                "observed": 1.0
+              },
+              {
+                "count": 2,
+                "predicted": 0.8432967740362325,
+                "observed": 0.5
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.27096114519427406,
+                "log_loss": 1.960286758802031,
+                "brier": 0.823808652438631,
+                "races": 978
+              },
+              "jumps": {
+                "top_one": 0.290574456218628,
+                "log_loss": 1.9240307588932497,
+                "brier": 0.8125279692719255,
+                "races": 1793
+              },
+              "turf": {
+                "top_one": 0.24425634824667472,
+                "log_loss": 1.9844159452021093,
+                "brier": 0.8327657710772329,
+                "races": 1654
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1453,
+                "top_one": 0.33860977288368893
+              },
+              "8-11": {
+                "races": 1680,
+                "top_one": 0.2511904761904762
+              },
+              "12+": {
+                "races": 1292,
+                "top_one": 0.21362229102167182
+              }
+            }
+          },
+          "boosted_no_connections": {
+            "races": 4425,
+            "runners": 42311,
+            "top_one": 0.25807909604519774,
+            "top_two": 0.44180790960451977,
+            "top_three": 0.5830508474576271,
+            "pick_top3": 0.5828248587570621,
+            "log_loss": 1.9960223234737136,
+            "brier": 0.8312241187528306,
+            "calibration": [
+              {
+                "count": 25415,
+                "predicted": 0.057365403242502486,
+                "observed": 0.0538264804249459
+              },
+              {
+                "count": 12350,
+                "predicted": 0.1387914716385631,
+                "observed": 0.1434008097165992
+              },
+              {
+                "count": 3338,
+                "predicted": 0.2402971659375711,
+                "observed": 0.24176153385260635
+              },
+              {
+                "count": 904,
+                "predicted": 0.3381614652100414,
+                "observed": 0.3407079646017699
+              },
+              {
+                "count": 220,
+                "predicted": 0.44246060091070066,
+                "observed": 0.5136363636363637
+              },
+              {
+                "count": 67,
+                "predicted": 0.5400043885701179,
+                "observed": 0.6417910447761194
+              },
+              {
+                "count": 12,
+                "predicted": 0.643131519605091,
+                "observed": 1.0
+              },
+              {
+                "count": 3,
+                "predicted": 0.7423550503424194,
+                "observed": 0.6666666666666666
+              },
+              {
+                "count": 2,
+                "predicted": 0.8537138926075653,
+                "observed": 0.5
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2719836400817996,
+                "log_loss": 2.000557137178311,
+                "brier": 0.8327472360829314,
+                "races": 978
+              },
+              "jumps": {
+                "top_one": 0.2632459564974902,
+                "log_loss": 1.9743737675208608,
+                "brier": 0.8244697432334136,
+                "races": 1793
+              },
+              "turf": {
+                "top_one": 0.24425634824667472,
+                "log_loss": 2.0168087884195227,
+                "brier": 0.8376455132857665,
+                "races": 1654
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1453,
+                "top_one": 0.3331039229181005
+              },
+              "8-11": {
+                "races": 1680,
+                "top_one": 0.23809523809523808
+              },
+              "12+": {
+                "races": 1292,
+                "top_one": 0.1996904024767802
+              }
+            }
+          },
+          "specialists": {
+            "races": 4425,
+            "runners": 42311,
+            "top_one": 0.2702824858757062,
+            "top_two": 0.4503954802259887,
+            "top_three": 0.5972881355932204,
+            "pick_top3": 0.5938983050847457,
+            "log_loss": 1.9632836081038276,
+            "brier": 0.8238738574032954,
+            "calibration": [
+              {
+                "count": 25978,
+                "predicted": 0.05264692281905012,
+                "observed": 0.05150511971668335
+              },
+              {
+                "count": 11095,
+                "predicted": 0.13976664184937485,
+                "observed": 0.1462821090581343
+              },
+              {
+                "count": 3530,
+                "predicted": 0.24138885530257911,
+                "observed": 0.23654390934844194
+              },
+              {
+                "count": 1169,
+                "predicted": 0.339796870058573,
+                "observed": 0.3088109495295124
+              },
+              {
+                "count": 390,
+                "predicted": 0.4387617108568848,
+                "observed": 0.41794871794871796
+              },
+              {
+                "count": 108,
+                "predicted": 0.5389344498791928,
+                "observed": 0.6944444444444444
+              },
+              {
+                "count": 27,
+                "predicted": 0.6456609174932443,
+                "observed": 0.7407407407407407
+              },
+              {
+                "count": 10,
+                "predicted": 0.7235351682181972,
+                "observed": 0.8
+              },
+              {
+                "count": 4,
+                "predicted": 0.8279907739221433,
+                "observed": 0.5
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2689161554192229,
+                "log_loss": 1.982185105250007,
+                "brier": 0.8294368089616518,
+                "races": 978
+              },
+              "jumps": {
+                "top_one": 0.2849972113775795,
+                "log_loss": 1.9226537547859202,
+                "brier": 0.8111443364808023,
+                "races": 1793
+              },
+              "turf": {
+                "top_one": 0.2551390568319226,
+                "log_loss": 1.9961516025355353,
+                "brier": 0.8343838116898479,
+                "races": 1654
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1453,
+                "top_one": 0.32759807295251203
+              },
+              "8-11": {
+                "races": 1680,
+                "top_one": 0.2636904761904762
+              },
+              "12+": {
+                "races": 1292,
+                "top_one": 0.21439628482972137
+              }
+            }
+          },
+          "ensemble": {
+            "races": 4425,
+            "runners": 42311,
+            "top_one": 0.28,
+            "top_two": 0.4727683615819209,
+            "top_three": 0.6126553672316384,
+            "pick_top3": 0.6097175141242938,
+            "log_loss": 1.9424924970578574,
+            "brier": 0.8177136415827722,
+            "calibration": [
+              {
+                "count": 25972,
+                "predicted": 0.05394245977538403,
+                "observed": 0.04928384413984291
+              },
+              {
+                "count": 11396,
+                "predicted": 0.13959903981991828,
+                "observed": 0.14926289926289926
+              },
+              {
+                "count": 3330,
+                "predicted": 0.2416350117396767,
+                "observed": 0.24444444444444444
+              },
+              {
+                "count": 1087,
+                "predicted": 0.3411114869408328,
+                "observed": 0.33670653173873044
+              },
+              {
+                "count": 348,
+                "predicted": 0.44038210046672893,
+                "observed": 0.43103448275862066
+              },
+              {
+                "count": 112,
+                "predicted": 0.5392422329240282,
+                "observed": 0.5625
+              },
+              {
+                "count": 54,
+                "predicted": 0.6408972232490946,
+                "observed": 0.7592592592592593
+              },
+              {
+                "count": 6,
+                "predicted": 0.7432903759293964,
+                "observed": 0.8333333333333334
+              },
+              {
+                "count": 6,
+                "predicted": 0.8311180278647329,
+                "observed": 0.8333333333333334
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2770961145194274,
+                "log_loss": 1.952226491317986,
+                "brier": 0.8194359874726016,
+                "races": 978
+              },
+              "jumps": {
+                "top_one": 0.3000557724484105,
+                "log_loss": 1.916160378662142,
+                "brier": 0.8093786312170305,
+                "races": 1793
+              },
+              "turf": {
+                "top_one": 0.2599758162031439,
+                "log_loss": 1.9652818815180215,
+                "brier": 0.8257307028315759,
+                "races": 1654
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1453,
+                "top_one": 0.3496214728148658
+              },
+              "8-11": {
+                "races": 1680,
+                "top_one": 0.2636904761904762
+              },
+              "12+": {
+                "races": 1292,
+                "top_one": 0.22291021671826625
+              }
+            }
+          }
+        }
+      },
+      {
+        "train_end": "2021-12-31",
+        "validation_start": "2022-01-08",
+        "validation_end": "2022-12-31",
+        "models": {
+          "logistic": {
+            "races": 4286,
+            "runners": 39867,
+            "top_one": 0.28628091460569294,
+            "top_two": 0.4855342977134858,
+            "top_three": 0.6236584227718152,
+            "pick_top3": 0.6168922071861875,
+            "log_loss": 1.9121876097221842,
+            "brier": 0.8108543725289508,
+            "calibration": [
+              {
+                "count": 23564,
+                "predicted": 0.05409346462663318,
+                "observed": 0.050373451026990326
+              },
+              {
+                "count": 11233,
+                "predicted": 0.13967913775082685,
+                "observed": 0.1385204308733197
+              },
+              {
+                "count": 3495,
+                "predicted": 0.24081648646731715,
+                "observed": 0.25379113018598
+              },
+              {
+                "count": 1091,
+                "predicted": 0.34007112570062825,
+                "observed": 0.3638863428047663
+              },
+              {
+                "count": 361,
+                "predicted": 0.44221000173822295,
+                "observed": 0.5069252077562327
+              },
+              {
+                "count": 97,
+                "predicted": 0.5407782058922518,
+                "observed": 0.5979381443298969
+              },
+              {
+                "count": 20,
+                "predicted": 0.639320568694977,
+                "observed": 0.7
+              },
+              {
+                "count": 3,
+                "predicted": 0.732060088166532,
+                "observed": 0.6666666666666666
+              },
+              {
+                "count": 2,
+                "predicted": 0.8307299189944823,
+                "observed": 0.5
+              },
+              {
+                "count": 1,
+                "predicted": 0.9172787648837659,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.29878048780487804,
+                "log_loss": 1.9410737626123875,
+                "brier": 0.8167831138530197,
+                "races": 984
+              },
+              "jumps": {
+                "top_one": 0.2893341190335887,
+                "log_loss": 1.8676022646739712,
+                "brier": 0.800615901826649,
+                "races": 1697
+              },
+              "turf": {
+                "top_one": 0.2753894080996885,
+                "log_loss": 1.9416189842410987,
+                "brier": 0.8180449041918307,
+                "races": 1605
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1540,
+                "top_one": 0.35324675324675325
+              },
+              "8-11": {
+                "races": 1629,
+                "top_one": 0.27255985267034993
+              },
+              "12+": {
+                "races": 1117,
+                "top_one": 0.21396598030438674
+              }
+            }
+          },
+          "race_softmax": {
+            "races": 4286,
+            "runners": 39867,
+            "top_one": 0.2869808679421372,
+            "top_two": 0.4846010265982268,
+            "top_three": 0.6306579561362576,
+            "pick_top3": 0.6129258049463369,
+            "log_loss": 1.9051242196158091,
+            "brier": 0.8085314037514035,
+            "calibration": [
+              {
+                "count": 24509,
+                "predicted": 0.05296335866655119,
+                "observed": 0.051736096943979765
+              },
+              {
+                "count": 10277,
+                "predicted": 0.13923326577993198,
+                "observed": 0.14177289092147513
+              },
+              {
+                "count": 3128,
+                "predicted": 0.2415502845438911,
+                "observed": 0.2547953964194373
+              },
+              {
+                "count": 1161,
+                "predicted": 0.3424779060945326,
+                "observed": 0.32558139534883723
+              },
+              {
+                "count": 450,
+                "predicted": 0.443602418736591,
+                "observed": 0.4177777777777778
+              },
+              {
+                "count": 212,
+                "predicted": 0.5456243657475747,
+                "observed": 0.5566037735849056
+              },
+              {
+                "count": 88,
+                "predicted": 0.6419566750317413,
+                "observed": 0.5681818181818182
+              },
+              {
+                "count": 32,
+                "predicted": 0.7326729588997284,
+                "observed": 0.65625
+              },
+              {
+                "count": 8,
+                "predicted": 0.8417227806430886,
+                "observed": 0.875
+              },
+              {
+                "count": 2,
+                "predicted": 0.934836344705678,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2936991869918699,
+                "log_loss": 1.9269924338499702,
+                "brier": 0.8125269232463764,
+                "races": 984
+              },
+              "jumps": {
+                "top_one": 0.29345904537418976,
+                "log_loss": 1.8614276437984396,
+                "brier": 0.7987596479055936,
+                "races": 1697
+              },
+              "turf": {
+                "top_one": 0.27601246105919003,
+                "log_loss": 1.9379184665663767,
+                "brier": 0.8164136956437935,
+                "races": 1605
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1540,
+                "top_one": 0.3538961038961039
+              },
+              "8-11": {
+                "races": 1629,
+                "top_one": 0.27255985267034993
+              },
+              "12+": {
+                "races": 1117,
+                "top_one": 0.21575649059982094
+              }
+            }
+          },
+          "boosted_small": {
+            "races": 4286,
+            "runners": 39867,
+            "top_one": 0.2865142323845077,
+            "top_two": 0.48483434437704154,
+            "top_three": 0.6264582361175922,
+            "pick_top3": 0.6105926271581894,
+            "log_loss": 1.9034257258718863,
+            "brier": 0.8095881984013882,
+            "calibration": [
+              {
+                "count": 23588,
+                "predicted": 0.05339237521416108,
+                "observed": 0.05002543666270985
+              },
+              {
+                "count": 11166,
+                "predicted": 0.1400517111030382,
+                "observed": 0.13970983342289092
+              },
+              {
+                "count": 3456,
+                "predicted": 0.2398394938882477,
+                "observed": 0.2508680555555556
+              },
+              {
+                "count": 1164,
+                "predicted": 0.34103747937902334,
+                "observed": 0.3651202749140893
+              },
+              {
+                "count": 336,
+                "predicted": 0.4402832410299284,
+                "observed": 0.4791666666666667
+              },
+              {
+                "count": 120,
+                "predicted": 0.5352579552735108,
+                "observed": 0.5583333333333333
+              },
+              {
+                "count": 29,
+                "predicted": 0.6352038499326722,
+                "observed": 0.6551724137931034
+              },
+              {
+                "count": 4,
+                "predicted": 0.7252562532632242,
+                "observed": 1.0
+              },
+              {
+                "count": 4,
+                "predicted": 0.8555675292247173,
+                "observed": 0.75
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2936991869918699,
+                "log_loss": 1.9323295312328275,
+                "brier": 0.8150323059651718,
+                "races": 984
+              },
+              "jumps": {
+                "top_one": 0.2875662934590454,
+                "log_loss": 1.8551389386830706,
+                "brier": 0.798505274079772,
+                "races": 1697
+              },
+              "turf": {
+                "top_one": 0.2809968847352025,
+                "log_loss": 1.9367598899742244,
+                "brier": 0.817968709760279,
+                "races": 1605
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1540,
+                "top_one": 0.3538961038961039
+              },
+              "8-11": {
+                "races": 1629,
+                "top_one": 0.2719459791282996
+              },
+              "12+": {
+                "races": 1117,
+                "top_one": 0.21486123545210384
+              }
+            }
+          },
+          "boosted_deep": {
+            "races": 4286,
+            "runners": 39867,
+            "top_one": 0.2911805879608026,
+            "top_two": 0.4888007466168922,
+            "top_three": 0.6299580027998134,
+            "pick_top3": 0.6110592627158189,
+            "log_loss": 1.8979884526418174,
+            "brier": 0.8079539746824661,
+            "calibration": [
+              {
+                "count": 23649,
+                "predicted": 0.05216367532668895,
+                "observed": 0.04909298490422428
+              },
+              {
+                "count": 10994,
+                "predicted": 0.14031664116553083,
+                "observed": 0.14171366199745317
+              },
+              {
+                "count": 3496,
+                "predicted": 0.24073609185820188,
+                "observed": 0.24513729977116705
+              },
+              {
+                "count": 1167,
+                "predicted": 0.3415195129506419,
+                "observed": 0.3616109682947729
+              },
+              {
+                "count": 385,
+                "predicted": 0.4391507115139854,
+                "observed": 0.4831168831168831
+              },
+              {
+                "count": 131,
+                "predicted": 0.5381200016253196,
+                "observed": 0.5190839694656488
+              },
+              {
+                "count": 34,
+                "predicted": 0.6359776850137651,
+                "observed": 0.7058823529411765
+              },
+              {
+                "count": 9,
+                "predicted": 0.734079086836702,
+                "observed": 0.8888888888888888
+              },
+              {
+                "count": 1,
+                "predicted": 0.869468196711866,
+                "observed": 1.0
+              },
+              {
+                "count": 1,
+                "predicted": 0.9072750611026491,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2916666666666667,
+                "log_loss": 1.92563238817474,
+                "brier": 0.8137844916256592,
+                "races": 984
+              },
+              "jumps": {
+                "top_one": 0.30170889805539186,
+                "log_loss": 1.847666107903946,
+                "brier": 0.7958866519794132,
+                "races": 1697
+              },
+              "turf": {
+                "top_one": 0.27975077881619936,
+                "log_loss": 1.9342472604024235,
+                "brier": 0.8171384095453812,
+                "races": 1605
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1540,
+                "top_one": 0.37077922077922076
+              },
+              "8-11": {
+                "races": 1629,
+                "top_one": 0.27071823204419887
+              },
+              "12+": {
+                "races": 1117,
+                "top_one": 0.21128021486123547
+              }
+            }
+          },
+          "boosted_no_handicap": {
+            "races": 4286,
+            "runners": 39867,
+            "top_one": 0.28744750349976667,
+            "top_two": 0.47620158656089595,
+            "top_three": 0.6229584694353709,
+            "pick_top3": 0.6096593560429304,
+            "log_loss": 1.9098349349692787,
+            "brier": 0.811901998060676,
+            "calibration": [
+              {
+                "count": 23540,
+                "predicted": 0.053581869588084016,
+                "observed": 0.050679694137638065
+              },
+              {
+                "count": 11267,
+                "predicted": 0.1403570370773828,
+                "observed": 0.13978876364604598
+              },
+              {
+                "count": 3445,
+                "predicted": 0.24075051115927384,
+                "observed": 0.251088534107402
+              },
+              {
+                "count": 1157,
+                "predicted": 0.34082494789882434,
+                "observed": 0.3681936041486603
+              },
+              {
+                "count": 334,
+                "predicted": 0.4432965081973015,
+                "observed": 0.45808383233532934
+              },
+              {
+                "count": 91,
+                "predicted": 0.5427083394380436,
+                "observed": 0.5494505494505495
+              },
+              {
+                "count": 27,
+                "predicted": 0.6388945329716578,
+                "observed": 0.7407407407407407
+              },
+              {
+                "count": 3,
+                "predicted": 0.7477598362844032,
+                "observed": 0.6666666666666666
+              },
+              {
+                "count": 2,
+                "predicted": 0.8576521230280377,
+                "observed": 0.5
+              },
+              {
+                "count": 1,
+                "predicted": 0.9038487110873813,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.3018292682926829,
+                "log_loss": 1.9382645454114587,
+                "brier": 0.8167774219305661,
+                "races": 984
+              },
+              "jumps": {
+                "top_one": 0.29876252209781967,
+                "log_loss": 1.8612172175267019,
+                "brier": 0.8006368378207707,
+                "races": 1697
+              },
+              "turf": {
+                "top_one": 0.26666666666666666,
+                "log_loss": 1.9438097199069406,
+                "brier": 0.8208238421972163,
+                "races": 1605
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1540,
+                "top_one": 0.36233766233766235
+              },
+              "8-11": {
+                "races": 1629,
+                "top_one": 0.2676488643339472
+              },
+              "12+": {
+                "races": 1117,
+                "top_one": 0.21307072515666964
+              }
+            }
+          },
+          "boosted_no_connections": {
+            "races": 4286,
+            "runners": 39867,
+            "top_one": 0.2774148390107326,
+            "top_two": 0.45870275314979003,
+            "top_three": 0.5963602426504899,
+            "pick_top3": 0.6124591693887074,
+            "log_loss": 1.9528291513243978,
+            "brier": 0.8222380405416249,
+            "calibration": [
+              {
+                "count": 23215,
+                "predicted": 0.05746015452533593,
+                "observed": 0.05349989231100582
+              },
+              {
+                "count": 12083,
+                "predicted": 0.13910177978288535,
+                "observed": 0.13887279649093767
+              },
+              {
+                "count": 3301,
+                "predicted": 0.23928516889552937,
+                "observed": 0.25507421993335355
+              },
+              {
+                "count": 879,
+                "predicted": 0.33968523175078347,
+                "observed": 0.3822525597269625
+              },
+              {
+                "count": 285,
+                "predicted": 0.438424649810565,
+                "observed": 0.4421052631578947
+              },
+              {
+                "count": 87,
+                "predicted": 0.5337468421349831,
+                "observed": 0.5977011494252874
+              },
+              {
+                "count": 9,
+                "predicted": 0.6256130764969182,
+                "observed": 0.4444444444444444
+              },
+              {
+                "count": 8,
+                "predicted": 0.7268160243018527,
+                "observed": 0.75
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2693089430894309,
+                "log_loss": 1.9861452091667386,
+                "brier": 0.8291705870262374,
+                "races": 984
+              },
+              "jumps": {
+                "top_one": 0.2804949911608721,
+                "log_loss": 1.914346662041526,
+                "brier": 0.813882777297888,
+                "races": 1697
+              },
+              "turf": {
+                "top_one": 0.2791277258566978,
+                "log_loss": 1.9730919447176507,
+                "brier": 0.8268220006561189,
+                "races": 1605
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1540,
+                "top_one": 0.35454545454545455
+              },
+              "8-11": {
+                "races": 1629,
+                "top_one": 0.25352977286678946
+              },
+              "12+": {
+                "races": 1117,
+                "top_one": 0.20590868397493287
+              }
+            }
+          },
+          "specialists": {
+            "races": 4286,
+            "runners": 39867,
+            "top_one": 0.2911805879608026,
+            "top_two": 0.4829678021465236,
+            "top_three": 0.6224918338777414,
+            "pick_top3": 0.6122258516098926,
+            "log_loss": 1.9016777549891406,
+            "brier": 0.8086631115883954,
+            "calibration": [
+              {
+                "count": 24007,
+                "predicted": 0.053092495507251224,
+                "observed": 0.049902111884033824
+              },
+              {
+                "count": 10592,
+                "predicted": 0.14010678913723176,
+                "observed": 0.14086102719033233
+              },
+              {
+                "count": 3470,
+                "predicted": 0.24115459407891043,
+                "observed": 0.2527377521613833
+              },
+              {
+                "count": 1224,
+                "predicted": 0.3409064050820872,
+                "observed": 0.3464052287581699
+              },
+              {
+                "count": 407,
+                "predicted": 0.4379302211085166,
+                "observed": 0.47174447174447176
+              },
+              {
+                "count": 130,
+                "predicted": 0.5404760971661066,
+                "observed": 0.5769230769230769
+              },
+              {
+                "count": 27,
+                "predicted": 0.6325225596245965,
+                "observed": 0.7037037037037037
+              },
+              {
+                "count": 7,
+                "predicted": 0.734613284577294,
+                "observed": 0.8571428571428571
+              },
+              {
+                "count": 2,
+                "predicted": 0.846826211565213,
+                "observed": 1.0
+              },
+              {
+                "count": 1,
+                "predicted": 0.9079213937716953,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2896341463414634,
+                "log_loss": 1.9328536072020688,
+                "brier": 0.8164491719203247,
+                "races": 984
+              },
+              "jumps": {
+                "top_one": 0.31231585150265173,
+                "log_loss": 1.8467781779289898,
+                "brier": 0.7945731103424921,
+                "races": 1697
+              },
+              "turf": {
+                "top_one": 0.26978193146417445,
+                "log_loss": 1.9406108040193926,
+                "brier": 0.8187872541103141,
+                "races": 1605
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1540,
+                "top_one": 0.36623376623376624
+              },
+              "8-11": {
+                "races": 1629,
+                "top_one": 0.27808471454880296
+              },
+              "12+": {
+                "races": 1117,
+                "top_one": 0.20680393912264997
+              }
+            }
+          },
+          "ensemble": {
+            "races": 4286,
+            "runners": 39867,
+            "top_one": 0.29398040130657954,
+            "top_two": 0.4876341577228185,
+            "top_three": 0.626691553896407,
+            "pick_top3": 0.6206252916472235,
+            "log_loss": 1.8963882286522575,
+            "brier": 0.8063155942801803,
+            "calibration": [
+              {
+                "count": 23937,
+                "predicted": 0.053582467180122405,
+                "observed": 0.04971383214270794
+              },
+              {
+                "count": 10880,
+                "predicted": 0.13961345473341447,
+                "observed": 0.1410845588235294
+              },
+              {
+                "count": 3316,
+                "predicted": 0.241189240053307,
+                "observed": 0.25663449939686367
+              },
+              {
+                "count": 1111,
+                "predicted": 0.3417434018298236,
+                "observed": 0.35373537353735374
+              },
+              {
+                "count": 402,
+                "predicted": 0.44161899375521596,
+                "observed": 0.4601990049751244
+              },
+              {
+                "count": 161,
+                "predicted": 0.5416541257101762,
+                "observed": 0.5590062111801242
+              },
+              {
+                "count": 45,
+                "predicted": 0.6368738748815409,
+                "observed": 0.6444444444444445
+              },
+              {
+                "count": 11,
+                "predicted": 0.7320273404456649,
+                "observed": 0.9090909090909091
+              },
+              {
+                "count": 3,
+                "predicted": 0.8551425022633827,
+                "observed": 0.6666666666666666
+              },
+              {
+                "count": 1,
+                "predicted": 0.9274538098634536,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.30284552845528456,
+                "log_loss": 1.9235154111904154,
+                "brier": 0.8117700958893038,
+                "races": 984
+              },
+              "jumps": {
+                "top_one": 0.2975839717147908,
+                "log_loss": 1.8490798737073357,
+                "brier": 0.795180319225216,
+                "races": 1697
+              },
+              "turf": {
+                "top_one": 0.28473520249221185,
+                "log_loss": 1.9297770951469524,
+                "brier": 0.8147450847380602,
+                "races": 1605
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1540,
+                "top_one": 0.36298701298701297
+              },
+              "8-11": {
+                "races": 1629,
+                "top_one": 0.27808471454880296
+              },
+              "12+": {
+                "races": 1117,
+                "top_one": 0.22202327663384064
+              }
+            }
+          }
+        }
+      },
+      {
+        "train_end": "2022-12-31",
+        "validation_start": "2023-01-08",
+        "validation_end": "2023-12-31",
+        "models": {
+          "logistic": {
+            "races": 4268,
+            "runners": 40153,
+            "top_one": 0.2790534208059981,
+            "top_two": 0.46227741330834116,
+            "top_three": 0.6061387066541706,
+            "pick_top3": 0.5888003748828491,
+            "log_loss": 1.9400885381491273,
+            "brier": 0.8187030679443038,
+            "calibration": [
+              {
+                "count": 23624,
+                "predicted": 0.05461700011578801,
+                "observed": 0.05028784287165594
+              },
+              {
+                "count": 11815,
+                "predicted": 0.14051392109814775,
+                "observed": 0.14168429961912823
+              },
+              {
+                "count": 3356,
+                "predicted": 0.2404306784838573,
+                "observed": 0.2535756853396901
+              },
+              {
+                "count": 1000,
+                "predicted": 0.3389054334045962,
+                "observed": 0.374
+              },
+              {
+                "count": 263,
+                "predicted": 0.44195631146296027,
+                "observed": 0.4448669201520912
+              },
+              {
+                "count": 62,
+                "predicted": 0.5335382052578461,
+                "observed": 0.6612903225806451
+              },
+              {
+                "count": 24,
+                "predicted": 0.6448958195664802,
+                "observed": 0.75
+              },
+              {
+                "count": 7,
+                "predicted": 0.7437830997925217,
+                "observed": 0.5714285714285714
+              },
+              {
+                "count": 1,
+                "predicted": 0.8057178544743854,
+                "observed": 0.0
+              },
+              {
+                "count": 1,
+                "predicted": 0.9616432302244579,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2581967213114754,
+                "log_loss": 1.9812304946985067,
+                "brier": 0.830318756786281,
+                "races": 976
+              },
+              "jumps": {
+                "top_one": 0.3107207752877044,
+                "log_loss": 1.862435693521995,
+                "brier": 0.7996840592240899,
+                "races": 1651
+              },
+              "turf": {
+                "top_one": 0.2595978062157221,
+                "log_loss": 1.9937450261973921,
+                "brier": 0.8309294366751407,
+                "races": 1641
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1410,
+                "top_one": 0.3404255319148936
+              },
+              "8-11": {
+                "races": 1777,
+                "top_one": 0.27293190770962295
+              },
+              "12+": {
+                "races": 1081,
+                "top_one": 0.20906567992599445
+              }
+            }
+          },
+          "race_softmax": {
+            "races": 4268,
+            "runners": 40153,
+            "top_one": 0.28280224929709463,
+            "top_two": 0.47071227741330834,
+            "top_three": 0.612464854732896,
+            "pick_top3": 0.5916119962511716,
+            "log_loss": 1.9349661717359796,
+            "brier": 0.8174562351735039,
+            "calibration": [
+              {
+                "count": 24479,
+                "predicted": 0.053592128002297644,
+                "observed": 0.05212631234936067
+              },
+              {
+                "count": 10863,
+                "predicted": 0.1398578412381801,
+                "observed": 0.14544785050170303
+              },
+              {
+                "count": 3099,
+                "predicted": 0.2405018860549422,
+                "observed": 0.2420135527589545
+              },
+              {
+                "count": 1065,
+                "predicted": 0.3418823671722095,
+                "observed": 0.3436619718309859
+              },
+              {
+                "count": 383,
+                "predicted": 0.44144949628677604,
+                "observed": 0.39425587467362927
+              },
+              {
+                "count": 156,
+                "predicted": 0.5384745308442425,
+                "observed": 0.46153846153846156
+              },
+              {
+                "count": 69,
+                "predicted": 0.6377784943908574,
+                "observed": 0.6231884057971014
+              },
+              {
+                "count": 29,
+                "predicted": 0.7504527073238922,
+                "observed": 0.7931034482758621
+              },
+              {
+                "count": 9,
+                "predicted": 0.8432155848474449,
+                "observed": 0.6666666666666666
+              },
+              {
+                "count": 1,
+                "predicted": 0.986534560210184,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.26331967213114754,
+                "log_loss": 1.9769622656380954,
+                "brier": 0.8301123447010003,
+                "races": 976
+              },
+              "jumps": {
+                "top_one": 0.3143549364021805,
+                "log_loss": 1.8546205386054841,
+                "brier": 0.7974455154204751,
+                "races": 1651
+              },
+              "turf": {
+                "top_one": 0.2626447288238879,
+                "log_loss": 1.9908238515958103,
+                "brier": 0.8300615583992279,
+                "races": 1641
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1410,
+                "top_one": 0.34397163120567376
+              },
+              "8-11": {
+                "races": 1777,
+                "top_one": 0.27405740011254925
+              },
+              "12+": {
+                "races": 1081,
+                "top_one": 0.21739130434782608
+              }
+            }
+          },
+          "boosted_small": {
+            "races": 4268,
+            "runners": 40153,
+            "top_one": 0.28772258669165884,
+            "top_two": 0.47141518275538896,
+            "top_three": 0.6134020618556701,
+            "pick_top3": 0.6122305529522024,
+            "log_loss": 1.929416009904011,
+            "brier": 0.8165202447244772,
+            "calibration": [
+              {
+                "count": 23681,
+                "predicted": 0.0547007748900711,
+                "observed": 0.04995566065622229
+              },
+              {
+                "count": 11746,
+                "predicted": 0.13989242858054265,
+                "observed": 0.14209092457006642
+              },
+              {
+                "count": 3323,
+                "predicted": 0.23882390976046608,
+                "observed": 0.2548901594944327
+              },
+              {
+                "count": 985,
+                "predicted": 0.3406348969364421,
+                "observed": 0.3695431472081218
+              },
+              {
+                "count": 307,
+                "predicted": 0.4391553532154922,
+                "observed": 0.4364820846905538
+              },
+              {
+                "count": 75,
+                "predicted": 0.5435329880048048,
+                "observed": 0.6533333333333333
+              },
+              {
+                "count": 23,
+                "predicted": 0.6371510099135127,
+                "observed": 0.5217391304347826
+              },
+              {
+                "count": 9,
+                "predicted": 0.7347755629068096,
+                "observed": 0.7777777777777778
+              },
+              {
+                "count": 3,
+                "predicted": 0.828677585789014,
+                "observed": 0.6666666666666666
+              },
+              {
+                "count": 1,
+                "predicted": 0.9781045156924183,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.27561475409836067,
+                "log_loss": 1.9680533804807308,
+                "brier": 0.8273598422816837,
+                "races": 976
+              },
+              "jumps": {
+                "top_one": 0.30708661417322836,
+                "log_loss": 1.8490755823127791,
+                "brier": 0.7972866832279308,
+                "races": 1651
+              },
+              "turf": {
+                "top_one": 0.27544180377818406,
+                "log_loss": 1.9872660844136063,
+                "brier": 0.829424061186978,
+                "races": 1641
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1410,
+                "top_one": 0.3517730496453901
+              },
+              "8-11": {
+                "races": 1777,
+                "top_one": 0.2819358469330332
+              },
+              "12+": {
+                "races": 1081,
+                "top_one": 0.21369102682701202
+              }
+            }
+          },
+          "boosted_deep": {
+            "races": 4268,
+            "runners": 40153,
+            "top_one": 0.28514526710403,
+            "top_two": 0.471883786316776,
+            "top_three": 0.6084817244611059,
+            "pick_top3": 0.6087160262417994,
+            "log_loss": 1.9227334411396513,
+            "brier": 0.814285642326303,
+            "calibration": [
+              {
+                "count": 23726,
+                "predicted": 0.05362592675400439,
+                "observed": 0.04986091207957515
+              },
+              {
+                "count": 11576,
+                "predicted": 0.14017102742021428,
+                "observed": 0.1419315825846579
+              },
+              {
+                "count": 3394,
+                "predicted": 0.23934829632854843,
+                "observed": 0.24808485562757807
+              },
+              {
+                "count": 988,
+                "predicted": 0.33989677148408654,
+                "observed": 0.3694331983805668
+              },
+              {
+                "count": 335,
+                "predicted": 0.43824082808489084,
+                "observed": 0.44477611940298506
+              },
+              {
+                "count": 92,
+                "predicted": 0.5379723419431999,
+                "observed": 0.6304347826086957
+              },
+              {
+                "count": 27,
+                "predicted": 0.6334828798044053,
+                "observed": 0.5925925925925926
+              },
+              {
+                "count": 12,
+                "predicted": 0.7306046618645609,
+                "observed": 0.8333333333333334
+              },
+              {
+                "count": 2,
+                "predicted": 0.8632696327933491,
+                "observed": 0.5
+              },
+              {
+                "count": 1,
+                "predicted": 0.9833546228271641,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2581967213114754,
+                "log_loss": 1.9683345643754742,
+                "brier": 0.8274062593138465,
+                "races": 976
+              },
+              "jumps": {
+                "top_one": 0.3107207752877044,
+                "log_loss": 1.839202420300922,
+                "brier": 0.7942077545322002,
+                "races": 1651
+              },
+              "turf": {
+                "top_one": 0.27544180377818406,
+                "log_loss": 1.9796517952691939,
+                "brier": 0.8266822727761641,
+                "races": 1641
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1410,
+                "top_one": 0.3517730496453901
+              },
+              "8-11": {
+                "races": 1777,
+                "top_one": 0.2785593697242544
+              },
+              "12+": {
+                "races": 1081,
+                "top_one": 0.20906567992599445
+              }
+            }
+          },
+          "boosted_no_handicap": {
+            "races": 4268,
+            "runners": 40153,
+            "top_one": 0.28045923149015933,
+            "top_two": 0.4629803186504217,
+            "top_three": 0.6077788191190253,
+            "pick_top3": 0.5986410496719775,
+            "log_loss": 1.9391917361871358,
+            "brier": 0.8193238218846693,
+            "calibration": [
+              {
+                "count": 23586,
+                "predicted": 0.054727349644752545,
+                "observed": 0.05066564911388111
+              },
+              {
+                "count": 11936,
+                "predicted": 0.14037555789606096,
+                "observed": 0.1430127345844504
+              },
+              {
+                "count": 3244,
+                "predicted": 0.23938246978298622,
+                "observed": 0.24506781750924783
+              },
+              {
+                "count": 978,
+                "predicted": 0.33795262877193855,
+                "observed": 0.37525562372188137
+              },
+              {
+                "count": 304,
+                "predicted": 0.43855255948668226,
+                "observed": 0.4506578947368421
+              },
+              {
+                "count": 75,
+                "predicted": 0.5386904089813169,
+                "observed": 0.64
+              },
+              {
+                "count": 19,
+                "predicted": 0.64798336554037,
+                "observed": 0.5789473684210527
+              },
+              {
+                "count": 7,
+                "predicted": 0.7200562113472798,
+                "observed": 0.7142857142857143
+              },
+              {
+                "count": 3,
+                "predicted": 0.8518606037195529,
+                "observed": 0.6666666666666666
+              },
+              {
+                "count": 1,
+                "predicted": 0.9742513231127585,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2551229508196721,
+                "log_loss": 1.981532172793986,
+                "brier": 0.8306176975947985,
+                "races": 976
+              },
+              "jumps": {
+                "top_one": 0.3076923076923077,
+                "log_loss": 1.855471428647276,
+                "brier": 0.7993484255191394,
+                "races": 1651
+              },
+              "turf": {
+                "top_one": 0.2681291895185862,
+                "log_loss": 1.9982398541761806,
+                "brier": 0.8327038076899125,
+                "races": 1641
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1410,
+                "top_one": 0.3468085106382979
+              },
+              "8-11": {
+                "races": 1777,
+                "top_one": 0.2684299380979178
+              },
+              "12+": {
+                "races": 1081,
+                "top_one": 0.21369102682701202
+              }
+            }
+          },
+          "boosted_no_connections": {
+            "races": 4268,
+            "runners": 40153,
+            "top_one": 0.26874414245548267,
+            "top_two": 0.4550140581068416,
+            "top_three": 0.5911433926897844,
+            "pick_top3": 0.6037956888472352,
+            "log_loss": 1.9796527164958722,
+            "brier": 0.8291103434549367,
+            "calibration": [
+              {
+                "count": 23253,
+                "predicted": 0.058386584265299656,
+                "observed": 0.05349847331527115
+              },
+              {
+                "count": 12760,
+                "predicted": 0.13855454002296558,
+                "observed": 0.14177115987460814
+              },
+              {
+                "count": 3019,
+                "predicted": 0.23902817258143225,
+                "observed": 0.25770122557138125
+              },
+              {
+                "count": 813,
+                "predicted": 0.33947685924924853,
+                "observed": 0.3456334563345633
+              },
+              {
+                "count": 233,
+                "predicted": 0.43715995942353003,
+                "observed": 0.45493562231759654
+              },
+              {
+                "count": 55,
+                "predicted": 0.5340077279030251,
+                "observed": 0.6545454545454545
+              },
+              {
+                "count": 16,
+                "predicted": 0.6525404761063247,
+                "observed": 0.6875
+              },
+              {
+                "count": 3,
+                "predicted": 0.7244134141634014,
+                "observed": 0.6666666666666666
+              },
+              {
+                "count": 1,
+                "predicted": 0.9175023524229666,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.25,
+                "log_loss": 2.027657895727568,
+                "brier": 0.8414800071803391,
+                "races": 976
+              },
+              "jumps": {
+                "top_one": 0.30466384009691094,
+                "log_loss": 1.9067374809160902,
+                "brier": 0.8116477287171368,
+                "races": 1651
+              },
+              "turf": {
+                "top_one": 0.2437538086532602,
+                "log_loss": 2.024460759769538,
+                "brier": 0.8393224002106434,
+                "races": 1641
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1410,
+                "top_one": 0.32340425531914896
+              },
+              "8-11": {
+                "races": 1777,
+                "top_one": 0.26280247608328644
+              },
+              "12+": {
+                "races": 1081,
+                "top_one": 0.2072155411655874
+              }
+            }
+          },
+          "specialists": {
+            "races": 4268,
+            "runners": 40153,
+            "top_one": 0.278116213683224,
+            "top_two": 0.46719775070290537,
+            "top_three": 0.6145735707591378,
+            "pick_top3": 0.6035613870665417,
+            "log_loss": 1.9305220711643152,
+            "brier": 0.8172336392055806,
+            "calibration": [
+              {
+                "count": 23925,
+                "predicted": 0.05402073064704365,
+                "observed": 0.04998955067920585
+              },
+              {
+                "count": 11326,
+                "predicted": 0.14020507228344045,
+                "observed": 0.1445346989228324
+              },
+              {
+                "count": 3416,
+                "predicted": 0.24019282132285277,
+                "observed": 0.24707259953161592
+              },
+              {
+                "count": 1039,
+                "predicted": 0.33905501075751926,
+                "observed": 0.35611164581328203
+              },
+              {
+                "count": 323,
+                "predicted": 0.441163928388282,
+                "observed": 0.43962848297213625
+              },
+              {
+                "count": 85,
+                "predicted": 0.5356345360148297,
+                "observed": 0.6352941176470588
+              },
+              {
+                "count": 26,
+                "predicted": 0.6349029453610993,
+                "observed": 0.6153846153846154
+              },
+              {
+                "count": 10,
+                "predicted": 0.7643278296850008,
+                "observed": 0.7
+              },
+              {
+                "count": 2,
+                "predicted": 0.8314088057726632,
+                "observed": 0.5
+              },
+              {
+                "count": 1,
+                "predicted": 0.9760798528472547,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.26434426229508196,
+                "log_loss": 1.972792217751264,
+                "brier": 0.8296941465941079,
+                "races": 976
+              },
+              "jumps": {
+                "top_one": 0.3040581465778316,
+                "log_loss": 1.8462264099595336,
+                "brier": 0.7962045284068103,
+                "races": 1651
+              },
+              "turf": {
+                "top_one": 0.26020719073735527,
+                "log_loss": 1.9901908545770102,
+                "brier": 0.8309798955843539,
+                "races": 1641
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1410,
+                "top_one": 0.3446808510638298
+              },
+              "8-11": {
+                "races": 1777,
+                "top_one": 0.265053460889139
+              },
+              "12+": {
+                "races": 1081,
+                "top_one": 0.2127659574468085
+              }
+            }
+          },
+          "ensemble": {
+            "races": 4268,
+            "runners": 40153,
+            "top_one": 0.28444236176194937,
+            "top_two": 0.47586691658856606,
+            "top_three": 0.6134020618556701,
+            "pick_top3": 0.6016869728209935,
+            "log_loss": 1.9245439557256505,
+            "brier": 0.8145511110869361,
+            "calibration": [
+              {
+                "count": 23966,
+                "predicted": 0.054546992167401394,
+                "observed": 0.05023783693565885
+              },
+              {
+                "count": 11483,
+                "predicted": 0.13981386761321346,
+                "observed": 0.14212313855264302
+              },
+              {
+                "count": 3198,
+                "predicted": 0.23994593273576226,
+                "observed": 0.25609756097560976
+              },
+              {
+                "count": 1008,
+                "predicted": 0.34100184608086154,
+                "observed": 0.36904761904761907
+              },
+              {
+                "count": 334,
+                "predicted": 0.4396804907507373,
+                "observed": 0.4221556886227545
+              },
+              {
+                "count": 106,
+                "predicted": 0.5420132762945814,
+                "observed": 0.5377358490566038
+              },
+              {
+                "count": 39,
+                "predicted": 0.6435386369499334,
+                "observed": 0.7692307692307693
+              },
+              {
+                "count": 13,
+                "predicted": 0.7414947935714354,
+                "observed": 0.6923076923076923
+              },
+              {
+                "count": 5,
+                "predicted": 0.8281480563305786,
+                "observed": 0.6
+              },
+              {
+                "count": 1,
+                "predicted": 0.9823195379513012,
+                "observed": 1.0
+              }
+            ],
+            "segments": {
+              "aw": {
+                "top_one": 0.2612704918032787,
+                "log_loss": 1.9661892969162245,
+                "brier": 0.8268527703079304,
+                "races": 976
+              },
+              "jumps": {
+                "top_one": 0.31496062992125984,
+                "log_loss": 1.8430356040495508,
+                "brier": 0.7943218896722711,
+                "races": 1651
+              },
+              "turf": {
+                "top_one": 0.2675198049969531,
+                "log_loss": 1.9817800529927068,
+                "brier": 0.8275870801033416,
+                "races": 1641
+              }
+            },
+            "field_sizes": {
+              "2-7": {
+                "races": 1410,
+                "top_one": 0.3475177304964539
+              },
+              "8-11": {
+                "races": 1777,
+                "top_one": 0.2734946539110861
+              },
+              "12+": {
+                "races": 1081,
+                "top_one": 0.22016651248843663
+              }
+            }
+          }
+        }
+      }
+    ],
+    "calibration_temperatures": {
+      "logistic": 0.85,
+      "race_softmax": 1.0,
+      "boosted_small": 0.85,
+      "boosted_deep": 0.85,
+      "boosted_no_handicap": 0.85,
+      "boosted_no_connections": 0.85,
+      "specialists": 1.0,
+      "ensemble": 0.85
+    },
+    "calibration_trials": {
+      "logistic": {
+        "0.7": 1.94684954516583,
+        "0.85": 1.9345296262241998,
+        "1.0": 1.937068590326883,
+        "1.2": 1.9487563169589497,
+        "1.5": 1.9701599902630211,
+        "2.0": 2.0019274749679576
+      },
+      "race_softmax": {
+        "0.7": 1.9602715869415848,
+        "0.85": 1.9352635988286724,
+        "1.0": 1.9309990232771417,
+        "1.2": 1.9381653433049975,
+        "1.5": 1.9571397977506322,
+        "2.0": 1.9887385474123251
+      },
+      "boosted_small": {
+        "0.7": 1.9358521867914038,
+        "0.85": 1.9247189997479301,
+        "1.0": 1.9277623783312803,
+        "1.2": 1.939861491764553,
+        "1.5": 1.9618196471751854,
+        "2.0": 1.9945221640103612
+      },
+      "boosted_deep": {
+        "0.7": 1.9363276471021902,
+        "0.85": 1.9216481164054462,
+        "1.0": 1.9227007924368875,
+        "1.2": 1.9334375862644395,
+        "1.5": 1.9546852971767326,
+        "2.0": 1.987496175412906
+      },
+      "boosted_no_handicap": {
+        "0.7": 1.9442374490393841,
+        "0.85": 1.9323574986030008,
+        "1.0": 1.934755715809638,
+        "1.2": 1.9461243815794793,
+        "1.5": 1.9672080544126611,
+        "2.0": 1.9988659880626312
+      },
+      "boosted_no_connections": {
+        "0.7": 1.9828397640119748,
+        "0.85": 1.9737073104070997,
+        "1.0": 1.9763758623893932,
+        "1.2": 1.9864039316254125,
+        "1.5": 2.0042884035742965,
+        "2.0": 2.0305846505887253
+      },
+      "specialists": {
+        "0.7": 1.9491043884000363,
+        "0.85": 1.932358006615305,
+        "1.0": 1.9321665015388079,
+        "1.2": 1.9418270665999333,
+        "1.5": 1.9620077529264641,
+        "2.0": 1.9936323025191407
+      },
+      "ensemble": {
+        "0.7": 1.9322663155138413,
+        "0.85": 1.9189508177761876,
+        "1.0": 1.9213655020049056,
+        "1.2": 1.9335398086764055,
+        "1.5": 1.956162154744106,
+        "2.0": 1.990005537008492
+      }
+    },
+    "selection_validation": {
+      "logistic": {
+        "races": 11008,
+        "runners": 104486,
+        "top_one": 0.26617005813953487,
+        "top_two": 0.45148982558139533,
+        "top_three": 0.5909338662790697,
+        "pick_top3": 0.592750726744186,
+        "log_loss": 1.9789623731307178,
+        "brier": 0.8287763213474619,
+        "calibration": [
+          {
+            "count": 63857,
+            "predicted": 0.05042535429797272,
+            "observed": 0.05416790641589802
+          },
+          {
+            "count": 27026,
+            "predicted": 0.1408613214270815,
+            "observed": 0.14030933175460666
+          },
+          {
+            "count": 8886,
+            "predicted": 0.24112369451058888,
+            "observed": 0.2349763673193788
+          },
+          {
+            "count": 3109,
+            "predicted": 0.3416643369011579,
+            "observed": 0.3081376648440013
+          },
+          {
+            "count": 1131,
+            "predicted": 0.4423122458910801,
+            "observed": 0.40229885057471265
+          },
+          {
+            "count": 336,
+            "predicted": 0.540782293006172,
+            "observed": 0.5238095238095238
+          },
+          {
+            "count": 106,
+            "predicted": 0.6403609660247463,
+            "observed": 0.5283018867924528
+          },
+          {
+            "count": 30,
+            "predicted": 0.7339081646601694,
+            "observed": 0.6666666666666666
+          },
+          {
+            "count": 4,
+            "predicted": 0.8525890815136508,
+            "observed": 1.0
+          },
+          {
+            "count": 1,
+            "predicted": 0.9466406418904687,
+            "observed": 0.0
+          }
+        ],
+        "segments": {
+          "aw": {
+            "top_one": 0.26034858387799564,
+            "log_loss": 1.9867240190528184,
+            "brier": 0.831765260952138,
+            "races": 2754
+          },
+          "jumps": {
+            "top_one": 0.2773069679849341,
+            "log_loss": 1.9151841206119675,
+            "brier": 0.8164367605915036,
+            "races": 4248
+          },
+          "turf": {
+            "top_one": 0.25836245631552673,
+            "log_loss": 2.0412575413359573,
+            "brier": 0.8398065046774752,
+            "races": 4006
+          }
+        },
+        "field_sizes": {
+          "2-7": {
+            "races": 3525,
+            "top_one": 0.3341843971631206
+          },
+          "8-11": {
+            "races": 4610,
+            "top_one": 0.2577006507592191
+          },
+          "12+": {
+            "races": 2873,
+            "top_one": 0.19631047685346328
+          }
+        }
+      },
+      "race_softmax": {
+        "races": 11008,
+        "runners": 104486,
+        "top_one": 0.2696220930232558,
+        "top_two": 0.45757630813953487,
+        "top_three": 0.596202761627907,
+        "pick_top3": 0.5977470930232558,
+        "log_loss": 1.9752142794049838,
+        "brier": 0.8283000743529836,
+        "calibration": [
+          {
+            "count": 64480,
+            "predicted": 0.05366645863436467,
+            "observed": 0.05441997518610422
+          },
+          {
+            "count": 27759,
+            "predicted": 0.13933875420959102,
+            "observed": 0.14359306891458626
+          },
+          {
+            "count": 7832,
+            "predicted": 0.2402622558910674,
+            "observed": 0.24502042900919305
+          },
+          {
+            "count": 2656,
+            "predicted": 0.3416669637179665,
+            "observed": 0.3128765060240964
+          },
+          {
+            "count": 1050,
+            "predicted": 0.4425989565529252,
+            "observed": 0.3647619047619048
+          },
+          {
+            "count": 421,
+            "predicted": 0.5409102766939053,
+            "observed": 0.5201900237529691
+          },
+          {
+            "count": 185,
+            "predicted": 0.6405334344856178,
+            "observed": 0.5351351351351351
+          },
+          {
+            "count": 76,
+            "predicted": 0.7433490207349266,
+            "observed": 0.5526315789473685
+          },
+          {
+            "count": 24,
+            "predicted": 0.8434675974896684,
+            "observed": 0.75
+          },
+          {
+            "count": 3,
+            "predicted": 0.9307537380727894,
+            "observed": 0.6666666666666666
+          }
+        ],
+        "segments": {
+          "aw": {
+            "top_one": 0.2665214233841685,
+            "log_loss": 1.982676503662023,
+            "brier": 0.8305040795870349,
+            "races": 2754
+          },
+          "jumps": {
+            "top_one": 0.2836629001883239,
+            "log_loss": 1.910897645144234,
+            "brier": 0.8161680776497102,
+            "races": 4248
+          },
+          "turf": {
+            "top_one": 0.2568647029455816,
+            "log_loss": 2.0382861957144645,
+            "brier": 0.8396497727006943,
+            "races": 4006
+          }
+        },
+        "field_sizes": {
+          "2-7": {
+            "races": 3525,
+            "top_one": 0.33673758865248227
+          },
+          "8-11": {
+            "races": 4610,
+            "top_one": 0.2633405639913232
+          },
+          "12+": {
+            "races": 2873,
+            "top_one": 0.19735468151757746
+          }
+        }
+      },
+      "boosted_small": {
+        "races": 11008,
+        "runners": 104486,
+        "top_one": 0.26980377906976744,
+        "top_two": 0.45539607558139533,
+        "top_three": 0.596656976744186,
+        "pick_top3": 0.5943859011627907,
+        "log_loss": 1.9661680174946816,
+        "brier": 0.8261563668470573,
+        "calibration": [
+          {
+            "count": 63532,
+            "predicted": 0.0500575219956682,
+            "observed": 0.053280236731096144
+          },
+          {
+            "count": 27589,
+            "predicted": 0.14053059378442992,
+            "observed": 0.13998332668817282
+          },
+          {
+            "count": 8673,
+            "predicted": 0.24023466764889537,
+            "observed": 0.23498212844459818
+          },
+          {
+            "count": 2931,
+            "predicted": 0.34206826038780724,
+            "observed": 0.32446264073694986
+          },
+          {
+            "count": 1146,
+            "predicted": 0.4421595568215646,
+            "observed": 0.39179755671902267
+          },
+          {
+            "count": 413,
+            "predicted": 0.5409710940857164,
+            "observed": 0.5084745762711864
+          },
+          {
+            "count": 158,
+            "predicted": 0.6373327377674832,
+            "observed": 0.5126582278481012
+          },
+          {
+            "count": 35,
+            "predicted": 0.7420323208063434,
+            "observed": 0.7428571428571429
+          },
+          {
+            "count": 7,
+            "predicted": 0.8267376859645852,
+            "observed": 0.7142857142857143
+          },
+          {
+            "count": 2,
+            "predicted": 0.9484176824439723,
+            "observed": 0.5
+          }
+        ],
+        "segments": {
+          "aw": {
+            "top_one": 0.2625272331154684,
+            "log_loss": 1.97542944960343,
+            "brier": 0.829203955896255,
+            "races": 2754
+          },
+          "jumps": {
+            "top_one": 0.2879001883239171,
+            "log_loss": 1.894861085827535,
+            "brier": 0.8110951023383002,
+            "races": 4248
+          },
+          "turf": {
+            "top_one": 0.2556165751372941,
+            "log_loss": 2.035415611527269,
+            "brier": 0.8400323507191771,
+            "races": 4006
+          }
+        },
+        "field_sizes": {
+          "2-7": {
+            "races": 3525,
+            "top_one": 0.33588652482269504
+          },
+          "8-11": {
+            "races": 4610,
+            "top_one": 0.26399132321041213
+          },
+          "12+": {
+            "races": 2873,
+            "top_one": 0.19805081796032023
+          }
+        }
+      },
+      "boosted_deep": {
+        "races": 11008,
+        "runners": 104486,
+        "top_one": 0.27307412790697677,
+        "top_two": 0.455577761627907,
+        "top_three": 0.5990188953488372,
+        "pick_top3": 0.5942950581395349,
+        "log_loss": 1.9645804585008628,
+        "brier": 0.825776758498551,
+        "calibration": [
+          {
+            "count": 63802,
+            "predicted": 0.049262085113349334,
+            "observed": 0.05294504874455346
+          },
+          {
+            "count": 27123,
+            "predicted": 0.14090906716589618,
+            "observed": 0.14083987759466135
+          },
+          {
+            "count": 8711,
+            "predicted": 0.24082454045507387,
+            "observed": 0.23430145792675927
+          },
+          {
+            "count": 2955,
+            "predicted": 0.34142782286568113,
+            "observed": 0.3208121827411167
+          },
+          {
+            "count": 1210,
+            "predicted": 0.4425515919900767,
+            "observed": 0.39008264462809916
+          },
+          {
+            "count": 453,
+            "predicted": 0.5409566088336955,
+            "observed": 0.48123620309050774
+          },
+          {
+            "count": 176,
+            "predicted": 0.6432544993133208,
+            "observed": 0.5170454545454546
+          },
+          {
+            "count": 47,
+            "predicted": 0.741610805175614,
+            "observed": 0.723404255319149
+          },
+          {
+            "count": 7,
+            "predicted": 0.8394121252578025,
+            "observed": 0.7142857142857143
+          },
+          {
+            "count": 2,
+            "predicted": 0.9384368381941645,
+            "observed": 0.5
+          }
+        ],
+        "segments": {
+          "aw": {
+            "top_one": 0.2657952069716776,
+            "log_loss": 1.9728745240617287,
+            "brier": 0.829251902883443,
+            "races": 2754
+          },
+          "jumps": {
+            "top_one": 0.2933145009416196,
+            "log_loss": 1.8921110430960413,
+            "brier": 0.810709357429843,
+            "races": 4248
+          },
+          "turf": {
+            "top_one": 0.25661507738392414,
+            "log_loss": 2.0357257955166035,
+            "brier": 0.8393653186842421,
+            "races": 4006
+          }
+        },
+        "field_sizes": {
+          "2-7": {
+            "races": 3525,
+            "top_one": 0.3401418439716312
+          },
+          "8-11": {
+            "races": 4610,
+            "top_one": 0.2698481561822126
+          },
+          "12+": {
+            "races": 2873,
+            "top_one": 0.19596240863209188
+          }
+        }
+      },
+      "boosted_no_handicap": {
+        "races": 11008,
+        "runners": 104486,
+        "top_one": 0.26453488372093026,
+        "top_two": 0.4518531976744186,
+        "top_three": 0.5941133720930233,
+        "pick_top3": 0.5896620639534884,
+        "log_loss": 1.9765744087981583,
+        "brier": 0.8291002253353403,
+        "calibration": [
+          {
+            "count": 63530,
+            "predicted": 0.0502275413296112,
+            "observed": 0.0540217220210924
+          },
+          {
+            "count": 27483,
+            "predicted": 0.14054555621835216,
+            "observed": 0.13997744059964343
+          },
+          {
+            "count": 8873,
+            "predicted": 0.24067456744919657,
+            "observed": 0.2338555167361659
+          },
+          {
+            "count": 2941,
+            "predicted": 0.34263508583798913,
+            "observed": 0.32811968718123086
+          },
+          {
+            "count": 1079,
+            "predicted": 0.4415052832937988,
+            "observed": 0.3697868396663577
+          },
+          {
+            "count": 412,
+            "predicted": 0.5408693087103954,
+            "observed": 0.46601941747572817
+          },
+          {
+            "count": 130,
+            "predicted": 0.6358328555406012,
+            "observed": 0.5307692307692308
+          },
+          {
+            "count": 28,
+            "predicted": 0.7444030260149137,
+            "observed": 0.7857142857142857
+          },
+          {
+            "count": 8,
+            "predicted": 0.8288659745067781,
+            "observed": 0.75
+          },
+          {
+            "count": 2,
+            "predicted": 0.9403568735695966,
+            "observed": 0.5
+          }
+        ],
+        "segments": {
+          "aw": {
+            "top_one": 0.2618010167029775,
+            "log_loss": 1.9793229984817242,
+            "brier": 0.8295866835985306,
+            "races": 2754
+          },
+          "jumps": {
+            "top_one": 0.2843691148775895,
+            "log_loss": 1.9041202516900746,
+            "brier": 0.814578244615915,
+            "races": 4248
+          },
+          "turf": {
+            "top_one": 0.24538192710933598,
+            "log_loss": 2.0515159074019027,
+            "brier": 0.8441650451154931,
+            "races": 4006
+          }
+        },
+        "field_sizes": {
+          "2-7": {
+            "races": 3525,
+            "top_one": 0.3225531914893617
+          },
+          "8-11": {
+            "races": 4610,
+            "top_one": 0.2603036876355748
+          },
+          "12+": {
+            "races": 2873,
+            "top_one": 0.20013922728854855
+          }
+        }
+      },
+      "boosted_no_connections": {
+        "races": 11008,
+        "runners": 104486,
+        "top_one": 0.25290697674418605,
+        "top_two": 0.43968023255813954,
+        "top_three": 0.5755813953488372,
+        "pick_top3": 0.5797601744186046,
+        "log_loss": 2.0038983060782485,
+        "brier": 0.8346257808780911,
+        "calibration": [
+          {
+            "count": 62671,
+            "predicted": 0.054783427436641205,
+            "observed": 0.05619824161095244
+          },
+          {
+            "count": 29855,
+            "predicted": 0.1388773122982426,
+            "observed": 0.1399765533411489
+          },
+          {
+            "count": 8120,
+            "predicted": 0.2391929201360999,
+            "observed": 0.2357142857142857
+          },
+          {
+            "count": 2564,
+            "predicted": 0.3419192650365108,
+            "observed": 0.328393135725429
+          },
+          {
+            "count": 913,
+            "predicted": 0.4413140877319824,
+            "observed": 0.39430449069003287
+          },
+          {
+            "count": 269,
+            "predicted": 0.5384939542858308,
+            "observed": 0.4944237918215613
+          },
+          {
+            "count": 78,
+            "predicted": 0.635427443589735,
+            "observed": 0.5897435897435898
+          },
+          {
+            "count": 12,
+            "predicted": 0.7380570735318867,
+            "observed": 0.75
+          },
+          {
+            "count": 4,
+            "predicted": 0.8408730277277899,
+            "observed": 0.75
+          }
+        ],
+        "segments": {
+          "aw": {
+            "top_one": 0.25381263616557737,
+            "log_loss": 2.0100103625105716,
+            "brier": 0.8359934547401384,
+            "races": 2754
+          },
+          "jumps": {
+            "top_one": 0.263653483992467,
+            "log_loss": 1.9426857807553806,
+            "brier": 0.8232397579247129,
+            "races": 4248
+          },
+          "turf": {
+            "top_one": 0.24088866699950076,
+            "log_loss": 2.06460679438502,
+            "brier": 0.8457593933818033,
+            "races": 4006
+          }
+        },
+        "field_sizes": {
+          "2-7": {
+            "races": 3525,
+            "top_one": 0.3202836879432624
+          },
+          "8-11": {
+            "races": 4610,
+            "top_one": 0.24468546637744035
+          },
+          "12+": {
+            "races": 2873,
+            "top_one": 0.1834319526627219
+          }
+        }
+      },
+      "specialists": {
+        "races": 11008,
+        "runners": 104486,
+        "top_one": 0.26771438953488375,
+        "top_two": 0.45412427325581395,
+        "top_three": 0.5956577034883721,
+        "pick_top3": 0.5914789244186046,
+        "log_loss": 1.966853790715109,
+        "brier": 0.8258829107687464,
+        "calibration": [
+          {
+            "count": 62896,
+            "predicted": 0.05381079252985395,
+            "observed": 0.05237216993131519
+          },
+          {
+            "count": 29256,
+            "predicted": 0.14003735136142592,
+            "observed": 0.14407301066447908
+          },
+          {
+            "count": 8421,
+            "predicted": 0.24042931668086293,
+            "observed": 0.23678897993112458
+          },
+          {
+            "count": 2706,
+            "predicted": 0.3409991948134186,
+            "observed": 0.34959349593495936
+          },
+          {
+            "count": 858,
+            "predicted": 0.4409418801090387,
+            "observed": 0.43123543123543123
+          },
+          {
+            "count": 259,
+            "predicted": 0.5416876692284474,
+            "observed": 0.5173745173745173
+          },
+          {
+            "count": 61,
+            "predicted": 0.6359329815735199,
+            "observed": 0.5409836065573771
+          },
+          {
+            "count": 24,
+            "predicted": 0.7283056405770187,
+            "observed": 0.75
+          },
+          {
+            "count": 4,
+            "predicted": 0.8439421970676332,
+            "observed": 0.75
+          },
+          {
+            "count": 1,
+            "predicted": 0.9122891759455902,
+            "observed": 1.0
+          }
+        ],
+        "segments": {
+          "aw": {
+            "top_one": 0.2607116920842411,
+            "log_loss": 1.9786769650182903,
+            "brier": 0.8313578442696159,
+            "races": 2754
+          },
+          "jumps": {
+            "top_one": 0.2876647834274953,
+            "log_loss": 1.8923480129461048,
+            "brier": 0.8093530238047745,
+            "races": 4248
+          },
+          "turf": {
+            "top_one": 0.2513729405891163,
+            "log_loss": 2.0377323533540928,
+            "brier": 0.8396475121071281,
+            "races": 4006
+          }
+        },
+        "field_sizes": {
+          "2-7": {
+            "races": 3525,
+            "top_one": 0.33390070921985815
+          },
+          "8-11": {
+            "races": 4610,
+            "top_one": 0.2611713665943601
+          },
+          "12+": {
+            "races": 2873,
+            "top_one": 0.19700661329620606
+          }
+        }
+      },
+      "ensemble": {
+        "races": 11008,
+        "runners": 104486,
+        "top_one": 0.2729832848837209,
+        "top_two": 0.45921148255813954,
+        "top_three": 0.59765625,
+        "pick_top3": 0.5987463662790697,
+        "log_loss": 1.9640598867827026,
+        "brier": 0.8258861972306899,
+        "calibration": [
+          {
+            "count": 64746,
+            "predicted": 0.050099689145857475,
+            "observed": 0.053748494115466595
+          },
+          {
+            "count": 26366,
+            "predicted": 0.14047808251124302,
+            "observed": 0.14234241068042175
+          },
+          {
+            "count": 8375,
+            "predicted": 0.24110306421534594,
+            "observed": 0.2346268656716418
+          },
+          {
+            "count": 2919,
+            "predicted": 0.3421592029859159,
+            "observed": 0.31483384720794794
+          },
+          {
+            "count": 1281,
+            "predicted": 0.44160868959405547,
+            "observed": 0.3762685402029664
+          },
+          {
+            "count": 485,
+            "predicted": 0.5425160317291464,
+            "observed": 0.47010309278350515
+          },
+          {
+            "count": 209,
+            "predicted": 0.6404044792182786,
+            "observed": 0.5550239234449761
+          },
+          {
+            "count": 83,
+            "predicted": 0.7377019724402586,
+            "observed": 0.5783132530120482
+          },
+          {
+            "count": 20,
+            "predicted": 0.8303295221692176,
+            "observed": 0.8
+          },
+          {
+            "count": 2,
+            "predicted": 0.9490648401503693,
+            "observed": 0.5
+          }
+        ],
+        "segments": {
+          "aw": {
+            "top_one": 0.26615831517792304,
+            "log_loss": 1.9717179545951102,
+            "brier": 0.8283469051933587,
+            "races": 2754
+          },
+          "jumps": {
+            "top_one": 0.2869585687382298,
+            "log_loss": 1.896080223860246,
+            "brier": 0.8122621595974875,
+            "races": 4248
+          },
+          "turf": {
+            "top_one": 0.26285571642536193,
+            "log_loss": 2.030881476732583,
+            "brier": 0.8386415946686964,
+            "races": 4006
+          }
+        },
+        "field_sizes": {
+          "2-7": {
+            "races": 3525,
+            "top_one": 0.3373049645390071
+          },
+          "8-11": {
+            "races": 4610,
+            "top_one": 0.26702819956616053
+          },
+          "12+": {
+            "races": 2873,
+            "top_one": 0.20361990950226244
+          }
+        }
+      }
+    },
+    "selected": "ensemble",
+    "selection_rule": "Minimum later-validation race log loss; top-one breaks exact ties.",
+    "selected_temperature": 0.85,
+    "development_factor_hypotheses": {
+      "ratings_handicap": {
+        "validation_log_loss_increase_when_shuffled_within_race": 0.020840948042464724
+      },
+      "connections": {
+        "validation_log_loss_increase_when_shuffled_within_race": 0.12114616408634005
+      },
+      "recent_form": {
+        "validation_log_loss_increase_when_shuffled_within_race": 0.20384295669531216
+      },
+      "suitability": {
+        "validation_log_loss_increase_when_shuffled_within_race": 0.004437767291387784
+      },
+      "draw_weight": {
+        "validation_log_loss_increase_when_shuffled_within_race": 0.0035531896242375627
+      }
+    },
+    "training_diagnostic": {
+      "races": 20194,
+      "runners": 192963,
+      "top_one": 0.2930573437654749,
+      "top_two": 0.4869763296028523,
+      "top_three": 0.6276121620283253,
+      "pick_top3": 0.6109735565019313,
+      "log_loss": 1.9056556131027833,
+      "brier": 0.8073383038885218,
+      "calibration": [
+        {
+          "count": 120310,
+          "predicted": 0.04909527628890559,
+          "observed": 0.04884049538691713
+        },
+        {
+          "count": 47941,
+          "predicted": 0.14030243020989946,
+          "observed": 0.1429465384535158
+        },
+        {
+          "count": 15178,
+          "predicted": 0.24154269925753968,
+          "observed": 0.24430096191856635
+        },
+        {
+          "count": 5657,
+          "predicted": 0.34240574831220794,
+          "observed": 0.3296800424253138
+        },
+        {
+          "count": 2320,
+          "predicted": 0.4424473167249793,
+          "observed": 0.4224137931034483
+        },
+        {
+          "count": 941,
+          "predicted": 0.5437573770140207,
+          "observed": 0.5079702444208289
+        },
+        {
+          "count": 411,
+          "predicted": 0.6408702307415035,
+          "observed": 0.6666666666666666
+        },
+        {
+          "count": 162,
+          "predicted": 0.7365882517291517,
+          "observed": 0.7469135802469136
+        },
+        {
+          "count": 33,
+          "predicted": 0.8423765715940817,
+          "observed": 0.9090909090909091
+        },
+        {
+          "count": 10,
+          "predicted": 0.9307240406249692,
+          "observed": 0.9
+        }
+      ],
+      "segments": {
+        "aw": {
+          "top_one": 0.28445627687896785,
+          "log_loss": 1.9292272234516135,
+          "brier": 0.8137022681511195,
+          "races": 4883
+        },
+        "jumps": {
+          "top_one": 0.3117291719103952,
+          "log_loss": 1.8554121498699963,
+          "brier": 0.7946199480744551,
+          "races": 7946
+        },
+        "turf": {
+          "top_one": 0.2786150712830957,
+          "log_loss": 1.944234619961492,
+          "brier": 0.8168406552536692,
+          "races": 7365
+        }
+      },
+      "field_sizes": {
+        "2-7": {
+          "races": 6531,
+          "top_one": 0.37115296279283416
+        },
+        "8-11": {
+          "races": 7957,
+          "top_one": 0.2748523312806334
+        },
+        "12+": {
+          "races": 5706,
+          "top_one": 0.2290571328426218
+        }
+      }
+    },
+    "validation_uniform": {
+      "races": 11008,
+      "runners": 104486,
+      "top_one": 0.11836845930232558,
+      "top_two": 0.24173328488372092,
+      "top_three": 0.3621002906976744,
+      "pick_top3": 0.35919331395348836,
+      "log_loss": 2.177099379040945,
+      "brier": 0.8773246326218012,
+      "calibration": [
+        {
+          "count": 62376,
+          "predicted": 0.07882839553674491,
+          "observed": 0.07882839553674491
+        },
+        {
+          "count": 40119,
+          "predicted": 0.1384630723597298,
+          "observed": 0.1384630723597298
+        },
+        {
+          "count": 1600,
+          "predicted": 0.25,
+          "observed": 0.25
+        },
+        {
+          "count": 357,
+          "predicted": 0.3333333333333333,
+          "observed": 0.3333333333333333
+        },
+        {
+          "count": 34,
+          "predicted": 0.5,
+          "observed": 0.5
+        }
+      ],
+      "segments": {
+        "aw": {
+          "top_one": 0.11474219317356572,
+          "log_loss": 2.197610252134366,
+          "brier": 0.8829759036424237,
+          "races": 2754
+        },
+        "jumps": {
+          "top_one": 0.1228813559322034,
+          "log_loss": 2.129893811254151,
+          "brier": 0.8688620067048086,
+          "races": 4248
+        },
+        "turf": {
+          "top_one": 0.11607588617074388,
+          "log_loss": 2.2130560209428474,
+          "brier": 0.8824134080847543,
+          "races": 4006
+        }
+      },
+      "field_sizes": {
+        "2-7": {
+          "races": 3525,
+          "top_one": 0.17446808510638298
+        },
+        "8-11": {
+          "races": 4610,
+          "top_one": 0.10715835140997831
+        },
+        "12+": {
+          "races": 2873,
+          "top_one": 0.06752523494604942
+        }
+      }
+    },
+    "training_races": 31260,
+    "training_end": "2026-05-27"
+  },
+  "final": {
+    "status": "FINAL_ARCHIVE_EVALUATION_COMPLETED_PROVISIONAL",
+    "selected": "ensemble",
+    "period": [
+      "2026-06-04",
+      "2026-09-30"
+    ],
+    "candidate": {
+      "races": 4785,
+      "runners": 43987,
+      "top_one": 0.2721003134796238,
+      "top_two": 0.4652037617554859,
+      "top_three": 0.6127481713688611,
+      "pick_top3": 0.5905956112852665,
+      "log_loss": 1.9652814330402517,
+      "brier": 0.8295085130235929,
+      "calibration": [
+        {
+          "count": 27382,
+          "predicted": 0.04761315653318402,
+          "observed": 0.05726389599006647
+        },
+        {
+          "count": 10251,
+          "predicted": 0.14083682274180484,
+          "observed": 0.14515657009072286
+        },
+        {
+          "count": 3602,
+          "predicted": 0.24228658609268913,
+          "observed": 0.21682398667406996
+        },
+        {
+          "count": 1479,
+          "predicted": 0.34508606315352147,
+          "observed": 0.29344151453684925
+        },
+        {
+          "count": 723,
+          "predicted": 0.4436536878689863,
+          "observed": 0.34439834024896265
+        },
+        {
+          "count": 315,
+          "predicted": 0.5447643839901875,
+          "observed": 0.4634920634920635
+        },
+        {
+          "count": 147,
+          "predicted": 0.6404480000026304,
+          "observed": 0.48299319727891155
+        },
+        {
+          "count": 65,
+          "predicted": 0.7455864918003118,
+          "observed": 0.5076923076923077
+        },
+        {
+          "count": 21,
+          "predicted": 0.8395707963107722,
+          "observed": 0.6666666666666666
+        },
+        {
+          "count": 2,
+          "predicted": 0.9186726980349409,
+          "observed": 0.5
+        }
+      ],
+      "segments": {
+        "aw": {
+          "top_one": 0.2986627043090639,
+          "log_loss": 1.9439555475998933,
+          "brier": 0.8209154518669189,
+          "races": 673
+        },
+        "jumps": {
+          "top_one": 0.25248070562293273,
+          "log_loss": 2.050518580343082,
+          "brier": 0.8545631242482865,
+          "races": 907
+        },
+        "turf": {
+          "top_one": 0.2720748829953198,
+          "log_loss": 1.9456378225247115,
+          "brier": 0.8242225840930607,
+          "races": 3205
+        }
+      },
+      "field_sizes": {
+        "2-7": {
+          "races": 1749,
+          "top_one": 0.3510577472841624
+        },
+        "8-11": {
+          "races": 1932,
+          "top_one": 0.25
+        },
+        "12+": {
+          "races": 1104,
+          "top_one": 0.18568840579710144
+        }
+      }
+    },
+    "uniform": {
+      "races": 4785,
+      "runners": 43987,
+      "top_one": 0.13458725182863113,
+      "top_two": 0.2618599791013584,
+      "top_three": 0.38474399164054335,
+      "pick_top3": 0.38892371995820274,
+      "log_loss": 2.1354501079385884,
+      "brier": 0.8708278391438812,
+      "calibration": [
+        {
+          "count": 24800,
+          "predicted": 0.07814516129032258,
+          "observed": 0.07814516129032258
+        },
+        {
+          "count": 18057,
+          "predicted": 0.1403333887135183,
+          "observed": 0.1403333887135183
+        },
+        {
+          "count": 828,
+          "predicted": 0.25,
+          "observed": 0.25
+        },
+        {
+          "count": 270,
+          "predicted": 0.33333333333333326,
+          "observed": 0.3333333333333333
+        },
+        {
+          "count": 32,
+          "predicted": 0.5,
+          "observed": 0.5
+        }
+      ],
+      "segments": {
+        "aw": {
+          "top_one": 0.1099554234769688,
+          "log_loss": 2.195138576350708,
+          "brier": 0.8826819127710659,
+          "races": 673
+        },
+        "jumps": {
+          "top_one": 0.12127894156560089,
+          "log_loss": 2.1379269263025784,
+          "brier": 0.8676497581445941,
+          "races": 907
+        },
+        "turf": {
+          "top_one": 0.1435257410296412,
+          "log_loss": 2.1222155327443617,
+          "brier": 0.8692380506619026,
+          "races": 3205
+        }
+      },
+      "field_sizes": {
+        "2-7": {
+          "races": 1749,
+          "top_one": 0.17895940537449972
+        },
+        "8-11": {
+          "races": 1932,
+          "top_one": 0.12681159420289856
+        },
+        "12+": {
+          "races": 1104,
+          "top_one": 0.07789855072463768
+        }
+      }
+    },
+    "versus_uniform": {
+      "accuracy_gain": {
+        "mean": 0.1375130616509927,
+        "ci95": [
+          0.12108649761137372,
+          0.1529439983084539
+        ]
+      },
+      "log_loss_gain": {
+        "mean": 0.1701686748983366,
+        "ci95": [
+          0.14515201722545804,
+          0.19505086962739784
+        ]
+      },
+      "brier_gain": {
+        "mean": 0.04131932612028845,
+        "ci95": [
+          0.033552955454837836,
+          0.049128480836829316
+        ]
+      }
+    },
+    "frozen_model_hash": "2bbd1edc9a542bec51be0f66a70312eaab698322d32319e826c523edfc364056",
+    "frozen_prediction_hash": "a185ea9fd8e48107ade2cba91978565c42eed63d843cd96908ee5e8a27b16af9",
+    "original_model": {
+      "available": false,
+      "reason": "No frozen original forecasts for the identical historical races."
+    },
+    "early_price_roi": null,
+    "early_price_drawdown": null,
+    "early_price_reason": "No timestamped early bookmaker quotes; SP returns are not early-price returns.",
+    "retrospective_sp_baseline": {
+      "races": 4784,
+      "runners": 43978,
+      "top_one": 0.34134615384615385,
+      "top_two": 0.5535117056856187,
+      "top_three": 0.6943979933110368,
+      "pick_top3": 0.6860367892976589,
+      "log_loss": 1.750273658916047,
+      "brier": 0.7678882074052789,
+      "calibration": [
+        {
+          "count": 26954,
+          "predicted": 0.043489489834199445,
+          "observed": 0.040031164205683756
+        },
+        {
+          "count": 10306,
+          "predicted": 0.14463926336741437,
+          "observed": 0.1453522220065981
+        },
+        {
+          "count": 3954,
+          "predicted": 0.24226189851611077,
+          "observed": 0.2503793626707132
+        },
+        {
+          "count": 1506,
+          "predicted": 0.3428200028502839,
+          "observed": 0.35790172642762286
+        },
+        {
+          "count": 706,
+          "predicted": 0.44604520651960705,
+          "observed": 0.471671388101983
+        },
+        {
+          "count": 316,
+          "predicted": 0.5437406133300828,
+          "observed": 0.5569620253164557
+        },
+        {
+          "count": 166,
+          "predicted": 0.6431606208129211,
+          "observed": 0.6746987951807228
+        },
+        {
+          "count": 54,
+          "predicted": 0.7371596125735957,
+          "observed": 0.8148148148148148
+        },
+        {
+          "count": 15,
+          "predicted": 0.8483988191665908,
+          "observed": 0.8
+        },
+        {
+          "count": 1,
+          "predicted": 0.9143576826196473,
+          "observed": 1.0
+        }
+      ],
+      "segments": {
+        "aw": {
+          "top_one": 0.34323922734026746,
+          "log_loss": 1.7663319507313486,
+          "brier": 0.7669923281811072,
+          "races": 673
+        },
+        "jumps": {
+          "top_one": 0.3263506063947078,
+          "log_loss": 1.7884333197204476,
+          "brier": 0.7761124576076087,
+          "races": 907
+        },
+        "turf": {
+          "top_one": 0.34519350811485644,
+          "log_loss": 1.7360982398332474,
+          "brier": 0.7657482360520811,
+          "races": 3204
+        }
+      },
+      "field_sizes": {
+        "2-7": {
+          "races": 1749,
+          "top_one": 0.4236706689536878
+        },
+        "8-11": {
+          "races": 1931,
+          "top_one": 0.31175556706369756
+        },
+        "12+": {
+          "races": 1104,
+          "top_one": 0.26268115942028986
+        }
+      }
+    },
+    "versus_retrospective_sp": {
+      "accuracy_gain": {
+        "mean": -0.06918896321070234,
+        "ci95": [
+          -0.08223633174940058,
+          -0.055356155747653214
+        ]
+      },
+      "log_loss_gain": {
+        "mean": -0.2149977076836626,
+        "ci95": [
+          -0.2342771281927641,
+          -0.19676244703081136
+        ]
+      },
+      "brier_gain": {
+        "mean": -0.06161484358150568,
+        "ci95": [
+          -0.06745106753063428,
+          -0.0557986442744004
+        ]
+      }
+    },
+    "sp_comparison_label": "Retrospective reference at starting price; unavailable at the configured pre-race cutoff.",
+    "promotion": {
+      "allowed": false,
+      "decision": "RETAIN_ORIGINAL",
+      "blockers": [
+        "Archive has no pre-race snapshot timestamps or versioned ratings.",
+        "Archive supplies complete starter fields; earlier declared fields and non-runner timing are unverified.",
+        "No complete, timestamped pre-race bookmaker baseline or executable early prices.",
+        "No identical-race frozen original probability forecasts.",
+        "No demonstrated paired accuracy and probability-error improvement over the SP reference."
+      ]
+    }
+  },
+  "frozen": {
+    "created_at": "2026-10-23T08:45:45.096233+00:00",
+    "protocol_hash": "daa34ddbc7f5a8777cf521658dc833a103562a5aac09ca397017bac3deeac43a",
+    "code_hash": "aee04e45f25ffe87723f8aa014097d58a6fe0188d11291657669a5fd5af604a5",
+    "model_hash": "2bbd1edc9a542bec51be0f66a70312eaab698322d32319e826c523edfc364056",
+    "final_data_hash": "6f3f91a117212effe0c348364def98f0efaec0af4438f9504e6f4d7e3923c47b",
+    "dataset_hash": "d437590771d395db0e43ca1c9cfac83fa384de631cc1f1b48671a3aa1d522d2d",
+    "selected": "ensemble",
+    "temperature": 0.85,
+    "features": [
+      "age",
+      "aw",
+      "below_last_win",
+      "best_finish5",
+      "cd_top3",
+      "class_drop",
+      "course_starts",
+      "course_win",
+      "days_since_run",
+      "distance",
+      "distance_change",
+      "distance_win",
+      "draw",
+      "draw_fraction",
+      "female",
+      "field_size",
+      "going",
+      "going_win",
+      "handicap",
+      "headgear",
+      "headgear_change",
+      "horse_jockey",
+      "improvement",
+      "jockey14",
+      "jockey_all",
+      "jumps",
+      "last_finish",
+      "mark_change",
+      "mean_finish5",
+      "mean_finish5_rank",
+      "mean_finish5_vs_field",
+      "official_rating",
+      "official_rating_rank",
+      "official_rating_vs_field",
+      "prior_starts",
+      "race_class",
+      "sire_code",
+      "top3_rate5",
+      "trainer14",
+      "trainer30",
+      "trainer_all",
+      "trainer_all_rank",
+      "trainer_all_vs_field",
+      "trainer_jockey",
+      "weight",
+      "weight_rank",
+      "weight_vs_field",
+      "win_rate5",
+      "win_rate5_rank",
+      "win_rate5_vs_field"
+    ],
+    "environment": {
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.16.2",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.7.0"
+    },
+    "evaluation_period": [
+      "2026-06-04",
+      "2026-09-30"
+    ],
+    "primary_endpoint": "paired top-one and race log-loss improvement on every eligible race",
+    "no_further_tuning_on_final": true
+  }
+}),f=b.final,d=b.development,a=b.audit;let c=f?.candidate;$('#summary').innerHTML=`<div class="notice"><strong>${f?'Original retained · promotion criteria not met':'Development in progress · original retained'}</strong><p>${f?'Later-period archive evaluation completed. Historical snapshot timing and declaration versions remain unverified; these results are provisional.':'The reserved results stay closed until model comparison and calibration choices are frozen.'}</p></div><div class="grid">${[['Final-period races',num(c?.races),'Every eligible race in the reserved period'],['Winner ranked first',pct(c?.top_one),'Full-field top-one accuracy'],['Winner in top three',pct(c?.top_three),'Ranking coverage across the field'],['Race log loss',dec(c?.log_loss),'Lower is better; proper probability score']].map(([n,v,s])=>`<div class="card"><span class="sub">${n}</span><div class="metric">${v}</div><span class="sub">${s}</span></div>`).join('')}</div><div class="row"><div class="card"><div class="eyebrow">One forecast per race</div><h2>Reserved-period comparison</h2>${chart([['v3 candidate',c],['Uniform',f?.uniform,'alt'],['SP reference',f?.retrospective_sp_baseline,'market']])}<p class="sub">SP is a retrospective starting-price reference. It is excluded from model inputs and cannot stand in for an earlier quoted market.</p>${f?.versus_retrospective_sp?`<p class="sub">Paired top-one gain against SP: ${pct(f.versus_retrospective_sp.accuracy_gain.mean)}; 95% day-block interval ${f.versus_retrospective_sp.accuracy_gain.ci95.map(pct).join(' to ')}.</p>`:''}</div><div class="card"><div class="eyebrow">Probability quality</div><h2>Calibration</h2>${calibration(c)}<p class="sub">The dashed diagonal represents perfect calibration. Calibration was chosen on development folds.</p></div></div><div class="card section"><div class="statusline"><div><div class="eyebrow">Development decisions</div><h2>Candidate models</h2></div><span class="pill">Selected: ${e(d?.selected||'pending')}</span></div><p>Selection uses the lowest race log loss on later validation races. The final period plays no part in this choice.</p><div class="table-wrap"><table><thead><tr><th>Candidate</th><th>Validation races</th><th>Top one</th><th>Top two</th><th>Top three</th><th>Log loss</th><th>Brier</th></tr></thead><tbody>${d?Object.entries(d.selection_validation).map(([n,m])=>`<tr class="${n===d.selected?'chosen':''}"><td>${e(n)}</td><td>${num(m.races)}</td><td>${pct(m.top_one)}</td><td>${pct(m.top_two)}</td><td>${pct(m.top_three)}</td><td>${dec(m.log_loss)}</td><td>${dec(m.brier)}</td></tr>`).join(''):'<tr><td colspan="7">Models are being trained and compared.</td></tr>'}</tbody></table></div></div><div class="row"><div class="card"><div class="eyebrow">Time is the boundary</div><h2>Chronological separation</h2><div class="split"><span class="train">TRAINING</span><span class="valid">VALIDATION</span><span class="test">FINAL</span></div><p class="sub">Initial training: 2019–2023, with earlier history. Validation: January 2024–27 May 2026. Final: 4 June–30 September 2026. All parameters and calibration fixed before final evaluation.</p><p class="sub">${num(a?.development_races)} development races; ${num(a?.reserved_final_races)} reserved races. Same-day results are withheld from all historical features.</p><details><summary>Walk-forward validation periods</summary><div class="table-wrap"><table><thead><tr><th>Training through</th><th>Later validation</th><th>Selected architecture top one</th></tr></thead><tbody>${d?.folds.map(x=>`<tr><td>${e(x.train_end)}</td><td>${e(x.validation_start)} / ${e(x.validation_end)}</td><td>${pct(x.models[d.selected]?.top_one)}</td></tr>`).join('')||''}</tbody></table></div></details></div><div class="card"><div class="eyebrow">Evidence required</div><h2>Promotion decision</h2><ul class="list">${(f?.promotion.blockers||['Final results remain sealed.','Verifiable pre-race snapshots and an identical-race baseline are required.']).map(x=>`<li>${e(x)}</li>`).join('')}</ul><p class="sub">Early-price ROI and drawdown: unavailable. Exact bookmaker terms and executable early quotes are absent.</p></div></div>${b.frozen?`<details><summary>Frozen model provenance</summary><p>Model hash: <code>${e(b.frozen.model_hash)}</code></p><p>Frozen at ${e(b.frozen.created_at)}. The final period is consumed after one evaluation and must be retired before further development.</p></details>`:''}`;}catch(err){$('#summary').textContent='Experiment report could not be loaded: '+err.message}}
+for(const [file,input] of [['#cardfile','#cardinput'],['#resultfile','#resultinput']])$(file).onchange=async ev=>{if(ev.target.files[0])$(input).value=await ev.target.files[0].text()};
+async function send(path,input){const payload=JSON.parse($(input).value);const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}),data=await r.json();if(!r.ok)throw Error(data.error||'Request failed');return data}
+$('#freeze').onclick=async()=>{const button=$('#freeze');button.disabled=true;$('#forecast').textContent='Analysing the complete field…';try{const p=await send('/api/predict','#cardinput');$('#forecast').innerHTML=`<p><span class="pill">FROZEN</span> Winner: <strong>${e(p.predicted_winner)}</strong></p><div class="table-wrap"><table><thead><tr><th>Runner</th><th>Win probability</th><th>Estimated edge</th></tr></thead><tbody>${p.ranking.map(r=>`<tr><td>${e(r.horse)}</td><td>${pct(r.win_probability)}</td><td>${pct(r.estimated_value_edge)}</td></tr>`).join('')}</tbody></table></div><p class="sub">Model history through ${e(p.history_as_of)}. ${e(p.calibration)}</p><p class="sub">Record hash: <code>${e(p.record_hash)}</code></p>`}catch(err){$('#forecast').textContent=err.message;$('#forecast').classList.add('error')}finally{button.disabled=false}};
+async function loadRecords(){try{const r=await fetch('/api/records').then(r=>r.json());$('#recordlist').innerHTML=`<span class="pill">${r.verified?'HASH CHAIN VERIFIED':'UNVERIFIED'}</span><p>${num(r.scores.races)} scored future races · Top one: ${pct(r.scores.top_one)}</p><div class="table-wrap"><table><thead><tr><th>Race</th><th>Record type</th><th>Recorded at</th><th>Forecast / result</th></tr></thead><tbody>${r.events.map(x=>`<tr><td>${e(x.race_id)}</td><td>${e(x.kind)}</td><td>${e(x.recorded_at)}</td><td>${e(x.payload.predicted_winner||'Official result attached')}</td></tr>`).join('')||'<tr><td colspan="4">No prospective predictions recorded yet.</td></tr>'}</tbody></table></div>`}catch(err){$('#recordlist').textContent=err.message}}$('#reload').onclick=loadRecords;$('#resultbutton').onclick=async()=>{try{const result=await send('/api/result','#resultinput');$('#resultstatus').textContent='Official result recorded. '+result.record_hash;loadRecords()}catch(err){$('#resultstatus').textContent=err.message}};loadReport();
+</script></body></html>

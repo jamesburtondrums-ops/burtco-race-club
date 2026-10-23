@@ -1,0 +1,29 @@
+{
+  "dataset": "deltaromeo/horse-racing-results-ukireland-2015-2025",
+  "url": "https://www.kaggle.com/api/v1/datasets/download/deltaromeo/horse-racing-results-ukireland-2015-2025/form_2015-present%2Fform_2015-present%2Fform_2015-present%2Fraceform.csv",
+  "member": "form_2015-present/form_2015-present/form_2015-present/raceform.csv",
+  "downloaded_at": "2026-10-23T08:19:34.850634+00:00",
+  "sha256": "d437590771d395db0e43ca1c9cfac83fa384de631cc1f1b48671a3aa1d522d2d",
+  "bytes": 736591237,
+  "source_entry": {
+    "nameNullable": "form_2015-present/form_2015-present/form_2015-present/raceform.csv",
+    "ref": "",
+    "datasetRef": "",
+    "hasDatasetRef": false,
+    "ownerRef": "",
+    "hasOwnerRef": false,
+    "name": "form_2015-present/form_2015-present/form_2015-present/raceform.csv",
+    "hasName": true,
+    "creationDate": "2026-10-22T21:43:56.396Z",
+    "description": "",
+    "hasDescription": false,
+    "fileType": "",
+    "hasFileType": false,
+    "url": "",
+    "hasUrl": false,
+    "totalBytes": 736591237,
+    "columns": []
+  },
+  "timing_status": "RETROSPECTIVE_ARCHIVE_NO_POINT_IN_TIME_VERSIONS",
+  "licence": "Community Data License Agreement - Sharing - Version 1.0"
+}
