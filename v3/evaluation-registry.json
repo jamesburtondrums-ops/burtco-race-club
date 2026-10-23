@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "retired_periods": [
+    {
+      "start": "2026-06-04",
+      "end": "2026-09-30",
+      "status": "EVALUATED_AND_RETIRED",
+      "experiment_commit": "fd4d6a95b13a5f2cfe346a63e12f4bdb3c2de758",
+      "report": "v3/reports/summary.json",
+      "reason": "Results were opened on 23 October 2026. A fresh workspace does not make this period unseen again."
+    }
+  ]
+}

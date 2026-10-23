@@ -151,6 +151,8 @@ def freeze_configuration(root, protocol):
 
 
 def final_evaluate(root, protocol):
+    from .governance import assert_unopened_period
+    assert_unopened_period(protocol)
     root = Path(root)
     seal = json.loads((root / 'frozen-config.json').read_text())
     if seal['protocol_hash'] != digest(protocol) or seal['code_hash'] != source_digest():

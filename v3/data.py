@@ -78,11 +78,15 @@ def ordered_source(path):
     """Disk-backed chronological ordering; retain raw bytes and report original inversions."""
     path = Path(path)
     index = path.with_suffix('.ordered.sqlite')
+    stat = path.stat()
+    fingerprint = {'size': stat.st_size, 'mtime_ns': stat.st_mtime_ns}
+    identity = index.with_suffix('.identity.json')
     if index.exists():
         db = sqlite3.connect(index)
         valid = db.execute('SELECT complete FROM metadata').fetchone()
-        if valid and valid[0] == 1:
-            return db
+        if valid and valid[0] == 1 and identity.exists():
+            if json.loads(identity.read_text(encoding='utf-8')) == fingerprint:
+                return db
         db.close()
         index.unlink()
     db = sqlite3.connect(index)
@@ -117,6 +121,7 @@ def ordered_source(path):
         db.execute('CREATE INDEX chronological ON source(day,rid,seq)')
         db.execute('UPDATE metadata SET complete=1')
         db.commit()
+        identity.write_text(json.dumps(fingerprint), encoding='utf-8')
         audit = {'raw_rows': total, 'original_date_regressions': inversions,
                  'replay_order': 'date, race ID, original row sequence; all results delayed until next day',
                  'raw_source_preserved': True, 'outcome_features_excluded_from_index': ['rpr','ts','comment','time','btn','ovr_btn']}

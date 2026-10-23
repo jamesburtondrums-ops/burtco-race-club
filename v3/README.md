@@ -14,6 +14,29 @@ Open <http://127.0.0.1:8763>. The dashboard compares candidate validation result
 
 ## Reproduce a fresh experiment
 
+**Cross-device continuation, 23 October:** the June–September 2026 test has already been opened.
+`evaluation-registry.json` now blocks evaluating that period even in a new workspace.
+The original instructions below describe the completed experiment; they must not be used
+to treat its holdout as new evidence again. The dashboard can show the committed result
+without the original ignored workspace.
+
+To restore an operational experimental model on another computer:
+
+```bash
+python -m pip install -r v3/requirements.txt
+python -m v3 acquire
+python -m v3 rebuild-runtime
+python -m v3 serve
+```
+
+The rebuild fits only the recorded development data, using the already selected architecture
+and calibration. It does not rerun candidate selection or score the retired period. Its model
+hash is new; the historical test figures belong to the original artifact, not this regenerated
+runtime. This distinction is recorded in `runtime-rebuild.json` and shown in the dashboard.
+Earlier completed archive races may update history for genuinely future forecasts without
+retraining parameters. A new predictive improvement claim requires a new governed cycle
+and genuinely new held-out races with sufficient sample size and verified pre-race sources.
+
 Use Python 3.12 and install `v3/requirements.txt` into an isolated environment. The supplied Windows environment uses the bundled Python runtime and its NumPy/Pandas packages.
 
 ```powershell

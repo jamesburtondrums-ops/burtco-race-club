@@ -27,6 +27,16 @@ def report_bundle(root):
                             ('final', 'final-report.json'), ('frozen', 'frozen-config.json')]:
         path = root / filename
         bundle[label] = json.loads(path.read_text()) if path.exists() else None
+    # A clean checkout retains the recorded experiment even when its ignored runtime is absent.
+    if all(bundle[label] is None for label in ('audit', 'development', 'final', 'frozen')):
+        saved = Path(__file__).with_name('reports') / 'summary.json'
+        if saved.exists():
+            bundle = json.loads(saved.read_text(encoding='utf-8'))
+            bundle['report_origin'] = 'COMMITTED_PREVIOUS_EXPERIMENT_NOT_A_NEW_EVALUATION'
+    runtime = root / 'runtime-rebuild.json'
+    bundle['runtime'] = json.loads(runtime.read_text()) if runtime.exists() else {
+        'status': 'AVAILABLE' if (root / 'model.pkl').exists() else 'MODEL_NOT_INSTALLED',
+        'historical_report_applies_to_runtime': False}
     return bundle
 
 

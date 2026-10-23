@@ -69,6 +69,13 @@ def validate_snapshot(snapshot, now=None):
         raise ValueError('Complete declared field required')
     if len({r['horse'].strip().upper() for r in rows}) != len(rows):
         raise ValueError('Duplicate runner')
+    # A count alone does not establish that all rows belong to the same race.
+    from .data import discipline, token
+    for key in ('course', 'type', 'race_name', 'class', 'going', 'dist'):
+        if len({token(r.get(key)) for r in rows}) != 1:
+            raise ValueError('Inconsistent racecard field: ' + key)
+    if len({discipline(r) for r in rows}) != 1:
+        raise ValueError('Inconsistent race discipline')
     allowed = {'horse', 'trainer', 'jockey', 'sire', 'course', 'type', 'race_name', 'class', 'going', 'dist',
                'or', 'age', 'sex', 'wgt', 'hg', 'draw'}
     for row in rows:
@@ -78,6 +85,8 @@ def validate_snapshot(snapshot, now=None):
         if not row.get('horse') or not row.get('course') or not row.get('type'):
             raise ValueError('Horse, course and race type are mandatory for every runner')
     quotes = snapshot.get('market', [])
+    if len({q['horse'] for q in quotes}) != len(quotes):
+        raise ValueError('Duplicate market quote; use one identified quote per runner')
     for quote in quotes:
         if quote['horse'] not in {r['horse'] for r in rows} or not 1 < float(quote['decimal_odds']) < 100000:
             raise ValueError('Invalid market quote')

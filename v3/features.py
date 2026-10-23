@@ -28,8 +28,6 @@ class History:
             return float('nan')
         if window:
             q = self.events[(kind, key)]
-            while q and (day - q[0][0]).days > 60:
-                q.popleft()
             return rate([e for e in q if 0 < (day - e[0]).days <= window])
         n, wins = self.totals[(kind, key)]
         return (wins + 1) / (n + 10)
@@ -112,7 +110,11 @@ class History:
                     self.totals[(kind, key)][0] += 1
                     self.totals[(kind, key)][1] += won
                     if kind in ('trainer', 'jockey'):
-                        self.events[(kind, key)].append((day, won))
+                        q = self.events[(kind, key)]
+                        q.append((day, won))
+                        # Prune on a completed result day, never on an arbitrary future forecast date.
+                        while q and (day - q[0][0]).days > 60:
+                            q.popleft()
         self.last_day = day
 
     def __getstate__(self):

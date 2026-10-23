@@ -13,6 +13,8 @@ def advance_history(root):
     ledger = Ledger(root / 'predictions.sqlite')
     ledger.verify()
     predictions = {r['race_id']: r['payload'] for r in ledger.rows('prediction')}
+    results = {r['race_id']: r['payload'] for r in ledger.rows('result')}
+    pending_days = {timestamp(p['off_at']).date() for rid, p in predictions.items() if rid not in results}
     days = {}
     for event in ledger.rows('result'):
         pred = predictions[event['race_id']]
@@ -23,17 +25,23 @@ def advance_history(root):
         for runner in pred['source_snapshot']['runners']:
             rows.append(dict(runner, ran=len(pred['ranking']), pos=event['payload']['finishes'][runner['horse']]))
     for day, rows in sorted(days.items()):
+        if any(pending <= day and (not history.last_day or pending > history.last_day) for pending in pending_days):
+            break
         history.incorporate(rows, day)
     temporary = root / 'history-latest.tmp'
     with temporary.open('wb') as output:
         pickle.dump(history, output)
     temporary.replace(root / 'history-latest.pkl')
-    return {'history_as_of': str(history.last_day), 'completed_days_added': len(days), 'model_parameters_changed': False}
+    return {'history_as_of': str(history.last_day),
+            'completed_days_added': sum(day <= history.last_day for day in days) if history.last_day else 0,
+            'pending_result_days': sorted(str(d) for d in pending_days), 'model_parameters_changed': False}
 
 
 def new_cycle(root, destination, protocol):
     """A fresh development cycle retires old outcomes and requires a genuinely later holdout."""
     from .experiment import save
+    from .governance import assert_unopened_period
+    assert_unopened_period(protocol)
     root, destination = Path(root), Path(destination)
     previous = json.loads((root / 'final-use.json').read_text())
     if not destination.exists():
@@ -53,7 +61,7 @@ def new_cycle(root, destination, protocol):
 def main():
     parser = argparse.ArgumentParser(description='Racing Intelligence v3')
     parser.add_argument('command', choices=['acquire', 'inventory', 'prepare', 'develop', 'freeze', 'evaluate-final', 'predict',
-                                           'record-result', 'score-records', 'advance-history', 'new-cycle', 'reports', 'serve'])
+                                           'record-result', 'score-records', 'advance-history', 'new-cycle', 'reports', 'serve', 'rebuild-runtime'])
     parser.add_argument('--workspace', default='v3/workspace')
     parser.add_argument('--protocol', default='v3/protocol.json')
     parser.add_argument('--input')
@@ -63,6 +71,9 @@ def main():
     root = Path(args.workspace)
     root.mkdir(parents=True, exist_ok=True)
     protocol = json.loads(Path(args.protocol).read_text())
+    if args.command == 'rebuild-runtime':
+        from .runtime import rebuild_runtime
+        return rebuild_runtime(root)
     if args.command == 'acquire':
         from .acquire import acquire
         return acquire(root / 'raw')
