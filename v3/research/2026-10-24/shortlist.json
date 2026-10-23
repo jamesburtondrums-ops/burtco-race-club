@@ -1,0 +1,56 @@
+[
+  {
+    "race_id": "2026-10-24|cheltenham|13:45",
+    "horse": "Road To Wembley (GB)",
+    "bet_type": "WIN",
+    "minimum_decimal_odds": 2.0,
+    "why": "Three wins from five archived hurdle starts, a run 29 days ago and a stable with 8 wins from 30 recent archived runners. Clear first choice in the independent full-field ranking.",
+    "risk": "The move from 2m4f to about 3m is a real stamina test; Kashchei and Newbrook Diamond are the main opposition.",
+    "condition": "Evens (2.00) or bigger; confirm going, declarations and the longer-trip suitability in the morning."
+  },
+  {
+    "race_id": "2026-10-24|doncaster|14:05",
+    "horse": "Hi Corbett Court (IRE)",
+    "bet_type": "WIN",
+    "minimum_decimal_odds": 3.25,
+    "why": "Won over 6f on yielding ground at Sligo, then finished a half-length second in an 18-runner Curragh race. The strongest independent ability estimate in this field.",
+    "risk": "Heavy ground and a Listed race are further tests. Bengal Tiger is respected; the published market forecast is shorter than the requested price.",
+    "condition": "9/4 (3.25) or bigger; no bet at the source's 2/1 probable-SP forecast. Recheck the heavy going."
+  },
+  {
+    "race_id": "2026-10-24|kelso|15:14",
+    "horse": "Ashdown Forest (IRE)",
+    "bet_type": "WIN",
+    "minimum_decimal_odds": 3.0,
+    "why": "A 3¾-length Stratford winner seven days ago, with two wins in the last five archived hurdle starts. The stable's recent archived record is 22 wins from 81 runners.",
+    "risk": "A quick return and 6lb higher mark require improvement. Heart Above and Two Auld Pals remain credible opposition.",
+    "condition": "2/1 (3.00) or bigger; confirm recovery from last Saturday's run and the final ground."
+  },
+  {
+    "race_id": "2026-10-24|kelso|16:25",
+    "horse": "Coup De Coeur (FR)",
+    "bet_type": "WIN",
+    "minimum_decimal_odds": 3.5,
+    "why": "Finished second, second and first on the last three published chase starts, including a Cartmel win. Ranks narrowly ahead of Smoke Trail on the independent assessment.",
+    "risk": "Returns after 152 days and several runners could contest the lead. Newtown Rambler and Smoke Trail prevent a high-confidence label.",
+    "condition": "5/2 (3.50) or bigger; no bet at a 2/1 forecast. Check fitness and the likely pace."
+  },
+  {
+    "race_id": "2026-10-24|southwell|17:00",
+    "horse": "Moulin Booj (IRE)",
+    "bet_type": "WIN",
+    "minimum_decimal_odds": 7.0,
+    "why": "Two wins in the last five archived starts and two matched wins at Southwell. Recent form 252151 offers an established profile in an otherwise competitive sprint.",
+    "risk": "The leading probability is only about 17% in a 13-runner race. Bona Fortuna, Night Storm and Rhythm N Hooves are substantial opposition.",
+    "condition": "6/1 (7.00) or bigger; retain only if the draw, declarations and surface remain suitable."
+  },
+  {
+    "race_id": "2026-10-24|doncaster|17:05",
+    "horse": "Prosperitas (IRE)",
+    "bet_type": "WIN",
+    "minimum_decimal_odds": 8.0,
+    "why": "Won over this Doncaster 7f on heavy ground at the corresponding meeting last year. Returning to those conditions is a specific suitability angle, supported by the highest model score in this field.",
+    "risk": "Now rated 80 versus 76 for that win, and recent all-weather fourths do not prove a revival. The race remains open, with Tolstoy and Stanage respected.",
+    "condition": "7/1 (8.00) or bigger; no bet at the source's 6/1 forecast. Heavy-ground suitability must remain relevant."
+  }
+]
