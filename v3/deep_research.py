@@ -175,8 +175,9 @@ def prepare_source():
     return folder,idx
 
 
-def enrich(data,idx):
-    prior=json.loads((DIRECTORY/'prior-form.json').read_text())['form']
+def enrich(data,idx,prior=None):
+    if prior is None:
+        prior=json.loads((DIRECTORY/'prior-form.json').read_text())['form']
     all_evidence=[]
     for race in data['races']:
         evidence=[]

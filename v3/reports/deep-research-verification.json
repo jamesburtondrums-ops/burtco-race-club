@@ -14,7 +14,17 @@
   "source_data": "ratings-raceday.json; withdrawals-raceday.json; original factual snapshots; prior-only matched archive",
   "raceday_json_sha256": "c6db97460b3fd957646229b7a3c13969b52badf18c9301e51627e3d488f883e3",
   "client_render_tests": "Passed: all rows, selections, research filters, search, meeting filter, tab handlers",
-  "browser_visual_check": "Pending deployment; client render harness does not verify visual layout",
+  "browser_visual_check": "Visual screenshot inspection not performed",
   "python_tests": "31 passed",
-  "runtime_scikit_learn": "1.8.0"
+  "runtime_scikit_learn": "1.8.0",
+  "clean_checkout_test": "31 tests passed with local prior-form cache removed",
+  "live_dom_check": {
+    "url": "https://racing-intelligence-v3.racing-intelligence.pages.dev/v3/public/",
+    "races": 31,
+    "runners": 281,
+    "forecast_records": 31,
+    "selections": 5,
+    "alternative_research_cases": 7,
+    "page_error_elements": 0
+  }
 }

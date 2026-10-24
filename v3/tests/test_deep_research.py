@@ -81,7 +81,7 @@ def test_research_refresh_does_not_duplicate_shortlist_or_change_predictions():
     if not p.exists():pytest.skip('No published race-day artifact')
     d=json.loads(p.read_text())
     before=[(r['record_hash'],[(h['horse'],h['win_probability']) for h in r['ranking']]) for r in d['races']]
-    after=enrich(deepcopy(d),rating_index()[2])
+    after=enrich(deepcopy(d),rating_index()[2],prior={})
     assert len(after['selections'])==5
     assert len(after['limitations'])==len(set(after['limitations']))
     assert before==[(r['record_hash'],[(h['horse'],h['win_probability']) for h in r['ranking']]) for r in after['races']]
