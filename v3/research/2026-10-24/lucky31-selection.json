@@ -1,0 +1,103 @@
+{
+  "record_hash": "29dde2487cee47f7fecdf62820e94729c74bac006fd8952b687e011c01cc3d3a",
+  "hash_chain_verified": true,
+  "record": {
+    "kind": "research",
+    "race_id": "2026-10-24|lucky31-v1",
+    "recorded_at": "2026-10-24T10:24:25.242892+00:00",
+    "payload": {
+      "active_runners_rechecked": 279,
+      "bet_type": "EACH_WAY_LUCKY_31",
+      "bookmaker_price_example": "All five quoted at Sky Bet via the aggregator; execution and multiple-specific place terms require checking in the betslip",
+      "created_at": "2026-10-24T10:24:25.237300+00:00",
+      "date": "2026-10-24",
+      "model_weights_changed": false,
+      "selection_basis": "Full-field factual form and prior-race comments; website verdicts excluded",
+      "selections": [
+        {
+          "bookmaker": "Sky Bet via Oddschecker",
+          "claim": 0,
+          "course": "Doncaster",
+          "each_way_terms": "4 places at 1/5",
+          "fractional_odds": "6",
+          "frozen_forecast_record": "32e1f910c6ab8cc3f3d0f2ab55b204b36608b71f3fcfe2032c6751ec147ea340",
+          "gross_weight": "8-9",
+          "horse": "Ancient State (IRE)",
+          "observed_at": "2026-10-24T10:18:51.324Z",
+          "official_rating": 89.0,
+          "reason_and_risk": "Relative weights and close Class 2 sprint form; Heavy evidence limited.",
+          "source_url": "https://www.oddschecker.com/horse-racing/2026-10-24-doncaster/12:55/winner",
+          "time": "12:55"
+        },
+        {
+          "bookmaker": "Sky Bet via Oddschecker",
+          "claim": 0,
+          "course": "Southwell",
+          "each_way_terms": "4 places at 1/5",
+          "fractional_odds": "9",
+          "frozen_forecast_record": "1a0ad630e8e789292dcd0ae2ca3d6cfacd134d1ffeef8158973d36ef85d26256",
+          "gross_weight": "9-11",
+          "horse": "Moulin Booj (IRE)",
+          "observed_at": "2026-10-24T10:19:04.959Z",
+          "official_rating": 87.0,
+          "reason_and_risk": "Recent same-course Class 4 5f winner; hold-up running style and current mark 3lb higher.",
+          "source_url": "https://www.oddschecker.com/horse-racing/2026-10-24-southwell/17:00/winner",
+          "time": "17:00"
+        },
+        {
+          "bookmaker": "Sky Bet via Oddschecker",
+          "claim": 0,
+          "course": "Southwell",
+          "each_way_terms": "4 places at 1/5",
+          "fractional_odds": "7",
+          "frozen_forecast_record": "eaa7afb93f3d08f9accdaabcf1932b242490dc7c4575071bd8c9e356be8723c4",
+          "gross_weight": "9-3",
+          "horse": "Wyvill (GB)",
+          "observed_at": "2026-10-24T10:19:19.942Z",
+          "official_rating": 55.0,
+          "reason_and_risk": "Two thirds since moving into Class 6 staying handicaps; unchanged OR55; still a maiden.",
+          "source_url": "https://www.oddschecker.com/horse-racing/2026-10-24-southwell/17:30/winner",
+          "time": "17:30"
+        },
+        {
+          "bookmaker": "Sky Bet via Oddschecker",
+          "claim": 7,
+          "course": "Southwell",
+          "each_way_terms": "4 places at 1/5",
+          "fractional_odds": "15/2",
+          "frozen_forecast_record": "068df893fc923800fe8d2e72cc8b3d0aa9e88b6bfe00b36e72db1d54543f023a",
+          "gross_weight": "9-6",
+          "horse": "Crown The Future (IRE)",
+          "observed_at": "2026-10-24T10:19:35.811Z",
+          "official_rating": 55.0,
+          "reason_and_risk": "Second then won Class 6 mile-plus races from on the pace; OR55 up5; new 7lb claimant introduces riding uncertainty.",
+          "source_url": "https://www.oddschecker.com/horse-racing/2026-10-24-southwell/19:00/winner",
+          "time": "19:00"
+        },
+        {
+          "bookmaker": "Sky Bet via Oddschecker",
+          "claim": 0,
+          "course": "Southwell",
+          "each_way_terms": "4 places at 1/5",
+          "fractional_odds": "16",
+          "frozen_forecast_record": "9a47d96a5fe3694b8ccec2e2beff1e5210a125990dcae40ce4ae05690dd53cea",
+          "gross_weight": "9-8",
+          "horse": "Due Date (GB)",
+          "observed_at": "2026-10-24T10:19:50.782Z",
+          "official_rating": 54.0,
+          "reason_and_risk": "Course winner, OR54 is 8lb below last AW winning mark; recent third; wide draw and late finishing strength are risks.",
+          "source_url": "https://www.oddschecker.com/horse-racing/2026-10-24-southwell/20:30/winner",
+          "time": "20:30"
+        }
+      ],
+      "stake_placed": false,
+      "unit_stake_example": {
+        "total_gbp": 6.2,
+        "unit_each_way_gbp": 0.1
+      },
+      "version": "lucky31-v1"
+    },
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "event_hash": "29dde2487cee47f7fecdf62820e94729c74bac006fd8952b687e011c01cc3d3a"
+  }
+}
