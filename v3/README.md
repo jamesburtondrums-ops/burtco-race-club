@@ -116,3 +116,29 @@ New data must actually exist before the next final test. Repeated holdout inspec
 Archive: Delta Romeo, [Horse Racing results — UK/Ireland 1988–2026](https://www.kaggle.com/datasets/deltaromeo/horse-racing-results-ukireland-2015-2025), available under **Community Data License Agreement – Sharing 1.0** according to the retained provider metadata. Preserve attribution and applicable sharing terms when redistributing source or derived datasets. The downloader records the exact URL, downloaded bytes, SHA-256 and retrieval time; it does not claim that the retrieval time is a historical publication time.
 
 Existing repository research is inventoried with source paths, original time fields and content hashes. Vague dates, retrospective review notes and missing version information remain explicitly unverified. A current archive's OR, going, equipment and other entry attributes may have been revised; excluding performance outcomes alone does not eliminate that provenance risk.
+
+### 24 October race-day research
+
+The independent evening snapshot is preserved at `v3/public/tomorrow.json` and in
+its original immutable forecast archive. The separate `v3/public/raceday.json`
+contains the refreshed fields (281 active runners, 20 withdrawals) and quantified
+research for every active runner. `ratings-raceday.json` and
+`withdrawals-raceday.json` preserve factual source observations. Current card
+RPR/TS are **pre-race estimates**, distinct from achieved prior-race figures.
+
+Use the saved runtime requirements (scikit-learn 1.8.0) when loading the rebuilt experimental artifact; the earlier research environment used 1.7.2. Do not unpickle across incompatible environments.
+
+`python -m v3.deep_research` rebuilds a provisional research edition with the same
+frozen model weights. `--freeze` records a new version in a separate append-only
+ledger; never repeat it using the same version ID. A later refresh must use a new
+snapshot tag and preserve earlier ledgers. `frozen-raceday.json` exports the exact
+31 forecast events; research annotations are separate from learned inputs.
+Source publication times remain unavailable. Model history stops on 22 October.
+
+New research compares marks within discipline and surface, reports course/trip/
+going sample sizes, shows current RPR/TS field ranks, derives pace from earlier
+comments, and identifies returns to previously successful conditions. It does
+not infer trainer intent or give unvalidated indicators invented probability
+bonuses. Probabilities change only through factual card/field corrections with
+fixed weights. `development-hypotheses.json` specifies prospective development
+questions; none has been tested against a reopened retired holdout.

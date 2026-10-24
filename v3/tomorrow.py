@@ -55,14 +55,15 @@ def pace_style(comment):
     return 'unknown'
 
 
-def build(freeze=False):
+def build(freeze=False, directory=DIRECTORY, snapshot_tag=None, output_name="tomorrow.json", ledger_name="predictions.sqlite"):
+    directory = Path(directory)
     root = Path('v3/workspace')
     with (root / 'model.pkl').open('rb') as f:
         artifact = pickle.load(f)
     with (root / 'history-latest.pkl').open('rb') as f:
         history = pickle.load(f)
     assert history.last_day < DAY
-    prior = json.loads((DIRECTORY / 'prior-form.json').read_text())['form']
+    prior = json.loads((directory / 'prior-form.json').read_text())['form']
     index = defaultdict(list)
     for key in list(history.horses):
         index[base_name(key)].append(key)
@@ -70,9 +71,9 @@ def build(freeze=False):
     races, warnings = [], []
     fields = ['horse', 'origin', 'age', 'wgt', 'or', 'trainer', 'jockey', 'claim', 'draw', 'gear_badges', 'form', 'horse_id']
     for course in ('Cheltenham', 'Doncaster', 'Kelso', 'Southwell'):
-        card = json.loads((DIRECTORY / (course.lower() + '.json')).read_text())
+        card = json.loads((directory / (course.lower() + '.json')).read_text())
         for race in card['races']:
-            detail_path = DIRECTORY / ('detail-' + course.lower() + '-' + race['time'].replace(':', '') + '.json')
+            detail_path = directory / ('detail-' + course.lower() + '-' + race['time'].replace(':', '') + '.json')
             detail = json.loads(detail_path.read_text())
             details = {r['id']: r for r in detail['horses']}
             if len(details) != len(race['rows']) or int(detail['declared']) != len(race['rows']):
@@ -142,6 +143,8 @@ def build(freeze=False):
                 evidence.append({'card': row, 'detail': item, 'past': past, 'aliases': aliases})
             frame = history.race(current, DAY)
             race_id = '2026-10-24|' + course.lower() + '|' + race['time']
+            if snapshot_tag:
+                race_id += '|' + snapshot_tag
             frame['race_id'], frame['horse'], frame['code'] = race_id, [r['horse'] for r in current], discipline(current[0])
             p = artifact['model'].predict(frame, artifact['temperature'])
             if not np.isfinite(p).all() or abs(p.sum() - 1) > 1e-10:
@@ -215,7 +218,7 @@ def build(freeze=False):
                       'probability_input_features_sha256': hashlib.sha256(frame.to_json().encode()).hexdigest(),
                       'model_history_through': str(history.last_day), 'source_publication_timestamp': None}
             if freeze:
-                ledger = Ledger(root / 'predictions.sqlite')
+                ledger = Ledger(root / ledger_name)
                 ledger.verify()
                 if datetime.fromisoformat(observed.replace('Z', '+00:00')) > datetime.now(timezone.utc) or datetime.now(timezone.utc) >= off - timedelta(minutes=5):
                     raise ValueError('Observation or recording clock violates the pre-race cutoff')
@@ -240,12 +243,14 @@ def build(freeze=False):
                               'Running style is inferred from prior race comments and does not alter model probabilities.',
                               'Source publication times are unavailable; retrieval times are recorded.',
                               'Current declarations and going require a morning recheck.'],
-              'selections': json.loads((DIRECTORY / 'shortlist.json').read_text())}
+              'selections': json.loads((directory / 'shortlist.json').read_text())}
     target = Path('v3/public')
     target.mkdir(exist_ok=True)
-    (target / 'tomorrow.json').write_text(json.dumps(safe(output), indent=2, allow_nan=False))
+    (target / output_name).write_text(json.dumps(safe(output), indent=2, allow_nan=False))
     print(json.dumps({'races': len(races), 'runners': output['runner_count'], 'frozen': freeze,
                       'ranked_first': [(r['course'], r['time'], r['ranking'][0]['horse'], round(r['ranking'][0]['win_probability'], 3)) for r in races]}))
+
+    return safe(output)
 
 
 if __name__ == '__main__':

@@ -17,3 +17,4 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r v3/requirements.txt
       - run: python -m pytest v3/tests -q
+      - run: node v3/tests/client-render.cjs

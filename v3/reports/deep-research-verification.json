@@ -1,0 +1,20 @@
+{
+  "version": "raceday-research-1",
+  "freeze_time_start": "2026-10-24T09:12:27.787166+00:00",
+  "freeze_time_end": "2026-10-24T09:12:46.941061+00:00",
+  "forecast_events": 31,
+  "result_events": 0,
+  "hash_chain_verified": true,
+  "retired_test_reopened": false,
+  "model_weights_changed": false,
+  "active_runners": 281,
+  "nonrunners": 20,
+  "current_card_rpr_coverage": 245,
+  "prior_achieved_rpr_365d_coverage": 163,
+  "source_data": "ratings-raceday.json; withdrawals-raceday.json; original factual snapshots; prior-only matched archive",
+  "raceday_json_sha256": "c6db97460b3fd957646229b7a3c13969b52badf18c9301e51627e3d488f883e3",
+  "client_render_tests": "Passed: all rows, selections, research filters, search, meeting filter, tab handlers",
+  "browser_visual_check": "Pending deployment; client render harness does not verify visual layout",
+  "python_tests": "31 passed",
+  "runtime_scikit_learn": "1.8.0"
+}

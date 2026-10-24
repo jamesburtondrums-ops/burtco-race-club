@@ -1,0 +1,13 @@
+{
+  "created_before_racing": "2026-10-24",
+  "status": "PROSPECTIVE_RESEARCH_ONLY_NOT_VALIDATED_IMPROVEMENTS",
+  "prices_are_separate": true,
+  "test_policy": "The retired June–September 2026 final test cannot be reopened. Tune only on chronological development folds and reserve genuinely new later outcomes for the next final evaluation.",
+  "hypotheses": [
+    {"id": "mark_regime", "hypothesis": "Separate flat turf/AW and hurdle/chase handicap mark comparisons, with age of winning form and recency interactions, improve later race log loss.", "evidence_needed": "Same-horse discipline-specific historical ratings known at the prediction cutoff; never use a race's achieved figure as a current input."},
+    {"id": "conditions_return", "hypothesis": "Prior course/trip/going success, a seasonal return and contrasting recent conditions carry incremental information beyond recent finishing positions.", "evidence_needed": "Chronological evaluation with shrinking estimates for small samples and controls for age, fitness and historical ability; placement is not proof of intent."},
+    {"id": "ratings_disagreement", "hypothesis": "Contemporaneous pre-race card ratings and the independent ensemble contribute complementary information when their rankings disagree.", "evidence_needed": "Timestamped historical pre-race rating snapshots. Achieved current-race RPR/TS in result archives cannot substitute for pre-race ratings."},
+    {"id": "pace_and_draw", "hypothesis": "Earlier running-style evidence interacts with opposition pace, draw, going and course configuration.", "evidence_needed": "Pre-cutoff race comments and full fields; course/field-size samples large enough for walk-forward testing."}
+  ],
+  "selection_rule": "Freeze feature definitions before final testing; compare log loss, calibration and top-one accuracy against independent model and timestamped market baselines. Retain original model unless improvement is demonstrated."
+}

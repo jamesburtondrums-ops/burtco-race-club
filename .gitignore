@@ -5,3 +5,5 @@ pytest-cache-files-*/
 v3/workspace/
 *.pyc
 v3/research/*/prior-form.json
+
+v3/research/*/raceday-source/prior-form.json
