@@ -142,3 +142,30 @@ not infer trainer intent or give unvalidated indicators invented probability
 bonuses. Probabilities change only through factual card/field corrections with
 fixed weights. `development-hypotheses.json` specifies prospective development
 questions; none has been tested against a reopened retired holdout.
+
+### Full form and observed price review
+
+`python -m v3.form_review --extract` extracts every identity-matched prior start
+for the active field, without the earlier 40-start display limit, and reconstructs
+recent historical fields. Race identities include date, course, off time and source
+race ID; the archive reuses some race IDs. Cohort subsequent form excludes all
+outcomes on or after the forecast day and must not be treated as a feature known
+before the earlier race. This is current-day research, not a revised historical
+backtest.
+
+`python -m v3.market_review` builds `v3/public/study.json` from those dossiers,
+committed quote observations and component estimates. Probabilities remain exactly
+those frozen in the race-day forecast. Fractional integer prices are converted
+correctly (7 means 7/1, decimal 8). Rows marked N/R are excluded even when their
+old prices remain on the grid. Any active-field conflict blocks the value label.
+
+The page now separates model win probability, evidence coverage and an observed
+price comparison. It includes every matched career start, six recent runs in
+context, earlier meetings with today's rivals, gross-weight comparisons,
+commentary indicators, missing-data notices and reviewed counterarguments.
+Component spreads are not uncertainty intervals. Neither a positive arithmetic
+gap nor a passing software test demonstrates a real market-beating edge.
+
+Local extracts `career-form.json` and `form-dossiers.json` are reproducible caches;
+full factual history is included in the published study. No raw commentary is
+reproduced there: indicators are descriptive paraphrases. No stakes are placed.
