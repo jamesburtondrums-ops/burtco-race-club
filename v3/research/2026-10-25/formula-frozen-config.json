@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-10-25T10:52:23.503334+00:00",
+  "protocol_sha256": "415b5a7800b65fb5154c037f61d7516263f60807ad5c21c9d5d9d93539b94890",
+  "source_hashes": {
+    "formula_features.py": "ef9a5448738a41e8df01b049f91863b67cc80e4065f3005fd675c2a9d1ecd7ab",
+    "formula_data.py": "cd2c1369b57ed7d6181e15d834b49959ac6de7bb7a6f58e6e8a98ae046cd86f7",
+    "formula_prepare.py": "98d2a8a70f59b262968a30d2147198eac73993f5c76a496db6dacee58ac3afa3",
+    "formula_train.py": "a1fc176c9aac4978a90b5022821138c22150aae2bcb9cf67b6619dd0365052df",
+    "models.py": "25a38cd64b24ff466bc841dbe1737442b8a76e76e88d8a3bdada65d6aa340a96",
+    "formula_predict.py": "cc3d6ea93df256e15e6de50efac17eb000dc166ff3d128844179b1d0790c62f2",
+    "data.py": "2691b1de6133eaa41a7de53c54e092d720edc3c4de9edc8a5f6599807baaf73b",
+    "features.py": "234c1eb7abbac5cc94617a4d832aa0b236be4fde4f00fd7ee9556dca87f73c0a",
+    "records.py": "b6de5700e7ef3e1791340aa955d704f3b7bcca9837f373eb45bbace88bce4be2",
+    "metrics.py": "3e021c53a5c927ced9b1085cad9a36be628b8a3b66a70fda9116b84c6f0ce80b",
+    "governance.py": "93b03307c6e5da9a38be9f00721de15391367635918c76d0ccc8da58cfd2c667",
+    "formula_identity.py": "bb476897f8549664c9df63ef4762b821324a866b063c60598c27a4e79bcab630"
+  },
+  "model_hash": "a702be73c50d53a6d0303473b9ae49770992000eafe0b27fc9edb80492a5d622",
+  "candidate": "context_ensemble",
+  "temperature": 0.85,
+  "future_final_period": [
+    "2026-10-26",
+    "2027-01-31"
+  ],
+  "final_labels_accessed": false,
+  "development_report_only": true,
+  "io_normalisation": "Unambiguous name/country/birth-year aliases resolve to existing prior histories; no model parameters changed."
+}

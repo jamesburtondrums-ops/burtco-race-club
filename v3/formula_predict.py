@@ -9,6 +9,7 @@ from zoneinfo import ZoneInfo
 from .data import eligible, discipline
 from .formula_data import days
 from .formula_features import code
+from .formula_identity import resolve_rows
 from .formula_train import file_hash
 from .records import Ledger, validate_snapshot
 
@@ -50,7 +51,8 @@ def predict(root,snapshot,history_name='history-live.pkl'):
         raise ValueError('History or fitted parameters include the target day')
     if len({code(r) for r in snapshot['runners']})!=1:
         raise ValueError('All runners must belong to the same exact racing discipline')
-    f=history.race(snapshot['runners'],day)
+    resolved,aliases=resolve_rows(history,snapshot['runners'],day)
+    f=history.race(resolved,day)
     f['race_id']=snapshot['race_id']
     f['code']=discipline(snapshot['runners'][0])
     f['field_size']=len(f)
@@ -63,6 +65,7 @@ def predict(root,snapshot,history_name='history-live.pkl'):
         'recorded_at':datetime.now(timezone.utc).isoformat(),'snapshot':snapshot,'ranking':rows,
         'model_hash':seal['model_hash'],'candidate':artifact['candidate'],
         'history_through':str(history.last_day),'model_training_end':artifact['training_end'],
+        'identity_resolutions':aliases,
         'status':'FROZEN_EXPERIMENTAL_CHALLENGER_FORECAST','price_used_as_feature':False,
         'independently_validated':False}
     validate_snapshot(snapshot)  # Check real clock again after inference.

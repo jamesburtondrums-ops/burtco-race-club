@@ -21,7 +21,9 @@ def test_retirement_survives_a_new_workspace(tmp_path):
 def test_retirement_checks_partial_overlap_and_allows_new_period():
     with pytest.raises(ValueError, match='retired'):
         assert_unopened_period({'final_start': '2026-09-30', 'final_end': '2026-10-01'})
-    assert_unopened_period({'final_start': '2026-10-24', 'final_end': '2026-12-31'})
+    with pytest.raises(ValueError, match='retired'):
+        assert_unopened_period({'final_start': '2026-10-24', 'final_end': '2026-12-31'})
+    assert_unopened_period({'final_start': '2026-10-26', 'final_end': '2027-01-31'})
     with pytest.raises(ValueError, match='retired'):
         assert_unopened_period({'final_start': '2026-10-01', 'final_end': '2026-10-22',
                                 'retired_test_periods': ['2026-10-01/2026-10-22']})
@@ -96,3 +98,4 @@ def test_replaced_source_cannot_silently_reuse_old_chronological_index(tmp_path)
     output = list(archive_days(raw))
     assert str(output[0][0]) == '2026-01-02'
     assert output[0][1]['b'][0]['horse'] == 'Beta-longer'
+

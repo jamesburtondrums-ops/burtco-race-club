@@ -1,0 +1,51 @@
+{
+  "chain_verified": true,
+  "events": [
+    {
+      "kind": "development",
+      "race_id": "2026-10-25|formula-cycles-a-b",
+      "recorded_at": "2026-10-25T11:07:32.737815+00:00",
+      "payload": {
+        "cycles": [
+          "v3-formula-challenger-2026-10-25-a",
+          "v3-formula-challenger-2026-10-25-b"
+        ],
+        "next_final_period": [
+          "2026-10-26",
+          "2027-01-31"
+        ],
+        "report_hash": "8c7abe74ee03894fab4955c58d0bb99559429eed966e3840ad09d61592b3b9a7",
+        "status": "FORMULA_DEVELOPMENT_COMPLETED_NO_PROMOTION",
+        "verification": {
+          "chronological_folds": 3,
+          "dashboard_table_rows_including_headers": 15,
+          "development_runner_records": 297961,
+          "existing_client_harness_passed": true,
+          "independent_test_run": false,
+          "later_validation_races": 11010,
+          "model_A_hash": "a702be73c50d53a6d0303473b9ae49770992000eafe0b27fc9edb80492a5d622",
+          "models_compared": 7,
+          "production_model_changed": false,
+          "raw_labels_after_2026_05_27_used_for_model_training": false,
+          "retired_test_scored": false,
+          "second_cycle_replacement_accepted": false,
+          "source_archive_hash": "d437590771d395db0e43ca1c9cfac83fa384de631cc1f1b48671a3aa1d522d2d",
+          "trained_prediction_path": {
+            "expired_cutoff_rejected": true,
+            "full_field_probabilities_sum_to_one": true,
+            "history_through": "2026-10-22",
+            "ledger_verified": true,
+            "real_race_selections_created": false,
+            "synthetic_fixture_only": true,
+            "trained_artifact_loaded": true
+          },
+          "training_races": 31262,
+          "unit_tests_passed": 59
+        },
+        "weights_manually_adjusted_to_yesterdays_winners": false
+      },
+      "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "event_hash": "1aee5af90b7335232a8fe36049be4b91864be5f3db9ebef5b232e5ed180b5810"
+    }
+  ]
+}

@@ -42,9 +42,10 @@ def fit_all(frame, protocol):
 
 
 def odds_diagnostics(frame, probability):
-    f=frame[['race_id','won','position','sp']].copy()
+    f=frame[['race_id','horse','won','position','sp']].copy()
     f['p']=probability
-    f['rank']=f.groupby('race_id').p.rank(method='first',ascending=False)
+    f=f.sort_values(['race_id','p','horse'],ascending=[True,False,True],kind='stable')
+    f['rank']=f.groupby('race_id',sort=False).cumcount()+1
     result={}
     for label,mask in [('up_to_2_to_1',f.sp<=3),('over_2_to_1_to_6_to_1',f.sp.between(3,7,inclusive='right')),
                        ('over_6_to_1_to_12_to_1',f.sp.between(7,13,inclusive='right')),('over_12_to_1',f.sp>13)]:

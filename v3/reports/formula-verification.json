@@ -1,0 +1,26 @@
+{
+  "unit_tests_passed": 59,
+  "existing_client_harness_passed": true,
+  "dashboard_table_rows_including_headers": 15,
+  "training_races": 31262,
+  "development_runner_records": 297961,
+  "later_validation_races": 11010,
+  "models_compared": 7,
+  "chronological_folds": 3,
+  "trained_prediction_path": {
+    "synthetic_fixture_only": true,
+    "real_race_selections_created": false,
+    "trained_artifact_loaded": true,
+    "full_field_probabilities_sum_to_one": true,
+    "ledger_verified": true,
+    "expired_cutoff_rejected": true,
+    "history_through": "2026-10-22"
+  },
+  "model_A_hash": "a702be73c50d53a6d0303473b9ae49770992000eafe0b27fc9edb80492a5d622",
+  "source_archive_hash": "d437590771d395db0e43ca1c9cfac83fa384de631cc1f1b48671a3aa1d522d2d",
+  "raw_labels_after_2026_05_27_used_for_model_training": false,
+  "retired_test_scored": false,
+  "independent_test_run": false,
+  "production_model_changed": false,
+  "second_cycle_replacement_accepted": false
+}

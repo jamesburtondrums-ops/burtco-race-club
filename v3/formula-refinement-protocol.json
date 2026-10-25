@@ -1,0 +1,43 @@
+{
+  "version": "v3-formula-challenger-2026-10-25-b",
+  "created_at": "2026-10-25T10:56:35.796Z",
+  "parent": "v3/formula-protocol.json",
+  "reason": "Cycle A improved overall development probability quality but worsened top-one winner detection above12/1; test nonlinear depth and learned ensemble weights without feeding prices into ability.",
+  "data": "Same fixed31262-race development feature table,2019–2026-05-27; no October24 replay optimisation, retired test scoring or new final labels.",
+  "candidates": [
+    "deep_context",
+    "learned_blend"
+  ],
+  "features": [
+    "typed__",
+    "form__",
+    "pace__"
+  ],
+  "components": [
+    "race_softmax",
+    "boosted_small",
+    "boosted_deep"
+  ],
+  "blend_learning": "Nonnegative weights summing to one minimise earlier out-of-fold race winner log loss. Chronological fold1 uses equal weights; folds2/3 learn weights only from completed earlier folds. Later development validation uses weights learned from all three earlier folds.",
+  "temperature_grid": [
+    0.85,
+    1,
+    1.2,
+    1.5,
+    2
+  ],
+  "gate": "Lower later-development log loss, no top-one or Brier regression versus original_ensemble, lower log loss in at least2of3 genuine chronological folds, and at least the original's17 top-one and79 top-three detections among1063 winners above12/1 SP. These are development criteria, not independent evidence.",
+  "fixed_reference": {
+    "races": 11010,
+    "original_top_one": 0.2727520435967302,
+    "original_log_loss": 1.9638908921811806,
+    "original_brier": 0.8258174238400775,
+    "original_over12_winner_top_one": 17,
+    "original_over12_winner_top3": 79
+  },
+  "price_policy": "No odds in fitted ability or blend weights. Starting-price bands are post-prediction development diagnostics; they are not verified early-price betting edges.",
+  "future_final_start": "2026-10-26",
+  "future_final_end": "2027-01-31",
+  "minimum_final_races": 1000,
+  "promotion": "RETAIN_ORIGINAL pending independent prospective evaluation."
+}
