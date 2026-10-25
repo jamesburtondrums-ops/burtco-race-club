@@ -1,0 +1,52 @@
+{
+  "version": "v3-formula-challenger-2026-10-25-a",
+  "created_at": "2026-10-25T10:41:03.758Z",
+  "purpose": "Learn from the complete 24 October review without fitting rules to those winners.",
+  "history_start": "2015-01-01",
+  "learning_start": "2019-01-01",
+  "training_end": "2023-12-31",
+  "validation_end": "2026-05-27",
+  "development_sample_modulus": 3,
+  "seed": 61025,
+  "folds": [
+    [
+      "2020-12-31",
+      "2021-01-08",
+      "2021-12-31"
+    ],
+    [
+      "2021-12-31",
+      "2022-01-08",
+      "2022-12-31"
+    ],
+    [
+      "2022-12-31",
+      "2023-01-08",
+      "2023-12-31"
+    ]
+  ],
+  "candidates": [
+    "original_ensemble",
+    "typed_boosted",
+    "context_boosted",
+    "pace_boosted",
+    "context_ensemble"
+  ],
+  "temperature_grid": [
+    0.85,
+    1,
+    1.2,
+    1.5,
+    2
+  ],
+  "selection_rule": "Lowest later-development validation race log loss, with no top-one or Brier deterioration versus the original architecture on identical fields, and lower raw-fold log loss in at least two of the three earlier chronological folds; otherwise retain original. All reported results are development evidence, not a new independent test.",
+  "comparison": "Refit original architecture on the identical earlier training folds and original base feature definitions; never score an artifact on its own training races as validation.",
+  "final_start": "2026-10-26",
+  "final_end": "2027-01-31",
+  "minimum_final_races": 1000,
+  "final_status": "RESERVED_FUTURE_PERIOD_NOT_COLLECTED_OR_EVALUATED",
+  "test_policy": "All model configurations must freeze before final_start. No Oct26+ outcomes can influence candidate selection, feature design or calibration. June4\u2013September30 2026 remains retired and is not rescored in this run. October24 is reviewed development evidence and is not scored to select these models.",
+  "odds_policy": "No SP, market rank, favourite flag or current price is a model input. Odds bands are retrospective diagnostics after frozen development predictions; early-price profitability requires separately timestamped quotes and terms.",
+  "data_policy": "Earlier completed-day margins, comments, opposition and achieved ratings only. All same-day results excluded until the day ends. Archive versions are not independently timestamped, so archive gains cannot authorise production promotion.",
+  "promotion": "RETAIN_ORIGINAL until a sufficiently sized, genuinely independent prospective comparison supports improvement."
+}
