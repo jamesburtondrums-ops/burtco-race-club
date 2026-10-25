@@ -1,0 +1,30 @@
+{
+  "hash_chain_verified": true,
+  "events": [
+    {
+      "kind": "review",
+      "race_id": "2026-10-24|full-card-review-v1",
+      "recorded_at": "2026-10-25T10:02:01.966360+00:00",
+      "payload": {
+        "files_sha256": {
+          "public/review-2026-10-24-metrics.json": "c4242a69629089834164eaf7ba22eb9396d01742b2053794ab200d482bd5a099",
+          "public/review-2026-10-24.json": "72df3f189db4a90a50601bf45c489ca5b5e6bdedd271bc4fe21e7ad6bdd892e5",
+          "research/2026-10-24/next-cycle-hypotheses.json": "593c188e91e56dadc146dd68dfa189a2a8331007c666ec7e16730802c5bd0a9e",
+          "research/2026-10-24/results-reviewed.json": "bcd7c0833ebb955b0f967efa9ff80fc419173f659e31dfcb88b28f90f6d765fc"
+        },
+        "kind": "FULL_CARD_POST_RACE_REVIEW",
+        "model_trained_or_promoted": false,
+        "next_cycle": "Hypotheses only; reviewed day is development evidence.",
+        "probabilities_rewritten": false,
+        "race_date": "2026-10-24",
+        "races": 31,
+        "results_starters": 277,
+        "retired_test_reopened": false,
+        "source_commit": "6360af1da514326242a79eebb28e680f70a9a3da",
+        "unique_named_horses": 46
+      },
+      "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "event_hash": "e06a5dee540ed0a7b8ce8e4f27dae9a8c45c842815eaf838e4a0e32ebdf29692"
+    }
+  ]
+}

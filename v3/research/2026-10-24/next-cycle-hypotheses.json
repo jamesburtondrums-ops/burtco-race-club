@@ -1,0 +1,113 @@
+{
+  "created_at": "2026-10-25T09:59:58.337Z",
+  "status": "HYPOTHESES_REQUIRING_CHRONOLOGICAL_TESTING",
+  "trigger": "2026-10-24 full-card post-race audit",
+  "reviewed_day_role": "Development evidence only; never a new final holdout.",
+  "current_model_hash": "bb669dfa24d5a667560ca785647bd7b2bdf619ce80c8766b0e6799584eb96218",
+  "model_parameters_changed": false,
+  "production_action": "RETAIN_ORIGINAL",
+  "observed_failures": [
+    "Named conditional shortlist:0 wins from5 runners; original Coup De Coeur was a non-runner.",
+    "Race-day leaders:4 wins from30 starters,1 withdrawn leader; expected wins from frozen probabilities9.1209.",
+    "On28 identical fields, model top-one4/28 and pre-race market reference9/28; market snapshot was later than model freeze.",
+    "Core History.race/integrate combines hurdles and chases, and recent performance depends on finishing percentile rather than beaten margin.",
+    "Pace comments, richer full-career review, contemporary card RPR/TS and human warnings were added after inference without changing model probabilities."
+  ],
+  "candidates": [
+    {
+      "id": "discipline_transition",
+      "hypothesis": "Code-specific hurdle/chase form, mark baselines, debut indicators and learned uncertainty improve forecasts of chase debutants and returning jumpers.",
+      "implementation_prerequisites": [
+        "Rebuild historical features consistently for training and prediction; distinguish flat turf/AW/hurdle/chase/bumper.",
+        "Preserve enough observations for a universal fallback and test interactions rather than replacing scores by hand."
+      ],
+      "examples": [
+        "Suspected",
+        "Catchintsavo"
+      ]
+    },
+    {
+      "id": "contextual_achievement",
+      "hypothesis": "Prior-only beaten margins, opposition strength, field size and race class distinguish flattering small-field wins and remote places from competitive ability.",
+      "implementation_prerequisites": [
+        "Only completed earlier races may supply outcome-bearing performance features.",
+        "Historical subsequent-winner cohort data must be reconstructed as of each cutoff, not today's study date."
+      ],
+      "examples": [
+        "Mumford's Magic",
+        "No More Bolero",
+        "Wyvill",
+        "Castlemont"
+      ]
+    },
+    {
+      "id": "sparse_form_and_conditions",
+      "hypothesis": "Learned uncertainty for sparse form, code/ground/trip changes and unmeasured opposition improves calibration.",
+      "implementation_prerequisites": [
+        "Test on chronological folds with sufficient juvenile, debut and transition cases.",
+        "Do not set a hard probability cap to fit yesterday's outcomes."
+      ],
+      "examples": [
+        "Royal March",
+        "Road To Wembley",
+        "Al Hudaiba"
+      ]
+    },
+    {
+      "id": "current_ratings_disagreement",
+      "hypothesis": "Timestamped pre-race ratings contribute information when the model and card performance measures disagree.",
+      "implementation_prerequisites": [
+        "Acquire genuine historical pre-race card RPR/TS snapshots; current-race achieved ratings cannot substitute.",
+        "Missing ratings are missing evidence, not poor ability."
+      ],
+      "examples": [
+        "Ashdown Forest",
+        "Hi Corbett Court",
+        "Crown Office"
+      ]
+    },
+    {
+      "id": "pace_scenarios",
+      "hypothesis": "Recent descriptive running styles, including unknown classifications and rival pace pressure, add information beyond form.",
+      "implementation_prerequisites": [
+        "Parse equipment/post preliminaries separately; retain individual runs and classification coverage.",
+        "Test interactions with track, trip, draw and going; do not call a contested lead a guaranteed pace collapse."
+      ],
+      "examples": [
+        "Moulin Booj",
+        "Rhythm N Hooves",
+        "Smoke Trail",
+        "Due Date"
+      ]
+    },
+    {
+      "id": "mark_recency_and_change",
+      "hypothesis": "Time since winning mark, recent finishing strength and rating-change interactions improve over raw pounds-below-last-win comparisons.",
+      "implementation_prerequisites": [
+        "Keep hurdle/chase and turf/AW winning-mark comparisons distinct.",
+        "Validate nonlinear recency effects; do not veto every older or poor-last-time runner."
+      ],
+      "examples": [
+        "Due Date",
+        "Desperate Dan",
+        "Prosperitas",
+        "Anthropologist"
+      ]
+    }
+  ],
+  "selection_process_changes": [
+    "Display automatic model leaders separately from human selections and price-qualified bets.",
+    "An unvalidated model/price discrepancy is not a demonstrated betting edge.",
+    "Show unresolved opposition and conditions evidence in the recommendation itself.",
+    "Do not force five legs when the evidence supports fewer; win probabilities alone cannot establish each-way value without place probabilities and executable terms.",
+    "Never count a placed horse as a successful win selection or a non-runner as a defeat."
+  ],
+  "validation_protocol": [
+    "Freeze definitions and chronological development folds before fitting.",
+    "Compare candidate out-of-fold log loss, Brier, top-one accuracy and calibration against fixed model and timestamped market references on identical fields/cutoffs.",
+    "Keep controls for winners as well as losers; a rule explaining one loss can wrongly discard Castlemont-type winners.",
+    "Preregister a genuinely later, untouched holdout period only once configurations are frozen and sufficient new data is available.",
+    "Never reopen the retired June–September2026 test as independent evidence.",
+    "No new accuracy, profitability or promotion claim until independent evidence supports it."
+  ]
+}

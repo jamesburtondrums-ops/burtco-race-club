@@ -1,0 +1,1146 @@
+{
+  "created_at": "2026-10-25T09:58:42.842Z",
+  "race_date": "2026-10-24",
+  "scope": "Every race-day model leader, every evening model leader, both conditional shortlists, all seven watchlist runners, the Lucky31, manual cases and rejections, and Idaho Fire discussed separately.",
+  "unique_horses": 46,
+  "authority": "Published results and factual race-running comments; website tipping verdicts not used.",
+  "interpretation_notice": "Observed runs are paraphrases of the reported race comments, not personal video review. Assessments are inferences; no diagnosis, pace sectional or inevitable counterfactual is claimed.",
+  "rows": [
+    {
+      "race_id": "2026-10-24|doncaster|12:55|raceday-research-1",
+      "course": "Doncaster",
+      "time": "12:55",
+      "horse": "Al Shabab Storm (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.2069168370373941,
+      "result": "1st",
+      "sp": "2/1f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1255",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code",
+        "Stable 6/21 in the preceding 14-day archive window"
+      ],
+      "original_risks": [],
+      "assessment_type": "WIN",
+      "pre_race_thesis": "The model led with a runner placed in two recent large-field Class 2 sprints.",
+      "observed_run": "Finished from behind the leaders and won decisively.",
+      "assessment": "The underlying ability ranking worked. Choosing Ancient State for a larger price was a separate value decision, not an upgrade in winning likelihood.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|13:10|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "13:10",
+      "horse": "Spectacularsunrise (GB)",
+      "groups": [
+        "race_day_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.2339731866530508,
+      "result": "F",
+      "sp": "11/4",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1310",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code"
+      ],
+      "original_risks": [
+        "5lb higher than the mark on the latest archived start"
+      ],
+      "assessment_type": "JUMPING_EVENT",
+      "pre_race_thesis": "Latest chase win came off a 5lb lower mark; limited chase experience.",
+      "observed_run": "Was almost two lengths clear before falling at the final fence.",
+      "assessment": "The result does not establish that the ability selection was poor. It also cannot be counted as a hypothetical winner; completion risk belongs in the forecast.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|13:30|raceday-research-1",
+      "course": "Doncaster",
+      "time": "13:30",
+      "horse": "Al Hudaiba (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "manual_research_case"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.2948752809373886,
+      "result": "7th",
+      "sp": "5/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1330",
+      "original_positives": [
+        "3 wins in the last 5 archived starts in this code",
+        "Stable 4/16 in the preceding 14-day archive window"
+      ],
+      "original_risks": [],
+      "assessment_type": "UNSUPPORTED_CONDITIONS_TRANSFER",
+      "pre_race_thesis": "Strong juvenile wins and ratings, but no matched soft/heavy evidence and firm-ground overseas success.",
+      "observed_run": "Pulled hard behind the pace and finished last of seven.",
+      "assessment": "A large model/price discrepancy did not establish value. We overweighted previous winning form across very different ground; heavy-ground unsuitability is plausible, not proved by this result.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|kelso|13:37|raceday-research-1",
+      "course": "Kelso",
+      "time": "13:37",
+      "horse": "Royal March (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.36468871743579956,
+      "result": "4th",
+      "sp": "9/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1337",
+      "original_positives": [],
+      "original_risks": [
+        "Limited form evidence: 1 archived starts in this code",
+        "193-day absence; fitness has to be taken on trust"
+      ],
+      "assessment_type": "SPARSE_FORM_OVERCONFIDENCE",
+      "pre_race_thesis": "One bumper second, 193 days away and no matched hurdles performance supported a 36.5% model estimate.",
+      "observed_run": "Failed to advance when asked and finished fourth.",
+      "assessment": "The probability was too assertive relative to the evidence available. Test uncertainty for debutants, long absences and unmeasured rivals rather than treating sparse form as superiority.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|13:45|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "13:45",
+      "horse": "Road To Wembley (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader",
+        "evening_conditional_shortlist",
+        "race_day_conditional_shortlist",
+        "manual_research_case"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.5893368573273543,
+      "result": "2nd",
+      "sp": "7/4f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1345",
+      "original_positives": [
+        "3 wins in the last 5 archived starts in this code",
+        "Stable 8/30 in the preceding 14-day archive window"
+      ],
+      "original_risks": [],
+      "assessment_type": "OVERCONFIDENCE_AND_JUMPING",
+      "pre_race_thesis": "Three good-ground hurdle wins; first near-three-mile race and narrow ratings lead. Woodstock Octo had no matched hurdles form and received 8lb.",
+      "observed_run": "Second by 2.25 lengths after errors at the last two hurdles.",
+      "assessment": "The main error was 58.9% confidence despite a new trip and an unmeasured rival. The comments do not establish failure to stay or that a clean final jump would have guaranteed victory.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|14:05|raceday-research-1",
+      "course": "Doncaster",
+      "time": "14:05",
+      "horse": "Hi Corbett Court (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader",
+        "evening_conditional_shortlist",
+        "race_day_conditional_shortlist"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.4046862082690115,
+      "result": "2nd",
+      "sp": "3/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1405",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code",
+        "Stable 4/11 in the preceding 14-day archive window"
+      ],
+      "original_risks": [],
+      "assessment_type": "OVERWEIGHTED_SINGLE_RATING",
+      "pre_race_thesis": "Top card RPR108, but TS77 and no heavy-ground start; Bengal Tiger was a credible developing rival.",
+      "observed_run": "Ran on for second, 3.5 lengths behind an emphatic winner.",
+      "assessment": "A single highest RPR was not a decisive advantage. Listed-class progression, ground uncertainty and different performance measures needed a more balanced comparison.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|kelso|14:10|raceday-research-1",
+      "course": "Kelso",
+      "time": "14:10",
+      "horse": "Suspected (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.30130702734558495,
+      "result": "UR",
+      "sp": "9/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1410",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code"
+      ],
+      "original_risks": [],
+      "assessment_type": "DISCIPLINE_TRANSFER_AND_JUMPING",
+      "pre_race_thesis": "Recent published form was over hurdles, returning after a seasonal break for a chase.",
+      "observed_run": "Made several jumping errors before unseating at the penultimate fence.",
+      "assessment": "The learning features group hurdle and chase history together. Treating hurdle form as established chase competence is a structural weakness to test and repair through a governed retraining cycle.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|14:20|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "14:20",
+      "horse": "Ace Of Spades (FR)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.22268248667704038,
+      "result": "10th",
+      "sp": "9/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1420",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code",
+        "1 prior wins at this course in matched archive form",
+        "Stable 22/81 in the preceding 14-day archive window"
+      ],
+      "original_risks": [
+        "196-day absence; fitness has to be taken on trust"
+      ],
+      "assessment_type": "STALE_COMPETITIVE_FORM",
+      "pre_race_thesis": "196 days absent; previous two big-field handicap runs were 13th and eighth.",
+      "observed_run": "Never threatened from behind the pace; tenth.",
+      "assessment": "The model was too positive about a returning horse without a recent competitive big-field performance. Connections and an older win did not remove that uncertainty.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|14:40|raceday-research-1",
+      "course": "Doncaster",
+      "time": "14:40",
+      "horse": "National Honour (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.7419602669664856,
+      "result": "2nd",
+      "sp": "4/11f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1440",
+      "original_positives": [
+        "2 wins in the last 3 archived starts in this code",
+        "Stable 4/16 in the preceding 14-day archive window"
+      ],
+      "original_risks": [],
+      "assessment_type": "NARROW_DEFEAT",
+      "pre_race_thesis": "Two recent wins, but moving to heavy turf and conceding 16lb to Scienza.",
+      "observed_run": "Beaten a nose after a prolonged contest.",
+      "assessment": "No wholesale rejection of the horse is warranted. The 74.2% estimate left too little room for new conditions and a lightly weighted opponent; photo finishes remain uncertain.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|kelso|14:44|raceday-research-1",
+      "course": "Kelso",
+      "time": "14:44",
+      "horse": "Ballyfort (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.388869387883891,
+      "result": "2nd",
+      "sp": "9/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1444",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code",
+        "1 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [
+        "190-day absence; fitness has to be taken on trust"
+      ],
+      "assessment_type": "FITNESS_AND_WEIGHT_UNCERTAINTY",
+      "pre_race_thesis": "Two chase seconds but 190 days absent, carrying 12st against Treaty Boy's 10st7lb.",
+      "observed_run": "Second, beaten 14 lengths; lacked the winner's response and erred at the last.",
+      "assessment": "Finishing second was not a close performance. Recent fitness and relative race ability needed more attention than a sequence of placed finishes.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|14:55|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "14:55",
+      "horse": "Diamond Dealer (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.2404413680885714,
+      "result": "5th",
+      "sp": "7/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1455",
+      "original_positives": [
+        "3 wins in the last 5 archived starts in this code",
+        "Stable 22/81 in the preceding 14-day archive window"
+      ],
+      "original_risks": [
+        "217-day absence; fitness has to be taken on trust"
+      ],
+      "assessment_type": "RETURN_AND_FINISHING_STRENGTH",
+      "pre_race_thesis": "Latest chase win in March, now a seasonal return; stablemate Here Comes Georgie was strong opposition.",
+      "observed_run": "Led until the closing fences, then weakened into fifth.",
+      "assessment": "Early position was not enough. Fitness and finishing strength were uncertain; the stablemate's jockey booking was context, not proof that it would win.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|kelso|15:14|raceday-research-1",
+      "course": "Kelso",
+      "time": "15:14",
+      "horse": "Ashdown Forest (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader",
+        "evening_conditional_shortlist",
+        "race_day_conditional_shortlist"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.5207121919253395,
+      "result": "5th",
+      "sp": "6/4f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1514",
+      "original_positives": [
+        "2 wins in the last 5 archived starts in this code",
+        "Stable 22/81 in the preceding 14-day archive window"
+      ],
+      "original_risks": [
+        "Quick return after 7 days",
+        "6lb higher than the mark on the latest archived start"
+      ],
+      "assessment_type": "KNOWN_WARNINGS_NOT_ENFORCED",
+      "pre_race_thesis": "Seven-day turnaround, a 6lb higher mark and card RPR110 versus Scots Poet's116; frozen model still assigned52.1%.",
+      "observed_run": "Outpaced before the closing hurdles and faded to fifth.",
+      "assessment": "This was a clear decision-process failure: the existing opposing evidence was recorded but did not restrain the recommendation. Fatigue is possible, not diagnosed.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|15:19|raceday-research-1",
+      "course": "Doncaster",
+      "time": "15:19",
+      "horse": "Anyasi (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.21712459844729973,
+      "result": "3rd",
+      "sp": "7/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1519",
+      "original_positives": [
+        "2 wins in the last 5 archived starts in this code"
+      ],
+      "original_risks": [],
+      "assessment_type": "COMPETITIVE_BUT_BEATEN",
+      "pre_race_thesis": "A lightly raced handicap runner ranked first in an open race, with only a21.7% model chance.",
+      "observed_run": "Stayed on for third, five lengths behind the winner.",
+      "assessment": "A respectable effort without enough pace to win. An open-race leader must not be described as dominant; no obstruction excuse appears in the comments.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|15:30|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "15:30",
+      "horse": "Lord Byron (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.27063773680717734,
+      "result": "5th",
+      "sp": "7/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1530",
+      "original_positives": [],
+      "original_risks": [],
+      "assessment_type": "HISTORICAL_ABILITY_VS_CURRENT_FORM",
+      "pre_race_thesis": "High historical rating, but the latest hurdle run was a28-length defeat only15days earlier.",
+      "observed_run": "Lost ground mid-race and finished fifth.",
+      "assessment": "We gave too much weight to historical ability without enough evidence that it remained current. A poor latest run requires context, not an automatic ban on every horse.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|kelso|15:50|raceday-research-1",
+      "course": "Kelso",
+      "time": "15:50",
+      "horse": "Mumford's Magic (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader",
+        "explicitly_rejected_case"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.3655202992812345,
+      "result": "2nd",
+      "sp": "9/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1550",
+      "original_positives": [
+        "2 wins in the last 5 archived starts in this code",
+        "Stable 22/81 in the preceding 14-day archive window"
+      ],
+      "original_risks": [
+        "7lb higher than the mark on the latest archived start"
+      ],
+      "assessment_type": "WEAK_WIN_CONTEXT",
+      "pre_race_thesis": "Latest success came in a three-runner Class4 after two very heavy defeats; explicitly rejected as a confident bet.",
+      "observed_run": "Jumped untidily and finished a distant second.",
+      "assessment": "The earlier caution was justified. A second in four runners does not validate the model's36.6% estimate or erase the weakness of the preceding win's context.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|15:55|raceday-research-1",
+      "course": "Doncaster",
+      "time": "15:55",
+      "horse": "Castlemont (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.2294289228390495,
+      "result": "1st",
+      "sp": "6/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1555",
+      "original_positives": [
+        "2 wins in the last 3 archived starts in this code",
+        "Stable 4/16 in the preceding 14-day archive window"
+      ],
+      "original_risks": [],
+      "assessment_type": "WIN",
+      "pre_race_thesis": "Two wins from three starts; latest defeat was over12f, now back to10f with first-time hood.",
+      "observed_run": "Tracked the pace and won readily.",
+      "assessment": "Preserve the distinction between an explained poor run and general loss of form. A blunt rule rejecting every last-time heavy defeat would wrongly discard this type.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|16:05|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "16:05",
+      "horse": "Catchintsavo (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.3294529568779934,
+      "result": "4th",
+      "sp": "11/4",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1605",
+      "original_positives": [
+        "2 wins in the last 5 archived starts in this code"
+      ],
+      "original_risks": [
+        "197-day absence; fitness has to be taken on trust"
+      ],
+      "assessment_type": "DISCIPLINE_TRANSFER_AND_JUMPING",
+      "pre_race_thesis": "Strong hurdle form and seasonal return, facing experienced winning chasers.",
+      "observed_run": "Multiple jumping errors and a weak finish left him fourth.",
+      "assessment": "The algorithm's combined jumps history did not distinguish hurdle ability from chase execution well enough. The superior chase experience of rivals deserved explicit treatment.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|16:24|raceday-research-1",
+      "course": "Southwell",
+      "time": "16:24",
+      "horse": "Blake's Monarch (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.4186614103299293,
+      "result": "3rd",
+      "sp": "2/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1624",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code"
+      ],
+      "original_risks": [],
+      "assessment_type": "WEIGHT_AND_LATE_SPEED",
+      "pre_race_thesis": "Recent five-furlong win/second, but giving the winner10lb in a four-runner nursery.",
+      "observed_run": "Led, was challenged, then lost first and second late.",
+      "assessment": "Recent form did not confer a strong winning advantage at these weights. The42% model chance was too emphatic for lightly raced juveniles.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|kelso|16:25|raceday-research-1",
+      "course": "Kelso",
+      "time": "16:25",
+      "horse": "Smoke Trail (IRE)",
+      "groups": [
+        "race_day_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.510214004079709,
+      "result": "2nd",
+      "sp": "5/6f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1625",
+      "original_positives": [
+        "2 wins in the last 5 archived starts in this code",
+        "2 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [
+        "187-day absence; fitness has to be taken on trust"
+      ],
+      "assessment_type": "TACTICAL_AND_COMPETITIVE_DEFEAT",
+      "pre_race_thesis": "Strong model estimate in a reduced field; Newtown Rambler had a credible front-running route.",
+      "observed_run": "Closed from behind a large leader's advantage but was held by0.75length.",
+      "assessment": "The pace threat materialised. Do not claim measurable pace bias or certain jockey error without sectionals; the winner also resisted the late challenge.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|16:30|raceday-research-1",
+      "course": "Doncaster",
+      "time": "16:30",
+      "horse": "Crown Office (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.2253456087074258,
+      "result": "12th",
+      "sp": "5/2f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1630",
+      "original_positives": [],
+      "original_risks": [],
+      "assessment_type": "UNSUPPORTED_CONDITIONS_AND_TRIP",
+      "pre_race_thesis": "RPR91 led, but TS72 was well below the best; recent defeats over further and no comparable going sample.",
+      "observed_run": "Under pressure early and weakened to12th,24.25lengths behind.",
+      "assessment": "An attractive mark and headline RPR did not prove suitability for this seven-furlong heavy-ground test. Weak finishing evidence was insufficiently resolved.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|16:40|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "16:40",
+      "horse": "Micky Haller (GB)",
+      "groups": [
+        "race_day_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.20211671387900848,
+      "result": "NR",
+      "sp": null,
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1640",
+      "original_positives": [
+        "Stable 22/81 in the preceding 14-day archive window"
+      ],
+      "original_risks": [
+        "No matched GB/IRE archive form in this code; probability relies heavily on other features",
+        "No published recent race-form lines; pedigree and debut uncertainty matter"
+      ],
+      "assessment_type": "NON_RUNNER",
+      "pre_race_thesis": "Became the morning model leader after the jockey correction.",
+      "observed_run": "Did not run.",
+      "assessment": "Exclude from strike-rate denominators. Do not retrospectively substitute the eventual winner, which was ranked second.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|kelso|16:55|raceday-research-1",
+      "course": "Kelso",
+      "time": "16:55",
+      "horse": "Summergrounds (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.2137082412028123,
+      "result": "2nd",
+      "sp": "3/1f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1655",
+      "original_positives": [],
+      "original_risks": [],
+      "assessment_type": "NARROW_DEFEAT",
+      "pre_race_thesis": "Consistent enough to lead an open apprentice race at only21.4%.",
+      "observed_run": "Stayed on and was beaten a neck.",
+      "assessment": "The competitive assessment was reasonable. Small tactical differences may matter, but there is no established mistake requiring a horse-specific model penalty.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|17:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "17:00",
+      "horse": "Moulin Booj (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader",
+        "evening_conditional_shortlist",
+        "race_day_conditional_shortlist",
+        "lucky31",
+        "manual_research_case"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.1695393293284667,
+      "result": "3rd",
+      "sp": "15/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1700",
+      "original_positives": [
+        "2 wins in the last 5 archived starts in this code",
+        "2 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [],
+      "assessment_type": "PACE_ASSUMPTION_AND_MARK_RISE",
+      "pre_race_thesis": "Same-course sprint win but3lb higher; held-up style; rivals had at least comparable card ratings.",
+      "observed_run": "Finished from the rear into third,3.75lengths behind the winner.",
+      "assessment": "We assumed early competition would help the closer without enough evidence of a likely collapse. Rhythm N Hooves had recent Class2 form and a plausible positive-position route.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|17:05|raceday-research-1",
+      "course": "Doncaster",
+      "time": "17:05",
+      "horse": "Prosperitas (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader",
+        "evening_conditional_shortlist",
+        "race_day_conditional_shortlist",
+        "explicitly_rejected_case"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.17243573868946008,
+      "result": "9th",
+      "sp": "3/1f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1705",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code",
+        "1 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [],
+      "assessment_type": "CONDITIONS_NARRATIVE_OVERWEIGHTED",
+      "pre_race_thesis": "Two heavy-ground wins, including this race last year, but4lb above that mark and a weak TS57; later rejected at a short quote.",
+      "observed_run": "Pulled hard midfield and weakened to ninth.",
+      "assessment": "Conditions suitability alone did not establish current superiority. The price rejection was sensible, but it does not excuse the original overly positive race assessment.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|17:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "17:30",
+      "horse": "Wyvill (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader",
+        "lucky31"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.15882827426790777,
+      "result": "8th",
+      "sp": "9/2jf",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1730",
+      "original_positives": [],
+      "original_risks": [],
+      "assessment_type": "UNSUPPORTED_IMPROVEMENT",
+      "pre_race_thesis": "Two thirds after moving into Class6 staying handicaps off55; comments showed limited finishing acceleration.",
+      "observed_run": "Lost ground when the race developed and finished eighth,24.75lengths behind.",
+      "assessment": "We converted repeated placings into a stronger improvement story than the evidence supported. The winner was already fourth-ranked, but a nine-length win was not established beforehand.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|18:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "18:00",
+      "horse": "National Anthem (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.19449692120512985,
+      "result": "2nd",
+      "sp": "10/11f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1800",
+      "original_positives": [],
+      "original_risks": [
+        "No matched GB/IRE archive form in this code; probability relies heavily on other features",
+        "No published recent race-form lines; pedigree and debut uncertainty matter"
+      ],
+      "assessment_type": "UNMEASURED_OPPOSITION",
+      "pre_race_thesis": "One matched previous start and a narrow model lead in a maiden; several rivals had little measurable form.",
+      "observed_run": "Second by a length, unable to catch Night Mile.",
+      "assessment": "An inexperienced field requires wider uncertainty. The result supports competitiveness, not the assumption that limited opponent data means weaker opponents.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|18:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "18:30",
+      "horse": "Geometry (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.40968607065119633,
+      "result": "1st",
+      "sp": "10/11f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1830",
+      "original_positives": [],
+      "original_risks": [
+        "Limited form evidence: 2 archived starts in this code"
+      ],
+      "assessment_type": "WIN",
+      "pre_race_thesis": "Two matched runs and the strongest frozen estimate, but a price shorter than evens by the off.",
+      "observed_run": "Led throughout and won comfortably.",
+      "assessment": "The ranking worked. This must not be counted as an eligible odds-above-evens bet merely because it won.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|19:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "19:00",
+      "horse": "Crown The Future (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "lucky31"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.15052305066272612,
+      "result": "2nd",
+      "sp": "13/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1900",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code"
+      ],
+      "original_risks": [
+        "5lb higher than the mark on the latest archived start"
+      ],
+      "assessment_type": "NARROW_DEFEAT",
+      "pre_race_thesis": "Second then won over a mile-plus;5lb higher with a7lb claimant; Lili Marleen had just missed over this course and trip.",
+      "observed_run": "Second by a head after a sustained finish.",
+      "assessment": "The main form case held up. No evidence supports blaming the claimant. We should give greater attention to Lili Marleen's recent same-course revival than to older poor runs.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|19:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "19:30",
+      "horse": "Anthropologist (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.11591086056158993,
+      "result": "1st",
+      "sp": "4/1f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1930",
+      "original_positives": [
+        "Stable 5/16 in the preceding 14-day archive window"
+      ],
+      "original_risks": [],
+      "assessment_type": "WIN",
+      "pre_race_thesis": "Competitive recent AW seven-furlong form, unchanged70mark and repeated late progress.",
+      "observed_run": "Moved through from behind midfield and won decisively.",
+      "assessment": "The underlying rank worked, despite only11.6% model probability. Its win does not prove that yesterday's price filter was wrong or that it should be selected automatically next time.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|20:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "20:00",
+      "horse": "Flick Of An Eye (IRE)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.2622821251394138,
+      "result": "2nd",
+      "sp": "11/10f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2000",
+      "original_positives": [],
+      "original_risks": [
+        "Limited form evidence: 2 archived starts in this code"
+      ],
+      "assessment_type": "START_AND_RACE_POSITION",
+      "pre_race_thesis": "Only two starts; a previous slow/awkward-start flag and uncertain suitability.",
+      "observed_run": "Started slowly, came from the rear and finished second,0.75length behind.",
+      "assessment": "Start reliability was a known risk. Do not declare it an unlucky certain winner: the eventual winner raced closer and stayed on.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|20:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "20:30",
+      "horse": "Uncle Sam (GB)",
+      "groups": [
+        "race_day_model_leader",
+        "evening_model_leader",
+        "research_watchlist"
+      ],
+      "frozen_rank": 1,
+      "frozen_win_probability": 0.1966590902491098,
+      "result": "3rd",
+      "sp": "4/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2030",
+      "original_positives": [],
+      "original_risks": [],
+      "assessment_type": "COMPETITIVE_BUT_BEATEN",
+      "pre_race_thesis": "Recent AW second and third, low mark; Edmond Halley was second-ranked with recent six-furlong form.",
+      "observed_run": "Tracked the pace and finished third, without the leaders' speed.",
+      "assessment": "Credible place contender rather than a dominant winner. The opponent analysis was too focused on finding a selection, not quantifying the gap between the first two.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|13:10|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "13:10",
+      "horse": "Palamon (IRE)",
+      "groups": [
+        "evening_model_leader"
+      ],
+      "frozen_rank": null,
+      "frozen_win_probability": null,
+      "result": "NR",
+      "sp": null,
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1310",
+      "original_positives": [],
+      "original_risks": [],
+      "assessment_type": "NON_RUNNER",
+      "pre_race_thesis": "Original evening model leader, removed from the race-day field.",
+      "observed_run": "Did not run.",
+      "assessment": "Preserve the evening forecast; record the withdrawal separately.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|13:30|raceday-research-1",
+      "course": "Doncaster",
+      "time": "13:30",
+      "horse": "Noble Exhibit (IRE)",
+      "groups": [
+        "evening_model_leader"
+      ],
+      "frozen_rank": 2,
+      "frozen_win_probability": 0.2495618614387498,
+      "result": "3rd",
+      "sp": "11/8f",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1330",
+      "original_positives": [
+        "2 wins in the last 3 archived starts in this code",
+        "Stable 12/54 in the preceding 14-day archive window"
+      ],
+      "original_risks": [],
+      "assessment_type": "REVISED_SELECTION_COMPARISON",
+      "pre_race_thesis": "Evening model leader before the updated declarations/ratings snapshot.",
+      "observed_run": "Third, four lengths behind the winner.",
+      "assessment": "The morning change to Al Hudaiba worsened finishing position, but one such comparison does not show that every update is harmful.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|kelso|16:25|raceday-research-1",
+      "course": "Kelso",
+      "time": "16:25",
+      "horse": "Coup De Coeur (FR)",
+      "groups": [
+        "evening_model_leader",
+        "evening_conditional_shortlist"
+      ],
+      "frozen_rank": null,
+      "frozen_win_probability": null,
+      "result": "NR",
+      "sp": null,
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1625",
+      "original_positives": [],
+      "original_risks": [],
+      "assessment_type": "NON_RUNNER",
+      "pre_race_thesis": "Evening conditional selection, withdrawn before the race-day research.",
+      "observed_run": "Did not run.",
+      "assessment": "No loss and no retrospective replacement win.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|16:40|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "16:40",
+      "horse": "Newgrove (IRE)",
+      "groups": [
+        "evening_model_leader"
+      ],
+      "frozen_rank": null,
+      "frozen_win_probability": null,
+      "result": "NR",
+      "sp": null,
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1640",
+      "original_positives": [],
+      "original_risks": [],
+      "assessment_type": "NON_RUNNER",
+      "pre_race_thesis": "Evening model leader in the bumper.",
+      "observed_run": "Did not run.",
+      "assessment": "Exclude rather than count as a defeat; keep its original version visible.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|19:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "19:00",
+      "horse": "African Spirit (IRE)",
+      "groups": [
+        "evening_model_leader"
+      ],
+      "frozen_rank": 2,
+      "frozen_win_probability": 0.14941562097560604,
+      "result": "7th",
+      "sp": "6/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1900",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code"
+      ],
+      "original_risks": [],
+      "assessment_type": "REVISED_SELECTION_COMPARISON",
+      "pre_race_thesis": "Evening leader; jockey correction changed the morning ranking in favour of Crown The Future.",
+      "observed_run": "Raced behind midfield and finished seventh.",
+      "assessment": "The morning change improved competitive performance here. It must be considered alongside the Al Hudaiba downgrade rather than cherry-picked.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|kelso|15:14|raceday-research-1",
+      "course": "Kelso",
+      "time": "15:14",
+      "horse": "Heart Above (GB)",
+      "groups": [
+        "research_watchlist"
+      ],
+      "frozen_rank": 4,
+      "frozen_win_probability": 0.08941376396082912,
+      "result": "4th",
+      "sp": "6/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1514",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code",
+        "3 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [],
+      "assessment_type": "INSUFFICIENT_SPEED",
+      "pre_race_thesis": "Alternative angle, not an automatic bet; the same-race favourite also carried material risks.",
+      "observed_run": "Fourth, unable to reach the leading runners.",
+      "assessment": "No clear hidden-winner signal emerged. A plausible alternative is not necessarily a bet.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|15:19|raceday-research-1",
+      "course": "Doncaster",
+      "time": "15:19",
+      "horse": "Desperate Dan (IRE)",
+      "groups": [
+        "research_watchlist"
+      ],
+      "frozen_rank": 8,
+      "frozen_win_probability": 0.06769882553285958,
+      "result": "10th",
+      "sp": "11/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1519",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code",
+        "1 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [],
+      "assessment_type": "RECENT_DECLINE_VS_OLD_WIN",
+      "pre_race_thesis": "Course/heavy winner off today's mark, but most recent heavy-ground run was a25.25length defeat; rejected in the slip review.",
+      "observed_run": "Recovered from an awkward start to lead, then faded sharply into tenth.",
+      "assessment": "The latest poor evidence mattered more than last year's winning mark. First-time blinkers did not prove a revival in advance.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|17:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "17:00",
+      "horse": "Almaty Star (IRE)",
+      "groups": [
+        "research_watchlist",
+        "explicitly_rejected_case"
+      ],
+      "frozen_rank": 5,
+      "frozen_win_probability": 0.08695139207664689,
+      "result": "4th",
+      "sp": "11/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1700",
+      "original_positives": [],
+      "original_risks": [],
+      "assessment_type": "COMPETITIVE_PRICE_SENSITIVE_ANGLE",
+      "pre_race_thesis": "Lower than the last AW winning mark and favourable gross weight swing, but the quoted price did not clearly beat the frozen model requirement.",
+      "observed_run": "Fourth, narrowly losing third after an awkward incident at the start.",
+      "assessment": "A place angle was plausible. The weight swing did not create a decisive win advantage; avoid inflating its effect or inventing a guaranteed value edge.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|17:05|raceday-research-1",
+      "course": "Doncaster",
+      "time": "17:05",
+      "horse": "Tolstoy (IRE)",
+      "groups": [
+        "research_watchlist"
+      ],
+      "frozen_rank": 7,
+      "frozen_win_probability": 0.07733575033702296,
+      "result": "3rd",
+      "sp": "13/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1705",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code",
+        "1 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [],
+      "assessment_type": "PLACE_CASE_NOT_WIN_PROOF",
+      "pre_race_thesis": "Competitive recent York form and the last Doncaster win came in a classified race, not a comparable handicap.",
+      "observed_run": "Came from behind to finish third, two lengths behind the winner.",
+      "assessment": "The each-way angle had substance, but an old higher handicap winning mark was not proof of present winning superiority.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|19:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "19:00",
+      "horse": "Al Suil Eile (FR)",
+      "groups": [
+        "research_watchlist"
+      ],
+      "frozen_rank": 10,
+      "frozen_win_probability": 0.03853457570104418,
+      "result": "11th",
+      "sp": "16/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1900",
+      "original_positives": [
+        "5 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [],
+      "assessment_type": "OLD_FORM_AND_START_RISK",
+      "pre_race_thesis": "A speculative course/handicap angle in an older horse, not an automatic bet.",
+      "observed_run": "Started slowly, stayed at the rear and finished11th.",
+      "assessment": "A lower mark is not an improvement signal by itself. The evidence for a current revival was weak.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|20:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "20:30",
+      "horse": "Mount Ruapehu (IRE)",
+      "groups": [
+        "research_watchlist"
+      ],
+      "frozen_rank": 10,
+      "frozen_win_probability": 0.05055963490834744,
+      "result": "4th",
+      "sp": "15/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2030",
+      "original_positives": [
+        "3 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [],
+      "assessment_type": "PLACE_CASE_WITH_LIMITED_ACCELERATION",
+      "pre_race_thesis": "A researched alternative rather than the main model leader.",
+      "observed_run": "Slow away, advanced late into fourth but could not quicken again.",
+      "assessment": "A place case was more defensible than a win case. No strong excuse establishes that a better start would have won.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|doncaster|12:55|raceday-research-1",
+      "course": "Doncaster",
+      "time": "12:55",
+      "horse": "Ancient State (IRE)",
+      "groups": [
+        "lucky31",
+        "manual_research_case"
+      ],
+      "frozen_rank": 2,
+      "frozen_win_probability": 0.18726168360899065,
+      "result": "2nd",
+      "sp": "9/2",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1255",
+      "original_positives": [
+        "1 wins in the last 5 archived starts in this code",
+        "1 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [],
+      "assessment_type": "COMPETITIVE_VALUE_SELECTION",
+      "pre_race_thesis": "Recent course win and improved relative weights against King Of Light; Al Shabab Storm still led the model.",
+      "observed_run": "Led late, then finished second, three lengths behind Al Shabab Storm.",
+      "assessment": "The named-rival weight comparison worked against King Of Light, but did not establish superiority over the whole field. The larger price was not stronger winning evidence.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|southwell|20:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "20:30",
+      "horse": "Due Date (GB)",
+      "groups": [
+        "lucky31"
+      ],
+      "frozen_rank": 4,
+      "frozen_win_probability": 0.08765267065402348,
+      "result": "5th",
+      "sp": "18/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2030",
+      "original_positives": [
+        "1 prior wins at this course in matched archive form"
+      ],
+      "original_risks": [],
+      "assessment_type": "OLD_MARK_VS_CURRENT_ABILITY",
+      "pre_race_thesis": "Eight pounds below an AW win almost a year earlier, with recent evidence of fading late and a wide draw.",
+      "observed_run": "Pressed the pace, weakened and finished fifth.",
+      "assessment": "The most speculative Lucky31 leg was not supported by enough current finishing strength. Blaming the draw is inadequate: the winner started from an even wider stall.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|14:20|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "14:20",
+      "horse": "No More Bolero (GB)",
+      "groups": [
+        "explicitly_rejected_case"
+      ],
+      "frozen_rank": 2,
+      "frozen_win_probability": 0.11448844052512905,
+      "result": "18th",
+      "sp": "25/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1420",
+      "original_positives": [
+        "3 wins in the last 5 archived starts in this code"
+      ],
+      "original_risks": [
+        "13lb higher than the mark on the latest archived start"
+      ],
+      "assessment_type": "CLASS_AND_MARK_WARNING_CONFIRMED",
+      "pre_race_thesis": "Two four-runner Class4 wins before a19-runner Class2 off13lb higher; explicitly rejected.",
+      "observed_run": "Finished18th after struggling before the closing hurdles.",
+      "assessment": "The caution was supported. Test field strength and mark-rise interactions rather than simply rewarding consecutive wins.",
+      "reason_is_inference": true
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|14:20|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "14:20",
+      "horse": "Idaho Fire (IRE)",
+      "groups": [
+        "additional_discussed_angle"
+      ],
+      "frozen_rank": 3,
+      "frozen_win_probability": 0.11035354360972911,
+      "result": "6th",
+      "sp": "6/1",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1420",
+      "original_positives": [
+        "2 wins in the last 5 archived starts in this code"
+      ],
+      "original_risks": [
+        "10lb higher than the mark on the latest archived start"
+      ],
+      "assessment_type": "IMPROVEMENT_NOT_ENOUGH",
+      "pre_race_thesis": "Two wins and demonstrated stamina, but10lb higher than the latest winning mark after90days away.",
+      "observed_run": "Sixth after a jumping error, without enough pace to threaten.",
+      "assessment": "The trip was not the main unresolved question. More demanding opposition and the increased mark limited the improvement case.",
+      "reason_is_inference": true
+    }
+  ]
+}

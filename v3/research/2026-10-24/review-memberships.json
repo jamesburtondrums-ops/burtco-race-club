@@ -1,0 +1,908 @@
+[
+  {
+    "race_id": "2026-10-24|doncaster|12:55|raceday-research-1",
+    "course": "Doncaster",
+    "time": "12:55",
+    "horse": "Al Shabab Storm (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.2069168370373941,
+    "result": "1st",
+    "sp": "2/1f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1255",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code",
+      "Stable 6/21 in the preceding 14-day archive window"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|13:10|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "13:10",
+    "horse": "Spectacularsunrise (GB)",
+    "groups": [
+      "race_day_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.2339731866530508,
+    "result": "F",
+    "sp": "11/4",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1310",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code"
+    ],
+    "original_risks": [
+      "5lb higher than the mark on the latest archived start"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|doncaster|13:30|raceday-research-1",
+    "course": "Doncaster",
+    "time": "13:30",
+    "horse": "Al Hudaiba (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "manual_research_case"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.2948752809373886,
+    "result": "7th",
+    "sp": "5/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1330",
+    "original_positives": [
+      "3 wins in the last 5 archived starts in this code",
+      "Stable 4/16 in the preceding 14-day archive window"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|kelso|13:37|raceday-research-1",
+    "course": "Kelso",
+    "time": "13:37",
+    "horse": "Royal March (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.36468871743579956,
+    "result": "4th",
+    "sp": "9/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1337",
+    "original_positives": [],
+    "original_risks": [
+      "Limited form evidence: 1 archived starts in this code",
+      "193-day absence; fitness has to be taken on trust"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|13:45|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "13:45",
+    "horse": "Road To Wembley (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader",
+      "evening_conditional_shortlist",
+      "race_day_conditional_shortlist",
+      "manual_research_case"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.5893368573273543,
+    "result": "2nd",
+    "sp": "7/4f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1345",
+    "original_positives": [
+      "3 wins in the last 5 archived starts in this code",
+      "Stable 8/30 in the preceding 14-day archive window"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|doncaster|14:05|raceday-research-1",
+    "course": "Doncaster",
+    "time": "14:05",
+    "horse": "Hi Corbett Court (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader",
+      "evening_conditional_shortlist",
+      "race_day_conditional_shortlist"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.4046862082690115,
+    "result": "2nd",
+    "sp": "3/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1405",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code",
+      "Stable 4/11 in the preceding 14-day archive window"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|kelso|14:10|raceday-research-1",
+    "course": "Kelso",
+    "time": "14:10",
+    "horse": "Suspected (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.30130702734558495,
+    "result": "UR",
+    "sp": "9/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1410",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|14:20|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "14:20",
+    "horse": "Ace Of Spades (FR)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.22268248667704038,
+    "result": "10th",
+    "sp": "9/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1420",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code",
+      "1 prior wins at this course in matched archive form",
+      "Stable 22/81 in the preceding 14-day archive window"
+    ],
+    "original_risks": [
+      "196-day absence; fitness has to be taken on trust"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|doncaster|14:40|raceday-research-1",
+    "course": "Doncaster",
+    "time": "14:40",
+    "horse": "National Honour (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.7419602669664856,
+    "result": "2nd",
+    "sp": "4/11f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1440",
+    "original_positives": [
+      "2 wins in the last 3 archived starts in this code",
+      "Stable 4/16 in the preceding 14-day archive window"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|kelso|14:44|raceday-research-1",
+    "course": "Kelso",
+    "time": "14:44",
+    "horse": "Ballyfort (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.388869387883891,
+    "result": "2nd",
+    "sp": "9/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1444",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code",
+      "1 prior wins at this course in matched archive form"
+    ],
+    "original_risks": [
+      "190-day absence; fitness has to be taken on trust"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|14:55|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "14:55",
+    "horse": "Diamond Dealer (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.2404413680885714,
+    "result": "5th",
+    "sp": "7/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1455",
+    "original_positives": [
+      "3 wins in the last 5 archived starts in this code",
+      "Stable 22/81 in the preceding 14-day archive window"
+    ],
+    "original_risks": [
+      "217-day absence; fitness has to be taken on trust"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|kelso|15:14|raceday-research-1",
+    "course": "Kelso",
+    "time": "15:14",
+    "horse": "Ashdown Forest (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader",
+      "evening_conditional_shortlist",
+      "race_day_conditional_shortlist"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.5207121919253395,
+    "result": "5th",
+    "sp": "6/4f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1514",
+    "original_positives": [
+      "2 wins in the last 5 archived starts in this code",
+      "Stable 22/81 in the preceding 14-day archive window"
+    ],
+    "original_risks": [
+      "Quick return after 7 days",
+      "6lb higher than the mark on the latest archived start"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|doncaster|15:19|raceday-research-1",
+    "course": "Doncaster",
+    "time": "15:19",
+    "horse": "Anyasi (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.21712459844729973,
+    "result": "3rd",
+    "sp": "7/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1519",
+    "original_positives": [
+      "2 wins in the last 5 archived starts in this code"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|15:30|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "15:30",
+    "horse": "Lord Byron (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.27063773680717734,
+    "result": "5th",
+    "sp": "7/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1530",
+    "original_positives": [],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|kelso|15:50|raceday-research-1",
+    "course": "Kelso",
+    "time": "15:50",
+    "horse": "Mumford's Magic (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader",
+      "explicitly_rejected_case"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.3655202992812345,
+    "result": "2nd",
+    "sp": "9/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1550",
+    "original_positives": [
+      "2 wins in the last 5 archived starts in this code",
+      "Stable 22/81 in the preceding 14-day archive window"
+    ],
+    "original_risks": [
+      "7lb higher than the mark on the latest archived start"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|doncaster|15:55|raceday-research-1",
+    "course": "Doncaster",
+    "time": "15:55",
+    "horse": "Castlemont (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.2294289228390495,
+    "result": "1st",
+    "sp": "6/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1555",
+    "original_positives": [
+      "2 wins in the last 3 archived starts in this code",
+      "Stable 4/16 in the preceding 14-day archive window"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|16:05|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "16:05",
+    "horse": "Catchintsavo (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.3294529568779934,
+    "result": "4th",
+    "sp": "11/4",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1605",
+    "original_positives": [
+      "2 wins in the last 5 archived starts in this code"
+    ],
+    "original_risks": [
+      "197-day absence; fitness has to be taken on trust"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|southwell|16:24|raceday-research-1",
+    "course": "Southwell",
+    "time": "16:24",
+    "horse": "Blake's Monarch (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.4186614103299293,
+    "result": "3rd",
+    "sp": "2/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1624",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|kelso|16:25|raceday-research-1",
+    "course": "Kelso",
+    "time": "16:25",
+    "horse": "Smoke Trail (IRE)",
+    "groups": [
+      "race_day_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.510214004079709,
+    "result": "2nd",
+    "sp": "5/6f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1625",
+    "original_positives": [
+      "2 wins in the last 5 archived starts in this code",
+      "2 prior wins at this course in matched archive form"
+    ],
+    "original_risks": [
+      "187-day absence; fitness has to be taken on trust"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|doncaster|16:30|raceday-research-1",
+    "course": "Doncaster",
+    "time": "16:30",
+    "horse": "Crown Office (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.2253456087074258,
+    "result": "12th",
+    "sp": "5/2f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1630",
+    "original_positives": [],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|16:40|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "16:40",
+    "horse": "Micky Haller (GB)",
+    "groups": [
+      "race_day_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.20211671387900848,
+    "result": "NR",
+    "sp": null,
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1640",
+    "original_positives": [
+      "Stable 22/81 in the preceding 14-day archive window"
+    ],
+    "original_risks": [
+      "No matched GB/IRE archive form in this code; probability relies heavily on other features",
+      "No published recent race-form lines; pedigree and debut uncertainty matter"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|kelso|16:55|raceday-research-1",
+    "course": "Kelso",
+    "time": "16:55",
+    "horse": "Summergrounds (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.2137082412028123,
+    "result": "2nd",
+    "sp": "3/1f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1655",
+    "original_positives": [],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|southwell|17:00|raceday-research-1",
+    "course": "Southwell",
+    "time": "17:00",
+    "horse": "Moulin Booj (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader",
+      "evening_conditional_shortlist",
+      "race_day_conditional_shortlist",
+      "lucky31",
+      "manual_research_case"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.1695393293284667,
+    "result": "3rd",
+    "sp": "15/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1700",
+    "original_positives": [
+      "2 wins in the last 5 archived starts in this code",
+      "2 prior wins at this course in matched archive form"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|doncaster|17:05|raceday-research-1",
+    "course": "Doncaster",
+    "time": "17:05",
+    "horse": "Prosperitas (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader",
+      "evening_conditional_shortlist",
+      "race_day_conditional_shortlist",
+      "explicitly_rejected_case"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.17243573868946008,
+    "result": "9th",
+    "sp": "3/1f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1705",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code",
+      "1 prior wins at this course in matched archive form"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|southwell|17:30|raceday-research-1",
+    "course": "Southwell",
+    "time": "17:30",
+    "horse": "Wyvill (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader",
+      "lucky31"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.15882827426790777,
+    "result": "8th",
+    "sp": "9/2jf",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1730",
+    "original_positives": [],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|southwell|18:00|raceday-research-1",
+    "course": "Southwell",
+    "time": "18:00",
+    "horse": "National Anthem (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.19449692120512985,
+    "result": "2nd",
+    "sp": "10/11f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1800",
+    "original_positives": [],
+    "original_risks": [
+      "No matched GB/IRE archive form in this code; probability relies heavily on other features",
+      "No published recent race-form lines; pedigree and debut uncertainty matter"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|southwell|18:30|raceday-research-1",
+    "course": "Southwell",
+    "time": "18:30",
+    "horse": "Geometry (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.40968607065119633,
+    "result": "1st",
+    "sp": "10/11f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1830",
+    "original_positives": [],
+    "original_risks": [
+      "Limited form evidence: 2 archived starts in this code"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|southwell|19:00|raceday-research-1",
+    "course": "Southwell",
+    "time": "19:00",
+    "horse": "Crown The Future (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "lucky31"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.15052305066272612,
+    "result": "2nd",
+    "sp": "13/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1900",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code"
+    ],
+    "original_risks": [
+      "5lb higher than the mark on the latest archived start"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|southwell|19:30|raceday-research-1",
+    "course": "Southwell",
+    "time": "19:30",
+    "horse": "Anthropologist (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.11591086056158993,
+    "result": "1st",
+    "sp": "4/1f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1930",
+    "original_positives": [
+      "Stable 5/16 in the preceding 14-day archive window"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|southwell|20:00|raceday-research-1",
+    "course": "Southwell",
+    "time": "20:00",
+    "horse": "Flick Of An Eye (IRE)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.2622821251394138,
+    "result": "2nd",
+    "sp": "11/10f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2000",
+    "original_positives": [],
+    "original_risks": [
+      "Limited form evidence: 2 archived starts in this code"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|southwell|20:30|raceday-research-1",
+    "course": "Southwell",
+    "time": "20:30",
+    "horse": "Uncle Sam (GB)",
+    "groups": [
+      "race_day_model_leader",
+      "evening_model_leader",
+      "research_watchlist"
+    ],
+    "frozen_rank": 1,
+    "frozen_win_probability": 0.1966590902491098,
+    "result": "3rd",
+    "sp": "4/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2030",
+    "original_positives": [],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|13:10|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "13:10",
+    "horse": "Palamon (IRE)",
+    "groups": [
+      "evening_model_leader"
+    ],
+    "frozen_rank": null,
+    "frozen_win_probability": null,
+    "result": "NR",
+    "sp": null,
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1310",
+    "original_positives": [],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|doncaster|13:30|raceday-research-1",
+    "course": "Doncaster",
+    "time": "13:30",
+    "horse": "Noble Exhibit (IRE)",
+    "groups": [
+      "evening_model_leader"
+    ],
+    "frozen_rank": 2,
+    "frozen_win_probability": 0.2495618614387498,
+    "result": "3rd",
+    "sp": "11/8f",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1330",
+    "original_positives": [
+      "2 wins in the last 3 archived starts in this code",
+      "Stable 12/54 in the preceding 14-day archive window"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|kelso|16:25|raceday-research-1",
+    "course": "Kelso",
+    "time": "16:25",
+    "horse": "Coup De Coeur (FR)",
+    "groups": [
+      "evening_model_leader",
+      "evening_conditional_shortlist"
+    ],
+    "frozen_rank": null,
+    "frozen_win_probability": null,
+    "result": "NR",
+    "sp": null,
+    "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1625",
+    "original_positives": [],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|16:40|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "16:40",
+    "horse": "Newgrove (IRE)",
+    "groups": [
+      "evening_model_leader"
+    ],
+    "frozen_rank": null,
+    "frozen_win_probability": null,
+    "result": "NR",
+    "sp": null,
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1640",
+    "original_positives": [],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|southwell|19:00|raceday-research-1",
+    "course": "Southwell",
+    "time": "19:00",
+    "horse": "African Spirit (IRE)",
+    "groups": [
+      "evening_model_leader"
+    ],
+    "frozen_rank": 2,
+    "frozen_win_probability": 0.14941562097560604,
+    "result": "7th",
+    "sp": "6/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1900",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|kelso|15:14|raceday-research-1",
+    "course": "Kelso",
+    "time": "15:14",
+    "horse": "Heart Above (GB)",
+    "groups": [
+      "research_watchlist"
+    ],
+    "frozen_rank": 4,
+    "frozen_win_probability": 0.08941376396082912,
+    "result": "4th",
+    "sp": "6/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1514",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code",
+      "3 prior wins at this course in matched archive form"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|doncaster|15:19|raceday-research-1",
+    "course": "Doncaster",
+    "time": "15:19",
+    "horse": "Desperate Dan (IRE)",
+    "groups": [
+      "research_watchlist"
+    ],
+    "frozen_rank": 8,
+    "frozen_win_probability": 0.06769882553285958,
+    "result": "10th",
+    "sp": "11/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1519",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code",
+      "1 prior wins at this course in matched archive form"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|southwell|17:00|raceday-research-1",
+    "course": "Southwell",
+    "time": "17:00",
+    "horse": "Almaty Star (IRE)",
+    "groups": [
+      "research_watchlist",
+      "explicitly_rejected_case"
+    ],
+    "frozen_rank": 5,
+    "frozen_win_probability": 0.08695139207664689,
+    "result": "4th",
+    "sp": "11/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1700",
+    "original_positives": [],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|doncaster|17:05|raceday-research-1",
+    "course": "Doncaster",
+    "time": "17:05",
+    "horse": "Tolstoy (IRE)",
+    "groups": [
+      "research_watchlist"
+    ],
+    "frozen_rank": 7,
+    "frozen_win_probability": 0.07733575033702296,
+    "result": "3rd",
+    "sp": "13/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1705",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code",
+      "1 prior wins at this course in matched archive form"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|southwell|19:00|raceday-research-1",
+    "course": "Southwell",
+    "time": "19:00",
+    "horse": "Al Suil Eile (FR)",
+    "groups": [
+      "research_watchlist"
+    ],
+    "frozen_rank": 10,
+    "frozen_win_probability": 0.03853457570104418,
+    "result": "11th",
+    "sp": "16/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1900",
+    "original_positives": [
+      "5 prior wins at this course in matched archive form"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|southwell|20:30|raceday-research-1",
+    "course": "Southwell",
+    "time": "20:30",
+    "horse": "Mount Ruapehu (IRE)",
+    "groups": [
+      "research_watchlist"
+    ],
+    "frozen_rank": 10,
+    "frozen_win_probability": 0.05055963490834744,
+    "result": "4th",
+    "sp": "15/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2030",
+    "original_positives": [
+      "3 prior wins at this course in matched archive form"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|doncaster|12:55|raceday-research-1",
+    "course": "Doncaster",
+    "time": "12:55",
+    "horse": "Ancient State (IRE)",
+    "groups": [
+      "lucky31",
+      "manual_research_case"
+    ],
+    "frozen_rank": 2,
+    "frozen_win_probability": 0.18726168360899065,
+    "result": "2nd",
+    "sp": "9/2",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1255",
+    "original_positives": [
+      "1 wins in the last 5 archived starts in this code",
+      "1 prior wins at this course in matched archive form"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|southwell|20:30|raceday-research-1",
+    "course": "Southwell",
+    "time": "20:30",
+    "horse": "Due Date (GB)",
+    "groups": [
+      "lucky31"
+    ],
+    "frozen_rank": 4,
+    "frozen_win_probability": 0.08765267065402348,
+    "result": "5th",
+    "sp": "18/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2030",
+    "original_positives": [
+      "1 prior wins at this course in matched archive form"
+    ],
+    "original_risks": []
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|14:20|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "14:20",
+    "horse": "No More Bolero (GB)",
+    "groups": [
+      "explicitly_rejected_case"
+    ],
+    "frozen_rank": 2,
+    "frozen_win_probability": 0.11448844052512905,
+    "result": "18th",
+    "sp": "25/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1420",
+    "original_positives": [
+      "3 wins in the last 5 archived starts in this code"
+    ],
+    "original_risks": [
+      "13lb higher than the mark on the latest archived start"
+    ]
+  },
+  {
+    "race_id": "2026-10-24|cheltenham|14:20|raceday-research-1",
+    "course": "Cheltenham",
+    "time": "14:20",
+    "horse": "Idaho Fire (IRE)",
+    "groups": [
+      "additional_discussed_angle"
+    ],
+    "frozen_rank": 3,
+    "frozen_win_probability": 0.11035354360972911,
+    "result": "6th",
+    "sp": "6/1",
+    "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1420",
+    "original_positives": [
+      "2 wins in the last 5 archived starts in this code"
+    ],
+    "original_risks": [
+      "10lb higher than the mark on the latest archived start"
+    ]
+  }
+]

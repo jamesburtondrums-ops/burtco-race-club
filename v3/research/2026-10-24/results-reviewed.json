@@ -1,0 +1,1855 @@
+{
+  "race_date": "2026-10-24",
+  "observed_at": "2026-10-25T09:54:23.005Z",
+  "status": "PUBLISHED_RESULT",
+  "publication_time": null,
+  "sources": "Racing TV published result tables",
+  "races": [
+    {
+      "race_id": "2026-10-24|doncaster|12:55|raceday-research-1",
+      "course": "Doncaster",
+      "time": "12:55",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1255",
+      "source_ref": "turn38view0",
+      "observed_at": "2026-10-25T09:50:58.815Z",
+      "actual_starters": 10,
+      "runners": [
+        {
+          "horse": "Al Shabab Storm",
+          "position": "1st",
+          "sp": "2/1f"
+        },
+        {
+          "horse": "Ancient State (IRE)",
+          "position": "2nd",
+          "sp": "9/2"
+        },
+        {
+          "horse": "King Of Light",
+          "position": "3rd",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Boston Dan (IRE)",
+          "position": "4th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Milford",
+          "position": "5th",
+          "sp": "13/2"
+        },
+        {
+          "horse": "Sovereign Spell (IRE)",
+          "position": "6th",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Rosario (IRE)",
+          "position": "7th",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Schrodinger's Cat",
+          "position": "8th",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Eternal Sunshine",
+          "position": "9th",
+          "sp": "25/1"
+        },
+        {
+          "horse": "Luna A Inbhir Nis",
+          "position": "10th",
+          "sp": "20/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|13:10|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "13:10",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1310",
+      "source_ref": "turn38view1",
+      "observed_at": "2026-10-25T09:50:58.816Z",
+      "actual_starters": 9,
+      "runners": [
+        {
+          "horse": "O'Moore Park (IRE)",
+          "position": "1st",
+          "sp": "25/1"
+        },
+        {
+          "horse": "Rockonliam (IRE)",
+          "position": "2nd",
+          "sp": "9/2"
+        },
+        {
+          "horse": "De Temps En Temps (IRE)",
+          "position": "3rd",
+          "sp": "7/1"
+        },
+        {
+          "horse": "As Legends Have It",
+          "position": "4th",
+          "sp": "9/1"
+        },
+        {
+          "horse": "Sony Bill (FR)",
+          "position": "5th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Sogna In Grande",
+          "position": "6th",
+          "sp": "14/1"
+        },
+        {
+          "horse": "Ballykinlar (IRE)",
+          "position": "7th",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Spectacularsunrise",
+          "position": "F",
+          "sp": "11/4"
+        },
+        {
+          "horse": "Lisbane Park (IRE)",
+          "position": "F",
+          "sp": "5/2f"
+        },
+        {
+          "horse": "Palamon (IRE)",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Kahavari (FR)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|doncaster|13:30|raceday-research-1",
+      "course": "Doncaster",
+      "time": "13:30",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1330",
+      "source_ref": "turn38view2",
+      "observed_at": "2026-10-25T09:50:58.816Z",
+      "actual_starters": 7,
+      "runners": [
+        {
+          "horse": "Giant Sequoia (USA)",
+          "position": "1st",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Gran Dia (IRE)",
+          "position": "2nd",
+          "sp": "8/1"
+        },
+        {
+          "horse": "Noble Exhibit (IRE)",
+          "position": "3rd",
+          "sp": "11/8f"
+        },
+        {
+          "horse": "Burning Up",
+          "position": "4th",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Sergei Diaghilev (IRE)",
+          "position": "5th",
+          "sp": "13/2"
+        },
+        {
+          "horse": "Breacher",
+          "position": "6th",
+          "sp": "25/1"
+        },
+        {
+          "horse": "Al Hudaiba",
+          "position": "7th",
+          "sp": "5/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|kelso|13:37|raceday-research-1",
+      "course": "Kelso",
+      "time": "13:37",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1337",
+      "source_ref": "turn38view3",
+      "observed_at": "2026-10-25T09:50:58.816Z",
+      "actual_starters": 6,
+      "runners": [
+        {
+          "horse": "Jessmarvel (FR)",
+          "position": "1st",
+          "sp": "7/2"
+        },
+        {
+          "horse": "Eazy Breezy (IRE)",
+          "position": "2nd",
+          "sp": "5/6f"
+        },
+        {
+          "horse": "Oor Wish (IRE)",
+          "position": "3rd",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Royal March",
+          "position": "4th",
+          "sp": "9/1"
+        },
+        {
+          "horse": "Cape Warrior",
+          "position": "5th",
+          "sp": "11/2"
+        },
+        {
+          "horse": "Treshnish Point (IRE)",
+          "position": "6th",
+          "sp": "66/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|13:45|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "13:45",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1345",
+      "source_ref": "turn39view0",
+      "observed_at": "2026-10-25T09:50:58.817Z",
+      "actual_starters": 6,
+      "runners": [
+        {
+          "horse": "Woodstock Octo (IRE)",
+          "position": "1st",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Road To Wembley",
+          "position": "2nd",
+          "sp": "7/4f"
+        },
+        {
+          "horse": "Newbrook Diamond (IRE)",
+          "position": "3rd",
+          "sp": "2/1"
+        },
+        {
+          "horse": "Kashchei",
+          "position": "4th",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Captain Connor (FR)",
+          "position": "5th",
+          "sp": "80/1"
+        },
+        {
+          "horse": "Landsborough (FR)",
+          "position": "6th",
+          "sp": "18/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|doncaster|14:05|raceday-research-1",
+      "course": "Doncaster",
+      "time": "14:05",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1405",
+      "source_ref": "turn39view1",
+      "observed_at": "2026-10-25T09:50:58.817Z",
+      "actual_starters": 7,
+      "runners": [
+        {
+          "horse": "Bengal Tiger (IRE)",
+          "position": "1st",
+          "sp": "10/11f"
+        },
+        {
+          "horse": "Hi Corbett Court (IRE)",
+          "position": "2nd",
+          "sp": "3/1"
+        },
+        {
+          "horse": "Crystal Queen (IRE)",
+          "position": "3rd",
+          "sp": "9/1"
+        },
+        {
+          "horse": "Angels Passing (IRE)",
+          "position": "4th",
+          "sp": "15/2"
+        },
+        {
+          "horse": "Rogue Jewel (IRE)",
+          "position": "5th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Elevating",
+          "position": "6th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Big Hitter (IRE)",
+          "position": "7th",
+          "sp": "28/1"
+        },
+        {
+          "horse": "Big Tribe (IRE)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|kelso|14:10|raceday-research-1",
+      "course": "Kelso",
+      "time": "14:10",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1410",
+      "source_ref": "turn39view2",
+      "observed_at": "2026-10-25T09:50:58.817Z",
+      "actual_starters": 5,
+      "runners": [
+        {
+          "horse": "Wearelongterm (IRE)",
+          "position": "1st",
+          "sp": "15/2"
+        },
+        {
+          "horse": "Realisation (FR)",
+          "position": "2nd",
+          "sp": "7/2"
+        },
+        {
+          "horse": "Malayalam (FR)",
+          "position": "3rd",
+          "sp": "15/8f"
+        },
+        {
+          "horse": "Society Soldier (IRE)",
+          "position": "UR",
+          "sp": "10/3"
+        },
+        {
+          "horse": "Suspected (IRE)",
+          "position": "UR",
+          "sp": "9/2"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|14:20|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "14:20",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1420",
+      "source_ref": "turn46view1",
+      "observed_at": "2026-10-25T09:50:58.818Z",
+      "actual_starters": 19,
+      "runners": [
+        {
+          "horse": "Seaniecon (IRE)",
+          "position": "1st",
+          "sp": "11/4f"
+        },
+        {
+          "horse": "Gold For Alec (FR)",
+          "position": "2nd",
+          "sp": "28/1"
+        },
+        {
+          "horse": "Kitty Foyle (IRE)",
+          "position": "3rd",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Thank You Ma'am",
+          "position": "4th",
+          "sp": "20/1"
+        },
+        {
+          "horse": "Love Of Neymore",
+          "position": "5th",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Idaho Fire (IRE)",
+          "position": "6th",
+          "sp": "6/1"
+        },
+        {
+          "horse": "Lucky Bere (FR)",
+          "position": "7th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Champagne Chic (IRE)",
+          "position": "8th",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Grann's Boy (IRE)",
+          "position": "9th",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Ace Of Spades (FR)",
+          "position": "10th",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Lihyan (IRE)",
+          "position": "11th",
+          "sp": "20/1"
+        },
+        {
+          "horse": "Moon Rocket (IRE)",
+          "position": "12th",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Bold Endeavour",
+          "position": "13th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Gowel Road (IRE)",
+          "position": "14th",
+          "sp": "14/1"
+        },
+        {
+          "horse": "Hang In There (IRE)",
+          "position": "15th",
+          "sp": "66/1"
+        },
+        {
+          "horse": "Divilabother (IRE)",
+          "position": "16th",
+          "sp": "25/1"
+        },
+        {
+          "horse": "Blizzard Of Oz (IRE)",
+          "position": "17th",
+          "sp": "50/1"
+        },
+        {
+          "horse": "No More Bolero",
+          "position": "18th",
+          "sp": "25/1"
+        },
+        {
+          "horse": "Stoner's Choice",
+          "position": "PU",
+          "sp": "66/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|doncaster|14:40|raceday-research-1",
+      "course": "Doncaster",
+      "time": "14:40",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1440",
+      "source_ref": "turn40view0",
+      "observed_at": "2026-10-25T09:50:58.819Z",
+      "actual_starters": 4,
+      "runners": [
+        {
+          "horse": "Scienza",
+          "position": "1st",
+          "sp": "5/1"
+        },
+        {
+          "horse": "National Honour (IRE)",
+          "position": "2nd",
+          "sp": "4/11f"
+        },
+        {
+          "horse": "Rock Steady Beat (IRE)",
+          "position": "3rd",
+          "sp": "8/1"
+        },
+        {
+          "horse": "Shadow King (IRE)",
+          "position": "4th",
+          "sp": "14/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|kelso|14:44|raceday-research-1",
+      "course": "Kelso",
+      "time": "14:44",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1444",
+      "source_ref": "turn40view1",
+      "observed_at": "2026-10-25T09:50:58.820Z",
+      "actual_starters": 5,
+      "runners": [
+        {
+          "horse": "Treaty Boy (IRE)",
+          "position": "1st",
+          "sp": "4/1"
+        },
+        {
+          "horse": "Ballyfort (IRE)",
+          "position": "2nd",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Achille Des Rocs (FR)",
+          "position": "3rd",
+          "sp": "6/4f"
+        },
+        {
+          "horse": "Garde Des Champs (IRE)",
+          "position": "4th",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Too Cool Forshrule (IRE)",
+          "position": "PU",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Got Grey (FR)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|14:55|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "14:55",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1455",
+      "source_ref": "turn40view2",
+      "observed_at": "2026-10-25T09:50:58.820Z",
+      "actual_starters": 9,
+      "runners": [
+        {
+          "horse": "Here Comes Georgie",
+          "position": "1st",
+          "sp": "3/1f"
+        },
+        {
+          "horse": "Katate Dori (FR)",
+          "position": "2nd",
+          "sp": "15/2"
+        },
+        {
+          "horse": "Karnaval Point (FR)",
+          "position": "3rd",
+          "sp": "10/1"
+        },
+        {
+          "horse": "Moon D'orange (FR)",
+          "position": "4th",
+          "sp": "9/1"
+        },
+        {
+          "horse": "Diamond Dealer (IRE)",
+          "position": "5th",
+          "sp": "7/2"
+        },
+        {
+          "horse": "Uncle Bert",
+          "position": "6th",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Mt Fugi Park (IRE)",
+          "position": "F",
+          "sp": "10/1"
+        },
+        {
+          "horse": "Shannon Royale (IRE)",
+          "position": "PU",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Neo King (FR)",
+          "position": "PU",
+          "sp": "18/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|kelso|15:14|raceday-research-1",
+      "course": "Kelso",
+      "time": "15:14",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1514",
+      "source_ref": "turn40view3",
+      "observed_at": "2026-10-25T09:50:58.820Z",
+      "actual_starters": 6,
+      "runners": [
+        {
+          "horse": "Scots Poet",
+          "position": "1st",
+          "sp": "11/2"
+        },
+        {
+          "horse": "Boston Jury (IRE)",
+          "position": "2nd",
+          "sp": "22/1"
+        },
+        {
+          "horse": "Travis Wheatley (IRE)",
+          "position": "3rd",
+          "sp": "8/1"
+        },
+        {
+          "horse": "Heart Above",
+          "position": "4th",
+          "sp": "6/1"
+        },
+        {
+          "horse": "Ashdown Forest (IRE)",
+          "position": "5th",
+          "sp": "6/4f"
+        },
+        {
+          "horse": "Two Auld Pals (IRE)",
+          "position": "6th",
+          "sp": "5/2"
+        },
+        {
+          "horse": "Monaco Rules (IRE)",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Character Testing",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|doncaster|15:19|raceday-research-1",
+      "course": "Doncaster",
+      "time": "15:19",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1519",
+      "source_ref": "turn41view0",
+      "observed_at": "2026-10-25T09:50:58.821Z",
+      "actual_starters": 10,
+      "runners": [
+        {
+          "horse": "River King (IRE)",
+          "position": "1st",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Shipbourne",
+          "position": "2nd",
+          "sp": "17/2"
+        },
+        {
+          "horse": "Anyasi",
+          "position": "3rd",
+          "sp": "7/2"
+        },
+        {
+          "horse": "Mr Professor (IRE)",
+          "position": "4th",
+          "sp": "14/1"
+        },
+        {
+          "horse": "Monoceros",
+          "position": "5th",
+          "sp": "28/1"
+        },
+        {
+          "horse": "On The River",
+          "position": "6th",
+          "sp": "15/2"
+        },
+        {
+          "horse": "Andesite",
+          "position": "7th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Lir Speciale (IRE)",
+          "position": "8th",
+          "sp": "3/1f"
+        },
+        {
+          "horse": "Cavolo Nero",
+          "position": "9th",
+          "sp": "15/2"
+        },
+        {
+          "horse": "Desperate Dan (IRE)",
+          "position": "10th",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Godwinson",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|15:30|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "15:30",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1530",
+      "source_ref": "turn41view1",
+      "observed_at": "2026-10-25T09:50:58.821Z",
+      "actual_starters": 7,
+      "runners": [
+        {
+          "horse": "North Shore (FR)",
+          "position": "1st",
+          "sp": "11/4f"
+        },
+        {
+          "horse": "Indian River (IRE)",
+          "position": "2nd",
+          "sp": "3/1"
+        },
+        {
+          "horse": "One Horse Town (IRE)",
+          "position": "3rd",
+          "sp": "3/1"
+        },
+        {
+          "horse": "La Luna Artista (FR)",
+          "position": "4th",
+          "sp": "10/1"
+        },
+        {
+          "horse": "Lord Byron (IRE)",
+          "position": "5th",
+          "sp": "7/2"
+        },
+        {
+          "horse": "In The Minus (IRE)",
+          "position": "6th",
+          "sp": "25/1"
+        },
+        {
+          "horse": "Tunisya (FR)",
+          "position": "7th",
+          "sp": "150/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|kelso|15:50|raceday-research-1",
+      "course": "Kelso",
+      "time": "15:50",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1550",
+      "source_ref": "turn41view2",
+      "observed_at": "2026-10-25T09:50:58.821Z",
+      "actual_starters": 4,
+      "runners": [
+        {
+          "horse": "Myretown (IRE)",
+          "position": "1st",
+          "sp": "5/4f"
+        },
+        {
+          "horse": "Mumford's Magic (IRE)",
+          "position": "2nd",
+          "sp": "9/2"
+        },
+        {
+          "horse": "New Order (IRE)",
+          "position": "3rd",
+          "sp": "2/1"
+        },
+        {
+          "horse": "Muskerry Rock (IRE)",
+          "position": "4th",
+          "sp": "11/2"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|doncaster|15:55|raceday-research-1",
+      "course": "Doncaster",
+      "time": "15:55",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1555",
+      "source_ref": "turn46view2",
+      "observed_at": "2026-10-25T09:50:58.822Z",
+      "actual_starters": 14,
+      "runners": [
+        {
+          "horse": "Castlemont (IRE)",
+          "position": "1st",
+          "sp": "6/1"
+        },
+        {
+          "horse": "City Of Delight (USA)",
+          "position": "2nd",
+          "sp": "20/1"
+        },
+        {
+          "horse": "Ultrasoul (IRE)",
+          "position": "3rd",
+          "sp": "20/1"
+        },
+        {
+          "horse": "Shafdar (IRE)",
+          "position": "4th",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Pearl Eye",
+          "position": "5th",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Have Secret (IRE)",
+          "position": "6th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Galyx (IRE)",
+          "position": "7th",
+          "sp": "7/2f"
+        },
+        {
+          "horse": "Principality (IRE)",
+          "position": "8th",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Devil's Peak",
+          "position": "9th",
+          "sp": "6/1"
+        },
+        {
+          "horse": "Janey Mackers (IRE)",
+          "position": "10th",
+          "sp": "9/1"
+        },
+        {
+          "horse": "Bunyola Bay (IRE)",
+          "position": "11th",
+          "sp": "25/1"
+        },
+        {
+          "horse": "A Major Payne",
+          "position": "12th",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Mustazeed (IRE)",
+          "position": "RR",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Wahdan (IRE)",
+          "position": "RR",
+          "sp": "22/1"
+        },
+        {
+          "horse": "Mondo Man",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Spioradalta",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|16:05|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "16:05",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1605",
+      "source_ref": "turn42view0",
+      "observed_at": "2026-10-25T09:50:58.822Z",
+      "actual_starters": 6,
+      "runners": [
+        {
+          "horse": "Butch Cassidy (IRE)",
+          "position": "1st",
+          "sp": "2/1f"
+        },
+        {
+          "horse": "Follow Your Luck (IRE)",
+          "position": "2nd",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Derryhassen Paddy (IRE)",
+          "position": "3rd",
+          "sp": "4/1"
+        },
+        {
+          "horse": "Catchintsavo (IRE)",
+          "position": "4th",
+          "sp": "11/4"
+        },
+        {
+          "horse": "Kasino Des Mottes (FR)",
+          "position": "5th",
+          "sp": "10/1"
+        },
+        {
+          "horse": "Turndlightsdownlow (IRE)",
+          "position": "UR",
+          "sp": "4/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|southwell|16:24|raceday-research-1",
+      "course": "Southwell",
+      "time": "16:24",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1624",
+      "source_ref": "turn42view1",
+      "observed_at": "2026-10-25T09:50:58.822Z",
+      "actual_starters": 4,
+      "runners": [
+        {
+          "horse": "Undercover Affair (IRE)",
+          "position": "1st",
+          "sp": "6/1"
+        },
+        {
+          "horse": "Space Dreamer (IRE)",
+          "position": "2nd",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Blake's Monarch (IRE)",
+          "position": "3rd",
+          "sp": "2/1"
+        },
+        {
+          "horse": "Bill The Bull (IRE)",
+          "position": "4th",
+          "sp": "11/8f"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|kelso|16:25|raceday-research-1",
+      "course": "Kelso",
+      "time": "16:25",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1625",
+      "source_ref": "turn42view2",
+      "observed_at": "2026-10-25T09:50:58.823Z",
+      "actual_starters": 4,
+      "runners": [
+        {
+          "horse": "Newtown Rambler (IRE)",
+          "position": "1st",
+          "sp": "5/2"
+        },
+        {
+          "horse": "Smoke Trail (IRE)",
+          "position": "2nd",
+          "sp": "5/6f"
+        },
+        {
+          "horse": "From The Clouds (FR)",
+          "position": "3rd",
+          "sp": "15/2"
+        },
+        {
+          "horse": "The Other Mozzie (IRE)",
+          "position": "4th",
+          "sp": "7/1"
+        },
+        {
+          "horse": "Coup De Coeur (FR)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|doncaster|16:30|raceday-research-1",
+      "course": "Doncaster",
+      "time": "16:30",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1630",
+      "source_ref": "turn46view0",
+      "observed_at": "2026-10-25T09:50:58.823Z",
+      "actual_starters": 13,
+      "runners": [
+        {
+          "horse": "Quest For Fun",
+          "position": "1st",
+          "sp": "3/1"
+        },
+        {
+          "horse": "Salam Dubawi",
+          "position": "2nd",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Trust Amy (IRE)",
+          "position": "3rd",
+          "sp": "22/1"
+        },
+        {
+          "horse": "Golden Pharaoh (IRE)",
+          "position": "4th",
+          "sp": "17/2"
+        },
+        {
+          "horse": "Cargin Bhui (IRE)",
+          "position": "5th",
+          "sp": "28/1"
+        },
+        {
+          "horse": "Zarvali (IRE)",
+          "position": "6th",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Beale Street",
+          "position": "7th",
+          "sp": "20/1"
+        },
+        {
+          "horse": "It Just Takes Time (IRE)",
+          "position": "8th",
+          "sp": "9/1"
+        },
+        {
+          "horse": "Territorial Knight",
+          "position": "9th",
+          "sp": "14/1"
+        },
+        {
+          "horse": "Cotai Belle (IRE)",
+          "position": "10th",
+          "sp": "20/1"
+        },
+        {
+          "horse": "Ceo Stealth Mode (IRE)",
+          "position": "11th",
+          "sp": "80/1"
+        },
+        {
+          "horse": "Crown Office",
+          "position": "12th",
+          "sp": "5/2f"
+        },
+        {
+          "horse": "Spy Kingdom (USA)",
+          "position": "13th",
+          "sp": "66/1"
+        },
+        {
+          "horse": "Bell Shot (IRE)",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Count Palatine (IRE)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|16:40|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "16:40",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1640",
+      "source_ref": "turn43view0",
+      "observed_at": "2026-10-25T09:50:58.824Z",
+      "actual_starters": 10,
+      "runners": [
+        {
+          "horse": "Ballycrystal Boy (IRE)",
+          "position": "1st",
+          "sp": "6/5f"
+        },
+        {
+          "horse": "Dennis's Honor",
+          "position": "2nd",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Ask Millie (IRE)",
+          "position": "3rd",
+          "sp": "20/1"
+        },
+        {
+          "horse": "Freetobe (IRE)",
+          "position": "4th",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Littlebobbydazzler",
+          "position": "5th",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Cask Of Pimlico (IRE)",
+          "position": "6th",
+          "sp": "22/1"
+        },
+        {
+          "horse": "Milord D'anjou (FR)",
+          "position": "7th",
+          "sp": "10/1"
+        },
+        {
+          "horse": "Delusionofgrandeur (IRE)",
+          "position": "8th",
+          "sp": "20/1"
+        },
+        {
+          "horse": "Port Isaac",
+          "position": "9th",
+          "sp": "9/1"
+        },
+        {
+          "horse": "Tythingman",
+          "position": "10th",
+          "sp": "6/1"
+        },
+        {
+          "horse": "I've Got A Friend (IRE)",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Micky Haller",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Newgrove (IRE)",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Stoner's Sister (IRE)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|kelso|16:55|raceday-research-1",
+      "course": "Kelso",
+      "time": "16:55",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1655",
+      "source_ref": "turn43view1",
+      "observed_at": "2026-10-25T09:50:58.824Z",
+      "actual_starters": 9,
+      "runners": [
+        {
+          "horse": "Lets Mingle (IRE)",
+          "position": "1st",
+          "sp": "11/2"
+        },
+        {
+          "horse": "Summergrounds",
+          "position": "2nd",
+          "sp": "3/1f"
+        },
+        {
+          "horse": "Berwick Law (FR)",
+          "position": "3rd",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Ebselysees",
+          "position": "4th",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Burgundy Man (FR)",
+          "position": "5th",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Bold Light (IRE)",
+          "position": "6th",
+          "sp": "4/1"
+        },
+        {
+          "horse": "Punxsutawney Phil (IRE)",
+          "position": "7th",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Evenwood Sonofagun (IRE)",
+          "position": "8th",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Maillot Blanc",
+          "position": "9th",
+          "sp": "13/2"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|southwell|17:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "17:00",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1700",
+      "source_ref": "turn43view2",
+      "observed_at": "2026-10-25T09:50:58.824Z",
+      "actual_starters": 12,
+      "runners": [
+        {
+          "horse": "Rhythm N Hooves",
+          "position": "1st",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Bona Fortuna (IRE)",
+          "position": "2nd",
+          "sp": "3/1f"
+        },
+        {
+          "horse": "Moulin Booj (IRE)",
+          "position": "3rd",
+          "sp": "15/2"
+        },
+        {
+          "horse": "Almaty Star (IRE)",
+          "position": "4th",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Shes Got A Brother",
+          "position": "5th",
+          "sp": "6/1"
+        },
+        {
+          "horse": "Sugar Hill Babe (IRE)",
+          "position": "6th",
+          "sp": "50/1"
+        },
+        {
+          "horse": "Alondra",
+          "position": "7th",
+          "sp": "28/1"
+        },
+        {
+          "horse": "Betsen",
+          "position": "8th",
+          "sp": "15/2"
+        },
+        {
+          "horse": "Kanishka (IRE)",
+          "position": "9th",
+          "sp": "40/1"
+        },
+        {
+          "horse": "Night Storm (IRE)",
+          "position": "10th",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Glamorous Breeze",
+          "position": "11th",
+          "sp": "17/2"
+        },
+        {
+          "horse": "Henrythenate",
+          "position": "12th",
+          "sp": "28/1"
+        },
+        {
+          "horse": "Wateen (IRE)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|doncaster|17:05|raceday-research-1",
+      "course": "Doncaster",
+      "time": "17:05",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1705",
+      "source_ref": "turn43view3",
+      "observed_at": "2026-10-25T09:50:58.825Z",
+      "actual_starters": 12,
+      "runners": [
+        {
+          "horse": "King's School",
+          "position": "1st",
+          "sp": "7/1"
+        },
+        {
+          "horse": "Feel The Need",
+          "position": "2nd",
+          "sp": "10/1"
+        },
+        {
+          "horse": "Tolstoy (IRE)",
+          "position": "3rd",
+          "sp": "13/2"
+        },
+        {
+          "horse": "Spirit Genie (IRE)",
+          "position": "4th",
+          "sp": "14/1"
+        },
+        {
+          "horse": "Stanage",
+          "position": "5th",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Gold Queen Kindly (IRE)",
+          "position": "6th",
+          "sp": "22/1"
+        },
+        {
+          "horse": "Freddie Steady Go",
+          "position": "7th",
+          "sp": "4/1"
+        },
+        {
+          "horse": "Magic Boy (GER)",
+          "position": "8th",
+          "sp": "28/1"
+        },
+        {
+          "horse": "Prosperitas (IRE)",
+          "position": "9th",
+          "sp": "3/1f"
+        },
+        {
+          "horse": "Highland Olly",
+          "position": "10th",
+          "sp": "25/1"
+        },
+        {
+          "horse": "Itsatenfromlen",
+          "position": "11th",
+          "sp": "28/1"
+        },
+        {
+          "horse": "Invincible Boy (IRE)",
+          "position": "12th",
+          "sp": "25/1"
+        },
+        {
+          "horse": "Kosometsuke",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Kody B (IRE)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|southwell|17:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "17:30",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1730",
+      "source_ref": "turn44view0",
+      "observed_at": "2026-10-25T09:50:58.825Z",
+      "actual_starters": 14,
+      "runners": [
+        {
+          "horse": "Clipsham Noble (IRE)",
+          "position": "1st",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Masego (IRE)",
+          "position": "2nd",
+          "sp": "5/1"
+        },
+        {
+          "horse": "The Ormer Gatherer",
+          "position": "3rd",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Lednikov",
+          "position": "4th",
+          "sp": "14/1"
+        },
+        {
+          "horse": "Havachoc",
+          "position": "5th",
+          "sp": "8/1"
+        },
+        {
+          "horse": "Hickton (IRE)",
+          "position": "6th",
+          "sp": "14/1"
+        },
+        {
+          "horse": "Fighting Poet (IRE)",
+          "position": "7th",
+          "sp": "80/1"
+        },
+        {
+          "horse": "Wyvill",
+          "position": "8th",
+          "sp": "9/2jf"
+        },
+        {
+          "horse": "Alkaios",
+          "position": "9th",
+          "sp": "9/1"
+        },
+        {
+          "horse": "Highland Harvey (IRE)",
+          "position": "10th",
+          "sp": "8/1"
+        },
+        {
+          "horse": "Nymphaea",
+          "position": "11th",
+          "sp": "22/1"
+        },
+        {
+          "horse": "Raysham (IRE)",
+          "position": "12th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Spirit Of Nature (IRE)",
+          "position": "13th",
+          "sp": "9/2jf"
+        },
+        {
+          "horse": "Miss Veronika",
+          "position": "14th",
+          "sp": "6/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|southwell|18:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "18:00",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1800",
+      "source_ref": "turn44view1",
+      "observed_at": "2026-10-25T09:50:58.825Z",
+      "actual_starters": 10,
+      "runners": [
+        {
+          "horse": "Night Mile (GER)",
+          "position": "1st",
+          "sp": "17/2"
+        },
+        {
+          "horse": "National Anthem",
+          "position": "2nd",
+          "sp": "10/11f"
+        },
+        {
+          "horse": "Ring Of Music (IRE)",
+          "position": "3rd",
+          "sp": "5/2"
+        },
+        {
+          "horse": "Political Resident",
+          "position": "4th",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Quite Simple (AUS)",
+          "position": "5th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Jeepers Fortune (IRE)",
+          "position": "6th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Splintered",
+          "position": "7th",
+          "sp": "150/1"
+        },
+        {
+          "horse": "Steel Nation (IRE)",
+          "position": "8th",
+          "sp": "10/1"
+        },
+        {
+          "horse": "Naval Empire (IRE)",
+          "position": "9th",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Chertsey (IRE)",
+          "position": "10th",
+          "sp": "66/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|southwell|18:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "18:30",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1830",
+      "source_ref": "turn44view2",
+      "observed_at": "2026-10-25T09:50:58.825Z",
+      "actual_starters": 10,
+      "runners": [
+        {
+          "horse": "Geometry",
+          "position": "1st",
+          "sp": "10/11f"
+        },
+        {
+          "horse": "Haldon Fire",
+          "position": "2nd",
+          "sp": "22/1"
+        },
+        {
+          "horse": "Jebayli (IRE)",
+          "position": "3rd",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Kings Medal",
+          "position": "4th",
+          "sp": "10/3"
+        },
+        {
+          "horse": "Oldbullyoungbull (IRE)",
+          "position": "5th",
+          "sp": "22/1"
+        },
+        {
+          "horse": "Champagne Poetry (IRE)",
+          "position": "6th",
+          "sp": "10/1"
+        },
+        {
+          "horse": "Yellow Vision (IRE)",
+          "position": "7th",
+          "sp": "28/1"
+        },
+        {
+          "horse": "Golden Eagle (IRE)",
+          "position": "8th",
+          "sp": "50/1"
+        },
+        {
+          "horse": "Stellar Max (IRE)",
+          "position": "9th",
+          "sp": "300/1"
+        },
+        {
+          "horse": "Saxon Law (IRE)",
+          "position": "10th",
+          "sp": "11/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|southwell|19:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "19:00",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1900",
+      "source_ref": "turn47view0",
+      "observed_at": "2026-10-25T09:50:58.826Z",
+      "actual_starters": 13,
+      "runners": [
+        {
+          "horse": "Lili Marleen (GER)",
+          "position": "1st",
+          "sp": "4/1"
+        },
+        {
+          "horse": "Crown The Future (IRE)",
+          "position": "2nd",
+          "sp": "13/2"
+        },
+        {
+          "horse": "Dumfries",
+          "position": "3rd",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Blue Samuna (IRE)",
+          "position": "4th",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Kev",
+          "position": "5th",
+          "sp": "7/2f"
+        },
+        {
+          "horse": "Oscar's Sister (IRE)",
+          "position": "6th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "African Spirit (IRE)",
+          "position": "7th",
+          "sp": "6/1"
+        },
+        {
+          "horse": "Knightmare (IRE)",
+          "position": "8th",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Grand Citadel (IRE)",
+          "position": "9th",
+          "sp": "40/1"
+        },
+        {
+          "horse": "Rogue Desire (FR)",
+          "position": "10th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Al Suil Eile (FR)",
+          "position": "11th",
+          "sp": "16/1"
+        },
+        {
+          "horse": "Love You More",
+          "position": "12th",
+          "sp": "4/1"
+        },
+        {
+          "horse": "Captain Corelli (IRE)",
+          "position": "13th",
+          "sp": "50/1"
+        },
+        {
+          "horse": "Battle Standard",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|southwell|19:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "19:30",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1930",
+      "source_ref": "turn47view1",
+      "observed_at": "2026-10-25T09:50:58.827Z",
+      "actual_starters": 14,
+      "runners": [
+        {
+          "horse": "Anthropologist",
+          "position": "1st",
+          "sp": "4/1f"
+        },
+        {
+          "horse": "Red Hat Eagle",
+          "position": "2nd",
+          "sp": "7/1"
+        },
+        {
+          "horse": "Finn Ironside",
+          "position": "3rd",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Shaw Park (IRE)",
+          "position": "4th",
+          "sp": "13/2"
+        },
+        {
+          "horse": "Akabusi",
+          "position": "5th",
+          "sp": "25/1"
+        },
+        {
+          "horse": "Flash Rascal",
+          "position": "6th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Packetofbiscuits",
+          "position": "7th",
+          "sp": "13/2"
+        },
+        {
+          "horse": "Espanita (IRE)",
+          "position": "8th",
+          "sp": "20/1"
+        },
+        {
+          "horse": "Santiago Boy",
+          "position": "9th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Captain Parma (IRE)",
+          "position": "10th",
+          "sp": "13/2"
+        },
+        {
+          "horse": "Janora (IRE)",
+          "position": "11th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Gladiadora (IRE)",
+          "position": "12th",
+          "sp": "11/1"
+        },
+        {
+          "horse": "Ribble Emperor (IRE)",
+          "position": "13th",
+          "sp": "7/1"
+        },
+        {
+          "horse": "Piscean Star",
+          "position": "14th",
+          "sp": "25/1"
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|southwell|20:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "20:00",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2000",
+      "source_ref": "turn45view1",
+      "observed_at": "2026-10-25T09:50:58.827Z",
+      "actual_starters": 7,
+      "runners": [
+        {
+          "horse": "Al Arraab (IRE)",
+          "position": "1st",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Flick Of An Eye (IRE)",
+          "position": "2nd",
+          "sp": "11/10f"
+        },
+        {
+          "horse": "Crystal Dark",
+          "position": "3rd",
+          "sp": "3/1"
+        },
+        {
+          "horse": "Sigma",
+          "position": "4th",
+          "sp": "11/1"
+        },
+        {
+          "horse": "World Star (IRE)",
+          "position": "5th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "The Honey Thief (IRE)",
+          "position": "6th",
+          "sp": "14/1"
+        },
+        {
+          "horse": "Hunstanton",
+          "position": "7th",
+          "sp": "12/1"
+        },
+        {
+          "horse": "Hot Moonstone (FR)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    },
+    {
+      "race_id": "2026-10-24|southwell|20:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "20:30",
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2030",
+      "source_ref": "turn45view2",
+      "observed_at": "2026-10-25T09:50:58.828Z",
+      "actual_starters": 11,
+      "runners": [
+        {
+          "horse": "Edmond Halley (IRE)",
+          "position": "1st",
+          "sp": "9/2"
+        },
+        {
+          "horse": "Mehmar (IRE)",
+          "position": "2nd",
+          "sp": "13/8f"
+        },
+        {
+          "horse": "Uncle Sam",
+          "position": "3rd",
+          "sp": "4/1"
+        },
+        {
+          "horse": "Mount Ruapehu (IRE)",
+          "position": "4th",
+          "sp": "15/2"
+        },
+        {
+          "horse": "Due Date",
+          "position": "5th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Age Of Time (FR)",
+          "position": "6th",
+          "sp": "5/1"
+        },
+        {
+          "horse": "Papa Don't Preach (IRE)",
+          "position": "7th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "Dr Ali (IRE)",
+          "position": "8th",
+          "sp": "18/1"
+        },
+        {
+          "horse": "Piperstown (IRE)",
+          "position": "9th",
+          "sp": "28/1"
+        },
+        {
+          "horse": "Havana Joy",
+          "position": "10th",
+          "sp": "33/1"
+        },
+        {
+          "horse": "He's An Angel",
+          "position": "11th",
+          "sp": "22/1"
+        },
+        {
+          "horse": "Dragon God",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Montpellier Green (IRE)",
+          "position": "NR",
+          "sp": null
+        },
+        {
+          "horse": "Addictive (IRE)",
+          "position": "NR",
+          "sp": null
+        }
+      ]
+    }
+  ]
+}

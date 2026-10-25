@@ -1,0 +1,50 @@
+"""Render a self-contained, factual post-race review alongside frozen forecasts."""
+import html
+import json
+from pathlib import Path
+
+
+def render(document, metrics):
+    esc = lambda s: html.escape(str(s), quote=True)
+    rows = sorted(document['rows'], key=lambda r: (r['time'], r['course'], r['horse']))
+    cards = []
+    for r in rows:
+        groups = ', '.join(g.replace('_', ' ') for g in r['groups'])
+        p = 'n/a' if r['frozen_win_probability'] is None else f"{100*r['frozen_win_probability']:.1f}%"
+        result = r['result']
+        cards.append(f'''<article data-groups="{esc(' '.join(r['groups']))}" data-course="{esc(r['course'])}" data-search="{esc(r['horse'].lower())}" data-result="{esc(result)}">
+<div class="row"><span>{esc(r['time'])} · {esc(r['course'])}</span><strong class="{'won' if result == '1st' else 'result'}">{esc(result)}</strong></div>
+<h3>{esc(r['horse'])}</h3><p class="meta">Frozen model {p} · SP {esc(r['sp'] or 'NR')} · {esc(groups)}</p>
+<p><b>How it ran:</b> {esc(r['observed_run'])}</p>
+<details><summary>Pre-race thinking and review</summary><p><b>Before racing:</b> {esc(r['pre_race_thesis'])}</p><p><b>Assessment:</b> {esc(r['assessment'])}</p><p class="meta">{esc(r['assessment_type'].replace('_', ' ').lower())} · Interpretation, not a proven cause.</p><a href="{esc(r['source_url'])}">Published result and running comments ↗</a></details></article>''')
+    model = metrics['model_on_market_reference_subset']
+    market = metrics['later_pre_race_market_reference_identical_fields']
+    comparison = ''.join(f'<tr><td>{label}</td><td>{fmt(model[key])}</td><td>{fmt(market[key])}</td></tr>'
+        for label, key, fmt in [('Winner ranked first', 'top_one', lambda x: f'{100*x:.1f}%'),
+                               ('Winner in top two', 'top_two', lambda x: f'{100*x:.1f}%'),
+                               ('Winner in top three', 'top_three', lambda x: f'{100*x:.1f}%'),
+                               ('Log loss ↓', 'log_loss', lambda x: f'{x:.3f}'),
+                               ('Brier score ↓', 'brier', lambda x: f'{x:.3f}')])
+    return '''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>24 October review · Racing Intelligence v3</title>
+<style>:root{color-scheme:dark;font:16px/1.6 system-ui,sans-serif;background:#0c1420;color:#ecf2f5}*{box-sizing:border-box}body{margin:0}main{max-width:1150px;margin:auto;padding:24px 18px 65px}a{color:#75ded4}h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.15;max-width:850px}h2{font-size:1.35rem;margin-top:34px}h3{font-size:1.15rem;margin:7px 0}.intro{max-width:850px;color:#c6d4df}.tag{font-size:.78rem;letter-spacing:.08em;color:#75ded4}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:26px 0}.stat,article,.panel{border:1px solid #2a3d4b;background:#131f2d;border-radius:12px;padding:18px}.stat b{display:block;font-size:1.9rem;color:#d5f7ef}.meta{font-size:.8rem;color:#a7bdca}.row{display:flex;justify-content:space-between;gap:12px;color:#a7bdca}.result{color:#f3cf9a}.won{color:#7ae4bb}p{margin:10px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px}article[hidden]{display:none}details{margin-top:14px}summary{cursor:pointer;color:#75ded4}.filters{display:flex;flex-wrap:wrap;gap:10px;position:sticky;top:0;padding:14px 0;background:#0c1420;z-index:1}select,input{font:inherit;border:1px solid #35505f;border-radius:8px;padding:9px;background:#132331;color:inherit;max-width:100%}input{flex:1;min-width:150px}table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{padding:9px;text-align:left;border-bottom:1px solid #2a3d4b}th{color:#a7bdca}li{margin:9px 0}.note{border-left:3px solid #e5bd7a;padding-left:16px;color:#d9cdb7}footer{margin-top:35px;color:#a7bdca;font-size:.85rem}</style>
+<main><a href="./">← Frozen race-day research</a><p class="tag">POST-RACE REVIEW · SATURDAY 24 OCTOBER 2026</p><h1>Every selection, including the ones we changed or rejected.</h1>
+<p class="intro">46 named runners across 31 races: original and revised model leaders, conditional selections, watchlist angles, manual reviews and the Lucky 31. Published finishing results and race-running comments were checked. Website tipping verdicts were excluded. Running accounts below are paraphrases; this review does not claim personal video analysis.</p>
+<div class="stats"><div class="stat"><b>4 / 30</b>Race-day model leaders won<br><span class="meta">One withdrawn leader excluded</span></div><div class="stat"><b>0 / 5</b>Conditional shortlist winners<br><span class="meta">Three top-three finishes</span></div><div class="stat"><b>0 / 5</b>Lucky 31 winners<br><span class="meta">Two seconds and one third</span></div><div class="stat"><b>46</b>Named runners reviewed<br><span class="meta">No selections removed after the result</span></div></div>
+<p class="note">This was a poor day for v3. Its 30 starting model leaders had a summed expected 9.12 wins, but four won. A single day is insufficient to estimate long-term calibration. The original production model remains retained; no probability or prediction has been rewritten.</p>
+<section class="panel"><h2>Probability audit on identical fields</h2><p>28 races had exactly the starters in the frozen forecast. Late changes in Kelso 15:14, Cheltenham 16:40 and Southwell 20:30 are excluded from these probability metrics, without recalculating their original forecasts.</p>
+<table><thead><tr><th>Measure</th><th>Frozen model</th><th>Pre-race market reference</th></tr></thead><tbody>''' + comparison + '''</tbody></table><p class="meta">Market reference: one complete bookmaker grid per race, margin-normalised, observed 10:34–10:46 BST. The model froze at 10:12 BST, so the market had a later observation time. This is descriptive comparison, not a matched-cutoff independent promotion test. Four model winners versus nine market leaders. Top-three accuracy means the winner was model-ranked in the top three, not that a selected horse earned an each-way return.</p></section>
+<h2>Where the thinking needs to change</h2><ol><li><b>Research and probability were not the same system.</b> The richer comments, full-career context and current card RPR/TS were descriptive additions. They did not alter the frozen learned probabilities.</li><li><b>Core form loses important context.</b> The recent-form statistic uses finishing percentile without beaten margin. Hurdles and chases are grouped together, weakening the distinction between hurdle ability and proven chase execution.</li><li><b>Known warnings were too easy to override.</b> Ashdown Forest's quick return, 6lb rise and weaker card figures were documented, yet the model still estimated 52.1%. Road To Wembley was 58.9% despite a new trip and a rival with no measured hurdle form.</li><li><b>Old marks and conditions stories were overvalued.</b> A previous win off a higher mark did not demonstrate a current revival for Due Date or Desperate Dan. Course/going history did not establish current superiority for Prosperitas.</li><li><b>Do not invent tactical certainty.</b> Several potential leaders do not guarantee a pace collapse. Narrow defeats, jumping errors and unknown debutants require uncertainty, not an explanation that makes every winner appear predictable.</li></ol>
+<p class="note">Changes are recorded as hypotheses for chronological testing, not claimed accuracy improvements. This reviewed day is development evidence. The retired June–September test remains closed. No stakes or realised profit are inferred; top-three finishes are not automatically bookmaker-paid places.</p>
+<h2>All 46 reviews</h2><div class="filters"><select id="group" aria-label="Selection group"><option value="">All named runners</option><option value="race_day_model_leader">Race-day model leaders</option><option value="evening_model_leader">Evening model leaders</option><option value="race_day_conditional_shortlist">Conditional shortlist</option><option value="lucky31">Lucky 31</option><option value="research_watchlist">Watchlist angles</option><option value="manual_research_case">Manual research cases</option><option value="explicitly_rejected_case">Rejected cases</option></select><select id="course" aria-label="Course"><option value="">All courses</option><option>Doncaster</option><option>Cheltenham</option><option>Kelso</option><option>Southwell</option></select><input id="search" aria-label="Find horse" placeholder="Find a horse…"></div><p id="count" class="meta">46 runners shown</p><div class="grid">''' + '\n'.join(cards) + '''</div><footer><a href="review-2026-10-24.json">All runner reviews (JSON)</a> · <a href="review-2026-10-24-metrics.json">Scoring and field-change audit (JSON)</a><p>Original forecasts, prices and selection memberships remain available in the GitHub v3 branch. Four model leaders won: Al Shabab Storm (2/1 SP), Castlemont (6/1), Geometry (10/11), Anthropologist (4/1). They were not all price-qualified betting selections.</p></footer></main>
+<script>const cards=[...document.querySelectorAll('article')];const group=document.querySelector('#group'),course=document.querySelector('#course'),search=document.querySelector('#search');function filter(){let n=0;for(const c of cards){const show=(!group.value||c.dataset.groups.split(' ').includes(group.value))&&(!course.value||c.dataset.course===course.value)&&c.dataset.search.includes(search.value.toLowerCase().trim());c.hidden=!show;n+=show;}document.querySelector('#count').textContent=n+' runners shown';}group.addEventListener('change',filter);course.addEventListener('change',filter);search.addEventListener('input',filter);</script></html>'''
+
+
+def main():
+    root = Path('v3/public')
+    document = json.loads((root / 'review-2026-10-24.json').read_text())
+    metrics = json.loads((root / 'review-2026-10-24-metrics.json').read_text())
+    (root / 'review-2026-10-24.html').write_text(render(document, metrics))
+
+
+if __name__ == '__main__':
+    main()

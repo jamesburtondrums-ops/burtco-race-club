@@ -1,0 +1,1056 @@
+{
+  "created_at": "2026-10-25T10:00:01.554485+00:00",
+  "race_date": "2026-10-24",
+  "status": "DESCRIPTIVE_POST_RACE_AUDIT_NOT_A_NEW_HOLDOUT",
+  "model_hash": "bb669dfa24d5a667560ca785647bd7b2bdf619ce80c8766b0e6799584eb96218",
+  "model_changed": false,
+  "frozen_snapshot_sha256": "167513d282f939f6a83c82bad25134c73dd5553d01f35830f7510d89df7f2657",
+  "unique_named_runners": 46,
+  "races": 31,
+  "model_leader_runners": 30,
+  "model_leader_wins": 4,
+  "model_leader_expected_wins": 9.120905055874543,
+  "model_leader_top3": 18,
+  "model_identical_fields": {
+    "races": 28,
+    "top_one": 0.14285714285714285,
+    "top_two": 0.35714285714285715,
+    "top_three": 0.42857142857142855,
+    "log_loss": 2.104438410239167,
+    "brier": 0.9184229332318979
+  },
+  "later_pre_race_market_reference_identical_fields": {
+    "races": 28,
+    "top_one": 0.32142857142857145,
+    "top_two": 0.5,
+    "top_three": 0.7142857142857143,
+    "log_loss": 1.8507547233797184,
+    "brier": 0.8278312263424098
+  },
+  "model_on_market_reference_subset": {
+    "races": 28,
+    "top_one": 0.14285714285714285,
+    "top_two": 0.35714285714285715,
+    "top_three": 0.42857142857142855,
+    "log_loss": 2.104438410239167,
+    "brier": 0.9184229332318979
+  },
+  "calibration_single_day_diagnostic": [
+    {
+      "lower": 0,
+      "upper": 0.1,
+      "runners": 155,
+      "mean_prediction": 0.057244319194747886,
+      "observed_win_rate": 0.07096774193548387
+    },
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "runners": 58,
+      "mean_prediction": 0.13607438004344558,
+      "observed_win_rate": 0.1724137931034483
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.3,
+      "runners": 23,
+      "mean_prediction": 0.23879470771521746,
+      "observed_win_rate": 0.21739130434782608
+    },
+    {
+      "lower": 0.3,
+      "upper": 0.4,
+      "runners": 8,
+      "mean_prediction": 0.3334991734025683,
+      "observed_win_rate": 0.125
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "runners": 3,
+      "mean_prediction": 0.4110112297500457,
+      "observed_win_rate": 0.3333333333333333
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6,
+      "runners": 2,
+      "mean_prediction": 0.5497754307035316,
+      "observed_win_rate": 0.0
+    },
+    {
+      "lower": 0.7,
+      "upper": 0.8,
+      "runners": 1,
+      "mean_prediction": 0.7419602669664856,
+      "observed_win_rate": 0.0
+    }
+  ],
+  "selection_groups": {
+    "additional_discussed_angle": {
+      "selections": 1,
+      "runners": 1,
+      "non_runners": 0,
+      "wins": 0,
+      "top_three_finishes": 0
+    },
+    "evening_conditional_shortlist": {
+      "selections": 6,
+      "runners": 5,
+      "non_runners": 1,
+      "wins": 0,
+      "top_three_finishes": 3
+    },
+    "evening_model_leader": {
+      "selections": 31,
+      "runners": 28,
+      "non_runners": 3,
+      "wins": 4,
+      "top_three_finishes": 17
+    },
+    "explicitly_rejected_case": {
+      "selections": 4,
+      "runners": 4,
+      "non_runners": 0,
+      "wins": 0,
+      "top_three_finishes": 1
+    },
+    "lucky31": {
+      "selections": 5,
+      "runners": 5,
+      "non_runners": 0,
+      "wins": 0,
+      "top_three_finishes": 3
+    },
+    "manual_research_case": {
+      "selections": 4,
+      "runners": 4,
+      "non_runners": 0,
+      "wins": 0,
+      "top_three_finishes": 3
+    },
+    "race_day_conditional_shortlist": {
+      "selections": 5,
+      "runners": 5,
+      "non_runners": 0,
+      "wins": 0,
+      "top_three_finishes": 3
+    },
+    "race_day_model_leader": {
+      "selections": 31,
+      "runners": 30,
+      "non_runners": 1,
+      "wins": 4,
+      "top_three_finishes": 18
+    },
+    "research_watchlist": {
+      "selections": 7,
+      "runners": 7,
+      "non_runners": 0,
+      "wins": 0,
+      "top_three_finishes": 2
+    }
+  },
+  "race_reviews": [
+    {
+      "race_id": "2026-10-24|doncaster|12:55|raceday-research-1",
+      "course": "Doncaster",
+      "time": "12:55",
+      "horse": "Al Shabab Storm (GB)",
+      "frozen_win_probability": 0.2069168370373941,
+      "result": "1st",
+      "sp": "2/1f",
+      "winner": "Al Shabab Storm",
+      "winner_frozen_rank": 1,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1255",
+      "model_scores": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.5754383198838444,
+        "brier": 0.7128254396296074
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.4215054154138833,
+        "brier": 0.6555083202497113
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|13:10|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "13:10",
+      "horse": "Spectacularsunrise (GB)",
+      "frozen_win_probability": 0.2339731866530508,
+      "result": "F",
+      "sp": "11/4",
+      "winner": "O'Moore Park (IRE)",
+      "winner_frozen_rank": 8,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1310",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 3.191610124498899,
+        "brier": 1.0806589230464327
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 3.277203378399446,
+        "brier": 1.0779230117211493
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|doncaster|13:30|raceday-research-1",
+      "course": "Doncaster",
+      "time": "13:30",
+      "horse": "Al Hudaiba (GB)",
+      "frozen_win_probability": 0.2948752809373886,
+      "result": "7th",
+      "sp": "5/1",
+      "winner": "Giant Sequoia (USA)",
+      "winner_frozen_rank": 6,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1330",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.7495642542956045,
+        "brier": 1.0700081868568128
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 3.172471975270676,
+        "brier": 1.188702310759485
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|kelso|13:37|raceday-research-1",
+      "course": "Kelso",
+      "time": "13:37",
+      "horse": "Royal March (GB)",
+      "frozen_win_probability": 0.36468871743579956,
+      "result": "4th",
+      "sp": "9/1",
+      "winner": "Jessmarvel (FR)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1337",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.2214990348605257,
+        "brier": 1.0233319119711914
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 1,
+        "log_loss": 1.6976455023116792,
+        "brier": 0.9061773979468413
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|13:45|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "13:45",
+      "horse": "Road To Wembley (GB)",
+      "frozen_win_probability": 0.5893368573273543,
+      "result": "2nd",
+      "sp": "7/4f",
+      "winner": "Woodstock Octo (IRE)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1345",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.7165865727317633,
+        "brier": 1.2660637368827694
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.1234548075212225,
+        "brier": 1.0213646762937392
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|doncaster|14:05|raceday-research-1",
+      "course": "Doncaster",
+      "time": "14:05",
+      "horse": "Hi Corbett Court (IRE)",
+      "frozen_win_probability": 0.4046862082690115,
+      "result": "2nd",
+      "sp": "3/1",
+      "winner": "Bengal Tiger (IRE)",
+      "winner_frozen_rank": 2,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1405",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.5939441710132536,
+        "brier": 0.8331683519492791
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 0.6256655356363352,
+        "brier": 0.26787119906276147
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|kelso|14:10|raceday-research-1",
+      "course": "Kelso",
+      "time": "14:10",
+      "horse": "Suspected (IRE)",
+      "frozen_win_probability": 0.30130702734558495,
+      "result": "UR",
+      "sp": "9/2",
+      "winner": "Wearelongterm (IRE)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1410",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.035957803110029,
+        "brier": 0.9738947600939315
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 1,
+        "log_loss": 1.7961758321512686,
+        "brier": 0.8853624260933978
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|14:20|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "14:20",
+      "horse": "Ace Of Spades (FR)",
+      "frozen_win_probability": 0.22268248667704038,
+      "result": "10th",
+      "sp": "9/2",
+      "winner": "Seaniecon (IRE)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1420",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.6861219360026496,
+        "brier": 0.9616500987036489
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.549337170778922,
+        "brier": 0.6678277097500375
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|doncaster|14:40|raceday-research-1",
+      "course": "Doncaster",
+      "time": "14:40",
+      "horse": "National Honour (IRE)",
+      "frozen_win_probability": 0.7419602669664856,
+      "result": "2nd",
+      "sp": "4/11f",
+      "winner": "Scienza",
+      "winner_frozen_rank": 3,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1440",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 1,
+        "log_loss": 2.4180150633646216,
+        "brier": 1.3950460098367115
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.7689447914618837,
+        "brier": 1.0719074621959237
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|kelso|14:44|raceday-research-1",
+      "course": "Kelso",
+      "time": "14:44",
+      "horse": "Ballyfort (IRE)",
+      "frozen_win_probability": 0.388869387883891,
+      "result": "2nd",
+      "sp": "9/2",
+      "winner": "Treaty Boy (IRE)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1444",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.308488955550234,
+        "brier": 1.078827019522465
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 1.7785019734049932,
+        "brier": 0.88387671689001
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|14:55|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "14:55",
+      "horse": "Diamond Dealer (IRE)",
+      "frozen_win_probability": 0.2404413680885714,
+      "result": "5th",
+      "sp": "7/2",
+      "winner": "Here Comes Georgie",
+      "winner_frozen_rank": 6,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1455",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.4693006962946464,
+        "brier": 0.9721052750691621
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.528327484006265,
+        "brier": 0.7073927661655548
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|kelso|15:14|raceday-research-1",
+      "course": "Kelso",
+      "time": "15:14",
+      "horse": "Ashdown Forest (IRE)",
+      "frozen_win_probability": 0.5207121919253395,
+      "result": "5th",
+      "sp": "6/4f",
+      "winner": "Scots Poet",
+      "winner_frozen_rank": 6,
+      "identical_field": false,
+      "late_withdrawals": [
+        "Character Testing (GB)"
+      ],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1514"
+    },
+    {
+      "race_id": "2026-10-24|doncaster|15:19|raceday-research-1",
+      "course": "Doncaster",
+      "time": "15:19",
+      "horse": "Anyasi (GB)",
+      "frozen_win_probability": 0.21712459844729973,
+      "result": "3rd",
+      "sp": "7/2",
+      "winner": "River King (IRE)",
+      "winner_frozen_rank": 5,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1519",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.2439155322499253,
+        "brier": 0.911580453229111
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 1,
+        "log_loss": 1.9890410467880468,
+        "brier": 0.8524081585013988
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|15:30|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "15:30",
+      "horse": "Lord Byron (IRE)",
+      "frozen_win_probability": 0.27063773680717734,
+      "result": "5th",
+      "sp": "7/2",
+      "winner": "North Shore (FR)",
+      "winner_frozen_rank": 2,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1530",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.3808174349971516,
+        "brier": 0.702056578001042
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.5120355753416177,
+        "brier": 0.762346757419007
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|kelso|15:50|raceday-research-1",
+      "course": "Kelso",
+      "time": "15:50",
+      "horse": "Mumford's Magic (IRE)",
+      "frozen_win_probability": 0.3655202992812345,
+      "result": "2nd",
+      "sp": "9/2",
+      "winner": "Myretown (IRE)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1550",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.380865366852405,
+        "brier": 1.1049549568132597
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.042923382807521,
+        "brier": 0.5724543460963728
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|doncaster|15:55|raceday-research-1",
+      "course": "Doncaster",
+      "time": "15:55",
+      "horse": "Castlemont (IRE)",
+      "frozen_win_probability": 0.2294289228390495,
+      "result": "1st",
+      "sp": "6/1",
+      "winner": "Castlemont (IRE)",
+      "winner_frozen_rank": 1,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1555",
+      "model_scores": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.4721620018548638,
+        "brier": 0.6476242112709069
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 2.1297425323995833,
+        "brier": 0.852210991388757
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|16:05|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "16:05",
+      "horse": "Catchintsavo (IRE)",
+      "frozen_win_probability": 0.3294529568779934,
+      "result": "4th",
+      "sp": "11/4",
+      "winner": "Butch Cassidy (IRE)",
+      "winner_frozen_rank": 2,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1605",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.1743866046374172,
+        "brier": 0.6255936166151798
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 1,
+        "log_loss": 1.4349318209746025,
+        "brier": 0.7332696849343658
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|southwell|16:24|raceday-research-1",
+      "course": "Southwell",
+      "time": "16:24",
+      "horse": "Blake's Monarch (IRE)",
+      "frozen_win_probability": 0.4186614103299293,
+      "result": "3rd",
+      "sp": "2/1",
+      "winner": "Undercover Affair (IRE)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1624",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.4454932333927006,
+        "brier": 1.1385845407252382
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.015903837081332,
+        "brier": 1.0243597483259486
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|kelso|16:25|raceday-research-1",
+      "course": "Kelso",
+      "time": "16:25",
+      "horse": "Smoke Trail (IRE)",
+      "frozen_win_probability": 0.510214004079709,
+      "result": "2nd",
+      "sp": "5/6f",
+      "winner": "Newtown Rambler (IRE)",
+      "winner_frozen_rank": 2,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1625",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.550476346585754,
+        "brier": 0.9196858537321048
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.445495863477564,
+        "brier": 0.8648201253863027
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|doncaster|16:30|raceday-research-1",
+      "course": "Doncaster",
+      "time": "16:30",
+      "horse": "Crown Office (GB)",
+      "frozen_win_probability": 0.2253456087074258,
+      "result": "12th",
+      "sp": "5/2f",
+      "winner": "Quest For Fun",
+      "winner_frozen_rank": 2,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1630",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 2.098613017867915,
+        "brier": 0.8658800025696093
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.7535083089489236,
+        "brier": 0.7653188575380934
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|cheltenham|16:40|raceday-research-1",
+      "course": "Cheltenham",
+      "time": "16:40",
+      "horse": "Micky Haller (GB)",
+      "frozen_win_probability": 0.20211671387900848,
+      "result": "NR",
+      "sp": null,
+      "winner": "Ballycrystal Boy (IRE)",
+      "winner_frozen_rank": 2,
+      "identical_field": false,
+      "late_withdrawals": [
+        "Micky Haller (GB)",
+        "Stoner's Sister (IRE)"
+      ],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/cheltenham/1640"
+    },
+    {
+      "race_id": "2026-10-24|kelso|16:55|raceday-research-1",
+      "course": "Kelso",
+      "time": "16:55",
+      "horse": "Summergrounds (GB)",
+      "frozen_win_probability": 0.2137082412028123,
+      "result": "2nd",
+      "sp": "3/1f",
+      "winner": "Lets Mingle (IRE)",
+      "winner_frozen_rank": 2,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/kelso/1655",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.724215741234917,
+        "brier": 0.7862280553662431
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 1.9370751811036624,
+        "brier": 0.8475921741941225
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|southwell|17:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "17:00",
+      "horse": "Moulin Booj (IRE)",
+      "frozen_win_probability": 0.1695393293284667,
+      "result": "3rd",
+      "sp": "15/2",
+      "winner": "Rhythm N Hooves",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1700",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.191580142084366,
+        "brier": 0.8882060863457811
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.7308116909576166,
+        "brier": 0.7542447632208261
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|doncaster|17:05|raceday-research-1",
+      "course": "Doncaster",
+      "time": "17:05",
+      "horse": "Prosperitas (IRE)",
+      "frozen_win_probability": 0.17243573868946008,
+      "result": "9th",
+      "sp": "3/1f",
+      "winner": "King's School",
+      "winner_frozen_rank": 5,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/doncaster/1705",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.5164485134499914,
+        "brier": 0.9384195874569993
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.702574324715455,
+        "brier": 0.9824611290173925
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|southwell|17:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "17:30",
+      "horse": "Wyvill (GB)",
+      "frozen_win_probability": 0.15882827426790777,
+      "result": "8th",
+      "sp": "9/2jf",
+      "winner": "Clipsham Noble (IRE)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1730",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.5394166281387833,
+        "brier": 0.9336830245373735
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.9747866925579824,
+        "brier": 1.0058762057921262
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|southwell|18:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "18:00",
+      "horse": "National Anthem (GB)",
+      "frozen_win_probability": 0.19449692120512985,
+      "result": "2nd",
+      "sp": "10/11f",
+      "winner": "Night Mile (GER)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1800",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.1689178017034645,
+        "brier": 0.8976912667734541
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 1,
+        "log_loss": 1.8055902820776497,
+        "brier": 0.8883433715229151
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|southwell|18:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "18:30",
+      "horse": "Geometry (GB)",
+      "frozen_win_probability": 0.40968607065119633,
+      "result": "1st",
+      "sp": "10/11f",
+      "winner": "Geometry",
+      "winner_frozen_rank": 1,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1830",
+      "model_scores": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 0.8923640939060027,
+        "brier": 0.40672422815390175
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 0.8290983430277543,
+        "brier": 0.3798405040583424
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|southwell|19:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "19:00",
+      "horse": "Crown The Future (IRE)",
+      "frozen_win_probability": 0.15052305066272612,
+      "result": "2nd",
+      "sp": "13/2",
+      "winner": "Lili Marleen (GER)",
+      "winner_frozen_rank": 4,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1900",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 0,
+        "log_loss": 2.2713489666775737,
+        "brier": 0.8942709102891185
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.7521497725162147,
+        "brier": 0.7652792176003713
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|southwell|19:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "19:30",
+      "horse": "Anthropologist (GB)",
+      "frozen_win_probability": 0.11591086056158993,
+      "result": "1st",
+      "sp": "4/1f",
+      "winner": "Anthropologist",
+      "winner_frozen_rank": 1,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/1930",
+      "model_scores": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 2.154933826714342,
+        "brier": 0.8482854640604442
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 1,
+        "top_two": 1,
+        "top_three": 1,
+        "log_loss": 1.9658493229327334,
+        "brier": 0.8092266039343532
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|southwell|20:00|raceday-research-1",
+      "course": "Southwell",
+      "time": "20:00",
+      "horse": "Flick Of An Eye (IRE)",
+      "frozen_win_probability": 0.2622821251394138,
+      "result": "2nd",
+      "sp": "11/10f",
+      "winner": "Al Arraab (IRE)",
+      "winner_frozen_rank": 3,
+      "identical_field": true,
+      "late_withdrawals": [],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2000",
+      "model_scores": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 1,
+        "log_loss": 1.7517933027430344,
+        "brier": 0.8387935809913645
+      },
+      "later_pre_race_market_reference": {
+        "top_one": 0,
+        "top_two": 0,
+        "top_three": 1,
+        "log_loss": 2.060380410567275,
+        "brier": 0.9853077015281706
+      },
+      "market_bookmaker": "bet365"
+    },
+    {
+      "race_id": "2026-10-24|southwell|20:30|raceday-research-1",
+      "course": "Southwell",
+      "time": "20:30",
+      "horse": "Uncle Sam (GB)",
+      "frozen_win_probability": 0.1966590902491098,
+      "result": "3rd",
+      "sp": "4/1",
+      "winner": "Edmond Halley (IRE)",
+      "winner_frozen_rank": 2,
+      "identical_field": false,
+      "late_withdrawals": [
+        "Dragon God (GB)"
+      ],
+      "unexpected_starters": [],
+      "source_url": "https://www.racingtv.com/results/2026-10-24/southwell/2030"
+    }
+  ],
+  "limitations": [
+    "One racing day cannot establish calibration or an improvement.",
+    "Market quotes were observed later than the model freeze; this is a reference, not a matched-cutoff promotion test.",
+    "Changed fields are excluded from probability metrics without renormalising original probabilities.",
+    "Top-three finishes are not bookmaker-paid places; no stakes, BOG settlement or realised ROI inferred.",
+    "This reviewed day is development evidence and cannot become a fresh final test.",
+    "No model parameter, feature definition, forecast or retired holdout was changed."
+  ]
+}
