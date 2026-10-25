@@ -1,0 +1,109 @@
+{
+  "created_at": "2026-10-25T12:03:18.475120+00:00",
+  "selections": [
+    {
+      "minimum_decimal": 2.625,
+      "quote_bookmaker": "bet365",
+      "assessment": "Preferred form case; moderate conviction",
+      "why": "Twice runner-up over hurdles at Fairyhouse: an achieved RPR of 111 on heavy ground, then narrowly beaten in a 16-runner race on yielding to soft. Her last run was fourth in a 14-runner Punchestown maiden over a longer trip. Returning to about two miles on soft ground gives a concrete form case against a shorter-priced opponent.",
+      "risk": "179 days away. Light Up The Dark has substantially better Flat ability than most of this field and could improve for hurdling; absence of matched hurdle form is not evidence of poor jumping. Simply Natural has also made late jumping errors.",
+      "opposition": [
+        "Light Up The Dark",
+        "Holly's Thunder"
+      ],
+      "race_id": "2026-10-25|galway|14:17|live-research-2",
+      "horse": "SIMPLY NATURAL (GB)",
+      "display_name": "Simply Natural",
+      "time": "14:17",
+      "course": "Galway",
+      "bet_type": "Win single",
+      "recorded_at": "2026-10-25T12:03:18.475120+00:00",
+      "forecast_hash": "ec53d60d404f0294b309da6d3a7483ed391c5af552680fbdcf184d8bc9506d75",
+      "stake_placed": false,
+      "quote": {
+        "bookmaker": "bet365",
+        "fractional": "15/8",
+        "decimal": 2.875
+      },
+      "quote_observed_at": "2026-10-25T12:02:32.856Z",
+      "quote_source": "https://www.oddschecker.com/horse-racing/2026-10-25-galway/14:17/winner",
+      "price_condition_met": true,
+      "model_probability": 0.45504223298265833,
+      "shadow_probability": 0.5459359535447077,
+      "status": "CONDITIONAL_RESEARCH_SELECTION",
+      "record_hash": "5d9c834dcc870ed15303996f38666332fd9a7eaa97dc06f830d6f1863d8b64e8"
+    },
+    {
+      "minimum_decimal": 4.0,
+      "quote_bookmaker": "Ladbrokes",
+      "assessment": "Secondary price case; moderate to low conviction",
+      "why": "Second over this course and roughly this trip in January from the same mark of 92, achieving RPR 97. Second at Sedgefield in August from 92. Current card RPR 107 and TS 104 are useful cross-checks, not extra model points. He is race-fit and meets several opponents returning from long absences.",
+      "risk": "His last two fourths included losing the lead and weakening. Lightning Flash can race prominently, so an uncontested lead cannot be assumed. His soft-ground third was weaker than his better good-to-soft runs. Kourosh is dangerous on old soft-ground form if ready after 585 days.",
+      "opposition": [
+        "Lightning Flash",
+        "Justus",
+        "Kourosh"
+      ],
+      "race_id": "2026-10-25|market-rasen|15:48|live-research-2",
+      "horse": "CHARACTER TESTING (GB)",
+      "display_name": "Character Testing",
+      "time": "15:48",
+      "course": "Market Rasen",
+      "bet_type": "Win single",
+      "recorded_at": "2026-10-25T12:03:18.475120+00:00",
+      "forecast_hash": "f2f881c529b31adf7e8b0eb2f2a9b252452ddc28a8957378753a4a6c378e0984",
+      "stake_placed": false,
+      "quote": {
+        "bookmaker": "Ladbrokes",
+        "fractional": "10/3",
+        "decimal": 4.333333333333334
+      },
+      "quote_observed_at": "2026-10-25T12:02:46.610Z",
+      "quote_source": "https://www.oddschecker.com/horse-racing/2026-10-25-market-rasen/15:48/winner",
+      "price_condition_met": true,
+      "model_probability": 0.4185769860081759,
+      "shadow_probability": 0.2831867628075088,
+      "status": "CONDITIONAL_RESEARCH_SELECTION",
+      "record_hash": "7a6fa02bfbb128c55fc5c378b10604ca6818d4257917aaf7a8766ea122b10d8b"
+    },
+    {
+      "minimum_decimal": 3.25,
+      "quote_bookmaker": "bet365",
+      "assessment": "Conditions and class case; moderate to low conviction",
+      "why": "Won a 15-runner Fairyhouse maiden on heavy ground, staying on to lead after the last and win going away (achieved RPR 119). Her subsequent listed fifth and a poor handicap run came on quicker ground. Soft ground and this conditions race offer a plausible route back to her better form. Current card RPR 132 is a published assessment, not a new achieved figure.",
+      "risk": "155-day absence and a tailed-off last run mean recovery is unproven. Her heavy-ground win was over two miles; today is about two and a half. Baymount has a recent win at this trip and may control the pace; Miss Mini Bee receives 7lb before claims.",
+      "opposition": [
+        "Baymount",
+        "Miss Mini Bee"
+      ],
+      "race_id": "2026-10-25|wexford|16:10|live-research-2",
+      "horse": "DUNSY ROCK (IRE)",
+      "display_name": "Dunsy Rock",
+      "time": "16:10",
+      "course": "Wexford",
+      "bet_type": "Win single",
+      "recorded_at": "2026-10-25T12:03:18.475120+00:00",
+      "forecast_hash": "24736482dc88c991777c5fe1acf7301f1874d6feba0a4b04c878e92652083e28",
+      "stake_placed": false,
+      "quote": {
+        "bookmaker": "bet365",
+        "fractional": "9/4",
+        "decimal": 3.25
+      },
+      "quote_observed_at": "2026-10-25T12:03:01.662Z",
+      "quote_source": "https://www.oddschecker.com/horse-racing/2026-10-25-wexford/16:10/winner",
+      "price_condition_met": true,
+      "model_probability": 0.371329236714237,
+      "shadow_probability": 0.6434802396841379,
+      "status": "CONDITIONAL_RESEARCH_SELECTION",
+      "record_hash": "4dc616b70f28f96149e6fbb73b31f0b5756034450c5347ddb6e37fbdbf147641"
+    }
+  ],
+  "correction": {
+    "recorded_at": "2026-10-25T12:03:18.475120+00:00",
+    "reason": "Pre-race correction: Galway 12:32 Beg Sch is Chase, Wexford 15:40 Mdn Hdl is Hurdle; all v2 records supersede v1. No outcomes consulted.",
+    "active_version": "live-research-2",
+    "superseded_version": "live-research-1",
+    "outcomes_used": false
+  }
+}

@@ -1,0 +1,22 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const root=require('path').resolve('v3/public')+'/';
+const data=JSON.parse(fs.readFileSync(root+'today.json','utf8'));
+const elements=new Map();function el(k){if(!elements.has(k))elements.set(k,{value:'',innerHTML:'',textContent:'',handlers:{},addEventListener(k,v){this.handlers[k]=v}});return elements.get(k);}
+const ctx={console,Set,Math,Date,Number,String,JSON,Error,document:{querySelector:el,querySelectorAll:()=>[]},fetch:async()=>({ok:true,json:async()=>data})};
+vm.createContext(ctx);vm.runInContext(fs.readFileSync(root+'today.js','utf8'),ctx);
+setTimeout(()=>{try{const count=(s,p)=>(s.match(p)||[]).length;
+ assert.equal(count(el('#picks').innerHTML,/<article /g),3);
+ assert.equal(count(el('#race-list').innerHTML,/<details class="race"/g),23);
+ assert.equal(count(el('#race-list').innerHTML,/<td class="horse">/g),194);
+ assert(el('#picks').innerHTML.includes('Simply Natural'));
+ assert(el('#picks').innerHTML.includes('Character Testing'));
+ assert(el('#picks').innerHTML.includes('Dunsy Rock'));
+ el('#course').value='Market Rasen';el('#course').handlers.change();
+ assert.equal(count(el('#race-list').innerHTML,/<details class="race"/g),7);
+ assert.equal(count(el('#race-list').innerHTML,/<td class="horse">/g),43);
+ el('#course').value='';el('#search').value='Dunsy Rock';el('#search').handlers.input();
+ assert.equal(count(el('#race-list').innerHTML,/<details class="race"/g),1);
+ assert(el('#race-list').innerHTML.includes('Baymount'));
+ assert(el('#race-list').innerHTML.includes('pre-race')||el('#race-list').innerHTML.includes('Pre-race'));
+ console.log('Today UI passed: 3 picks, 23 races, 194 runners; meeting and runner search preserve complete opposing field.');
+ }catch(e){console.error(e);process.exitCode=1;}},0);
