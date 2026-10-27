@@ -6,6 +6,7 @@ on:
     paths:
       - 'data/races.json'
       - 'selection-quality.mjs'
+      - 'triple-lock.mjs'
       - 'scripts/audit-racing-model.mjs'
       - 'tests/*.test.mjs'
       - '.github/workflows/racing-model-audit.yml'
@@ -25,7 +26,7 @@ jobs:
         with:
           node-version: '22'
       - name: Run regression tests
-        run: node --test tests/audit-racing-model.test.mjs tests/selection-decision-guard.test.mjs
+        run: node --test tests/audit-racing-model.test.mjs tests/selection-decision-guard.test.mjs tests/triple-lock.test.mjs
       - name: Recalculate read-only historical metrics
         run: node scripts/audit-racing-model.mjs > racing-model-audit.json
       - name: Retain reproducible audit output
