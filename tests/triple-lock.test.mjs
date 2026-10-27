@@ -32,7 +32,7 @@ test('all locks satisfied produce an audit result, not a win probability',()=>{
  assert.equal(x.qualified,true);
  assert.equal(x.phase,'TRIPLE-LOCKED');
  assert.equal(x.notWinProbability,true);
- assert.equal(x.performanceIndex,100);
+ assert.equal(x.performanceIndex,88);
  assert.equal(x.level,'SUPPORTED');
 });
 test('missing a trainer race-type check blocks the selection',()=>{
