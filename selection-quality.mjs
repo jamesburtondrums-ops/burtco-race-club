@@ -1,3 +1,4 @@
+import {assessTripleLock} from './triple-lock.mjs';
 // Editorial WIN shortlisting: independent horse/race evidence, never the betting price.
 // A credible contender may have manageable risks and one incompletely evidenced factor.
 // Previous paper bets and historical judgements are never reclassified retroactively.
@@ -11,6 +12,9 @@ export function assessWinConfidence(pick){
  const review=pick?.winAssessment;
  const fail=reason=>({qualified:false,reason,level:'UNASSESSED'});
  if(!review||review.decision!=='win-contender')return fail('No current, reviewed WIN contender assessment');
+ const triple=assessTripleLock(pick);
+ if(!triple.qualified)return fail('Challenger C triple-lock: '+triple.reason);
+ if(triple.phase==='TRIPLE-LOCKED'&&triple.level!=='SUPPORTED')return fail('Challenger C still tentative; no high-confidence WIN');
  const publishedAt=pick.selectionPublishedAt||pick.earlyOddsLockedAt;
  if(!isTime(publishedAt)||!isTime(review.reviewedAt)||Date.parse(review.reviewedAt)>Date.parse(publishedAt))
    return fail('Review not documented before or at publication');
@@ -55,6 +59,9 @@ export function assessUnifiedBetReadiness(pick){
  if(!pick||!textOf(pick.horse)||!textOf(pick.course)||!textOf(pick.time))
    return fail('Horse, course or off-time missing');
  if(!isTime(pick.selectionPublishedAt))return fail('Pre-publication timestamp missing');
+ const triple=assessTripleLock(pick);
+ if(!triple.qualified)return fail('Challenger C triple-lock: '+triple.reason);
+ if(triple.phase==='TRIPLE-LOCKED'&&triple.level!=='SUPPORTED')return fail('Challenger C tentative: research only, not Bet Selections');
  if(!isUrl(pick.sourceUrl))return fail('Source racecard URL missing');
  const field=Number(pick.runnerCount);
  if(!Number.isInteger(field)||field<2)return fail('Declared runner field not verified');
