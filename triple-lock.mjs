@@ -9,6 +9,7 @@ const weights={evidenceIntegrity:20,abilityEdge:20,rivalResilience:25,paceCondit
 const validAt=s=>typeof s==='string'&&!Number.isNaN(Date.parse(s))&&/(Z|[+-]\d\d:\d\d)$/.test(s);
 const isUrl=s=>typeof s==='string'&&/^https:\/\/[^ ]+\.[^ /]+/.test(s);
 const okText=s=>typeof s==='string'&&s.trim().length>=12;
+const nameOk=s=>typeof s==='string'&&s.trim().length>=1;
 const fail=why=>({qualified:false,phase:'HOLD',reason:why,confidenceIndex:null,notWinProbability:true});
 const grade=g=>g===null||(typeof g==='number'&&Number.isFinite(g)&&g>=0&&g<=5);
 function gradeBounds(grades){
@@ -26,7 +27,7 @@ function tested(doc,freeze){
   return !!doc&&['verified','unknown'].includes(doc.status)&&okText(doc.note)&&isUrl(doc.sourceUrl)&&validAt(doc.checkedAt)&&Date.parse(doc.checkedAt)<=freeze;
 }
 function evidenceRunner(r,freeze){
-  if(!okText(r?.horse)||!okText(r?.trainer)||!okText(r?.jockey)||!r?.weight||!('headgear' in r)||!Number.isInteger(r?.cloth))return false;
+  if(!nameOk(r?.horse)||!nameOk(r?.trainer)||!nameOk(r?.jockey)||!r?.weight||!('headgear' in r)||!Number.isInteger(r?.cloth))return false;
   if(!Array.isArray(r?.lastThreeRuns)||!Array.isArray(r?.sources)||!r.sources.length||r.sources.some(x=>!isUrl(x)))return false;
   if(!gradeBounds(r.grades))return false;
   return domains.every(k=>tested(r.checks?.[k],freeze));
