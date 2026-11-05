@@ -35,6 +35,7 @@ header b{font-family:Georgia,serif;font-style:italic;font-size:25px;color:var(--
 @media(max-width:850px){.grid{grid-template-columns:1fr}.hostRound{grid-template-columns:minmax(0,1fr) 250px}.ruleGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.scoreGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){main{padding:12px 12px 24px}.hero h1{font-size:54px;letter-spacing:-2px}.hero p{font-size:17px}.grid{gap:12px}.card{padding:18px;border-radius:16px}.ruleGrid{grid-template-columns:1fr}.rule{min-height:0}.ruleHero{padding:10px 0}.ruleHero h1{font-size:46px}.hostActions{grid-template-columns:1fr}.lobbyTeams{grid-template-columns:1fr}.scoreGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.phone{max-width:none;width:100%;min-height:100vh;padding:0}.phone header{background:#173c28;color:#fff;border-radius:0 0 18px 18px;margin:-12px -12px 16px;padding:15px 14px}.phone header b{color:#ffe29a}.phone header span{color:#fff}.modebar{overflow:auto;flex-wrap:nowrap;padding-bottom:4px}.modebar button{white-space:nowrap}}
 @media(max-width:700px) and (orientation:portrait){body.artist-mode #artistRound .card>*:not(.portraitRotate){display:none!important}body.artist-mode #artistRound .card{min-height:calc(100vh - 24px);display:grid;place-items:center;background:var(--green);border-color:var(--gold)}body.artist-mode .portraitRotate{display:grid!important;place-items:center;text-align:center;color:#fff;padding:28px}.portraitRotate strong{display:block;font-family:Georgia,serif;color:#ffe4a0;font-size:34px;margin:12px 0}.portraitRotate span{font-size:52px;display:block;transform:rotate(90deg)}}
+body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body.live-mode main{max-width:none;padding:14px}body.live-mode #projectorRound{width:100%;max-width:none}body.live-mode .projectorTop{max-width:none}body.live-mode .projectorDraw{max-width:none;margin-top:8px}body.live-mode .projectorDraw .drawStage{height:calc(100vh - 185px);min-height:520px}body.live-mode .projectorDraw .drawCanvas{height:100%;aspect-ratio:auto}body.live-mode .liveDisplayBuzz{margin:8px 0 0!important;max-width:none!important;padding:9px!important}body.live-mode .liveDisplayBuzz .buzzWinner{font-size:32px;margin:2px 0}
 @media(orientation:landscape) and (max-height:620px){body.artist-mode #app>header,body.artist-mode #demoModes{display:none!important}body.artist-mode main{max-width:none;padding:6px;min-height:0}body.artist-mode #artistRound{max-width:none;width:100%;margin:0}.artistLandscape{grid-template-columns:220px minmax(0,1fr);gap:8px}.artistInfo{padding:10px!important}.artistInfo h1{font-size:24px;margin:4px 0}.artistWord{padding:10px;margin:6px 0}.artistWord strong{font-size:30px}.artistCanvasArea{padding:8px!important}.artistCanvasArea .artistDrawHead{margin:0 0 4px}.artistCanvasArea .artistDrawHead h2{font-size:18px}.artistCanvasArea .drawStage{height:calc(100vh - 92px);min-height:0;max-height:none}.drawTools{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-top:5px}.drawTools button{padding:8px 5px;font-size:13px}.drawTools #clearDraw{grid-column:auto!important}.artistInfo .footerNote{font-size:10px;margin-top:8px}.artistInfo .handBadge{font-size:12px}}
 </style>
 </head>
@@ -144,6 +145,7 @@ header b{font-family:Georgia,serif;font-style:italic;font-size:25px;color:var(--
           <h2>Round <span id="hostSideRound">1</span></h2>
           <div class="buttons">
             <button id="startTimer">Start Drawing</button>
+            <button id="launchLive">Launch Live Screen</button>
             <button id="nextRound">Next Round</button>
           </div>
         </div>
@@ -224,12 +226,24 @@ header b{font-family:Georgia,serif;font-style:italic;font-size:25px;color:var(--
     </div>
     <div class="projectorDraw">
       <div id="projectorLiveStatus" class="drawLive"><i class="liveDot"></i><span>Connecting to artist…</span></div>
-      <div class="drawStage">
+      <div id="projectorLiveDrawing" class="drawStage">
         <canvas id="projectorCanvas" class="drawCanvas" width="1200" height="750" aria-label="Live artist drawing"></canvas>
         <div id="projectorCanvasPlaceholder" class="drawPlaceholder">Waiting for the artist to start drawing…</div>
       </div>
+      <div id="projectorRoundReveal" class="roundReveal">
+        <div class="roundRevealDrawing">
+          <span class="eyebrow">FINISHED DRAWING</span>
+          <canvas id="projectorRevealCanvas" width="1200" height="750" aria-label="Finished drawing"></canvas>
+        </div>
+        <div class="roundRevealWord">
+          <div>
+            <small>The word was</small>
+            <strong id="projectorRevealedWord">PINEAPPLE</strong>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="card" style="margin:18px auto 0;max-width:1100px;text-align:center">
+    <div class="card liveDisplayBuzz" style="margin:18px auto 0;max-width:1100px;text-align:center">
       <span class="eyebrow">FIRST BUZZ</span>
       <div id="projectorBuzz" class="buzzWinner">WAITING…</div>
     </div>
@@ -251,11 +265,12 @@ header b{font-family:Georgia,serif;font-style:italic;font-size:25px;color:var(--
 
   function qs(name){return new URLSearchParams(location.search).get(name);}
   var SESSION=(qs('session')||'HOME01').toUpperCase().replace(/[^A-Z0-9_-]/g,'').slice(0,24)||'HOME01';
-  var explicitMode=!!(qs('play')||qs('artist')||qs('screen')||qs('host'));
-  if(qs('play')) mode='team'; else if(qs('artist')) mode='artist'; else if(qs('screen')) mode='projector'; else mode='host';
+  var explicitMode=!!(qs('play')||qs('artist')||qs('screen')||qs('live')||qs('host'));
+  if(qs('play')) mode='team'; else if(qs('artist')) mode='artist'; else if(qs('screen')||qs('live')) mode='projector'; else mode='host';
   if(qs('team')!==null){var requestedTeam=Math.max(0,Math.min(7,Number(qs('team'))||0));state.team=requestedTeam;}
   if(explicitMode)document.getElementById('demoModes').classList.add('hidden');
   document.body.classList.toggle('artist-mode',mode==='artist');
+  document.body.classList.toggle('live-mode',mode==='projector');
 
   function makeQR(){
     var q=document.getElementById('qr'); var seed=[1,1,1,1,0,1,0,1,1,1,1,1,0,0,1,1,0,1,1,0,0,1,1,0,1,1,1,1,0,1,1,0,1,1,1,0,0,1,0,1,0,1,0,1,1,1,0,1,1,0,1,0,0,1,1,1,1,0,1,0,1,0,1,1,0,1,1,1,0,0,1,0,1,1,0,1,1,0,1,0,1,1,1,1,0,0,1,0,1,1,1,0,1,0,1,0,1,1,0,1,1,1,1,0,1,0,1,1,1,1,1,1,0,1,1,1,1,1];
@@ -277,6 +292,7 @@ header b{font-family:Georgia,serif;font-style:italic;font-size:25px;color:var(--
   function renderHomeLinks(){
     var box=document.getElementById('homeDeviceLinks');if(!box)return;
     var base=location.origin+location.pathname,links=[];
+    links.push('<a class="back" style="text-align:center" target="_blank" href="'+base+'?live=1&session='+SESSION+'">OPEN LIVE DISPLAY</a>');
     links.push('<a class="back" style="text-align:center" target="_blank" href="'+base+'?artist=1&session='+SESSION+'">OPEN ARTIST DEVICE</a>');
     for(var i=0;i<state.activeTeams;i++)links.push('<a class="back" style="text-align:center" target="_blank" href="'+base+'?play=1&team='+i+'&session='+SESSION+'">OPEN TEAM '+(i+1)+' BUZZER</a>');
     box.innerHTML=links.join('');
@@ -287,6 +303,7 @@ header b{font-family:Georgia,serif;font-style:italic;font-size:25px;color:var(--
   function setMode(newMode){
     mode=newMode;
     document.body.classList.toggle('artist-mode',mode==='artist');
+    document.body.classList.toggle('live-mode',mode==='projector');
     document.querySelectorAll('#demoModes button').forEach(function(b){b.classList.toggle('active',b.dataset.mode===mode);});
     render();
     if(mode==='projector'||mode==='host')requestDrawing();
@@ -379,15 +396,21 @@ header b{font-family:Georgia,serif;font-style:italic;font-size:25px;color:var(--
     var timedOut=state.time===0&&!state.running;
     document.getElementById('hostLiveDrawing').classList.toggle('hidden',timedOut);
     document.getElementById('hostRoundReveal').classList.toggle('show',timedOut);
+    document.getElementById('projectorLiveDrawing').classList.toggle('hidden',timedOut);
+    document.getElementById('projectorRoundReveal').classList.toggle('show',timedOut);
     document.getElementById('revealedWord').textContent=state.word;
-    if(timedOut)copyRevealCanvas();
+    document.getElementById('projectorRevealedWord').textContent=state.word;
+    if(timedOut)copyRevealCanvases();
     renderScores();renderConnection();
   }
 
   function canvases(){return [document.getElementById('artistCanvas'),document.getElementById('hostCanvas'),document.getElementById('projectorCanvas')].filter(Boolean);}
-  function copyRevealCanvas(){
-    var src=document.getElementById('hostCanvas'),dst=document.getElementById('revealCanvas');if(!src||!dst)return;
-    var ctx=dst.getContext('2d');ctx.clearRect(0,0,dst.width,dst.height);ctx.drawImage(src,0,0,dst.width,dst.height);
+  function copyRevealCanvases(){
+    var src=document.getElementById('hostCanvas');if(!src)return;
+    ['revealCanvas','projectorRevealCanvas'].forEach(function(id){
+      var dst=document.getElementById(id);if(!dst)return;
+      var ctx=dst.getContext('2d');ctx.clearRect(0,0,dst.width,dst.height);ctx.drawImage(src,0,0,dst.width,dst.height);
+    });
   }
   function blankCanvas(canvas){var ctx=canvas.getContext('2d');ctx.save();ctx.globalCompositeOperation='source-over';ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.restore();}
   function paintSegment(canvas,s){
@@ -463,6 +486,10 @@ header b{font-family:Georgia,serif;font-style:italic;font-size:25px;color:var(--
   document.getElementById('beginRound1').addEventListener('click',function(){if(mode!=='host')return;state.phase='round';clearDrawing(true);render();broadcastState();showToast('Round 1 ready. Artist can view their secret word.');});
   document.getElementById('startTimer').addEventListener('click',startClock);
   document.getElementById('nextRound').addEventListener('click',nextRound);
+  document.getElementById('launchLive').addEventListener('click',function(){
+    var liveUrl=location.origin+location.pathname+'?live=1&session='+encodeURIComponent(SESSION);
+    window.open(liveUrl,'wrongHandLive','noopener,noreferrer');
+  });
   document.getElementById('teamSelect').addEventListener('change',function(e){state.team=Number(e.target.value);render();});
   document.getElementById('homeTeamCount').addEventListener('change',function(e){
     if(mode!=='host'||state.phase!=='lobby')return;
