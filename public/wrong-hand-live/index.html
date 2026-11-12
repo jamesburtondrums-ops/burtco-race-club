@@ -254,7 +254,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
   var state={phase:'lobby',round:1,artist:0,team:0,time:60,roundSeconds:60,activeTeams:8,running:false,buzzed:null,word:words[0],joined:Array(MAX_TEAMS).fill(false)};
   var ticker=null,heartbeat=null,mode='host';
   var sb=null,gameChannel=null,drawChannel=null,gameConnected=false,drawConnected=false;
-  var teamDevices=Array(MAX_TEAMS).fill(null),teamLastSeen=Array(MAX_TEAMS).fill(0),assignedTeam=null,joinRetry=null;
+  var teamDevices=Array(MAX_TEAMS).fill(null),assignedTeam=null,joinRetry=null;
   var drawingHistory=[],currentPoint=null,currentStrokeId=null,eraseMode=false,lastRound=1;
   var SUPABASE_URL='https://hksgzebtjqbepetxgpka.supabase.co';
   var SUPABASE_KEY='sb_publishable_6onhpZxEFflT8mEkeP4aEg_vdtUVwpF';
@@ -271,6 +271,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
     if(!DEVICE_ID)DEVICE_ID=(crypto&&crypto.randomUUID)?crypto.randomUUID():'d-'+Date.now()+'-'+Math.random().toString(36).slice(2);
     try{localStorage.setItem('wrong-hand-device-id',DEVICE_ID);}catch(e){}
   }
+  var PRESENCE_KEY=mode==='team'?DEVICE_ID:(mode+'-'+Math.random().toString(36).slice(2,10));
   if(explicitMode)document.getElementById('demoModes').classList.add('hidden');
   if(mode==='host'&&!suppliedSession){
     history.replaceState(null,'',location.pathname+'?host=1&session='+encodeURIComponent(SESSION));
@@ -391,6 +392,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
   function render(){
     document.body.classList.toggle('artist-mode',isActiveArtistDevice());
     phaseScreen();
+    renderLobbyTeams();
     var joinedCount=state.joined.slice(0,state.activeTeams).filter(Boolean).length;
     var allTeamsJoined=joinedCount===state.activeTeams;
     var startBtn=document.getElementById('startGame');
@@ -499,32 +501,63 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
     document.getElementById('clearDraw').addEventListener('click',function(){if(confirm('Clear the whole drawing?'))clearDrawing(true);});
   }
 
+  function getKnownTeam(){
+    if(assignedTeam!==null)return assignedTeam;
+    try{
+      var raw=localStorage.getItem('wrong-hand-team:'+SESSION);
+      if(raw!==null){
+        var n=Number(raw);
+        if(Number.isInteger(n)&&n>=0&&n<MAX_TEAMS)return n;
+      }
+    }catch(e){}
+    return null;
+  }
   function requestTeamJoin(){
     if(mode!=='team'||!gameConnected)return;
-    var known=assignedTeam;
-    if(known===null){
-      try{var raw=localStorage.getItem('wrong-hand-team:'+SESSION);if(raw!==null)known=Number(raw);}catch(e){}
-    }
-    sendGame('join',{deviceId:DEVICE_ID,knownTeam:known,ts:Date.now()});
+    sendGame('join',{deviceId:DEVICE_ID,knownTeam:getKnownTeam(),ts:Date.now()});
   }
-  function refreshConnectedTeams(){
-    if(mode!=='host')return;
-    var now=Date.now(),changed=false;
+  async function trackTeamPresence(){
+    if(mode!=='team'||!gameConnected||!gameChannel)return;
+    try{
+      await gameChannel.track({role:'team',deviceId:DEVICE_ID,team:getKnownTeam(),onlineAt:new Date().toISOString()});
+    }catch(e){console.warn('Presence track failed',e);}
+  }
+  function syncPresenceTeams(){
+    if(mode!=='host'||!gameChannel)return;
+    var presence=gameChannel.presenceState()||{};
+    var nextJoined=Array(MAX_TEAMS).fill(false);
+    Object.keys(presence).forEach(function(key){
+      var entries=Array.isArray(presence[key])?presence[key]:[];
+      entries.forEach(function(p){
+        if(!p||p.role!=='team')return;
+        var device=String(p.deviceId||'').slice(0,80);
+        var team=Number(p.team);
+        if(!device)return;
+        if(Number.isInteger(team)&&team>=0&&team<state.activeTeams){
+          if(!teamDevices[team])teamDevices[team]=device;
+          if(teamDevices[team]===device)nextJoined[team]=true;
+          return;
+        }
+        var existing=teamDevices.indexOf(device);
+        if(existing>=0&&existing<state.activeTeams)nextJoined[existing]=true;
+      });
+    });
+    var changed=false;
     for(var i=0;i<state.activeTeams;i++){
-      var online=!!teamDevices[i] && (now-teamLastSeen[i] < 7000);
-      if(state.joined[i]!==online){state.joined[i]=online;changed=true;}
-      if(!online && teamDevices[i] && now-teamLastSeen[i] >= 30000){
-        teamDevices[i]=null;
-      }
+      if(state.joined[i]!==nextJoined[i])changed=true;
+      state.joined[i]=nextJoined[i];
     }
-    if(changed){renderLobbyTeams();render();broadcastState();}
+    for(var j=state.activeTeams;j<MAX_TEAMS;j++)state.joined[j]=false;
+    renderLobbyTeams();render();
+    if(changed)broadcastState();
   }
 
   async function initRealtime(){
     try{
       var mod=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.107.0/+esm');
       sb=mod.createClient(SUPABASE_URL,SUPABASE_KEY);
-      gameChannel=sb.channel('wrong-hand-game:'+SESSION,{config:{broadcast:{self:false}}})
+      gameChannel=sb.channel('wrong-hand-game:'+SESSION,{config:{broadcast:{self:false},presence:{key:PRESENCE_KEY}}})
+        .on('presence',{event:'sync'},function(){syncPresenceTeams();})
         .on('broadcast',{event:'state'},function(msg){if(mode!=='host')applyRemoteState(msg.payload);})
         .on('broadcast',{event:'join'},function(msg){
           if(mode!=='host')return;
@@ -539,7 +572,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
           var otherSlot=teamDevices.indexOf(device);
           if(otherSlot>=0&&otherSlot!==slot)slot=otherSlot;
           if(teamDevices[slot]&&teamDevices[slot]!==device){sendGame('assignment',{deviceId:device,team:-1,reason:'occupied'});return;}
-          teamDevices[slot]=device;teamLastSeen[slot]=Date.now();state.joined[slot]=true;
+          teamDevices[slot]=device;
           sendGame('assignment',{deviceId:device,team:slot,name:teams[slot].name});
           renderLobbyTeams();render();broadcastState();
         })
@@ -550,7 +583,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
           assignedTeam=Number(p.team);state.team=assignedTeam;
           try{localStorage.setItem('wrong-hand-team:'+SESSION,String(assignedTeam));}catch(e){}
           if(p.name)teams[assignedTeam].name=String(p.name).slice(0,24);
-          render();requestTeamJoin();showToast('You are '+teams[assignedTeam].name+'.');
+          render();trackTeamPresence();requestTeamJoin();showToast('You are '+teams[assignedTeam].name+'.');
         })
         .on('broadcast',{event:'rename'},function(msg){
           if(mode!=='host')return;
@@ -569,10 +602,12 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
         .subscribe(function(status){
           gameConnected=status==='SUBSCRIBED';
           if(gameConnected){
-            if(mode==='host')broadcastState();
-            else{
+            if(mode==='host'){
+              broadcastState();
+              setTimeout(syncPresenceTeams,100);
+            }else{
               sendGame('request-state',{mode:mode});
-              if(mode==='team')requestTeamJoin();
+              if(mode==='team'){trackTeamPresence();requestTeamJoin();}
             }
           }
         });
@@ -586,12 +621,9 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
         });
       clearInterval(heartbeat);
       heartbeat=setInterval(function(){
-        if(mode==='host'&&gameConnected){
-          refreshConnectedTeams();
-          broadcastState();
-        }
+        if(mode==='host'&&gameConnected)broadcastState();
         if(mode==='team'&&gameConnected)requestTeamJoin();
-      },2000);
+      },3000);
     }catch(err){
       console.error('Realtime setup failed',err);gameConnected=false;drawConnected=false;renderConnection();
     }
@@ -623,7 +655,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
   document.getElementById('homeTeamCount').addEventListener('change',function(e){
     if(mode!=='host'||state.phase!=='lobby')return;
     state.activeTeams=Math.max(2,Math.min(MAX_TEAMS,Number(e.target.value)||8));
-    for(var ti=state.activeTeams;ti<MAX_TEAMS;ti++){teamDevices[ti]=null;teamLastSeen[ti]=0;state.joined[ti]=false;}
+    for(var ti=state.activeTeams;ti<MAX_TEAMS;ti++){teamDevices[ti]=null;state.joined[ti]=false;}
     if(state.artist>=state.activeTeams)state.artist=0;if(state.team>=state.activeTeams)state.team=0;
     renderLobbyTeams();renderTeamSelect();renderHomeLinks();render();broadcastState();
   });
