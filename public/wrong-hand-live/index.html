@@ -254,7 +254,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
   var state={phase:'lobby',round:1,artist:0,team:0,time:60,roundSeconds:60,activeTeams:8,running:false,buzzed:null,word:words[0],joined:Array(MAX_TEAMS).fill(false)};
   var ticker=null,heartbeat=null,mode='host';
   var sb=null,gameChannel=null,drawChannel=null,gameConnected=false,drawConnected=false;
-  var teamDevices=Array(MAX_TEAMS).fill(null),assignedTeam=null,joinRetry=null;
+  var teamDevices=Array(MAX_TEAMS).fill(null),teamLastSeen=Array(MAX_TEAMS).fill(0),assignedTeam=null,joinRetry=null;
   var drawingHistory=[],currentPoint=null,currentStrokeId=null,eraseMode=false,lastRound=1;
   var SUPABASE_URL='https://hksgzebtjqbepetxgpka.supabase.co';
   var SUPABASE_KEY='sb_publishable_6onhpZxEFflT8mEkeP4aEg_vdtUVwpF';
@@ -399,7 +399,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
       startBtn.disabled=!allTeamsJoined;
       startBtn.textContent=allTeamsJoined?'Start Game & Show How To Play':'Waiting for teams… '+joinedCount+'/'+state.activeTeams;
     }
-    if(joinProgress)joinProgress.textContent=allTeamsJoined?'All '+state.activeTeams+' team devices connected.':joinedCount+' of '+state.activeTeams+' team devices connected · one device per team.';
+    if(joinProgress)joinProgress.textContent=allTeamsJoined?'All '+state.activeTeams+' team devices online.':joinedCount+' of '+state.activeTeams+' team devices online · one device per team.';
     document.getElementById('hostLobbyActions').classList.toggle('hidden',mode!=='host');
     document.getElementById('homeSetup').classList.toggle('hidden',mode!=='host');
     document.getElementById('rulesHostAction').classList.toggle('hidden',mode!=='host');
@@ -501,9 +501,25 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
 
   function requestTeamJoin(){
     if(mode!=='team'||!gameConnected)return;
-    var known=null;try{var raw=localStorage.getItem('wrong-hand-team:'+SESSION);if(raw!==null)known=Number(raw);}catch(e){}
-    sendGame('join',{deviceId:DEVICE_ID,knownTeam:known});
+    var known=assignedTeam;
+    if(known===null){
+      try{var raw=localStorage.getItem('wrong-hand-team:'+SESSION);if(raw!==null)known=Number(raw);}catch(e){}
+    }
+    sendGame('join',{deviceId:DEVICE_ID,knownTeam:known,ts:Date.now()});
   }
+  function refreshConnectedTeams(){
+    if(mode!=='host')return;
+    var now=Date.now(),changed=false;
+    for(var i=0;i<state.activeTeams;i++){
+      var online=!!teamDevices[i] && (now-teamLastSeen[i] < 7000);
+      if(state.joined[i]!==online){state.joined[i]=online;changed=true;}
+      if(!online && teamDevices[i] && now-teamLastSeen[i] >= 30000){
+        teamDevices[i]=null;
+      }
+    }
+    if(changed){renderLobbyTeams();render();broadcastState();}
+  }
+
   async function initRealtime(){
     try{
       var mod=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.107.0/+esm');
@@ -523,9 +539,9 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
           var otherSlot=teamDevices.indexOf(device);
           if(otherSlot>=0&&otherSlot!==slot)slot=otherSlot;
           if(teamDevices[slot]&&teamDevices[slot]!==device){sendGame('assignment',{deviceId:device,team:-1,reason:'occupied'});return;}
-          teamDevices[slot]=device;state.joined[slot]=true;
+          teamDevices[slot]=device;teamLastSeen[slot]=Date.now();state.joined[slot]=true;
           sendGame('assignment',{deviceId:device,team:slot,name:teams[slot].name});
-          renderLobbyTeams();broadcastState();
+          renderLobbyTeams();render();broadcastState();
         })
         .on('broadcast',{event:'assignment'},function(msg){
           if(mode!=='team')return;
@@ -534,7 +550,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
           assignedTeam=Number(p.team);state.team=assignedTeam;
           try{localStorage.setItem('wrong-hand-team:'+SESSION,String(assignedTeam));}catch(e){}
           if(p.name)teams[assignedTeam].name=String(p.name).slice(0,24);
-          render();showToast('You are '+teams[assignedTeam].name+'.');
+          render();requestTeamJoin();showToast('You are '+teams[assignedTeam].name+'.');
         })
         .on('broadcast',{event:'rename'},function(msg){
           if(mode!=='host')return;
@@ -570,9 +586,12 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
         });
       clearInterval(heartbeat);
       heartbeat=setInterval(function(){
-        if(mode==='host'&&gameConnected)broadcastState();
-        if(mode==='team'&&gameConnected&&assignedTeam===null)requestTeamJoin();
-      },1000);
+        if(mode==='host'&&gameConnected){
+          refreshConnectedTeams();
+          broadcastState();
+        }
+        if(mode==='team'&&gameConnected)requestTeamJoin();
+      },2000);
     }catch(err){
       console.error('Realtime setup failed',err);gameConnected=false;drawConnected=false;renderConnection();
     }
@@ -604,7 +623,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
   document.getElementById('homeTeamCount').addEventListener('change',function(e){
     if(mode!=='host'||state.phase!=='lobby')return;
     state.activeTeams=Math.max(2,Math.min(MAX_TEAMS,Number(e.target.value)||8));
-    for(var ti=state.activeTeams;ti<MAX_TEAMS;ti++){teamDevices[ti]=null;state.joined[ti]=false;}
+    for(var ti=state.activeTeams;ti<MAX_TEAMS;ti++){teamDevices[ti]=null;teamLastSeen[ti]=0;state.joined[ti]=false;}
     if(state.artist>=state.activeTeams)state.artist=0;if(state.team>=state.activeTeams)state.team=0;
     renderLobbyTeams();renderTeamSelect();renderHomeLinks();render();broadcastState();
   });
