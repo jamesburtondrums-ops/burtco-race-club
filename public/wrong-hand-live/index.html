@@ -48,7 +48,6 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
   <div id="demoModes" class="modebar hidden">
     <button data-mode="host" class="active">Host Screen</button>
     <button data-mode="team">Team Device</button>
-    <button data-mode="artist">Artist Device</button>
     <button data-mode="projector">Big Screen</button>
   </div>
 
@@ -275,7 +274,7 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
   var generatedSession='WH'+Math.random().toString(36).slice(2,7).toUpperCase();
   var SESSION=(suppliedSession||generatedSession).toUpperCase().replace(/[^A-Z0-9_-]/g,'').slice(0,24)||generatedSession;
   var explicitMode=!!(qs('play')||qs('artist')||qs('screen')||qs('live')||qs('host'));
-  if(qs('play')) mode='team'; else if(qs('artist')) mode='artist'; else if(qs('screen')||qs('live')) mode='projector'; else mode='host';
+  if(qs('play')||qs('artist')) mode='team'; else if(qs('screen')||qs('live')) mode='projector'; else mode='host';
   var DEVICE_ID='';
   if(mode==='team'){
     try{DEVICE_ID=localStorage.getItem('wrong-hand-device-id')||'';}catch(e){}
@@ -286,7 +285,7 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
   if(mode==='host'&&!suppliedSession){
     history.replaceState(null,'',location.pathname+'?host=1&session='+encodeURIComponent(SESSION));
   }
-  document.body.classList.toggle('artist-mode',mode==='artist');
+  document.body.classList.remove('artist-mode');
   document.body.classList.toggle('live-mode',mode==='projector');
 
   async function makeQR(){
@@ -378,7 +377,7 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
     stopTimer();state.round++;state.artist=(state.artist+1)%state.activeTeams;state.word=words[(state.round-1)%words.length];state.time=state.roundSeconds;state.running=false;state.buzzed=null;
     clearDrawing(true);render();broadcastState();
   }
-  function isActiveArtistDevice(){return mode==='artist'||(mode==='team'&&assignedTeam!==null&&assignedTeam===state.artist);}
+  function isActiveArtistDevice(){return mode==='team'&&assignedTeam!==null&&assignedTeam===state.artist;}
   function phaseScreen(){
     document.querySelectorAll('.screen').forEach(function(el){el.classList.add('hidden');});
     if(state.phase==='lobby'){
@@ -389,7 +388,6 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
     if(state.phase==='rules'){document.getElementById('rules').classList.remove('hidden');return;}
     if(mode==='host')document.getElementById('hostRound').classList.remove('hidden');
     if(mode==='team'){document.getElementById(isActiveArtistDevice()?'artistRound':'teamRound').classList.remove('hidden');}
-    if(mode==='artist')document.getElementById('artistRound').classList.remove('hidden');
     if(mode==='projector')document.getElementById('projectorRound').classList.remove('hidden');
   }
   function renderConnection(){
@@ -559,8 +557,8 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
           }
         });
       drawChannel=sb.channel('wrong-hand-draw:'+SESSION,{config:{broadcast:{self:false}}})
-        .on('broadcast',{event:'segment'},function(msg){var p=msg.payload||{};if(Number(p.round)!==state.round||mode==='artist')return;addSegment(p.segment,false);})
-        .on('broadcast',{event:'sync'},function(msg){var p=msg.payload||{};if(Number(p.round)!==state.round||mode==='artist'||!Array.isArray(p.segments))return;drawingHistory=p.segments.slice(-6000);redrawCanvases();})
+        .on('broadcast',{event:'segment'},function(msg){var p=msg.payload||{};if(Number(p.round)!==state.round)return;addSegment(p.segment,false);})
+        .on('broadcast',{event:'sync'},function(msg){var p=msg.payload||{};if(Number(p.round)!==state.round||!Array.isArray(p.segments))return;drawingHistory=p.segments.slice(-6000);redrawCanvases();})
         .on('broadcast',{event:'clear'},function(msg){var p=msg.payload||{};if(Number(p.round)!==state.round)return;clearDrawing(false);})
         .on('broadcast',{event:'request-drawing'},function(msg){if(isActiveArtistDevice()&&Number((msg.payload||{}).round)===state.round)syncDrawing();})
         .subscribe(function(status){
