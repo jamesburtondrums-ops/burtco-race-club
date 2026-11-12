@@ -1,0 +1,209 @@
+{
+  "date": "2026-11-12",
+  "raceDate": "2026-11-11",
+  "observedAt": "2026-11-12T09:20:19Z",
+  "id": "2026-11-12-dundalk-warwick",
+  "rights": {
+    "status": "review-only",
+    "permissionVerified": false,
+    "modelFeatureUseAllowed": false,
+    "note": "No reuse licence or permission was established. These are source-linked research references only; do not import them into the licensed prior-run archive or use as model features."
+  },
+  "raceReviews": [
+    {
+      "raceId": "2026-11-11-DUN-1500",
+      "course": "Dundalk",
+      "raceTime": "15:00",
+      "code": "Flat AW nursery handicap",
+      "trip": "6f",
+      "starters": 8,
+      "going": "Standard",
+      "resultSourceUrl": "https://www.irishracing.com/raceresults/Wed-11th-Nov-2026/Dundalk/1500",
+      "stewardsSourceUrl": "https://www.irishracing.com/raceresults/Wed-11th-Nov-2026/Dundalk/1500",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "sourceRightsStatus": "review-only",
+      "permissionVerified": false,
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-DUN-1702",
+      "course": "Dundalk",
+      "raceTime": "17:02",
+      "code": "Flat AW extended handicap",
+      "trip": "7f",
+      "starters": 14,
+      "going": "Standard",
+      "resultSourceUrl": "https://www.irishracing.com/galway-races/raceresults/Wed-11th-Nov-2026/Dundalk/1702",
+      "stewardsSourceUrl": "https://www.irishracing.com/galway-races/raceresults/Wed-11th-Nov-2026/Dundalk/1702",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "sourceRightsStatus": "review-only",
+      "permissionVerified": false,
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-DUN-1732",
+      "course": "Dundalk",
+      "raceTime": "17:32",
+      "code": "Flat AW extended handicap",
+      "trip": "1m 2f 150y",
+      "starters": 14,
+      "going": "Standard",
+      "resultSourceUrl": "https://www.irishracing.com/raceresults/Wed-11th-Nov-2026/Dundalk/1732",
+      "stewardsSourceUrl": "https://www.irishracing.com/raceresults/Wed-11th-Nov-2026/Dundalk/1732",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "sourceRightsStatus": "review-only",
+      "permissionVerified": false,
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-WAR-1451",
+      "course": "Warwick",
+      "raceTime": "14:51",
+      "code": "Hurdle handicap",
+      "trip": "3m 1f 5y",
+      "starters": 5,
+      "going": "Good",
+      "resultSourceUrl": "https://www.sportinglife.com/racing/results/2026-11-11/warwick/948017/bng-made-easy-with-reverte-handicap-hurdle",
+      "stewardsSourceUrl": "https://www.britishhorseracing.com/racing/stewards-reports/",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "sourceRightsStatus": "review-only",
+      "permissionVerified": false,
+      "featureEligible": false,
+      "stewardsNote": "No race-specific BHA stewards report was retrieved; runner comments and the incorrect-headgear non-runner reason were checked on result pages only."
+    },
+    {
+      "raceId": "2026-11-11-WAR-1522",
+      "course": "Warwick",
+      "raceTime": "15:22",
+      "code": "Chase handicap",
+      "trip": "2m 54y",
+      "starters": 6,
+      "going": "Good; good to soft in places on chase course",
+      "resultSourceUrl": "https://www.sportinglife.com/racing/results/2026-11-11/warwick/948018/pegasus-handicap-chase",
+      "stewardsSourceUrl": "https://www.britishhorseracing.com/racing/stewards-reports/",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "sourceRightsStatus": "review-only",
+      "permissionVerified": false,
+      "featureEligible": false,
+      "stewardsNote": "No race-specific BHA stewards report was retrieved; jumping observations are result-page running comments."
+    }
+  ],
+  "namedNotes": [
+    {
+      "raceId": "2026-11-11-DUN-1500",
+      "horse": "Professor Finnegan",
+      "category": "ran_around",
+      "summary": "Rider reported the horse ran around approximately 1.5f out.",
+      "sourceUrl": "https://www.irishracing.com/raceresults/Wed-11th-Nov-2026/Dundalk/1500",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-DUN-1500",
+      "horse": "Lady H",
+      "category": "hung_right",
+      "summary": "Rider reported the horse hung right throughout.",
+      "sourceUrl": "https://www.irishracing.com/raceresults/Wed-11th-Nov-2026/Dundalk/1500",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-DUN-1500",
+      "horse": "Imply",
+      "category": "never_travelled",
+      "summary": "Rider reported the horse never travelled.",
+      "sourceUrl": "https://www.irishracing.com/raceresults/Wed-11th-Nov-2026/Dundalk/1500",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-DUN-1702",
+      "horse": "Estrallita",
+      "category": "slow_start",
+      "summary": "Rider reported the horse was slowly away.",
+      "sourceUrl": "https://www.irishracing.com/galway-races/raceresults/Wed-11th-Nov-2026/Dundalk/1702",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-DUN-1732",
+      "horse": "Almost Okay",
+      "category": "hung_left",
+      "summary": "Rider reported the horse hung left throughout.",
+      "sourceUrl": "https://www.irishracing.com/raceresults/Wed-11th-Nov-2026/Dundalk/1732",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-WAR-1451",
+      "horse": "Jaytee",
+      "category": "non_runner_incorrect_headgear",
+      "summary": "Listed as withdrawn for incorrect headgear; retain as a declaration/field-integrity event, not a performance signal.",
+      "sourceUrl": "https://www.racingpost.com/results/85/warwick/2026-11-11/930589/",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-WAR-1522",
+      "horse": "Tropical Talent",
+      "category": "jumping_error",
+      "summary": "Result comment records an awkward first and a mistake at the last before being headed.",
+      "sourceUrl": "https://www.sportinglife.com/racing/results/2026-11-11/warwick/948018/pegasus-handicap-chase",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-WAR-1522",
+      "horse": "Boom Boom",
+      "category": "jumping_error",
+      "summary": "Result comment records a mistake at the eighth fence.",
+      "sourceUrl": "https://www.sportinglife.com/racing/results/2026-11-11/warwick/948018/pegasus-handicap-chase",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-WAR-1522",
+      "horse": "Mary",
+      "category": "jumping_error",
+      "summary": "Result comment records hitting the first and a further mistake at the fourth.",
+      "sourceUrl": "https://www.sportinglife.com/racing/results/2026-11-11/warwick/948018/pegasus-handicap-chase",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    },
+    {
+      "raceId": "2026-11-11-WAR-1522",
+      "horse": "Alba Crus",
+      "category": "jumping_errors_pulled_up",
+      "summary": "Result comment records an untidy first, not fluent sixth, slow eighth, loss of ground and a subsequent pull-up.",
+      "sourceUrl": "https://www.sportinglife.com/racing/results/2026-11-11/warwick/948018/pegasus-handicap-chase",
+      "observedAt": "2026-11-12T09:20:19Z",
+      "permissionVerified": false,
+      "sourceRightsStatus": "review-only",
+      "featureEligible": false
+    }
+  ],
+  "counts": {
+    "distinctRaceReviews": 5,
+    "startersInReviewedRaces": 47,
+    "distinctNamedNotes": 10
+  },
+  "note": "47 starters were reviewed in the local reference-only archive. The branch review manifest records race-level coverage and named factual notes only; it is not a licensed full-field training import."
+}
