@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-12",
+  "observedAt": "2026-11-12T09:20:19Z",
+  "ledger": {},
+  "research": {
+    "previousReviewOnlyRaceReferences": 4,
+    "newReviewOnlyRaceReferences": 5,
+    "cumulativeReviewOnlyRaceReferences": 9,
+    "previousReviewOnlyStarterReferences": 49,
+    "newReviewOnlyStarterReferences": 47,
+    "cumulativeReviewOnlyStarterReferences": 96,
+    "previousNamedSourceNotes": 12,
+    "newNamedSourceNotes": 10,
+    "cumulativeNamedSourceNotes": 22,
+    "permissionedFullFieldRaces": 0,
+    "permissionedRunnerRows": 0,
+    "licensedComments": 0,
+    "sectionalsWithPar": 0,
+    "officialPerformanceFigures": 0,
+    "goalRaces": 500,
+    "goalRunners": 2000,
+    "retrainEligible": false
+  },
+  "baseline": {
+    "timestampedQuotes": 0,
+    "completeRaceMarketAvailable": false,
+    "walkForwardReady": false
+  },
+  "canonicalArchive": {
+    "priorRunsJsonCount": 0,
+    "privateHistoricalRunsCount": 0,
+    "permissionedRunnerRowsAfterRun": 0
+  },
+  "blockers": [
+    "No source reuse licence or written permission established for the result-page data; five race reviews and 47 starter references remain review-only and are excluded from the licensed prior-run archive.",
+    "No race-specific BHA stewards report was retrieved for the two Warwick races; only result-page running comments were reviewed.",
+    "BHA latest-performance-figures export endpoint returned HTTP 418; no BHA performance figures imported.",
+    "No rights-cleared actual sectionals plus matching track/trip/going par.",
+    "No timestamped pre-off complete-field market for these races.",
+    "No prospective frozen Challenger C cards; walk-forward evaluation remains unavailable.",
+    "No trainer course/race-type or jockey opportunity denominators were verified in this run."
+  ],
+  "existingBacktest": "Not rerun: no new licensed historical runs or prospective frozen predictions were added."
+}
