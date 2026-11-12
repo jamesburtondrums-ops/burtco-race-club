@@ -80,7 +80,8 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
       <p class="footerNote">Put the Live Display on the TV/projector, then let each team scan the join QR on its own phone or tablet.</p>
     </div>
     <div id="hostLobbyActions" class="buttons" style="max-width:520px;margin:14px auto 0">
-      <button id="startGame">Start Game &amp; Show How To Play</button>
+      <div id="joinProgress" class="phoneStatus" style="margin:0">Waiting for team devices…</div>
+      <button id="startGame" disabled>Waiting for teams…</button>
     </div>
   </section>
 
@@ -177,7 +178,7 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
       </div>
       <div id="teamStatus" class="phoneStatus">Waiting for the host…</div>
       <div class="buzzerWrap"><button id="buzzer" class="buzzer" disabled>BUZZ!</button></div>
-      <p class="footerNote">This device stays registered to your team and becomes the Artist drawing device automatically when it is your turn.</p>
+      <p class="footerNote">One device per team. This screen becomes your drawing board only when your team is the Artist, then returns to the buzzer.</p>
     </div>
   </section>
 
@@ -316,7 +317,7 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
     }
     state.team=assignedTeam;
     title.textContent=teams[assignedTeam].name.toUpperCase();
-    assign.textContent='Registered as Team '+(assignedTeam+1)+' · this device is locked to this team.';
+    assign.textContent='Registered as Team '+(assignedTeam+1)+' · this is the only device assigned to this team.';
     wrap.classList.remove('hidden');
     if(document.activeElement!==input)input.value=teams[assignedTeam].name;
   }
@@ -378,7 +379,10 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
     stopTimer();state.round++;state.artist=(state.artist+1)%state.activeTeams;state.word=words[(state.round-1)%words.length];state.time=state.roundSeconds;state.running=false;state.buzzed=null;
     clearDrawing(true);render();broadcastState();
   }
-  function isActiveArtistDevice(){return mode==='team'&&assignedTeam!==null&&assignedTeam===state.artist;}
+  function isActiveArtistDevice(){
+    if(mode!=='team'||assignedTeam===null||assignedTeam!==state.artist||state.phase!=='round')return false;
+    return state.running||state.time===state.roundSeconds;
+  }
   function phaseScreen(){
     document.querySelectorAll('.screen').forEach(function(el){el.classList.add('hidden');});
     if(state.phase==='lobby'){
@@ -399,6 +403,15 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
   function render(){
     document.body.classList.toggle('artist-mode',isActiveArtistDevice());
     phaseScreen();
+    var joinedCount=state.joined.slice(0,state.activeTeams).filter(Boolean).length;
+    var allTeamsJoined=joinedCount===state.activeTeams;
+    var startBtn=document.getElementById('startGame');
+    var joinProgress=document.getElementById('joinProgress');
+    if(startBtn){
+      startBtn.disabled=!allTeamsJoined;
+      startBtn.textContent=allTeamsJoined?'Start Game & Show How To Play':'Waiting for teams… '+joinedCount+'/'+state.activeTeams;
+    }
+    if(joinProgress)joinProgress.textContent=allTeamsJoined?'All '+state.activeTeams+' team devices connected.':joinedCount+' of '+state.activeTeams+' team devices connected · one device per team.';
     document.getElementById('hostLobbyActions').classList.toggle('hidden',mode!=='host');
     document.getElementById('homeSetup').classList.toggle('hidden',mode!=='host');
     document.getElementById('rulesHostAction').classList.toggle('hidden',mode!=='host');
@@ -426,7 +439,8 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
     if(isArtist)status='Your team is drawing — your buzzer is locked.';
     else if(state.running&&!locked)status='BUZZERS OPEN — hit it when you know the word!';
     else if(state.running&&locked)status='Buzzer locked while the host checks the answer.';
-    else if(state.time===0)status='Time is up.';
+    else if(state.time===0)status='Round finished — your buzzer will be ready for the next round.';
+    else if(!state.running&&state.time<state.roundSeconds)status='Round finished — waiting for the host to move on.';
     document.getElementById('teamStatus').textContent=status;
     document.getElementById('startTimer').textContent=state.running?'Drawing in progress…':'Start Drawing';
     document.getElementById('startTimer').disabled=state.running;
@@ -519,7 +533,10 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
             if(Number.isInteger(known)&&known>=0&&known<state.activeTeams&&!teamDevices[known])slot=known;
             else slot=teamDevices.slice(0,state.activeTeams).findIndex(function(v){return !v;});
           }
-          if(slot<0){sendGame('assignment',{deviceId:device,team:-1});return;}
+          if(slot<0){sendGame('assignment',{deviceId:device,team:-1,reason:'full'});return;}
+          var otherSlot=teamDevices.indexOf(device);
+          if(otherSlot>=0&&otherSlot!==slot)slot=otherSlot;
+          if(teamDevices[slot]&&teamDevices[slot]!==device){sendGame('assignment',{deviceId:device,team:-1,reason:'occupied'});return;}
           teamDevices[slot]=device;state.joined[slot]=true;
           sendGame('assignment',{deviceId:device,team:slot,name:teams[slot].name});
           renderLobbyTeams();broadcastState();
@@ -576,7 +593,12 @@ body.live-mode #app>header,body.live-mode #demoModes{display:none!important}body
   }
 
   document.getElementById('demoModes').addEventListener('click',function(e){var b=e.target.closest('button[data-mode]');if(b)setMode(b.dataset.mode);});
-  document.getElementById('startGame').addEventListener('click',function(){if(mode!=='host')return;state.phase='rules';render();broadcastState();});
+  document.getElementById('startGame').addEventListener('click',function(){
+    if(mode!=='host')return;
+    var joinedCount=state.joined.slice(0,state.activeTeams).filter(Boolean).length;
+    if(joinedCount!==state.activeTeams){showToast('Every team needs exactly one registered device before starting.');render();return;}
+    state.phase='rules';render();broadcastState();
+  });
   document.getElementById('beginRound1').addEventListener('click',function(){if(mode!=='host')return;state.phase='round';clearDrawing(true);render();broadcastState();showToast('Round 1 ready. Artist can view their secret word.');});
   document.getElementById('startTimer').addEventListener('click',startClock);
   document.getElementById('nextRound').addEventListener('click',nextRound);
