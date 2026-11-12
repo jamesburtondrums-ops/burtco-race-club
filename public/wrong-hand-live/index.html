@@ -271,7 +271,6 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
     if(!DEVICE_ID)DEVICE_ID=(crypto&&crypto.randomUUID)?crypto.randomUUID():'d-'+Date.now()+'-'+Math.random().toString(36).slice(2);
     try{localStorage.setItem('wrong-hand-device-id',DEVICE_ID);}catch(e){}
   }
-  var PRESENCE_KEY=mode==='team'?DEVICE_ID:(mode+'-'+Math.random().toString(36).slice(2,10));
   if(explicitMode)document.getElementById('demoModes').classList.add('hidden');
   if(mode==='host'&&!suppliedSession){
     history.replaceState(null,'',location.pathname+'?host=1&session='+encodeURIComponent(SESSION));
@@ -330,6 +329,9 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
   }
   function stopTimer(){if(ticker){clearInterval(ticker);ticker=null;}}
   function publicState(){
+    if(mode==='host'){
+      for(var i=0;i<MAX_TEAMS;i++)state.joined[i]=i<state.activeTeams&&!!teamDevices[i];
+    }
     return {phase:state.phase,round:state.round,artist:state.artist,time:state.time,roundSeconds:state.roundSeconds,activeTeams:state.activeTeams,running:state.running,buzzed:state.buzzed,scores:teams.map(function(t){return t.score;}),names:teams.map(function(t){return t.name;}),joined:state.joined.slice()};
   }
   function sendGame(event,payload){
@@ -393,7 +395,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
     document.body.classList.toggle('artist-mode',isActiveArtistDevice());
     phaseScreen();
     renderLobbyTeams();
-    var joinedCount=state.joined.slice(0,state.activeTeams).filter(Boolean).length;
+    var joinedCount=mode==='host'?teamDevices.slice(0,state.activeTeams).filter(Boolean).length:state.joined.slice(0,state.activeTeams).filter(Boolean).length;
     var allTeamsJoined=joinedCount===state.activeTeams;
     var startBtn=document.getElementById('startGame');
     var joinProgress=document.getElementById('joinProgress');
@@ -516,48 +518,12 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
     if(mode!=='team'||!gameConnected)return;
     sendGame('join',{deviceId:DEVICE_ID,knownTeam:getKnownTeam(),ts:Date.now()});
   }
-  async function trackTeamPresence(){
-    if(mode!=='team'||!gameConnected||!gameChannel)return;
-    try{
-      await gameChannel.track({role:'team',deviceId:DEVICE_ID,team:getKnownTeam(),onlineAt:new Date().toISOString()});
-    }catch(e){console.warn('Presence track failed',e);}
-  }
-  function syncPresenceTeams(){
-    if(mode!=='host'||!gameChannel)return;
-    var presence=gameChannel.presenceState()||{};
-    var nextJoined=Array(MAX_TEAMS).fill(false);
-    Object.keys(presence).forEach(function(key){
-      var entries=Array.isArray(presence[key])?presence[key]:[];
-      entries.forEach(function(p){
-        if(!p||p.role!=='team')return;
-        var device=String(p.deviceId||'').slice(0,80);
-        var team=Number(p.team);
-        if(!device)return;
-        if(Number.isInteger(team)&&team>=0&&team<state.activeTeams){
-          if(!teamDevices[team])teamDevices[team]=device;
-          if(teamDevices[team]===device)nextJoined[team]=true;
-          return;
-        }
-        var existing=teamDevices.indexOf(device);
-        if(existing>=0&&existing<state.activeTeams)nextJoined[existing]=true;
-      });
-    });
-    var changed=false;
-    for(var i=0;i<state.activeTeams;i++){
-      if(state.joined[i]!==nextJoined[i])changed=true;
-      state.joined[i]=nextJoined[i];
-    }
-    for(var j=state.activeTeams;j<MAX_TEAMS;j++)state.joined[j]=false;
-    renderLobbyTeams();render();
-    if(changed)broadcastState();
-  }
 
   async function initRealtime(){
     try{
       var mod=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.107.0/+esm');
       sb=mod.createClient(SUPABASE_URL,SUPABASE_KEY);
-      gameChannel=sb.channel('wrong-hand-game:'+SESSION,{config:{broadcast:{self:false},presence:{key:PRESENCE_KEY}}})
-        .on('presence',{event:'sync'},function(){syncPresenceTeams();})
+      gameChannel=sb.channel('wrong-hand-game:'+SESSION,{config:{broadcast:{self:false}}})
         .on('broadcast',{event:'state'},function(msg){if(mode!=='host')applyRemoteState(msg.payload);})
         .on('broadcast',{event:'join'},function(msg){
           if(mode!=='host')return;
@@ -573,8 +539,9 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
           if(otherSlot>=0&&otherSlot!==slot)slot=otherSlot;
           if(teamDevices[slot]&&teamDevices[slot]!==device){sendGame('assignment',{deviceId:device,team:-1,reason:'occupied'});return;}
           teamDevices[slot]=device;
+          state.joined[slot]=true;
           sendGame('assignment',{deviceId:device,team:slot,name:teams[slot].name});
-          renderLobbyTeams();render();broadcastState();
+          render();broadcastState();
         })
         .on('broadcast',{event:'assignment'},function(msg){
           if(mode!=='team')return;
@@ -583,7 +550,10 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
           assignedTeam=Number(p.team);state.team=assignedTeam;
           try{localStorage.setItem('wrong-hand-team:'+SESSION,String(assignedTeam));}catch(e){}
           if(p.name)teams[assignedTeam].name=String(p.name).slice(0,24);
-          render();trackTeamPresence();requestTeamJoin();showToast('You are '+teams[assignedTeam].name+'.');
+          var firstAssignment=!document.body.dataset.teamAssigned;
+          document.body.dataset.teamAssigned='1';
+          render();
+          if(firstAssignment)showToast('You are '+teams[assignedTeam].name+'.');
         })
         .on('broadcast',{event:'rename'},function(msg){
           if(mode!=='host')return;
@@ -604,10 +574,9 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
           if(gameConnected){
             if(mode==='host'){
               broadcastState();
-              setTimeout(syncPresenceTeams,100);
             }else{
               sendGame('request-state',{mode:mode});
-              if(mode==='team'){trackTeamPresence();requestTeamJoin();}
+              if(mode==='team')requestTeamJoin();
             }
           }
         });
@@ -622,8 +591,11 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
       clearInterval(heartbeat);
       heartbeat=setInterval(function(){
         if(mode==='host'&&gameConnected)broadcastState();
-        if(mode==='team'&&gameConnected)requestTeamJoin();
-      },3000);
+        if(mode==='team'&&gameConnected){
+          requestTeamJoin();
+          sendGame('request-state',{mode:'team',deviceId:DEVICE_ID});
+        }
+      },2000);
     }catch(err){
       console.error('Realtime setup failed',err);gameConnected=false;drawConnected=false;renderConnection();
     }
@@ -632,7 +604,7 @@ body.live-mode{overflow:hidden;background:#10231a}body.live-mode:before{display:
   document.getElementById('demoModes').addEventListener('click',function(e){var b=e.target.closest('button[data-mode]');if(b)setMode(b.dataset.mode);});
   document.getElementById('startGame').addEventListener('click',function(){
     if(mode!=='host')return;
-    var joinedCount=state.joined.slice(0,state.activeTeams).filter(Boolean).length;
+    var joinedCount=teamDevices.slice(0,state.activeTeams).filter(Boolean).length;
     if(joinedCount!==state.activeTeams){showToast('Every team needs exactly one registered device before starting.');render();return;}
     state.phase='rules';render();broadcastState();
   });
