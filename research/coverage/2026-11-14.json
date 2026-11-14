@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-14",
+  "scope": "Cheltenham 2026-11-13 13:10,15:30,16:00 retrospective",
+  "newRaceReviewReferences": 3,
+  "newFullyReconciledFullFieldRaces": 0,
+  "newPermissionedRunnerRows": 0,
+  "newOfficialBhaPerformanceFigures": 0,
+  "newSectionalParObservations": 0,
+  "newProspectivelyFrozenCards": 0,
+  "newCompleteAsAtMarketBaselines": 0,
+  "previousVerifiedReviewOnlyRaceReferencesAsOfNov12": 9,
+  "cumulativeVerifiedReviewOnlyRaceReferences": null,
+  "cumulativeReason": "13 Nov and 14 Nov reviews not deduplicated against canonical race IDs; avoid falsely claiming cumulative count",
+  "permissionedArchiveRaceTotal": 0,
+  "permissionedArchiveRunnerTotal": 0,
+  "targets": {
+    "races": 500,
+    "runnerObservations": 2000
+  },
+  "walkForwardEligible": false,
+  "measuredImprovement": null,
+  "blockers": [
+    "Source reuse rights for runner-level full-field records unconfirmed",
+    "16:00 Cheltenham result requires full-field and winner reconciliation",
+    "Exact source observation seconds not recorded",
+    "No pre-off frozen cards and full-field as-at market quotes"
+  ],
+  "reviewPath": "research/reviews/2026-11-14-cheltenham-execution-shadow.md",
+  "sourceUrls": [
+    "https://www.sportinglife.com/racing/meeting/2026-11-13/cheltenham/122543",
+    "https://www.horseracing.net/results/cheltenham/13-11-26",
+    "https://www.racingpost.com/results/11/cheltenham/2026-11-13/930627/"
+  ]
+}
