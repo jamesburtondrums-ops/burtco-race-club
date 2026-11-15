@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-15",
+  "mode": "retrospective-shadow",
+  "reviewed_races": [
+    {
+      "date": "2026-11-14",
+      "course": "Wetherby",
+      "scheduled_time": "12:48",
+      "source_url": "https://www.horseracing.net/results/wetherby/14-11-26"
+    },
+    {
+      "date": "2026-11-14",
+      "course": "Wetherby",
+      "scheduled_time": "14:30",
+      "source_url": "https://www.sportinglife.com/racing/results/2026-11-14/wetherby/948529/boyle-sports-handicap-chase-gbb-race"
+    },
+    {
+      "date": "2026-11-14",
+      "course": "Cheltenham",
+      "scheduled_time": "14:20",
+      "source_url": "https://www.racingpost.com/results/11/cheltenham/2026-11-14/930632/"
+    }
+  ],
+  "new_review_references": 3,
+  "new_permission_cleared_full_field_runner_rows": 0,
+  "new_individually_verified_prior_run_rows": 0,
+  "new_prospective_frozen_cards": 0,
+  "walk_forward_eligible_cards": 0,
+  "model_accuracy_gain": "not measured",
+  "archive_cumulative": "not verified; deduplication and rights reconciliation pending",
+  "notes": "Sources observed during 15 Nov research run, post-race. No pre-off capture or full-field v4 gate. A/B1 and paper ledger unchanged."
+}
