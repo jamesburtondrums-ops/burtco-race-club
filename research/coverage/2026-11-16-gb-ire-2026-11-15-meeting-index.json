@@ -1,0 +1,344 @@
+{
+  "research_date": "2026-11-16",
+  "race_date": "2026-11-15",
+  "scope": "GB/IRE only",
+  "status": "meeting index from published retrospective results; race times provisional; NOT full-field verified or model eligible",
+  "meeting_count": 3,
+  "race_count": 20,
+  "reported_starter_count": 235,
+  "source_urls": [
+    "https://stablebet.co.uk/racing-results/2026-11-15/",
+    "https://www.irishracing.com/raceresults/Sun-15th-Nov-2026",
+    "https://insights.betfred.com/horse-racing/results/2026-11-15/"
+  ],
+  "rights_status": "unconfirmed; do not bulk import copyrighted runner details",
+  "race_time_note": "Providers differ between scheduled and actual off times; index labels use the result-grid display times, not confirmed off times",
+  "going_conflicts": [
+    {
+      "course": "Cheltenham",
+      "going_sources": [
+        {
+          "source": "https://www.irishracing.com/raceresults/Sun-15th-Nov-2026/Cheltenham",
+          "value": "Good"
+        },
+        {
+          "source": "https://insights.betfred.com/horse-racing/results/2026-11-15/",
+          "value": "Good (good to firm in places; watered), changed to Good after race 3"
+        }
+      ]
+    },
+    {
+      "course": "Fontwell",
+      "going_sources": [
+        {
+          "source": "https://www.irishracing.com/raceresults/Sun-15th-Nov-2026/Fontwell",
+          "value": "Soft (good to soft in places)"
+        },
+        {
+          "source": "https://stablebet.co.uk/racing-results/2026-11-15/",
+          "value": "Good to soft (good in places)"
+        }
+      ]
+    },
+    {
+      "course": "Navan",
+      "going_sources": [
+        {
+          "source": "https://www.irishracing.com/raceresults/Sun-15th-Nov-2026",
+          "value": "Good - Yielding"
+        }
+      ]
+    }
+  ],
+  "races": [
+    {
+      "provisional_race_key": "2026-11-15|Cheltenham|12:50",
+      "date": "2026-11-15",
+      "course": "Cheltenham",
+      "country": "GB",
+      "display_time": "12:50",
+      "reported_starters": 11,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Cheltenham|13:25",
+      "date": "2026-11-15",
+      "course": "Cheltenham",
+      "country": "GB",
+      "display_time": "13:25",
+      "reported_starters": 8,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Cheltenham|14:00",
+      "date": "2026-11-15",
+      "course": "Cheltenham",
+      "country": "GB",
+      "display_time": "14:00",
+      "reported_starters": 9,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Cheltenham|14:35",
+      "date": "2026-11-15",
+      "course": "Cheltenham",
+      "country": "GB",
+      "display_time": "14:35",
+      "reported_starters": 8,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Cheltenham|15:10",
+      "date": "2026-11-15",
+      "course": "Cheltenham",
+      "country": "GB",
+      "display_time": "15:10",
+      "reported_starters": 17,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Cheltenham|15:45",
+      "date": "2026-11-15",
+      "course": "Cheltenham",
+      "country": "GB",
+      "display_time": "15:45",
+      "reported_starters": 10,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Fontwell|12:30",
+      "date": "2026-11-15",
+      "course": "Fontwell",
+      "country": "GB",
+      "display_time": "12:30",
+      "reported_starters": 8,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Fontwell|13:05",
+      "date": "2026-11-15",
+      "course": "Fontwell",
+      "country": "GB",
+      "display_time": "13:05",
+      "reported_starters": 11,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Fontwell|13:43",
+      "date": "2026-11-15",
+      "course": "Fontwell",
+      "country": "GB",
+      "display_time": "13:43",
+      "reported_starters": 13,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Fontwell|14:20",
+      "date": "2026-11-15",
+      "course": "Fontwell",
+      "country": "GB",
+      "display_time": "14:20",
+      "reported_starters": 10,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Fontwell|14:50",
+      "date": "2026-11-15",
+      "course": "Fontwell",
+      "country": "GB",
+      "display_time": "14:50",
+      "reported_starters": 9,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Fontwell|15:25",
+      "date": "2026-11-15",
+      "course": "Fontwell",
+      "country": "GB",
+      "display_time": "15:25",
+      "reported_starters": 8,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Navan|11:40",
+      "date": "2026-11-15",
+      "course": "Navan",
+      "country": "IRE",
+      "display_time": "11:40",
+      "reported_starters": 15,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Navan|12:10",
+      "date": "2026-11-15",
+      "course": "Navan",
+      "country": "IRE",
+      "display_time": "12:10",
+      "reported_starters": 17,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Navan|12:40",
+      "date": "2026-11-15",
+      "course": "Navan",
+      "country": "IRE",
+      "display_time": "12:40",
+      "reported_starters": 25,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Navan|13:15",
+      "date": "2026-11-15",
+      "course": "Navan",
+      "country": "IRE",
+      "display_time": "13:15",
+      "reported_starters": 6,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Navan|13:50",
+      "date": "2026-11-15",
+      "course": "Navan",
+      "country": "IRE",
+      "display_time": "13:50",
+      "reported_starters": 16,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Navan|14:25",
+      "date": "2026-11-15",
+      "course": "Navan",
+      "country": "IRE",
+      "display_time": "14:25",
+      "reported_starters": 8,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Navan|15:00",
+      "date": "2026-11-15",
+      "course": "Navan",
+      "country": "IRE",
+      "display_time": "15:00",
+      "reported_starters": 18,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    },
+    {
+      "provisional_race_key": "2026-11-15|Navan|15:35",
+      "date": "2026-11-15",
+      "course": "Navan",
+      "country": "IRE",
+      "display_time": "15:35",
+      "reported_starters": 8,
+      "source_url": "https://stablebet.co.uk/racing-results/2026-11-15/",
+      "observed_date_utc": "2026-11-16",
+      "source_rights": "unknown_reference_only",
+      "full_field_verified": false,
+      "permission_cleared_runner_rows": 0,
+      "prior_run_verified": false
+    }
+  ],
+  "coverage": {
+    "review_only_race_index": 20,
+    "reported_starter_references": 235,
+    "full_field_verified": 0,
+    "permission_cleared_runner_rows": 0,
+    "verified_BHA_achieved_figures": 0,
+    "prospectively_frozen_cards": 0
+  },
+  "validation": "Do not calculate A/B1/Challenger C or market win probabilities from retrospective result grids."
+}
