@@ -1,0 +1,65 @@
+{
+  "research_date": "2026-11-17",
+  "race_date": "2026-11-16",
+  "scope": "GB and Ireland only",
+  "status": "retrospective meeting-level index and three source-linked case observations; not permission-cleared runner archive",
+  "meeting_count": 2,
+  "race_count": 16,
+  "reported_starters": 152,
+  "meetings": [
+    {
+      "course": "Plumpton",
+      "races": 7,
+      "reported_starters": 55,
+      "source_url": "https://www.irishracing.com/raceresults/Mon-16th-Nov-2026",
+      "going_discrepancy": "meeting-level Good to Soft (Good in places) vs chase course Good and hurdle course Good to Soft (Good in places); reconcile race-specific course"
+    },
+    {
+      "course": "Wolverhampton",
+      "races": 9,
+      "reported_starters": 97,
+      "source_url": "https://www.horseracing.net/results/wolverhampton/16-11-26",
+      "surface": "Tapeta Standard"
+    }
+  ],
+  "case_observations": [
+    {
+      "race": "Plumpton 12:45",
+      "horse": "Mysterland",
+      "result": "won",
+      "note": "result running comment reports bumped at first and not fluent at third, subsequently led on run-in",
+      "source_url": "https://www.horseracing.net/results/plumpton/16-11-26",
+      "type": "post_race_execution",
+      "not_prior_run_evidence_for_same_race": true
+    },
+    {
+      "race": "Plumpton 14:45",
+      "horse": "Of Corse I Can",
+      "result": "won",
+      "note": "Alan Bresil recorded non-runner; seven starters; result time 6m15.13s on source; no track par established",
+      "source_url": "https://racingbrief.com/results/2026-11-16",
+      "type": "field_and_conditions"
+    },
+    {
+      "race": "Wolverhampton 20:00",
+      "horse": "Mr Nugget",
+      "result": "second",
+      "note": "result reports slow into stride and bumped at start, later bumped over 1f out; source labels scheduled 20:00 and actual off 20:01",
+      "source_url": "https://insights.betfred.com/horse-racing/results/2026-11-16/wolverhampton/931750/20-00/",
+      "type": "post_race_interference"
+    }
+  ],
+  "rights": "source-linked original summaries only; publisher bulk-data reuse permission not established",
+  "observed_at_utc": "2026-11-17T09:39:52Z (run start; exact individual page capture times unavailable)",
+  "permission_cleared_full_field_rows_added": 0,
+  "verified_last_three_histories_added": 0,
+  "official_bha_achieved_figures_added": 0,
+  "sectional_par_added": 0,
+  "prospective_frozen_cards_added": 0,
+  "market_baseline_tests_run": 0,
+  "notes": [
+    "Reported starter counts are a secondary aggregate, not independently checked individual horse identities.",
+    "No horse-specific A/C/E/F/P grading permitted until full-field prior form verification.",
+    "Do not use post-race observations as as-at pre-race features."
+  ]
+}
