@@ -1,0 +1,93 @@
+{
+  "review_date": "2026-11-21",
+  "race_date": "2026-11-20",
+  "scope": "GB and Ireland only",
+  "status": "retrospective source-linked research references, not permission-cleared full-field import",
+  "source_observation_timestamp": "2026-11-21T09:13:44Z",
+  "observation_timestamp_precision": "run start; exact page fetch seconds unavailable",
+  "meeting_index": {
+    "source": "https://stablebet.co.uk/racing-results/2026-11-20/",
+    "meetings": [
+      {
+        "course": "Ascot",
+        "races": 7,
+        "reported_starters": 42
+      },
+      {
+        "course": "Catterick",
+        "races": 7,
+        "reported_starters": 49
+      },
+      {
+        "course": "Chepstow",
+        "races": 8,
+        "reported_starters": 92
+      },
+      {
+        "course": "Dundalk",
+        "races": 8,
+        "reported_starters": 95
+      },
+      {
+        "course": "Wolverhampton",
+        "races": 9,
+        "reported_starters": 95
+      }
+    ],
+    "total_race_references": 39,
+    "total_reported_starter_references": 373,
+    "validation": "meeting-level source index; not individually reconciled full fields"
+  },
+  "reviewed_races": [
+    {
+      "race": "Ascot 12:10",
+      "source": "https://www.sportinglife.com/racing/meeting/2026-11-20/ascot/122667",
+      "reported_starters": 1,
+      "observation": "Etna Bianco walkover, two non-runners; no competitive performance occurred",
+      "research_flag": "exclude walkovers from pace, speed, jumping and competitive winner coverage; maintain separately in race inventory"
+    },
+    {
+      "race": "Dundalk 19:45",
+      "source": "https://www.sportinglife.com/racing/results/2026-11-20/dundalk/949603/christmas-party-nights-at-dundalk-stadium-apprentice-handicap",
+      "reported_starters": 13,
+      "observation": "Flying Fortress first; Usuario Amigo second by neck; third Tero D'rosa. Adam Grant and Conor Cusack shown claiming 7lb on second and third",
+      "research_flag": "keep declared weight, claim, effective carried weight distinct; verify before comparison"
+    },
+    {
+      "race": "Dundalk 19:45",
+      "source": "https://www.horseracing.net/results/dundalk/20-11-26",
+      "reported_starters": 13,
+      "observation": "Result commentary records Usuario Amigo slowly away; jockey reported gelding hung left throughout",
+      "research_flag": "single race-specific execution note only; do not infer habitual issue or prior knowledge"
+    },
+    {
+      "race": "Catterick 12:33",
+      "source": "https://www.sportinglife.com/racing/meeting/2026-11-20/catterick/122666",
+      "reported_starters": 6,
+      "observation": "Three non-runners listed (4,7,8); winner I've Got A Friend",
+      "research_flag": "active starters distinct from declarations"
+    },
+    {
+      "race": "Chepstow 11:20",
+      "source": "https://www.sportinglife.com/racing/meeting/2026-11-20/chepstow/122668",
+      "reported_starters": 12,
+      "observation": "Moments In Time won; All About Trev second; Bande Organisee third",
+      "research_flag": "results-only observation; no frozen pre-off comparison"
+    }
+  ],
+  "rights_status": "unconfirmed_reference_only",
+  "permission_cleared_runner_rows_added": 0,
+  "verified_last_three_runner_histories_added": 0,
+  "official_bha_achieved_figures_added": 0,
+  "validated_sectional_par_added": 0,
+  "prospective_frozen_cards_added": 0,
+  "walk_forward_test": "not eligible: no contemporaneous full-field frozen assessment and as-at market baseline",
+  "shadow_change": "propose explicit walkover exclusion flag in validation and separate claim/weight fields; no production model change",
+  "blockers": [
+    "bulk source reuse permissions unconfirmed",
+    "runner-level three-run histories missing",
+    "no verified BHA achieved PFs or matched sectional pars",
+    "pre-off freeze and as-at odds missing"
+  ],
+  "preservation": "A/B1 and published tips and paper ledger unchanged"
+}
