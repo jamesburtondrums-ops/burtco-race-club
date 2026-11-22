@@ -1,0 +1,138 @@
+{
+  "review_date": "2026-11-22",
+  "race_date": "2026-11-21",
+  "jurisdiction": "GB/IRE",
+  "status": "reference-only; retrospective; no licensed runner data",
+  "meeting_index": {
+    "meetings": 6,
+    "reported_races": 46,
+    "source": "https://stablebet.co.uk/racing-results/2026-11-21/",
+    "crosscheck": "https://betting.betfair.com/horse-racing/results/21-november-2026/",
+    "meetings_detail": [
+      {
+        "course": "Ascot",
+        "race_count": 7,
+        "country": "GB"
+      },
+      {
+        "course": "Haydock Park",
+        "race_count": 7,
+        "country": "GB"
+      },
+      {
+        "course": "Huntingdon",
+        "race_count": 6,
+        "country": "GB"
+      },
+      {
+        "course": "Lingfield",
+        "race_count": 9,
+        "country": "GB"
+      },
+      {
+        "course": "Newcastle",
+        "race_count": 9,
+        "country": "GB"
+      },
+      {
+        "course": "Punchestown",
+        "race_count": 8,
+        "country": "IRE"
+      }
+    ],
+    "warning": "Race counts are dated provider references, not individually verified final-result race identities"
+  },
+  "source_observed_at": "2026-11-22T09:33:00Z (run-level approximate; not exact page capture timestamp)",
+  "reviewed_cases": [
+    {
+      "course": "Ascot",
+      "time": "12:20",
+      "race": "Novices hurdle",
+      "starters": 6,
+      "winner": "Katarcice",
+      "non_runners": [
+        "Jet Bay"
+      ],
+      "note": "One unseated starter; do not classify as completed finish",
+      "source": "https://stablebet.co.uk/racing-results/2026-11-21/"
+    },
+    {
+      "course": "Ascot",
+      "time": "12:55",
+      "race": "1965 Chase Grade 2",
+      "starters": 3,
+      "winner": "Blow Your Wad",
+      "non_runners": [
+        "Lulamba",
+        "Steel Ally"
+      ],
+      "note": "Reduced field; market and tactical dynamics must be assessed against actual starters",
+      "source": "https://stablebet.co.uk/racing-results/2026-11-21/"
+    },
+    {
+      "course": "Ascot",
+      "time": "13:31",
+      "race": "Ascot Hurdle Grade 2",
+      "starters": 3,
+      "winner": "Kateira",
+      "non_runners": [
+        "Altobelli"
+      ],
+      "note": "Scheduled racecard time 13:30 versus results 13:31; do not treat as verified actual off without timing source",
+      "source": "https://stablebet.co.uk/racing-results/2026-11-21/"
+    },
+    {
+      "course": "Ascot",
+      "time": "14:05",
+      "race": "Mares handicap hurdle",
+      "starters": 8,
+      "winner": "Miss Goldfire",
+      "non_runners": [
+        "Jalisco Star",
+        "Betty's Daisy"
+      ],
+      "note": "SP 12/1 is retrospective and cannot be substituted for pre-off market snapshot",
+      "source": "https://stablebet.co.uk/racing-results/2026-11-21/"
+    },
+    {
+      "course": "Haydock Park",
+      "time": "15:00",
+      "race": "Betfair Chase Grade 1",
+      "starters": 7,
+      "winner": "Grey Dawning",
+      "note": "Won from Jagwar by 4¼ lengths; outcome-only, not predictive evidence",
+      "source": "https://www.theguardian.com/sport/live/2026/nov/21/horse-racing-updates-news-and-results-from-ascot-haydock-and-more-live"
+    },
+    {
+      "course": "Punchestown",
+      "time": "14:12",
+      "race": "Morgiana Hurdle Grade 1",
+      "starters": 4,
+      "winner": "Lossiemouth",
+      "note": "Seasonal-return winner; fitness inference must use evidence available before off",
+      "source": "https://www.theguardian.com/sport/live/2026/nov/21/horse-racing-updates-news-and-results-from-ascot-haydock-and-more-live"
+    }
+  ],
+  "case_count": 6,
+  "reported_starters_in_cases": 31,
+  "permission_cleared_prior_run_rows_added": 0,
+  "verified_bha_achieved_performance_figures_added": 0,
+  "prospective_frozen_cards_added": 0,
+  "validated_sectional_par_rows_added": 0,
+  "shadow_policy": [
+    "Separate scheduled/off/result-publication/capture timestamps",
+    "Do not merge provider morning rating with BHA OR or achieved performance figure",
+    "For small fields and non-runners re-run full-field and market coverage checks only on prospective frozen data",
+    "Preserve no-runner and unseated outcomes as distinct status",
+    "No performance claim from outcome-known records"
+  ],
+  "next_experiments": [
+    "Confirm final active fields and race IDs for 46 dated races",
+    "Recover source-permitted prior-three individual results for all runners of one complete race",
+    "Collect timestamped prospective market snapshots and run chronology-only holdouts",
+    "Matched trainer/jockey booking and headgear tests with denominators and shrinkage"
+  ],
+  "frozen_models_unchanged": true,
+  "live_tips_unchanged": true,
+  "paper_ledger_unchanged": true
+}
