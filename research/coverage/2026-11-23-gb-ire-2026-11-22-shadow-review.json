@@ -1,0 +1,111 @@
+{
+  "research_date": "2026-11-23",
+  "race_date": "2026-11-22",
+  "scope": "GB and Ireland",
+  "status": "retrospective source-linked research only; not licensed prior-run archive",
+  "source_observation_time": "2026-11-23 morning UTC; exact page capture seconds unavailable",
+  "races": [
+    {
+      "race": "Punchestown 15:00 John Durkan Memorial Chase",
+      "starters": 9,
+      "non_runners": 1,
+      "winner": "Final Demand",
+      "runner_up": "Fact To File",
+      "third": "Gaelic Warrior",
+      "winner_sp": "8/1",
+      "actual_off": "15:02:38",
+      "going": "Good To Yielding",
+      "source_urls": [
+        "https://www.attheraces.com/results/22-November-2026",
+        "https://insights.betfred.com/horse-racing/results/2026-11-22/punchestown/932402/15-00/"
+      ],
+      "observations": [
+        "Final Demand prominent, disputed lead before last, rallied after being headed, regained lead late",
+        "Fact To File disputed lead, led narrowly on run-in, headed in final strides"
+      ],
+      "limitations": [
+        "Post-race comments only; not established habitual styles",
+        "SP is not pre-off market snapshot",
+        "No official achieved BHA performance figure verified"
+      ]
+    },
+    {
+      "race": "Punchestown 14:00",
+      "starters": 7,
+      "winner": "Daboya",
+      "winner_sp": "5/1",
+      "actual_off": "14:01",
+      "going": "Good To Yielding",
+      "source_urls": [
+        "https://insights.betfred.com/horse-racing/results/2026-11-22/punchestown/933617/14-00/"
+      ],
+      "observations": [
+        "Daboya advanced from midfield and led near finish",
+        "Alliteration unseated rider two out after reported mistake; retain UR as non-finish"
+      ],
+      "limitations": [
+        "Runner-level full field not licensed for archival reproduction",
+        "No verified sectional track par"
+      ]
+    },
+    {
+      "race": "Punchestown 15:30 bumper",
+      "starters": 10,
+      "winner": "Ceasar's Ball",
+      "winner_sp": "6/4 favourite",
+      "actual_off": "15:32:08",
+      "going": "Good To Yielding",
+      "source_urls": [
+        "https://www.attheraces.com/results/22-November-2026",
+        "https://insights.betfred.com/horse-racing/results/2026-11-22/punchestown/933619/15-30/"
+      ],
+      "observations": [
+        "Ceasar's Ball raced in touch and went clear late",
+        "Pillars Presence reportedly led by a large margin at halfway before weakening"
+      ],
+      "limitations": [
+        "Single-run tactics cannot establish habitual pace",
+        "No independent par"
+      ]
+    },
+    {
+      "race": "Exeter 12:37 junior NH hurdle",
+      "starters": 5,
+      "winner": "Golden Dagger",
+      "winner_sp": "3/1",
+      "actual_off": "12:41",
+      "going": "Good (Good to Firm in places), meeting-level reported",
+      "source_urls": [
+        "https://www.sportinglife.com/racing/meeting/2026-11-22/exeter/122693",
+        "https://www.irishracing.com/raceresults/Sun-22nd-Nov-2026/Exeter"
+      ],
+      "observations": [
+        "Golden Dagger beat Our Wee Horse, favourite, by 19 lengths",
+        "Scheduled time 12:37 differs from reported off 12:41"
+      ],
+      "limitations": [
+        "Race-time official going not independently confirmed",
+        "No prior-run profile verified"
+      ]
+    }
+  ],
+  "coverage_delta": {
+    "new_race_references": 4,
+    "reported_starters": 31,
+    "permission_cleared_full_field_runner_rows": 0,
+    "verified_prior_run_records": 0,
+    "prospectively_frozen_cards": 0,
+    "validated_BHA_achieved_figures": 0,
+    "validated_sectional_pars": 0
+  },
+  "shadow_quality_rules": [
+    "Keep race identity, scheduled time and actual off time separate",
+    "Use result comments only as post-race observations; exclude from any earlier card",
+    "Do not infer habitual style from one performance",
+    "Preserve unseated riders and non-runners separately from ordinary finishers",
+    "No arbitrary headgear or jockey booking bonus; retain triple-lock full-field and adversarial rival process",
+    "No performance uplift or calibration metrics without pre-off frozen cards and as-at market"
+  ],
+  "frozen_models_unchanged": true,
+  "paper_ledger_unchanged": true
+}
