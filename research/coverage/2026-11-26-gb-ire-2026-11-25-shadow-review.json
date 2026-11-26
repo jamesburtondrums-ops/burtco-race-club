@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-26",
+  "observed_at": "2026-11-26T09:16:52.144Z",
+  "race_date": "2026-11-25",
+  "status": "shadow retrospective source-reference log; reuse rights unverified; no bulk runner records",
+  "index_source": "https://stablebet.co.uk/racing-results/2026-11-25/",
+  "counts": [
+    {
+      "meeting": "Dundalk",
+      "races": 8,
+      "reported_starters": 108
+    },
+    {
+      "meeting": "Hereford",
+      "races": 7,
+      "reported_starters": 54
+    },
+    {
+      "meeting": "Kempton",
+      "races": 9,
+      "reported_starters": 98
+    },
+    {
+      "meeting": "Newcastle",
+      "races": 9,
+      "reported_starters": 100
+    },
+    {
+      "meeting": "Wetherby",
+      "races": 7,
+      "reported_starters": 62
+    }
+  ],
+  "total_indexed": 40,
+  "total_starter_references": 422,
+  "cases": [
+    {
+      "race": "Dundalk 14:31",
+      "sources": [
+        "https://www.irishracing.com/cheltenham/raceresults/Wed-25th-Nov-2026/Dundalk/1431",
+        "https://www.racingpost.com/results/1138/dundalk-aw/2026-11-25/934041/",
+        "https://www.sportinglife.com/racing/results/2026-11-25/dundalk/950188/dundalk-stadium-gift-vouchers-available-online-handicap-0-60"
+      ],
+      "finding": "Winner official rating differs between providers (38 vs 40); quarantine. Runner-up weight display differs by exactly the stated 7lb claim (10-2 vs 9-9); do not subtract twice. Rider eligibility restriction makes booking rarity conditional on eligible pool."
+    },
+    {
+      "race": "Dundalk 14:01",
+      "sources": [
+        "https://www.sportinglife.com/racing/results/2026-11-25/dundalk/950749/christmas-party-nights-at-dundalk-stadium-handicap"
+      ],
+      "finding": "Single-race leader from stall 1; no inference of habitual style or draw bias."
+    },
+    {
+      "race": "Kempton 16:50",
+      "sources": [
+        "https://www.sportinglife.com/racing/meeting/2026-11-25/kempton/122763"
+      ],
+      "finding": "Nine starters and seven withdrawals; pace scenarios require as-at field reconstruction."
+    }
+  ],
+  "coverage": {
+    "new_permission_cleared_runner_records": 0,
+    "verified_achieved_figures": 0,
+    "new_frozen_cards": 0,
+    "cumulative_deduplicated": null
+  },
+  "next_experiment": "Restrict booking comparison to eligible rider pool; use pre-off normalized market probabilities as offset, regularized booking coefficient fitted on chronological training only; compare held-out log loss, Brier and top-k on identical races; report denominators and uncertainty. No scoring changes or measured gains."
+}
