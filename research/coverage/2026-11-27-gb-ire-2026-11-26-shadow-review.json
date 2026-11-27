@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-27",
+  "review_date": "2026-11-26",
+  "observed_at": "2026-11-27T09:50:21Z",
+  "scope": "shadow research only; repository is public, no private runner archive or third-party dataset uploaded",
+  "coverage": {
+    "race_references_reviewed": 11,
+    "reported_starter_references": 96,
+    "permission_cleared_runner_records": 0,
+    "official_achieved_figures": 0,
+    "frozen_cards": 0,
+    "cumulative_distinct": null
+  },
+  "references": [
+    {
+      "url": "https://www.irishracing.com/raceresults/Thu-26th-Nov-2026/MarketRasen",
+      "course": "Market Rasen",
+      "race_count": 7,
+      "reported_starters": 60
+    },
+    {
+      "url": "https://www.irishracing.com/fast-results/Thu-26th-Nov-2026/Lingfield",
+      "course": "Lingfield",
+      "race_count": 3,
+      "reported_starters": 22
+    },
+    {
+      "url": "https://www.sportinglife.com/racing/meeting/2026-11-26/thurles/122758",
+      "course": "Thurles",
+      "race_count": 1,
+      "reported_starters": 14
+    }
+  ],
+  "notes": [
+    "Coverage arithmetic: Market Rasen 60, Lingfield 22, Thurles 14; total 96. References only, not deduplicated historical records.",
+    "Lingfield conditional jockey handicap illustrates provider-specific rating namespaces: RPR is not BHA achieved figure; race weight and claim must not be conflated. https://www.racingpost.com/results/31/lingfield/2026-11-26/931666/",
+    "BHA guide explicitly separates race-day handicap mark from achieved performance figure. https://www.britishhorseracing.com/regulation/guide-to-handicapping/",
+    "BHA weekly publication timing requires separate known_at and effective_at fields. https://www.britishhorseracing.com/faqs/where-can-i-find-a-horses-new-rating/"
+  ],
+  "proposed_experiment": {
+    "baseline": "normalized full-field contemporaneous decimal odds",
+    "challenger": "race-normalized market offset plus regularized booking covariates; eligibility, claim, yard volume, prior rider share, price and availability",
+    "validation": "chronological race-group holdouts; train-only feature estimation; paired log loss and Brier; top1/3/5; report denominators and missingness",
+    "status": "not run; eligible observations not verified"
+  },
+  "unchanged": [
+    "A",
+    "B1",
+    "live tips",
+    "paper ledger"
+  ]
+}
