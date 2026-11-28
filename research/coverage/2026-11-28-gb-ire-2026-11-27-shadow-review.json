@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-28",
+  "observed_at": "2026-11-28T09:49:07Z",
+  "race_date": "2026-11-27",
+  "mode": "retrospective shadow research; public-safe source references only",
+  "coverage": {
+    "reviewed_races": 5,
+    "reported_starters": 39,
+    "licensed_runner_records": 0,
+    "official_achieved_figures": 0,
+    "frozen_cards": 0,
+    "cumulative_unique": null
+  },
+  "cases": [
+    {
+      "race": "Dundalk 17:30",
+      "starters": 9,
+      "source": "https://www.irishracing.com/fast-results/Fri-27th-Nov-2026/Dundalk",
+      "corroboration": "https://www.racingpost.com/news/reports/dundalk-result-reversed-after-stewards-deem-interference-to-have-improved-finishing-position-of-first-past-the-post-aPvla1o4miq4/",
+      "finding": "Result amended after inquiry; distinguish crossing order, official placing and settlement rules."
+    },
+    {
+      "race": "Dundalk 18:30",
+      "starters": 8,
+      "source": "https://insights.betfred.com/horse-racing/results/2026-11-27/dundalk/934211/18-30/",
+      "finding": "Execution incident and rider equipment loss should be separate fields; scheduled and actual off differ."
+    },
+    {
+      "race": "Dundalk 19:30",
+      "starters": 9,
+      "source": "https://insights.betfred.com/horse-racing/results/2026-11-27/dundalk/934213/19-30/",
+      "finding": "Trainer retrospective explanation of surface/code suitability is not pre-race evidence; equipment change status unknown."
+    },
+    {
+      "race": "Newbury 13:50",
+      "starters": 5,
+      "source": "https://www.racingpost.com/news/reports/taurus-bay-toughs-out-grade-2-and-klub-de-reve-unleashed-over-fences-as-novices-light-up-gloomy-newbury-av2iL2g0lUM5/",
+      "finding": "Small-field novice graded race; compare actual terms and achieved figures rather than finishing order."
+    },
+    {
+      "race": "Newbury 15:00",
+      "starters": 8,
+      "source": "https://www.racingpost.com/news/reports/i-trusted-him-today-and-he-delivered-soldier-reeves-signals-changing-of-the-guard-with-impressive-long-distance-hurdle-win-akXWl7E0553D/",
+      "finding": "First attempt at longer trip illustrates unexposed stamina uncertainty; qualitative finishing strength is not a sectional measurement."
+    }
+  ],
+  "experiment": {
+    "status": "proposed, not fitted",
+    "baseline": "normalised inverse decimal odds at common pre-off freeze",
+    "challenger": "race-normalised market offset plus regularised booking covariates; eligibility, claims, trainer volume, usual rider share, jockey opportunity quality, availability, code and class; unknown availability explicit",
+    "validation": "rolling chronological race-grouped holdouts, training-only feature histories and shrinkage; paired race-level log loss, Brier, top1/3/5, coverage and calibration; report uncertainty and no gain until verified",
+    "outcome_policy": "official final placing for sporting accuracy; settlement separately; retain crossing order for execution analysis; exclude unresolved inquiries until final"
+  },
+  "blockers": [
+    "private rights-cleared archive not established",
+    "no complete timestamped market and runner histories verified",
+    "no official achieved figures or sectional pars"
+  ],
+  "preservation": "No changes to A/B1, live tips, ledger or scoring."
+}
